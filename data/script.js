@@ -53,6 +53,19 @@ function showAlgo(a, level = 0) {
     }
   }
   ret.push(container);
+  const additional = a.additional ?? a.additionalAlgorithms;
+  if (additional) {
+    const div = document.createElement("div");
+    div.className = "additional";
+    div.append("Additional:", ...additional.map(aa => showAlgo(aa, level +1)).flat());
+    ret.push(div);
+  }
+  if (a.ignored) {
+    const div = document.createElement("div");
+    div.className = "ignored";
+    div.textContent = "Ignored: " + a.ignored;
+    ret.push(div);
+  }
   return ret;
 }
 
