@@ -1,0 +1,23 @@
+{
+  "spec": {
+    "title": "WebCodecs Codec Registry",
+    "url": "https://w3c.github.io/webcodecs/codec_registry.html"
+  },
+  "algorithms": [
+    {
+      "html": "The codec string must be crafted as follows:",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "<p>If the codec string contains a fixed prefix with variable suffix values,\nthe suffix must be represented by an asterisk and the registration’s\npublic specification must describe how to fully qualify the variable\nportion of the string.</p>"
+        },
+        {
+          "html": "<p>Otherwise, if the codec is recognized by multiple strings, a single\npreferred string should be listed and the registration’s specification\nmust list the other allowed strings.</p>"
+        },
+        {
+          "html": "<p>Otherwise, the codec is identified by a simple fixed string.</p>"
+        }
+      ]
+    }
+  ]
+}

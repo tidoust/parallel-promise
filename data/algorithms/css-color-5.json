@@ -1,0 +1,47 @@
+{
+  "spec": {
+    "title": "CSS Color Module Level 5",
+    "url": "https://drafts.csswg.org/css-color-5/"
+  },
+  "algorithms": [
+    {
+      "html": "Percentages are required to be in the range 0% to 100%. Negative percentages are specifically disallowed. The percentages are normalized as follows:",
+      "rationale": "let",
+      "steps": [
+        {
+          "html": "<p>Let <var>p1</var> be the first percentage and <var>p2</var> the second one.</p>"
+        },
+        {
+          "html": "<p>If both percentages are omitted, they each default to 50%\n(an equal mix of the two colors).</p>"
+        },
+        {
+          "html": "<p>Otherwise, if <var>p2</var> is omitted, it becomes 100% - <var>p1</var></p>"
+        },
+        {
+          "html": "<p>Otherwise, if <var>p1</var> is omitted, it becomes 100% - <var>p2</var></p>"
+        },
+        {
+          "html": "<p>If the percentages sum to zero, the function is invalid.</p>"
+        },
+        {
+          "html": "<p>Otherwise, if both are provided and add up to greater than 100%,\nthey are scaled accordingly so that they add up to 100%.</p>"
+        },
+        {
+          "html": "<p>Otherwise, if both are provided and add up to less than 100%,\nthe sum is saved as an alpha multiplier.\nThey are then scaled accordingly so that they add up to 100%.</p>"
+        }
+      ]
+    },
+    {
+      "html": "As such, Device CMYK colors must be converted to an equivalent color.\n\t\tThis is not trivial, like the conversion from HSL or HWB to RGB;\n\t\tthe precise conversion depends on the precise characteristics of the output device.",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "If the user, author, or user-agent stylesheet\n\t\t\t\thas an <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-color-5/#at-ruledef-profile\" id=\"ref-for-at-ruledef-profile①⓪\">@color-profile</a> definition for device-cmyk,\n\t\t\t\tand the resource specified by the src descriptor can be retrieved,\n\t\t\t\tand the resource is a valid CMYK ICC profile,\n\t\t\t\tand the user agent can process ICC profiles,\n\t\t\t\tthe computed value of the <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-color-5/#funcdef-device-cmyk\" id=\"ref-for-funcdef-device-cmyk⑥\">device-cmyk()</a> function\n\t\t\t\tmust be the Lab value of the CMYK color."
+        },
+        {
+          "html": "Otherwise,\n\t\t\t\tthe computed value of the <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-color-5/#funcdef-device-cmyk\" id=\"ref-for-funcdef-device-cmyk⑦\">device-cmyk()</a> function must be\n\t\t\t\tthe sRGB value of the CMYK color,\n\t\t\t\tas converted with the following naive conversion algorithm."
+        }
+      ]
+    }
+  ]
+}

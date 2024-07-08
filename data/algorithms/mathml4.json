@@ -1,0 +1,34 @@
+{
+  "spec": {
+    "title": "Mathematical Markup Language (MathML) Version 4.0",
+    "url": "https://w3c.github.io/mathml/"
+  },
+  "algorithms": [
+    {
+      "html": "The following algorithm specifies the height and depth of vertically stretched characters:",
+      "rationale": "let",
+      "steps": [
+        {
+          "html": "<p>Let <code>maxheight</code> and <code>maxdepth</code> be the maximum height and depth of the\n     <em>non</em>-stretchy siblings within the same <code class=\"element\">mrow</code> or <code class=\"element\">mtr</code>.\n     Let axis be the height of the math axis above the baseline.</p>\n \n     <p>Note that even if a <code class=\"attribute\">minsize</code> or <code class=\"attribute\">maxsize</code> value is set on a stretchy operator,\n     it is <em>not</em> used in the initial calculation of the maximum height and depth of an <code class=\"element\">mrow</code>.</p>"
+        },
+        {
+          "html": "<p>\n      If <code class=\"attribute\">symmetric</code>=<code class=\"attributevalue\">true</code>, then the computed height\n      and depth of the stretchy operator are:\n     </p>\n \n      <div class=\"example algorithm\">\n       <pre aria-busy=\"false\"><code class=\"hljs\">height=max(maxheight-axis, maxdepth+axis) + axis\ndepth =max(maxheight-axis, maxdepth+axis) - axis</code></pre>\n      </div>\n      <p>Otherwise the height and depth are:</p>\n \n      <div class=\"example algorithm\">\n       <pre aria-busy=\"false\"><code class=\"hljs abnf\"><span class=\"hljs-attribute\">height</span>= maxheight\n<span class=\"hljs-attribute\">depth</span> = maxdepth</code></pre>\n      </div>"
+        },
+        {
+          "html": "<p>\n      If the total size = height+depth is less than minsize\n      or greater than maxsize, increase or decrease both\n      height and depth proportionately so that the effective\n      size meets the constraint.\n     </p>"
+        }
+      ]
+    },
+    {
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "If an <code class=\"attribute\">intent</code>\n     attribute does not match the grammar <a href=\"https://w3c.github.io/mathml/#mixing_intent_grammar\" class=\"sec-ref\"><bdi class=\"secno\">5.1 </bdi>The Grammar for <code class=\"attribue\">intent</code></a>,\n     then the processor should act as if the attribute were not\n     present.\n     Typically this will result in a suitable fallback text being\n     generated from the MathML element and its descendents. Note that\n     just the erroneous attribute is ignored, other <code class=\"attribute\">intent</code> attributes in the MathML\n     expression should be used."
+        },
+        {
+          "html": "If a <code>reference</code> such as <code>$x</code> does not correspond to an <code class=\"attribute\">arg</code> attribute with value <code>x</code> on a\n     descendent element, the processor should act as if the reference\n     were replaced by the literal <code>_dollar_x</code>."
+        }
+      ]
+    }
+  ]
+}

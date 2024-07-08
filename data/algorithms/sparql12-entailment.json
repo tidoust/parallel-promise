@@ -1,0 +1,26 @@
+{
+  "spec": {
+    "title": "SPARQL 1.2 Entailment Regimes",
+    "url": "https://w3c.github.io/sparql-entailment/spec/"
+  },
+  "algorithms": [
+    {
+      "html": "The possible answers μ<sub>2</sub> to μ<sub>5</sub> are considered here in greater detail. Since all these solution mappings lead to (ground) axiomatic triples when instantiating the BGP,\n        (C1) is trivially satisfied.",
+      "rationale": "for",
+      "steps": [
+        {
+          "html": "For the possible solution μ<sub>2</sub>, since μ<sub>2</sub>(x)=<code>rdf:type</code> occurs in SG (and also in rdfV-Minus), condition (C2) is also satisfied and this solution mapping\n          is a solution."
+        },
+        {
+          "html": "For the possible solution μ<sub>3</sub>, although μ<sub>3</sub>(x)=<code>rdf:subject</code> does not occur in SG, it occurs in rdfV-Minus and this possible solution mapping is,\n          therefore, also returned as an answer."
+        },
+        {
+          "html": "For the possible solution μ<sub>4</sub>, since μ<sub>4</sub>(x)=<code>rdf:_1</code> occurs in SG, this is a solution."
+        },
+        {
+          "html": "For the possible solution μ<sub>5</sub>, since μ<sub>5</sub>(x)=<code>rdf:_2</code> occurs neither in SG nor in rdfV-Minus, this solution mapping is not a solution."
+        }
+      ]
+    }
+  ]
+}

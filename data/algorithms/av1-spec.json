@@ -1,0 +1,338 @@
+{
+  "spec": {
+    "title": "AV1 Bitstream & Decoding Process Specification",
+    "url": "https://aomediacodec.github.io/av1-spec/"
+  },
+  "algorithms": [
+    {
+      "html": "For each tile list entry in the tile list OBU, the following ordered steps are applied:",
+      "rationale": "parse",
+      "steps": [
+        {
+          "html": "<p>Parse the syntax elements within the tile_list_entry</p>"
+        },
+        {
+          "html": "<p>Set the bitstream position indicator to point to the the start of the coded_tile_data syntax element</p>"
+        },
+        {
+          "html": "<p>Set the variable last equal to ref_frame_idx[ 0 ]</p>"
+        },
+        {
+          "html": "<p>Set FrameStore[ last ] equal to AnchorFrames[ anchor_frame_idx ]</p>"
+        },
+        {
+          "html": "<p>RefValid[ last ] is set equal to 1.</p>"
+        },
+        {
+          "html": "<p>RefUpscaledWidth[ last ] is set equal to UpscaledWidth.</p>"
+        },
+        {
+          "html": "<p>RefFrameWidth[ last ] is set equal to FrameWidth.</p>"
+        },
+        {
+          "html": "<p>RefFrameHeight[ last ] is set equal to FrameHeight.</p>"
+        },
+        {
+          "html": "<p>RefMiCols[ last ] is set equal to MiCols.</p>"
+        },
+        {
+          "html": "<p>RefMiRows[ last ] is set equal to MiRows.</p>"
+        },
+        {
+          "html": "<p>RefSubsamplingX[ last ] is set equal to subsampling_x.</p>"
+        },
+        {
+          "html": "<p>RefSubsamplingY[ last ] is set equal to subsampling_y.</p>"
+        },
+        {
+          "html": "<p>RefBitDepth[ last ] is set equal to BitDepth.</p>"
+        },
+        {
+          "html": "<p>Invoke the decode camera tile process specified in <a href=\"https://aomediacodec.github.io/av1-spec/#decode-camera-tile-process\">section 7.3.2</a>\nand write the decoded tiles into an output frame in raster order, in the order that they occur in the tile list OBU.</p>"
+        }
+      ]
+    },
+    {
+      "html": "If show_existing_frame is equal to 0, the process first performs any post processing filtering by the following ordered steps:",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "<p>If loop_filter_level[ 0 ] is not equal to 0 or loop_filter_level[ 1 ] is not equal to 0, the loop\nfilter process specified in <a href=\"https://aomediacodec.github.io/av1-spec/#loop-filter-process\">section 7.14</a> is invoked (this process modifies the contents of CurrFrame).</p>"
+        },
+        {
+          "html": "<p>The CDEF process specified in <a href=\"https://aomediacodec.github.io/av1-spec/#cdef-process\">section 7.15</a> is invoked (this process takes CurrFrame and produces CdefFrame).</p>"
+        },
+        {
+          "html": "<p>The upscaling process specified in <a href=\"https://aomediacodec.github.io/av1-spec/#upscaling-process\">section 7.16</a> is invoked with CdefFrame as input and the output is assigned to UpscaledCdefFrame.</p>"
+        },
+        {
+          "html": "<p>The upscaling process specified in <a href=\"https://aomediacodec.github.io/av1-spec/#upscaling-process\">section 7.16</a> is invoked with CurrFrame as input and the output is assigned to UpscaledCurrFrame.</p>"
+        },
+        {
+          "html": "<p>The loop restoration process specified in <a href=\"https://aomediacodec.github.io/av1-spec/#loop-restoration-process\">section 7.17</a> is invoked (this process takes UpscaledCurrFrame and UpscaledCdefFrame and produces LrFrame).</p>"
+        },
+        {
+          "html": "<p>The motion field motion vector storage process specified in <a href=\"https://aomediacodec.github.io/av1-spec/#motion-field-motion-vector-storage-process\">section 7.19</a> is invoked.</p>"
+        },
+        {
+          "html": "<p>If segmentation_enabled is equal to 1 and segmentation_update_map is equal to 0,\nSegmentIds[ row ][ col ] is set equal to\nPrevSegmentIds[ row ][ col ] for row = 0..MiRows-1, for col = 0..MiCols-1.</p>"
+        }
+      ]
+    },
+    {
+      "html": "If isCompound is equal to 0, the following applies for candList = 0..1:",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "If RefFrames[ mvRow ][ mvCol ][ candList ] is equal to RefFrame[ 0 ], the search stack process in <a href=\"https://aomediacodec.github.io/av1-spec/#search-stack-process\">section 7.10.2.8</a> is invoked with mvRow, mvCol, weight, and candList as inputs."
+        }
+      ]
+    },
+    {
+      "html": "Otherwise (isCompound is equal to 1), the following applies:",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "If RefFrames[ mvRow ][ mvCol ][ 0 ] is equal to RefFrame[ 0 ] and RefFrames[ mvRow ][ mvCol ][ 1 ] is equal to RefFrame[ 1 ],\nthe compound search stack process in <a href=\"https://aomediacodec.github.io/av1-spec/#compound-search-stack-process\">section 7.10.2.9</a> is invoked with mvRow, mvCol, and weight as inputs."
+        }
+      ]
+    },
+    {
+      "html": "If seg_feature_active_idx( segmentId, SEG_LVL_ALT_Q ) is equal to 1 the following ordered steps apply:",
+      "rationale": "set",
+      "steps": [
+        {
+          "html": "<p>Set the variable data equal to FeatureData[ segmentId ][ SEG_LVL_ALT_Q ].</p>"
+        },
+        {
+          "html": "<p>Set qindex equal to base_q_idx + data.</p>"
+        },
+        {
+          "html": "<p>If ignoreDeltaQ is equal to 0 and delta_q_present is equal to 1, set qindex equal to CurrentQIndex + data.</p>"
+        },
+        {
+          "html": "<p>Return Clip3( 0, 255, qindex ).</p>"
+        }
+      ]
+    },
+    {
+      "html": "The following ordered steps apply:",
+      "rationale": "for",
+      "steps": [
+        {
+          "html": "<p>For i = 0..(th-1), for j = 0..(tw-1), the following ordered steps apply:</p>\n\n    <p>a. The variable q is derived as follows:</p>\n\n    <ul>\n      <li>\n        <p>If i is equal to 0 and j is equal to 0, the variable q is set equal to get_dc_quant( plane ).</p>\n      </li>\n      <li>\n        <p>Otherwise (i, j or both are not equal to 0), the variable q is set equal to get_ac_quant( plane ).</p>\n      </li>\n    </ul>\n\n    <p>b. The variable q2 is derived as follows:</p>\n\n    <ul>\n      <li>\n        <p>If using_qmatrix is equal to 1, PlaneTxType is less than IDTX, and SegQMLevel[ plane ][ segment_id ] is less than 15, q2 is set\n    equal to Round2( q * Quantizer_Matrix[ SegQMLevel[ plane ][ segment_id ] ][ plane &gt; 0 ][ Qm_Offset[ txSz ] + i * tw + j ], 5 ).</p>\n      </li>\n      <li>\n        <p>Otherwise, q2 is set equal to q.</p>\n      </li>\n    </ul>\n\n    <p>c. The variable dq is set equal to Quant[ i * tw + j ] * q2.</p>\n\n    <p>d. The variable sign is set equal to ( dq &lt; 0 ) ? -1 : 1.</p>\n\n    <p>e. The variable dq2 is set equal to sign * ( Abs( dq ) &amp; 0xFFFFFF ) / dqDenom.</p>\n\n    <p>f. Dequant[ i ][ j ] is set equal to Clip3( - ( 1 &lt;&lt; ( 7 + BitDepth ) ), ( 1 &lt;&lt; ( 7 + BitDepth ) ) - 1, dq2 ).</p>"
+        },
+        {
+          "html": "<p>Invoke the 2D inverse transform block process defined in <a href=\"https://aomediacodec.github.io/av1-spec/#2d-inverse-transform-process\">section 7.13.3</a>\nwith the variable txSz as input. The inverse transform outputs are stored\nin the Residual buffer.</p>"
+        },
+        {
+          "html": "<p>For i = 0..(h-1), for j = 0..(w-1), the following applies:</p>\n\n    <ul>\n      <li>\n        <p>The variable xx is set equal to flipLR ? ( w - j - 1 ) : j.</p>\n      </li>\n      <li>\n        <p>The variable yy is set equal to flipUD ? ( h - i - 1 ) : i.</p>\n      </li>\n      <li>\n        <p>CurrFrame[ plane ][ y + yy ][ x + xx ] is set equal to\nClip1( CurrFrame[ plane ][ y + yy ][ x + xx ] + Residual[ i ][ j ] ).</p>\n      </li>\n    </ul>"
+        }
+      ]
+    },
+    {
+      "html": "The function cos128( angle ) is specified for integer values of the input angle\nby the following ordered steps:",
+      "rationale": "set",
+      "steps": [
+        {
+          "html": "<p>Set a variable angle2 equal to angle &amp; 255.</p>"
+        },
+        {
+          "html": "<p>If angle2 is greater than or equal to 0 and less than or equal to 64,\nreturn Cos128_Lookup[ angle2 ].</p>"
+        },
+        {
+          "html": "<p>If angle2 is greater than 64 and less than or equal to 128, return\nCos128_Lookup[ 128 - angle2 ] * -1.</p>"
+        },
+        {
+          "html": "<p>If angle2 is greater than 128 and less than or equal to 192, return\nCos128_Lookup[ angle2 - 128 ] * -1.</p>"
+        },
+        {
+          "html": "<p>Otherwise (if angle2 is greater than 192 and less than 256), return\nCos128_Lookup[ 256 - angle2 ].</p>"
+        }
+      ]
+    },
+    {
+      "html": "The following ordered steps apply:",
+      "rationale": "invoke",
+      "steps": [
+        {
+          "html": "<p>Invoke the inverse DCT permutation process as specified in <a href=\"https://aomediacodec.github.io/av1-spec/#inverse-dct-array-permutation-process\">section 7.13.2.2</a> with the input variable n.</p>"
+        },
+        {
+          "html": "<p>If n is equal to 6, invoke B( 32 + i, 63 - i, 63 - 4 * brev( 4, i ), 0, r ) for i = 0..15.</p>"
+        },
+        {
+          "html": "<p>If n is greater than or equal to 5, invoke B( 16 + i, 31 - i, 6 + ( brev( 3, 7 - i ) &lt;&lt; 3 ), 0, r )\nfor i = 0..7.</p>"
+        },
+        {
+          "html": "<p>If n is equal to 6, invoke H( 32 + i * 2, 33 + i * 2, i &amp; 1, r ) for i = 0..15.</p>"
+        },
+        {
+          "html": "<p>If n is greater than or equal to 4, invoke B( 8 + i, 15 - i, 12 + ( brev( 2, 3 - i ) &lt;&lt; 4 ),\n0, r ) for i = 0..3.</p>"
+        },
+        {
+          "html": "<p>If n is greater than or equal to 5, invoke H( 16 + 2 * i, 17 + 2 * i, i &amp; 1, r ) for i = 0..7.</p>"
+        },
+        {
+          "html": "<p>If n is equal to 6, invoke B( 62 - i * 4 - j, 33 + i * 4 + j, 60 - 16 * brev( 2, i ) + 64 * j, 1, r )\nfor i = 0..3, for j = 0..1.</p>"
+        },
+        {
+          "html": "<p>If n is greater than or equal to 3, invoke B( 4 + i, 7 - i, 56 - 32 * i, 0, r )\nfor i = 0..1.</p>"
+        },
+        {
+          "html": "<p>If n is greater than or equal to 4, invoke H( 8 + 2 * i, 9 + 2 * i, i &amp; 1, r ) for i = 0..3.</p>"
+        },
+        {
+          "html": "<p>If n is greater than or equal to 5, invoke B( 30 - 4 * i - j, 17 + 4 * i + j, 24 + (j &lt;&lt; 6) + ( ( 1 - i ) &lt;&lt; 5 ),\n1, r ) for i = 0..1, for j=0..1.</p>"
+        },
+        {
+          "html": "<p>If n is equal to 6, invoke H( 32 + i * 4 + j, 35 + i * 4 - j, i &amp; 1, r ) for i = 0..7, for j = 0..1.</p>"
+        },
+        {
+          "html": "<p>Invoke B( 2 * i, 2 * i + 1, 32 + 16 * i, 1 - i, r ) for i = 0..1.</p>"
+        },
+        {
+          "html": "<p>If n is greater than or equal to 3, invoke H( 4 + 2 * i, 5 + 2 * i, i, r ) for i = 0..1.</p>"
+        },
+        {
+          "html": "<p>If n is greater than or equal to 4, invoke B( 14 - i, 9 + i, 48 + 64 * i, 1, r ) for\n     i = 0..1.</p>"
+        },
+        {
+          "html": "<p>If n is greater than or equal to 5, invoke H( 16 + 4 * i + j, 19 + 4 * i - j, i &amp; 1, r ) for i = 0..3, for j = 0..1.</p>"
+        },
+        {
+          "html": "<p>If n is equal to 6, invoke B( 61 - i * 8 - j, 34 + i * 8 + j, 56 - i * 32 + ( j &gt;&gt; 1 ) * 64, 1, r )\nfor i = 0..1, for j = 0..3.</p>"
+        },
+        {
+          "html": "<p>Invoke H( i, 3 - i, 0, r ) for i = 0..1.</p>"
+        },
+        {
+          "html": "<p>If n is greater than or equal to 3, invoke B( 6, 5, 32, 1, r ).</p>"
+        },
+        {
+          "html": "<p>If n is greater than or equal to 4, invoke H( 8 + 4 * i + j, 11 + 4 * i - j, i, r ) for i = 0..1,\nfor j = 0..1.</p>"
+        },
+        {
+          "html": "<p>If n is greater than or equal to 5, invoke B( 29 - i, 18 + i, 48 + ( i &gt;&gt; 1 ) * 64, 1, r ) for i = 0..3.</p>"
+        },
+        {
+          "html": "<p>If n is equal to 6, invoke H( 32 + 8 * i + j, 39 + 8 * i - j, i &amp; 1, r ) for i = 0..3, for j = 0..3.</p>"
+        },
+        {
+          "html": "<p>If n is greater than or equal to 3, invoke H( i, 7 - i, 0, r ) for i = 0..3.</p>"
+        },
+        {
+          "html": "<p>If n is greater than or equal to 4, invoke B( 13 - i, 10 + i, 32, 1, r ) for i = 0..1.</p>"
+        },
+        {
+          "html": "<p>If n is greater than or equal to 5, invoke H( 16 + i * 8 + j, 23 + i * 8 - j, i, r ) for i = 0..1, for j = 0..3.</p>"
+        },
+        {
+          "html": "<p>If n is equal to 6, invoke B( 59 - i, 36 + i, i &lt; 4 ? 48 : 112, 1, r ) for i = 0..7.</p>"
+        },
+        {
+          "html": "<p>If n is greater than or equal to 4, invoke H( i, 15 - i, 0, r ) for i = 0..7.</p>"
+        },
+        {
+          "html": "<p>If n is greater than or equal to 5, invoke B( 27 - i, 20 + i, 32, 1, r ) for i = 0..3.</p>"
+        },
+        {
+          "html": "<p>If n is equal to 6, the following steps apply for i = 0..7:</p>\n\n    <ul>\n      <li>\n        <p>Invoke H( 32 + i, 47 - i, 0, r ).</p>\n      </li>\n      <li>\n        <p>Invoke H( 48 + i, 63 - i, 1, r ).</p>\n      </li>\n    </ul>"
+        },
+        {
+          "html": "<p>If n is greater than or equal to 5, invoke H( i, 31 - i, 0, r ) for i = 0..15.</p>"
+        },
+        {
+          "html": "<p>If n is equal to 6, invoke B( 55 - i, 40 + i, 32, 1, r ) for i = 0..7.</p>"
+        },
+        {
+          "html": "<p>If n is equal to 6, invoke H( i, 63 - i, 0, r ) for i = 0..31.</p>"
+        }
+      ]
+    },
+    {
+      "html": "The following ordered steps apply:",
+      "rationale": "invoke",
+      "steps": [
+        {
+          "html": "<p>Invoke the ADST input array permutation process specified in <a href=\"https://aomediacodec.github.io/av1-spec/#inverse-adst-input-array-permutation-process\">section 7.13.2.4</a> with the \ninput variable n set to 3.</p>"
+        },
+        {
+          "html": "<p>Invoke B( 2 * i, 2 * i + 1, 60 - 16 * i, 1, r ) for i = 0..3.</p>"
+        },
+        {
+          "html": "<p>Invoke H( i, 4 + i, 0, r ) for i = 0..3.</p>"
+        },
+        {
+          "html": "<p>Invoke B( 4 + 3 * i, 5 + i, 48 - 32 * i, 1, r ) for i = 0..1.</p>"
+        },
+        {
+          "html": "<p>Invoke H( 4 * j + i, 2 + 4 * j + i, 0, r ) for i = 0..1, for j = 0..1.</p>"
+        },
+        {
+          "html": "<p>Invoke B( 2 + 4 * i, 3 + 4 * i, 32, 1, r ) for i = 0..1.</p>"
+        },
+        {
+          "html": "<p>Invoke the ADST output array permutation process specified in <a href=\"https://aomediacodec.github.io/av1-spec/#inverse-adst-output-array-permutation-process\">section 7.13.2.5</a> with the \ninput variable n set to 3.</p>"
+        }
+      ]
+    },
+    {
+      "html": "The following ordered steps apply:",
+      "rationale": "invoke",
+      "steps": [
+        {
+          "html": "<p>Invoke the ADST input array permutation process specified in <a href=\"https://aomediacodec.github.io/av1-spec/#inverse-adst-input-array-permutation-process\">section 7.13.2.4</a> with the \ninput variable n set to 4.</p>"
+        },
+        {
+          "html": "<p>Invoke B( 2 * i, 2 * i + 1, 62 - 8 * i, 1, r ) for i = 0..7.</p>"
+        },
+        {
+          "html": "<p>Invoke H( i, 8 + i, 0, r ) for i = 0..7.</p>"
+        },
+        {
+          "html": "<p>Invoke B( 8 + 2 * i, 9 + 2 * i, 56 - 32 * i, 1, r ) and B( 13 + 2 * i, 12 + 2 * i, 8 + 32 * i, 1, r )\nfor i = 0..1.</p>"
+        },
+        {
+          "html": "<p>Invoke H( 8 * j + i, 4 + 8 * j + i, 0, r ) for i = 0..3, for j = 0..1.</p>"
+        },
+        {
+          "html": "<p>Invoke B( 4 + 8 * j + 3 * i, 5 + 8 * j + i, 48 - 32 * i, 1, r ) for i = 0..1, for j = 0..1.</p>"
+        },
+        {
+          "html": "<p>Invoke H( 4 * j + i, 2 + 4 * j + i, 0, r ) for i = 0..1, for j = 0..3.</p>"
+        },
+        {
+          "html": "<p>Invoke B( 2 + 4 * i, 3 + 4 * i, 32, 1, r ) for i = 0..3.</p>"
+        },
+        {
+          "html": "<p>Invoke the ADST output array permutation process specified in <a href=\"https://aomediacodec.github.io/av1-spec/#inverse-adst-output-array-permutation-process\">section 7.13.2.5</a> with the \ninput variable n set to 4.</p>"
+        }
+      ]
+    },
+    {
+      "html": "The variable modeType is derived as follows:",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "<p>If mode is greater than or equal to NEARESTMV,\nand not equal to GLOBALMV,\nand not equal to GLOBAL_GLOBALMV, modeType is set equal\nto 1.</p>"
+        },
+        {
+          "html": "<p>Otherwise (if mode is an intra type or GLOBALMV or GLOBAL_GLOBALMV), modeType is set equal\nto 0.</p>"
+        }
+      ]
+    },
+    {
+      "html": "The variable deltaLF is derived as follows:",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "<p>If delta_lf_multi is equal to 0, deltaLF is set equal to DeltaLFs[ row ][ col ][ 0 ].</p>"
+        },
+        {
+          "html": "<p>Otherwise (delta_lf_multi is equal to 1), deltaLF is set equal to\nDeltaLFs[ row ][ col ][ ( plane == 0 ) ? pass : ( plane + 1 ) ].</p>"
+        }
+      ]
+    }
+  ]
+}

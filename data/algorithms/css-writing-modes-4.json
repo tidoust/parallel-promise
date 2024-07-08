@@ -1,0 +1,20 @@
+{
+  "spec": {
+    "title": "CSS Writing Modes Level 4",
+    "url": "https://drafts.csswg.org/css-writing-modes-4/"
+  },
+  "algorithms": [
+    {
+      "html": "The used <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-writing-modes-4/#inline-size\" id=\"ref-for-inline-size①④\">inline size</a> of the resulting multi-column container is then calculated:",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "If the content neither line-wraps nor fragments within the multi-column container,\n        then the used <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-writing-modes-4/#inline-size\" id=\"ref-for-inline-size①⑤\">inline size</a> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-sizing-3/#max-content-inline-size\" id=\"ref-for-max-content-inline-size①\">max-content inline size</a> of the box’s contents.\n        This criteria gives the shrink-to-fit behavior for short orthogonal flow contents\n        without making a large blank space."
+        },
+        {
+          "html": "Otherwise it is calculated from the used <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-multicol-1/#propdef-column-width\" id=\"ref-for-propdef-column-width①⓪\">column-width</a>, <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-multicol-1/#propdef-column-count\" id=\"ref-for-propdef-column-count⑧\">column-count</a>, and <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-align-3/#propdef-column-gap\" id=\"ref-for-propdef-column-gap①\">column-gap</a>."
+        }
+      ]
+    }
+  ]
+}

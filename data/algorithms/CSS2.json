@@ -1,0 +1,337 @@
+{
+  "spec": {
+    "title": "Cascading Style Sheets Level 2 Revision 1 (CSS 2.1) Specification",
+    "url": "https://www.w3.org/TR/CSS21/"
+  },
+  "algorithms": [
+    {
+      "html": "In this model, a user agent processes a source\nby going through the following steps:",
+      "rationale": "parse",
+      "steps": [
+        {
+          "html": "Parse the source document and create a <a href=\"https://www.w3.org/TR/CSS21/intro.html#conform.html#doctree\">document tree</a>."
+        },
+        {
+          "html": "Identify the target <a href=\"https://www.w3.org/TR/CSS21/intro.html#media.html\">media type</a>."
+        },
+        {
+          "html": "Retrieve all style sheets associated with the document that are\nspecified for the target <a href=\"https://www.w3.org/TR/CSS21/intro.html#media.html\">media type</a>."
+        },
+        {
+          "html": "Annotate every element of the document tree by assigning a single\nvalue to every <a href=\"https://www.w3.org/TR/CSS21/intro.html#syndata.html#properties\">property</a> that is\napplicable to the target <a href=\"https://www.w3.org/TR/CSS21/intro.html#media.html\">media type</a>.\nProperties are assigned values according to the mechanisms described\nin the section on <a href=\"https://www.w3.org/TR/CSS21/intro.html#cascade.html\">cascading and\ninheritance</a>. \n\n<p>Part of the calculation of values depends on the formatting\nalgorithm appropriate for the target <a href=\"https://www.w3.org/TR/CSS21/intro.html#media.html\">media\ntype</a>. For example, if the target medium is the screen, user agents\napply the <a href=\"https://www.w3.org/TR/CSS21/intro.html#visuren.html\">visual formatting model</a>. \n\n</p>"
+        },
+        {
+          "html": "From the annotated document tree, generate a \n<span class=\"index-def\" title=\"formatting structure\">\n<a name=\"formatting-structure\"><dfn>formatting\nstructure</dfn></a></span>.  Often, the formatting structure closely\nresembles the document tree, but it may also differ significantly,\nnotably when authors make use of pseudo-elements and generated content.\nFirst, the formatting structure need not be \"tree-shaped\" at all -- the\nnature of the structure depends on the implementation.  Second, the\nformatting structure may contain more or less information than the\ndocument tree. For instance, if an element in the document tree has a\nvalue of 'none' for the <a href=\"https://www.w3.org/TR/CSS21/intro.html#visuren.html#propdef-display\" class=\"noxref\"><span class=\"propinst-display\">'display'</span></a> property, that element will\ngenerate nothing in the formatting structure.  A list element, on the\nother hand, may generate more information in the formatting structure:\nthe list element's content and list style information (e.g., a bullet\nimage).\n\n<p>Note that the CSS user agent does not alter the document tree\nduring this phase. In particular, content generated due to style\nsheets is not fed back to the document language processor (e.g., for\nreparsing).\n\n</p>"
+        },
+        {
+          "html": "Transfer the formatting structure to the target medium (e.g., print\nthe results, display them on the screen, render them as speech,\netc.)."
+        }
+      ]
+    },
+    {
+      "html": "User agents must first assign a specified value to each property based\non the following mechanisms (in order of precedence):",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "If the <a href=\"https://www.w3.org/TR/CSS21/cascade.html#cascade\">cascade</a> results in a value, use it."
+        },
+        {
+          "html": "Otherwise, if the property is <a href=\"https://www.w3.org/TR/CSS21/cascade.html#inheritance\">inherited</a> and the element is not the root of the <a>document tree</a>, use the computed value of the parent element."
+        },
+        {
+          "html": "Otherwise use the property's <a name=\"x1\"><span class=\"index-def\" title=\"initial value\">initial value</span></a>. The initial value of each property is indicated in the property's definition."
+        }
+      ]
+    },
+    {
+      "html": "To find the value for an element/property combination, user agents\nmust apply the following sorting order:",
+      "rationale": "find",
+      "steps": [
+        {
+          "html": "Find all declarations that apply to the element and property in\n      question, for the target <a href=\"https://www.w3.org/TR/CSS21/cascade.html#media.html\">media type</a>.\n      Declarations apply if the associated selector <a href=\"https://www.w3.org/TR/CSS21/cascade.html#selector.html\">matches</a> the element in question and the\n      target medium matches the media list on all @media rules\n      containing the declaration and on all links on the path through\n      which the style sheet was reached."
+        },
+        {
+          "html": "Sort  according to importance (normal or important)\nand origin (author, user, or user agent). In ascending order of\nprecedence:\n\n<ol>\n<li>user agent declarations\n</li><li>user normal declarations\n</li><li>author normal declarations\n</li><li>author important declarations\n</li><li>user important declarations\n</li></ol>",
+          "ignored": [
+            "user agent declarations user normal declarations author normal declarations author important declarations user important declarations"
+          ]
+        },
+        {
+          "html": "Sort rules with the same importance and origin by <a href=\"https://www.w3.org/TR/CSS21/cascade.html#specificity\">specificity</a> \n      of selector: more specific\n      selectors will override more general ones.  Pseudo-elements and\n      pseudo-classes are counted as normal elements and classes,\n      respectively."
+        },
+        {
+          "html": "Finally, sort by order specified: if two declarations have the\n    same weight, origin and specificity, the latter specified wins.\n    Declarations in imported style sheets are considered to be before any\n    declarations in the style sheet itself."
+        }
+      ]
+    },
+    {
+      "html": "The three properties that affect box generation and layout — \n<a href=\"https://www.w3.org/TR/CSS21/visuren.html#visuren.html#propdef-display\" class=\"noxref\"><span class=\"propinst-display\">'display'</span></a>, \n<a href=\"https://www.w3.org/TR/CSS21/visuren.html#visuren.html#propdef-position\" class=\"noxref\"><span class=\"propinst-position\">'position'</span></a>, and \n<a href=\"https://www.w3.org/TR/CSS21/visuren.html#visuren.html#propdef-float\" class=\"noxref\"><span class=\"propinst-float\">'float'</span></a> — interact as follows:",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "If <a href=\"https://www.w3.org/TR/CSS21/visuren.html#visuren.html#propdef-display\" class=\"noxref\"><span class=\"propinst-display\">'display'</span></a>\nhas the value 'none', then \n<a href=\"https://www.w3.org/TR/CSS21/visuren.html#visuren.html#propdef-position\" class=\"noxref\"><span class=\"propinst-position\">'position'</span></a> and\n<a href=\"https://www.w3.org/TR/CSS21/visuren.html#visuren.html#propdef-float\" class=\"noxref\"><span class=\"propinst-float\">'float'</span></a> do not apply. \nIn this case, the element generates no box."
+        },
+        {
+          "html": "Otherwise, if <a href=\"https://www.w3.org/TR/CSS21/visuren.html#visuren.html#propdef-position\" class=\"noxref\"><span class=\"propinst-position\">'position'</span></a>\nhas the value 'absolute' or 'fixed', the box is absolutely positioned, \nthe computed\nvalue of <a href=\"https://www.w3.org/TR/CSS21/visuren.html#visuren.html#propdef-float\" class=\"noxref\"><span class=\"propinst-float\">'float'</span></a> is 'none',  \nand display is set according to the table below.  \nThe position of the box will be determined by the <a href=\"https://www.w3.org/TR/CSS21/visuren.html#visuren.html#propdef-top\" class=\"noxref\"><span class=\"propinst-top\">'top'</span></a>, <a href=\"https://www.w3.org/TR/CSS21/visuren.html#visuren.html#propdef-right\" class=\"noxref\"><span class=\"propinst-right\">'right'</span></a>, <a href=\"https://www.w3.org/TR/CSS21/visuren.html#visuren.html#propdef-bottom\" class=\"noxref\"><span class=\"propinst-bottom\">'bottom'</span></a> and <a href=\"https://www.w3.org/TR/CSS21/visuren.html#visuren.html#propdef-left\" class=\"noxref\"><span class=\"propinst-left\">'left'</span></a> properties and the box's \ncontaining block."
+        },
+        {
+          "html": "Otherwise, if 'float' has a value other than 'none', the box is\nfloated and 'display' is set according to the table below."
+        },
+        {
+          "html": "Otherwise, if the element is the root element, \n'display' is set according to the table below, except that it is\nundefined in CSS&nbsp;2.1 whether a specified value of 'list-item'\nbecomes a computed value of 'block' or 'list-item'."
+        },
+        {
+          "html": "Otherwise, the remaining <a href=\"https://www.w3.org/TR/CSS21/visuren.html#visuren.html#propdef-display\" class=\"noxref\"><span class=\"propinst-display\">'display'</span></a> property values apply\nas specified."
+        }
+      ]
+    },
+    {
+      "html": "The size of the image is calculated from the following rules:",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "If the image has a intrinsic width and height, the used width and\nheight are the intrinsic width and height."
+        },
+        {
+          "html": "Otherwise, if the image has an intrinsic ratio and either an\nintrinsic width or an intrinsic height, the used width/height is the\nsame as the provided intrinsic width/height, and the used value of the\nmissing dimension is calculated from the provided dimension and the\nratio."
+        },
+        {
+          "html": "Otherwise, if the image has an intrinsic ratio, the used width is\n1em and the used height is calculated from this width and the\nintrinsic ratio. If this would produce a height larger than 1em, then\nthe used height is instead set to 1em and the used width is calculated\nfrom this height and the intrinsic ratio."
+        },
+        {
+          "html": "Otherwise, the image's used width is its intrinsic width if it has\none, or else 1em. The image's used height is its intrinsic height if\nit has one, or else 1em."
+        }
+      ]
+    },
+    {
+      "html": "As each line is laid out,",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "If a space (U+0020) at the beginning of a line has 'white-space'\n     set to 'normal', 'nowrap', or 'pre-line', it is removed."
+        },
+        {
+          "html": "All tabs (U+0009) are rendered as a horizontal shift that lines\n     up the start edge of the next glyph with the next tab stop. Tab\n     stops occur at points that are multiples of 8 times the width of\n     a space (U+0020) rendered in the block's font from the block's\n     starting content edge."
+        },
+        {
+          "html": "If a space (U+0020) at the end of a line has 'white-space' set to\n     'normal', 'nowrap', or 'pre-line', it is also removed."
+        },
+        {
+          "html": "If spaces (U+0020) or tabs (U+0009) at the end of a line have\n     'white-space' set to 'pre-wrap', UAs may visually collapse them."
+        }
+      ]
+    },
+    {
+      "html": "The following steps are performed in three stages.",
+      "rationale": "remove",
+      "steps": [
+        {
+          "html": "Remove irrelevant boxes:\n    <ol>\n      <li>All child boxes of a 'table-column' parent are treated as if\n          they had 'display: none'.\n\n      </li><li>If a child <var>C</var> of a 'table-column-group' parent is\n          not a 'table-column' box, then it is treated as if it had\n          'display: none'.\n\n      </li><li>If a child <var>C</var> of a tabular container <var>P</var>\n          is an anonymous inline box that contains only white space,\n          and its immediately preceding and following siblings, if\n          any, are proper table descendants of <var>P</var> and are\n          either 'table-caption' or internal table boxes, then it is\n          treated as if it had 'display: none'. A box <var>D</var> is\n          a proper table descendant of <var>A</var> if <var>D</var>\n          can be a descendant of <var>A</var> without causing the\n          generation of any intervening 'table' or 'inline-table'\n          boxes.\n\n      </li><li>If a box <var>B</var> is an anonymous inline containing only\n          white space, and is between two immediate siblings each of\n          which is either an internal table box or a 'table-caption'\n          box then <var>B</var> is treated as if it had 'display:\n          none'.\n    </li></ol>",
+          "ignored": [
+            "All child boxes of a 'table-column' parent are treated as if they had 'display: none'. If a child C of a 'table-column-group' parent is not a 'table-column' box, then it is treated as if it had 'display: none'. If a child C of a tabular container P is an anonymous inline box that contains only white space, and its immediately preceding and following siblings, if any, are proper table descendants of P and are either 'table-caption' or internal table boxes, then it is treated as if it had 'display: none'. A box D is a proper table descendant of A if D can be a descendant of A without causing the generation of any intervening 'table' or 'inline-table' boxes. If a box B is an anonymous inline containing only white space, and is between two immediate siblings each of which is either an internal table box or a 'table-caption' box then B is treated as if it had 'display: none'."
+          ]
+        },
+        {
+          "html": "Generate missing child wrappers:",
+          "rationale": "if",
+          "steps": [
+            {
+              "html": "If a child <var>C</var> of a 'table' or 'inline-table' box\n          is not a proper table child, then generate an anonymous\n          'table-row' box around <var>C</var> and all consecutive\n          siblings of <var>C</var> that are not proper table children."
+            },
+            {
+              "html": "If a child <var>C</var> of a row group box is not a\n          'table-row' box, then generate an anonymous 'table-row' box\n          around <var>C</var> and all consecutive siblings\n          of <var>C</var> that are not 'table-row' boxes."
+            },
+            {
+              "html": "If a child <var>C</var> of a 'table-row' box is not a\n          'table-cell', then generate an anonymous 'table-cell' box\n          around <var>C</var> and all consecutive siblings\n          of <var>C</var> that are not 'table-cell' boxes."
+            }
+          ]
+        },
+        {
+          "html": "Generate missing parents:",
+          "rationale": "for",
+          "steps": [
+            {
+              "html": "For each 'table-cell' box <var>C</var> in a sequence of\n           consecutive internal table and 'table-caption' siblings,\n           if <var>C</var>'s parent is not a 'table-row' then generate\n           an anonymous 'table-row' box around <var>C</var> and all\n           consecutive siblings of <var>C</var> that are 'table-cell'\n           boxes."
+            },
+            {
+              "html": "For each proper table child <var>C</var> in a sequence of\n           consecutive proper table children, if <var>C</var> is\n           misparented then generate an anonymous 'table' or\n           'inline-table' box <var>T</var> around <var>C</var> and all\n           consecutive siblings of <var>C</var> that are proper table\n           children. (If C's parent is an 'inline' box,\n           then <var>T</var> must be an 'inline-table' box; otherwise\n           it must be a 'table' box.)\n           <ul>\n             <li>A 'table-row' is misparented if its parent is neither\n               a row group box nor a 'table' or 'inline-table' box.\n             </li><li>A 'table-column' box is misparented if its parent is\n               neither a 'table-column-group' box nor a 'table' or\n               'inline-table' box.\n             </li><li>A row group box, 'table-column-group' box, or\n               'table-caption' box is misparented if its parent is\n               neither a 'table' box nor an 'inline-table' box.\n           </li></ul>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "html": "Column and caption\nwidths influence the final table width as follows:",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "If the 'table' or 'inline-table' element's <a href=\"https://www.w3.org/TR/CSS21/tables.html#visudet.html#propdef-width\" class=\"noxref\"><span class=\"propinst-width\">'width'</span></a> property has a computed value\n  (W) other than 'auto', the used width is\n  the greater of W, CAPMIN, and the minimum width required by all the\n  columns plus cell spacing or borders (MIN). If the used width is\n  greater than MIN, the\n  extra width should be distributed over the columns."
+        },
+        {
+          "html": "If the 'table' or 'inline-table' element has 'width: auto',\n  the used width is the greater of the table's containing block width,\n  CAPMIN, and MIN. However, if either CAPMIN or the maximum width\n  required by the columns plus cell spacing or borders (MAX) is less\n  than that of the containing block, use max(MAX, CAPMIN)."
+        }
+      ]
+    },
+    {
+      "name": "run-in box",
+      "href": null,
+      "html": "<del>A <dfn>run-in box</dfn> behaves as follows:</del>",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "<del>If the run-in box contains a block box, the run-in box\nbecomes a block box.</del>"
+        },
+        {
+          "html": "<del>If a sibling block box (that does not float and is not\nabsolutely positioned) follows the run-in box, the run-in box becomes\nthe first inline box of the block box.  A run-in cannot run in to a\nblock that already starts with a run-in or that itself is a\nrun-in.</del>"
+        },
+        {
+          "html": "<del>Otherwise, the run-in box becomes a block box.</del>"
+        }
+      ]
+    },
+    {
+      "name": "run-in element",
+      "href": null,
+      "html": "<ins>A <dfn>run-in element</dfn> (or pseudo-element) <var>A</var>\nbehaves as follows:</ins>",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "<ins>If <var>A</var> has any children that inhibit run-in\n  behavior (see below), then <var>A</var> is rendered as if it had\n  'display: block'.</ins>"
+        },
+        {
+          "html": "<ins>Let <var>B</var> be the first of <var>A</var>'s following\n  siblings that is neither floating nor absolutely positioned nor has\n  'display: none'. If <var>B</var> exists and has a specified value\n  for 'display' of 'block' or 'list-item' and is not replaced, then\n  <var>A</var> is rendered as an 'inline' element at the start of\n  <var>B</var>'s principal box. Note: <var>A</var> is rendered before\n  <var>B</var>'s ':before' pseudo-element, if any. See 12.1.</ins>"
+        },
+        {
+          "html": "<ins>Otherwise, <var>A</var> is rendered as if it had 'display:\n  block'.</ins>"
+        }
+      ]
+    },
+    {
+      "html": "Column <ins>and caption</ins>\nwidths influence the final table width as follows:",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "If the 'table' or 'inline-table' element's 'width' property has\n  a computed value (W) other than 'auto', the <del>property's value as\n  used for layout</del> <ins>used width</ins> is the greater of\n  W<ins>, CAPMIN,</ins> and the minimum width required by all the\n  columns plus cell spacing or borders (MIN). If <del>W</del> <ins>the\n  used width</ins>is greater than MIN, the extra width should be\n  distributed over the columns."
+        },
+        {
+          "html": "If the 'table' or 'inline-table' element has 'width: auto', the\n  <del>table width used for layout</del> <ins>used width</ins> is the\n  greater of the table's containing block width<ins>, CAPMIN,</ins>\n  and MIN. However, if <ins>either CAPMIN or</ins> the maximum width\n  required by the columns plus cell spacing or borders (MAX) is less\n  than that of the containing block, use <del>MAX</del> <ins>max(MAX,\n  CAPMIN)</ins>."
+        }
+      ]
+    },
+    {
+      "html": "In the case that the ancestor is an <del>inline box</del>\n<ins>inline-level element</ins>, the containing block <del>depends on\nthe <a href=\"https://www.w3.org/TR/CSS21/#visuren.html#propdef-direction\" class=\"noxref\"><span class=\"propinst-direction\">'direction'</span></a> property of\nthe ancestor:</del> <ins>is the bounding box around the padding boxes\nof the first and the\nlast inline boxes generated for that element. In CSS&nbsp;2.1, if the\ninline element is split across multiple lines, the containing\nblock is undefined.</ins>",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "<del>If the <a href=\"https://www.w3.org/TR/CSS21/changes.html#visuren.html#propdef-direction\" class=\"noxref\"><span class=\"propinst-direction\">'direction'</span></a> is\n'ltr', the top and left of the containing block are the top and left\npadding edges of the first box generated by the ancestor, and the\nbottom and right are the bottom and right padding edges of the last\nbox of the ancestor.</del>"
+        },
+        {
+          "html": "<del>If the <a href=\"https://www.w3.org/TR/CSS21/changes.html#visuren.html#propdef-direction\" class=\"noxref\"><span class=\"propinst-direction\">'direction'</span></a> is\n'rtl', the top and right are the top and right padding edges of the\nfirst box generated by the ancestor, and the bottom and left are the\nbottom and left padding edges of the last box of the ancestor.</del>"
+        }
+      ]
+    },
+    {
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "<del>If the image has an intrinsic width or height, then that\nintrinsic width/height becomes the image's used width/height.</del>\n<ins>If the image has a intrinsic width and height, the used width and\nheight are the intrinsic width and height.</ins>"
+        },
+        {
+          "html": "<del>If the image has no intrinsic ratio and a ratio cannot be\ncalculated from its width and height, then its intrinsic ratio is\nassumed to be 1:1.</del> <ins>Otherwise, if the image has an intrinsic\nratio and either an intrinsic width or an intrinsic height, the used\nwidth/height is the same as the provided intrinsic width/height, and\nthe used value of the missing dimension is calculated from the\nprovided dimension and the ratio.</ins>"
+        },
+        {
+          "html": "<del>If the image has a width but no height, its height is\ncalculated from the intrinsic ratio.</del> <ins>Otherwise, if the\nimage has an intrinsic ratio, the used width is 1em and the used\nheight is calculated from this width and the intrinsic ratio.  If this\nwould produce a height larger than 1em, then the used height is\ninstead set to 1em and the used width is calculated from this height\nand the intrinsic ratio.</ins>"
+        },
+        {
+          "html": "<del>If the image's height cannot be resolved from the rules\nabove, then the image's height is assumed to be 1em.</del>\n<ins>Otherwise, the image's used width is its intrinsic width if it\nhas one, or else 1em.  The image's used height is its intrinsic height\nif it has one, or else 1em.</ins>"
+        },
+        {
+          "html": "<del>If the image has no intrinsic width, then its width is\ncalculated from the resolved height and the intrinsic ratio.</del>"
+        }
+      ]
+    },
+    {
+      "html": "The painting order for the descendants of an element generating\n    a stacking context (see the <a href=\"https://www.w3.org/TR/CSS21/zindex.html#visuren.html#propdef-z-index\" class=\"noxref\"><span class=\"propinst-z-index\">'z-index'</span></a> property) is:",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "<p>If the element is a root element:\n\t</p><ol>\n\t  <li>background color of element over the entire canvas.\n\n\t  </li><li>background image of element, over the entire canvas,\n\t  anchored at the origin that would be used if it was painted\n\t  for the root element.\n\t</li></ol>",
+          "ignored": [
+            "background color of element over the entire canvas. background image of element, over the entire canvas, anchored at the origin that would be used if it was painted for the root element."
+          ]
+        },
+        {
+          "html": "<p>If the element is a block, list-item, or other block\n\tequivalent:\n\t</p><ol>\n\t  <li>background color of element unless it is the root\n\t  element.\n\n\t  </li><li>background image of element unless it is the root\n\t  element.\n\n\t  </li><li>border of element.\n\t</li></ol>\n\n\t<p>Otherwise, if the element is a block level table:\n\t</p><ol>\n\t  <li>table backgrounds (color then image) unless it is the\n\t  root element.\n\t  </li><li>column group backgrounds (color then image).\n\t  </li><li>column backgrounds (color then image).\n\t  </li><li>row group backgrounds (color then image).\n\t  </li><li>row backgrounds (color then image).\n\t  </li><li>cell backgrounds (color then image).\n\t  </li><li>all table borders (in tree order for separated borders).\n\t</li></ol>",
+          "ignored": [
+            "background color of element unless it is the root element. background image of element unless it is the root element. border of element.",
+            "table backgrounds (color then image) unless it is the root element. column group backgrounds (color then image). column backgrounds (color then image). row group backgrounds (color then image). row backgrounds (color then image). cell backgrounds (color then image). all table borders (in tree order for separated borders)."
+          ]
+        },
+        {
+          "html": "<p>Stacking contexts formed by positioned descendants with\n\tnegative z-indices (excluding 0) in z-index order (most\n\tnegative first) then tree order.\n\n      </p>"
+        },
+        {
+          "html": "<p>For all its in-flow, non-positioned, block-level\n\tdescendants in tree order: If the element is a block,\n\tlist-item, or other block equivalent:\n\t</p><ol>\n\t  <li>background color of element.\n\t  </li><li>background image of element.\n\t  </li><li>border of element.\n\t</li></ol>\n\n\t<p>Otherwise, the element is a table:\n\t</p><ol>\n\t  <li>table backgrounds (color then image).\n\t  </li><li>column group backgrounds (color then image).\n\t  </li><li>column backgrounds (color then image).\n\t  </li><li>row group backgrounds (color then image).\n\t  </li><li>row backgrounds (color then image).\n\t  </li><li>cell backgrounds (color then image).\n\t  </li><li>all table borders (in tree order for separated borders).\n\t</li></ol>",
+          "ignored": [
+            "background color of element. background image of element. border of element.",
+            "table backgrounds (color then image). column group backgrounds (color then image). column backgrounds (color then image). row group backgrounds (color then image). row backgrounds (color then image). cell backgrounds (color then image). all table borders (in tree order for separated borders)."
+          ]
+        },
+        {
+          "html": "<p>All non-positioned floating descendants, in tree order. For\n\teach one of these, treat the element as if it created a new\n\tstacking context, but any positioned descendants and\n\tdescendants which actually create a new stacking context\n\tshould be considered part of the parent stacking context, not\n\tthis new one.\n\n      </p>"
+        },
+        {
+          "html": "If the element is an inline element that generates a\n\tstacking context, then:",
+          "rationale": "for",
+          "steps": [
+            {
+              "html": "For each line box that the element is in:",
+              "rationale": "jump",
+              "steps": [
+                {
+                  "html": "Jump to <a href=\"https://www.w3.org/TR/CSS21/zindex.html#each-box\">7.2.1</a> for the\n\t      box(es) of the element in that line box (in tree order)."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "html": "Otherwise: first for the element, then for all its in-flow,\n\tnon-positioned, block-level descendants in tree order:",
+          "rationale": "if",
+          "steps": [
+            {
+              "html": "<p>If the element is a block-level replaced element, then:\n\t    the replaced content, atomically.\n\n\t  </p>"
+            },
+            {
+              "html": "Otherwise, for each line box of that element:",
+              "rationale": "for",
+              "steps": [
+                {
+                  "html": "<p>For each box that is a child of that element, in\n\t\tthat line box, in tree order:\n\t\t</p><ol>\n\t\t  <li>\n\t\t    <p>background color of element.\n\t\t  </p></li><li>\n\t\t    <p>background image of element.\n\t\t  </p></li><li>\n\t\t    <p>border of element.\n\t\t  </p></li><li>\n\t\t    <p>For inline elements:\n\t\t    </p><ol>\n\t\t      <li>\n\t\t\t<p>For all the element's in-flow,\n\t\t\tnon-positioned, inline-level children that are\n\t\t\tin this line box, and all runs of text inside\n\t\t\tthe element that is on this line box, in tree\n\t\t\torder:\n\t\t\t</p><ol>\n\t\t\t  <li>\n\t\t\t    <p>If this is a run of text, then:\n\t\t\t    </p><ol>\n\t\t\t      <li>any underlining affecting the text\n\t\t\t      of the element, in tree order of the\n\t\t\t      elements applying the underlining (such\n\t\t\t      that the deepest element's underlining,\n\t\t\t      if any, is painted topmost and the root\n\t\t\t      element's underlining, if any, is drawn\n\t\t\t      bottommost).\n\n\t\t\t      </li><li>any overlining affecting the text of\n\t\t\t      the element, in tree order of the\n\t\t\t      elements applying the overlining (such\n\t\t\t      that the deepest element's overlining,\n\t\t\t      if any, is painted topmost and the root\n\t\t\t      element's overlining, if any, is drawn\n\t\t\t      bottommost).\n\n\t\t\t      </li><li>the text.\n\n\t\t\t      </li><li>any line-through affecting the text\n\t\t\t      of the element, in tree order of the\n\t\t\t      elements applying the line-through (such\n\t\t\t      that the deepest element's line-through,\n\t\t\t      if any, is painted topmost and the root\n\t\t\t      element's line-through, if any, is drawn\n\t\t\t      bottommost).\n\t\t\t    </li></ol>\n\n\t\t\t  </li><li>\n\t\t\t    <p>Otherwise, jump to <a href=\"https://www.w3.org/TR/CSS21/zindex.html#each-box\">7.2.1</a> for that\n\t\t\t    element.\n\t\t\t</p></li></ol>\n\t\t    </li></ol>\n\n\t\t    <p>For inline-block and inline-table elements:\n\t\t    </p><ol>\n\t\t      <li>For each one of these, treat the element as\n\t\t      if it created a new stacking context, but any\n\t\t      positioned descendants and descendants which\n\t\t      actually create a new stacking context should be\n\t\t      considered part of the parent stacking context,\n\t\t      not this new one.\n\t\t    </li></ol>\n\n\t\t    <p>For inline-level replaced elements:\n\t\t    </p><ol>\n\t\t      <li>the replaced content, atomically.\n\t\t    </li></ol>\n\t\t</li></ol>",
+                  "ignored": [
+                    "background color of element. background image of element. border of element. For inline elements: For all the element's in-flow, non-positioned, inline-level children that are in this line box, and all runs of text inside the element that is on this line box, in tree order: If this is a run of text, then: any underlining affecting the text of the element, in tree order of the elements applying the underlining (such that the deepest element's underlining, if any, is painted topmost and the root element's underlining, if any, is drawn bottommost). any overlining affecting the text of the element, in tree order of the elements applying the overlining (such that the deepest element's overlining, if any, is painted topmost and the root element's overlining, if any, is drawn bottommost). the text. any line-through affecting the text of the element, in tree order of the elements applying the line-through (such that the deepest element's line-through, if any, is painted topmost and the root element's line-through, if any, is drawn bottommost). Otherwise, jump to 7.2.1 for that element. For inline-block and inline-table elements: For each one of these, treat the element as if it created a new stacking context, but any positioned descendants and descendants which actually create a new stacking context should be considered part of the parent stacking context, not this new one. For inline-level replaced elements: the replaced content, atomically."
+                  ]
+                },
+                {
+                  "html": "<p>Optionally, the outline of the element (see <a href=\"https://www.w3.org/TR/CSS21/zindex.html#outlines\">10 below</a>).\n\t    </p>"
+                }
+              ]
+            },
+            {
+              "html": "<p>Optionally, if the element is block-level, the outline\n\t    of the element (see <a href=\"https://www.w3.org/TR/CSS21/zindex.html#outlines\">10 below</a>).\n\t</p>"
+            }
+          ]
+        },
+        {
+          "html": "<p>All positioned descendants with 'z-index: auto' or\n\t'z-index: 0', in tree order. For those with 'z-index: auto',\n\ttreat the element as if it created a new stacking context, but\n\tany positioned descendants and descendants which actually\n\tcreate a new stacking context should be considered part of the\n\tparent stacking context, not this new one. For those with\n\t'z-index: 0', treat the stacking context generated atomically.\n\n      </p>"
+        },
+        {
+          "html": "<p>Stacking contexts formed by positioned descendants with\n\tz-indices greater than or equal to 1 in z-index order\n\t(smallest first) then tree order.\n\n      </p>"
+        },
+        {
+          "html": "<p>Finally, implementations that do not draw outlines in steps\n\tabove must draw outlines from this stacking context at this\n\tstage. (It is recommended to draw outlines in this step and\n\tnot in the steps above.)\n    </p>"
+        }
+      ]
+    }
+  ]
+}

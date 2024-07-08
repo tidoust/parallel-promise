@@ -1,0 +1,136 @@
+{
+  "spec": {
+    "title": "CSS Fonts Module Level 4",
+    "url": "https://drafts.csswg.org/css-fonts-4/"
+  },
+  "algorithms": [
+    {
+      "name": "fetch a font",
+      "href": "https://drafts.csswg.org/css-fonts-4/#fetch-a-font",
+      "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"fetch-a-font\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">fetch a font</dfn> given a selected <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.csswg.org/css-values-4/#url-value\" id=\"ref-for-url-value①\" title=\"Expands to: local url flag\">&lt;url&gt;</a> <var>url</var> for <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-fonts-4/#at-font-face-rule\" id=\"ref-for-at-font-face-rule④④\">@font-face</a> <var>rule</var>, <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-values-4/#fetch-a-style-resource\" id=\"ref-for-fetch-a-style-resource\">fetch</a> <var>url</var>,\n\twith stylesheet being <var>rule</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#concept-css-rule-parent-css-style-sheet\" id=\"ref-for-concept-css-rule-parent-css-style-sheet\">parent CSS style sheet</a>,\n\tdestination \"font\",\n\tCORS mode \"cors\",\n\tand processResponse being the following steps given <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-response\" id=\"ref-for-concept-response\">response</a> <var>res</var> and null, failure or a\n\tbyte stream <var>stream</var>:",
+      "rationale": ".algorithm",
+      "steps": [
+        {
+          "html": "<p>If <var>stream</var> is null, return.</p>"
+        },
+        {
+          "html": "<p class=\"issue\" id=\"issue-518894d9\"><a class=\"self-link\" href=\"https://drafts.csswg.org/css-fonts-4/#issue-518894d9\"></a> Load a font from <var>stream</var> according to its type.</p>"
+        }
+      ]
+    },
+    {
+      "html": "If the value of <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-fonts-4/#propdef-font-style\" id=\"ref-for-propdef-font-style①⑦\">font-style</a> is <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-fonts-4/#valdef-font-style-italic\" id=\"ref-for-valdef-font-style-italic③\">italic</a>:",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "<p>If the matching set includes faces with italic values containing the mapped value of <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-fonts-4/#valdef-font-style-italic\" id=\"ref-for-valdef-font-style-italic④\">italic</a>,\nthen faces with italic values which do not include the desired italic mapped value are removed from the matching set.</p>"
+        },
+        {
+          "html": "<p>Otherwise, italic values above the desired italic value are checked in ascending order followed by\nitalic values below the desired italic value, until 0 is hit. Only positive values of italic values are checked\nin this stage.</p>"
+        },
+        {
+          "html": "<p>If no match is found, oblique values greater than or equal to 11deg are checked in ascending order\nfollowed by oblique values below 11deg in descending order, until 0 is hit. Only positive values of oblique values\nare checked in this stage.</p>\n         <p class=\"issue\" id=\"issue-c152d461\"><a class=\"self-link\" href=\"https://drafts.csswg.org/css-fonts-4/#issue-c152d461\"></a> The threshold for preferring oblique over normal <a href=\"https://github.com/w3c/csswg-drafts/issues/2295\">should be lower than the average angle</a>.</p>"
+        },
+        {
+          "html": "<p>If no match is found, italic values less than or equal to 0 are checked in descending order until a match is found.</p>"
+        },
+        {
+          "html": "<p>If no match is found, oblique values less than or equal to 0deg are checked in descending order until a match is found.</p>\n         <div class=\"example\" id=\"ex-ascending-italic\">\n          <a class=\"self-link\" href=\"https://drafts.csswg.org/css-fonts-4/#ex-ascending-italic\"></a> Similar to the <a href=\"https://drafts.csswg.org/css-fonts-4/#ex-ascending-stretch\">previous example</a>, here is the conceptual distance graph for an element styled with \"font-style: italic\": \n          <p><img alt=\"distance graph\" src=\"https://drafts.csswg.org/css-fonts-4/#images/styledistance.svg\"></p>\n          <p>As you can see, because font D contains the minimum italic value across the entire family, font D would be selected by this algorithm. However, if font D were somehow eliminated from the family, font E would then contain the lowest distance in the family, so it would be selected. If E were eliminated, C would be selected. If C were eliminated, font B would not be chosen immediately; instead, oblique values would be consulted and an oblique value might be chosen. However, if no oblique value is chosen, font B would then be selected, followed by font A.</p>\n         </div>"
+        }
+      ]
+    },
+    {
+      "html": "If the value of <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-fonts-4/#propdef-font-style\" id=\"ref-for-propdef-font-style①⑧\">font-style</a> is <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css2/#valdef-font-style-oblique\" id=\"ref-for-valdef-font-style-oblique①\">oblique</a> and the requested angle is greater than or equal to 11deg,",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "<p>If the matching set includes faces with oblique values containing the value of <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css2/#valdef-font-style-oblique\" id=\"ref-for-valdef-font-style-oblique②\">oblique</a>,\nfaces with oblique values which do not include the desired oblique value are removed from the matching set.</p>"
+        },
+        {
+          "html": "<p>Otherwise, oblique values above the desired oblique value are checked in ascending order followed by\noblique values below the desired oblique value, until 0 is hit. Only positive values of oblique values are checked in this stage.</p>"
+        },
+        {
+          "html": "<p>For variable fonts with a slnt axis,\na match is created by setting the slnt value\nwith the specified oblique value.\nOtherwise, if <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-fonts-4/#propdef-font-synthesis-style\" id=\"ref-for-propdef-font-synthesis-style⑤\">font-synthesis-style</a> has the value <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-fonts-4/#valdef-font-synthesis-style-auto\" id=\"ref-for-valdef-font-synthesis-style-auto\">auto</a>,\nthen a fallback match is produced\nby geometric shearing to the specified oblique value.</p>"
+        },
+        {
+          "html": "<p>If no match is found, italic values greater than or equal to 1 are checked in ascending order\nfollowed by italic values below 1 in descending order, until 0 is hit. Only positive values of italic values are checked in this stage.</p>"
+        },
+        {
+          "html": "<p>If no match is found, oblique values less than or equal to 0deg are checked in descending order until a match is found.</p>"
+        },
+        {
+          "html": "<p>If no match is found, italic values less than or equal to 0 are checked in descending order until a match is found.</p>\n         <div class=\"example\" id=\"ex-ascending-oblique-40\">\n          <a class=\"self-link\" href=\"https://drafts.csswg.org/css-fonts-4/#ex-ascending-oblique-40\"></a> Similar to the <a href=\"https://drafts.csswg.org/css-fonts-4/#ex-ascending-stretch\">previous example</a>, here is the conceptual distance graph for an element styled with \"font-style: oblique 40deg\": \n          <p><img alt=\"distance graph\" src=\"https://drafts.csswg.org/css-fonts-4/#images/styledistance2.svg\"></p>\n          <p>As you can see, because font D contains the minimum oblique value across the entire family, font D would be selected by this algorithm. However, if font D were somehow eliminated from the family, font E would then contain the lowest distance in the family, so it would be selected. If E were eliminated, C would be selected. If C were eliminated, font B would not be chosen immediately; instead, italic values would be consulted and an italic value might be chosen. However, if no italic value is chosen, font B would then be selected, followed by font A.</p>\n         </div>"
+        }
+      ]
+    },
+    {
+      "html": "If the value of <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-fonts-4/#propdef-font-style\" id=\"ref-for-propdef-font-style①⑨\">font-style</a> is <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css2/#valdef-font-style-oblique\" id=\"ref-for-valdef-font-style-oblique③\">oblique</a> and the requested angle is greater than or equal to 0deg and less than 11deg,",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "<p>If the matching set includes faces with oblique values containing the value of <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css2/#valdef-font-style-oblique\" id=\"ref-for-valdef-font-style-oblique④\">oblique</a>,\nfaces with oblique values which do not include the desired oblique value are removed from the matching\nset.</p>"
+        },
+        {
+          "html": "<p>Otherwise, oblique values below the desired oblique value are checked in descending order until 0 is hit, followed by\noblique values above the desired oblique value. Only positive values of oblique values are checked\nin this stage.</p>"
+        },
+        {
+          "html": "<p>For variable fonts with a slnt axis,\na match is created by setting the slnt value\nwith the specified oblique value.\nOtherwise, if <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-fonts-4/#propdef-font-synthesis-style\" id=\"ref-for-propdef-font-synthesis-style⑥\">font-synthesis-style</a> has the value <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-fonts-4/#valdef-font-synthesis-style-auto\" id=\"ref-for-valdef-font-synthesis-style-auto①\">auto</a>,\nthen a fallback match is produced\nby geometric shearing to the specified oblique value.</p>"
+        },
+        {
+          "html": "<p>If no match is found, italic values less than 1 are checked in descending order until 0 is hit,\nfollowed by italic values above 1 in ascending order. Only positive values of italic values\nare checked in this stage.</p>"
+        },
+        {
+          "html": "<p>If no match is found, oblique values less than or equal to 0deg are checked in descending order until a match is found.</p>"
+        },
+        {
+          "html": "<p>If no match is found, italic values less than or equal to 0 are checked in descending order until a match is found.</p>"
+        }
+      ]
+    },
+    {
+      "html": "If the matched face is defined via <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-fonts-4/#at-font-face-rule\" id=\"ref-for-at-font-face-rule⑥①\">@font-face</a> rules, user agents must use the procedure below to select a single\nfont:",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "<p>If the font resource has not been loaded and the range of\ncharacters defined by the <a class=\"property css\" data-link-type=\"descriptor\" href=\"https://drafts.csswg.org/css-fonts-4/#descdef-font-face-unicode-range\" id=\"ref-for-descdef-font-face-unicode-range⑤\">unicode-range</a> descriptor value\nincludes the character in question, load the font.</p>"
+        },
+        {
+          "html": "<p>After downloading, if the <em>effective character map</em> supports the character in question, select that font.</p>"
+        }
+      ]
+    },
+    {
+      "html": "",
+      "rationale": "for",
+      "steps": [
+        {
+          "html": "For each family in the font list,\n\t\t\ta face is chosen using the style selection rules\n\t\t\tdefined in the previous section.",
+          "rationale": "if",
+          "steps": [
+            {
+              "html": "If all characters in the sequence <em>b + c1 + c2 …</em> are completely supported by the font,\n\t\tselect this font for the sequence."
+            },
+            {
+              "html": "If a sequence of multiple codepoints\n\t\t\tis canonically equivalent to a single character\n\t\t\tand the font <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-fonts-4/#support\" id=\"ref-for-support\">supports</a> that character,\n\t\t\tselect this font for the sequence\n\t\t\tand use the glyph associated with\n\t\t\tthe canonically equivalent character\n\t\t\tfor the entire cluster."
+            }
+          ]
+        },
+        {
+          "html": "If no font was found in the font list in step 1:",
+          "rationale": "if",
+          "steps": [
+            {
+              "html": "If <em>c1</em> is a variation selector,\n\t\t\tsystem fallback must be used\n\t\t\tto find a font that <em title=\"support\">supports</em> the full sequence of <em>b + c1</em>.\n\t\t\tIf no font on the system <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-fonts-4/#support\" id=\"ref-for-support①\">supports</a> the full sequence,\n\t\t\tmatch the single character <em>b</em> using the normal procedure for matching\n\t\t\tsingle characters\n\t\t\tand ignore the variation selector.\n\t\t\tNote: a sequence with more than one variation selector\n\t\t\tmust be treated as an encoding error\n\t\t\tand the trailing selectors must be ignored. <a data-link-type=\"biblio\" href=\"https://drafts.csswg.org/css-fonts-4/#biblio-unicode\" title=\"The Unicode Standard\">[UNICODE]</a>"
+            },
+            {
+              "html": "Otherwise, the user agent may optionally use\n\t\t\tinstalled font fallback\n\t\t\tto match a font that <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-fonts-4/#support\" id=\"ref-for-support②\">supports</a> the entire cluster."
+            }
+          ]
+        },
+        {
+          "html": "If no font is found in step 2,\n\t\t\tuse the matching sequence\n\t\t\tfrom step 1 to determine the longest sequence\n\t\t\tthat is completely <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-fonts-4/#support\" id=\"ref-for-support③\">supported</a> by a font in the font list\n\t\t\tand attempt to match the remaining combining characters\n\t\t\tseparately using the rules for single characters."
+        }
+      ]
+    }
+  ]
+}

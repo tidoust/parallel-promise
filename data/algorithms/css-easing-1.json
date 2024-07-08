@@ -1,0 +1,50 @@
+{
+  "spec": {
+    "title": "CSS Easing Functions Level 1",
+    "url": "https://drafts.csswg.org/css-easing-1/"
+  },
+  "algorithms": [
+    {
+      "html": "For <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-easing-1/#input-progress-value\" id=\"ref-for-input-progress-value⑤\">input progress values</a> less than zero,",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "<p>If the <var>x</var> value of P1 is greater than zero, use\n a straight line that passes through P1 and P0 as the tangent.</p>"
+        },
+        {
+          "html": "<p>Otherwise, if the <var>x</var> value of P2 is greater than\n zero, use a straight line that passes through P2 and P0 as the tangent.</p>"
+        },
+        {
+          "html": "<p>Otherwise, let the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-easing-1/#output-progress-value\" id=\"ref-for-output-progress-value④\">output progress value</a> be zero for all <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-easing-1/#input-progress-value\" id=\"ref-for-input-progress-value⑥\">input progress values</a> in the range [-∞, 0).</p>"
+        }
+      ]
+    },
+    {
+      "html": "For <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-easing-1/#input-progress-value\" id=\"ref-for-input-progress-value⑦\">input progress values</a> greater than one,",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "<p>If the <var>x</var> value of P2 is less than one, use\n a straight line that passes through P2 and P3 as the tangent.</p>"
+        },
+        {
+          "html": "<p>Otherwise, if the <var>x</var> value of P1 is less than\n one, use a straight line that passes through P1 and P3 as the tangent.</p>"
+        },
+        {
+          "html": "<p>Otherwise, let the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-easing-1/#output-progress-value\" id=\"ref-for-output-progress-value⑤\">output progress value</a> be one for all <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-easing-1/#input-progress-value\" id=\"ref-for-input-progress-value⑧\">input progress values</a> in the range (1, ∞].</p>"
+        }
+      ]
+    },
+    {
+      "html": "Step easing functions, whether they are specified using the <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-easing-1/#funcdef-step-easing-function-steps\" id=\"ref-for-funcdef-step-easing-function-steps②\">steps()</a> function or either of the <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-easing-1/#valdef-step-easing-function-step-start\" id=\"ref-for-valdef-step-easing-function-step-start②\">step-start</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-easing-1/#valdef-step-easing-function-step-end\" id=\"ref-for-valdef-step-easing-function-step-end②\">step-end</a> keywords, are serialized as follows:",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "<p>If the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-easing-1/#step-position\" id=\"ref-for-step-position⑦\">step position</a> is <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-easing-1/#valdef-steps-jump-end\" id=\"ref-for-valdef-steps-jump-end⑤\">jump-end</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-easing-1/#valdef-steps-end\" id=\"ref-for-valdef-steps-end④\">end</a>, serialize\n as <a class=\"css\" data-link-type=\"function\" href=\"https://drafts.csswg.org/css-easing-1/#funcdef-step-easing-function-steps\" id=\"ref-for-funcdef-step-easing-function-steps③\">steps(&lt;integer&gt;)</a>.</p>"
+        },
+        {
+          "html": "<p>Otherwise, serialize as <a class=\"css\" data-link-type=\"function\" href=\"https://drafts.csswg.org/css-easing-1/#funcdef-step-easing-function-steps\" id=\"ref-for-funcdef-step-easing-function-steps④\">steps(&lt;integer&gt;, &lt;step-position&gt;)</a>.</p>"
+        }
+      ]
+    }
+  ]
+}

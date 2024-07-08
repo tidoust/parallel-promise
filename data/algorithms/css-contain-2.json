@@ -1,0 +1,50 @@
+{
+  "spec": {
+    "title": "CSS Containment Module Level 2",
+    "url": "https://drafts.csswg.org/css-contain-2/"
+  },
+  "algorithms": [
+    {
+      "html": "Possible optimizations that can be enabled by <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-contain-2/#layout-containment\" id=\"ref-for-layout-containment⑨\">layout containment</a> include (but are not limited to):",
+      "rationale": "in parallel",
+      "steps": [
+        {
+          "html": "<p>When laying out the page,\nthe contents of separate <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-contain-2/#layout-containment-box\" id=\"ref-for-layout-containment-box①⓪\">containment boxes</a> can be laid out in parallel,\nas they’re guaranteed not to affect each other.</p>"
+        },
+        {
+          "html": "<p>When laying out the page,\nif the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-contain-2/#layout-containment-box\" id=\"ref-for-layout-containment-box①①\">containment box</a> is off-screen or obscured\nand the layout of the visible parts of the screen do not depend on the size of the <span id=\"ref-for-layout-containment-box①②\">containment box</span> (for example, if the <span id=\"ref-for-layout-containment-box①③\">containment box</span> is near the end of a block container,\nand you’re viewing the beginning of the block container),\nthe layout of the <span id=\"ref-for-layout-containment-box①④\">containment box</span>' contents can be delayed or done at a lower priority.</p>\n     <p>(When paired with <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-contain-2/#size-containment\" id=\"ref-for-size-containment⑦\">size containment</a>,\nthis optimization can be applied more liberally.)</p>"
+        }
+      ]
+    },
+    {
+      "html": "Possible optimizations that can be enabled by <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-contain-2/#paint-containment\" id=\"ref-for-paint-containment③\">paint containment</a> include (but are not limited to):",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "<p>If the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-contain-2/#paint-containment-box\" id=\"ref-for-paint-containment-box⑤\">containment box</a> is off-screen or obscured,\nthe UA can usually skip trying to paint its contents,\nas they’re guaranteed to be off-screen/obscured as well.</p>"
+        },
+        {
+          "html": "<p>Unless the clipped content is made accessible via a separate mechanism\nsuch as the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-overflow-3/#propdef-overflow\" id=\"ref-for-propdef-overflow③\">overflow</a>, <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-ui-4/#propdef-resize\" id=\"ref-for-propdef-resize①\">resize</a>, or <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-ui-3/#propdef-text-overflow\" id=\"ref-for-propdef-text-overflow①\">text-overflow</a> properties,\nthe UA can reserve \"canvas\" space for the box exactly the box’s size.\n(In similar, scrollable, situations, like <span class=\"css\" id=\"ref-for-propdef-overflow④\">overflow: hidden</span>,\nit’s possible to scroll to the currently-clipped content,\nso UAs often predictively overpaint somewhat\nso there’s something to see as soon as the scroll happens,\nrather than a frame later.)</p>"
+        },
+        {
+          "html": "<p>Because they are guaranteed to be stacking contexts,\nscrolling elements can be painted into a single GPU layer.</p>"
+        }
+      ]
+    },
+    {
+      "html": "<a class=\"css\" data-link-type=\"propdesc\" href=\"https://drafts.csswg.org/css-contain-2/#propdef-content-visibility\" id=\"ref-for-propdef-content-visibility①③\">content-visibility: hidden</a> lays powerful restrictions onto an element,\n\tand so should be used with caution.\n\tIt also enables some very useful scenarios,\n\toften improving on existing techniques,\n\ta few of which are outlined here.",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "<p>If a page needs to take some measurements of elements or text\nwhich aren’t themselves going to be rendered,\ncommonly this is done by positioning the stuff-to-be-measured off-screen,\nusing something like <a class=\"css\" data-link-type=\"propdesc\" href=\"https://drafts.csswg.org/css-position-3/#propdef-position\" id=\"ref-for-propdef-position\">position: absolute; left: -100000px;</a>,\nthen calling an API like <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/cssom-view-1/#dom-element-getboundingclientrect\" id=\"ref-for-dom-element-getboundingclientrect\">getBoundingClientRect()</a></code>.</p>\n     <p>Unfortunately, even though the page never intends to display this content,\nthe user agent will still have to do full styling, layout, and rendering for the content, <em>just in case</em> it affects what’s shown on screen.\nThe author also can’t,\nwithout further work,\nguarantee that the content <em>won’t</em> accidentally show up on-screen;\neven a very negative <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-position-3/#propdef-left\" id=\"ref-for-propdef-left\">left</a> value (like above) might not be enough,\ndepending on the content.</p>\n     <p>Wrapping this content in a <a class=\"css\" data-link-type=\"propdesc\" href=\"https://drafts.csswg.org/css-contain-2/#propdef-content-visibility\" id=\"ref-for-propdef-content-visibility①④\">content-visibility: hidden</a> container\nsolves all of these problems.\nIf the wrapper has no border, background, etc,\nthen it and its <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-contain-2/#skips-its-contents\" id=\"ref-for-skips-its-contents⑧\">skipped contents</a> are guaranteed to never render anything to the screen,\nno matter how big they get.\nBecause the contents are <span id=\"ref-for-skips-its-contents⑨\">skipped</span>,\nthe user agent can also avoid styling or laying them out\nuntil absolutely necessary,\nwhen script finally asks for it.</p>"
+        },
+        {
+          "html": "<p>A \"single-page app\" often consists of several independent panes or \"views\",\nof which only one is displayed at a time.</p>\n     <p>If the author wants to avoid paying styling/layout/rendering/etc cost\nfor the inactive views,\nthey can remove them from the document entirely,\nor at minimum apply <span class=\"css\">display:none</span> to them.\nUnfortunately,\nthis means that when the view <em>does</em> need to be displayed,\nall of the styling/layout/rendering/etc work needs to be done all at once,\npotentially causing a noticeable delay before the view actually shows up.</p>\n     <p>Alternately, the view can just be positioned off-screen.\nThis means it’ll be immediately ready when it’s time to be used,\nbut it incurs the cost of styling/layout/rendering all the time,\nwhich might be significant,\nespecially if there are a number of inactive views.\nThe inactive views also might still show up to accessibility tooling,\nconfusing users of screen-readers,\npeople using Ctrl-F to find-in-page, etc.</p>\n     <p><a class=\"css\" data-link-type=\"propdesc\" href=\"https://drafts.csswg.org/css-contain-2/#propdef-content-visibility\" id=\"ref-for-propdef-content-visibility①⑤\">content-visibility: hidden</a> improves on both of these options.\nBecause the contents are <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-contain-2/#skips-its-contents\" id=\"ref-for-skips-its-contents①⓪\">skipped</a>,\nthe user agent isn’t spending time on them when they’re not active.\nThey’re also not visible to screen readers,\nfind-in-page,\nand other tools.\nAnd because user agents <em>should</em> preserve previous styling/layout work if possible,\nif the view was displayed before,\nre-rendering it might be very fast.</p>"
+        },
+        {
+          "html": "<p>If an author wants to make an element \"invisible\",\nbut still show up in the page for layout purposes,\none option is <a class=\"css\" data-link-type=\"propdesc\" href=\"https://drafts.csswg.org/css-display-4/#propdef-visibility\" id=\"ref-for-propdef-visibility②\">visibility: hidden</a>.\nHowever, descendants of a <span class=\"css\" id=\"ref-for-propdef-visibility③\">visibility: hidden</span> element\ncan set <span class=\"css\" id=\"ref-for-propdef-visibility④\">visibility: visible</span> and start showing up again,\nwhich isn’t always intuitive or expected.</p>\n     <p><a class=\"css\" data-link-type=\"propdesc\" href=\"https://drafts.csswg.org/css-contain-2/#propdef-content-visibility\" id=\"ref-for-propdef-content-visibility①⑥\">content-visibility: hidden</a> performs a very similar purpose,\nbut descendants can’t turn it \"off\" and start displaying;\nthey stay \"hidden\" until the ancestor turns it off.</p>\n     <p>Because <a class=\"css\" data-link-type=\"propdesc\" href=\"https://drafts.csswg.org/css-contain-2/#propdef-content-visibility\" id=\"ref-for-propdef-content-visibility①⑦\">content-visibility: hidden</a> also applies many <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-contain-2/#containment\" id=\"ref-for-containment⑧\">containment</a> values to the container,\nit’s not always quite as usable as <a class=\"css\" data-link-type=\"propdesc\" href=\"https://drafts.csswg.org/css-display-4/#propdef-visibility\" id=\"ref-for-propdef-visibility⑤\">visibility: hidden</a> would be,\nbut when its restrictions are acceptable,\nit can be a more reliable,\nmore consistent way to hide an element’s contents.</p>"
+        }
+      ]
+    }
+  ]
+}

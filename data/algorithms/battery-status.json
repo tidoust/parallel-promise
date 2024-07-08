@@ -1,0 +1,72 @@
+{
+  "spec": {
+    "title": "Battery Status API",
+    "url": "https://w3c.github.io/battery/"
+  },
+  "algorithms": [
+    {
+      "name": "Navigator/getBattery()",
+      "href": "https://w3c.github.io/battery/#dom-navigator-getbattery",
+      "html": "The <dfn data-export=\"\" data-dfn-type=\"method\" id=\"dom-navigator-getbattery\" data-idl=\"operation\" data-title=\"getBattery()\" data-dfn-for=\"Navigator\" data-type=\"Promise\" data-lt=\"getBattery()\" data-local-lt=\"Navigator.getBattery|Navigator.getBattery()|getBattery\" tabindex=\"0\" aria-haspopup=\"dialog\"><code>getBattery()</code></dfn> method steps are:",
+      "rationale": ".algorithm",
+      "steps": [
+        {
+          "html": "If <a data-link-type=\"dfn|abstract-op\" data-cite=\"webidl\" data-cite-path=\"/\" data-cite-frag=\"this\" data-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\" id=\"ref-for-index-term-this-1\">this<!---0.647047%--></a>.<!---0.647047%--><a data-xref-type=\"attribute\" data-link-type=\"attribute\" data-link-for=\"Navigator\" data-xref-for=\"Navigator\" data-lt=\"[[BatteryPromise]]\" href=\"https://w3c.github.io/battery/#dfn-batterypromise\" class=\"internalDFN\" id=\"ref-for-dfn-batterypromise-1\"><code>[[BatteryPromise<!---0.647047%-->]]<!---0.647047%--></code></a><!---0.647047%--> is <code>null<!---0.647047%--></code>, then set\n          it to <a data-link-type=\"dfn|abstract-op\" data-cite=\"webidl\" data-cite-path=\"/\" data-cite-frag=\"a-new-promise\" data-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#a-new-promise\" id=\"ref-for-index-term-a-new-promise-1\">a new promise<!---0.647047%--></a> in <a data-link-type=\"dfn|abstract-op\" data-cite=\"webidl\" data-cite-path=\"/\" data-cite-frag=\"this\" data-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\" id=\"ref-for-index-term-this-2\">this<!---0.647047%--></a>'s <a data-link-type=\"dfn|abstract-op\" data-cite=\"html\" data-cite-path=\"/webappapis.html\" data-cite-frag=\"concept-relevant-realm\" data-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#concept-relevant-realm\" id=\"ref-for-index-term-relevant-realm-1\">relevant realm<!---0.647047%--></a>."
+        },
+        {
+          "html": "If <a data-link-type=\"dfn|abstract-op\" data-cite=\"webidl\" data-cite-path=\"/\" data-cite-frag=\"this\" data-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\" id=\"ref-for-index-term-this-3\">this<!---0.647047%--></a>'s <a data-link-type=\"dfn|abstract-op\" data-cite=\"html\" data-cite-path=\"/webappapis.html\" data-cite-frag=\"concept-relevant-global\" data-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#concept-relevant-global\" id=\"ref-for-index-term-relevant-global-object-1\">relevant global object<!---0.647047%--></a>'s <a data-link-type=\"dfn|abstract-op\" data-cite=\"html\" data-cite-path=\"/nav-history-apis.html\" data-cite-frag=\"concept-document-window\" data-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/nav-history-apis.html#concept-document-window\" id=\"ref-for-index-term-associated-document-1\">associated <code>Document<!---0.647047%--></code><!---0.647047%--></a> is not <a data-link-type=\"dfn|abstract-op\" data-cite=\"html\" data-cite-path=\"/iframe-embed-object.html\" data-cite-frag=\"allowed-to-use\" data-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/iframe-embed-object.html#allowed-to-use\" id=\"ref-for-index-term-allowed-to-use-1\">allowed to use<!---0.647047%--></a> the \"<code>battery<!---0.647047%--></code>\"\n          <a data-link-type=\"dfn|abstract-op\" data-cite=\"permissions-policy\" data-cite-path=\"/\" data-cite-frag=\"policy-controlled-feature\" data-type=\"dfn\" href=\"https://www.w3.org/TR/permissions-policy-1/#policy-controlled-feature\" id=\"ref-for-index-term-policy-controlled-feature-1\">policy-controlled feature<!---0.647047%--></a>, then <a data-link-type=\"dfn|abstract-op\" data-cite=\"webidl\" data-cite-path=\"/\" data-cite-frag=\"reject\" data-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#reject\" id=\"ref-for-index-term-reject-1\">reject<!---0.647047%--></a>\n          <a data-link-type=\"dfn|abstract-op\" data-cite=\"webidl\" data-cite-path=\"/\" data-cite-frag=\"this\" data-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\" id=\"ref-for-index-term-this-4\">this<!---0.647047%--></a>.<!---0.647047%--><a data-xref-type=\"attribute\" data-link-type=\"attribute\" data-link-for=\"Navigator\" data-xref-for=\"Navigator\" data-lt=\"[[BatteryPromise]]\" href=\"https://w3c.github.io/battery/#dfn-batterypromise\" class=\"internalDFN\" id=\"ref-for-dfn-batterypromise-2\"><code>[[BatteryPromise<!---0.647047%-->]]<!---0.647047%--></code></a><!---0.647047%--> with a\n          \"<a data-link-type=\"idl\" data-cite=\"webidl\" data-xref-type=\"exception\" data-cite-path=\"/\" data-cite-frag=\"notallowederror\" data-type=\"exception\" href=\"https://webidl.spec.whatwg.org/#notallowederror\" id=\"ref-for-index-term-notallowederror-exception-1\"><code>NotAllowedError<!---0.647047%--></code></a>\"<!---0.647047%--> <a data-xref-type=\"_IDL_\" data-link-type=\"idl\" data-lt=\"DOMException\" data-cite=\"webidl\" data-cite-path=\"/\" data-cite-frag=\"idl-DOMException\" data-type=\"interface\" href=\"https://webidl.spec.whatwg.org/#idl-DOMException\" id=\"ref-for-index-term-domexception-interface-1\"><code>DOMException<!---0.647047%--></code></a><!---0.647047%-->."
+        },
+        {
+          "html": "Otherwise:",
+          "rationale": "if",
+          "steps": [
+            {
+              "html": "If <a data-link-type=\"dfn|abstract-op\" data-cite=\"webidl\" data-cite-path=\"/\" data-cite-frag=\"this\" data-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\" id=\"ref-for-index-term-this-5\">this<!---0.647047%--></a>.<!---0.647047%--><a data-xref-type=\"attribute\" data-link-type=\"attribute\" data-link-for=\"Navigator\" data-xref-for=\"Navigator\" data-lt=\"[[BatteryManager]]\" href=\"https://w3c.github.io/battery/#dfn-batterymanager\" class=\"internalDFN\" id=\"ref-for-dfn-batterymanager-1\"><code>[[BatteryManager<!---0.647047%-->]]<!---0.647047%--></code></a><!---0.647047%--> is <code>null<!---0.647047%--></code>, then\n              set it to the result of creating a <a data-link-type=\"dfn|abstract-op\" data-cite=\"webidl\" data-cite-path=\"/\" data-cite-frag=\"new\" data-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#new\" id=\"ref-for-index-term-new-1\">new<!---0.647047%--></a> <a data-xref-type=\"_IDL_\" data-link-type=\"idl\" data-lt=\"BatteryManager\" href=\"https://w3c.github.io/battery/#dom-batterymanager\" class=\"internalDFN\" id=\"ref-for-dom-batterymanager-3\"><code>BatteryManager<!---0.647047%--></code></a><!---0.647047%--> in\n              <a data-link-type=\"dfn|abstract-op\" data-cite=\"webidl\" data-cite-path=\"/\" data-cite-frag=\"this\" data-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\" id=\"ref-for-index-term-this-6\">this<!---0.647047%--></a>'s <a data-link-type=\"dfn|abstract-op\" data-cite=\"html\" data-cite-path=\"/webappapis.html\" data-cite-frag=\"concept-relevant-realm\" data-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#concept-relevant-realm\" id=\"ref-for-index-term-relevant-realm-2\">relevant realm<!---0.647047%--></a>."
+            },
+            {
+              "html": "<a data-link-type=\"dfn|abstract-op\" data-cite=\"webidl\" data-cite-path=\"/\" data-cite-frag=\"resolve\" data-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#resolve\" id=\"ref-for-index-term-resolve-1\">Resolve<!---0.647047%--></a> <a data-link-type=\"dfn|abstract-op\" data-cite=\"webidl\" data-cite-path=\"/\" data-cite-frag=\"this\" data-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\" id=\"ref-for-index-term-this-7\">this<!---0.647047%--></a>.<!---0.647047%--><a data-xref-type=\"attribute\" data-link-type=\"attribute\" data-link-for=\"Navigator\" data-xref-for=\"Navigator\" data-lt=\"[[BatteryPromise]]\" href=\"https://w3c.github.io/battery/#dfn-batterypromise\" class=\"internalDFN\" id=\"ref-for-dfn-batterypromise-3\"><code>[[BatteryPromise<!---0.647047%-->]]<!---0.647047%--></code></a><!---0.647047%--> with\n              <a data-link-type=\"dfn|abstract-op\" data-cite=\"webidl\" data-cite-path=\"/\" data-cite-frag=\"this\" data-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\" id=\"ref-for-index-term-this-8\">this<!---0.647047%--></a>.<!---0.647047%--><a data-xref-type=\"attribute\" data-link-type=\"attribute\" data-link-for=\"Navigator\" data-xref-for=\"Navigator\" data-lt=\"[[BatteryManager]]\" href=\"https://w3c.github.io/battery/#dfn-batterymanager\" class=\"internalDFN\" id=\"ref-for-dfn-batterymanager-2\"><code>[[BatteryManager<!---0.647047%-->]]<!---0.647047%--></code></a><!---0.647047%-->."
+            }
+          ]
+        },
+        {
+          "html": "Return <a data-link-type=\"dfn|abstract-op\" data-cite=\"webidl\" data-cite-path=\"/\" data-cite-frag=\"this\" data-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\" id=\"ref-for-index-term-this-9\">this<!---0.647047%--></a>.<!---0.647047%--><a data-xref-type=\"attribute\" data-link-type=\"attribute\" data-link-for=\"Navigator\" data-xref-for=\"Navigator\" data-lt=\"[[BatteryPromise]]\" href=\"https://w3c.github.io/battery/#dfn-batterypromise\" class=\"internalDFN\" id=\"ref-for-dfn-batterypromise-4\"><code>[[BatteryPromise<!---0.647047%-->]]<!---0.647047%--></code></a><!---0.647047%-->."
+        }
+      ]
+    },
+    {
+      "name": "update the battery status and notify",
+      "href": "https://w3c.github.io/battery/#dfn-update-the-battery-status-and-notify",
+      "html": "To <dfn id=\"dfn-update-the-battery-status-and-notify\" tabindex=\"0\" aria-haspopup=\"dialog\" data-dfn-type=\"dfn\">update the battery status and notify</dfn> given an internal\n          slot <var>slot<!---0.647047%--></var>, a <var>value<!---0.647047%--></var> and an <var>eventName<!---0.647047%--></var>, run the following steps:",
+      "rationale": ".algorithm",
+      "steps": [
+        {
+          "html": "Let <var>global<!---0.647047%--></var> be the <a data-link-type=\"dfn|abstract-op\" data-cite=\"html\" data-cite-path=\"/webappapis.html\" data-cite-frag=\"current-global-object\" data-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#current-global-object\" id=\"ref-for-index-term-current-global-object-1\">current global object<!---0.647047%--></a>."
+        },
+        {
+          "html": "If <var>global<!---0.647047%--></var> is not a <a data-xref-type=\"_IDL_\" data-link-type=\"idl\" data-lt=\"Window\" data-cite=\"html\" data-cite-path=\"/nav-history-apis.html\" data-cite-frag=\"window\" data-type=\"interface\" href=\"https://html.spec.whatwg.org/multipage/nav-history-apis.html#window\" id=\"ref-for-index-term-window-interface-1\"><code>Window<!---0.647047%--></code></a><!---0.647047%-->, abort these steps."
+        },
+        {
+          "html": "Let <var data-type=\"Navigator\">navigator<!---0.647047%--></var> be <var>global<!---0.647047%--></var>'s associated <a data-xref-type=\"_IDL_\" data-link-type=\"idl\" data-lt=\"Navigator\" data-cite=\"html\" data-cite-path=\"/system-state.html\" data-cite-frag=\"navigator\" data-type=\"interface\" href=\"https://html.spec.whatwg.org/multipage/system-state.html#navigator\" id=\"ref-for-index-term-navigator-interface-3\"><code>Navigator<!---0.647047%--></code></a><!---0.647047%-->."
+        },
+        {
+          "html": "Let <var data-type=\"BatteryManager\">batteryManager<!---0.647047%--></var> be the value of <var data-type=\"Navigator\">navigator<!---0.647047%--></var>.\n          <!---0.647047%--><a data-xref-type=\"attribute\" data-link-type=\"attribute\" data-link-for=\"Navigator\" data-xref-for=\"Navigator\" data-lt=\"[[BatteryManager]]\" href=\"https://w3c.github.io/battery/#dfn-batterymanager\" class=\"internalDFN\" id=\"ref-for-dfn-batterymanager-3\"><code>[[BatteryManager<!---0.647047%-->]]<!---0.647047%--></code></a><!---0.647047%-->."
+        },
+        {
+          "html": "If <var data-type=\"BatteryManager\">batteryManager<!---0.647047%--></var> is <code>null<!---0.647047%--></code>, abort these steps."
+        },
+        {
+          "html": "<a data-link-type=\"dfn|abstract-op\" data-cite=\"html\" data-cite-path=\"/webappapis.html\" data-cite-frag=\"queue-a-global-task\" data-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-global-task\" id=\"ref-for-index-term-queue-a-global-task-1\">Queue a global task<!---0.647047%--></a> on the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/battery/#dfn-battery-status-task-source\" class=\"internalDFN\" id=\"ref-for-dfn-battery-status-task-source-1\">battery status task source<!---0.647047%--></a>\n          given <var>global<!---0.647047%--></var> to run the following steps:",
+          "rationale": "set",
+          "steps": [
+            {
+              "html": "Set <var data-type=\"BatteryManager\">batteryManager<!---0.647047%--></var>.<var>slot<!---0.647047%--></var> to <var>value<!---0.647047%--></var>."
+            },
+            {
+              "html": "<a data-link-type=\"dfn|abstract-op\" data-cite=\"dom\" data-cite-path=\"/\" data-cite-frag=\"concept-event-fire\" data-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-event-fire\" id=\"ref-for-index-term-fire-an-event-1\">Fire an event<!---0.647047%--></a> named <var>eventName<!---0.647047%--></var> at <var data-type=\"BatteryManager\">batteryManager<!---0.647047%--></var>."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,362 @@
+{
+  "spec": {
+    "title": "EditContext API",
+    "url": "https://w3c.github.io/edit-context/"
+  },
+  "algorithms": [
+    {
+      "html": "<dl>\n                            <dt>Input</dt>\n                            <dd><var>editContext<!---0.021378%--></var></dd>\n                            <dt>Output</dt>\n                            <dd>None</dd>\n                        </dl>",
+      "rationale": ".algorithm",
+      "steps": [
+        {
+          "html": "If <a data-link-type=\"dfn|abstract-op\" data-cite=\"webidl\" data-cite-path=\"/\" data-cite-frag=\"this\" data-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\">this<!---0.021378%--></a>'s <a data-link-type=\"dfn|abstract-op\" data-link-for=\"Element\" data-xref-for=\"Element\" data-cite=\"dom\" data-cite-path=\"/\" data-cite-frag=\"concept-element-local-name\" data-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-element-local-name\">local name<!---0.021378%--></a> is neither a <a data-link-type=\"dfn|abstract-op\" data-cite=\"dom\" data-cite-path=\"/\" data-cite-frag=\"valid-shadow-host-name\" data-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#valid-shadow-host-name\">valid shadow host name<!---0.021378%--></a> nor \"<code>canvas</code>\", then <a data-link-type=\"dfn|abstract-op\" data-link-for=\"exception\" data-xref-for=\"exception\" data-cite=\"webidl\" data-cite-path=\"/\" data-cite-frag=\"dfn-throw\" data-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#dfn-throw\">throw<!---0.021378%--></a> a \"<a data-link-type=\"idl\" data-cite=\"webidl\" data-xref-type=\"exception\" data-cite-path=\"/\" data-cite-frag=\"notsupportederror\" data-type=\"exception\" href=\"https://webidl.spec.whatwg.org/#notsupportederror\"><code>NotSupportedError<!---0.021378%--></code></a>\"<!---0.021378%--> <a data-xref-type=\"_IDL_\" data-link-type=\"idl\" data-lt=\"DOMException\" data-cite=\"webidl\" data-cite-path=\"/\" data-cite-frag=\"idl-DOMException\" data-type=\"interface\" href=\"https://webidl.spec.whatwg.org/#idl-DOMException\"><code>DOMException<!---0.021378%--></code></a><!---0.021378%-->."
+        },
+        {
+          "html": "If <var>editContext<!---0.021378%--></var> is not null, then:",
+          "rationale": "if",
+          "steps": [
+            {
+              "html": "If <var>editContext<!---0.021378%--></var>'s <a href=\"https://w3c.github.io/edit-context/#dfn-associated-element\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-associated-element-11\">associated element</a> is equal to <a data-link-type=\"dfn|abstract-op\" data-cite=\"webidl\" data-cite-path=\"/\" data-cite-frag=\"this\" data-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\">this<!---0.021378%--></a>, then terminate these steps."
+            },
+            {
+              "html": "If <var>editContext<!---0.021378%--></var>'s <a href=\"https://w3c.github.io/edit-context/#dfn-associated-element\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-associated-element-12\">associated element</a> is not null, then <a data-link-type=\"dfn|abstract-op\" data-link-for=\"exception\" data-xref-for=\"exception\" data-cite=\"webidl\" data-cite-path=\"/\" data-cite-frag=\"dfn-throw\" data-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#dfn-throw\">throw<!---0.021378%--></a> a \"<a data-link-type=\"idl\" data-cite=\"webidl\" data-xref-type=\"exception\" data-cite-path=\"/\" data-cite-frag=\"notsupportederror\" data-type=\"exception\" href=\"https://webidl.spec.whatwg.org/#notsupportederror\"><code>NotSupportedError<!---0.021378%--></code></a>\"<!---0.021378%--> <a data-xref-type=\"_IDL_\" data-link-type=\"idl\" data-lt=\"DOMException\" data-cite=\"webidl\" data-cite-path=\"/\" data-cite-frag=\"idl-DOMException\" data-type=\"interface\" href=\"https://webidl.spec.whatwg.org/#idl-DOMException\"><code>DOMException<!---0.021378%--></code></a><!---0.021378%-->."
+            },
+            {
+              "html": "Set <var>editContext<!---0.021378%--></var>'s <a href=\"https://w3c.github.io/edit-context/#dfn-associated-element\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-associated-element-13\">associated element</a> to <a data-link-type=\"dfn|abstract-op\" data-cite=\"webidl\" data-cite-path=\"/\" data-cite-frag=\"this\" data-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\">this<!---0.021378%--></a>."
+            }
+          ]
+        },
+        {
+          "html": "Let <var>oldEditContext<!---0.021378%--></var> be the value of <a data-link-type=\"dfn|abstract-op\" data-cite=\"webidl\" data-cite-path=\"/\" data-cite-frag=\"this\" data-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\">this<!---0.021378%--></a>'s internal [[EditContext]] slot."
+        },
+        {
+          "html": "If <var>oldEditContext<!---0.021378%--></var> is not null, then:",
+          "rationale": "assert",
+          "steps": [
+            {
+              "html": "<a data-link-type=\"dfn|abstract-op\" data-cite=\"infra\" data-cite-path=\"/\" data-cite-frag=\"assert\" data-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#assert\">Assert<!---0.021378%--></a>: <var>oldEditContext<!---0.021378%--></var>'s <a href=\"https://w3c.github.io/edit-context/#dfn-associated-element\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-associated-element-14\">associated element</a> is equal to <a data-link-type=\"dfn|abstract-op\" data-cite=\"webidl\" data-cite-path=\"/\" data-cite-frag=\"this\" data-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\">this<!---0.021378%--></a>."
+            },
+            {
+              "html": "Set <var>oldEditContext<!---0.021378%--></var>'s <a href=\"https://w3c.github.io/edit-context/#dfn-associated-element\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-associated-element-15\">associated element</a> to null."
+            }
+          ]
+        },
+        {
+          "html": "Set <a data-link-type=\"dfn|abstract-op\" data-cite=\"webidl\" data-cite-path=\"/\" data-cite-frag=\"this\" data-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\">this<!---0.021378%--></a>'s internal [[EditContext]] slot to be <var>editContext<!---0.021378%--></var>."
+        },
+        {
+          "html": "If <var>oldEditContext<!---0.021378%--></var> is not null and <var>oldEditContext<!---0.021378%--></var> is <a data-link-type=\"dfn|abstract-op\" data-cite=\"webidl\" data-cite-path=\"/\" data-cite-frag=\"this\" data-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\">this<!---0.021378%--></a>'s\n                                <a href=\"https://dom.spec.whatwg.org/#concept-node-document\">node document</a>'s\n                                <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-active-editcontext\" class=\"internalDFN\" id=\"ref-for-dfn-active-editcontext-5\">active EditContext<!---0.021378%--></a>, then run the steps to <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-deactivate-an-editcontext\" class=\"internalDFN\" id=\"ref-for-dfn-deactivate-an-editcontext-1\">deactivate an EditContext<!---0.021378%--></a>\n                                with <var>oldEditContext<!---0.021378%--></var>."
+        }
+      ]
+    },
+    {
+      "html": "<dl>\n                    <dt>Input</dt>\n                    <dd><var>element<!---0.021378%--></var>, the <a data-xref-type=\"_IDL_\" data-link-type=\"idl\" data-lt=\"HTMLElement\" data-cite=\"html\" data-cite-path=\"/dom.html\" data-cite-frag=\"htmlelement\" data-type=\"interface\" href=\"https://html.spec.whatwg.org/multipage/dom.html#htmlelement\"><code>HTMLElement<!---0.021378%--></code></a><!---0.021378%--> receiving the input</dd>\n                    <dt>Output</dt>\n                    <dd>None</dd>\n                </dl>",
+      "rationale": ".algorithm",
+      "steps": [
+        {
+          "html": "Let <var>editContext<!---0.021378%--></var> be <var>element<!---0.021378%--></var>'s\n                        <a href=\"https://dom.spec.whatwg.org/#concept-node-document\">node document</a>'s\n                        <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-active-editcontext\" class=\"internalDFN\" id=\"ref-for-dfn-active-editcontext-6\">active EditContext<!---0.021378%--></a>"
+        },
+        {
+          "html": "If <var>editContext<!---0.021378%--></var> is null, return."
+        },
+        {
+          "html": "<p>\n                            Run the steps to <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-update-the-editcontext\" class=\"internalDFN\" id=\"ref-for-dfn-update-the-editcontext-1\">Update the EditContext<!---0.021378%--></a> given <var>editContext<!---0.021378%--></var> and the\n                            <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-text-edit-context\" class=\"internalDFN\" id=\"ref-for-dfn-text-edit-context-17\">Text Edit Context<!---0.021378%--></a>'s <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-text-state\" class=\"internalDFN\" id=\"ref-for-dfn-text-state-3\">text state<!---0.021378%--></a>'s <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-text\" class=\"internalDFN\" id=\"ref-for-dfn-text-13\">text<!---0.021378%--></a>, <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-text-formats\" class=\"internalDFN\" id=\"ref-for-dfn-text-formats-1\">text formats<!---0.021378%--></a>,\n                            <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-selection-start\" class=\"internalDFN\" id=\"ref-for-dfn-selection-start-2\">selection start<!---0.021378%--></a>, <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-selection-end\" class=\"internalDFN\" id=\"ref-for-dfn-selection-end-2\">selection end<!---0.021378%--></a>, <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-is-composing\" class=\"internalDFN\" id=\"ref-for-dfn-is-composing-1\">is composing<!---0.021378%--></a>, <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-composition-start\" class=\"internalDFN\" id=\"ref-for-dfn-composition-start-2\">composition start<!---0.021378%--></a>,\n                            and <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-composition-end\" class=\"internalDFN\" id=\"ref-for-dfn-composition-end-2\">composition end<!---0.021378%--></a>.\n                        </p>"
+        }
+      ]
+    },
+    {
+      "html": "<dl>\n                    <dt>Input</dt>\n                    <dd><var>editContext<!---0.021378%--></var>, an <a data-xref-type=\"_IDL_\" data-link-type=\"idl\" data-lt=\"EditContext\" href=\"https://w3c.github.io/edit-context/#dom-editcontext\" class=\"internalDFN\" id=\"ref-for-dom-editcontext-25\"><code>EditContext<!---0.021378%--></code></a><!---0.021378%--></dd>\n                    <dd><var>text<!---0.021378%--></var>, a string</dd>\n                    <dd><var>textFormats<!---0.021378%--></var>, an array of <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-text-format\" class=\"internalDFN\" id=\"ref-for-dfn-text-format-2\">text format<!---0.021378%--></a>s from the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-text-input-service\" class=\"internalDFN\" id=\"ref-for-dfn-text-input-service-17\">Text Input Service<!---0.021378%--></a></dd>\n                    <dd><var>selectionStart<!---0.021378%--></var>, the new position for the start of the selection</dd>\n                    <dd><var>selectionEnd<!---0.021378%--></var>, the new position for the end of the selection</dd>\n                    <dd><var>isComposing<!---0.021378%--></var>, a boolean indicating whether composition should be active at the end of the update</dd>\n                    <dd><var>replacementRangeStart<!---0.021378%--></var>, the start position of the current composition (0 if there is no composition)</dd>\n                    <dd><var>replacementRangeEnd<!---0.021378%--></var>, the end position of the current composition (0 if there is no composition)</dd>\n                    <dt>Output</dt>\n                    <dd>None</dd>\n                </dl>",
+      "rationale": ".algorithm",
+      "steps": [
+        {
+          "html": "If <var>isComposing<!---0.021378%--></var> is true, <var>text<!---0.021378%--></var> is not empty, and <var>editContext<!---0.021378%--></var>'s <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-is-composing\" class=\"internalDFN\" id=\"ref-for-dfn-is-composing-2\">is composing<!---0.021378%--></a> is false.",
+          "rationale": "fire",
+          "steps": [
+            {
+              "html": "<a data-link-type=\"dfn|abstract-op\" data-cite=\"dom\" data-cite-path=\"/\" data-cite-frag=\"concept-event-fire\" data-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-event-fire\">Fire an event<!---0.021378%--></a> named <a href=\"https://w3c.github.io/uievents/#event-type-compositionstart\">compositionstart</a> at <var>editContext<!---0.021378%--></var> using <a data-xref-type=\"_IDL_\" data-link-type=\"idl\" data-lt=\"CompositionEvent\" data-cite=\"uievents\" data-cite-path=\"/\" data-cite-frag=\"compositionevent\" data-type=\"interface\" href=\"https://www.w3.org/TR/uievents/#compositionevent\"><code>CompositionEvent<!---0.021378%--></code></a><!---0.021378%-->."
+            },
+            {
+              "html": "set <var>editContext<!---0.021378%--></var>'s <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-is-composing\" class=\"internalDFN\" id=\"ref-for-dfn-is-composing-3\">is composing<!---0.021378%--></a> to true."
+            }
+          ]
+        },
+        {
+          "html": "If <var>text<!---0.021378%--></var> is empty:",
+          "rationale": "if",
+          "steps": [
+            {
+              "html": "If <var>editContext<!---0.021378%--></var>'s <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-is-composing\" class=\"internalDFN\" id=\"ref-for-dfn-is-composing-4\">is composing<!---0.021378%--></a> is false, return."
+            },
+            {
+              "html": "If <var>editContext<!---0.021378%--></var>'s <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-is-composing\" class=\"internalDFN\" id=\"ref-for-dfn-is-composing-5\">is composing<!---0.021378%--></a> is true and <var>isComposing<!---0.021378%--></var> is false, then:",
+              "rationale": "set",
+              "steps": [
+                {
+                  "html": "Set <var>editContext<!---0.021378%--></var>'s <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-is-composing\" class=\"internalDFN\" id=\"ref-for-dfn-is-composing-6\">is composing<!---0.021378%--></a> to false."
+                },
+                {
+                  "html": "<a data-link-type=\"dfn|abstract-op\" data-cite=\"dom\" data-cite-path=\"/\" data-cite-frag=\"concept-event-fire\" data-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-event-fire\">Fire an event<!---0.021378%--></a> named\n                                    <a href=\"https://w3c.github.io/uievents/#event-type-compositionend\">compositionend</a>\n                                    at <var>editContext<!---0.021378%--></var> using <a data-xref-type=\"_IDL_\" data-link-type=\"idl\" data-lt=\"CompositionEvent\" data-cite=\"uievents\" data-cite-path=\"/\" data-cite-frag=\"compositionevent\" data-type=\"interface\" href=\"https://www.w3.org/TR/uievents/#compositionevent\"><code>CompositionEvent<!---0.021378%--></code></a><!---0.021378%-->."
+                },
+                {
+                  "html": "Return."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "html": "If <var>editContext<!---0.021378%--></var>'s <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-is-composing\" class=\"internalDFN\" id=\"ref-for-dfn-is-composing-7\">is composing<!---0.021378%--></a> is true, then:",
+          "rationale": "let",
+          "steps": [],
+          "additionalAlgorithms": [
+            {
+              "html": "If <var>editContext<!---0.021378%--></var>'s <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-is-composing\" class=\"internalDFN\" id=\"ref-for-dfn-is-composing-7\">is composing<!---0.021378%--></a> is true, then:\n                    <ol>Let <var>insertionStart<!---0.021378%--></var> be <var>replacementRangeStart<!---0.021378%--></var>.</ol>",
+              "rationale": "let",
+              "steps": []
+            }
+          ]
+        },
+        {
+          "html": "Otherwise:",
+          "rationale": "let",
+          "steps": [],
+          "additionalAlgorithms": [
+            {
+              "html": "Otherwise:\n                    <ol>Let <var>insertionStart<!---0.021378%--></var> be <var>selectionStart<!---0.021378%--></var>.</ol>",
+              "rationale": "let",
+              "steps": []
+            }
+          ]
+        },
+        {
+          "html": "Replace the substring of <var>editContext<!---0.021378%--></var>'s <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-text\" class=\"internalDFN\" id=\"ref-for-dfn-text-14\">text<!---0.021378%--></a> in the range of <var>insertionStart<!---0.021378%--></var> and <var>insertionEnd<!---0.021378%--></var> with <var>text<!---0.021378%--></var>"
+        },
+        {
+          "html": "Set <var>editContext<!---0.021378%--></var>'s <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-selection-start\" class=\"internalDFN\" id=\"ref-for-dfn-selection-start-3\">selection start<!---0.021378%--></a> to <var>selectionStart<!---0.021378%--></var>."
+        },
+        {
+          "html": "Set <var>editContext<!---0.021378%--></var>'s <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-selection-end\" class=\"internalDFN\" id=\"ref-for-dfn-selection-end-3\">selection end<!---0.021378%--></a> to <var>selectionEnd<!---0.021378%--></var>."
+        },
+        {
+          "html": "Set <var>editContext<!---0.021378%--></var>'s <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-composition-start\" class=\"internalDFN\" id=\"ref-for-dfn-composition-start-3\">composition start<!---0.021378%--></a> to <var>insertionStart<!---0.021378%--></var>."
+        },
+        {
+          "html": "Set <var>editContext<!---0.021378%--></var>'s <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-composition-end\" class=\"internalDFN\" id=\"ref-for-dfn-composition-end-3\">composition end<!---0.021378%--></a> to <var>editContext<!---0.021378%--></var>'s <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-composition-start\" class=\"internalDFN\" id=\"ref-for-dfn-composition-start-4\">composition start<!---0.021378%--></a> plus the length of <var>text<!---0.021378%--></var>."
+        },
+        {
+          "html": "<a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-dispatch-text-update-event\" class=\"internalDFN\" id=\"ref-for-dfn-dispatch-text-update-event-1\">Dispatch text update event<!---0.021378%--></a> given <var>editContext<!---0.021378%--></var> and <var>text<!---0.021378%--></var>."
+        },
+        {
+          "html": "If <var>editContext<!---0.021378%--></var>'s <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-is-composing\" class=\"internalDFN\" id=\"ref-for-dfn-is-composing-8\">is composing<!---0.021378%--></a> is true, then:",
+          "rationale": "dispatch",
+          "steps": [
+            {
+              "html": "<a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-dispatch-text-format-update-event\" class=\"internalDFN\" id=\"ref-for-dfn-dispatch-text-format-update-event-1\">Dispatch text format update event<!---0.021378%--></a> given <var>editContext<!---0.021378%--></var> and <var>textFormats<!---0.021378%--></var>."
+            },
+            {
+              "html": "<a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-dispatch-character-bounds-update-event\" class=\"internalDFN\" id=\"ref-for-dfn-dispatch-character-bounds-update-event-1\">Dispatch character bounds update event<!---0.021378%--></a> given <var>editContext<!---0.021378%--></var>."
+            },
+            {
+              "html": "If <var>isComposing<!---0.021378%--></var> is false, then:",
+              "rationale": "set",
+              "steps": [
+                {
+                  "html": "Set <var>editContext<!---0.021378%--></var>'s <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-is-composing\" class=\"internalDFN\" id=\"ref-for-dfn-is-composing-9\">is composing<!---0.021378%--></a> to false."
+                },
+                {
+                  "html": "<a data-link-type=\"dfn|abstract-op\" data-cite=\"dom\" data-cite-path=\"/\" data-cite-frag=\"concept-event-fire\" data-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-event-fire\">Fire an event<!---0.021378%--></a> named\n                                    <a href=\"https://w3c.github.io/uievents/#event-type-compositionend\">compositionend</a>\n                                    at <var>editContext<!---0.021378%--></var> using <a data-xref-type=\"_IDL_\" data-link-type=\"idl\" data-lt=\"CompositionEvent\" data-cite=\"uievents\" data-cite-path=\"/\" data-cite-frag=\"compositionevent\" data-type=\"interface\" href=\"https://www.w3.org/TR/uievents/#compositionevent\"><code>CompositionEvent<!---0.021378%--></code></a><!---0.021378%-->."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "html": "<dl>\n        <dt>Input</dt>\n        <dd><var>document<!---0.021378%--></var>, a <a data-xref-type=\"_IDL_\" data-link-type=\"idl\" data-lt=\"Document\" data-cite=\"dom\" data-cite-path=\"/\" data-cite-frag=\"document\" data-type=\"interface\" href=\"https://dom.spec.whatwg.org/#document\"><code>Document<!---0.021378%--></code></a><!---0.021378%--></dd>\n        <dt>Output</dt>\n        <dd>None</dd>\n    </dl>",
+      "rationale": ".algorithm",
+      "steps": [
+        {
+          "html": "Let <var>oldActiveEditContext<!---0.021378%--></var> be <var>document<!---0.021378%--></var>'s <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-active-editcontext\" class=\"internalDFN\" id=\"ref-for-dfn-active-editcontext-7\">active EditContext<!---0.021378%--></a>."
+        },
+        {
+          "html": "Let <var>newActiveEditContext<!---0.021378%--></var> be the result of running the steps to <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-determine-the-active-editcontext\" class=\"internalDFN\" id=\"ref-for-dfn-determine-the-active-editcontext-1\">determine the active EditContext<!---0.021378%--></a> given <var>document<!---0.021378%--></var>."
+        },
+        {
+          "html": "If <var>oldActiveEditContext<!---0.021378%--></var> is not null, then run the steps to <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-deactivate-an-editcontext\" class=\"internalDFN\" id=\"ref-for-dfn-deactivate-an-editcontext-2\">deactivate an EditContext<!---0.021378%--></a> given <var>oldActiveEditContext<!---0.021378%--></var>."
+        },
+        {
+          "html": "If <var>newActiveEditContext<!---0.021378%--></var> is not null, then:",
+          "rationale": "update",
+          "steps": [
+            {
+              "html": "Update the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-text-edit-context\" class=\"internalDFN\" id=\"ref-for-dfn-text-edit-context-20\">Text Edit Context<!---0.021378%--></a>'s <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-text-state\" class=\"internalDFN\" id=\"ref-for-dfn-text-state-4\">text state<!---0.021378%--></a> to match the values in <var>editContext<!---0.021378%--></var>'s <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-text-state\" class=\"internalDFN\" id=\"ref-for-dfn-text-state-5\">text state<!---0.021378%--></a>."
+            }
+          ]
+        },
+        {
+          "html": "Set the <var>document<!---0.021378%--></var>'s <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-active-editcontext\" class=\"internalDFN\" id=\"ref-for-dfn-active-editcontext-8\">active EditContext<!---0.021378%--></a> to <var>newActiveEditContext<!---0.021378%--></var>."
+        }
+      ]
+    },
+    {
+      "html": "<dl>\n                <dt>Input</dt>\n                <dd><var>editContext<!---0.021378%--></var>, an <a data-xref-type=\"_IDL_\" data-link-type=\"idl\" data-lt=\"EditContext\" href=\"https://w3c.github.io/edit-context/#dom-editcontext\" class=\"internalDFN\" id=\"ref-for-dom-editcontext-26\"><code>EditContext<!---0.021378%--></code></a><!---0.021378%--></dd>\n                <dd><var>text<!---0.021378%--></var>, a string</dd>\n                <dt>Output</dt>\n                <dd>None</dd>\n            </dl>",
+      "rationale": ".algorithm",
+      "steps": [
+        {
+          "html": "<a data-link-type=\"dfn|abstract-op\" data-cite=\"dom\" data-cite-path=\"/\" data-cite-frag=\"concept-event-fire\" data-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-event-fire\">Fire an event<!---0.021378%--></a> named \"textupdate\" at <var>editContext<!---0.021378%--></var> using <a data-xref-type=\"_IDL_\" data-link-type=\"idl\" data-lt=\"TextUpdateEvent\" href=\"https://w3c.github.io/edit-context/#dom-textupdateevent\" class=\"internalDFN\" id=\"ref-for-dom-textupdateevent-3\"><code>TextUpdateEvent<!---0.021378%--></code></a><!---0.021378%-->, with\n            <!---0.021378%--><a data-link-type=\"idl\" data-xref-type=\"attribute|dict-member|const\" data-link-for=\"TextUpdateEvent\" data-xref-for=\"TextUpdateEvent\" href=\"https://w3c.github.io/edit-context/#dom-textupdateevent-text\" class=\"internalDFN\" id=\"ref-for-dom-textupdateevent-text-1\"><code>text<!---0.021378%--></code></a><!---0.021378%--> initialized to <var>text<!---0.021378%--></var>,\n            <!---0.021378%--><a data-link-type=\"idl\" data-xref-type=\"attribute|dict-member|const\" data-link-for=\"TextUpdateEvent\" data-xref-for=\"TextUpdateEvent\" href=\"https://w3c.github.io/edit-context/#dom-textupdateevent-selectionstart\" class=\"internalDFN\" id=\"ref-for-dom-textupdateevent-selectionstart-1\"><code>selectionStart<!---0.021378%--></code></a><!---0.021378%--> initialized to |<var>editContext<!---0.021378%--></var>'s <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-selection-start\" class=\"internalDFN\" id=\"ref-for-dfn-selection-start-4\">selection start<!---0.021378%--></a>, and\n            <!---0.021378%--><a data-link-type=\"idl\" data-xref-type=\"attribute|dict-member|const\" data-link-for=\"TextUpdateEvent\" data-xref-for=\"TextUpdateEvent\" href=\"https://w3c.github.io/edit-context/#dom-textupdateevent-selectionend\" class=\"internalDFN\" id=\"ref-for-dom-textupdateevent-selectionend-1\"><code>selectionEnd<!---0.021378%--></code></a><!---0.021378%--> initialized to <var>editContext<!---0.021378%--></var>'s <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-selection-end\" class=\"internalDFN\" id=\"ref-for-dfn-selection-end-4\">selection end<!---0.021378%--></a>."
+        }
+      ]
+    },
+    {
+      "html": "<dl>\n            <dt>Input</dt>\n            <dd><var>editContext<!---0.021378%--></var>, an <a data-xref-type=\"_IDL_\" data-link-type=\"idl\" data-lt=\"EditContext\" href=\"https://w3c.github.io/edit-context/#dom-editcontext\" class=\"internalDFN\" id=\"ref-for-dom-editcontext-27\"><code>EditContext<!---0.021378%--></code></a><!---0.021378%--></dd>\n            <dd><var>textFormats<!---0.021378%--></var>, an array of <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-text-format\" class=\"internalDFN\" id=\"ref-for-dfn-text-format-3\">text format<!---0.021378%--></a>s from the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-text-input-service\" class=\"internalDFN\" id=\"ref-for-dfn-text-input-service-19\">Text Input Service<!---0.021378%--></a></dd>\n            <dt>Output</dt>\n            <dd>None</dd>\n        </dl>",
+      "rationale": ".algorithm",
+      "steps": [
+        {
+          "html": "Let <var>formats<!---0.021378%--></var> be an array of <a data-xref-type=\"_IDL_\" data-link-type=\"idl\" data-lt=\"TextFormat\" href=\"https://w3c.github.io/edit-context/#dom-textformat\" class=\"internalDFN\" id=\"ref-for-dom-textformat-1\"><code>TextFormat<!---0.021378%--></code></a><!---0.021378%-->, initially empty."
+        },
+        {
+          "html": "For each <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-text-format\" class=\"internalDFN\" id=\"ref-for-dfn-text-format-4\">text format<!---0.021378%--></a> <var>format<!---0.021378%--></var> in <var>textFormats<!---0.021378%--></var>,",
+          "rationale": "let",
+          "steps": [
+            {
+              "html": "Let <var>textFormat<!---0.021378%--></var> be a new <a data-xref-type=\"_IDL_\" data-link-type=\"idl\" data-lt=\"TextFormat\" href=\"https://w3c.github.io/edit-context/#dom-textformat\" class=\"internalDFN\" id=\"ref-for-dom-textformat-2\"><code>TextFormat<!---0.021378%--></code></a><!---0.021378%-->. with <var>rangeStart<!---0.021378%--></var>, <var>rangeEnd<!---0.021378%--></var>, <var>underlineStyle<!---0.021378%--></var>, <var>underlineThickness<!---0.021378%--></var>."
+            },
+            {
+              "html": "Set <var>textFormat<!---0.021378%--></var>'s <!---0.021378%--><a data-link-type=\"idl\" data-xref-type=\"attribute|dict-member|const\" data-link-for=\"TextFormat\" data-xref-for=\"TextFormat\" href=\"https://w3c.github.io/edit-context/#dom-textformat-rangestart\" class=\"internalDFN\" id=\"ref-for-dom-textformat-rangestart-1\"><code>rangeStart<!---0.021378%--></code></a><!---0.021378%--> to <var>format<!---0.021378%--></var>'s <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-range-start\" class=\"internalDFN\" id=\"ref-for-dfn-range-start-1\">range start<!---0.021378%--></a>."
+            },
+            {
+              "html": "Set <var>textFormat<!---0.021378%--></var>'s <!---0.021378%--><a data-link-type=\"idl\" data-xref-type=\"attribute|dict-member|const\" data-link-for=\"TextFormat\" data-xref-for=\"TextFormat\" href=\"https://w3c.github.io/edit-context/#dom-textformat-rangeend\" class=\"internalDFN\" id=\"ref-for-dom-textformat-rangeend-1\"><code>rangeEnd<!---0.021378%--></code></a><!---0.021378%--> to <var>format<!---0.021378%--></var>'s <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-range-end\" class=\"internalDFN\" id=\"ref-for-dfn-range-end-1\">range end<!---0.021378%--></a>."
+            },
+            {
+              "html": "Set <var>textFormat<!---0.021378%--></var>'s <!---0.021378%--><a data-link-type=\"idl\" data-xref-type=\"attribute|dict-member|const\" data-link-for=\"TextFormat\" data-xref-for=\"TextFormat\" href=\"https://w3c.github.io/edit-context/#dom-textformat-underlinestyle\" class=\"internalDFN\" id=\"ref-for-dom-textformat-underlinestyle-1\"><code>underlineStyle<!---0.021378%--></code></a><!---0.021378%--> to <var>format<!---0.021378%--></var>'s <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-underline-style\" class=\"internalDFN\" id=\"ref-for-dfn-underline-style-1\">underline style<!---0.021378%--></a>."
+            },
+            {
+              "html": "Set <var>textFormat<!---0.021378%--></var>'s <!---0.021378%--><a data-link-type=\"idl\" data-xref-type=\"attribute|dict-member|const\" data-link-for=\"TextFormat\" data-xref-for=\"TextFormat\" href=\"https://w3c.github.io/edit-context/#dom-textformat-underlinethickness\" class=\"internalDFN\" id=\"ref-for-dom-textformat-underlinethickness-1\"><code>underlineThickness<!---0.021378%--></code></a><!---0.021378%--> to <var>format<!---0.021378%--></var>'s <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-underline-thickness\" class=\"internalDFN\" id=\"ref-for-dfn-underline-thickness-1\">underline thickness<!---0.021378%--></a>."
+            },
+            {
+              "html": "Append <var>textFormat<!---0.021378%--></var> to <var>formats<!---0.021378%--></var>"
+            }
+          ]
+        },
+        {
+          "html": "<a data-link-type=\"dfn|abstract-op\" data-cite=\"dom\" data-cite-path=\"/\" data-cite-frag=\"concept-event-fire\" data-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-event-fire\">Fire an event<!---0.021378%--></a> named \"textformatupdate\" at <var>editContext<!---0.021378%--></var> using <a data-xref-type=\"_IDL_\" data-link-type=\"idl\" data-lt=\"TextFormatUpdateEvent\" href=\"https://w3c.github.io/edit-context/#dom-textformatupdateevent\" class=\"internalDFN\" id=\"ref-for-dom-textformatupdateevent-3\"><code>TextFormatUpdateEvent<!---0.021378%--></code></a><!---0.021378%--> with\n        the <a data-xref-type=\"_IDL_\" data-link-type=\"idl\" data-lt=\"TextFormatUpdateEvent\" href=\"https://w3c.github.io/edit-context/#dom-textformatupdateevent\" class=\"internalDFN\" id=\"ref-for-dom-textformatupdateevent-4\"><code>TextFormatUpdateEvent<!---0.021378%--></code></a><!---0.021378%-->'s <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-text-format-list\" class=\"internalDFN\" id=\"ref-for-dfn-text-format-list-1\">text format list<!---0.021378%--></a> initialized to <var>formats<!---0.021378%--></var>."
+        }
+      ]
+    },
+    {
+      "html": "<dl>\n        <dt>Input</dt>\n        <dd><var>editContext<!---0.021378%--></var>, an <a data-xref-type=\"_IDL_\" data-link-type=\"idl\" data-lt=\"EditContext\" href=\"https://w3c.github.io/edit-context/#dom-editcontext\" class=\"internalDFN\" id=\"ref-for-dom-editcontext-28\"><code>EditContext<!---0.021378%--></code></a><!---0.021378%--></dd>\n        <dt>Output</dt>\n        <dd>None</dd>\n    </dl>",
+      "rationale": ".algorithm",
+      "steps": [
+        {
+          "html": "<a data-link-type=\"dfn|abstract-op\" data-cite=\"dom\" data-cite-path=\"/\" data-cite-frag=\"concept-event-fire\" data-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-event-fire\">Fire an event<!---0.021378%--></a> named \"characterboundsupdate\" at <var>editContext<!---0.021378%--></var> using <a data-xref-type=\"_IDL_\" data-link-type=\"idl\" data-lt=\"CharacterBoundsUpdateEvent\" href=\"https://w3c.github.io/edit-context/#dom-characterboundsupdateevent\" class=\"internalDFN\" id=\"ref-for-dom-characterboundsupdateevent-6\"><code>CharacterBoundsUpdateEvent<!---0.021378%--></code></a><!---0.021378%--> with\n    <!---0.021378%--><a data-link-type=\"idl\" data-xref-type=\"attribute|dict-member|const\" data-link-for=\"CharacterBoundsUpdateEvent\" data-xref-for=\"CharacterBoundsUpdateEvent\" href=\"https://w3c.github.io/edit-context/#dom-characterboundsupdateevent-rangestart\" class=\"internalDFN\" id=\"ref-for-dom-characterboundsupdateevent-rangestart-1\"><code>rangeStart<!---0.021378%--></code></a><!---0.021378%--> initialized to <var>editContext<!---0.021378%--></var>'s <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-composition-start\" class=\"internalDFN\" id=\"ref-for-dfn-composition-start-5\">composition start<!---0.021378%--></a> and\n    <!---0.021378%--><a data-link-type=\"idl\" data-xref-type=\"attribute|dict-member|const\" data-link-for=\"CharacterBoundsUpdateEvent\" data-xref-for=\"CharacterBoundsUpdateEvent\" href=\"https://w3c.github.io/edit-context/#dom-characterboundsupdateevent-rangeend\" class=\"internalDFN\" id=\"ref-for-dom-characterboundsupdateevent-rangeend-1\"><code>rangeEnd<!---0.021378%--></code></a><!---0.021378%--> initialized to <var>editContext<!---0.021378%--></var>'s <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-composition-end\" class=\"internalDFN\" id=\"ref-for-dfn-composition-end-4\">composition end<!---0.021378%--></a>."
+        }
+      ]
+    },
+    {
+      "html": "<dl>\n        <dt>Input</dt>\n        <dd><var>editContext<!---0.021378%--></var>, an <a data-xref-type=\"_IDL_\" data-link-type=\"idl\" data-lt=\"EditContext\" href=\"https://w3c.github.io/edit-context/#dom-editcontext\" class=\"internalDFN\" id=\"ref-for-dom-editcontext-29\"><code>EditContext<!---0.021378%--></code></a><!---0.021378%--></dd>\n        <dt>Output</dt>\n        <dd>None</dd>\n    </dl>",
+      "rationale": ".algorithm",
+      "steps": [
+        {
+          "html": "Set <var>editContext<!---0.021378%--></var>'s <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-is-composing\" class=\"internalDFN\" id=\"ref-for-dfn-is-composing-10\">is composing<!---0.021378%--></a> to false."
+        },
+        {
+          "html": "<a data-link-type=\"dfn|abstract-op\" data-cite=\"dom\" data-cite-path=\"/\" data-cite-frag=\"concept-event-fire\" data-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-event-fire\">Fire an event<!---0.021378%--></a> named\n            <a href=\"https://w3c.github.io/uievents/#event-type-compositionend\">compositionend</a>\n            at <var>editContext<!---0.021378%--></var> using <a data-xref-type=\"_IDL_\" data-link-type=\"idl\" data-lt=\"CompositionEvent\" data-cite=\"uievents\" data-cite-path=\"/\" data-cite-frag=\"compositionevent\" data-type=\"interface\" href=\"https://www.w3.org/TR/uievents/#compositionevent\"><code>CompositionEvent<!---0.021378%--></code></a><!---0.021378%-->."
+        }
+      ]
+    },
+    {
+      "html": "<dl>\n        <dt>Input</dt>\n        <dd><var>document<!---0.021378%--></var>, a <a data-xref-type=\"_IDL_\" data-link-type=\"idl\" data-lt=\"Document\" data-cite=\"dom\" data-cite-path=\"/\" data-cite-frag=\"document\" data-type=\"interface\" href=\"https://dom.spec.whatwg.org/#document\"><code>Document<!---0.021378%--></code></a><!---0.021378%--></dd>\n        <dt>Output</dt>\n        <dd>An <a data-xref-type=\"_IDL_\" data-link-type=\"idl\" data-lt=\"EditContext\" href=\"https://w3c.github.io/edit-context/#dom-editcontext\" class=\"internalDFN\" id=\"ref-for-dom-editcontext-30\"><code>EditContext<!---0.021378%--></code></a><!---0.021378%-->, or null.</dd>\n    </dl>",
+      "rationale": ".algorithm",
+      "steps": [
+        {
+          "html": "Let <var>traversable<!---0.021378%--></var> be <var>document<!---0.021378%--></var>'s <a data-link-type=\"dfn|abstract-op\" data-cite=\"html\" data-cite-path=\"/document-sequences.html\" data-cite-frag=\"node-navigable\" data-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/document-sequences.html#node-navigable\">node navigable<!---0.021378%--></a>'s <a data-link-type=\"dfn|abstract-op\" data-cite=\"html\" data-cite-path=\"/document-sequences.html\" data-cite-frag=\"top-level-traversable\" data-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/document-sequences.html#top-level-traversable\">top-level traversable<!---0.021378%--></a>."
+        },
+        {
+          "html": "If <var>traversable<!---0.021378%--></var> is null, return null."
+        },
+        {
+          "html": "Let <var>focused<!---0.021378%--></var> be the <a href=\"https://html.spec.whatwg.org/multipage/interaction.html#dom-anchor\">DOM anchor</a>\n            of the <a href=\"https://html.spec.whatwg.org/multipage/interaction.html#currently-focused-area-of-a-top-level-traversable\">currently focused area of a top-level traversable</a>\n            given <var>traversable<!---0.021378%--></var>."
+        },
+        {
+          "html": "<p>If <var>focused<!---0.021378%--></var> is null or if the <a data-link-type=\"dfn|abstract-op\" data-cite=\"dom\" data-cite-path=\"/\" data-cite-frag=\"concept-shadow-including-root\" data-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-shadow-including-root\">shadow-including root<!---0.021378%--></a> of <var>focused<!---0.021378%--></var> is not <var>document<!---0.021378%--></var>, return null.</p>"
+        },
+        {
+          "html": "Let <var>editContext<!---0.021378%--></var> be null."
+        },
+        {
+          "html": "While <var>focused<!---0.021378%--></var> is not null and <var>focused<!---0.021378%--></var> is <a href=\"https://w3c.github.io/editing/docs/execCommand/#editable\">editable</a>:",
+          "rationale": "set",
+          "steps": [
+            {
+              "html": "Set <var>editContext<!---0.021378%--></var> to the value of <var>focused<!---0.021378%--></var>'s internal [[EditContext]] slot."
+            },
+            {
+              "html": "Let <var>parent<!---0.021378%--></var> be <var>focused<!---0.021378%--></var>'s <a href=\"https://dom.spec.whatwg.org/#concept-tree-parent\">parent</a>."
+            },
+            {
+              "html": "If <var>parent<!---0.021378%--></var> is null and <var>focused<!---0.021378%--></var>'s <a href=\"https://dom.spec.whatwg.org/#concept-tree-root\">root</a>\n                    is a <a data-link-type=\"dfn|abstract-op\" data-cite=\"dom\" data-cite-path=\"/\" data-cite-frag=\"concept-shadow-root\" data-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-shadow-root\">shadow root<!---0.021378%--></a>, let <var>parent<!---0.021378%--></var> be <var>focused<!---0.021378%--></var>'s\n                    <a href=\"https://dom.spec.whatwg.org/#concept-tree-root\">root</a>'s\n                    <a href=\"https://dom.spec.whatwg.org/#concept-documentfragment-host\">host</a>."
+            },
+            {
+              "html": "Set <var>focused<!---0.021378%--></var> to <var>parent<!---0.021378%--></var>."
+            }
+          ]
+        },
+        {
+          "html": "Return <var>editContext<!---0.021378%--></var>."
+        }
+      ]
+    },
+    {
+      "html": "<dl>\n                    <dt>Input</dt>\n                    <dd><var>rangeStart<!---0.021378%--></var>, an unsigned long</dd>\n                    <dd><var>rangeEnd<!---0.021378%--></var>, an unsigned long</dd>\n                    <dd><var>newText<!---0.021378%--></var>, a DOMString</dd>\n                    <dt>Output</dt>\n                    <dd>None</dd>\n                </dl>",
+      "rationale": ".algorithm",
+      "steps": [
+        {
+          "html": "Replace the substring of <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-text\" class=\"internalDFN\" id=\"ref-for-dfn-text-16\">text<!---0.021378%--></a> in the range of <var>rangeStart<!---0.021378%--></var> and <var>rangeEnd<!---0.021378%--></var> with <var>newText<!---0.021378%--></var>"
+        }
+      ]
+    },
+    {
+      "html": "<dl>\n                        <dt>Input</dt>\n                        <dd><var>start<!---0.021378%--></var>, an unsigned long</dd>\n                        <dd><var>end<!---0.021378%--></var>, an unsigned long</dd>\n                        <dt>Output</dt>\n                        <dd>None</dd>\n                    </dl>",
+      "rationale": ".algorithm",
+      "steps": [
+        {
+          "html": "set <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-selection-start\" class=\"internalDFN\" id=\"ref-for-dfn-selection-start-6\">selection start<!---0.021378%--></a> to <var>start<!---0.021378%--></var>"
+        },
+        {
+          "html": "set <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-selection-end\" class=\"internalDFN\" id=\"ref-for-dfn-selection-end-6\">selection end<!---0.021378%--></a> to <var>end<!---0.021378%--></var>"
+        }
+      ]
+    },
+    {
+      "html": "<dl>\n                        <dt>Input</dt>\n                        <dd><var>selectionBounds<!---0.021378%--></var>, a <a data-xref-type=\"_IDL_\" data-link-type=\"idl\" data-lt=\"DOMRect\" data-cite=\"geometry-1\" data-cite-path=\"/\" data-cite-frag=\"domrect\" data-type=\"interface\" href=\"https://www.w3.org/TR/geometry-1/#domrect\"><code>DOMRect<!---0.021378%--></code></a><!---0.021378%--></dd>\n                        <dt>Output</dt>\n                        <dd>None</dd>\n                    </dl>",
+      "rationale": ".algorithm",
+      "steps": [
+        {
+          "html": "set <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-selection-bounds\" class=\"internalDFN\" id=\"ref-for-dfn-selection-bounds-3\">selection bounds<!---0.021378%--></a> to <var>selectionBounds<!---0.021378%--></var>"
+        }
+      ]
+    },
+    {
+      "html": "<dl>\n                        <dt>Input</dt>\n                        <dd><var>controlBounds<!---0.021378%--></var>, a <a data-xref-type=\"_IDL_\" data-link-type=\"idl\" data-lt=\"DOMRect\" data-cite=\"geometry-1\" data-cite-path=\"/\" data-cite-frag=\"domrect\" data-type=\"interface\" href=\"https://www.w3.org/TR/geometry-1/#domrect\"><code>DOMRect<!---0.021378%--></code></a><!---0.021378%--></dd>\n                        <dt>Output</dt>\n                        <dd>None</dd>\n                    </dl>",
+      "rationale": ".algorithm",
+      "steps": [
+        {
+          "html": "set <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-control-bounds\" class=\"internalDFN\" id=\"ref-for-dfn-control-bounds-3\">control bounds<!---0.021378%--></a> to <var>controlBounds<!---0.021378%--></var>"
+        }
+      ]
+    },
+    {
+      "html": "<dl>\n                        <dt>Input</dt>\n                        <dd><var>rangeStart<!---0.021378%--></var>, an unsigned long</dd>\n                        <dd><var>characterBounds<!---0.021378%--></var>, an array of <a data-xref-type=\"_IDL_\" data-link-type=\"idl\" data-lt=\"DOMRect\" data-cite=\"geometry-1\" data-cite-path=\"/\" data-cite-frag=\"domrect\" data-type=\"interface\" href=\"https://www.w3.org/TR/geometry-1/#domrect\"><code>DOMRect<!---0.021378%--></code></a><!---0.021378%--></dd>\n                        <dt>Output</dt>\n                        <dd>None</dd>\n                    </dl>",
+      "rationale": ".algorithm",
+      "steps": [
+        {
+          "html": "set <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-codepoint-rects-start-index\" class=\"internalDFN\" id=\"ref-for-dfn-codepoint-rects-start-index-2\">codepoint rects start index<!---0.021378%--></a> to <var>rangeStart<!---0.021378%--></var>."
+        },
+        {
+          "html": "set <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-codepoint-rects\" class=\"internalDFN\" id=\"ref-for-dfn-codepoint-rects-5\">codepoint rects<!---0.021378%--></a> to <var>characterBounds<!---0.021378%--></var>."
+        }
+      ]
+    }
+  ]
+}

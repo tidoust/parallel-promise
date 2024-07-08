@@ -1,0 +1,223 @@
+{
+  "spec": {
+    "title": "Cascading Style Sheets Level 2 Revision 2 (CSS 2.2) Specification",
+    "url": "https://drafts.csswg.org/css2/"
+  },
+  "algorithms": [
+    {
+      "html": "User agents must first assign a specified value to each property based\non the following mechanisms (in order of precedence):",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "If the <a href=\"https://drafts.csswg.org/css2/#cascade\">cascade</a> results in a value, use it.\nExcept that, if the value is <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css2/#valdef-all-inherit\" id=\"ref-for-valdef-all-inherit②\">inherit</a>, the specified value is defined\nin <a href=\"https://drafts.csswg.org/css2/#value-def-inherit\">§ 6.2.1 The inherit\nvalue</a> below."
+        },
+        {
+          "html": "Otherwise, if the property is <a href=\"https://drafts.csswg.org/css2/#inheritance\">inherited</a> and the element is not the root of the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css2/#doctree\" id=\"ref-for-doctree①⓪\">document tree</a>, use the computed value of the parent element."
+        },
+        {
+          "html": "Otherwise use the property’s <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"initial-value①\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">initial value</dfn>. The initial value of each property is indicated in the property’s definition."
+        }
+      ]
+    },
+    {
+      "html": "To find the value for an element/property combination, user agents\nmust apply the following sorting order:",
+      "rationale": "find",
+      "steps": [
+        {
+          "html": "Find all declarations that apply to the element and property in\n      question, for the target <a href=\"https://drafts.csswg.org/css2/#media\">media type</a>.\n      Declarations apply if the associated selector <a href=\"https://drafts.csswg.org/css2/#selector\">matches</a> the element in question and the\n      target medium matches the media list on all @media rules\n      containing the declaration and on all links on the path through\n      which the style sheet was reached."
+        },
+        {
+          "html": "Sort  according to importance (normal or important)\nand origin (author, user, or user agent). In ascending order of\nprecedence: \n     <ol>\n      <li>user agent declarations \n      </li><li>user normal declarations \n      </li><li>author normal declarations \n      </li><li>author important declarations \n      </li><li>user important declarations \n     </li></ol>",
+          "ignored": [
+            "user agent declarations user normal declarations author normal declarations author important declarations user important declarations"
+          ]
+        },
+        {
+          "html": "Sort rules with the same importance and origin by <a href=\"https://drafts.csswg.org/css2/#specificity\">specificity</a> of selector: more specific\n      selectors will override more general ones.  Pseudo-elements and\n      pseudo-classes are counted as normal elements and classes,\n      respectively."
+        },
+        {
+          "html": "Finally, sort by order specified: if two declarations have the\n    same weight, origin and specificity, the latter specified wins.\n    Declarations in imported style sheets are considered to be before any\n    declarations in the style sheet itself."
+        }
+      ]
+    },
+    {
+      "html": "The three properties that affect box generation and layout — <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css2/#propdef-display\" id=\"ref-for-propdef-display①①\">display</a>, <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css2/#propdef-position\" id=\"ref-for-propdef-position⑤\">position</a>, and <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css2/#propdef-float\" id=\"ref-for-propdef-float⑦\">float</a> — interact as follows:",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "If <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css2/#propdef-display\" id=\"ref-for-propdef-display①②\">display</a> has the value <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css2/#valdef-display-none\" id=\"ref-for-valdef-display-none②\">none</a>, then <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css2/#propdef-position\" id=\"ref-for-propdef-position⑥\">position</a> and <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css2/#propdef-float\" id=\"ref-for-propdef-float⑧\">float</a> do not apply.\nIn this case, the element generates no box."
+        },
+        {
+          "html": "Otherwise, if <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css2/#propdef-position\" id=\"ref-for-propdef-position⑦\">position</a> has the value <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css2/#valdef-position-absolute\" id=\"ref-for-valdef-position-absolute③\">absolute</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css2/#valdef-position-fixed\" id=\"ref-for-valdef-position-fixed②\">fixed</a>, the box is absolutely positioned,\nthe computed\nvalue of <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css2/#propdef-float\" id=\"ref-for-propdef-float⑨\">float</a> is <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css2/#valdef-float-none\" id=\"ref-for-valdef-float-none③\">none</a>,\nand display is set according to the table below.\nThe position of the box will be determined by the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css2/#propdef-top\" id=\"ref-for-propdef-top①①\">top</a>, <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css2/#propdef-right\" id=\"ref-for-propdef-right①④\">right</a>, <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css2/#propdef-bottom\" id=\"ref-for-propdef-bottom⑨\">bottom</a> and <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css2/#propdef-left\" id=\"ref-for-propdef-left①⑤\">left</a> properties and the box’s\ncontaining block."
+        },
+        {
+          "html": "Otherwise, if <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css2/#propdef-float\" id=\"ref-for-propdef-float①⓪\">float</a> has a value other than <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css2/#valdef-float-none\" id=\"ref-for-valdef-float-none④\">none</a>, the box is\nfloated and <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css2/#propdef-display\" id=\"ref-for-propdef-display①③\">display</a> is set according to the table below."
+        },
+        {
+          "html": "Otherwise, if the element is the root element, <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css2/#propdef-display\" id=\"ref-for-propdef-display①④\">display</a> is set according to the table below, except that it is\nundefined in CSS&nbsp;2 whether a specified value of <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css2/#value-def-list-item\" id=\"ref-for-value-def-list-item②\">list-item</a> becomes a computed value of <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css2/#value-def-block\" id=\"ref-for-value-def-block①\">block</a> or <span class=\"css\" id=\"ref-for-value-def-list-item③\">list-item</span>."
+        },
+        {
+          "html": "Otherwise, the remaining <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css2/#propdef-display\" id=\"ref-for-propdef-display①⑤\">display</a> property values apply\nas specified."
+        }
+      ]
+    },
+    {
+      "html": "The size of the image is calculated from the following rules:",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "If the image has a intrinsic width and height, the used width and\nheight are the intrinsic width and height."
+        },
+        {
+          "html": "Otherwise, if the image has an intrinsic ratio and either an\nintrinsic width or an intrinsic height, the used width/height is the\nsame as the provided intrinsic width/height, and the used value of the\nmissing dimension is calculated from the provided dimension and the\nratio."
+        },
+        {
+          "html": "Otherwise, if the image has an intrinsic ratio, the used width is\n1em and the used height is calculated from this width and the\nintrinsic ratio. If this would produce a height larger than 1em, then\nthe used height is instead set to 1em and the used width is calculated\nfrom this height and the intrinsic ratio."
+        },
+        {
+          "html": "Otherwise, the image’s used width is its intrinsic width if it has\none, or else 1em. The image’s used height is its intrinsic height if\nit has one, or else 1em."
+        }
+      ]
+    },
+    {
+      "html": "As each line is laid out,",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "If a space (U+0020) at the beginning of a line has <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css2/#propdef-white-space\" id=\"ref-for-propdef-white-space①③\">white-space</a> set to <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css2/#valdef-white-space-normal\" id=\"ref-for-valdef-white-space-normal⑤\">normal</a>, <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css2/#valdef-white-space-nowrap\" id=\"ref-for-valdef-white-space-nowrap④\">nowrap</a>, or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css2/#valdef-white-space-pre-line\" id=\"ref-for-valdef-white-space-pre-line③\">pre-line</a>, it is removed."
+        },
+        {
+          "html": "All tabs (U+0009) are rendered as a horizontal shift that lines\n     up the start edge of the next glyph with the next tab stop. Tab\n     stops occur at points that are multiples of 8 times the width of\n     a space (U+0020) rendered in the block’s font from the block’s\n     starting content edge."
+        },
+        {
+          "html": "If a space (U+0020) at the end of a line has <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css2/#propdef-white-space\" id=\"ref-for-propdef-white-space①④\">white-space</a> set to <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css2/#valdef-white-space-normal\" id=\"ref-for-valdef-white-space-normal⑥\">normal</a>, <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css2/#valdef-white-space-nowrap\" id=\"ref-for-valdef-white-space-nowrap⑤\">nowrap</a>, or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css2/#valdef-white-space-pre-line\" id=\"ref-for-valdef-white-space-pre-line④\">pre-line</a>, it is also removed."
+        },
+        {
+          "html": "If spaces (U+0020) or tabs (U+0009) at the end of a line have <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css2/#propdef-white-space\" id=\"ref-for-propdef-white-space①⑤\">white-space</a> set to <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css2/#valdef-white-space-pre-wrap\" id=\"ref-for-valdef-white-space-pre-wrap③\">pre-wrap</a>, UAs may visually collapse them."
+        }
+      ]
+    },
+    {
+      "html": "The following steps are performed in three stages.",
+      "rationale": "remove",
+      "steps": [
+        {
+          "html": "Remove irrelevant boxes: \n     <ol>\n      <li>All child boxes of a <span class=\"css\">table-column</span> parent are treated as if\n          they had 'display: none'. \n      </li><li>If a child <var>C</var> of a <span class=\"css\">table-column-group</span> parent is\n          not a <span class=\"css\">table-column</span> box, then it is treated as if it had\n          'display: none'. \n      </li><li>If a child <var>C</var> of a tabular container <var>P</var> is an anonymous inline box that contains only white space,\n          and its immediately preceding and following siblings, if\n          any, are proper table descendants of <var>P</var> and are\n          either <span class=\"css\">table-caption</span> or internal table boxes, then it is\n          treated as if it had 'display: none'. A box <var>D</var> is\n          a proper table descendant of <var>A</var> if <var>D</var> can be a descendant of <var>A</var> without causing the\n          generation of any intervening <span class=\"css\">table</span> or <span class=\"css\">inline-table</span> boxes. \n      </li><li>If a box <var>B</var> is an anonymous inline containing only\n          white space, and is between two immediate siblings each of\n          which is either an internal table box or a <span class=\"css\">table-caption</span> box then <var>B</var> is treated as if it had 'display:\n          none'. \n     </li></ol>",
+          "ignored": [
+            "All child boxes of a table-column parent are treated as if they had 'display: none'. If a child C of a table-column-group parent is not a table-column box, then it is treated as if it had 'display: none'. If a child C of a tabular container P is an anonymous inline box that contains only white space, and its immediately preceding and following siblings, if any, are proper table descendants of P and are either table-caption or internal table boxes, then it is treated as if it had 'display: none'. A box D is a proper table descendant of A if D can be a descendant of A without causing the generation of any intervening table or inline-table boxes. If a box B is an anonymous inline containing only white space, and is between two immediate siblings each of which is either an internal table box or a table-caption box then B is treated as if it had 'display: none'."
+          ]
+        },
+        {
+          "html": "Generate missing child wrappers:",
+          "rationale": "if",
+          "steps": [
+            {
+              "html": "If a child <var>C</var> of a <span class=\"css\">table</span> or <span class=\"css\">inline-table</span> box\n          is not a proper table child, then generate an anonymous <span class=\"css\">table-row</span> box around <var>C</var> and all consecutive\n          siblings of <var>C</var> that are not proper table children."
+            },
+            {
+              "html": "If a child <var>C</var> of a row group box is not a <span class=\"css\">table-row</span> box, then generate an anonymous <span class=\"css\">table-row</span> box\n          around <var>C</var> and all consecutive siblings\n          of <var>C</var> that are not <span class=\"css\">table-row</span> boxes."
+            },
+            {
+              "html": "If a child <var>C</var> of a <span class=\"css\">table-row</span> box is not a <span class=\"css\">table-cell</span>, then generate an anonymous <span class=\"css\">table-cell</span> box\n          around <var>C</var> and all consecutive siblings\n          of <var>C</var> that are not <span class=\"css\">table-cell</span> boxes."
+            }
+          ]
+        },
+        {
+          "html": "Generate missing parents:",
+          "rationale": "for",
+          "steps": [
+            {
+              "html": "For each <span class=\"css\">table-cell</span> box <var>C</var> in a sequence of\n           consecutive internal table and <span class=\"css\">table-caption</span> siblings,\n           if <var>C</var>’s parent is not a <span class=\"css\">table-row</span> then generate\n           an anonymous <span class=\"css\">table-row</span> box around <var>C</var> and all\n           consecutive siblings of <var>C</var> that are <span class=\"css\">table-cell</span> boxes."
+            },
+            {
+              "html": "For each proper table child <var>C</var> in a sequence of\n           consecutive proper table children, if <var>C</var> is\n           misparented then generate an anonymous <span class=\"css\">table</span> or <span class=\"css\">inline-table</span> box <var>T</var> around <var>C</var> and all\n           consecutive siblings of <var>C</var> that are proper table\n           children. (If C’s parent is an <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css2/#value-def-inline\" id=\"ref-for-value-def-inline④\">inline</a> box,\n           then <var>T</var> must be an <span class=\"css\">inline-table</span> box; otherwise\n           it must be a <span class=\"css\">table</span> box.) \n       <ul>\n        <li>A <span class=\"css\">table-row</span> is misparented if its parent is neither\n               a row group box nor a <span class=\"css\">table</span> or <span class=\"css\">inline-table</span> box. \n        </li><li>A <span class=\"css\">table-column</span> box is misparented if its parent is\n               neither a <span class=\"css\">table-column-group</span> box nor a <span class=\"css\">table</span> or <span class=\"css\">inline-table</span> box. \n        </li><li>A row group box, <span class=\"css\">table-column-group</span> box, or <span class=\"css\">table-caption</span> box is misparented if its parent is\n               neither a <span class=\"css\">table</span> box nor an <span class=\"css\">inline-table</span> box. \n       </li></ul>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "html": "The painting order for the descendants of an element generating\n    a stacking context (see the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css2/#propdef-z-index\" id=\"ref-for-propdef-z-index⑤\">z-index</a> property) is:",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "<p>If the element is a root element: </p>\n     <ol>\n      <li>background color of element over the entire canvas. \n      </li><li>background image of element, over the entire canvas,\n\t  anchored at the origin that would be used if it was painted\n\t  for the root element. \n     </li></ol>",
+          "ignored": [
+            "background color of element over the entire canvas. background image of element, over the entire canvas, anchored at the origin that would be used if it was painted for the root element."
+          ]
+        },
+        {
+          "html": "<p>If the element is a block, list-item, or other block\n\tequivalent: </p>\n     <ol>\n      <li>background color of element unless it is the root\n\t  element. \n      </li><li>background image of element unless it is the root\n\t  element. \n      </li><li>border of element. \n     </li></ol>\n     <p>Otherwise, if the element is a block level table: </p>\n     <ol>\n      <li>table backgrounds (color then image) unless it is the\n\t  root element. \n      </li><li>column group backgrounds (color then image). \n      </li><li>column backgrounds (color then image). \n      </li><li>row group backgrounds (color then image). \n      </li><li>row backgrounds (color then image). \n      </li><li>cell backgrounds (color then image). \n      </li><li>all table borders (in tree order for separated borders). \n     </li></ol>",
+          "ignored": [
+            "background color of element unless it is the root element. background image of element unless it is the root element. border of element.",
+            "table backgrounds (color then image) unless it is the root element. column group backgrounds (color then image). column backgrounds (color then image). row group backgrounds (color then image). row backgrounds (color then image). cell backgrounds (color then image). all table borders (in tree order for separated borders)."
+          ]
+        },
+        {
+          "html": "<p>Stacking contexts formed by positioned descendants with\n\tnegative z-indices (excluding 0) in z-index order (most\n\tnegative first) then tree order. </p>"
+        },
+        {
+          "html": "<p>For all its in-flow, non-positioned, block-level\n\tdescendants in tree order: If the element is a block,\n\tlist-item, or other block equivalent: </p>\n     <ol>\n      <li>background color of element. \n      </li><li>background image of element. \n      </li><li>border of element. \n     </li></ol>\n     <p>Otherwise, the element is a table: </p>\n     <ol>\n      <li>table backgrounds (color then image). \n      </li><li>column group backgrounds (color then image). \n      </li><li>column backgrounds (color then image). \n      </li><li>row group backgrounds (color then image). \n      </li><li>row backgrounds (color then image). \n      </li><li>cell backgrounds (color then image). \n      </li><li>all table borders (in tree order for separated borders). \n     </li></ol>",
+          "ignored": [
+            "background color of element. background image of element. border of element.",
+            "table backgrounds (color then image). column group backgrounds (color then image). column backgrounds (color then image). row group backgrounds (color then image). row backgrounds (color then image). cell backgrounds (color then image). all table borders (in tree order for separated borders)."
+          ]
+        },
+        {
+          "html": "<p>All non-positioned floating descendants, in tree order. For\n\teach one of these, treat the element as if it created a new\n\tstacking context, but any positioned descendants and\n\tdescendants which actually create a new stacking context\n\tshould be considered part of the parent stacking context, not\n\tthis new one. </p>"
+        },
+        {
+          "html": "If the element is an inline element that generates a\n\tstacking context, then:",
+          "rationale": "for",
+          "steps": [
+            {
+              "html": "For each line box that the element is in:",
+              "rationale": "jump",
+              "steps": [
+                {
+                  "html": "Jump to <a href=\"https://drafts.csswg.org/css2/#each-box\">7.2.1</a> for the\n\t      box(es) of the element in that line box (in tree order)."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "html": "Otherwise: first for the element, then for all its in-flow,\n\tnon-positioned, block-level descendants in tree order:",
+          "rationale": "if",
+          "steps": [
+            {
+              "html": "<p>If the element is a block-level replaced element, then:\n\t    the replaced content, atomically. </p>"
+            },
+            {
+              "html": "Otherwise, for each line box of that element:",
+              "rationale": "for",
+              "steps": [
+                {
+                  "html": "<a class=\"self-link\" href=\"https://drafts.csswg.org/css2/#each-box\"></a> \n         <p>For each box that is a child of that element, in\n\t\tthat line box, in tree order: </p>\n         <ol>\n          <li>\n           <p>background color of element. </p>\n          </li><li>\n           <p>background image of element. </p>\n          </li><li>\n           <p>border of element. </p>\n          </li><li>\n           <p>For inline elements: </p>\n           <ol>\n            <li>\n             <p>For all the element’s in-flow,\n\t\t\tnon-positioned, inline-level children that are\n\t\t\tin this line box, and all runs of text inside\n\t\t\tthe element that is on this line box, in tree\n\t\t\torder: </p>\n             <ol>\n              <li>\n               <p>If this is a run of text, then: </p>\n               <ol>\n                <li>any underlining affecting the text\n\t\t\t      of the element, in tree order of the\n\t\t\t      elements applying the underlining (such\n\t\t\t      that the deepest element’s underlining,\n\t\t\t      if any, is painted topmost and the root\n\t\t\t      element’s underlining, if any, is drawn\n\t\t\t      bottommost). \n                </li><li>any overlining affecting the text of\n\t\t\t      the element, in tree order of the\n\t\t\t      elements applying the overlining (such\n\t\t\t      that the deepest element’s overlining,\n\t\t\t      if any, is painted topmost and the root\n\t\t\t      element’s overlining, if any, is drawn\n\t\t\t      bottommost). \n                </li><li>the text. \n                </li><li>any line-through affecting the text\n\t\t\t      of the element, in tree order of the\n\t\t\t      elements applying the line-through (such\n\t\t\t      that the deepest element’s line-through,\n\t\t\t      if any, is painted topmost and the root\n\t\t\t      element’s line-through, if any, is drawn\n\t\t\t      bottommost). \n               </li></ol>\n              </li><li>\n               <p>Otherwise, jump to <a href=\"https://drafts.csswg.org/css2/#each-box\">7.2.1</a> for that\n\t\t\t    element. </p>\n             </li></ol>\n           </li></ol>\n           <p>For inline-block and inline-table elements: </p>\n           <ol>\n            <li>For each one of these, treat the element as\n\t\t      if it created a new stacking context, but any\n\t\t      positioned descendants and descendants which\n\t\t      actually create a new stacking context should be\n\t\t      considered part of the parent stacking context,\n\t\t      not this new one. \n           </li></ol>\n           <p>For inline-level replaced elements: </p>\n           <ol>\n            <li>the replaced content, atomically. \n           </li></ol>\n         </li></ol>",
+                  "ignored": [
+                    "background color of element. background image of element. border of element. For inline elements: For all the element’s in-flow, non-positioned, inline-level children that are in this line box, and all runs of text inside the element that is on this line box, in tree order: If this is a run of text, then: any underlining affecting the text of the element, in tree order of the elements applying the underlining (such that the deepest element’s underlining, if any, is painted topmost and the root element’s underlining, if any, is drawn bottommost). any overlining affecting the text of the element, in tree order of the elements applying the overlining (such that the deepest element’s overlining, if any, is painted topmost and the root element’s overlining, if any, is drawn bottommost). the text. any line-through affecting the text of the element, in tree order of the elements applying the line-through (such that the deepest element’s line-through, if any, is painted topmost and the root element’s line-through, if any, is drawn bottommost). Otherwise, jump to 7.2.1 for that element. For inline-block and inline-table elements: For each one of these, treat the element as if it created a new stacking context, but any positioned descendants and descendants which actually create a new stacking context should be considered part of the parent stacking context, not this new one. For inline-level replaced elements: the replaced content, atomically."
+                  ]
+                },
+                {
+                  "html": "<p>Optionally, the outline of the element (see <a href=\"https://drafts.csswg.org/css2/#outlines\">10 below</a>). </p>"
+                }
+              ]
+            },
+            {
+              "html": "<p>Optionally, if the element is block-level, the outline\n\t    of the element (see <a href=\"https://drafts.csswg.org/css2/#outlines\">10 below</a>). </p>"
+            }
+          ]
+        },
+        {
+          "html": "<p>All positioned descendants with 'z-index: auto' or\n\t'z-index: 0', in tree order. For those with 'z-index: auto',\n\ttreat the element as if it created a new stacking context, but\n\tany positioned descendants and descendants which actually\n\tcreate a new stacking context should be considered part of the\n\tparent stacking context, not this new one. For those with\n\t'z-index: 0', treat the stacking context generated atomically. </p>"
+        },
+        {
+          "html": "<p>Stacking contexts formed by positioned descendants with\n\tz-indices greater than or equal to 1 in z-index order\n\t(smallest first) then tree order. </p>"
+        },
+        {
+          "html": "<a class=\"self-link\" href=\"https://drafts.csswg.org/css2/#outlines\"></a> \n     <p>Finally, implementations that do not draw outlines in steps\n\tabove must draw outlines from this stacking context at this\n\tstage. (It is recommended to draw outlines in this step and\n\tnot in the steps above.) </p>"
+        }
+      ]
+    }
+  ]
+}
