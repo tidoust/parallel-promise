@@ -19,7 +19,14 @@ function showAlgo(a, level = 0) {
   if (level === 0) {
     const heading = document.createElement("h2");
     if (a.name) {
-      heading.textContent = a.name;
+      if (a.href) {
+	const link = document.createElement("a");
+	link.textContent = a.name;
+	link.href = a.href;
+	heading.append(link);
+      } else {
+	heading.textContent = a.name;
+      }
     } else {
       heading.textContent = "(unnamed algorithm)";
     }
