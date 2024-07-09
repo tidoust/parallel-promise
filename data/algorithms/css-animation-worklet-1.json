@@ -141,7 +141,7 @@
               "html": "<p>Let the <var>definition</var> be the result of looking up <var>animatorName</var> on the <var>workletGlobalScope</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.css-houdini.org/css-animationworklet-1/#animator-definitions\" id=\"ref-for-animator-definitions②\">animator definitions</a>.</p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "If <var>definition</var> does not exist then abort the following steps.",
               "rationale": "if",

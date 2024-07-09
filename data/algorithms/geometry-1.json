@@ -1300,7 +1300,7 @@
               "html": "<p>Set <var>serialized</var>.[[Is2D]] to <code>false</code>.</p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "Their <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/structured-data.html#deserialization-steps\" id=\"ref-for-deserialization-steps③\">deserialization steps</a>, given <var>serialized</var> and <var>value</var>, are:",
               "rationale": "if",

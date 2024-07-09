@@ -207,7 +207,7 @@
               "html": "<p><a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#resolve\" id=\"ref-for-resolve\">Resolve</a> <var>promise</var> with <var>chunk</var>.</p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "",
               "rationale": "perform",
@@ -386,7 +386,7 @@
               "html": "<p><a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#resolve\" id=\"ref-for-resolve②\">Resolve</a> <var>promise</var> with «[ \"<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://streams.spec.whatwg.org/#dom-readablestreamreadresult-value\" id=\"ref-for-dom-readablestreamreadresult-value\">value</a></code>\" → <var>chunk</var>,\n  \"<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://streams.spec.whatwg.org/#dom-readablestreamreadresult-done\" id=\"ref-for-dom-readablestreamreadresult-done\">done</a></code>\" → false ]».</p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "",
               "rationale": "resolve",
@@ -490,7 +490,7 @@
               "html": "<p><a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#resolve\" id=\"ref-for-resolve④\">Resolve</a> <var>promise</var> with «[ \"<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://streams.spec.whatwg.org/#dom-readablestreamreadresult-value\" id=\"ref-for-dom-readablestreamreadresult-value②\">value</a></code>\" → <var>chunk</var>,\n  \"<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://streams.spec.whatwg.org/#dom-readablestreamreadresult-done\" id=\"ref-for-dom-readablestreamreadresult-done②\">done</a></code>\" → false ]».</p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "",
               "rationale": "resolve",
@@ -1257,7 +1257,7 @@
               "html": "<p><a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#upon-rejection\" id=\"ref-for-upon-rejection\">Upon rejection</a> of <var>p</var> with reason <var>newError</var>, <a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#rs-pipeTo-finalize\" id=\"ref-for-rs-pipeTo-finalize①\">finalize</a> with <var>newError</var>.</p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "<dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"rs-pipeTo-shutdown\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><i>Shutdown</i></dfn>: if any of the above requirements or steps\n ask to shutdown, optionally with an error <var>error</var>, then:",
               "rationale": "if",
@@ -1459,7 +1459,7 @@
                   ]
                 }
               ],
-              "additionalAlgorithms": [
+              "additional": [
                 {
                   "html": "",
                   "rationale": "set",
@@ -1742,7 +1742,7 @@
                   ]
                 }
               ],
-              "additionalAlgorithms": [
+              "additional": [
                 {
                   "html": "",
                   "rationale": "set",
@@ -1882,7 +1882,7 @@
                   ]
                 }
               ],
-              "additionalAlgorithms": [
+              "additional": [
                 {
                   "html": "",
                   "rationale": "set",
@@ -7813,7 +7813,7 @@
               "html": "<p><a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#read-loop\" id=\"ref-for-read-loop①\">Read-loop</a> given <var>reader</var>, <var>bytes</var>, <var>successSteps</var>, and <var>failureSteps</var>.</p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "",
               "rationale": "call",

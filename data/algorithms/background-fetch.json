@@ -229,7 +229,7 @@
               "html": "<p><a data-link-type=\"dfn\" href=\"https://wicg.github.io/background-fetch/#update-background-fetch-instances\" id=\"ref-for-update-background-fetch-instances②\">Update background fetch instances</a> for <var>bgFetch</var>.</p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "To <a data-link-type=\"dfn\">process response</a> for <var>response</var>, run these steps:",
               "rationale": "if",

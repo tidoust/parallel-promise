@@ -291,7 +291,7 @@
               ]
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "If <var>item</var> is a <a data-link-type=\"dfn|abstract-op\" href=\"https://wicg.github.io/webhid/#dfn-local-items\" class=\"internalDFN\" id=\"ref-for-dfn-local-items-4\">Local item</a>:",
               "rationale": "let",

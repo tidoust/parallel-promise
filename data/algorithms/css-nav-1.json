@@ -203,7 +203,7 @@
               "html": "<p>If <var>closest subset</var> contains a single item,\nreturn that item,\nelse return the first item of <var>closest subset</var> in document order,\nunless its <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-nav-1/#boundary-box\" id=\"ref-for-boundary-box⑨\">boundary box</a> overlaps with the <span id=\"ref-for-boundary-box①⓪\">boundary box</span> of another item\nand that item is higher in the CSS <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css2/zindex.html#painting-order\" id=\"ref-for-painting-order\">painting order</a>.\nIn that case, return that item instead,\nunless it too is overlapped with another higher item, recursively.</p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "Else",
               "rationale": "set",

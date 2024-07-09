@@ -1651,7 +1651,7 @@
                   "html": "<p>Let <var>clip rect</var> be a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#domrectreadonly\" id=\"ref-for-domrectreadonly④\">DOMRectReadOnly</a></code> with <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry/#rectangle-x-coordinate\" id=\"ref-for-rectangle-x-coordinate①①\">x coordinate</a> <var>element rect</var>[\"<code>x</code>\"] + <var>viewport rect</var>[\"<code>x</code>\"]|, <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry/#rectangle-y-coordinate\" id=\"ref-for-rectangle-y-coordinate①①\">y coordinate</a> <var>element rect</var>[\"<code>y</code>\"] + <var>viewport\n  rect</var>[\"<code>y</code>\"], width <var>element rect</var>[\"<code>width</code>\"],\n  and height <var>element rect</var>[\"<code>height</code>\"].</p>"
                 }
               ],
-              "additionalAlgorithms": [
+              "additional": [
                 {
                   "html": "",
                   "rationale": "let",
@@ -1776,7 +1776,7 @@
           "html": "<p>If the implementation is unable to create a new <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/document-sequences.html#top-level-traversable\" id=\"ref-for-top-level-traversable⑦\">top-level traversable</a> with <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webdriver-bidi/#associated-user-context\" id=\"ref-for-associated-user-context⑨\">associated user context</a> <var>user context</var> for any reason, return <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webdriver/#dfn-errors\" id=\"ref-for-dfn-errors②⑤\">error</a> with <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webdriver/#dfn-error-code\" id=\"ref-for-dfn-error-code②②\">error code</a> <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webdriver/#dfn-unsupported-operation\" id=\"ref-for-dfn-unsupported-operation③\">unsupported operation</a>.</p>"
         },
         {
-          "html": "<p>Create a new <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/document-sequences.html#top-level-browsing-context\" id=\"ref-for-top-level-browsing-context①⓪\">top-level browsing context</a> by running the <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/window-object.html#window-open-steps\" id=\"ref-for-window-open-steps\">window open\n steps</a> with <var>url</var> set to \"<code>about:blank</code>\", <var>target</var> set to the empty string, and <var>features</var> set to \"<code>noopener</code>\", and setting the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webdriver-bidi/#associated-user-context\" id=\"ref-for-associated-user-context①⓪\">associated user context</a> for the newly created <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/document-sequences.html#top-level-traversable\" id=\"ref-for-top-level-traversable⑧\">top-level traversable</a> to <var>user context</var>. Which OS\n window the new <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/document-sequences.html#browsing-context\" id=\"ref-for-browsing-context⑥\">browsing context</a> is created in depends on <var>type</var> and <var>reference context</var>:</p>\n      <ul>\n       <li data-md=\"\">\n        <p>If <var>type</var> is \"<code>tab</code>\" and the implementation supports\n multiple browsing contexts in the same OS window:</p>\n        <ul>\n         <li data-md=\"\">\n          <p>The new browsing context should reuse an existing OS window, if any.</p>\n         </li><li data-md=\"\">\n          <p>If <var>reference context</var> is not null, the new browsing context should\n reuse the window containing <var>reference context</var>, if any. If the\n top-level browsing contexts inside an OS window have a definite ordering,\n the new browsing context should be immediately after <var>reference context</var>’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/document-sequences.html#top-level-browsing-context\" id=\"ref-for-top-level-browsing-context①①\">top-level browsing context</a> in that ordering.</p>\n        </li></ul>\n       </li><li data-md=\"\">\n        <p>If <var>type</var> is \"<code>window</code>\", and the implementation supports\n multiple browsing contexts in separate OS windows, the created browsing\n context should be in a new OS window.</p>\n       </li><li data-md=\"\">\n        <p>Otherwise, the details of how the browsing context is presented to the\n user are implementation defined.</p>\n      </li></ul>"
+          "html": "<p>Create a new <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/document-sequences.html#top-level-browsing-context\" id=\"ref-for-top-level-browsing-context①⓪\">top-level browsing context</a> by running\n the <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/document-sequences.html#creating-a-new-top-level-traversable\" id=\"ref-for-creating-a-new-top-level-traversable\">create a new top-level traversable</a> steps with null and empty string,\n and setting the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webdriver-bidi/#associated-user-context\" id=\"ref-for-associated-user-context①⓪\">associated user context</a> for the newly created <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/document-sequences.html#top-level-traversable\" id=\"ref-for-top-level-traversable⑧\">top-level traversable</a> to <var>user context</var>.\n Which OS window the new <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/document-sequences.html#browsing-context\" id=\"ref-for-browsing-context⑥\">browsing context</a> is created in depends on <var>type</var> and <var>reference context</var>:</p>\n      <ul>\n       <li data-md=\"\">\n        <p>If <var>type</var> is \"<code>tab</code>\" and the implementation supports\n multiple browsing contexts in the same OS window:</p>\n        <ul>\n         <li data-md=\"\">\n          <p>The new browsing context should reuse an existing OS window, if any.</p>\n         </li><li data-md=\"\">\n          <p>If <var>reference context</var> is not null, the new browsing context should\n reuse the window containing <var>reference context</var>, if any. If the\n top-level browsing contexts inside an OS window have a definite ordering,\n the new browsing context should be immediately after <var>reference context</var>’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/document-sequences.html#top-level-browsing-context\" id=\"ref-for-top-level-browsing-context①①\">top-level browsing context</a> in that ordering.</p>\n        </li></ul>\n       </li><li data-md=\"\">\n        <p>If <var>type</var> is \"<code>window</code>\", and the implementation supports\n multiple browsing contexts in separate OS windows, the created browsing\n context should be in a new OS window.</p>\n       </li><li data-md=\"\">\n        <p>Otherwise, the details of how the browsing context is presented to the\n user are implementation defined.</p>\n      </li></ul>"
         },
         {
           "html": "If the value of the <var>command parameters</var>’ <code>background</code> field is false:",
@@ -2225,7 +2225,7 @@
               "html": "<p>Let <var>result nodes</var> be a result of <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webdriver/#dfn-try\" id=\"ref-for-dfn-try②⓪\">trying</a> to <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webdriver-bidi/#locate-nodes-using-css\" id=\"ref-for-locate-nodes-using-css\">locate nodes using css</a> given <var>context</var>, <var>context nodes</var>, <var>selector</var> and <var>maximum returned\n  nodes</var>.</p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "",
               "rationale": "let",
@@ -4276,7 +4276,7 @@
               ]
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "",
               "rationale": "if",
@@ -5449,7 +5449,7 @@
               "html": "<p>Return <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webdriver/#dfn-success\" id=\"ref-for-dfn-success⑤⓪\">success</a> with data <a data-link-type=\"dfn\" href=\"https://tc39.es/ecma262/#sec-createarrayfromlist\" id=\"ref-for-sec-createarrayfromlist①\">CreateArrayFromList</a>(<var>deserialized value list</var>).</p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "",
               "rationale": "if",
@@ -5625,7 +5625,7 @@
               "html": "<p>Return <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webdriver/#dfn-success\" id=\"ref-for-dfn-success⑥③\">success</a> with data <var>number_result</var>.</p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "",
               "rationale": "let",
@@ -5738,7 +5738,7 @@
               "html": "<p>Let <var>realm info</var> be a <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#ordered-map\" id=\"ref-for-ordered-map⑥⑥\">map</a> matching the <code>script.WindowRealmInfo</code> production,\n with the <code>realm</code> field set to <var>realm id</var>, the <code>origin</code> field set to <var>origin</var>, and the <code>context</code> field set to <var>context id</var>.</p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "TODO: Unclear if this is the right formulation for handling sandboxes.",
               "rationale": "let",
@@ -6045,7 +6045,7 @@
               "html": "<p>Let <var>remote value</var> be a <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#ordered-map\" id=\"ref-for-ordered-map⑦⑦\">map</a> matching the <code>script.RegExpRemoteValue</code> production in the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webdriver-bidi/#local-end-definition\" id=\"ref-for-local-end-definition⑤②\">local end definition</a>, with the <code>handle</code> property set to <var>handle id</var> if it’s not null, or omitted otherwise, and\n the <code>value</code> property set to <var>serialized</var>.</p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "",
               "rationale": "set",

@@ -840,7 +840,7 @@
               "html": "Otherwise, <a data-link-type=\"dfn|abstract-op\" href=\"https://wicg.github.io/web-smart-card/#dfn-end-the-transaction\" class=\"internalDFN\" id=\"ref-for-dfn-end-the-transaction-1\">end the transaction</a> of <var data-type=\"SmartCardConnection\">connection</var> with\n                      <var data-type=\"SmartCardDisposition\">disposition</var>."
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "If <var data-type=\"Promise\">callbackPromise</var> was rejected with reason <var>r</var>, then:",
               "rationale": "set",

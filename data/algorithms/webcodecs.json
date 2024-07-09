@@ -2687,7 +2687,7 @@
               "html": "<p>Run the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webcodecs/#videoframe-initialize-frame-with-resource-and-size\" id=\"ref-for-videoframe-initialize-frame-with-resource-and-size\">Initialize Frame With Resource and Size</a> algorithm with <var>init</var>, <var>frame</var>, <var>resource</var>, <var>width</var>, and <var>height</var></p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/media.html#htmlvideoelement\" id=\"ref-for-htmlvideoelement\">HTMLVideoElement</a></code>",
               "rationale": "if",
@@ -4173,7 +4173,7 @@
               "html": "<p>Run the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webcodecs/#imagedecoder-fetch-stream-data-loop\" id=\"ref-for-imagedecoder-fetch-stream-data-loop①\">Fetch Stream Data Loop</a> algorithm with <var>reader</var>.</p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "",
               "rationale": "assign",

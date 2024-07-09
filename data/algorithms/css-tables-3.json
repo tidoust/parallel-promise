@@ -58,7 +58,7 @@
               "html": "<b>Distribute the height of the table among rows.</b><br> This is done by executing the steps described in <a href=\"https://drafts.csswg.org/css-tables-3/#height-distribution-algorithm\">§ 3.10.5 Distribution algorithm</a>."
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "<b>[B] Else, an <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"empty-table\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">empty table</dfn> is laid out:</b>",
               "rationale": "compute",

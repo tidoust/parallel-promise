@@ -393,7 +393,7 @@
                   "html": "<p>Let <var>region</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region-lines\" id=\"ref-for-webvtt-region-lines①\">WebVTT region lines</a> be <var>number</var>.</p>"
                 }
               ],
-              "additionalAlgorithms": [
+              "additional": [
                 {
                   "html": "",
                   "rationale": "if",
@@ -551,7 +551,7 @@
                   "html": "<p>Let <var>cue</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-region\" id=\"ref-for-webvtt-cue-region②\">WebVTT cue region</a> be the last <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region\" id=\"ref-for-webvtt-region①⓪\">WebVTT region</a> in <var>regions</var> whose <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region-identifier\" id=\"ref-for-webvtt-region-identifier③\">WebVTT region identifier</a> is <var>value</var>, if any, or null otherwise.</p>"
                 }
               ],
-              "additionalAlgorithms": [
+              "additional": [
                 {
                   "html": "",
                   "rationale": "if",
@@ -822,7 +822,7 @@
               "html": "<p>Append the newly created <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-text-object\" id=\"ref-for-webvtt-text-object②\">WebVTT Text Object</a> to <var>current</var>.</p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "When the steps above say to <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"attach-a-webvtt-internal-node-object\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">attach a WebVTT Internal Node Object</dfn><span style=\"position: relative; height: 0px;\"></span> of a particular\n    concrete class, the user agent must run the following steps:",
               "rationale": "create",

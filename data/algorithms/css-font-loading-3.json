@@ -36,7 +36,7 @@
               ]
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "Asynchronously, attempt to parse the data in it as a font.\nWhen this is completed,\nsuccessfully or not,\nqueue a task to run the following steps synchronously:",
               "rationale": "if",

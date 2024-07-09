@@ -85,7 +85,7 @@
               "html": "<p>Return the <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#string-concatenate\" id=\"ref-for-string-concatenate②\">concatenation</a> of « <var>targetName</var>, \".on\", <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\" id=\"ref-for-this①⑦\">this</a>'s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/long-animation-frames/#performancescripttiming-timing-info\" id=\"ref-for-performancescripttiming-timing-info⑧\">timing info</a>'s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/long-animation-frames/#script-timing-info-event-type\" id=\"ref-for-script-timing-info-event-type\">event type</a> ».</p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "",
               "rationale": "if",

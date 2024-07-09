@@ -7,7 +7,7 @@
     {
       "name": "HTMLVideoElement/getVideoPlaybackQuality()",
       "href": "https://w3c.github.io/media-playback-quality/#dom-htmlvideoelement-getvideoplaybackquality",
-      "html": "When <dfn data-export=\"\" data-dfn-type=\"method\" id=\"dom-htmlvideoelement-getvideoplaybackquality\" data-idl=\"operation\" data-title=\"getVideoPlaybackQuality()\" data-dfn-for=\"HTMLVideoElement\" data-type=\"VideoPlaybackQuality\" data-lt=\"getVideoPlaybackQuality()\" data-local-lt=\"HTMLVideoElement.getVideoPlaybackQuality|HTMLVideoElement.getVideoPlaybackQuality()|getVideoPlaybackQuality\" tabindex=\"0\" aria-haspopup=\"dialog\"><code>getVideoPlaybackQuality()</code></dfn> method is\n        called, the user agent <em class=\"rfc2119\">MUST<!---0.692838%--></em> run the following steps:",
+      "html": "When <dfn data-export=\"\" data-dfn-type=\"method\" id=\"dom-htmlvideoelement-getvideoplaybackquality\" data-idl=\"operation\" data-title=\"getVideoPlaybackQuality()\" data-dfn-for=\"HTMLVideoElement\" data-type=\"VideoPlaybackQuality\" data-lt=\"getVideoPlaybackQuality()\" data-local-lt=\"HTMLVideoElement.getVideoPlaybackQuality|HTMLVideoElement.getVideoPlaybackQuality()|getVideoPlaybackQuality\" tabindex=\"0\" aria-haspopup=\"dialog\"><code>getVideoPlaybackQuality()</code></dfn> method is\n        called, the user agent <em class=\"rfc2119\">MUST</em> run the following steps:",
       "rationale": "let",
       "steps": [
         {

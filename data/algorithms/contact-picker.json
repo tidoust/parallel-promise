@@ -127,6 +127,48 @@
           "html": "<p>Return <var>promise</var>.</p>"
         }
       ]
+    },
+    {
+      "html": "",
+      "rationale": ".algorithm",
+      "steps": [
+        {
+          "html": "<p>Let <var>details</var> be the <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#ordered-map\" id=\"ref-for-ordered-map\">map</a> «\n  \"addressLine\" → empty <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list\" id=\"ref-for-list①④\">list</a>,\n  \"country\" → \"\",\n  \"phone\" → \"\",\n  \"city\" → \"\",\n  \"dependentLocality\" → \"\",\n  \"organization\" → \"\",\n  \"postalCode\" → \"\",\n  \"recipient\" → \"\",\n  \"region\" → \"\",\n  \"sortingCode\" → \"\"\n ».</p>"
+        },
+        {
+          "html": "<p>If <var>redactList</var> doesn’t <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-contain\" id=\"ref-for-list-contain⑥\">contain</a> \"addressLine\",\n set <var>details</var>[\"addressLine\"] to the result of splitting the user-provided address line into a <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list\" id=\"ref-for-list①⑤\">list</a>.</p>"
+        },
+        {
+          "html": "<p>If <var>redactList</var> doesn’t <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-contain\" id=\"ref-for-list-contain⑦\">contain</a> \"country\",\n set <var>details</var>[\"country\"] to the user-provided <a data-link-type=\"dfn\" href=\"https://w3c.github.io/contact-picker/#physical-address-country\" id=\"ref-for-physical-address-country①\">country</a> as an upper case <a data-link-type=\"biblio\" href=\"https://w3c.github.io/contact-picker/#biblio-iso3166-1\" title=\"Codes for the representation of names of countries and their subdivisions — Part 1: Country code\">[ISO3166-1]</a> alpha-2 code.</p>"
+        },
+        {
+          "html": "<p>If <var>redactList</var> doesn’t <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-contain\" id=\"ref-for-list-contain⑧\">contain</a> \"phone\",\n set <var>details</var>[\"phone\"] to the user-provided <a data-link-type=\"dfn\" href=\"https://w3c.github.io/contact-picker/#physical-address-phone-number\" id=\"ref-for-physical-address-phone-number①\">phone number</a>.</p>"
+        },
+        {
+          "html": "<p>If <var>redactList</var> doesn’t <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-contain\" id=\"ref-for-list-contain⑨\">contain</a> \"city\",\n set <var>details</var>[\"city\"] to the user-provided <a data-link-type=\"dfn\" href=\"https://w3c.github.io/contact-picker/#physical-address-city\" id=\"ref-for-physical-address-city①\">city</a>.</p>"
+        },
+        {
+          "html": "<p>If <var>redactList</var> doesn’t <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-contain\" id=\"ref-for-list-contain①⓪\">contain</a> \"dependentLocality\",\n set <var>details</var>[\"dependentLocality\"] to the user-provided <a data-link-type=\"dfn\" href=\"https://w3c.github.io/contact-picker/#physical-address-dependent-locality\" id=\"ref-for-physical-address-dependent-locality①\">dependent locality</a>.</p>"
+        },
+        {
+          "html": "<p>If <var>redactList</var> doesn’t <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-contain\" id=\"ref-for-list-contain①①\">contain</a> \"organization\",\n set <var>details</var>[\"organization\"] to the user-provided recipient <a data-link-type=\"dfn\" href=\"https://w3c.github.io/contact-picker/#physical-address-organization\" id=\"ref-for-physical-address-organization①\">organization</a>.</p>"
+        },
+        {
+          "html": "<p>If <var>redactList</var> doesn’t <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-contain\" id=\"ref-for-list-contain①②\">contain</a> \"postalCode\",\n set <var>details</var>[\"postalCode\"] to the user-provided <a data-link-type=\"dfn\" href=\"https://w3c.github.io/contact-picker/#physical-address-postal-code\" id=\"ref-for-physical-address-postal-code①\">postal code</a>.\n Optionally, redact part of <var>details</var>[\"postalCode\"].</p>"
+        },
+        {
+          "html": "<p>If <var>redactList</var> doesn’t <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-contain\" id=\"ref-for-list-contain①③\">contain</a> \"recipient\",\n set <var>details</var>[\"recipient\"] to the user-provided <a data-link-type=\"dfn\" href=\"https://w3c.github.io/contact-picker/#physical-address-recipient\" id=\"ref-for-physical-address-recipient①\">recipient</a> of the contact information.</p>"
+        },
+        {
+          "html": "<p>If <var>redactList</var> doesn’t <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-contain\" id=\"ref-for-list-contain①④\">contain</a> \"region\",\n set <var>details</var>[\"region\"] to the user-provided <a data-link-type=\"dfn\" href=\"https://w3c.github.io/contact-picker/#physical-address-region\" id=\"ref-for-physical-address-region①\">region</a>.</p>"
+        },
+        {
+          "html": "<p>If <var>redactList</var> doesn’t <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-contain\" id=\"ref-for-list-contain①⑤\">contain</a> \"sortingCode\",\n set <var>details</var>[\"sortingCode\"] to the user-provided <a data-link-type=\"dfn\" href=\"https://w3c.github.io/contact-picker/#physical-address-sorting-code\" id=\"ref-for-physical-address-sorting-code①\">sorting code</a>.</p>"
+        },
+        {
+          "html": "<p>Return a newly created <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/contact-picker/#contactaddress\" id=\"ref-for-contactaddress⑦\">ContactAddress</a></code> whose attribute’s value’s match those in <var>details</var>.</p>"
+        }
+      ]
     }
   ]
 }

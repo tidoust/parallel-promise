@@ -3485,7 +3485,7 @@
               ]
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "And then, if <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#an-exception-was-thrown\" id=\"ref-for-an-exception-was-thrown\">an exception <var>E</var> was thrown</a>:",
               "rationale": "if",
@@ -3862,7 +3862,7 @@
               ]
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "And then, if <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#an-exception-was-thrown\" id=\"ref-for-an-exception-was-thrown①\">an exception <var>E</var> was thrown</a>:",
               "rationale": "if",

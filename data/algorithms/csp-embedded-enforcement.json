@@ -226,7 +226,7 @@
               "html": "<p>Return <code>null</code>.</p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "",
               "rationale": "if",
@@ -864,7 +864,7 @@
               ]
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "For each <var>directive A</var> in <var>A</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-csp/#policy-directive-set\" id=\"ref-for-policy-directive-set①⑤\">directive set</a>:",
               "rationale": "return",

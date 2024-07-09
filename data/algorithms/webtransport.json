@@ -897,7 +897,7 @@
               ]
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "Gather the stats from the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webtransport/#underlying-connection\" id=\"ref-for-underlying-connection①\">underlying connection</a>, including stats on datagrams.",
               "rationale": "return",

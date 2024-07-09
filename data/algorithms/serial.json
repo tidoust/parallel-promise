@@ -783,7 +783,7 @@
               ]
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "If <var data-type=\"Promise\">combinedPromise</var> was rejected with reason <var>r</var>, then:",
               "rationale": "set",

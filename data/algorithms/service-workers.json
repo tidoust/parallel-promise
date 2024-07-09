@@ -1371,7 +1371,7 @@
                               "html": "<p>Perform ! <a data-link-type=\"dfn\" href=\"http://tc39.github.io/ecma262/#sec-detacharraybuffer\" id=\"ref-for-sec-detacharraybuffer\">DetachArrayBuffer</a>(<var>chunk</var>.[[ViewedArrayBuffer]]).</p>"
                             }
                           ],
-                          "additionalAlgorithms": [
+                          "additional": [
                             {
                               "html": "",
                               "rationale": "set",
@@ -1747,7 +1747,7 @@
                   ]
                 }
               ],
-              "additionalAlgorithms": [
+              "additional": [
                 {
                   "html": "To <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#fetch-processresponseendofbody\" id=\"ref-for-fetch-processresponseendofbody\">processResponseEndOfBody</a> for <var>response</var>, run these substeps:",
                   "rationale": "if",
@@ -3822,7 +3822,7 @@
                           "html": "<p>If <var>globalObject</var> is null, return null.</p>"
                         }
                       ],
-                      "additionalAlgorithms": [
+                      "additional": [
                         {
                           "html": "<span class=\"marker\">Note:</span> This only creates a ServiceWorkerGlobalScope because CORS checks require that. It is not expected that implementations will actually create a ServiceWorkerGlobalScope here.",
                           "rationale": "if",

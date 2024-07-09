@@ -2134,7 +2134,7 @@
               "html": "<p>Return <code>manifest-src</code>.</p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "",
               "rationale": "return",
@@ -2244,7 +2244,7 @@
               "html": "<p>Return <code>script-src-elem</code>.</p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "",
               "rationale": "return",
@@ -2291,7 +2291,7 @@
               "html": "<p>Return <code>&lt;&lt; \"script-src-elem\", \"script-src\", \"default-src\" &gt;&gt;</code>.</p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "",
               "rationale": "return",

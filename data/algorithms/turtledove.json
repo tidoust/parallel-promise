@@ -1148,7 +1148,7 @@
                   "html": "<p>Set <var>auctionConfig</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/turtledove/#auction-config-expects-additional-bids\" id=\"ref-for-auction-config-expects-additional-bids①\">expects additional bids</a> to false.</p>"
                 }
               ],
-              "additionalAlgorithms": [
+              "additional": [
                 {
                   "html": "To handle an error:",
                   "rationale": "set",
@@ -1174,7 +1174,7 @@
                   "html": "<p>Set <var>auctionConfig</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/turtledove/#auction-config-direct-from-seller-signals-header-ad-slot\" id=\"ref-for-auction-config-direct-from-seller-signals-header-ad-slot\">direct from seller signals header ad slot</a> to <var>result</var>.</p>"
                 }
               ],
-              "additionalAlgorithms": [
+              "additional": [
                 {
                   "html": "To handle an error:",
                   "rationale": "set",
@@ -3928,7 +3928,7 @@
               "html": "<p>Let <var>nonce</var> be the <a data-link-type=\"dfn\" href=\"https://www.ietf.org/rfc/rfc4122.txt#string-representation\" id=\"ref-for-string-representation\">string representation</a> of a <a data-link-type=\"dfn\" href=\"https://www.ietf.org/rfc/rfc4122.txt#version-4-uuid\" id=\"ref-for-version-4-uuid①\">version 4 UUID</a>.</p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "Run the following steps <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#in-parallel\" id=\"ref-for-in-parallel⑥\">in parallel</a>:",
               "rationale": "queue",

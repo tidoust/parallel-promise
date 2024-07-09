@@ -662,7 +662,7 @@
                   "html": "<p>If <var>prefetchRecord</var> was given and <var>commitEarlyHints</var> is null, then set <var>commitEarlyHints</var> to the result of <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/semantics.html#process-early-hint-headers\" id=\"ref-for-process-early-hint-headers\">processing early hint headers</a> given <var>earlyResponse</var> and <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-reserved-client\" id=\"ref-for-concept-request-reserved-client①①\">reserved client</a>. </p>"
                 }
               ],
-              "additionalAlgorithms": [
+              "additional": [
                 {
                   "html": "Let <var>processResponse</var> be the following algorithm given a <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-response\" id=\"ref-for-concept-response④\">response</a> <var>fetchedResponse</var>:",
                   "rationale": "set",

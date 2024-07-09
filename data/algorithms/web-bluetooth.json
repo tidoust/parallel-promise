@@ -495,7 +495,7 @@
               "html": "<p>Add the contents of <code><var>allowedDevice</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webbluetoothcg.github.io/web-bluetooth/#dom-allowedbluetoothdevice-allowedservices\" id=\"ref-for-dom-allowedbluetoothdevice-allowedservices①\">allowedServices</a></code></code> to <var>grantedServiceUUIDs</var>.</p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "If one is not found, perform the following sub-steps:",
               "rationale": "let",
@@ -1473,7 +1473,7 @@
               "html": "<p>Otherwise, throw a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#networkerror\" id=\"ref-for-networkerror⑥\">NetworkError</a></code>.</p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "If <var>promise</var> was rejected with reason <var>error</var>, then:",
               "rationale": "if",

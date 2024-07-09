@@ -411,7 +411,7 @@
               "html": "<p>Let <var>blockSize</var> be the result of calculating <var>box</var>’s <b>border-box</b> <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-writing-modes-4/#block-size\" id=\"ref-for-block-size④\">block size</a> (relative to <var>box</var>’s writing mode) exactly like block containers do,\ngiven <var>fragment</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.css-houdini.org/css-layout-api-1/#dom-fragmentresultoptions-autoblocksize\" id=\"ref-for-dom-fragmentresultoptions-autoblocksize\">autoBlockSize</a></code> as the \"intrinsic\nblock size\".</p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "Otherwise (<var>sizingMode</var> is <code>\"manual\"</code>):",
               "rationale": "let",
@@ -519,7 +519,7 @@
               "html": "<p>Let <var>intrinsicSizesValue</var> be the result of <a data-link-type=\"dfn\" href=\"https://drafts.css-houdini.org/css-layout-api-1/#run-a-work-queue\" id=\"ref-for-run-a-work-queue\">run a work queue</a> given <var>value</var>, and <var>context</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.css-houdini.org/css-layout-api-1/#layout-api-context-work-queue\" id=\"ref-for-layout-api-context-work-queue③\">work queue</a>.</p>\n          <p>If <a data-link-type=\"dfn\" href=\"https://drafts.css-houdini.org/css-layout-api-1/#run-a-work-queue\" id=\"ref-for-run-a-work-queue①\">run a work queue</a> returns failure, let the <var>box</var> fallback to the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-display-4/#flow-layout\" id=\"ref-for-flow-layout⑤\">flow\nlayout</a> and abort all these steps.</p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "Otherwise:",
               "rationale": "let",
@@ -627,7 +627,7 @@
               "html": "<p>Let <var>fragmentResultValue</var> be the result of <a data-link-type=\"dfn\" href=\"https://drafts.css-houdini.org/css-layout-api-1/#run-a-work-queue\" id=\"ref-for-run-a-work-queue②\">run a work queue</a> given <var>value</var>.</p>\n          <p>If <a data-link-type=\"dfn\" href=\"https://drafts.css-houdini.org/css-layout-api-1/#run-a-work-queue\" id=\"ref-for-run-a-work-queue③\">run a work queue</a> returns failure, let the <var>box</var> fallback to the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-display-4/#flow-layout\" id=\"ref-for-flow-layout①①\">flow\nlayout</a> and abort all these steps.</p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "Otherwise:",
               "rationale": "let",
@@ -647,7 +647,7 @@
               "html": "<p>Let <var>fragmentResult</var> be the result <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#javascript-string-convert\" id=\"ref-for-javascript-string-convert⑥\">converting</a> <var>fragmentResultValue</var> to a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.css-houdini.org/css-layout-api-1/#fragmentresult\" id=\"ref-for-fragmentresult⑧\">FragmentResult</a></code>.</p>\n          <p>If an exception is <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#dfn-throw\" id=\"ref-for-dfn-throw①①\">thrown</a>, let <var>box</var> fallback to the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-display-4/#flow-layout\" id=\"ref-for-flow-layout①②\">flow layout</a> and abort all\nthese steps.</p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "Otherwise:",
               "rationale": "let",
@@ -826,7 +826,7 @@
                       "html": "<p>Resolve <var>childPromise</var> with <var>fragment</var>.</p>"
                     }
                   ],
-                  "additionalAlgorithms": [
+                  "additional": [
                     {
                       "html": "Otherwise <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task\" id=\"ref-for-queue-a-task③\">queue a task</a>, or run synchronously, the following substeps:",
                       "rationale": "let",

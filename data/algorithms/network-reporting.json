@@ -266,7 +266,7 @@
                       "html": "<p>Remove each <a data-link-type=\"dfn\" href=\"https://w3c.github.io/reporting/#report\" id=\"ref-for-report④\">report</a> in <var>reports</var> from the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/reporting/network-reporting.html#reporting-cache\" id=\"ref-for-reporting-cache①①\">reporting\n  cache</a>.</p>"
                     }
                   ],
-                  "additionalAlgorithms": [
+                  "additional": [
                     {
                       "html": "Otherwise, if <var>result</var> is \"<code>Remove Endpoint</code>\":",
                       "rationale": "remove",

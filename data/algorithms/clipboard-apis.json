@@ -86,7 +86,7 @@
               "html": "<p>If <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\" id=\"ref-for-this③\">this</a>'s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#clipboarditem-clipboard-item\" id=\"ref-for-clipboarditem-clipboard-item②\">clipboard item</a>'s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#list-of-representations\" id=\"ref-for-list-of-representations①\">list of representations</a> <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-contain\" id=\"ref-for-list-contain\">contains</a> a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#representation\" id=\"ref-for-representation⑤\">representation</a> whose <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#representation-mime-type\" id=\"ref-for-representation-mime-type⑤\">MIME type</a> is <var>mimeType</var> and whose [representation/isCustom] is <var>isCustom</var>, then throw a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#exceptiondef-typeerror\" id=\"ref-for-exceptiondef-typeerror②\">TypeError</a></code>.</p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "The step above prevents collision between mime-types well-known by the user agent and those that are intended by the author to be treated as a custom type.  For example, it would be possible for the author’s list of items to contain representations for \"text/html\" as well as \"web text/html\".",
               "rationale": "set",
@@ -1182,7 +1182,7 @@
               "html": "<p>Assign CF_UNICODETEXT to <var>wellKnownFormat</var>.</p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "On MacOS, follow the convention described below:",
               "rationale": "assign",
@@ -1211,7 +1211,7 @@
               "html": "<p>Assign CF_HTML to <var>wellKnownFormat</var>.</p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "On MacOS, follow the convention described below:",
               "rationale": "assign",
@@ -1240,7 +1240,7 @@
               "html": "<p>Assign \"PNG\" to <var>wellKnownFormat</var>.</p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "On MacOS, follow the convention described below:",
               "rationale": "assign",
@@ -1269,7 +1269,7 @@
               "html": "<p>Assign CFSTR_MIME_SVG_XML to <var>wellKnownFormat</var>.</p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "On MacOS, follow the convention described below:",
               "rationale": "assign",

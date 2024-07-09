@@ -71,7 +71,7 @@
               "html": "<p>Set <var>policy</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/csp-next/scripting-policy.html#scripting-policy-dynamic-loading\" id=\"ref-for-scripting-policy-dynamic-loading①\">dynamic-loading</a> member to <var>value</var>.</p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "",
               "rationale": "if",
@@ -274,7 +274,7 @@
                   "html": "<p>If <var>expected</var> is a <a data-link-type=\"dfn\">case-sensitive</a> match with the result of <a data-link-type=\"dfn\" href=\"https://tools.ietf.org/html/rfc4648#section-4\" id=\"ref-for-section-4\">base64 encoding</a> the result of applying <a data-link-type=\"dfn\" href=\"https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf#\" id=\"termref-for-⑤\">SHA-256</a> to <var>source</var>, return\n\"<code>Matches</code>\".</p>"
                 }
               ],
-              "additionalAlgorithms": [
+              "additional": [
                 {
                   "html": "",
                   "rationale": "if",

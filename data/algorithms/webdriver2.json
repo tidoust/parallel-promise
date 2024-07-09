@@ -4652,7 +4652,7 @@
               "html": "<p>Let <var>x</var> equal <var>x offset</var> and\n     <var>y</var> equal <var>y offset</var>.\n    </p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "",
               "rationale": "let",
@@ -6407,7 +6407,7 @@
                   "html": "Append <var>range</var> to <var>pages</var>"
                 }
               ],
-              "additionalAlgorithms": [
+              "additional": [
                 {
                   "html": "Otherwise:",
                   "rationale": "let",

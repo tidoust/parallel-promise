@@ -106,7 +106,7 @@
               "html": "The painting of the operator is performed by the\n                        algorithm\n                        to <a href=\"https://w3c.github.io/mathml-core/#dfn-shape-a-stretchy-glyph\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-shape-a-stretchy-glyph-3\">shape a stretchy glyph</a>\n                        stretched to <a data-type=\"dfn\" href=\"https://www.w3.org/TR/css-writing-modes-4/#inline-dimension\">inline dimension</a>\n                        <code>T<sub>inline</sub></code> and\n                        at position determined by the previous box metrics."
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "Otherwise, the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/mathml-core/#dfn-stretch-axis\" class=\"internalDFN\" id=\"ref-for-dfn-stretch-axis-2\">stretch axis</a> of the operator is\n                    block. The following steps are performed:",
               "rationale": "if",

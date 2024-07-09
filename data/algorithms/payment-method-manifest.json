@@ -153,7 +153,7 @@
                   ]
                 }
               ],
-              "additionalAlgorithms": [
+              "additional": [
                 {
                   "html": "and with <i><a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#process-response-end-of-body\" id=\"ref-for-process-response-end-of-body①\">processResponseConsumeBody</a></i> set to the following steps given <var>identifierResponse</var> and <var>identifierBody</var>:",
                   "rationale": "if",

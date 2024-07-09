@@ -3577,7 +3577,7 @@
                   "html": "<p><a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/custom-elements.html#concept-upgrade-an-element\" id=\"ref-for-concept-upgrade-an-element②\">Upgrade</a> <var>element</var> using <var>definition</var>. </p>"
                 }
               ],
-              "additionalAlgorithms": [
+              "additional": [
                 {
                   "html": "If this step threw an exception, then:",
                   "rationale": "report",
@@ -3639,7 +3639,7 @@
                   "html": "<p>Set <var>result</var>’s <a data-link-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-element-is-value\" id=\"ref-for-concept-element-is-value②\"><code>is</code> value</a> to null. </p>"
                 }
               ],
-              "additionalAlgorithms": [
+              "additional": [
                 {
                   "html": "If any of these steps threw an exception, then:",
                   "rationale": "report",

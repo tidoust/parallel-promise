@@ -128,7 +128,7 @@
               ]
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "Populate <var>estimate</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://immersive-web.github.io/lighting-estimation/#dom-xrlightestimate-sphericalharmonicscoefficients\" id=\"ref-for-dom-xrlightestimate-sphericalharmonicscoefficients③\">sphericalHarmonicsCoefficients</a></code>, with the coefficients provided by <var>device</var>.",
               "rationale": ".switch",

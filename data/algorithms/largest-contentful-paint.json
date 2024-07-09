@@ -116,7 +116,7 @@
               "html": "<p>Let <var>visibleDimensions</var> be <var>concreteDimensions</var>, adjusted for positioning by <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-images-3/#propdef-object-position\" id=\"ref-for-propdef-object-position\">object-position</a> or <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-backgrounds-3/#propdef-background-position\" id=\"ref-for-propdef-background-position\">background-position</a> and <var>element</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-box-4/#content-box\" id=\"ref-for-content-box\">content box</a>.</p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "<span class=\"marker\">Note:</span> some of those algorithms are not rigorously defined in CSS. The expected result is to get the actual position and size of the image in <var>element</var> as a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#domrectreadonly\" id=\"ref-for-domrectreadonly①\">DOMRectReadOnly</a></code>.",
               "rationale": "let",

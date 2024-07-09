@@ -109,7 +109,7 @@
               "html": "<p>Assert that <var>parsedURL</var>’s <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-scheme\" id=\"ref-for-concept-url-scheme①\">scheme</a> is \"<code>https</code>\".</p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "<span class=\"marker\">NOTE:</span> These pre-conditions were previously checked in the <a href=\"https://w3c.github.io/secure-payment-confirmation/#sctn-steps-to-validate-payment-method-data\">steps to validate payment\n   method data</a>.",
               "rationale": "set",
@@ -202,7 +202,7 @@
       "rationale": "if",
       "steps": [
         {
-          "html": "<p>If not in a \"<a data-link-type=\"dfn\" href=\"https://w3c.github.io/secure-payment-confirmation/#secure-payment-confirmation\" id=\"ref-for-secure-payment-confirmation④\">secure-payment-confirmation</a>\" payment handler, return a\n\"<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#notallowederror\" id=\"ref-for-notallowederror①\">NotAllowedError</a></code>\" <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#idl-DOMException\" id=\"ref-for-idl-DOMException④\">DOMException</a></code>.</p>\n       <details class=\"wpt-tests-block\" dir=\"ltr\" lang=\"en\">\n        <summary>Tests</summary>\n        <ul class=\"wpt-tests-list\">\n         <li class=\"wpt-test\"><a class=\"wpt-name\" href=\"https://wpt.fyi/results/secure-payment-confirmation/authentication-cannot-bypass-spc.https.html\" title=\"secure-payment-confirmation/authentication-cannot-bypass-spc.https.html\">authentication-cannot-bypass-spc.https.html</a><span class=\"wpt-results\"><span title=\"chrome 1/1\" class=\"wpt-result\" style=\"background: conic-gradient(forestgreen 360deg, darkred 0deg);\"></span><span title=\"firefox 0/1\" class=\"wpt-result\" style=\"background: conic-gradient(forestgreen 0deg, darkred 0deg);\"></span><span title=\"safari 0/1\" class=\"wpt-result\" style=\"background: conic-gradient(forestgreen 0deg, darkred 0deg);\"></span><span title=\"edge 1/1\" class=\"wpt-result\" style=\"background: conic-gradient(forestgreen 360deg, darkred 0deg);\"></span></span> <a class=\"wpt-live\" href=\"https://wpt.live/secure-payment-confirmation/authentication-cannot-bypass-spc.https.html\"><small>(live test)</small></a> <a class=\"wpt-source\" href=\"https://github.com/web-platform-tests/wpt/blob/master/secure-payment-confirmation/authentication-cannot-bypass-spc.https.html\"><small>(source)</small></a>\n        </li></ul>\n       </details>"
+          "html": "<p>If not in a \"<a data-link-type=\"dfn\" href=\"https://w3c.github.io/secure-payment-confirmation/#secure-payment-confirmation\" id=\"ref-for-secure-payment-confirmation④\">secure-payment-confirmation</a>\" payment handler, return a\n\"<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#notallowederror\" id=\"ref-for-notallowederror①\">NotAllowedError</a></code>\" <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#idl-DOMException\" id=\"ref-for-idl-DOMException④\">DOMException</a></code>.</p>"
         },
         {
           "html": "During <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredential-discoverfromexternalsource-slot\" id=\"ref-for-dom-publickeycredential-discoverfromexternalsource-slot\">[[DiscoverFromExternalSource]](origin, options, sameOriginWithAncestors)</a></code>:",
@@ -213,7 +213,7 @@
             }
           ],
           "ignored": [
-            "In step 9, instead of creating a CollectedClientData, instead create a CollectedClientPaymentData with: type set to \"payment.get\" payment set to a new CollectedClientAdditionalPaymentData whose fields are: rpId extension_inputs[\"rpId\"] topOrigin extension_inputs[\"topOrigin\"] payeeName extension_inputs[\"payeeName\"] if it is present, otherwise omitted. payeeOrigin extension_inputs[\"payeeOrigin\"] if it is present, otherwise omitted. total extension_inputs[\"total\"] instrument extension_inputs[\"instrument\"] All other fields set as per the original step 9. Tests authentication-accepted.https.html (live test) (source)"
+            "In step 9, instead of creating a CollectedClientData, instead create a CollectedClientPaymentData with: type set to \"payment.get\" payment set to a new CollectedClientAdditionalPaymentData whose fields are: rpId extension_inputs[\"rpId\"] topOrigin extension_inputs[\"topOrigin\"] payeeName extension_inputs[\"payeeName\"] if it is present, otherwise omitted. payeeOrigin extension_inputs[\"payeeOrigin\"] if it is present, otherwise omitted. total extension_inputs[\"total\"] instrument extension_inputs[\"instrument\"] All other fields set as per the original step 9."
           ]
         }
       ]

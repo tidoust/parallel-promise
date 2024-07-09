@@ -182,7 +182,7 @@
               "html": "<p id=\"section-5.6-9.3.2.1.1\">Consume the characters of the unparsed-attributes up to, but not\nincluding, the first %x3B (\";\") character.<a href=\"https://httpwg.org/http-extensions/draft-ietf-httpbis-rfc6265bis.html#section-5.6-9.3.2.1.1\" class=\"pilcrow\">¶</a></p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "Otherwise:<a href=\"https://httpwg.org/http-extensions/draft-ietf-httpbis-rfc6265bis.html#section-5.6-9.3.3\" class=\"pilcrow\">¶</a>",
               "rationale": "consume",
@@ -299,7 +299,7 @@
               "html": "<p id=\"section-5.6.4-2.1.2.1.1\">Let cookie-path be the default-path.<a href=\"https://httpwg.org/http-extensions/draft-ietf-httpbis-rfc6265bis.html#section-5.6.4-2.1.2.1.1\" class=\"pilcrow\">¶</a></p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "Otherwise:<a href=\"https://httpwg.org/http-extensions/draft-ietf-httpbis-rfc6265bis.html#section-5.6.4-2.1.3\" class=\"pilcrow\">¶</a>",
               "rationale": "let",
@@ -367,7 +367,7 @@
               "html": "<p id=\"section-5.7-3.6.2.2.1\">Set the cookie's expiry-time to attribute-value of the last\nattribute in the cookie-attribute-list with an attribute-name of\n\"Max-Age\".<a href=\"https://httpwg.org/http-extensions/draft-ietf-httpbis-rfc6265bis.html#section-5.7-3.6.2.2.1\" class=\"pilcrow\">¶</a></p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "Otherwise, if the cookie-attribute-list contains an attribute with an\nattribute-name of \"Expires\" (and does not contain an attribute with an\nattribute-name of \"Max-Age\"):<a href=\"https://httpwg.org/http-extensions/draft-ietf-httpbis-rfc6265bis.html#section-5.7-3.6.3\" class=\"pilcrow\">¶</a>",
               "rationale": "set",
@@ -402,7 +402,7 @@
               "html": "<p id=\"section-5.7-3.7.2.1.1\">Let the domain-attribute be the attribute-value of the last\nattribute in the cookie-attribute-list with both an\nattribute-name of \"Domain\" and an attribute-value whose\nlength is no more than 1024 octets. (Note that a leading %x2E\n(\".\"), if present, is ignored even though that character is not\npermitted.)<a href=\"https://httpwg.org/http-extensions/draft-ietf-httpbis-rfc6265bis.html#section-5.7-3.7.2.1.1\" class=\"pilcrow\">¶</a></p>"
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "Otherwise:<a href=\"https://httpwg.org/http-extensions/draft-ietf-httpbis-rfc6265bis.html#section-5.7-3.7.3\" class=\"pilcrow\">¶</a>",
               "rationale": "let",
@@ -429,7 +429,7 @@
                   "html": "<p id=\"section-5.7-3.9.2.1.2.1.1\">Let the domain-attribute be the empty string.<a href=\"https://httpwg.org/http-extensions/draft-ietf-httpbis-rfc6265bis.html#section-5.7-3.9.2.1.2.1.1\" class=\"pilcrow\">¶</a></p>"
                 }
               ],
-              "additionalAlgorithms": [
+              "additional": [
                 {
                   "html": "Otherwise:<a href=\"https://httpwg.org/http-extensions/draft-ietf-httpbis-rfc6265bis.html#section-5.7-3.9.2.1.3\" class=\"pilcrow\">¶</a>",
                   "rationale": "abort",
@@ -455,7 +455,7 @@
                   "html": "<p id=\"section-5.7-3.10.2.1.2.1.1\">Abort these steps and ignore the cookie entirely.<a href=\"https://httpwg.org/http-extensions/draft-ietf-httpbis-rfc6265bis.html#section-5.7-3.10.2.1.2.1.1\" class=\"pilcrow\">¶</a></p>"
                 }
               ],
-              "additionalAlgorithms": [
+              "additional": [
                 {
                   "html": "Otherwise:<a href=\"https://httpwg.org/http-extensions/draft-ietf-httpbis-rfc6265bis.html#section-5.7-3.10.2.1.3\" class=\"pilcrow\">¶</a>",
                   "rationale": "set",
@@ -471,7 +471,7 @@
               ]
             }
           ],
-          "additionalAlgorithms": [
+          "additional": [
             {
               "html": "Otherwise:<a href=\"https://httpwg.org/http-extensions/draft-ietf-httpbis-rfc6265bis.html#section-5.7-3.10.3\" class=\"pilcrow\">¶</a>",
               "rationale": "set",

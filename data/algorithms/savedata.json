@@ -7,7 +7,7 @@
     {
       "name": "steps to update the user preference",
       "href": "https://wicg.github.io/savedata/#dfn-steps-to-update-the-user-preference",
-      "html": "When the user's <a href=\"https://wicg.github.io/savedata/#dfn-savedata\" class=\"internalDFN\" data-link-type=\"dfn\">saveData</a> preference changes, the user agent <em class=\"rfc2119\" title=\"MUST\">MUST<!---0.910285%--></em> run the <dfn data-dfn-type=\"dfn\" id=\"dfn-steps-to-update-the-user-preference\">steps to update the user preference</dfn>:",
+      "html": "When the user's <a href=\"https://wicg.github.io/savedata/#dfn-savedata\" class=\"internalDFN\" data-link-type=\"dfn\">saveData</a> preference changes, the user agent <em class=\"rfc2119\" title=\"MUST\">MUST</em> run the <dfn data-dfn-type=\"dfn\" id=\"dfn-steps-to-update-the-user-preference\">steps to update the user preference</dfn>:",
       "rationale": "let",
       "steps": [
         {
