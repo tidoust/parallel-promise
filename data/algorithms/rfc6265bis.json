@@ -6,7 +6,7 @@
   "algorithms": [
     {
       "html": "The user agent MUST use an algorithm equivalent to the following algorithm to\nparse a cookie-date. Note that the various boolean flags defined as a part\nof the algorithm (i.e., found-time, found-day-of-month, found-month,\nfound-year) are initially \"not set\".<a href=\"https://httpwg.org/http-extensions/draft-ietf-httpbis-rfc6265bis.html#section-5.1.1-1\" class=\"pilcrow\">¶</a>",
-      "rationale": "abort these steps",
+      "rationale": "process",
       "steps": [
         {
           "html": "<p id=\"section-5.1.1-2.1.1\">Using the grammar below, divide the cookie-date into date-tokens.<a href=\"https://httpwg.org/http-extensions/draft-ietf-httpbis-rfc6265bis.html#section-5.1.1-2.1.1\" class=\"pilcrow\">¶</a></p>\n<div class=\"lang-abnf sourcecode\" id=\"section-5.1.1-2.1.2\">\n<pre>cookie-date     = *delimiter date-token-list *delimiter\ndate-token-list = date-token *( 1*delimiter date-token )\ndate-token      = 1*non-delimiter\n\ndelimiter       = %x09 / %x20-2F / %x3B-40 / %x5B-60 / %x7B-7E\nnon-delimiter   = %x00-08 / %x0A-1F / DIGIT / \":\" / ALPHA\n                  / %x7F-FF\nnon-digit       = %x00-2F / %x3A-FF\n\nday-of-month    = 1*2DIGIT [ non-digit *OCTET ]\nmonth           = ( \"jan\" / \"feb\" / \"mar\" / \"apr\" /\n                    \"may\" / \"jun\" / \"jul\" / \"aug\" /\n                    \"sep\" / \"oct\" / \"nov\" / \"dec\" ) *OCTET\nyear            = 2*4DIGIT [ non-digit *OCTET ]\ntime            = hms-time [ non-digit *OCTET ]\nhms-time        = time-field \":\" time-field \":\" time-field\ntime-field      = 1*2DIGIT\n</pre><a href=\"https://httpwg.org/http-extensions/draft-ietf-httpbis-rfc6265bis.html#section-5.1.1-2.1.2\" class=\"pilcrow\">¶</a>\n</div>"
@@ -339,7 +339,7 @@
     },
     {
       "html": "When the user agent \"receives a cookie\" from a request-uri with name\ncookie-name, value cookie-value, and attributes cookie-attribute-list, the\nuser agent MUST process the cookie as follows:<a href=\"https://httpwg.org/http-extensions/draft-ietf-httpbis-rfc6265bis.html#section-5.7-2\" class=\"pilcrow\">¶</a>",
-      "rationale": "abort these steps",
+      "rationale": "if",
       "steps": [
         {
           "html": "<p id=\"section-5.7-3.1.1\">A user agent MAY ignore a received cookie in its entirety. See\n<a href=\"https://httpwg.org/http-extensions/draft-ietf-httpbis-rfc6265bis.html#ignoring-cookies\" class=\"auto internal xref\">Section 5.3</a>.<a href=\"https://httpwg.org/http-extensions/draft-ietf-httpbis-rfc6265bis.html#section-5.7-3.1.1\" class=\"pilcrow\">¶</a></p>"

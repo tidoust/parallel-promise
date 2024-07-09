@@ -98,6 +98,21 @@
       ]
     },
     {
+      "html": "<a data-link-type=\"biblio\" href=\"https://w3c.github.io/IFT/Overview.html#biblio-woff2\" title=\"WOFF File Format 2.0\">[WOFF2]</a> is a commonly used to encode fonts for transfer on the web. Incremental fonts can be encoded with WOFF2 as long as special care\nis taken. If an incremental font will be encoded by WOFF2 for transfer:",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "<p>The incremental font should not make use of <a href=\"https://w3c.github.io/IFT/Overview.html#brotli\">§ 6.2 Brotli Patch</a> patches. The WOFF2 format does not guarantee the ordering of tables in\n the decoded font. <a href=\"https://w3c.github.io/IFT/Overview.html#brotli\">§ 6.2 Brotli Patch</a> patches are relative to a specific fixed set of bytes and thus cannot be used if the decoded font\n has unpredictable decoded bytes. <a href=\"https://w3c.github.io/IFT/Overview.html#per-table-brotli\">§ 6.3 Per Table Brotli</a> patches do not depend on a specific table ordering and may be used.</p>"
+        },
+        {
+          "html": "<p>If the WOFF2 encoding will include a transformed glyf and loca table (<a href=\"https://www.w3.org/TR/WOFF2/#glyf_table_format\"><cite>WOFF 2.0</cite> § 5.1 Transformed glyf table format</a>) then, the incremental\n font should not contain <a href=\"https://w3c.github.io/IFT/Overview.html#per-table-brotli\">§ 6.3 Per Table Brotli</a> patches which modify either the glyf or loca table. The WOFF2 format does not\n guarantee the specific bytes that result from decoding a transformed glyf and loca table, so as with #1 brotli patches cannot\n be used. <a href=\"https://w3c.github.io/IFT/Overview.html#glyph-keyed\">§ 6.4 Glyph Keyed</a> patches may be used in conjunction with a transformed glyf and loca table.</p>"
+        },
+        {
+          "html": "<p>When utilizing a WOFF2 encoded IFT font, the client must first fully decode the WOFF2 font before <a href=\"https://w3c.github.io/IFT/Overview.html#extending-font-subset\">§ 4 Extending a Font Subset</a>.</p>"
+        }
+      ]
+    },
+    {
       "html": "The algorithm:",
       "rationale": "check",
       "steps": [
@@ -286,6 +301,24 @@
         },
         {
           "html": "<p>If the contents of any <a href=\"https://docs.microsoft.com/en-us/typography/opentype/spec/otff#table-directory\">font table</a> was modified during the previous steps then,\nfor each modified table: update the checksums in the <a href=\"https://docs.microsoft.com/en-us/typography/opentype/spec/otff#table-directory\">fonts table directory</a> to match the table’s\nnew contents.</p>"
+        }
+      ]
+    },
+    {
+      "html": "For fonts that are in-between, or in cases where fine-grained segmentation of glyph data is desired but segmentation of data\nin other tables is still needed, it can be desirable to mix the <a href=\"https://w3c.github.io/IFT/Overview.html#per-table-brotli\">§ 6.3 Per Table Brotli</a> and <a href=\"https://w3c.github.io/IFT/Overview.html#glyph-keyed\">§ 6.4 Glyph Keyed</a> patch types in this\nway:",
+      "rationale": "use",
+      "steps": [
+        {
+          "html": "<p>Keep all brotli patch entries in one mapping table and all glyph keyed entries in the other mapping table.</p>"
+        },
+        {
+          "html": "<p>Use per-table brotli patches to update all tables except for the tables touched by the glyph keyed patches (outline,\nvariation deltas, and the glyph keyed patch mapping table). These patches should use a small number of large segments to keep\nthe patch count reasonable.</p>"
+        },
+        {
+          "html": "<p>Because glyph keyed patches reference the specific glyph IDs that are updated, the per-table brotli patches must not change\nthe glyph to glyph ID assignments used in the original font; otherwise, the glyph IDs listed in the glyph keyed patches may\nbecome incorrect. In font subsetters this is often available as an option called \"retain glyph IDs\".</p>"
+        },
+        {
+          "html": "<p>Lastly, use glyph keyed patches to update the remaining tables, here much smaller fine-grained segments can be utilized without\nrequiring too many patches.</p>"
         }
       ]
     },

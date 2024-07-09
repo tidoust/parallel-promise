@@ -174,9 +174,18 @@
               "html": "<p>Append U+003D (=) to <var>serialization</var>. </p>"
             },
             {
-              "html": "<p>If <var>value</var> does not solely contain <a data-link-type=\"dfn\" href=\"https://mimesniff.spec.whatwg.org/#http-token-code-point\" id=\"ref-for-http-token-code-point④\">HTTP token code points</a> or <var>value</var> is the empty string, then: </p>\n       <ol>\n        <li>\n         <p>Precede each occurrence of U+0022 (\") or U+005C (\\) in <var>value</var> with U+005C (\\). </p>\n        </li><li>\n         <p>Prepend U+0022 (\") to <var>value</var>. </p>\n        </li><li>\n         <p>Append U+0022 (\") to <var>value</var>. </p>\n       </li></ol>",
-              "ignored": [
-                "Precede each occurrence of U+0022 (\") or U+005C (\\) in value with U+005C (\\). Prepend U+0022 (\") to value. Append U+0022 (\") to value."
+              "html": "If <var>value</var> does not solely contain <a data-link-type=\"dfn\" href=\"https://mimesniff.spec.whatwg.org/#http-token-code-point\" id=\"ref-for-http-token-code-point④\">HTTP token code points</a> or <var>value</var> is the empty string, then:",
+              "rationale": "prepend",
+              "steps": [
+                {
+                  "html": "<p>Precede each occurrence of U+0022 (\") or U+005C (\\) in <var>value</var> with U+005C (\\). </p>"
+                },
+                {
+                  "html": "<p>Prepend U+0022 (\") to <var>value</var>. </p>"
+                },
+                {
+                  "html": "<p>Append U+0022 (\") to <var>value</var>. </p>"
+                }
               ]
             },
             {

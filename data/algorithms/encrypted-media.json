@@ -618,7 +618,7 @@
         },
         {
           "html": "then run the following steps:",
-          "rationale": "run the following steps",
+          "rationale": "if",
           "steps": [
             {
               "html": "<p>\n                      Request user consent to use <var>accumulated configuration</var> in the\n                      <var>origin</var> and wait for the user response.\n                    </p>\n                    <p>\n                      The consent <em class=\"rfc2119\">MUST</em> include consent to use a <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-distinctive-identifier-s\" class=\"internalDFN\" id=\"ref-for-dfn-distinctive-identifier-s-10\">Distinctive Identifier(s)</a>\n                      and/or <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-distinctive-permanent-identifier-s\" class=\"internalDFN\" id=\"ref-for-dfn-distinctive-permanent-identifier-s-17\">Distinctive Permanent Identifier(s)</a> as appropriate if\n                      <var>accumulated configuration</var>'s\n                      <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-distinctiveidentifier\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-distinctiveidentifier-18\"><code>distinctiveIdentifier</code></a> member is\n                      \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysrequirement-required\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysrequirement-required-12\"><code>required</code></a>\".\n                    </p>"
@@ -1791,7 +1791,7 @@
             },
             {
               "html": "If <var>mediaKeys</var> is not null, run the following steps:",
-              "rationale": "reject",
+              "rationale": "if",
               "steps": [
                 {
                   "html": "<p>\n                          Associate the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-cdm\" class=\"internalDFN\" id=\"ref-for-dfn-cdm-82\">CDM</a> instance represented by <var>mediaKeys</var> with\n                          the media element for decrypting <a data-link-type=\"dfn|abstract-op\" data-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/media.html#media-data\">media data</a>.\n                        </p>"

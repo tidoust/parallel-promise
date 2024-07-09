@@ -17,15 +17,27 @@
           "html": "Let <var>new-effective-type</var> be the <a href=\"https://wicg.github.io/netinfo/#dfn-effective-connection-type\" class=\"internalDFN\" data-link-type=\"dfn\">effective connection type</a> determined by current <a href=\"https://wicg.github.io/netinfo/#dom-networkinformation-downlink\" class=\"internalDFN\" data-link-type=\"idl\"><code>downlink</code></a> and <a href=\"https://wicg.github.io/netinfo/#dom-networkinformation-rtt\" class=\"internalDFN\" data-link-type=\"idl\"><code>rtt</code></a> values."
         },
         {
-          "html": "Let <var>new-downlink</var> be the result of:<ol>\n<li>Rounding <a href=\"https://wicg.github.io/netinfo/#dom-networkinformation-downlink\" class=\"internalDFN\" data-link-type=\"idl\"><code>downlink</code></a> value to nearest multiple of 25 kilobits per second.</li>\n<li>If the resulting value is 10% greater or smaller than the value of <code>connection.downlink</code>, then set <var>new-dowlink</var> to resulting value. Otherwise, set <var>new-downlink</var> to the value of <code>connection.downlink</code>.</li>\n</ol>",
-          "ignored": [
-            "Rounding downlink value to nearest multiple of 25 kilobits per second. If the resulting value is 10% greater or smaller than the value of connection.downlink, then set new-dowlink to resulting value. Otherwise, set new-downlink to the value of connection.downlink."
+          "html": "Let <var>new-downlink</var> be the result of:",
+          "rationale": "if",
+          "steps": [
+            {
+              "html": "Rounding <a href=\"https://wicg.github.io/netinfo/#dom-networkinformation-downlink\" class=\"internalDFN\" data-link-type=\"idl\"><code>downlink</code></a> value to nearest multiple of 25 kilobits per second."
+            },
+            {
+              "html": "If the resulting value is 10% greater or smaller than the value of <code>connection.downlink</code>, then set <var>new-dowlink</var> to resulting value. Otherwise, set <var>new-downlink</var> to the value of <code>connection.downlink</code>."
+            }
           ]
         },
         {
-          "html": "Let <var>new-rtt</var> be the result of:<ol>\n<li>Rounding <a href=\"https://wicg.github.io/netinfo/#dom-networkinformation-rtt\" class=\"internalDFN\" data-link-type=\"idl\"><code>rtt</code></a> value to nearest multiple of 25 milliseconds.</li>\n<li>If the resulting value is 10% greater or smaller than the value of <code>connection.rtt</code>, then set <var>new-rtt</var> to resulting value. Otherwise, set <var>new-rtt</var> to the value of <code>connection.rtt</code>.</li>\n</ol>",
-          "ignored": [
-            "Rounding rtt value to nearest multiple of 25 milliseconds. If the resulting value is 10% greater or smaller than the value of connection.rtt, then set new-rtt to resulting value. Otherwise, set new-rtt to the value of connection.rtt."
+          "html": "Let <var>new-rtt</var> be the result of:",
+          "rationale": "if",
+          "steps": [
+            {
+              "html": "Rounding <a href=\"https://wicg.github.io/netinfo/#dom-networkinformation-rtt\" class=\"internalDFN\" data-link-type=\"idl\"><code>rtt</code></a> value to nearest multiple of 25 milliseconds."
+            },
+            {
+              "html": "If the resulting value is 10% greater or smaller than the value of <code>connection.rtt</code>, then set <var>new-rtt</var> to resulting value. Otherwise, set <var>new-rtt</var> to the value of <code>connection.rtt</code>."
+            }
           ]
         },
         {

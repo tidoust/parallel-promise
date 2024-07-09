@@ -117,6 +117,58 @@
       ]
     },
     {
+      "name": "WebVTT cue ruby span",
+      "href": "https://w3c.github.io/webvtt/#webvtt-cue-ruby-span",
+      "html": "A <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"webvtt-cue-ruby-span\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">WebVTT cue ruby span</dfn><span style=\"position: relative; height: 0px;\"></span> consists of the following components, in the order given:",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "A <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-span-start-tag\" id=\"ref-for-webvtt-cue-span-start-tag④\">WebVTT cue span start tag</a> \"<code>ruby</code>\" that disallows an annotation."
+        },
+        {
+          "html": "One or more occurrences of the following group of components, in the order given: \n     <ol>\n      <li><a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-internal-text\" id=\"ref-for-webvtt-cue-internal-text④\">WebVTT cue internal text</a>, representing the ruby base.\n      </li><li>A <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-span-start-tag\" id=\"ref-for-webvtt-cue-span-start-tag⑤\">WebVTT cue span start tag</a> \"<code>rt</code>\" that disallows an annotation.\n      </li><li>A <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"webvtt-cue-ruby-text-span\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">WebVTT cue ruby text span</dfn><span style=\"position: relative; height: 0px;\"></span>: <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-internal-text\" id=\"ref-for-webvtt-cue-internal-text⑤\">WebVTT cue internal text</a>, representing the\n   ruby text component of the ruby annotation.\n      </li><li>A <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-span-end-tag\" id=\"ref-for-webvtt-cue-span-end-tag④\">WebVTT cue span end tag</a> \"<code>rt</code>\". If this is the last occurrence of this\n   group of components in the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-ruby-span\" id=\"ref-for-webvtt-cue-ruby-span①\">WebVTT cue ruby span</a>, then this last end tag string may be\n   omitted.\n     </li></ol>",
+          "ignored": [
+            "WebVTT cue internal text, representing the ruby base. A WebVTT cue span start tag \"rt\" that disallows an annotation. A WebVTT cue ruby text span: WebVTT cue internal text, representing the ruby text component of the ruby annotation. A WebVTT cue span end tag \"rt\". If this is the last occurrence of this group of components in the WebVTT cue ruby span, then this last end tag string may be omitted."
+          ]
+        },
+        {
+          "html": "If the last end tag string was not omitted: Optionally, a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-line-terminator\" id=\"ref-for-webvtt-line-terminator②②\">WebVTT line terminator</a>."
+        },
+        {
+          "html": "If the last end tag string was not omitted: Zero or more U+0020 SPACE characters or U+0009\n CHARACTER TABULATION (tab) characters, each optionally followed by a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-line-terminator\" id=\"ref-for-webvtt-line-terminator②③\">WebVTT line\n terminator</a>."
+        },
+        {
+          "html": "A <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-span-end-tag\" id=\"ref-for-webvtt-cue-span-end-tag⑤\">WebVTT cue span end tag</a> \"<code>ruby</code>\"."
+        }
+      ]
+    },
+    {
+      "name": "WebVTT cue span start tag",
+      "href": "https://w3c.github.io/webvtt/#webvtt-cue-span-start-tag",
+      "html": "A <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"webvtt-cue-span-start-tag\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">WebVTT cue span start tag</dfn><span style=\"position: relative; height: 0px;\"></span> has a <var>tag name</var> and either \nrequires or disallows an annotation, and consists of the following components, in the order\ngiven:",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "A U+003C LESS-THAN SIGN character (&lt;)."
+        },
+        {
+          "html": "The <var>tag name</var>."
+        },
+        {
+          "html": "Zero or more occurrences of the following sequence: \n     <ol>\n      <li>U+002E FULL STOP character (.)\n      </li><li>One or more characters other than U+0009 CHARACTER TABULATION (tab) characters, U+000A LINE\n   FEED (LF) characters, U+000D CARRIAGE RETURN (CR) characters, U+0020 SPACE characters, U+0026\n   AMPERSAND characters (&amp;), U+003C LESS-THAN SIGN characters (&lt;), U+003E GREATER-THAN SIGN\n   characters (&gt;), and U+002E FULL STOP characters (.), representing a class that describes the cue\n   span’s significance.\n     </li></ol>",
+          "ignored": [
+            "U+002E FULL STOP character (.) One or more characters other than U+0009 CHARACTER TABULATION (tab) characters, U+000A LINE FEED (LF) characters, U+000D CARRIAGE RETURN (CR) characters, U+0020 SPACE characters, U+0026 AMPERSAND characters (&), U+003C LESS-THAN SIGN characters (<), U+003E GREATER-THAN SIGN characters (>), and U+002E FULL STOP characters (.), representing a class that describes the cue span’s significance."
+          ]
+        },
+        {
+          "html": "<p>If the start tag requires an annotation: a U+0020 SPACE character or a U+0009 CHARACTER\n  TABULATION (tab) character, followed by one or more of the following components, the concatenation\n  of their representations having a value that contains at least one character other than U+0020\n  SPACE and U+0009 CHARACTER TABULATION (tab) characters:</p>\n     <ul>\n      <li><a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-span-start-tag-annotation-text\" id=\"ref-for-webvtt-cue-span-start-tag-annotation-text\">WebVTT cue span start tag annotation text</a>, representing the text of the\n   annotation.\n      </li><li>An <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/syntax.html#syntax-charref\" id=\"ref-for-syntax-charref①\">HTML character reference</a>, representing one or two Unicode\n   code points, as defined in HTML, in the text of the annotation. <a data-link-type=\"biblio\" href=\"https://w3c.github.io/webvtt/#biblio-html\" title=\"HTML Standard\">[HTML]</a>\n     </li></ul>"
+        },
+        {
+          "html": "A U+003E GREATER-THAN SIGN character (&gt;)."
+        }
+      ]
+    },
+    {
       "name": "WebVTT parser algorithm",
       "html": "The <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"webvtt-parser-algorithm\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">WebVTT parser algorithm</dfn><span style=\"position: relative; height: 0px;\"></span> is as follows:",
       "rationale": ".algorithm",
@@ -321,9 +373,33 @@
                       ]
                     },
                     {
-                      "html": "<p>Otherwise, if <var>seen cue</var> is false and <var>buffer</var> starts with the substring\n        \"<code>REGION</code>\" (U+0052 LATIN CAPITAL LETTER R, U+0045 LATIN CAPITAL LETTER E, U+0047\n        LATIN CAPITAL LETTER G, U+0049 LATIN CAPITAL LETTER I, U+004F LATIN CAPITAL LETTER O, U+004E\n        LATIN CAPITAL LETTER N), and the remaining characters in <var>buffer</var> (if any) are all <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#ascii-whitespace\" id=\"ref-for-ascii-whitespace②\">ASCII\n        whitespace</a>, then run these substeps:</p>\n           <ol>\n            <li>\n             <p><i>Region creation</i>: Let <var>region</var> be a new <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region\" id=\"ref-for-webvtt-region⑧\">WebVTT region</a>.</p>\n            </li><li>\n             <p>Let <var>region</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region-identifier\" id=\"ref-for-webvtt-region-identifier①\">identifier</a> be the empty\n         string.</p>\n            </li><li>\n             <p>Let <var>region</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region-width\" id=\"ref-for-webvtt-region-width\">width</a> be 100.</p>\n            </li><li>\n             <p>Let <var>region</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region-lines\" id=\"ref-for-webvtt-region-lines\">lines</a> be 3.</p>\n            </li><li>\n             <p>Let <var>region</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region-anchor\" id=\"ref-for-webvtt-region-anchor\">anchor point</a> be (0,100).</p>\n            </li><li>\n             <p>Let <var>region</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region-viewport-anchor\" id=\"ref-for-webvtt-region-viewport-anchor\">viewport anchor point</a> be\n         (0,100).</p>\n            </li><li>\n             <p>Let <var>region</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region-scroll\" id=\"ref-for-webvtt-region-scroll\">scroll value</a> be <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region-scroll-none\" id=\"ref-for-webvtt-region-scroll-none\">none</a>.</p>\n            </li><li>\n             <p>Let <var>buffer</var> be the empty string.</p>\n           </li></ol>",
-                      "ignored": [
-                        "Region creation: Let region be a new WebVTT region. Let region’s identifier be the empty string. Let region’s width be 100. Let region’s lines be 3. Let region’s anchor point be (0,100). Let region’s viewport anchor point be (0,100). Let region’s scroll value be none. Let buffer be the empty string."
+                      "html": "Otherwise, if <var>seen cue</var> is false and <var>buffer</var> starts with the substring\n        \"<code>REGION</code>\" (U+0052 LATIN CAPITAL LETTER R, U+0045 LATIN CAPITAL LETTER E, U+0047\n        LATIN CAPITAL LETTER G, U+0049 LATIN CAPITAL LETTER I, U+004F LATIN CAPITAL LETTER O, U+004E\n        LATIN CAPITAL LETTER N), and the remaining characters in <var>buffer</var> (if any) are all <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#ascii-whitespace\" id=\"ref-for-ascii-whitespace②\">ASCII\n        whitespace</a>, then run these substeps:",
+                      "rationale": "let",
+                      "steps": [
+                        {
+                          "html": "<p><i>Region creation</i>: Let <var>region</var> be a new <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region\" id=\"ref-for-webvtt-region⑧\">WebVTT region</a>.</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>region</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region-identifier\" id=\"ref-for-webvtt-region-identifier①\">identifier</a> be the empty\n         string.</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>region</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region-width\" id=\"ref-for-webvtt-region-width\">width</a> be 100.</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>region</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region-lines\" id=\"ref-for-webvtt-region-lines\">lines</a> be 3.</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>region</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region-anchor\" id=\"ref-for-webvtt-region-anchor\">anchor point</a> be (0,100).</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>region</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region-viewport-anchor\" id=\"ref-for-webvtt-region-viewport-anchor\">viewport anchor point</a> be\n         (0,100).</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>region</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region-scroll\" id=\"ref-for-webvtt-region-scroll\">scroll value</a> be <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region-scroll-none\" id=\"ref-for-webvtt-region-scroll-none\">none</a>.</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>buffer</var> be the empty string.</p>"
+                        }
                       ]
                     }
                   ]
@@ -1305,9 +1381,72 @@
                   "case": "If cue’s WebVTT cue snap-to-lines flag is true",
                   "steps": [
                     {
-                      "html": "<p>Many of the steps in this algorithm vary according to the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-writing-direction\" id=\"ref-for-webvtt-cue-writing-direction②⑥\">WebVTT cue writing\n    direction</a>. Steps labeled \"<strong>Horizontal</strong>\" must be followed only when the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-writing-direction\" id=\"ref-for-webvtt-cue-writing-direction②⑦\">WebVTT cue writing direction</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-horizontal-writing-direction\" id=\"ref-for-webvtt-cue-horizontal-writing-direction①⑨\">horizontal</a>, steps labeled \"<strong>Vertical</strong>\" must be followed when the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-writing-direction\" id=\"ref-for-webvtt-cue-writing-direction②⑧\">WebVTT cue writing direction</a> is either <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-vertical-growing-left-writing-direction\" id=\"ref-for-webvtt-cue-vertical-growing-left-writing-direction⑧\">vertical growing left</a> or <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-vertical-growing-right-writing-direction\" id=\"ref-for-webvtt-cue-vertical-growing-right-writing-direction⑧\">vertical growing right</a>, steps labeled \"<strong>Vertical Growing Left</strong>\"\n    must be followed only when the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-writing-direction\" id=\"ref-for-webvtt-cue-writing-direction②⑨\">WebVTT cue writing direction</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-vertical-growing-left-writing-direction\" id=\"ref-for-webvtt-cue-vertical-growing-left-writing-direction⑨\">vertical growing left</a>, and steps labeled \"<strong>Vertical\n    Growing Right</strong>\" must be followed only when the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-writing-direction\" id=\"ref-for-webvtt-cue-writing-direction③⓪\">WebVTT cue writing direction</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-vertical-growing-right-writing-direction\" id=\"ref-for-webvtt-cue-vertical-growing-right-writing-direction⑨\">vertical growing right</a>.</p>\n       <ol>\n        <li>\n         <p><strong>Horizontal</strong>: Let <var>full dimension</var> be the height of <var>video</var>’s rendering\n      area.</p>\n         <p><strong>Vertical</strong>: Let <var>full dimension</var> be the width of <var>video</var>’s rendering\n      area.</p>\n        </li><li>\n         <p><strong>Horizontal</strong>: Let <var>step</var> be the height of the first line box in <var>boxes</var>.</p>\n         <p><strong>Vertical</strong>: Let <var>step</var> be the width of the first line box in <var>boxes</var>.</p>\n        </li><li>\n         <p>If <var>step</var> is zero, then jump to the step labeled <i>done positioning</i> below.</p>\n        </li><li>\n         <p>Let <var>line</var> be <var>cue</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-line\" id=\"ref-for-cue-computed-line③\">computed line</a>.</p>\n        </li><li>\n         <p>Round <var>line</var> to an integer by adding 0.5 and then flooring it.</p>\n        </li><li>\n         <p><strong>Vertical Growing Left</strong>: Add one to <var>line</var> then negate it.</p>\n        </li><li>\n         <p>Let <var>position</var> be the result of multiplying <var>step</var> and <var>line</var>.</p>\n        </li><li>\n         <p><strong>Vertical Growing Left</strong>: Decrease <var>position</var> by the width of the bounding\n     box of the boxes in <var>boxes</var>, then increase <var>position</var> by <var>step</var>.</p>\n        </li><li>\n         <p>If <var>line</var> is less than zero then increase <var>position</var> by <var>max dimension</var>, and negate <var>step</var>.</p>\n        </li><li>\n         <p><strong>Horizontal</strong>: Move all the boxes in <var>boxes</var> down by the distance given by <var>position</var>.</p>\n         <p><strong>Vertical</strong>: Move all the boxes in <var>boxes</var> right by the distance given by <var>position</var>.</p>\n        </li><li>\n         <p>Remember the position of all the boxes in <var>boxes</var> as their <var>specified\n     position</var>.</p>\n        </li><li>\n         <p>Let <var>title area</var> be a box that covers all of the <var>video</var>’s rendering area.</p>\n        </li><li>\n         <p><i>Step loop</i>: If none of the boxes in <var>boxes</var> would overlap any of the boxes in <var>output</var>, and all of the boxes in <var>boxes</var> are entirely within the <var>title area</var> box, then jump\n     to the step labeled <i>done positioning</i> below.</p>\n        </li><li>\n         <p><strong>Horizontal</strong>: If <var>step</var> is negative and the top of the first line box in <var>boxes</var> is now above the top of the <var>title area</var>, or if <var>step</var> is positive and the bottom of\n      the first line box in <var>boxes</var> is now below the bottom of the <var>title area</var>, jump to the step\n      labeled <i>switch direction</i>.</p>\n         <p><strong>Vertical</strong>: If <var>step</var> is negative and the left edge of the first line box in <var>boxes</var> is now to the left of the left edge of the <var>title area</var>, or if <var>step</var> is positive and\n      the right edge of the first line box in <var>boxes</var> is now to the right of the right edge of the <var>title area</var>, jump to the step labeled <i>switch direction</i>.</p>\n        </li><li>\n         <p><strong>Horizontal</strong>: Move all the boxes in <var>boxes</var> down by the distance given by <var>step</var>. (If <var>step</var> is negative, then this will actually result in an upwards movement of the\n      boxes in absolute terms.)</p>\n         <p><strong>Vertical</strong>: Move all the boxes in <var>boxes</var> right by the distance given by <var>step</var>. (If <var>step</var> is negative, then this will actually result in a leftwards movement of the\n      boxes in absolute terms.)</p>\n        </li><li>\n         <p>Jump back to the step labeled <i>step loop</i>.</p>\n        </li><li>\n         <p><i>Switch direction</i>: If <var>switched</var> is true, then remove all the boxes in <var>boxes</var>,\n     and jump to the step labeled <i>done positioning</i> below.</p>\n        </li><li>\n         <p>Otherwise, move all the boxes in <var>boxes</var> back to their <var>specified position</var> as\n     determined in the earlier step.</p>\n        </li><li>\n         <p>Negate <var>step</var>.</p>\n        </li><li>\n         <p>Set <var>switched</var> to true.</p>\n        </li><li>\n         <p>Jump back to the step labeled <i>step loop</i>.</p>\n       </li></ol>",
-                      "ignored": [
-                        "Horizontal: Let full dimension be the height of video’s rendering area. Vertical: Let full dimension be the width of video’s rendering area. Horizontal: Let step be the height of the first line box in boxes. Vertical: Let step be the width of the first line box in boxes. If step is zero, then jump to the step labeled done positioning below. Let line be cue’s computed line. Round line to an integer by adding 0.5 and then flooring it. Vertical Growing Left: Add one to line then negate it. Let position be the result of multiplying step and line. Vertical Growing Left: Decrease position by the width of the bounding box of the boxes in boxes, then increase position by step. If line is less than zero then increase position by max dimension, and negate step. Horizontal: Move all the boxes in boxes down by the distance given by position. Vertical: Move all the boxes in boxes right by the distance given by position. Remember the position of all the boxes in boxes as their specified position. Let title area be a box that covers all of the video’s rendering area. Step loop: If none of the boxes in boxes would overlap any of the boxes in output, and all of the boxes in boxes are entirely within the title area box, then jump to the step labeled done positioning below. Horizontal: If step is negative and the top of the first line box in boxes is now above the top of the title area, or if step is positive and the bottom of the first line box in boxes is now below the bottom of the title area, jump to the step labeled switch direction. Vertical: If step is negative and the left edge of the first line box in boxes is now to the left of the left edge of the title area, or if step is positive and the right edge of the first line box in boxes is now to the right of the right edge of the title area, jump to the step labeled switch direction. Horizontal: Move all the boxes in boxes down by the distance given by step. (If step is negative, then this will actually result in an upwards movement of the boxes in absolute terms.) Vertical: Move all the boxes in boxes right by the distance given by step. (If step is negative, then this will actually result in a leftwards movement of the boxes in absolute terms.) Jump back to the step labeled step loop. Switch direction: If switched is true, then remove all the boxes in boxes, and jump to the step labeled done positioning below. Otherwise, move all the boxes in boxes back to their specified position as determined in the earlier step. Negate step. Set switched to true. Jump back to the step labeled step loop."
+                      "html": "Many of the steps in this algorithm vary according to the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-writing-direction\" id=\"ref-for-webvtt-cue-writing-direction②⑥\">WebVTT cue writing\n    direction</a>. Steps labeled \"<strong>Horizontal</strong>\" must be followed only when the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-writing-direction\" id=\"ref-for-webvtt-cue-writing-direction②⑦\">WebVTT cue writing direction</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-horizontal-writing-direction\" id=\"ref-for-webvtt-cue-horizontal-writing-direction①⑨\">horizontal</a>, steps labeled \"<strong>Vertical</strong>\" must be followed when the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-writing-direction\" id=\"ref-for-webvtt-cue-writing-direction②⑧\">WebVTT cue writing direction</a> is either <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-vertical-growing-left-writing-direction\" id=\"ref-for-webvtt-cue-vertical-growing-left-writing-direction⑧\">vertical growing left</a> or <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-vertical-growing-right-writing-direction\" id=\"ref-for-webvtt-cue-vertical-growing-right-writing-direction⑧\">vertical growing right</a>, steps labeled \"<strong>Vertical Growing Left</strong>\"\n    must be followed only when the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-writing-direction\" id=\"ref-for-webvtt-cue-writing-direction②⑨\">WebVTT cue writing direction</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-vertical-growing-left-writing-direction\" id=\"ref-for-webvtt-cue-vertical-growing-left-writing-direction⑨\">vertical growing left</a>, and steps labeled \"<strong>Vertical\n    Growing Right</strong>\" must be followed only when the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-writing-direction\" id=\"ref-for-webvtt-cue-writing-direction③⓪\">WebVTT cue writing direction</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-vertical-growing-right-writing-direction\" id=\"ref-for-webvtt-cue-vertical-growing-right-writing-direction⑨\">vertical growing right</a>.",
+                      "rationale": "if",
+                      "steps": [
+                        {
+                          "html": "<p><strong>Horizontal</strong>: Let <var>full dimension</var> be the height of <var>video</var>’s rendering\n      area.</p>\n         <p><strong>Vertical</strong>: Let <var>full dimension</var> be the width of <var>video</var>’s rendering\n      area.</p>"
+                        },
+                        {
+                          "html": "<p><strong>Horizontal</strong>: Let <var>step</var> be the height of the first line box in <var>boxes</var>.</p>\n         <p><strong>Vertical</strong>: Let <var>step</var> be the width of the first line box in <var>boxes</var>.</p>"
+                        },
+                        {
+                          "html": "<p>If <var>step</var> is zero, then jump to the step labeled <i>done positioning</i> below.</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>line</var> be <var>cue</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-line\" id=\"ref-for-cue-computed-line③\">computed line</a>.</p>"
+                        },
+                        {
+                          "html": "<p>Round <var>line</var> to an integer by adding 0.5 and then flooring it.</p>"
+                        },
+                        {
+                          "html": "<p><strong>Vertical Growing Left</strong>: Add one to <var>line</var> then negate it.</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>position</var> be the result of multiplying <var>step</var> and <var>line</var>.</p>"
+                        },
+                        {
+                          "html": "<p><strong>Vertical Growing Left</strong>: Decrease <var>position</var> by the width of the bounding\n     box of the boxes in <var>boxes</var>, then increase <var>position</var> by <var>step</var>.</p>"
+                        },
+                        {
+                          "html": "<p>If <var>line</var> is less than zero then increase <var>position</var> by <var>max dimension</var>, and negate <var>step</var>.</p>"
+                        },
+                        {
+                          "html": "<p><strong>Horizontal</strong>: Move all the boxes in <var>boxes</var> down by the distance given by <var>position</var>.</p>\n         <p><strong>Vertical</strong>: Move all the boxes in <var>boxes</var> right by the distance given by <var>position</var>.</p>"
+                        },
+                        {
+                          "html": "<p>Remember the position of all the boxes in <var>boxes</var> as their <var>specified\n     position</var>.</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>title area</var> be a box that covers all of the <var>video</var>’s rendering area.</p>"
+                        },
+                        {
+                          "html": "<p><i>Step loop</i>: If none of the boxes in <var>boxes</var> would overlap any of the boxes in <var>output</var>, and all of the boxes in <var>boxes</var> are entirely within the <var>title area</var> box, then jump\n     to the step labeled <i>done positioning</i> below.</p>"
+                        },
+                        {
+                          "html": "<p><strong>Horizontal</strong>: If <var>step</var> is negative and the top of the first line box in <var>boxes</var> is now above the top of the <var>title area</var>, or if <var>step</var> is positive and the bottom of\n      the first line box in <var>boxes</var> is now below the bottom of the <var>title area</var>, jump to the step\n      labeled <i>switch direction</i>.</p>\n         <p><strong>Vertical</strong>: If <var>step</var> is negative and the left edge of the first line box in <var>boxes</var> is now to the left of the left edge of the <var>title area</var>, or if <var>step</var> is positive and\n      the right edge of the first line box in <var>boxes</var> is now to the right of the right edge of the <var>title area</var>, jump to the step labeled <i>switch direction</i>.</p>"
+                        },
+                        {
+                          "html": "<p><strong>Horizontal</strong>: Move all the boxes in <var>boxes</var> down by the distance given by <var>step</var>. (If <var>step</var> is negative, then this will actually result in an upwards movement of the\n      boxes in absolute terms.)</p>\n         <p><strong>Vertical</strong>: Move all the boxes in <var>boxes</var> right by the distance given by <var>step</var>. (If <var>step</var> is negative, then this will actually result in a leftwards movement of the\n      boxes in absolute terms.)</p>"
+                        },
+                        {
+                          "html": "<p>Jump back to the step labeled <i>step loop</i>.</p>"
+                        },
+                        {
+                          "html": "<p><i>Switch direction</i>: If <var>switched</var> is true, then remove all the boxes in <var>boxes</var>,\n     and jump to the step labeled <i>done positioning</i> below.</p>"
+                        },
+                        {
+                          "html": "<p>Otherwise, move all the boxes in <var>boxes</var> back to their <var>specified position</var> as\n     determined in the earlier step.</p>"
+                        },
+                        {
+                          "html": "<p>Negate <var>step</var>.</p>"
+                        },
+                        {
+                          "html": "<p>Set <var>switched</var> to true.</p>"
+                        },
+                        {
+                          "html": "<p>Jump back to the step labeled <i>step loop</i>.</p>"
+                        }
                       ]
                     }
                   ]

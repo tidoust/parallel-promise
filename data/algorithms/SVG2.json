@@ -1383,9 +1383,18 @@
           "rationale": "if",
           "steps": [
             {
-              "html": "If <var>length</var> &gt; <var>new length</var>, then:\n        <ol>\n          <li><a href=\"https://svgwg.org/svg2-draft/types.html#types.html#TermDetach\">Detach</a> each object in the list at an index\n          greater than or equal to <var>new length</var>.</li>\n          <li>Truncate the list to length <var>new length</var>.</li>\n          <li>Set <var>length</var> to <var>new length</var>.</li>\n        </ol>",
-              "ignored": [
-                "Detach each object in the list at an index greater than or equal to new length. Truncate the list to length new length. Set length to new length."
+              "html": "If <var>length</var> &gt; <var>new length</var>, then:",
+              "rationale": "set",
+              "steps": [
+                {
+                  "html": "<a href=\"https://svgwg.org/svg2-draft/types.html#types.html#TermDetach\">Detach</a> each object in the list at an index\n          greater than or equal to <var>new length</var>."
+                },
+                {
+                  "html": "Truncate the list to length <var>new length</var>."
+                },
+                {
+                  "html": "Set <var>length</var> to <var>new length</var>."
+                }
               ]
             },
             {
@@ -3971,9 +3980,39 @@
                   "html": "Let <var>positions</var> be the <a href=\"https://svgwg.org/svg2-draft/painting.html#painting.html#TermDashPositions\">dash positions</a> for the subpath."
                 },
                 {
-                  "html": "For each pair &lt;<var>start</var>, <var>end</var>&gt; in <var>positions</var>:\n            <ol>\n              <li>Scale <var>start</var> and <var>end</var> by <var>scale</var>.</li>\n\n              <li>Let <var>dash</var> be the shape that includes, for all distances\n              between <var>start</var> and <var>end</var> along the subpath, all\n              points that lie on the line perpendicular to the subpath at that\n              distance and which are within distance <a class=\"property\" href=\"https://svgwg.org/svg2-draft/painting.html#painting.html#StrokeWidthProperty\">stroke-width</a> of\n              the point on the subpath at that position.</li>\n\n              <li>Set <var>dash</var> to be the union of <var>dash</var> and the\n              starting <a href=\"https://svgwg.org/svg2-draft/painting.html#painting.html#TermCapShape\">cap shape</a> for the subpath at position <var>start</var>.</li>\n\n              <li>Set <var>dash</var> to be the union of <var>dash</var> and the\n              ending <a href=\"https://svgwg.org/svg2-draft/painting.html#painting.html#TermCapShape\">cap shape</a> for the subpath at position <var>end</var>.</li>\n\n              <li>\n                Let <var>index</var> and <var>last</var> be the indexes of the\n                path segments in the subpath at distance <var>start</var> and\n                <var>end</var> along the subpath.\n\n                \n              </li>\n\n              <li>While <var>index</var> &lt; <var>last</var>:\n                <ol>\n                  <li>Set <var>dash</var> to be the union of <var>dash</var> and the\n                  <a href=\"https://svgwg.org/svg2-draft/painting.html#painting.html#TermLineJoinShape\">line join shape</a> for the subpath at segment index <var>index</var>.</li>\n\n                  <li>Set <var>index</var> to <var>index</var> + 1.</li>\n                </ol>\n              </li>\n\n              <li>Set <var>shape</var> to be the union of <var>shape</var> and\n              <var>stroke</var>.</li>\n            </ol>",
-                  "ignored": [
-                    "Scale start and end by scale. Let dash be the shape that includes, for all distances between start and end along the subpath, all points that lie on the line perpendicular to the subpath at that distance and which are within distance stroke-width of the point on the subpath at that position. Set dash to be the union of dash and the starting cap shape for the subpath at position start. Set dash to be the union of dash and the ending cap shape for the subpath at position end. Let index and last be the indexes of the path segments in the subpath at distance start and end along the subpath. While index < last: Set dash to be the union of dash and the line join shape for the subpath at segment index index. Set index to index + 1. Set shape to be the union of shape and stroke."
+                  "html": "For each pair &lt;<var>start</var>, <var>end</var>&gt; in <var>positions</var>:",
+                  "rationale": "let",
+                  "steps": [
+                    {
+                      "html": "Scale <var>start</var> and <var>end</var> by <var>scale</var>."
+                    },
+                    {
+                      "html": "Let <var>dash</var> be the shape that includes, for all distances\n              between <var>start</var> and <var>end</var> along the subpath, all\n              points that lie on the line perpendicular to the subpath at that\n              distance and which are within distance <a class=\"property\" href=\"https://svgwg.org/svg2-draft/painting.html#painting.html#StrokeWidthProperty\">stroke-width</a> of\n              the point on the subpath at that position."
+                    },
+                    {
+                      "html": "Set <var>dash</var> to be the union of <var>dash</var> and the\n              starting <a href=\"https://svgwg.org/svg2-draft/painting.html#painting.html#TermCapShape\">cap shape</a> for the subpath at position <var>start</var>."
+                    },
+                    {
+                      "html": "Set <var>dash</var> to be the union of <var>dash</var> and the\n              ending <a href=\"https://svgwg.org/svg2-draft/painting.html#painting.html#TermCapShape\">cap shape</a> for the subpath at position <var>end</var>."
+                    },
+                    {
+                      "html": "Let <var>index</var> and <var>last</var> be the indexes of the\n                path segments in the subpath at distance <var>start</var> and\n                <var>end</var> along the subpath."
+                    },
+                    {
+                      "html": "While <var>index</var> &lt; <var>last</var>:",
+                      "rationale": "set",
+                      "steps": [
+                        {
+                          "html": "Set <var>dash</var> to be the union of <var>dash</var> and the\n                  <a href=\"https://svgwg.org/svg2-draft/painting.html#painting.html#TermLineJoinShape\">line join shape</a> for the subpath at segment index <var>index</var>."
+                        },
+                        {
+                          "html": "Set <var>index</var> to <var>index</var> + 1."
+                        }
+                      ]
+                    },
+                    {
+                      "html": "Set <var>shape</var> to be the union of <var>shape</var> and\n              <var>stroke</var>."
+                    }
                   ]
                 }
               ]

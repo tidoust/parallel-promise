@@ -87,7 +87,7 @@
       "name": "start an idle period",
       "href": "https://w3c.github.io/requestidlecallback/#dfn-start-an-idle-period",
       "html": "To <dfn class=\"export\" data-export=\"\" id=\"dfn-start-an-idle-period\" tabindex=\"0\" aria-haspopup=\"dialog\" data-dfn-type=\"dfn\">start an idle period</dfn> given <a data-xref-type=\"_IDL_\" data-link-type=\"idl\" data-lt=\"Window\" data-cite=\"html\" data-cite-path=\"/nav-history-apis.html\" data-cite-frag=\"window\" data-type=\"interface\" href=\"https://html.spec.whatwg.org/multipage/nav-history-apis.html#window\"><code>Window</code></a> <var>window</var> and\n      <var>getDeadline</var>, an algorithm that returns a <a data-xref-type=\"_IDL_\" data-link-type=\"idl\" data-lt=\"DOMHighResTimeStamp\" data-cite=\"hr-time\" data-cite-path=\"/\" data-cite-frag=\"dom-domhighrestimestamp\" data-type=\"typedef\" href=\"https://www.w3.org/TR/hr-time-3/#dom-domhighrestimestamp\"><code>DOMHighResTimeStamp</code></a>: [<cite><a class=\"bibref\" data-link-type=\"biblio\" href=\"https://w3c.github.io/requestidlecallback/#bib-hr-time\" title=\"High Resolution Time\">HR-TIME</a></cite>]",
-      "rationale": "/queue a( \\w+)? task/i",
+      "rationale": "let",
       "steps": [
         {
           "html": "Optionally, if the user agent determines the idle period should\n        be delayed, return from this algorithm."

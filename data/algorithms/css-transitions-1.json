@@ -48,6 +48,27 @@
           ]
         }
       ]
+    },
+    {
+      "html": "For changes in earlier working drafts:",
+      "rationale": "for",
+      "steps": [
+        {
+          "html": "<p>See the <a href=\"https://www.w3.org/TR/2018/WD-css-transitions-1-20181011/#changes\">changes\n section in the 11 October 2018 Working Draft</a>.</p>"
+        },
+        {
+          "html": "<p>See the <a href=\"https://www.w3.org/TR/2017/WD-css-transitions-1-20171130/#changes\">changes\n section in the 30 November 2017 Working Draft</a>.</p>"
+        },
+        {
+          "html": "<p>See the <a href=\"https://www.w3.org/TR/2013/WD-css3-transitions-20131119/#changes\">changes\n section in the 19 November 2013 Working Draft</a>.</p>"
+        },
+        {
+          "html": "<p>See the <a href=\"https://www.w3.org/TR/2013/WD-css3-transitions-20130212/ChangeLog\">the\n ChangeLog</a> for changes in previous working drafts.</p>"
+        },
+        {
+          "html": "<p>For more details on these changes, see the version control change logs,\n which are split in many parts because of file renaming:</p>\n     <ul>\n      <li data-md=\"\">\n       <p><a href=\"https://github.com/w3c/csswg-drafts/commits/master/css-transitions-1/Overview.bs\">change log since 2017 October 12</a>,</p>\n      </li><li data-md=\"\">\n       <p><a href=\"https://hg.csswg.org/drafts/log/tip/css-transitions/Overview.bs\">change log from 2015 January 26 to 2017 October 12</a>,</p>\n      </li><li data-md=\"\">\n       <p><a href=\"https://hg.csswg.org/drafts/log/tip/css-transitions/Overview.src.html\">change log from 2013 March 28 to 2015 January 26</a>,</p>\n      </li><li data-md=\"\">\n       <p><a href=\"https://hg.csswg.org/drafts/log/tip/css3-transitions/Overview.src.html\">change log before 2013 March 28</a>.</p>\n     </li></ul>"
+        }
+      ]
     }
   ]
 }

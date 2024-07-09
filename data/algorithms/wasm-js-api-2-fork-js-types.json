@@ -72,7 +72,7 @@
         },
         {
           "html": "Run the following steps <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#in-parallel\" id=\"ref-for-in-parallel\">in parallel</a>:",
-          "rationale": "reject",
+          "rationale": "queue",
           "steps": [
             {
               "html": "<p><a data-link-type=\"dfn\" href=\"https://webassembly.github.io/js-types/js-api/#compile-a-webassembly-module\" id=\"ref-for-compile-a-webassembly-module①\">Compile the WebAssembly module</a> <var>bytes</var> and store the result as <var>module</var>.</p>"

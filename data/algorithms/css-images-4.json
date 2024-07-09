@@ -5,6 +5,27 @@
   },
   "algorithms": [
     {
+      "html": "An <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-images-4/#funcdef-image-set\" id=\"ref-for-funcdef-image-set⑧\">image-set()</a> function contains a list of one or more <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.csswg.org/css-images-4/#typedef-image-set-option\" id=\"ref-for-typedef-image-set-option⑦\">&lt;image-set-option&gt;</a>s,\n\tand must select only one of them\n\tto determine what image it will represent:",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "<p>First, remove any <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.csswg.org/css-images-4/#typedef-image-set-option\" id=\"ref-for-typedef-image-set-option⑧\">&lt;image-set-option&gt;</a>s from the list\nthat specify an unknown or unsupported MIME type in their <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-images-4/#funcdef-image-set-type\" id=\"ref-for-funcdef-image-set-type\">type()</a> value.</p>"
+        },
+        {
+          "html": "<p>Second, remove any <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.csswg.org/css-images-4/#typedef-image-set-option\" id=\"ref-for-typedef-image-set-option⑨\">&lt;image-set-option&gt;</a>s from the list\nthat have the same <a class=\"production css\" data-link-type=\"type\" href=\"https://www.w3.org/TR/css-values-4/#resolution-value\" id=\"ref-for-resolution-value②\" title=\"Expands to: dpcm | dpi | dppx | x\">&lt;resolution&gt;</a> as a previous option in the list.</p>"
+        },
+        {
+          "html": "<p>If there are no <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.csswg.org/css-images-4/#typedef-image-set-option\" id=\"ref-for-typedef-image-set-option①⓪\">&lt;image-set-option&gt;</a> left at this point,\nthe function represents an <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-images-4/#invalid-image\" id=\"ref-for-invalid-image③\">invalid image</a>.</p>"
+        },
+        {
+          "html": "<p>Finally, among the remaining <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.csswg.org/css-images-4/#typedef-image-set-option\" id=\"ref-for-typedef-image-set-option①①\">&lt;image-set-option&gt;</a>s,\nmake a UA-specific choice of which to load,\nbased on whatever criteria deemed relevant\n(such as the resolution of the display,\n\tconnection speed,\n\tetc).</p>"
+        },
+        {
+          "html": "<p>The <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-images-4/#funcdef-image-set\" id=\"ref-for-funcdef-image-set⑨\">image-set()</a> function then represents the <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.csswg.org/css-images-4/#typedef-image\" id=\"ref-for-typedef-image①①\">&lt;image&gt;</a> of the chosen <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.csswg.org/css-images-4/#typedef-image-set-option\" id=\"ref-for-typedef-image-set-option①②\">&lt;image-set-option&gt;</a>.</p>"
+        }
+      ]
+    },
+    {
       "name": "natural dimensions of a cross-fade()",
       "href": "https://drafts.csswg.org/css-images-4/#natural-dimensions-of-a-cross-fade",
       "html": "To determine the <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-export=\"\" id=\"natural-dimensions-of-a-cross-fade\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/css-images-3/#natural-dimensions\" id=\"ref-for-natural-dimensions④\">natural dimensions</a> of a cross-fade()</dfn>:",

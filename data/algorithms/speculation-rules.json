@@ -191,9 +191,18 @@
           "html": "<p>Let <var>pendingResources</var> be <var>document</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/nav-speculation/speculation-rules.html#document-list-of-pending-external-speculation-rule-resources\" id=\"ref-for-document-list-of-pending-external-speculation-rule-resources①\">list of pending external speculation rule resources</a>.</p>"
         },
         {
-          "html": "<p><a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-iterate\" id=\"ref-for-list-iterate①\">For each</a> <var>pendingResource</var> of <var>pendingResources</var>:</p>\n      <ol>\n       <li data-md=\"\">\n        <p>Optionally, <a data-link-type=\"dfn\" href=\"https://wicg.github.io/nav-speculation/speculation-rules.html#pending-external-speculation-rule-resource-cancel-and-discard\" id=\"ref-for-pending-external-speculation-rule-resource-cancel-and-discard\">cancel and discard</a> <var>pendingResource</var> given <var>document</var>, then <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#iteration-continue\" id=\"ref-for-iteration-continue②\">continue</a>.</p>\n       </li><li data-md=\"\">\n        <p>If <var>pendingResource</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/nav-speculation/speculation-rules.html#pending-external-speculation-rule-resource-controller\" id=\"ref-for-pending-external-speculation-rule-resource-controller①\">controller</a> is not null, then <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#iteration-continue\" id=\"ref-for-iteration-continue③\">continue</a>.</p>\n       </li><li data-md=\"\">\n        <p>Optionally, <a data-link-type=\"dfn\" href=\"https://wicg.github.io/nav-speculation/speculation-rules.html#pending-external-speculation-rule-resource-fetch\" id=\"ref-for-pending-external-speculation-rule-resource-fetch\">fetch</a> <var>pendingResource</var> given <var>document</var>.</p>\n        \n      </li></ol>",
-          "ignored": [
-            "Optionally, cancel and discard pendingResource given document, then continue. If pendingResource’s controller is not null, then continue. Optionally, fetch pendingResource given document."
+          "html": "<a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-iterate\" id=\"ref-for-list-iterate①\">For each</a> <var>pendingResource</var> of <var>pendingResources</var>:",
+          "rationale": "if",
+          "steps": [
+            {
+              "html": "<p>Optionally, <a data-link-type=\"dfn\" href=\"https://wicg.github.io/nav-speculation/speculation-rules.html#pending-external-speculation-rule-resource-cancel-and-discard\" id=\"ref-for-pending-external-speculation-rule-resource-cancel-and-discard\">cancel and discard</a> <var>pendingResource</var> given <var>document</var>, then <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#iteration-continue\" id=\"ref-for-iteration-continue②\">continue</a>.</p>"
+            },
+            {
+              "html": "<p>If <var>pendingResource</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/nav-speculation/speculation-rules.html#pending-external-speculation-rule-resource-controller\" id=\"ref-for-pending-external-speculation-rule-resource-controller①\">controller</a> is not null, then <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#iteration-continue\" id=\"ref-for-iteration-continue③\">continue</a>.</p>"
+            },
+            {
+              "html": "<p>Optionally, <a data-link-type=\"dfn\" href=\"https://wicg.github.io/nav-speculation/speculation-rules.html#pending-external-speculation-rule-resource-fetch\" id=\"ref-for-pending-external-speculation-rule-resource-fetch\">fetch</a> <var>pendingResource</var> given <var>document</var>.</p>"
+            }
           ]
         }
       ]

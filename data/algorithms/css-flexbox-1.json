@@ -123,14 +123,20 @@
       ]
     },
     {
-      "html": "<a class=\"self-link\" href=\"https://drafts.csswg.org/css-flexbox-1/#algo-main-align\"></a> <strong>Distribute any remaining free space.</strong> For each flex line:",
+      "html": "<span class=\"marker\">Note:</span> Flex layout works with the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-flexbox-1/#flex-item\" id=\"ref-for-flex-item⑨⓪\">flex items</a> in <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-display-4/#order-modified-document-order\" id=\"ref-for-order-modified-document-order①\">order-modified document order</a>,\n\tnot their original document order.",
       "rationale": "if",
       "steps": [
         {
-          "html": "If the remaining free space is positive\n\t\t\t\t\tand at least one main-axis margin on this line is <a class=\"css\" data-link-type=\"value\">auto</a>,\n\t\t\t\t\tdistribute the free space equally among these margins.\n\t\t\t\t\tOtherwise, set all <span>auto</span> margins to zero."
-        },
-        {
-          "html": "Align the items along the main-axis per <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-flexbox-1/#propdef-justify-content\" id=\"ref-for-propdef-justify-content⑨\">justify-content</a>."
+          "html": "<a class=\"self-link\" href=\"https://drafts.csswg.org/css-flexbox-1/#algo-main-align\"></a> <strong>Distribute any remaining free space.</strong> For each flex line:",
+          "rationale": "if",
+          "steps": [
+            {
+              "html": "If the remaining free space is positive\n\t\t\t\t\tand at least one main-axis margin on this line is <a class=\"css\" data-link-type=\"value\">auto</a>,\n\t\t\t\t\tdistribute the free space equally among these margins.\n\t\t\t\t\tOtherwise, set all <span>auto</span> margins to zero."
+            },
+            {
+              "html": "Align the items along the main-axis per <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-flexbox-1/#propdef-justify-content\" id=\"ref-for-propdef-justify-content⑨\">justify-content</a>."
+            }
+          ]
         }
       ]
     },

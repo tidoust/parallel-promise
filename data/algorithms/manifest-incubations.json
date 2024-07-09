@@ -498,7 +498,7 @@
       "name": "present an install prompt",
       "href": "https://wicg.github.io/manifest-incubations/#dfn-present-an-install-prompt",
       "html": "To <dfn data-local-lt=\"presenting an install prompt|presentation of the install prompt\" data-lt=\"present an install prompt|presenting an install prompt|presentation of the install prompt\" id=\"dfn-present-an-install-prompt\" tabindex=\"0\" aria-haspopup=\"dialog\" data-dfn-type=\"dfn\">present\n        an install prompt</dfn>:",
-      "rationale": "in parallel",
+      "rationale": "return",
       "steps": [
         {
           "html": "Show some user-agent-specific <abbr title=\"User Interface\">UI</abbr>, asking the user whether to\n        proceed with installing the app. The <var>result</var> of this choice\n        is either \"<a data-link-type=\"idl\" data-xref-type=\"enum-value\" data-link-for=\"AppBannerPromptOutcome\" data-xref-for=\"AppBannerPromptOutcome\" href=\"https://wicg.github.io/manifest-incubations/#dom-appbannerpromptoutcome-accepted\" class=\"internalDFN\" id=\"ref-for-dom-appbannerpromptoutcome-accepted-1\"><code>accepted</code></a>\" or\n        \"<a data-link-type=\"idl\" data-xref-type=\"enum-value\" data-link-for=\"AppBannerPromptOutcome\" data-xref-for=\"AppBannerPromptOutcome\" href=\"https://wicg.github.io/manifest-incubations/#dom-appbannerpromptoutcome-dismissed\" class=\"internalDFN\" id=\"ref-for-dom-appbannerpromptoutcome-dismissed-1\"><code>dismissed</code></a>\"."
@@ -593,7 +593,7 @@
       "name": "request to present an install prompt",
       "href": "https://wicg.github.io/manifest-incubations/#dfn-request-to-present-an-install-prompt",
       "html": "To <dfn data-noexport=\"\" id=\"dfn-request-to-present-an-install-prompt\" tabindex=\"0\" aria-haspopup=\"dialog\" data-dfn-type=\"dfn\">request to present an install prompt</dfn>\n            with <a data-xref-type=\"_IDL_\" data-link-type=\"idl\" data-lt=\"BeforeInstallPromptEvent\" href=\"https://wicg.github.io/manifest-incubations/#dom-beforeinstallpromptevent\" class=\"internalDFN\" id=\"ref-for-dom-beforeinstallpromptevent-6\"><code>BeforeInstallPromptEvent</code></a> <var>event</var>:",
-      "rationale": "resolve",
+      "rationale": "let",
       "steps": [
         {
           "html": "<a href=\"https://wicg.github.io/manifest-incubations/#dfn-present-an-install-prompt\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-present-an-install-prompt-8\">Present an install prompt</a> and let <var>outcome</var> be the result."

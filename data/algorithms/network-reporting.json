@@ -5,6 +5,27 @@
   },
   "algorithms": [
     {
+      "html": "This storage mechanism is opaque, vendor-specific, and not exposed to the\n  web, but it MUST provide the following methods which will be used in the\n  algorithms this document defines:",
+      "rationale": "enqueue",
+      "steps": [
+        {
+          "html": "<p>Insert, update, and remove <a data-link-type=\"dfn\" href=\"https://w3c.github.io/reporting/network-reporting.html#client\" id=\"ref-for-client②\">clients</a>.</p>"
+        },
+        {
+          "html": "<p>Enqueue and dequeue <a data-link-type=\"dfn\" href=\"https://w3c.github.io/reporting/#windoworworkerglobalscope-reports\" id=\"ref-for-windoworworkerglobalscope-reports①\">reports</a> for delivery.</p>"
+        },
+        {
+          "html": "<p>Retrieve a list of <a data-link-type=\"dfn\" href=\"https://w3c.github.io/reporting/network-reporting.html#client\" id=\"ref-for-client③\">client</a> objects for an <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsers.html#origin\" id=\"ref-for-origin④\">origin</a>.</p>"
+        },
+        {
+          "html": "<p>Retrieve a list of queued <a data-link-type=\"dfn\" href=\"https://w3c.github.io/reporting/#report\" id=\"ref-for-report\">report</a> objects.</p>"
+        },
+        {
+          "html": "<p>Clear the cache.</p>"
+        }
+      ]
+    },
+    {
       "html": "<a class=\"self-link\" href=\"https://w3c.github.io/reporting/network-reporting.html#issue-0c90253d\"></a> Origin Policy monkey patching. Talk to Domenic.",
       "rationale": "let",
       "steps": [

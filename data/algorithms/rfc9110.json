@@ -144,6 +144,30 @@
     },
     {
       "html": "",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "<div class=\"avoidbreakafter\"><p>When recipient is the origin server and <a href=\"https://httpwg.org/specs/rfc9110.html#field.if-match\" class=\"smpl\">If-Match</a> is present, evaluate the <a href=\"https://httpwg.org/specs/rfc9110.html#field.if-match\" class=\"smpl\">If-Match</a> precondition:</p></div> <div><ul><li>if true, continue to step <a href=\"https://httpwg.org/specs/rfc9110.html#precedence3\">3</a></li><li>if false, respond <a href=\"https://httpwg.org/specs/rfc9110.html#status.412\" class=\"smpl\">412 (Precondition Failed)</a> unless it can be determined that the state-changing request has already succeeded (see <a href=\"https://httpwg.org/specs/rfc9110.html#field.if-match\" id=\"rfc.xref.field.if-match.1\" title=\"If-Match\">Section 13.1.1</a>)</li></ul></div>"
+        },
+        {
+          "html": "<div class=\"avoidbreakafter\"><p>When recipient is the origin server, <a href=\"https://httpwg.org/specs/rfc9110.html#field.if-match\" class=\"smpl\">If-Match</a> is not present, and <a href=\"https://httpwg.org/specs/rfc9110.html#field.if-unmodified-since\" class=\"smpl\">If-Unmodified-Since</a> is present, evaluate the <a href=\"https://httpwg.org/specs/rfc9110.html#field.if-unmodified-since\" class=\"smpl\">If-Unmodified-Since</a> precondition:</p></div> <div><ul><li>if true, continue to step <a href=\"https://httpwg.org/specs/rfc9110.html#precedence3\">3</a></li><li>if false, respond <a href=\"https://httpwg.org/specs/rfc9110.html#status.412\" class=\"smpl\">412 (Precondition Failed)</a> unless it can be determined that the state-changing request has already succeeded (see <a href=\"https://httpwg.org/specs/rfc9110.html#field.if-unmodified-since\" id=\"rfc.xref.field.if-unmodified-since.1\" title=\"If-Unmodified-Since\">Section 13.1.4</a>)</li></ul></div>"
+        },
+        {
+          "html": "<div class=\"avoidbreakafter\"><p>When <a href=\"https://httpwg.org/specs/rfc9110.html#field.if-none-match\" class=\"smpl\">If-None-Match</a> is present, evaluate the <a href=\"https://httpwg.org/specs/rfc9110.html#field.if-none-match\" class=\"smpl\">If-None-Match</a> precondition:</p></div> <div><ul><li>if true, continue to step <a href=\"https://httpwg.org/specs/rfc9110.html#precedence5\">5</a></li><li>if false for GET/HEAD, respond <a href=\"https://httpwg.org/specs/rfc9110.html#status.304\" class=\"smpl\">304 (Not Modified)</a></li><li>if false for other methods, respond <a href=\"https://httpwg.org/specs/rfc9110.html#status.412\" class=\"smpl\">412 (Precondition Failed)</a></li></ul></div>"
+        },
+        {
+          "html": "<div class=\"avoidbreakafter\"><p>When the method is GET or HEAD, <a href=\"https://httpwg.org/specs/rfc9110.html#field.if-none-match\" class=\"smpl\">If-None-Match</a> is not present, and <a href=\"https://httpwg.org/specs/rfc9110.html#field.if-modified-since\" class=\"smpl\">If-Modified-Since</a> is present, evaluate the <a href=\"https://httpwg.org/specs/rfc9110.html#field.if-modified-since\" class=\"smpl\">If-Modified-Since</a> precondition:</p></div> <div><ul><li>if true, continue to step <a href=\"https://httpwg.org/specs/rfc9110.html#precedence5\">5</a></li><li>if false, respond <a href=\"https://httpwg.org/specs/rfc9110.html#status.304\" class=\"smpl\">304 (Not Modified)</a></li></ul></div>"
+        },
+        {
+          "html": "<div class=\"avoidbreakafter\"><p>When the method is GET and both <a href=\"https://httpwg.org/specs/rfc9110.html#field.range\" class=\"smpl\">Range</a> and <a href=\"https://httpwg.org/specs/rfc9110.html#field.if-range\" class=\"smpl\">If-Range</a> are present, evaluate the <a href=\"https://httpwg.org/specs/rfc9110.html#field.if-range\" class=\"smpl\">If-Range</a> precondition:</p></div> <div><ul><li>if true and the <a href=\"https://httpwg.org/specs/rfc9110.html#field.range\" class=\"smpl\">Range</a> is applicable to the <a href=\"https://httpwg.org/specs/rfc9110.html#selected.representation\" class=\"smpl\">selected representation</a>, respond <a href=\"https://httpwg.org/specs/rfc9110.html#status.206\" class=\"smpl\">206 (Partial Content)</a></li><li>otherwise, ignore the <a href=\"https://httpwg.org/specs/rfc9110.html#field.range\" class=\"smpl\">Range</a> header field and respond <a href=\"https://httpwg.org/specs/rfc9110.html#status.200\" class=\"smpl\">200 (OK)</a></li></ul></div>"
+        },
+        {
+          "html": "<div><p>Otherwise,</p></div> <div><ul><li>perform the requested method and respond according to its success or failure.</li></ul></div>"
+        }
+      ]
+    },
+    {
+      "html": "",
       "rationale": "replace",
       "steps": [
         {

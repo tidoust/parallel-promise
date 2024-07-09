@@ -135,7 +135,7 @@
             },
             {
               "html": "If at any point <var>stream</var>’s <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/webrtc-identity/#isolated-media-streams\" id=\"ref-for-isolated-media-streams①\">isolation properties</a> change so\n      that <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/mediacapture-record/#mediarecorder\" id=\"ref-for-mediarecorder⑥\">MediaRecorder</a></code> is no longer allowed access to it, the UA MUST\n      stop gathering data, discard any data that it has gathered,\n      and queue a task, using the DOM manipulation task source, that runs the\n      following steps:",
-              "rationale": "fire an event",
+              "rationale": "fire",
               "steps": [
                 {
                   "html": "<a data-link-type=\"abstract-op\" href=\"https://w3c.github.io/mediacapture-record/#abstract-opdef-inactivate-the-recorder\" id=\"ref-for-abstract-opdef-inactivate-the-recorder\">Inactivate the recorder</a> with <var>recorder</var>."
@@ -153,7 +153,7 @@
             },
             {
               "html": "If at any point, a track is added to or removed from <var>stream</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/mediacapture-main/#dfn-track-set\" id=\"ref-for-dfn-track-set①\">track set</a>, the UA MUST stop gathering data, and queue a task,\n      using the DOM manipulation task source, that runs the following steps:",
-              "rationale": "fire an event",
+              "rationale": "fire",
               "steps": [
                 {
                   "html": "<a data-link-type=\"abstract-op\" href=\"https://w3c.github.io/mediacapture-record/#abstract-opdef-inactivate-the-recorder\" id=\"ref-for-abstract-opdef-inactivate-the-recorder①\">Inactivate the recorder</a> with <var>recorder</var>."
@@ -171,7 +171,7 @@
             },
             {
               "html": "If the UA at any point is unable to continue gathering data for\n      reasons other than <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/webrtc-identity/#isolated-media-streams\" id=\"ref-for-isolated-media-streams②\">isolation properties</a> or <var>stream</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/mediacapture-main/#dfn-track-set\" id=\"ref-for-dfn-track-set②\">track set</a>, it MUST stop gathering data, and queue a task, using the\n      DOM manipulation task source, that runs the following steps:",
-              "rationale": "fire an event",
+              "rationale": "fire",
               "steps": [
                 {
                   "html": "<a data-link-type=\"abstract-op\" href=\"https://w3c.github.io/mediacapture-record/#abstract-opdef-inactivate-the-recorder\" id=\"ref-for-abstract-opdef-inactivate-the-recorder②\">Inactivate the recorder</a> with <var>recorder</var>."
@@ -192,7 +192,7 @@
             },
             {
               "html": "If all recorded tracks become <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/mediacapture-main/#idl-def-MediaStreamTrackState.ended\" id=\"ref-for-idl-def-MediaStreamTrackState.ended\">ended</a></code>, then stop gathering data, and\n      queue a task, using the DOM manipulation task source, that runs the\n      following steps:",
-              "rationale": "fire an event",
+              "rationale": "fire",
               "steps": [
                 {
                   "html": "<a data-link-type=\"abstract-op\" href=\"https://w3c.github.io/mediacapture-record/#abstract-opdef-inactivate-the-recorder\" id=\"ref-for-abstract-opdef-inactivate-the-recorder③\">Inactivate the recorder</a> with <var>recorder</var>."
@@ -304,7 +304,7 @@
         },
         {
           "html": "Set <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/mediacapture-record/#dom-mediarecorder-state\" id=\"ref-for-dom-mediarecorder-state①②\">state</a></code> to <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/mediacapture-record/#dom-recordingstate-recording\" id=\"ref-for-dom-recordingstate-recording②\">recording</a></code>, and queue a\n    task, using the DOM manipulation task source, that runs the following steps:",
-          "rationale": "fire an event",
+          "rationale": "let",
           "steps": [
             {
               "html": "Resume (or continue) gathering data into the current <var>blob</var>."

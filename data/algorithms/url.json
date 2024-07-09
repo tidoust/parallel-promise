@@ -310,9 +310,15 @@
           "html": "<p>Let <var>parts</var> be the result of <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#strictly-split\" id=\"ref-for-strictly-split③\">strictly splitting</a> <var>input</var> on\n U+002E (.). </p>"
         },
         {
-          "html": "<p>If the last <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-item\" id=\"ref-for-list-item④\">item</a> in <var>parts</var> is the empty string, then: </p>\n      <ol>\n       <li>\n        <p><a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#ipv4-empty-part\" id=\"ref-for-ipv4-empty-part\">IPv4-empty-part</a> <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#validation-error\" id=\"ref-for-validation-error⑧\">validation error</a>. </p>\n       </li><li>\n        <p>If <var>parts</var>’s <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-size\" id=\"ref-for-list-size①\">size</a> is greater than 1, then <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-remove\" id=\"ref-for-list-remove①\">remove</a> the last <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-item\" id=\"ref-for-list-item⑤\">item</a> from <var>parts</var>. </p>\n      </li></ol>",
-          "ignored": [
-            "IPv4-empty-part validation error. If parts’s size is greater than 1, then remove the last item from parts."
+          "html": "If the last <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-item\" id=\"ref-for-list-item④\">item</a> in <var>parts</var> is the empty string, then:",
+          "rationale": "if",
+          "steps": [
+            {
+              "html": "<p><a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#ipv4-empty-part\" id=\"ref-for-ipv4-empty-part\">IPv4-empty-part</a> <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#validation-error\" id=\"ref-for-validation-error⑧\">validation error</a>. </p>"
+            },
+            {
+              "html": "<p>If <var>parts</var>’s <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-size\" id=\"ref-for-list-size①\">size</a> is greater than 1, then <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-remove\" id=\"ref-for-list-remove①\">remove</a> the last <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-item\" id=\"ref-for-list-item⑤\">item</a> from <var>parts</var>. </p>"
+            }
           ]
         },
         {
@@ -1162,9 +1168,39 @@
                       "rationale": "if",
                       "steps": [
                         {
-                          "html": "<p>If <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#c\" id=\"ref-for-c③⑧\">c</a> is U+0040 (@), then: </p>\n          <ol>\n           <li>\n            <p><a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#invalid-credentials\" id=\"ref-for-invalid-credentials\">Invalid-credentials</a> <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#validation-error\" id=\"ref-for-validation-error④⓪\">validation error</a>. </p>\n           </li><li>\n            <p>If <var>atSignSeen</var> is true, then prepend \"<code>%40</code>\" to <var>buffer</var>. </p>\n           </li><li>\n            <p>Set <var>atSignSeen</var> to true. </p>\n           </li><li>\n            <p>For each <var>codePoint</var> in <var>buffer</var>: </p>\n            <ol>\n             <li>\n              <p>If <var>codePoint</var> is U+003A (:) and <var>passwordTokenSeen</var> is false,\n         then set <var>passwordTokenSeen</var> to true and <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#iteration-continue\" id=\"ref-for-iteration-continue④\">continue</a>. </p>\n             </li><li>\n              <p>Let <var>encodedCodePoints</var> be the result of running <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#utf-8-percent-encode\" id=\"ref-for-utf-8-percent-encode②\">UTF-8 percent-encode</a> <var>codePoint</var> using the <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#userinfo-percent-encode-set\" id=\"ref-for-userinfo-percent-encode-set⑥\">userinfo percent-encode set</a>. </p>\n             </li><li>\n              <p>If <var>passwordTokenSeen</var> is true, then append <var>encodedCodePoints</var> to <var>url</var>’s <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-password\" id=\"ref-for-concept-url-password⑦\">password</a>. </p>\n             </li><li>\n              <p>Otherwise, append <var>encodedCodePoints</var> to <var>url</var>’s <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-username\" id=\"ref-for-concept-url-username⑦\">username</a>. </p>\n            </li></ol>\n           </li><li>\n            <p>Set <var>buffer</var> to the empty string. </p>\n          </li></ol>",
-                          "ignored": [
-                            "Invalid-credentials validation error. If atSignSeen is true, then prepend \"%40\" to buffer. Set atSignSeen to true. For each codePoint in buffer: If codePoint is U+003A (:) and passwordTokenSeen is false, then set passwordTokenSeen to true and continue. Let encodedCodePoints be the result of running UTF-8 percent-encode codePoint using the userinfo percent-encode set. If passwordTokenSeen is true, then append encodedCodePoints to url’s password. Otherwise, append encodedCodePoints to url’s username. Set buffer to the empty string."
+                          "html": "If <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#c\" id=\"ref-for-c③⑧\">c</a> is U+0040 (@), then:",
+                          "rationale": "if",
+                          "steps": [
+                            {
+                              "html": "<p><a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#invalid-credentials\" id=\"ref-for-invalid-credentials\">Invalid-credentials</a> <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#validation-error\" id=\"ref-for-validation-error④⓪\">validation error</a>. </p>"
+                            },
+                            {
+                              "html": "<p>If <var>atSignSeen</var> is true, then prepend \"<code>%40</code>\" to <var>buffer</var>. </p>"
+                            },
+                            {
+                              "html": "<p>Set <var>atSignSeen</var> to true. </p>"
+                            },
+                            {
+                              "html": "For each <var>codePoint</var> in <var>buffer</var>:",
+                              "rationale": "if",
+                              "steps": [
+                                {
+                                  "html": "<p>If <var>codePoint</var> is U+003A (:) and <var>passwordTokenSeen</var> is false,\n         then set <var>passwordTokenSeen</var> to true and <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#iteration-continue\" id=\"ref-for-iteration-continue④\">continue</a>. </p>"
+                                },
+                                {
+                                  "html": "<p>Let <var>encodedCodePoints</var> be the result of running <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#utf-8-percent-encode\" id=\"ref-for-utf-8-percent-encode②\">UTF-8 percent-encode</a> <var>codePoint</var> using the <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#userinfo-percent-encode-set\" id=\"ref-for-userinfo-percent-encode-set⑥\">userinfo percent-encode set</a>. </p>"
+                                },
+                                {
+                                  "html": "<p>If <var>passwordTokenSeen</var> is true, then append <var>encodedCodePoints</var> to <var>url</var>’s <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-password\" id=\"ref-for-concept-url-password⑦\">password</a>. </p>"
+                                },
+                                {
+                                  "html": "<p>Otherwise, append <var>encodedCodePoints</var> to <var>url</var>’s <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-username\" id=\"ref-for-concept-url-username⑦\">username</a>. </p>"
+                                }
+                              ]
+                            },
+                            {
+                              "html": "<p>Set <var>buffer</var> to the empty string. </p>"
+                            }
                           ]
                         },
                         {
@@ -1430,9 +1466,15 @@
                                   "html": "<p>If the <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#code-point-substring-to-the-end-of-the-string\" id=\"ref-for-code-point-substring-to-the-end-of-the-string①\">code point substring</a> from <var>pointer</var> to the end of <var>input</var> does not <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#start-with-a-windows-drive-letter\" id=\"ref-for-start-with-a-windows-drive-letter①\">start with a Windows drive letter</a>, then <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#shorten-a-urls-path\" id=\"ref-for-shorten-a-urls-path①\">shorten</a> <var>url</var>’s <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-path\" id=\"ref-for-concept-url-path①③\">path</a>. </p>"
                                 },
                                 {
-                                  "html": "<p>Otherwise: </p>\n              <ol>\n               <li>\n                <p><a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#file-invalid-windows-drive-letter\" id=\"ref-for-file-invalid-windows-drive-letter\">File-invalid-Windows-drive-letter</a> <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#validation-error\" id=\"ref-for-validation-error④⑦\">validation error</a>. </p>\n               </li><li>\n                <p>Set <var>url</var>’s <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-path\" id=\"ref-for-concept-url-path①④\">path</a> to « ». </p>\n              </li></ol>",
-                                  "ignored": [
-                                    "File-invalid-Windows-drive-letter validation error. Set url’s path to « »."
+                                  "html": "Otherwise:",
+                                  "rationale": "set",
+                                  "steps": [
+                                    {
+                                      "html": "<p><a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#file-invalid-windows-drive-letter\" id=\"ref-for-file-invalid-windows-drive-letter\">File-invalid-Windows-drive-letter</a> <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#validation-error\" id=\"ref-for-validation-error④⑦\">validation error</a>. </p>"
+                                    },
+                                    {
+                                      "html": "<p>Set <var>url</var>’s <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-path\" id=\"ref-for-concept-url-path①④\">path</a> to « ». </p>"
+                                    }
                                   ]
                                 },
                                 {
@@ -1617,9 +1659,15 @@
                               "html": "<p>If <var>url</var> <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#is-special\" id=\"ref-for-is-special①③\">is special</a> and <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#c\" id=\"ref-for-c⑦⓪\">c</a> is U+005C (\\), <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#invalid-reverse-solidus\" id=\"ref-for-invalid-reverse-solidus⑤\">invalid-reverse-solidus</a> <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#validation-error\" id=\"ref-for-validation-error⑤①\">validation error</a>. </p>"
                             },
                             {
-                              "html": "<p>If <var>buffer</var> is a <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#double-dot-path-segment\" id=\"ref-for-double-dot-path-segment②\">double-dot URL path segment</a>, then: </p>\n            <ol>\n             <li>\n              <p><a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#shorten-a-urls-path\" id=\"ref-for-shorten-a-urls-path②\">Shorten</a> <var>url</var>’s <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-path\" id=\"ref-for-concept-url-path①⑨\">path</a>. </p>\n             </li><li>\n              <p>If neither <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#c\" id=\"ref-for-c⑦①\">c</a> is U+002F (/), nor <var>url</var> <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#is-special\" id=\"ref-for-is-special①④\">is special</a> and <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#c\" id=\"ref-for-c⑦②\">c</a> is\n          U+005C (\\), <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-append\" id=\"ref-for-list-append③\">append</a> the empty string to <var>url</var>’s <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-path\" id=\"ref-for-concept-url-path②⓪\">path</a>. </p>\n              \n            </li></ol>",
-                              "ignored": [
-                                "Shorten url’s path. If neither c is U+002F (/), nor url is special and c is U+005C (\\), append the empty string to url’s path."
+                              "html": "If <var>buffer</var> is a <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#double-dot-path-segment\" id=\"ref-for-double-dot-path-segment②\">double-dot URL path segment</a>, then:",
+                              "rationale": "if",
+                              "steps": [
+                                {
+                                  "html": "<p><a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#shorten-a-urls-path\" id=\"ref-for-shorten-a-urls-path②\">Shorten</a> <var>url</var>’s <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-path\" id=\"ref-for-concept-url-path①⑨\">path</a>. </p>"
+                                },
+                                {
+                                  "html": "<p>If neither <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#c\" id=\"ref-for-c⑦①\">c</a> is U+002F (/), nor <var>url</var> <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#is-special\" id=\"ref-for-is-special①④\">is special</a> and <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#c\" id=\"ref-for-c⑦②\">c</a> is\n          U+005C (\\), <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-append\" id=\"ref-for-list-append③\">append</a> the empty string to <var>url</var>’s <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-path\" id=\"ref-for-concept-url-path②⓪\">path</a>. </p>"
+                                }
                               ]
                             },
                             {

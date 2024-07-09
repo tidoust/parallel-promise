@@ -105,27 +105,17 @@
           ]
         },
         {
-          "html": "If <var>editContext</var>'s <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-is-composing\" class=\"internalDFN\" id=\"ref-for-dfn-is-composing-7\">is composing</a> is true, then:",
-          "rationale": "let",
-          "steps": [],
-          "additional": [
-            {
-              "html": "If <var>editContext</var>'s <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-is-composing\" class=\"internalDFN\" id=\"ref-for-dfn-is-composing-7\">is composing</a> is true, then:\n                    <ol>Let <var>insertionStart</var> be <var>replacementRangeStart</var>.</ol>",
-              "rationale": "let",
-              "steps": []
-            }
+          "html": "If <var>editContext</var>'s <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/edit-context/#dfn-is-composing\" class=\"internalDFN\" id=\"ref-for-dfn-is-composing-7\">is composing</a> is true, then:\n                    <ol>Let <var>insertionStart</var> be <var>replacementRangeStart</var>.</ol>\n                    <ol>Let <var>insertionEnd</var> be <var>replacementRangeEnd</var>.</ol>",
+          "ignored": [
+            "Let insertionStart be replacementRangeStart.",
+            "Let insertionEnd be replacementRangeEnd."
           ]
         },
         {
-          "html": "Otherwise:",
-          "rationale": "let",
-          "steps": [],
-          "additional": [
-            {
-              "html": "Otherwise:\n                    <ol>Let <var>insertionStart</var> be <var>selectionStart</var>.</ol>",
-              "rationale": "let",
-              "steps": []
-            }
+          "html": "Otherwise:\n                    <ol>Let <var>insertionStart</var> be <var>selectionStart</var>.</ol>\n                    <ol>Let <var>insertionEnd</var> be <var>selectionEnd</var>.</ol>",
+          "ignored": [
+            "Let insertionStart be selectionStart.",
+            "Let insertionEnd be selectionEnd."
           ]
         },
         {

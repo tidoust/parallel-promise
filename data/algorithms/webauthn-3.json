@@ -5,6 +5,66 @@
   },
   "algorithms": [
     {
+      "html": "This is the first-time flow, in which a new credential is created and registered with the server.\nIn this flow, the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#webauthn-relying-party\" id=\"ref-for-webauthn-relying-party③\">WebAuthn Relying Party</a> does not have a preference for <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#platform-authenticators\" id=\"ref-for-platform-authenticators⑦\">platform authenticator</a> or <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#roaming-authenticators\" id=\"ref-for-roaming-authenticators④\">roaming authenticators</a>.",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "<p>The user visits example.com, which serves up a script. At this point, the user may already be logged in using a legacy\nusername and password, or additional authenticator, or other means acceptable to the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#relying-party\" id=\"ref-for-relying-party①⑧\">Relying Party</a>.\nOr the user may be in the process of creating a new account.</p>"
+        },
+        {
+          "html": "<p>The <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#relying-party\" id=\"ref-for-relying-party①⑨\">Relying Party</a> script runs the code snippet below.</p>"
+        },
+        {
+          "html": "<p>The <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#client-platform\" id=\"ref-for-client-platform③\">client platform</a> searches for and locates the authenticator.</p>"
+        },
+        {
+          "html": "<p>The <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#client\" id=\"ref-for-client①\">client</a> connects to the authenticator, performing any pairing actions if necessary.</p>"
+        },
+        {
+          "html": "<p>The authenticator shows appropriate UI for the user to provide a biometric or other <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#authorization-gesture\" id=\"ref-for-authorization-gesture⑤\">authorization gesture</a>.</p>"
+        },
+        {
+          "html": "<p>The authenticator returns a response to the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#client\" id=\"ref-for-client②\">client</a>, which in turn returns a response to the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#relying-party\" id=\"ref-for-relying-party②⓪\">Relying Party</a> script. If\nthe user declined to select an authenticator or provide authorization, an appropriate error is returned.</p>"
+        },
+        {
+          "html": "<p>If a new credential was created,</p>\n     <ul>\n      <li data-md=\"\">\n       <p>The <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#relying-party\" id=\"ref-for-relying-party②①\">Relying Party</a> script sends the newly generated <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#credential-public-key\" id=\"ref-for-credential-public-key\">credential public key</a> to the server, along with additional information\nsuch as attestation regarding the provenance and characteristics of the authenticator.</p>\n      </li><li data-md=\"\">\n       <p>The server stores the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#credential-public-key\" id=\"ref-for-credential-public-key①\">credential public key</a> in its database and associates it with the user as well as with the\ncharacteristics of authentication indicated by attestation, also storing a friendly name for later use.</p>\n      </li><li data-md=\"\">\n       <p>The script may store data such as the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#credential-id\" id=\"ref-for-credential-id\">credential ID</a> in local storage, to improve future UX by narrowing the choice of\ncredential for the user.</p>\n     </li></ul>"
+        }
+      ]
+    },
+    {
+      "html": "This is the flow when a user with an already registered credential visits a website and wants to authenticate using the\ncredential.",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "<p>The user visits example.com, which serves up a script.</p>"
+        },
+        {
+          "html": "<p>The script asks the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#client\" id=\"ref-for-client③\">client</a> for an Authentication Assertion, providing as much information as possible to narrow\nthe choice of acceptable credentials for the user. This can be obtained from the data that was stored locally after\nregistration, or by other means such as prompting the user for a username.</p>"
+        },
+        {
+          "html": "<p>The <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#relying-party\" id=\"ref-for-relying-party②⑤\">Relying Party</a> script runs one of the code snippets below.</p>"
+        },
+        {
+          "html": "<p>The <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#client-platform\" id=\"ref-for-client-platform④\">client platform</a> searches for and locates the authenticator.</p>"
+        },
+        {
+          "html": "<p>The <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#client\" id=\"ref-for-client④\">client</a> connects to the authenticator, performing any pairing actions if necessary.</p>"
+        },
+        {
+          "html": "<p>The authenticator presents the user with a notification that their attention is needed. On opening the\nnotification, the user is shown a friendly selection menu of acceptable credentials using the account information provided\nwhen creating the credentials, along with some information on the <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/origin.html#concept-origin\" id=\"ref-for-concept-origin①\">origin</a> that is requesting these keys.</p>"
+        },
+        {
+          "html": "<p>The authenticator obtains a biometric or other <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#authorization-gesture\" id=\"ref-for-authorization-gesture⑥\">authorization gesture</a> from the user.</p>"
+        },
+        {
+          "html": "<p>The authenticator returns a response to the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#client\" id=\"ref-for-client⑤\">client</a>, which in turn returns a response to the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#relying-party\" id=\"ref-for-relying-party②⑥\">Relying Party</a> script.\nIf the user declined to select a credential or provide an authorization, an appropriate error is returned.</p>"
+        },
+        {
+          "html": "<p>If an assertion was successfully generated and returned,</p>\n     <ul>\n      <li data-md=\"\">\n       <p>The script sends the assertion to the server.</p>\n      </li><li data-md=\"\">\n       <p>The server examines the assertion, extracts the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#credential-id\" id=\"ref-for-credential-id①\">credential ID</a>, looks up the registered\ncredential public key in its database, and verifies the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#assertion-signature\" id=\"ref-for-assertion-signature\">assertion signature</a>.\nIf valid, it looks up the identity associated with the assertion’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#credential-id\" id=\"ref-for-credential-id②\">credential ID</a>; that\nidentity is now authenticated. If the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#credential-id\" id=\"ref-for-credential-id③\">credential ID</a> is not recognized by the server (e.g.,\nit has been deregistered due to inactivity) then the authentication has failed; each <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#relying-party\" id=\"ref-for-relying-party②⑦\">Relying Party</a> will handle this in its own way.</p>\n      </li><li data-md=\"\">\n       <p>The server now does whatever it would otherwise do upon successful authentication -- return a success page, set\nauthentication cookies, etc.</p>\n     </li></ul>"
+        }
+      ]
+    },
+    {
       "html": "When this method is invoked, the user agent MUST execute the following algorithm:",
       "rationale": "assert",
       "steps": [
@@ -214,9 +274,264 @@
                   "case": "If an authenticator becomes available on this client device,",
                   "steps": [
                     {
-                      "html": "<ol>\n         <li data-md=\"\">\n          <p>This <var>authenticator</var> is now the <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-for=\"create\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"create-candidate-authenticator\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">candidate authenticator</dfn>.</p>\n         </li><li data-md=\"\">\n          <p>If <code><var>pkOptions</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-authenticatorselection\" id=\"ref-for-dom-publickeycredentialcreationoptions-authenticatorselection\">authenticatorSelection</a></code></code> is present:</p>\n          <ol>\n           <li data-md=\"\">\n            <p>If <code><var>pkOptions</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-authenticatorselection\" id=\"ref-for-dom-publickeycredentialcreationoptions-authenticatorselection①\">authenticatorSelection</a></code>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-authenticatorselectioncriteria-authenticatorattachment\" id=\"ref-for-dom-authenticatorselectioncriteria-authenticatorattachment\">authenticatorAttachment</a></code></code> is\npresent and its value is not equal to <var>authenticator</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#authenticator-attachment-modality\" id=\"ref-for-authenticator-attachment-modality②\">authenticator attachment modality</a>, <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#iteration-continue\" id=\"ref-for-iteration-continue④\">continue</a>.</p>\n           </li><li data-md=\"\">\n            <p>If <code><var>pkOptions</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-authenticatorselection\" id=\"ref-for-dom-publickeycredentialcreationoptions-authenticatorselection②\">authenticatorSelection</a></code>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-authenticatorselectioncriteria-residentkey\" id=\"ref-for-dom-authenticatorselectioncriteria-residentkey\">residentKey</a></code></code></p>\n            <dl class=\"switch\">\n             <dt data-md=\"\">is present and set to <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-residentkeyrequirement-required\" id=\"ref-for-dom-residentkeyrequirement-required\">required</a></code>\n             </dt><dd data-md=\"\">\n              <p>If the <var>authenticator</var> is not capable of storing a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#client-side-discoverable-public-key-credential-source\" id=\"ref-for-client-side-discoverable-public-key-credential-source①\">client-side discoverable public key credential\n  source</a>, <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#iteration-continue\" id=\"ref-for-iteration-continue⑤\">continue</a>.</p>\n             </dd><dt data-md=\"\">is present and set to <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-residentkeyrequirement-preferred\" id=\"ref-for-dom-residentkeyrequirement-preferred\">preferred</a></code> or <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-residentkeyrequirement-discouraged\" id=\"ref-for-dom-residentkeyrequirement-discouraged\">discouraged</a></code>\n             </dt><dd data-md=\"\">\n              <p>No effect.</p>\n             </dd><dt data-md=\"\">is not present\n             </dt><dd data-md=\"\">\n              <p>if <code><var>pkOptions</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-authenticatorselection\" id=\"ref-for-dom-publickeycredentialcreationoptions-authenticatorselection③\">authenticatorSelection</a></code>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-authenticatorselectioncriteria-requireresidentkey\" id=\"ref-for-dom-authenticatorselectioncriteria-requireresidentkey\">requireResidentKey</a></code></code> is set to <code>true</code> and the <var>authenticator</var> is not capable of storing a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#client-side-discoverable-public-key-credential-source\" id=\"ref-for-client-side-discoverable-public-key-credential-source②\">client-side discoverable public\n  key credential source</a>, <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#iteration-continue\" id=\"ref-for-iteration-continue⑥\">continue</a>.</p>\n            </dd></dl>\n           </li><li data-md=\"\">\n            <p>If <code><var>pkOptions</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-authenticatorselection\" id=\"ref-for-dom-publickeycredentialcreationoptions-authenticatorselection④\">authenticatorSelection</a></code>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-authenticatorselectioncriteria-userverification\" id=\"ref-for-dom-authenticatorselectioncriteria-userverification\">userVerification</a></code></code> is\nset to <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-userverificationrequirement-required\" id=\"ref-for-dom-userverificationrequirement-required\">required</a></code> and the <var>authenticator</var> is not capable of performing <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#user-verification\" id=\"ref-for-user-verification①⑤\">user\nverification</a>, <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#iteration-continue\" id=\"ref-for-iteration-continue⑦\">continue</a>.</p>\n          </li></ol>\n         </li><li data-md=\"\">\n          <p>Let <var>requireResidentKey</var> be the <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"effective-resident-key-requirement-for-credential-creation\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">effective resident key requirement for credential creation</dfn>, a Boolean value, as follows:</p>\n          <p>If <code><var>pkOptions</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-authenticatorselection\" id=\"ref-for-dom-publickeycredentialcreationoptions-authenticatorselection⑤\">authenticatorSelection</a></code>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-authenticatorselectioncriteria-residentkey\" id=\"ref-for-dom-authenticatorselectioncriteria-residentkey①\">residentKey</a></code></code></p>\n          <dl class=\"switch\">\n           <dt data-md=\"\">is present and set to <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-residentkeyrequirement-required\" id=\"ref-for-dom-residentkeyrequirement-required①\">required</a></code>\n           </dt><dd data-md=\"\">\n            <p>Let <var>requireResidentKey</var> be <code>true</code>.</p>\n           </dd><dt data-md=\"\">is present and set to <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-residentkeyrequirement-preferred\" id=\"ref-for-dom-residentkeyrequirement-preferred①\">preferred</a></code>\n           </dt><dd data-md=\"\">\n            <p>If the <var>authenticator</var></p>\n            <dl class=\"switch\">\n             <dt data-md=\"\">is capable of <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#client-side-credential-storage-modality\" id=\"ref-for-client-side-credential-storage-modality①\">client-side credential storage modality</a>\n             </dt><dd data-md=\"\">\n              <p>Let <var>requireResidentKey</var> be <code>true</code>.</p>\n             </dd><dt data-md=\"\">is not capable of <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#client-side-credential-storage-modality\" id=\"ref-for-client-side-credential-storage-modality②\">client-side credential storage modality</a>, or if the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#client\" id=\"ref-for-client②①\">client</a> cannot determine authenticator capability,\n             </dt><dd data-md=\"\">\n              <p>Let <var>requireResidentKey</var> be <code>false</code>.</p>\n            </dd></dl>\n           </dd><dt data-md=\"\">is present and set to <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-residentkeyrequirement-discouraged\" id=\"ref-for-dom-residentkeyrequirement-discouraged①\">discouraged</a></code>\n           </dt><dd data-md=\"\">\n            <p>Let <var>requireResidentKey</var> be <code>false</code>.</p>\n           </dd><dt data-md=\"\">is not present\n           </dt><dd data-md=\"\">\n            <p>Let <var>requireResidentKey</var> be the value of <code><var>pkOptions</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-authenticatorselection\" id=\"ref-for-dom-publickeycredentialcreationoptions-authenticatorselection⑥\">authenticatorSelection</a></code>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-authenticatorselectioncriteria-requireresidentkey\" id=\"ref-for-dom-authenticatorselectioncriteria-requireresidentkey①\">requireResidentKey</a></code></code>.</p>\n          </dd></dl>\n         </li><li data-md=\"\">\n          <p>Let <var>userVerification</var> be the <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"effective-user-verification-requirement-for-credential-creation\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">effective user verification requirement for credential creation</dfn>, a Boolean value,\nas follows. If <code><var>pkOptions</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-authenticatorselection\" id=\"ref-for-dom-publickeycredentialcreationoptions-authenticatorselection⑦\">authenticatorSelection</a></code>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-authenticatorselectioncriteria-userverification\" id=\"ref-for-dom-authenticatorselectioncriteria-userverification①\">userVerification</a></code></code></p>\n          <dl class=\"switch\">\n           <dt data-md=\"\">is set to <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-userverificationrequirement-required\" id=\"ref-for-dom-userverificationrequirement-required①\">required</a></code>\n           </dt><dd data-md=\"\">\n            <ol>\n             <li data-md=\"\">\n              <p>If <code><var>options</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webappsec-credential-management/#dom-credentialcreationoptions-mediation\" id=\"ref-for-dom-credentialcreationoptions-mediation④\">mediation</a></code></code> is set to <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webappsec-credential-management/#dom-credentialmediationrequirement-conditional\" id=\"ref-for-dom-credentialmediationrequirement-conditional⑨\">conditional</a></code> and <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#user-verification\" id=\"ref-for-user-verification①⑥\">user verification</a> cannot be collected during the ceremony,\nthrow a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#constrainterror\" id=\"ref-for-constrainterror\">ConstraintError</a></code> <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#idl-DOMException\" id=\"ref-for-idl-DOMException⑨\">DOMException</a></code>.</p>\n             </li><li data-md=\"\">\n              <p>Let <var>userVerification</var> be <code>true</code>.</p>\n            </li></ol>\n           </dd><dt data-md=\"\">is set to <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-userverificationrequirement-preferred\" id=\"ref-for-dom-userverificationrequirement-preferred\">preferred</a></code>\n           </dt><dd data-md=\"\">\n            <p>If the <var>authenticator</var></p>\n            <dl class=\"switch\">\n             <dt data-md=\"\">is capable of <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#user-verification\" id=\"ref-for-user-verification①⑦\">user verification</a>\n             </dt><dd data-md=\"\">\n              <p>Let <var>userVerification</var> be <code>true</code>.</p>\n             </dd><dt data-md=\"\">is not capable of <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#user-verification\" id=\"ref-for-user-verification①⑧\">user verification</a>\n             </dt><dd data-md=\"\">\n              <p>Let <var>userVerification</var> be <code>false</code>.</p>\n            </dd></dl>\n           </dd><dt data-md=\"\">is set to <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-userverificationrequirement-discouraged\" id=\"ref-for-dom-userverificationrequirement-discouraged\">discouraged</a></code>\n           </dt><dd data-md=\"\">\n            <p>Let <var>userVerification</var> be <code>false</code>.</p>\n          </dd></dl>\n         </li><li data-md=\"\">\n          <p>Let <var>enterpriseAttestationPossible</var> be a Boolean value, as follows. If <code><var>pkOptions</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-attestation\" id=\"ref-for-dom-publickeycredentialcreationoptions-attestation\">attestation</a></code></code></p>\n          <dl class=\"switch\">\n           <dt data-md=\"\">is set to <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-attestationconveyancepreference-enterprise\" id=\"ref-for-dom-attestationconveyancepreference-enterprise\">enterprise</a></code>\n           </dt><dd data-md=\"\">\n            <p>Let <var>enterpriseAttestationPossible</var> be <code>true</code> if the user agent wishes to support enterprise attestation for <code><var>pkOptions</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-rp\" id=\"ref-for-dom-publickeycredentialcreationoptions-rp⑥\">rp</a></code>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialrpentity-id\" id=\"ref-for-dom-publickeycredentialrpentity-id⑥\">id</a></code></code> (see <a href=\"https://w3c.github.io/webauthn/#CreateCred-DetermineRpId\">step 8</a>, above). Otherwise <code>false</code>.</p>\n           </dd><dt data-md=\"\">otherwise\n           </dt><dd data-md=\"\">\n            <p>Let <var>enterpriseAttestationPossible</var> be <code>false</code>.</p>\n          </dd></dl>\n         </li><li data-md=\"\">\n          <p>Let <var>attestationFormats</var> be a list of strings, initialized to the value of <code><var>pkOptions</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-attestationformats\" id=\"ref-for-dom-publickeycredentialcreationoptions-attestationformats\">attestationFormats</a></code></code>.</p>\n         </li><li data-md=\"\">\n          <p>If <code><var>pkOptions</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-attestation\" id=\"ref-for-dom-publickeycredentialcreationoptions-attestation①\">attestation</a></code></code></p>\n          <dl class=\"switch\">\n           <dt data-md=\"\">is set to <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-attestationconveyancepreference-none\" id=\"ref-for-dom-attestationconveyancepreference-none\">none</a></code>\n           </dt><dd data-md=\"\">\n            <p>Set <var>attestationFormats</var> be the single-element list containing the string “none”</p>\n          </dd></dl>\n         </li><li data-md=\"\">\n          <p>Let <var>excludeCredentialDescriptorList</var> be a new <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list\" id=\"ref-for-list①\">list</a>.</p>\n         </li><li data-md=\"\">\n          <p><a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-iterate\" id=\"ref-for-list-iterate⑤\">For each</a> credential descriptor <var>C</var> in <code><var>pkOptions</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-excludecredentials\" id=\"ref-for-dom-publickeycredentialcreationoptions-excludecredentials\">excludeCredentials</a></code></code>:</p>\n          <ol>\n           <li data-md=\"\">\n            <p>If <code><var>C</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialdescriptor-transports\" id=\"ref-for-dom-publickeycredentialdescriptor-transports②\">transports</a></code></code> <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-is-empty\" id=\"ref-for-list-is-empty③\">is not empty</a>, and <var>authenticator</var> is connected over a transport not\nmentioned in <code><var>C</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialdescriptor-transports\" id=\"ref-for-dom-publickeycredentialdescriptor-transports③\">transports</a></code></code>, the client MAY <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#iteration-continue\" id=\"ref-for-iteration-continue⑧\">continue</a>.</p>\n            \n           </li><li data-md=\"\">\n            <p>Otherwise, <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-append\" id=\"ref-for-list-append②\">Append</a> <var>C</var> to <var>excludeCredentialDescriptorList</var>.</p>\n          </li></ol>\n         </li><li id=\"CreateCred-InvokeAuthnrMakeCred\"><a class=\"self-link\" href=\"https://w3c.github.io/webauthn/#CreateCred-InvokeAuthnrMakeCred\"></a> Invoke the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#authenticatormakecredential\" id=\"ref-for-authenticatormakecredential⑤\">authenticatorMakeCredential</a> operation on <var>authenticator</var> with <var>clientDataHash</var>, <code><var>pkOptions</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-rp\" id=\"ref-for-dom-publickeycredentialcreationoptions-rp⑦\">rp</a></code></code>, <code><var>pkOptions</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-user\" id=\"ref-for-dom-publickeycredentialcreationoptions-user②\">user</a></code></code>, <var>requireResidentKey</var>, <var>userVerification</var>, <var>credTypesAndPubKeyAlgs</var>, <var>excludeCredentialDescriptorList</var>, <var>enterpriseAttestationPossible</var>, <var>attestationFormats</var>,\n        and <var>authenticatorExtensions</var> as parameters. \n         </li><li data-md=\"\">\n          <p><a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#set-append\" id=\"ref-for-set-append\">Append</a> <var>authenticator</var> to <var>issuedRequests</var>.</p>\n        </li></ol>",
-                      "ignored": [
-                        "This authenticator is now the candidate authenticator. If pkOptions.authenticatorSelection is present: If pkOptions.authenticatorSelection.authenticatorAttachment is present and its value is not equal to authenticator’s authenticator attachment modality, continue. If pkOptions.authenticatorSelection.residentKey is present and set to required If the authenticator is not capable of storing a client-side discoverable public key credential source, continue. is present and set to preferred or discouraged No effect. is not present if pkOptions.authenticatorSelection.requireResidentKey is set to true and the authenticator is not capable of storing a client-side discoverable public key credential source, continue. If pkOptions.authenticatorSelection.userVerification is set to required and the authenticator is not capable of performing user verification, continue. Let requireResidentKey be the effective resident key requirement for credential creation, a Boolean value, as follows: If pkOptions.authenticatorSelection.residentKey is present and set to required Let requireResidentKey be true. is present and set to preferred If the authenticator is capable of client-side credential storage modality Let requireResidentKey be true. is not capable of client-side credential storage modality, or if the client cannot determine authenticator capability, Let requireResidentKey be false. is present and set to discouraged Let requireResidentKey be false. is not present Let requireResidentKey be the value of pkOptions.authenticatorSelection.requireResidentKey. Let userVerification be the effective user verification requirement for credential creation, a Boolean value, as follows. If pkOptions.authenticatorSelection.userVerification is set to required If options.mediation is set to conditional and user verification cannot be collected during the ceremony, throw a ConstraintError DOMException. Let userVerification be true. is set to preferred If the authenticator is capable of user verification Let userVerification be true. is not capable of user verification Let userVerification be false. is set to discouraged Let userVerification be false. Let enterpriseAttestationPossible be a Boolean value, as follows. If pkOptions.attestation is set to enterprise Let enterpriseAttestationPossible be true if the user agent wishes to support enterprise attestation for pkOptions.rp.id (see step 8, above). Otherwise false. otherwise Let enterpriseAttestationPossible be false. Let attestationFormats be a list of strings, initialized to the value of pkOptions.attestationFormats. If pkOptions.attestation is set to none Set attestationFormats be the single-element list containing the string “none” Let excludeCredentialDescriptorList be a new list. For each credential descriptor C in pkOptions.excludeCredentials: If C.transports is not empty, and authenticator is connected over a transport not mentioned in C.transports, the client MAY continue. Otherwise, Append C to excludeCredentialDescriptorList. Invoke the authenticatorMakeCredential operation on authenticator with clientDataHash, pkOptions.rp, pkOptions.user, requireResidentKey, userVerification, credTypesAndPubKeyAlgs, excludeCredentialDescriptorList, enterpriseAttestationPossible, attestationFormats, and authenticatorExtensions as parameters. Append authenticator to issuedRequests."
+                      "html": "<span class=\"marker\">Note:</span> This includes the case where an <var>authenticator</var> was available upon <var>lifetimeTimer</var> initiation.",
+                      "rationale": "if",
+                      "steps": [
+                        {
+                          "html": "<p>This <var>authenticator</var> is now the <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-for=\"create\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"create-candidate-authenticator\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">candidate authenticator</dfn>.</p>"
+                        },
+                        {
+                          "html": "If <code><var>pkOptions</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-authenticatorselection\" id=\"ref-for-dom-publickeycredentialcreationoptions-authenticatorselection\">authenticatorSelection</a></code></code> is present:",
+                          "rationale": "if",
+                          "steps": [
+                            {
+                              "html": "<p>If <code><var>pkOptions</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-authenticatorselection\" id=\"ref-for-dom-publickeycredentialcreationoptions-authenticatorselection①\">authenticatorSelection</a></code>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-authenticatorselectioncriteria-authenticatorattachment\" id=\"ref-for-dom-authenticatorselectioncriteria-authenticatorattachment\">authenticatorAttachment</a></code></code> is\npresent and its value is not equal to <var>authenticator</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#authenticator-attachment-modality\" id=\"ref-for-authenticator-attachment-modality②\">authenticator attachment modality</a>, <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#iteration-continue\" id=\"ref-for-iteration-continue④\">continue</a>.</p>"
+                            },
+                            {
+                              "html": "If <code><var>pkOptions</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-authenticatorselection\" id=\"ref-for-dom-publickeycredentialcreationoptions-authenticatorselection②\">authenticatorSelection</a></code>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-authenticatorselectioncriteria-residentkey\" id=\"ref-for-dom-authenticatorselectioncriteria-residentkey\">residentKey</a></code></code>",
+                              "rationale": ".switch",
+                              "steps": [
+                                {
+                                  "operation": "switch",
+                                  "steps": [
+                                    {
+                                      "case": "is present and set to required",
+                                      "steps": [
+                                        {
+                                          "html": "<p>If the <var>authenticator</var> is not capable of storing a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#client-side-discoverable-public-key-credential-source\" id=\"ref-for-client-side-discoverable-public-key-credential-source①\">client-side discoverable public key credential\n  source</a>, <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#iteration-continue\" id=\"ref-for-iteration-continue⑤\">continue</a>.</p>"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "case": "is present and set to preferred or discouraged",
+                                      "steps": [
+                                        {
+                                          "html": "<p>No effect.</p>"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "case": "is not present",
+                                      "steps": [
+                                        {
+                                          "html": "<p>if <code><var>pkOptions</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-authenticatorselection\" id=\"ref-for-dom-publickeycredentialcreationoptions-authenticatorselection③\">authenticatorSelection</a></code>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-authenticatorselectioncriteria-requireresidentkey\" id=\"ref-for-dom-authenticatorselectioncriteria-requireresidentkey\">requireResidentKey</a></code></code> is set to <code>true</code> and the <var>authenticator</var> is not capable of storing a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#client-side-discoverable-public-key-credential-source\" id=\"ref-for-client-side-discoverable-public-key-credential-source②\">client-side discoverable public\n  key credential source</a>, <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#iteration-continue\" id=\"ref-for-iteration-continue⑥\">continue</a>.</p>"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "html": "<p>If <code><var>pkOptions</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-authenticatorselection\" id=\"ref-for-dom-publickeycredentialcreationoptions-authenticatorselection④\">authenticatorSelection</a></code>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-authenticatorselectioncriteria-userverification\" id=\"ref-for-dom-authenticatorselectioncriteria-userverification\">userVerification</a></code></code> is\nset to <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-userverificationrequirement-required\" id=\"ref-for-dom-userverificationrequirement-required\">required</a></code> and the <var>authenticator</var> is not capable of performing <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#user-verification\" id=\"ref-for-user-verification①⑤\">user\nverification</a>, <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#iteration-continue\" id=\"ref-for-iteration-continue⑦\">continue</a>.</p>"
+                            }
+                          ]
+                        },
+                        {
+                          "html": "If <code><var>pkOptions</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-authenticatorselection\" id=\"ref-for-dom-publickeycredentialcreationoptions-authenticatorselection⑤\">authenticatorSelection</a></code>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-authenticatorselectioncriteria-residentkey\" id=\"ref-for-dom-authenticatorselectioncriteria-residentkey①\">residentKey</a></code></code>",
+                          "rationale": ".switch",
+                          "steps": [
+                            {
+                              "operation": "switch",
+                              "steps": [
+                                {
+                                  "case": "is present and set to required",
+                                  "steps": [
+                                    {
+                                      "html": "<p>Let <var>requireResidentKey</var> be <code>true</code>.</p>"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "case": "is present and set to preferred",
+                                  "steps": [
+                                    {
+                                      "html": "If the <var>authenticator</var>",
+                                      "rationale": ".switch",
+                                      "steps": [
+                                        {
+                                          "operation": "switch",
+                                          "steps": [
+                                            {
+                                              "case": "is capable of client-side credential storage modality",
+                                              "steps": [
+                                                {
+                                                  "html": "<p>Let <var>requireResidentKey</var> be <code>true</code>.</p>"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "case": "is not capable of client-side credential storage modality, or if the client cannot determine authenticator capability,",
+                                              "steps": [
+                                                {
+                                                  "html": "<p>Let <var>requireResidentKey</var> be <code>false</code>.</p>"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "case": "is present and set to discouraged",
+                                  "steps": [
+                                    {
+                                      "html": "<p>Let <var>requireResidentKey</var> be <code>false</code>.</p>"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "case": "is not present",
+                                  "steps": [
+                                    {
+                                      "html": "<p>Let <var>requireResidentKey</var> be the value of <code><var>pkOptions</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-authenticatorselection\" id=\"ref-for-dom-publickeycredentialcreationoptions-authenticatorselection⑥\">authenticatorSelection</a></code>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-authenticatorselectioncriteria-requireresidentkey\" id=\"ref-for-dom-authenticatorselectioncriteria-requireresidentkey①\">requireResidentKey</a></code></code>.</p>"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "html": "Let <var>userVerification</var> be the <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"effective-user-verification-requirement-for-credential-creation\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">effective user verification requirement for credential creation</dfn>, a Boolean value,\nas follows. If <code><var>pkOptions</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-authenticatorselection\" id=\"ref-for-dom-publickeycredentialcreationoptions-authenticatorselection⑦\">authenticatorSelection</a></code>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-authenticatorselectioncriteria-userverification\" id=\"ref-for-dom-authenticatorselectioncriteria-userverification①\">userVerification</a></code></code>",
+                          "rationale": ".switch",
+                          "steps": [
+                            {
+                              "operation": "switch",
+                              "steps": [
+                                {
+                                  "case": "is set to required",
+                                  "steps": [
+                                    {
+                                      "html": "<ol>\n             <li data-md=\"\">\n              <p>If <code><var>options</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webappsec-credential-management/#dom-credentialcreationoptions-mediation\" id=\"ref-for-dom-credentialcreationoptions-mediation④\">mediation</a></code></code> is set to <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webappsec-credential-management/#dom-credentialmediationrequirement-conditional\" id=\"ref-for-dom-credentialmediationrequirement-conditional⑨\">conditional</a></code> and <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#user-verification\" id=\"ref-for-user-verification①⑥\">user verification</a> cannot be collected during the ceremony,\nthrow a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#constrainterror\" id=\"ref-for-constrainterror\">ConstraintError</a></code> <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#idl-DOMException\" id=\"ref-for-idl-DOMException⑨\">DOMException</a></code>.</p>\n             </li><li data-md=\"\">\n              <p>Let <var>userVerification</var> be <code>true</code>.</p>\n            </li></ol>",
+                                      "rationale": "if",
+                                      "steps": [
+                                        {
+                                          "html": "<p>If <code><var>options</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webappsec-credential-management/#dom-credentialcreationoptions-mediation\" id=\"ref-for-dom-credentialcreationoptions-mediation④\">mediation</a></code></code> is set to <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webappsec-credential-management/#dom-credentialmediationrequirement-conditional\" id=\"ref-for-dom-credentialmediationrequirement-conditional⑨\">conditional</a></code> and <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#user-verification\" id=\"ref-for-user-verification①⑥\">user verification</a> cannot be collected during the ceremony,\nthrow a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#constrainterror\" id=\"ref-for-constrainterror\">ConstraintError</a></code> <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#idl-DOMException\" id=\"ref-for-idl-DOMException⑨\">DOMException</a></code>.</p>"
+                                        },
+                                        {
+                                          "html": "<p>Let <var>userVerification</var> be <code>true</code>.</p>"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "case": "is set to preferred",
+                                  "steps": [
+                                    {
+                                      "html": "If the <var>authenticator</var>",
+                                      "rationale": ".switch",
+                                      "steps": [
+                                        {
+                                          "operation": "switch",
+                                          "steps": [
+                                            {
+                                              "case": "is capable of user verification",
+                                              "steps": [
+                                                {
+                                                  "html": "<p>Let <var>userVerification</var> be <code>true</code>.</p>"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "case": "is not capable of user verification",
+                                              "steps": [
+                                                {
+                                                  "html": "<p>Let <var>userVerification</var> be <code>false</code>.</p>"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "case": "is set to discouraged",
+                                  "steps": [
+                                    {
+                                      "html": "<p>Let <var>userVerification</var> be <code>false</code>.</p>"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "html": "Let <var>enterpriseAttestationPossible</var> be a Boolean value, as follows. If <code><var>pkOptions</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-attestation\" id=\"ref-for-dom-publickeycredentialcreationoptions-attestation\">attestation</a></code></code>",
+                          "rationale": ".switch",
+                          "steps": [
+                            {
+                              "operation": "switch",
+                              "steps": [
+                                {
+                                  "case": "is set to enterprise",
+                                  "steps": [
+                                    {
+                                      "html": "<p>Let <var>enterpriseAttestationPossible</var> be <code>true</code> if the user agent wishes to support enterprise attestation for <code><var>pkOptions</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-rp\" id=\"ref-for-dom-publickeycredentialcreationoptions-rp⑥\">rp</a></code>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialrpentity-id\" id=\"ref-for-dom-publickeycredentialrpentity-id⑥\">id</a></code></code> (see <a href=\"https://w3c.github.io/webauthn/#CreateCred-DetermineRpId\">step 8</a>, above). Otherwise <code>false</code>.</p>"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "case": "otherwise",
+                                  "steps": [
+                                    {
+                                      "html": "<p>Let <var>enterpriseAttestationPossible</var> be <code>false</code>.</p>"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "html": "<p>Let <var>attestationFormats</var> be a list of strings, initialized to the value of <code><var>pkOptions</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-attestationformats\" id=\"ref-for-dom-publickeycredentialcreationoptions-attestationformats\">attestationFormats</a></code></code>.</p>"
+                        },
+                        {
+                          "html": "If <code><var>pkOptions</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-attestation\" id=\"ref-for-dom-publickeycredentialcreationoptions-attestation①\">attestation</a></code></code>",
+                          "rationale": ".switch",
+                          "steps": [
+                            {
+                              "operation": "switch",
+                              "steps": [
+                                {
+                                  "case": "is set to none",
+                                  "steps": [
+                                    {
+                                      "html": "<p>Set <var>attestationFormats</var> be the single-element list containing the string “none”</p>"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "html": "<p>Let <var>excludeCredentialDescriptorList</var> be a new <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list\" id=\"ref-for-list①\">list</a>.</p>"
+                        },
+                        {
+                          "html": "<a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-iterate\" id=\"ref-for-list-iterate⑤\">For each</a> credential descriptor <var>C</var> in <code><var>pkOptions</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-excludecredentials\" id=\"ref-for-dom-publickeycredentialcreationoptions-excludecredentials\">excludeCredentials</a></code></code>:",
+                          "rationale": "if",
+                          "steps": [
+                            {
+                              "html": "<p>If <code><var>C</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialdescriptor-transports\" id=\"ref-for-dom-publickeycredentialdescriptor-transports②\">transports</a></code></code> <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-is-empty\" id=\"ref-for-list-is-empty③\">is not empty</a>, and <var>authenticator</var> is connected over a transport not\nmentioned in <code><var>C</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialdescriptor-transports\" id=\"ref-for-dom-publickeycredentialdescriptor-transports③\">transports</a></code></code>, the client MAY <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#iteration-continue\" id=\"ref-for-iteration-continue⑧\">continue</a>.</p>"
+                            },
+                            {
+                              "html": "<p>Otherwise, <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-append\" id=\"ref-for-list-append②\">Append</a> <var>C</var> to <var>excludeCredentialDescriptorList</var>.</p>"
+                            }
+                          ]
+                        },
+                        {
+                          "html": "<a class=\"self-link\" href=\"https://w3c.github.io/webauthn/#CreateCred-InvokeAuthnrMakeCred\"></a> Invoke the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#authenticatormakecredential\" id=\"ref-for-authenticatormakecredential⑤\">authenticatorMakeCredential</a> operation on <var>authenticator</var> with <var>clientDataHash</var>, <code><var>pkOptions</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-rp\" id=\"ref-for-dom-publickeycredentialcreationoptions-rp⑦\">rp</a></code></code>, <code><var>pkOptions</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-user\" id=\"ref-for-dom-publickeycredentialcreationoptions-user②\">user</a></code></code>, <var>requireResidentKey</var>, <var>userVerification</var>, <var>credTypesAndPubKeyAlgs</var>, <var>excludeCredentialDescriptorList</var>, <var>enterpriseAttestationPossible</var>, <var>attestationFormats</var>,\n        and <var>authenticatorExtensions</var> as parameters."
+                        },
+                        {
+                          "html": "<p><a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#set-append\" id=\"ref-for-set-append\">Append</a> <var>authenticator</var> to <var>issuedRequests</var>.</p>"
+                        }
                       ]
                     }
                   ]
@@ -1005,51 +1320,96 @@
       ]
     },
     {
-      "html": "If <var>crossOrigin</var> is true:",
-      "rationale": "append",
+      "html": "Verifiers may use the following algorithm to verify an encoded <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dictdef-collectedclientdata\" id=\"ref-for-dictdef-collectedclientdata⑨\">CollectedClientData</a></code> if they cannot support a full JSON parser:",
+      "rationale": "let",
       "steps": [
         {
-          "html": "<p>Append 0x74727565 (<code>true</code>) to <var>expected</var>.</p>"
-        }
-      ]
-    },
-    {
-      "html": "Otherwise, i.e. <var>crossOrigin</var> is false:",
-      "rationale": "append",
-      "steps": [
+          "html": "<p>The inputs to the algorithm are:</p>\n     <ol>\n      <li data-md=\"\">\n       <p>A bytestring, <var>clientDataJSON</var>, that contains <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-authenticatorresponse-clientdatajson\" id=\"ref-for-dom-authenticatorresponse-clientdatajson⑥\">clientDataJSON</a></code> — the serialized <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dictdef-collectedclientdata\" id=\"ref-for-dictdef-collectedclientdata①⓪\">CollectedClientData</a></code> that is to be verified.</p>\n      </li><li data-md=\"\">\n       <p>A string, <var>type</var>, that contains the expected <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-collectedclientdata-type\" id=\"ref-for-dom-collectedclientdata-type⑤\">type</a></code>.</p>\n      </li><li data-md=\"\">\n       <p>A byte string, <var>challenge</var>, that contains the challenge byte string that was given in the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dictdef-publickeycredentialrequestoptions\" id=\"ref-for-dictdef-publickeycredentialrequestoptions①⓪\">PublicKeyCredentialRequestOptions</a></code> or <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dictdef-publickeycredentialcreationoptions\" id=\"ref-for-dictdef-publickeycredentialcreationoptions⑦\">PublicKeyCredentialCreationOptions</a></code>.</p>\n      </li><li data-md=\"\">\n       <p>A string, <var>origin</var>, that contains the expected <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-collectedclientdata-origin\" id=\"ref-for-dom-collectedclientdata-origin⑤\">origin</a></code> that issued the request to the user agent.</p>\n      </li><li data-md=\"\">\n       <p>A boolean, <var>crossOrigin</var>, that is true if, and only if, the request should have been performed within a cross-origin <code><a data-link-type=\"element\" href=\"https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-iframe-element\" id=\"ref-for-the-iframe-element\">iframe</a></code>.</p>\n     </li></ol>",
+          "ignored": [
+            "A bytestring, clientDataJSON, that contains clientDataJSON — the serialized CollectedClientData that is to be verified. A string, type, that contains the expected type. A byte string, challenge, that contains the challenge byte string that was given in the PublicKeyCredentialRequestOptions or PublicKeyCredentialCreationOptions. A string, origin, that contains the expected origin that issued the request to the user agent. A boolean, crossOrigin, that is true if, and only if, the request should have been performed within a cross-origin iframe."
+          ]
+        },
         {
-          "html": "<p>Append 0x66616c7365 (<code>false</code>) to <var>expected</var>.</p>"
-        }
-      ]
-    },
-    {
-      "html": "If the byte of <var>clientDataJSON</var> at the offset equal to the length of <var>expected</var>:",
-      "rationale": ".switch",
-      "steps": [
+          "html": "<p>Let <var>expected</var> be an empty byte string.</p>"
+        },
         {
-          "operation": "switch",
+          "html": "<p>Append 0x7b2274797065223a (<code>{\"type\":</code>) to <var>expected</var>.</p>"
+        },
+        {
+          "html": "<p>Append <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#ccdtostring\" id=\"ref-for-ccdtostring④\">CCDToString</a>(<var>type</var>) to <var>expected</var>.</p>"
+        },
+        {
+          "html": "<p>Append 0x2c226368616c6c656e6765223a (<code>,\"challenge\":</code>) to <var>expected</var>.</p>"
+        },
+        {
+          "html": "<p>Perform <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#base64url-encoding\" id=\"ref-for-base64url-encoding①②\">base64url encoding</a> on <var>challenge</var> to produce a string, <var>challengeBase64</var>.</p>"
+        },
+        {
+          "html": "<p>Append <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#ccdtostring\" id=\"ref-for-ccdtostring⑤\">CCDToString</a>(<var>challengeBase64</var>) to <var>expected</var>.</p>"
+        },
+        {
+          "html": "<p>Append 0x2c226f726967696e223a (<code>,\"origin\":</code>) to <var>expected</var>.</p>"
+        },
+        {
+          "html": "<p>Append <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#ccdtostring\" id=\"ref-for-ccdtostring⑥\">CCDToString</a>(<var>origin</var>) to <var>expected</var>.</p>"
+        },
+        {
+          "html": "<p>Append 0x2c2263726f73734f726967696e223a (<code>,\"crossOrigin\":</code>) to <var>expected</var>.</p>"
+        },
+        {
+          "html": "If <var>crossOrigin</var> is true:",
+          "rationale": "append",
           "steps": [
             {
-              "case": "is 0x7d",
-              "steps": [
-                {
-                  "html": "<p>The verification is successful.</p>"
-                }
-              ]
-            },
+              "html": "<p>Append 0x74727565 (<code>true</code>) to <var>expected</var>.</p>"
+            }
+          ]
+        },
+        {
+          "html": "Otherwise, i.e. <var>crossOrigin</var> is false:",
+          "rationale": "append",
+          "steps": [
             {
-              "case": "is 0x2c",
-              "steps": [
-                {
-                  "html": "<p>The verification is successful.</p>"
-                }
-              ]
-            },
+              "html": "<p>Append 0x66616c7365 (<code>false</code>) to <var>expected</var>.</p>"
+            }
+          ]
+        },
+        {
+          "html": "<p>If <var>expected</var> is not a prefix of <var>clientDataJSON</var> then the verification has failed.</p>"
+        },
+        {
+          "html": "<p>If <var>clientDataJSON</var> is not at least one byte longer than <var>expected</var> then the verification has failed.</p>"
+        },
+        {
+          "html": "If the byte of <var>clientDataJSON</var> at the offset equal to the length of <var>expected</var>:",
+          "rationale": ".switch",
+          "steps": [
             {
-              "case": "otherwise",
+              "operation": "switch",
               "steps": [
                 {
-                  "html": "<p>The verification has failed.</p>"
+                  "case": "is 0x7d",
+                  "steps": [
+                    {
+                      "html": "<p>The verification is successful.</p>"
+                    }
+                  ]
+                },
+                {
+                  "case": "is 0x2c",
+                  "steps": [
+                    {
+                      "html": "<p>The verification is successful.</p>"
+                    }
+                  ]
+                },
+                {
+                  "case": "otherwise",
+                  "steps": [
+                    {
+                      "html": "<p>The verification has failed.</p>"
+                    }
+                  ]
                 }
               ]
             }
@@ -1729,6 +2089,18 @@
         },
         {
           "html": "<p>If sufficiently many (as determined by <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#relying-party\" id=\"ref-for-relying-party②⑨①\">Relying Party</a> policy) <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-item\" id=\"ref-for-list-item①③\">items</a> of <var>attStmt</var> verify successfully,\nreturn implementation-specific values representing any combination of outputs from successful <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#verification-procedure\" id=\"ref-for-verification-procedure①④\">verification procedures</a>.</p>"
+        }
+      ]
+    },
+    {
+      "html": "In addition to setting the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-authenticationextensionsclientinputs-appid\" id=\"ref-for-dom-authenticationextensionsclientinputs-appid\">appid</a></code> extension input,\nusing this extension requires some additional processing by the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#relying-party\" id=\"ref-for-relying-party③⓪①\">Relying Party</a> in order to allow users to <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#authentication\" id=\"ref-for-authentication①③\">authenticate</a> using their registered U2F credentials:",
+      "rationale": "set",
+      "steps": [
+        {
+          "html": "<p>List the desired U2F credentials in the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-allowcredentials\" id=\"ref-for-dom-publickeycredentialrequestoptions-allowcredentials②①\">allowCredentials</a></code> option\n of the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webappsec-credential-management/#dom-credentialscontainer-get\" id=\"ref-for-dom-credentialscontainer-get③⑧\">get()</a></code> method:</p>\n     <ul>\n      <li data-md=\"\">\n       <p>Set the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialdescriptor-type\" id=\"ref-for-dom-publickeycredentialdescriptor-type⑤\">type</a></code> members to <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialtype-public-key\" id=\"ref-for-dom-publickeycredentialtype-public-key⑤\">public-key</a></code>.</p>\n      </li><li data-md=\"\">\n       <p>Set the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialdescriptor-id\" id=\"ref-for-dom-publickeycredentialdescriptor-id①①\">id</a></code> members to the respective U2F key handles of the desired credentials. Note that U2F key handles commonly use <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#base64url-encoding\" id=\"ref-for-base64url-encoding①③\">base64url encoding</a> but must be decoded to their binary form when used in <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialdescriptor-id\" id=\"ref-for-dom-publickeycredentialdescriptor-id①②\">id</a></code>.</p>\n     </li></ul>\n     <p><code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-allowcredentials\" id=\"ref-for-dom-publickeycredentialrequestoptions-allowcredentials②②\">allowCredentials</a></code> MAY contain a mixture\n of both WebAuthn <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#credential-id\" id=\"ref-for-credential-id③⑦\">credential IDs</a> and U2F key handles;\n stating the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-authenticationextensionsclientinputs-appid\" id=\"ref-for-dom-authenticationextensionsclientinputs-appid①\">appid</a></code> via this extension\n does not prevent the user from using a WebAuthn-registered credential\n scoped to the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#rp-id\" id=\"ref-for-rp-id④②\">RP ID</a> stated in <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-rpid\" id=\"ref-for-dom-publickeycredentialrequestoptions-rpid⑤\">rpId</a></code>.</p>"
+        },
+        {
+          "html": "<p>When <a href=\"https://w3c.github.io/webauthn/#rp-op-verifying-assertion-step-rpid-hash\">verifying the assertion</a>, expect that the <code><a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#authdata-rpidhash\" id=\"ref-for-authdata-rpidhash④\">rpIdHash</a></code> MAY be the hash of the <var>AppID</var> instead of the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webauthn/#rp-id\" id=\"ref-for-rp-id④③\">RP ID</a>.</p>"
         }
       ]
     },

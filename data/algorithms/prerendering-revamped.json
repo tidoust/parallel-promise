@@ -921,14 +921,20 @@
       ]
     },
     {
-      "html": "Else if <var>context</var> is not <a data-link-type=\"dfn\" href=\"https://webaudio.github.io/web-audio-api/#allowed-to-start\" id=\"ref-for-allowed-to-start②\">allow to start</a> only due to the prerendering, then append the following steps to <var>context</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/nav-speculation/prerendering.html#document-post-prerendering-activation-steps-list\" id=\"ref-for-document-post-prerendering-activation-steps-list⑥\">post-prerendering activation steps list</a>.",
+      "html": "Also modify <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webaudio.github.io/web-audio-api/#dom-audiocontext-audiocontext\" id=\"ref-for-dom-audiocontext-audiocontext\">AudioContext()</a></code> constructor steps to have the following step before returning the constructed object.",
       "rationale": "set",
       "steps": [
         {
-          "html": "<p>Set the <a data-link-type=\"dfn\" href=\"https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-control-thread-state-slot\" id=\"ref-for-dom-baseaudiocontext-control-thread-state-slot\">[[control thread state]]</a> on <var>context</var> to <a data-link-type=\"dfn\" href=\"https://webaudio.github.io/web-audio-api/#dom-audiocontextstate-running\" id=\"ref-for-dom-audiocontextstate-running\">running</a>.</p>"
-        },
-        {
-          "html": "<p><a data-link-type=\"dfn\" href=\"https://webaudio.github.io/web-audio-api/#queuing\" id=\"ref-for-queuing\">Queue a control message</a> to resume <var>context</var>.</p>"
+          "html": "Else if <var>context</var> is not <a data-link-type=\"dfn\" href=\"https://webaudio.github.io/web-audio-api/#allowed-to-start\" id=\"ref-for-allowed-to-start②\">allow to start</a> only due to the prerendering, then append the following steps to <var>context</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/nav-speculation/prerendering.html#document-post-prerendering-activation-steps-list\" id=\"ref-for-document-post-prerendering-activation-steps-list⑥\">post-prerendering activation steps list</a>.",
+          "rationale": "set",
+          "steps": [
+            {
+              "html": "<p>Set the <a data-link-type=\"dfn\" href=\"https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-control-thread-state-slot\" id=\"ref-for-dom-baseaudiocontext-control-thread-state-slot\">[[control thread state]]</a> on <var>context</var> to <a data-link-type=\"dfn\" href=\"https://webaudio.github.io/web-audio-api/#dom-audiocontextstate-running\" id=\"ref-for-dom-audiocontextstate-running\">running</a>.</p>"
+            },
+            {
+              "html": "<p><a data-link-type=\"dfn\" href=\"https://webaudio.github.io/web-audio-api/#queuing\" id=\"ref-for-queuing\">Queue a control message</a> to resume <var>context</var>.</p>"
+            }
+          ]
         }
       ]
     },

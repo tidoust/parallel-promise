@@ -11,9 +11,21 @@
       "rationale": "if",
       "steps": [
         {
-          "html": "If the item has an definite placement in the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-grid-3/#grid-axis\" id=\"ref-for-grid-axis⑨\">grid axis</a>,\n\t\t\tuse that placement.\n\t\t\tOtherwise, resolve its <span id=\"ref-for-grid-axis①⓪\">grid axis</span> placement using these substeps: \n     <ol>\n      <li>Starting at the first <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-grid-3/#grid-axis\" id=\"ref-for-grid-axis①①\">grid axis</a> line in the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-grid-2/#implicit-grid\" id=\"ref-for-implicit-grid\">implicit grid</a>. \n      </li><li>Find the largest <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-grid-3/#running-position\" id=\"ref-for-running-position\">running position</a> of the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-grid-3/#grid-axis\" id=\"ref-for-grid-axis①②\">grid axis</a> tracks\n\t\t\t\t\tthat the item would span if it were placed at this line,\n\t\t\t\t\tand call this position <var>max_pos</var>. \n      </li><li>Increment the line number and repeat step 2\n\t\t\t\t\tuntil the item would no longer fit inside the grid. \n      </li><li>Pick the line that resulted in the smallest <var>max_pos</var> as the item’s definite placement in the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-grid-3/#grid-axis\" id=\"ref-for-grid-axis①③\">grid axis</a>. \n     </li></ol>",
-          "ignored": [
-            "Starting at the first grid axis line in the implicit grid. Find the largest running position of the grid axis tracks that the item would span if it were placed at this line, and call this position max_pos. Increment the line number and repeat step 2 until the item would no longer fit inside the grid. Pick the line that resulted in the smallest max_pos as the item’s definite placement in the grid axis."
+          "html": "If the item has an definite placement in the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-grid-3/#grid-axis\" id=\"ref-for-grid-axis⑨\">grid axis</a>,\n\t\t\tuse that placement.\n\t\t\tOtherwise, resolve its <span id=\"ref-for-grid-axis①⓪\">grid axis</span> placement using these substeps:",
+          "rationale": "find",
+          "steps": [
+            {
+              "html": "Starting at the first <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-grid-3/#grid-axis\" id=\"ref-for-grid-axis①①\">grid axis</a> line in the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-grid-2/#implicit-grid\" id=\"ref-for-implicit-grid\">implicit grid</a>."
+            },
+            {
+              "html": "Find the largest <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-grid-3/#running-position\" id=\"ref-for-running-position\">running position</a> of the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-grid-3/#grid-axis\" id=\"ref-for-grid-axis①②\">grid axis</a> tracks\n\t\t\t\t\tthat the item would span if it were placed at this line,\n\t\t\t\t\tand call this position <var>max_pos</var>."
+            },
+            {
+              "html": "Increment the line number and repeat step 2\n\t\t\t\t\tuntil the item would no longer fit inside the grid."
+            },
+            {
+              "html": "Pick the line that resulted in the smallest <var>max_pos</var> as the item’s definite placement in the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-grid-3/#grid-axis\" id=\"ref-for-grid-axis①③\">grid axis</a>."
+            }
           ]
         },
         {

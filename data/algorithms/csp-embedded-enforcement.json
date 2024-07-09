@@ -28,20 +28,37 @@
       ]
     },
     {
-      "html": "Add the following after step 10 of HTML’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsing-the-web.html#navigate\" id=\"ref-for-navigate②\">navigate</a> algorithm:",
-      "rationale": "set",
+      "name": "Allow-CSP-From",
+      "href": "https://w3c.github.io/webappsec-cspee/#http-headerdef-allow-csp-from",
+      "html": "An embedee can opt-into accepting a policy specified by an embedder by responding with a\n  \"<dfn class=\"dfn-paneled\" data-dfn-type=\"http-header\" data-export=\"\" id=\"http-headerdef-allow-csp-from\"><code>Allow-CSP-From</code></dfn>\" HTTP response header. The header’s value is\n  represented by the following ABNF <a data-link-type=\"biblio\" href=\"https://w3c.github.io/webappsec-cspee/#biblio-rfc5234\">[RFC5234]</a>:",
+      "rationale": "add",
       "steps": [
         {
-          "html": "<p><a data-link-type=\"abstract-op\" href=\"https://w3c.github.io/webappsec-cspee/#abstract-opdef-set-the-required-csp\" id=\"ref-for-abstract-opdef-set-the-required-csp\">Set</a> <code>browsingContext</code>'s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-cspee/#browsing-context-required-csp\" id=\"ref-for-browsing-context-required-csp④\">required CSP</a>.</p>"
-        }
-      ]
-    },
-    {
-      "html": "Add the following after step 5 of HTML’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsing-the-web.html#process-a-navigate-fetch\" id=\"ref-for-process-a-navigate-fetch\">process a navigate fetch</a> algorithm:",
-      "rationale": "set",
-      "steps": [
+          "html": "<p><code><a data-link-type=\"element\" href=\"https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-iframe-element\" id=\"ref-for-the-iframe-element⑧\">iframe</a></code> elements have a <code><a data-link-type=\"element-sub\" href=\"https://w3c.github.io/webappsec-cspee/#element-attrdef-iframe-csp\" id=\"ref-for-element-attrdef-iframe-csp①⓪\">csp</a></code> attribute, defined in <a href=\"https://w3c.github.io/webappsec-cspee/#csp-attribute\">§ 2.1 &lt;iframe&gt;'s csp attribute</a>.</p>"
+        },
         {
-          "html": "<p><a data-link-type=\"abstract-op\" href=\"https://w3c.github.io/webappsec-cspee/#abstract-opdef-set-the-sec-required-csp-header\" id=\"ref-for-abstract-opdef-set-the-sec-required-csp-header\">Set</a> <code>request</code>'s\n  \"<a data-link-type=\"http-header\" href=\"https://w3c.github.io/webappsec-cspee/#http-headerdef-sec-required-csp\" id=\"ref-for-http-headerdef-sec-required-csp⑥\"><code>Sec-Required-CSP</code></a>\" header.</p>"
+          "html": "<p>Each <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsers.html#browsing-context\" id=\"ref-for-browsing-context\">browsing context</a> has a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-cspee/#browsing-context-required-csp\" id=\"ref-for-browsing-context-required-csp③\">required CSP</a>, defined in <a href=\"https://w3c.github.io/webappsec-cspee/#required-csp\">§ 2.4.1 Browsing Context’s Required CSP</a>.</p>"
+        },
+        {
+          "html": "Add the following after step 10 of HTML’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsing-the-web.html#navigate\" id=\"ref-for-navigate②\">navigate</a> algorithm:",
+          "rationale": "set",
+          "steps": [
+            {
+              "html": "<p><a data-link-type=\"abstract-op\" href=\"https://w3c.github.io/webappsec-cspee/#abstract-opdef-set-the-required-csp\" id=\"ref-for-abstract-opdef-set-the-required-csp\">Set</a> <code>browsingContext</code>'s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-cspee/#browsing-context-required-csp\" id=\"ref-for-browsing-context-required-csp④\">required CSP</a>.</p>"
+            }
+          ]
+        },
+        {
+          "html": "<p>Add the following to the list of error conditions in step 1 of HTML’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsing-the-web.html#process-a-navigate-response\" id=\"ref-for-process-a-navigate-response\">process a navigate response</a> algorithm:</p>\n      <ul>\n       <li data-md=\"\">\n        <p>The <a href=\"https://w3c.github.io/webappsec-cspee/#process-response\">§ 4.1 Is response to request blocked by context’s required CSP?</a> algorithm returns \"<code>Blocked</code>\" when executed\n  upon <code>response</code>, <code>request</code>, and <code>browsingContext</code>.</p>\n      </li></ul>\n      <p class=\"issue\" id=\"issue-fdc1da1f①\"><a class=\"self-link\" href=\"https://w3c.github.io/webappsec-cspee/#issue-fdc1da1f%E2%91%A0\"></a> Upstream this to WHATWG’s HTML.</p>\n      <p class=\"issue\" id=\"issue-ed7a45a9\"><a class=\"self-link\" href=\"https://w3c.github.io/webappsec-cspee/#issue-ed7a45a9\"></a> W3C’s HTML is not based on Fetch, and does not have\n  a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsing-the-web.html#process-a-navigate-response\" id=\"ref-for-process-a-navigate-response①\">process a navigate response</a> algorithm into which to hook. <a href=\"https://github.com/w3c/html/issues/584\">&lt;https://github.com/w3c/html/issues/584&gt;</a></p>"
+        },
+        {
+          "html": "Add the following after step 5 of HTML’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsing-the-web.html#process-a-navigate-fetch\" id=\"ref-for-process-a-navigate-fetch\">process a navigate fetch</a> algorithm:",
+          "rationale": "set",
+          "steps": [
+            {
+              "html": "<p><a data-link-type=\"abstract-op\" href=\"https://w3c.github.io/webappsec-cspee/#abstract-opdef-set-the-sec-required-csp-header\" id=\"ref-for-abstract-opdef-set-the-sec-required-csp-header\">Set</a> <code>request</code>'s\n  \"<a data-link-type=\"http-header\" href=\"https://w3c.github.io/webappsec-cspee/#http-headerdef-sec-required-csp\" id=\"ref-for-http-headerdef-sec-required-csp⑥\"><code>Sec-Required-CSP</code></a>\" header.</p>"
+            }
+          ]
         }
       ]
     },

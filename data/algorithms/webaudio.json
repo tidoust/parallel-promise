@@ -1511,6 +1511,34 @@
       ]
     },
     {
+      "rationale": "apply",
+      "steps": [
+        {
+          "html": "<p>Up-sample the input samples to 2x or 4x the sample-rate of\nthe <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webaudio.github.io/web-audio-api/#AudioContext\" id=\"ref-for-AudioContext①④⑥\">AudioContext</a></code>. Thus for each <a data-link-type=\"dfn\" href=\"https://webaudio.github.io/web-audio-api/#render-quantum\" id=\"ref-for-render-quantum①⑥\">render\nquantum</a>, generate 256 (for 2x) or 512 (for 4x) samples.</p>"
+        },
+        {
+          "html": "<p>Apply the shaping curve.</p>"
+        },
+        {
+          "html": "<p>Down-sample the result back to the sample-rate of the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webaudio.github.io/web-audio-api/#AudioContext\" id=\"ref-for-AudioContext①④⑦\">AudioContext</a></code>. Thus taking the 256 (or 512)\nprocessed samples, generating 128 as the final result.</p>"
+        }
+      ]
+    },
+    {
+      "rationale": "apply",
+      "steps": [
+        {
+          "html": "<p>Up-sample the input samples to 2x or 4x the sample-rate of\nthe <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webaudio.github.io/web-audio-api/#AudioContext\" id=\"ref-for-AudioContext①④⑧\">AudioContext</a></code>. Thus for each <a data-link-type=\"dfn\" href=\"https://webaudio.github.io/web-audio-api/#render-quantum\" id=\"ref-for-render-quantum①⑦\">render\nquantum</a>, generate twice (for 2x) or four times (for 4x) samples.</p>"
+        },
+        {
+          "html": "<p>Apply the shaping curve.</p>"
+        },
+        {
+          "html": "<p>Down-sample the result back to the sample-rate of the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webaudio.github.io/web-audio-api/#AudioContext\" id=\"ref-for-AudioContext①④⑨\">AudioContext</a></code>. Thus taking the previously processed samples\nprocessed samples, generating a single render quantum worth of\nsamples as the final result.</p>"
+        }
+      ]
+    },
+    {
       "name": "AudioWorkletGlobalScope.registerProcess(name, processorCtr)",
       "html": "When the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webaudio.github.io/web-audio-api/#dom-audioworkletglobalscope-registerprocessor\" id=\"ref-for-dom-audioworkletglobalscope-registerprocessor③\">registerProcessor(name, processorCtor)</a></code> method is called, perform the following steps. If an\n    exception is thrown in any step, abort the remaining\n    steps.",
       "rationale": ".algorithm",

@@ -72,7 +72,7 @@
         },
         {
           "html": "Run the following steps <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#in-parallel\" id=\"ref-for-in-parallel\">in parallel</a>:",
-          "rationale": "reject",
+          "rationale": "queue",
           "steps": [
             {
               "html": "<p><a data-link-type=\"dfn\" href=\"https://webassembly.github.io/js-promise-integration/js-api/#compile-a-webassembly-module\" id=\"ref-for-compile-a-webassembly-module①\">Compile the WebAssembly module</a> <var>bytes</var> and store the result as <var>module</var>.</p>"
@@ -500,7 +500,7 @@
         },
         {
           "html": "<a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#upon-fulfillment\" id=\"ref-for-upon-fulfillment\">Upon fulfillment</a> of <var>promiseOfModule</var> with value <var>module</var>:",
-          "rationale": "reject",
+          "rationale": "resolve",
           "steps": [
             {
               "html": "<p><a data-link-type=\"dfn\" href=\"https://webassembly.github.io/js-promise-integration/js-api/#asynchronously-instantiate-a-webassembly-module\" id=\"ref-for-asynchronously-instantiate-a-webassembly-module\">Instantiate the WebAssembly module</a> <var>module</var> importing <var>importObject</var>, and let <var>innerPromise</var> be the result.</p>"

@@ -57,9 +57,15 @@
               ]
             },
             {
-              "html": "<p>If <a data-link-type=\"dfn\" href=\"https://wicg.github.io/keyboard-lock/#keyboard-enable-keyboard-lock\" id=\"ref-for-keyboard-enable-keyboard-lock②\">enable keyboard lock</a> is currently false, run the following\nsubsteps:</p>\n         <ol>\n          <li data-md=\"\">\n           <p>Optionally, <a data-link-type=\"dfn\" href=\"https://wicg.github.io/keyboard-lock/#register-a-system-key-press-handler\" id=\"ref-for-register-a-system-key-press-handler\">register a system key press handler</a>.</p>\n          </li><li data-md=\"\">\n           <p>Set <a data-link-type=\"dfn\" href=\"https://wicg.github.io/keyboard-lock/#keyboard-enable-keyboard-lock\" id=\"ref-for-keyboard-enable-keyboard-lock③\">enable keyboard lock</a> to be true.</p>\n         </li></ol>",
-              "ignored": [
-                "Optionally, register a system key press handler. Set enable keyboard lock to be true."
+              "html": "If <a data-link-type=\"dfn\" href=\"https://wicg.github.io/keyboard-lock/#keyboard-enable-keyboard-lock\" id=\"ref-for-keyboard-enable-keyboard-lock②\">enable keyboard lock</a> is currently false, run the following\nsubsteps:",
+              "rationale": "set",
+              "steps": [
+                {
+                  "html": "<p>Optionally, <a data-link-type=\"dfn\" href=\"https://wicg.github.io/keyboard-lock/#register-a-system-key-press-handler\" id=\"ref-for-register-a-system-key-press-handler\">register a system key press handler</a>.</p>"
+                },
+                {
+                  "html": "<p>Set <a data-link-type=\"dfn\" href=\"https://wicg.github.io/keyboard-lock/#keyboard-enable-keyboard-lock\" id=\"ref-for-keyboard-enable-keyboard-lock③\">enable keyboard lock</a> to be true.</p>"
+                }
               ]
             },
             {
@@ -95,9 +101,18 @@
           "rationale": "if",
           "steps": [
             {
-              "html": "<p>If <a data-link-type=\"dfn\" href=\"https://wicg.github.io/keyboard-lock/#keyboard-enable-keyboard-lock\" id=\"ref-for-keyboard-enable-keyboard-lock⑤\">enable keyboard lock</a> is true, then run the following substeps:</p>\n         <ol>\n          <li data-md=\"\">\n           <p><a data-link-type=\"dfn\" href=\"https://wicg.github.io/keyboard-lock/#unregister-the-system-key-press-handler\" id=\"ref-for-unregister-the-system-key-press-handler\">Unregister the system key press handler</a>.</p>\n          </li><li data-md=\"\">\n           <p>Set <a data-link-type=\"dfn\" href=\"https://wicg.github.io/keyboard-lock/#keyboard-enable-keyboard-lock\" id=\"ref-for-keyboard-enable-keyboard-lock⑥\">enable keyboard lock</a> to be false.</p>\n          </li><li data-md=\"\">\n           <p>Reset <a data-link-type=\"dfn\" href=\"https://wicg.github.io/keyboard-lock/#keyboard-reserved-key-codes\" id=\"ref-for-keyboard-reserved-key-codes②\">reserved key codes</a> to be an empty sequence.</p>\n         </li></ol>",
-              "ignored": [
-                "Unregister the system key press handler. Set enable keyboard lock to be false. Reset reserved key codes to be an empty sequence."
+              "html": "If <a data-link-type=\"dfn\" href=\"https://wicg.github.io/keyboard-lock/#keyboard-enable-keyboard-lock\" id=\"ref-for-keyboard-enable-keyboard-lock⑤\">enable keyboard lock</a> is true, then run the following substeps:",
+              "rationale": "set",
+              "steps": [
+                {
+                  "html": "<p><a data-link-type=\"dfn\" href=\"https://wicg.github.io/keyboard-lock/#unregister-the-system-key-press-handler\" id=\"ref-for-unregister-the-system-key-press-handler\">Unregister the system key press handler</a>.</p>"
+                },
+                {
+                  "html": "<p>Set <a data-link-type=\"dfn\" href=\"https://wicg.github.io/keyboard-lock/#keyboard-enable-keyboard-lock\" id=\"ref-for-keyboard-enable-keyboard-lock⑥\">enable keyboard lock</a> to be false.</p>"
+                },
+                {
+                  "html": "<p>Reset <a data-link-type=\"dfn\" href=\"https://wicg.github.io/keyboard-lock/#keyboard-reserved-key-codes\" id=\"ref-for-keyboard-reserved-key-codes②\">reserved key codes</a> to be an empty sequence.</p>"
+                }
               ]
             }
           ]
@@ -126,9 +141,15 @@
               "rationale": "if",
               "steps": [
                 {
-                  "html": "<p>If <var>code</var> is equal to \"Escape\", then run the following\nsubsteps:</p>\n         <ol>\n          <li data-md=\"\">\n           <p>Optionally overlay a message on the screen telling the\nuser that they can Hold the Escape key to exit from\nfullscreen.</p>\n          </li><li data-md=\"\">\n           <p>If the key is held for 2 seconds, then exit from the\nkeyboard handler and pass the key on to the user agent\nfor normal processing (which will exit fullscreen\n(and pointer lock, if active)).</p>\n         </li></ol>",
-                  "ignored": [
-                    "Optionally overlay a message on the screen telling the user that they can Hold the Escape key to exit from fullscreen. If the key is held for 2 seconds, then exit from the keyboard handler and pass the key on to the user agent for normal processing (which will exit fullscreen (and pointer lock, if active))."
+                  "html": "If <var>code</var> is equal to \"Escape\", then run the following\nsubsteps:",
+                  "rationale": "if",
+                  "steps": [
+                    {
+                      "html": "<p>Optionally overlay a message on the screen telling the\nuser that they can Hold the Escape key to exit from\nfullscreen.</p>"
+                    },
+                    {
+                      "html": "<p>If the key is held for 2 seconds, then exit from the\nkeyboard handler and pass the key on to the user agent\nfor normal processing (which will exit fullscreen\n(and pointer lock, if active)).</p>"
+                    }
                   ]
                 },
                 {

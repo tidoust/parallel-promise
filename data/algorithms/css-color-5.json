@@ -32,6 +32,21 @@
       ]
     },
     {
+      "html": "After normalizing both percentages, the result is produced via the following algorithm:",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "<p>As described in <a href=\"https://drafts.csswg.org/css-color-4/#interpolation\"><cite>CSS Color 4</cite> §  12. Color Interpolation</a>,\nboth colors are converted to the specified interpolation <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.csswg.org/css-color-5/#typedef-color-space\" id=\"ref-for-typedef-color-space①\">&lt;color-space&gt;</a>,\ntaking into account any <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-color-4/#analogous-components\" id=\"ref-for-analogous-components\">analogous components</a>.</p>"
+        },
+        {
+          "html": "<p>Colors are then interpolated in the \tspecified color space,\nas described in <a href=\"https://drafts.csswg.org/css-color-4/#interpolation\"><cite>CSS Color 4</cite> §  12. Color Interpolation</a>.\nIf the specified color space is a <span class=\"css\">cylindrical-polar-color</span> space,\nthen the <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.csswg.org/css-color-5/#typedef-hue-interpolation-method\" id=\"ref-for-typedef-hue-interpolation-method\">&lt;hue-interpolation-method&gt;</a> controls the\ninterpolation of hue, as described in <a href=\"https://drafts.csswg.org/css-color-4/#hue-interpolation\"><cite>CSS Color 4</cite> § 12.4 Hue Interpolation</a>.\nIf no <span class=\"production\" id=\"ref-for-typedef-hue-interpolation-method①\">&lt;hue-interpolation-method&gt;</span> is specified, it is as if <span class=\"css\">shorter</span> had been specified.</p>"
+        },
+        {
+          "html": "<p>If an alpha multiplier was produced during percentage normalization,\nthe alpha component of the interpolated result is multiplied\nby the alpha multiplier.</p>"
+        }
+      ]
+    },
+    {
       "html": "As such, Device CMYK colors must be converted to an equivalent color.\n\t\tThis is not trivial, like the conversion from HSL or HWB to RGB;\n\t\tthe precise conversion depends on the precise characteristics of the output device.",
       "rationale": "if",
       "steps": [

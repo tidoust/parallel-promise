@@ -421,8 +421,40 @@
                   "html": "<p>Let <var>mouseout</var> = <a data-link-type=\"dfn\" href=\"https://w3c.github.io/uievents/#create-a-cancelable-mouseevent\" id=\"ref-for-create-a-cancelable-mouseevent②\">create a cancelable MouseEvent</a> with \"mouseout\" and <a data-link-type=\"dfn\" href=\"https://w3c.github.io/uievents/#last-mouse-element\" id=\"ref-for-last-mouse-element②\">last mouse element</a></p>"
                 }
               ],
-              "ignored": [
-                "Maybe send pointerout event with mouseout Dispatch mouseout at target Let leaveElements be a copy of last mouse DOM path with all elements common to targetDomPath removed. For each element in leaveElements, do Let mouseleave = create a non-cancelable MouseEvent with \"mouseleave\" and element Set mouseleave.composed = false Maybe send pointerleave event with mouseleave Let result = dispatch mouseleave at element"
+              "additional": [
+                {
+                  "html": "TODO: Set <var>mouseout</var> attributes from <var>native</var>. +CSSOM attributes",
+                  "rationale": "dispatch",
+                  "steps": [
+                    {
+                      "html": "<p><a data-link-type=\"dfn\" href=\"https://w3c.github.io/uievents/#maybe-send-pointerout-event\" id=\"ref-for-maybe-send-pointerout-event\">Maybe send pointerout event</a> with <var>mouseout</var></p>"
+                    },
+                    {
+                      "html": "<p><a data-link-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-event-dispatch\" id=\"ref-for-concept-event-dispatch⑤\">Dispatch</a> <var>mouseout</var> at <var>target</var></p>"
+                    },
+                    {
+                      "html": "<p>Let <var>leaveElements</var> be a copy of <a data-link-type=\"dfn\" href=\"https://w3c.github.io/uievents/#last-mouse-dom-path\" id=\"ref-for-last-mouse-dom-path\">last mouse DOM path</a> with all\nelements common to <var>targetDomPath</var> removed.</p>"
+                    },
+                    {
+                      "html": "Handle case where <var>element</var> has been deleted.\nAlso case where it has been moved: Should the DOM mutation have triggered\na mouseleave event? Should we sent it now? Should it be dropped?\nNeed to verify what current browsers do.",
+                      "rationale": "let",
+                      "steps": [
+                        {
+                          "html": "<p>Let <var>mouseleave</var> = <a data-link-type=\"dfn\" href=\"https://w3c.github.io/uievents/#create-a-non-cancelable-mouseevent\" id=\"ref-for-create-a-non-cancelable-mouseevent\">create a non-cancelable MouseEvent</a> with \"mouseleave\" and <var>element</var></p>"
+                        },
+                        {
+                          "html": "<p>Set <var>mouseleave</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://dom.spec.whatwg.org/#dom-event-composed\" id=\"ref-for-dom-event-composed①\">composed</a></code> = false</p>"
+                        },
+                        {
+                          "html": "<p><a data-link-type=\"dfn\" href=\"https://w3c.github.io/uievents/#maybe-send-pointerleave-event\" id=\"ref-for-maybe-send-pointerleave-event\">Maybe send pointerleave event</a> with <var>mouseleave</var></p>"
+                        },
+                        {
+                          "html": "<p>Let <var>result</var> = <a data-link-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-event-dispatch\" id=\"ref-for-concept-event-dispatch⑥\">dispatch</a> <var>mouseleave</var> at <var>element</var></p>"
+                        }
+                      ]
+                    }
+                  ]
+                }
               ]
             }
           ]
@@ -439,8 +471,54 @@
                   "html": "<p>Let <var>mouseover</var> = <a data-link-type=\"dfn\" href=\"https://w3c.github.io/uievents/#create-a-cancelable-mouseevent\" id=\"ref-for-create-a-cancelable-mouseevent③\">create a cancelable MouseEvent</a> with \"mouseover\" and <var>target</var></p>"
                 }
               ],
-              "ignored": [
-                "Maybe send pointerover event with mouseover Dispatch mouseout at target Let enterElements be a copy of targetDomPath with all elements common to last mouse DOM path removed. For each element in enterElements, do Let mouseenter = create a non-cancelable MouseEvent with \"mouseenter\" and element Set mouseenter.composed = false Maybe send pointerenter event with mouseenter Let result = dispatch mouseenter at element Set last mouse element to target Set last mouse DOM path to targetDomPath"
+              "additional": [
+                {
+                  "html": "TODO: Set <var>mouseout</var> attributes from <var>native</var>. +CSSOM attributes",
+                  "rationale": "dispatch",
+                  "steps": [
+                    {
+                      "html": "<p><a data-link-type=\"dfn\" href=\"https://w3c.github.io/uievents/#maybe-send-pointerover-event\" id=\"ref-for-maybe-send-pointerover-event\">Maybe send pointerover event</a> with <var>mouseover</var></p>"
+                    },
+                    {
+                      "html": "<p><a data-link-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-event-dispatch\" id=\"ref-for-concept-event-dispatch⑦\">Dispatch</a> <var>mouseout</var> at <var>target</var></p>"
+                    },
+                    {
+                      "html": "<p>Let <var>enterElements</var> be a copy of <var>targetDomPath</var> with all\nelements common to <a data-link-type=\"dfn\" href=\"https://w3c.github.io/uievents/#last-mouse-dom-path\" id=\"ref-for-last-mouse-dom-path①\">last mouse DOM path</a> removed.</p>"
+                    },
+                    {
+                      "html": "Handle case where <var>element</var> has been deleted or moved.",
+                      "rationale": "let",
+                      "steps": [
+                        {
+                          "html": "<p>Let <var>mouseenter</var> = <a data-link-type=\"dfn\" href=\"https://w3c.github.io/uievents/#create-a-non-cancelable-mouseevent\" id=\"ref-for-create-a-non-cancelable-mouseevent①\">create a non-cancelable MouseEvent</a> with \"mouseenter\" and <var>element</var></p>"
+                        },
+                        {
+                          "html": "<p>Set <var>mouseenter</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://dom.spec.whatwg.org/#dom-event-composed\" id=\"ref-for-dom-event-composed②\">composed</a></code> = false</p>"
+                        },
+                        {
+                          "html": "<p><a data-link-type=\"dfn\" href=\"https://w3c.github.io/uievents/#maybe-send-pointerenter-event\" id=\"ref-for-maybe-send-pointerenter-event\">Maybe send pointerenter event</a> with <var>mouseenter</var></p>"
+                        }
+                      ],
+                      "additional": [
+                        {
+                          "html": "Check compat for shadow DOM elements.\nChrome/Linux fires this event at the element and the shadow root.",
+                          "rationale": "let",
+                          "steps": [
+                            {
+                              "html": "<p>Let <var>result</var> = <a data-link-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-event-dispatch\" id=\"ref-for-concept-event-dispatch⑧\">dispatch</a> <var>mouseenter</var> at <var>element</var></p>"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "html": "<p>Set <a data-link-type=\"dfn\" href=\"https://w3c.github.io/uievents/#last-mouse-element\" id=\"ref-for-last-mouse-element④\">last mouse element</a> to <var>target</var></p>"
+                    },
+                    {
+                      "html": "<p>Set <a data-link-type=\"dfn\" href=\"https://w3c.github.io/uievents/#last-mouse-dom-path\" id=\"ref-for-last-mouse-dom-path②\">last mouse DOM path</a> to <var>targetDomPath</var></p>"
+                    }
+                  ]
+                }
               ]
             }
           ]

@@ -32,6 +32,32 @@
           "html": "If the literal's <a href=\"https://w3c.github.io/rdf-concepts/spec/#dfn-datatype-iri\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-datatype-iri-7\">datatype <abbr title=\"Internationalized Resource Identifier\">IRI</abbr></a> is <em>not</em> in the set of\n        <a href=\"https://w3c.github.io/rdf-concepts/spec/#dfn-recognized-datatype-iri\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-recognized-datatype-iri-2\">recognized datatype IRIs</a>, then the literal value is\n        not defined by this specification."
         }
       ]
+    },
+    {
+      "name": "dataset isomorphism",
+      "href": "https://w3c.github.io/rdf-concepts/spec/#dfn-dataset-isomorphism",
+      "html": "Two <a href=\"https://w3c.github.io/rdf-concepts/spec/#dfn-rdf-dataset\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-rdf-dataset-10\">RDF datasets</a>\n      (the RDF dataset <var>D1</var> with default graph <var>DG1</var> and any named\n      graph <var>NG1</var> and the RDF dataset <var>D2</var> with default graph\n      <var>DG2</var> and any named graph <var>NG2</var>)\n      are <dfn data-lt=\"dataset isomorphism|dataset-isomorphic\" class=\"export\" data-export=\"\" id=\"dfn-dataset-isomorphism\" tabindex=\"0\" aria-haspopup=\"dialog\" data-dfn-type=\"dfn\">dataset-isomorphic</dfn> if and only if\n      there is a bijection <var>M</var> between the nodes, triples and graphs in\n      <var>D1</var> and those in <var>D2</var> such that:",
+      "rationale": "for",
+      "steps": [
+        {
+          "html": "<var>M</var> maps <a href=\"https://w3c.github.io/rdf-concepts/spec/#dfn-blank-node\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-blank-node-11\">blank nodes</a> to blank nodes;"
+        },
+        {
+          "html": "<var>M</var> is the identity map on <a href=\"https://w3c.github.io/rdf-concepts/spec/#dfn-literal\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-literal-14\">literals</a> and URIs;"
+        },
+        {
+          "html": "For every triple &lt;s p o&gt;, <var>M</var>(&lt;s, p, o&gt;)=\n        &lt;<var>M(s)</var>, <var>M(p)</var>, <var>M(o)</var>&gt;;"
+        },
+        {
+          "html": "For every graph <var>G</var>={t1, ..., tn},\n        <var>M(G)</var>={<var>M(t1)</var>, ..., <var>M(tn)</var>};"
+        },
+        {
+          "html": "<var>DG2</var> = <var>M(DG1)</var>; and"
+        },
+        {
+          "html": "&lt;n, G&gt; is in <var>NG1</var> if and only if\n        &lt;<var>M(n)</var>, <var>M(G)</var>&gt; is in <var>NG2</var>."
+        }
+      ]
     }
   ]
 }

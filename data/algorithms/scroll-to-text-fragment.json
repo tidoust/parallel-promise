@@ -50,7 +50,7 @@
     },
     {
       "html": "To navigate a navigable navigable to a URL <var>url</var>...:",
-      "rationale": "in parallel",
+      "rationale": "set",
       "steps": [
         {
           "html": "<p>...</p>"
@@ -62,9 +62,36 @@
           "html": "<p>If url’s scheme is \"javascript\", then...</p>"
         },
         {
-          "html": "<p>In parallel, run these steps:</p>\n       <ol>\n        <li data-md=\"\">\n         <p>...</p>\n        </li><li value=\"5\">If url is about:blank, then set documentState’s origin to documentState’s initiator origin.\n        </li><li data-md=\"\">\n         <p>Otherwise, if url is about:srcdoc, then set documentState’s origin to navigable’s parent’s active document’s origin.</p>\n        </li><li data-md=\"\">\n         <strike>Let historyEntry be a new session history entry, with its URL set to url and\nits document state set to documentState.</strike>\n        </li><li value=\"7\"><span class=\"diff\">Let <var>fragment directive</var> be the result of running <a data-link-type=\"dfn\" href=\"https://wicg.github.io/scroll-to-text-fragment/#remove-the-fragment-directive\" id=\"ref-for-remove-the-fragment-directive\">remove the\nfragment directive</a> on <var>url</var>.</span>\n        </li><li data-md=\"\">\n         <p><span class=\"diff\">Let <var>directive state</var> be a new <a data-link-type=\"dfn\" href=\"https://wicg.github.io/scroll-to-text-fragment/#directive-state\" id=\"ref-for-directive-state⑤\">directive\nstate</a> with <a data-link-type=\"dfn\" href=\"https://wicg.github.io/scroll-to-text-fragment/#directive-state-value\" id=\"ref-for-directive-state-value\">value</a> set to <var>fragment directive</var>.</span></p>\n        </li><li data-md=\"\">\n         <p><span class=\"diff\">Let historyEntry be a new session history entry, with its URL\nset to <var>url</var>, its document state set to documentState, and its <a data-link-type=\"dfn\" href=\"https://wicg.github.io/scroll-to-text-fragment/#she-directive-state\" id=\"ref-for-she-directive-state\">directive state</a> set to <var>directive state</var>.</span></p>\n        </li><li data-md=\"\">\n         <p>Let navigationParams be null.</p>\n        </li><li data-md=\"\">\n         <p>...</p>\n       </li></ol>",
-          "ignored": [
-            "... If url is about:blank, then set documentState’s origin to documentState’s initiator origin. Otherwise, if url is about:srcdoc, then set documentState’s origin to navigable’s parent’s active document’s origin. Let historyEntry be a new session history entry, with its URL set to url and its document state set to documentState. Let fragment directive be the result of running remove the fragment directive on url. Let directive state be a new directive state with value set to fragment directive. Let historyEntry be a new session history entry, with its URL set to url, its document state set to documentState, and its directive state set to directive state. Let navigationParams be null. ..."
+          "html": "In parallel, run these steps:",
+          "rationale": "if",
+          "steps": [
+            {
+              "html": "<p>...</p>"
+            },
+            {
+              "html": "If url is about:blank, then set documentState’s origin to documentState’s initiator origin."
+            },
+            {
+              "html": "<p>Otherwise, if url is about:srcdoc, then set documentState’s origin to navigable’s parent’s active document’s origin.</p>"
+            },
+            {
+              "html": "<strike>Let historyEntry be a new session history entry, with its URL set to url and\nits document state set to documentState.</strike>"
+            },
+            {
+              "html": "<span class=\"diff\">Let <var>fragment directive</var> be the result of running <a data-link-type=\"dfn\" href=\"https://wicg.github.io/scroll-to-text-fragment/#remove-the-fragment-directive\" id=\"ref-for-remove-the-fragment-directive\">remove the\nfragment directive</a> on <var>url</var>.</span>"
+            },
+            {
+              "html": "<p><span class=\"diff\">Let <var>directive state</var> be a new <a data-link-type=\"dfn\" href=\"https://wicg.github.io/scroll-to-text-fragment/#directive-state\" id=\"ref-for-directive-state⑤\">directive\nstate</a> with <a data-link-type=\"dfn\" href=\"https://wicg.github.io/scroll-to-text-fragment/#directive-state-value\" id=\"ref-for-directive-state-value\">value</a> set to <var>fragment directive</var>.</span></p>"
+            },
+            {
+              "html": "<p><span class=\"diff\">Let historyEntry be a new session history entry, with its URL\nset to <var>url</var>, its document state set to documentState, and its <a data-link-type=\"dfn\" href=\"https://wicg.github.io/scroll-to-text-fragment/#she-directive-state\" id=\"ref-for-she-directive-state\">directive state</a> set to <var>directive state</var>.</span></p>"
+            },
+            {
+              "html": "<p>Let navigationParams be null.</p>"
+            },
+            {
+              "html": "<p>...</p>"
+            }
           ]
         }
       ]
@@ -199,23 +226,41 @@
       ]
     },
     {
-      "html": "If <var>documentsEntryChanged</var> is true, then:",
-      "rationale": "let",
+      "html": "To update document for history step application given a Document <var>document</var>, a session history entry <var>entry</var>,...",
+      "rationale": "set",
       "steps": [
         {
-          "html": "<p>Let <var>oldURL</var> be <var>document</var>’s latest entry’s URL.</p>"
+          "html": "<p>...</p>"
         },
         {
-          "html": "If <var>document</var>’s latest entry’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/scroll-to-text-fragment/#she-directive-state\" id=\"ref-for-she-directive-state⑨\">directive state</a> is not <var>entry</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/scroll-to-text-fragment/#she-directive-state\" id=\"ref-for-she-directive-state①⓪\">directive state</a> then:",
+          "html": "Set <var>document</var>’s history object’s length to scriptHistoryLength"
+        },
+        {
+          "html": "If <var>documentsEntryChanged</var> is true, then:",
           "rationale": "let",
           "steps": [
             {
-              "html": "<p>Let <var>fragment directive</var> be <var>entry</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/scroll-to-text-fragment/#she-directive-state\" id=\"ref-for-she-directive-state①①\">directive state</a>'s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/scroll-to-text-fragment/#directive-state-value\" id=\"ref-for-directive-state-value⑤\">value</a>.</p>"
+              "html": "<p>Let <var>oldURL</var> be <var>document</var>’s latest entry’s URL.</p>"
             },
             {
-              "html": "<p>Set <var>document</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/scroll-to-text-fragment/#document-pending-text-directives\" id=\"ref-for-document-pending-text-directives\">pending text directives</a> to the result of <a data-link-type=\"dfn\" href=\"https://wicg.github.io/scroll-to-text-fragment/#parse-the-fragment-directive\" id=\"ref-for-parse-the-fragment-directive\">parsing</a> <var>fragment directive</var>.</p>"
+              "html": "If <var>document</var>’s latest entry’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/scroll-to-text-fragment/#she-directive-state\" id=\"ref-for-she-directive-state⑨\">directive state</a> is not <var>entry</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/scroll-to-text-fragment/#she-directive-state\" id=\"ref-for-she-directive-state①⓪\">directive state</a> then:",
+              "rationale": "let",
+              "steps": [
+                {
+                  "html": "<p>Let <var>fragment directive</var> be <var>entry</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/scroll-to-text-fragment/#she-directive-state\" id=\"ref-for-she-directive-state①①\">directive state</a>'s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/scroll-to-text-fragment/#directive-state-value\" id=\"ref-for-directive-state-value⑤\">value</a>.</p>"
+                },
+                {
+                  "html": "<p>Set <var>document</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/scroll-to-text-fragment/#document-pending-text-directives\" id=\"ref-for-document-pending-text-directives\">pending text directives</a> to the result of <a data-link-type=\"dfn\" href=\"https://wicg.github.io/scroll-to-text-fragment/#parse-the-fragment-directive\" id=\"ref-for-parse-the-fragment-directive\">parsing</a> <var>fragment directive</var>.</p>"
+                }
+              ]
             }
           ]
+        },
+        {
+          "html": "<p>Set <var>document</var>’s latest entry to <var>entry</var></p>"
+        },
+        {
+          "html": "<p>...</p>"
         }
       ]
     },
@@ -541,6 +586,30 @@
       ]
     },
     {
+      "html": "To navigate to a fragment given navigable <var>navigable</var>, ...:",
+      "rationale": "update",
+      "steps": [
+        {
+          "html": "<p>...</p>"
+        },
+        {
+          "html": "Update document for history step application given navigable’s active\ndocument, historyEntry, true, scriptHistoryIndex, and scriptHistoryLength."
+        },
+        {
+          "html": "<p>Scroll to the fragment given navigable’s active document.</p>"
+        },
+        {
+          "html": "Set <var>navigable</var>’s active document’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/scroll-to-text-fragment/#document-pending-text-directives\" id=\"ref-for-document-pending-text-directives①⓪\">pending text directives</a> to\nnull."
+        },
+        {
+          "html": "<p>Let traversable be navigable’s traversable navigable.</p>"
+        },
+        {
+          "html": "<p>...</p>"
+        }
+      ]
+    },
+    {
       "html": "",
       "rationale": "assert",
       "steps": [
@@ -740,7 +809,7 @@
       "steps": [
         {
           "html": "While completedChangeJobs does not equal totalChangeJobs:",
-          "rationale": "/queue a( \\w+)? task/i",
+          "rationale": "queue",
           "steps": [
             {
               "html": "<p>...</p>"
@@ -750,9 +819,15 @@
               "rationale": "if",
               "steps": [
                 {
-                  "html": "<p>If changingNavigableContinuation’s update-only is false, then:</p>\n           <ol>\n            <li data-md=\"\">\n             <p>...</p>\n            </li><li data-md=\"\">\n             <p>Activate history entry <var>targetEntry</var> for navigable.</p>\n           </li></ol>",
-                  "ignored": [
-                    "... Activate history entry targetEntry for navigable."
+                  "html": "If changingNavigableContinuation’s update-only is false, then:",
+                  "rationale": "activate",
+                  "steps": [
+                    {
+                      "html": "<p>...</p>"
+                    },
+                    {
+                      "html": "<p>Activate history entry <var>targetEntry</var> for navigable.</p>"
+                    }
                   ]
                 },
                 {
@@ -796,9 +871,21 @@
           "html": "<p>...</p>"
         },
         {
-          "html": ". In parallel, run these steps:\n      <ol>\n       <li data-md=\"\">\n        <p>...</p>\n       </li><li value=\"9\">. Attempt to populate the history entry’s document for historyEntry, given\nnavigable, \"navigate\", sourceSnapshotParams, targetSnapshotParams, navigationId,\nnavigationParams, cspNavigationType, with allowPOST set to true and completionSteps set to\nthe following step:\n       <ol>\n        <li data-md=\"\">\n         <p>Append session history traversal steps to navigable’s traversable to finalize a\ncross-document navigation given navigable, historyHandling, historyEntry, <span class=\"diff\">and <var>userInvolvement</var></span>.</p>\n       </li></ol>\n      </li></ol>",
-          "ignored": [
-            "... . Attempt to populate the history entry’s document for historyEntry, given navigable, \"navigate\", sourceSnapshotParams, targetSnapshotParams, navigationId, navigationParams, cspNavigationType, with allowPOST set to true and completionSteps set to the following step: Append session history traversal steps to navigable’s traversable to finalize a cross-document navigation given navigable, historyHandling, historyEntry, and userInvolvement."
+          "html": ". In parallel, run these steps:",
+          "rationale": "append",
+          "steps": [
+            {
+              "html": "<p>...</p>"
+            },
+            {
+              "html": ". Attempt to populate the history entry’s document for historyEntry, given\nnavigable, \"navigate\", sourceSnapshotParams, targetSnapshotParams, navigationId,\nnavigationParams, cspNavigationType, with allowPOST set to true and completionSteps set to\nthe following step:",
+              "rationale": "append",
+              "steps": [
+                {
+                  "html": "<p>Append session history traversal steps to navigable’s traversable to finalize a\ncross-document navigation given navigable, historyHandling, historyEntry, <span class=\"diff\">and <var>userInvolvement</var></span>.</p>"
+                }
+              ]
+            }
           ]
         }
       ]
@@ -862,7 +949,7 @@
     },
     {
       "html": "",
-      "rationale": "fire an event",
+      "rationale": "set",
       "steps": [
         {
           "html": "<p>...</p>"
@@ -1298,6 +1385,26 @@
         },
         {
           "html": "<p>Return null.</p>"
+        }
+      ]
+    },
+    {
+      "name": "search invisible",
+      "href": "https://wicg.github.io/scroll-to-text-fragment/#search-invisible",
+      "html": "A node is <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"search-invisible\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">search invisible</dfn><span style=\"position: relative; height: 0px;\"></span><span style=\"position: relative; height: 0px;\"></span> if it is an <a data-link-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-element\" id=\"ref-for-concept-element③\">element</a> in the <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#html-namespace\" id=\"ref-for-html-namespace\">HTML\nnamespace</a> and meets any of the following conditions:",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "<p>The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value\">computed value</a> of its <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a>.</p>"
+        },
+        {
+          "html": "<p>If the node <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/parsing.html#serializes-as-void\" id=\"ref-for-serializes-as-void\">serializes as void</a>.</p>"
+        },
+        {
+          "html": "<p>Is any of the following types: <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/iframe-embed-object.html#htmliframeelement\" id=\"ref-for-htmliframeelement\">HTMLIFrameElement</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/embedded-content.html#htmlimageelement\" id=\"ref-for-htmlimageelement\">HTMLImageElement</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/form-elements.html#htmlmeterelement\" id=\"ref-for-htmlmeterelement\">HTMLMeterElement</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/iframe-embed-object.html#htmlobjectelement\" id=\"ref-for-htmlobjectelement\">HTMLObjectElement</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/form-elements.html#htmlprogresselement\" id=\"ref-for-htmlprogresselement\">HTMLProgressElement</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/semantics.html#htmlstyleelement\" id=\"ref-for-htmlstyleelement\">HTMLStyleElement</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/scripting.html#htmlscriptelement\" id=\"ref-for-htmlscriptelement\">HTMLScriptElement</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/media.html#htmlvideoelement\" id=\"ref-for-htmlvideoelement\">HTMLVideoElement</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/media.html#htmlaudioelement\" id=\"ref-for-htmlaudioelement\">HTMLAudioElement</a></code></p>"
+        },
+        {
+          "html": "<p>Is a <code><a data-link-type=\"element\" href=\"https://html.spec.whatwg.org/multipage/form-elements.html#the-select-element\" id=\"ref-for-the-select-element\">select</a></code> element whose <code><a data-link-type=\"element-sub\" href=\"https://html.spec.whatwg.org/multipage/form-elements.html#attr-select-multiple\" id=\"ref-for-attr-select-multiple\">multiple</a></code> content attribute is absent.</p>"
         }
       ]
     },

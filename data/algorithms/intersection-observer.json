@@ -246,6 +246,23 @@
       ]
     },
     {
+      "name": "queue an IntersectionObserverEntry",
+      "href": "https://w3c.github.io/IntersectionObserver/#queue-an-intersectionobserverentry",
+      "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"queue-an-intersectionobserverentry\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">queue an IntersectionObserverEntry</dfn> for an <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/IntersectionObserver/#intersectionobserver\" id=\"ref-for-intersectionobserver②⑧\">IntersectionObserver</a></code> <var>observer</var>, given a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/nav-history-apis.html#dom-document-2\" id=\"ref-for-dom-document-2①⓪\">document</a></code> <var>document</var>; <code class=\"idl\"><a data-link-type=\"idl\" href=\"http://www.w3.org/TR/hr-time/#domhighrestimestamp\" id=\"ref-for-domhighrestimestamp⑤\">DOMHighResTimeStamp</a></code> <var>time</var>; <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#domrect\" id=\"ref-for-domrect\">DOMRect</a></code>s <var>rootBounds</var>, <var>boundingClientRect</var>, <var>intersectionRect</var>, and <var>isIntersecting</var> flag;\nand an <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://dom.spec.whatwg.org/#element\" id=\"ref-for-element①⑦\">Element</a></code> <var>target</var>;\nrun these steps:",
+      "rationale": "append",
+      "steps": [
+        {
+          "html": "<p>Construct an <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/IntersectionObserver/#intersectionobserverentry\" id=\"ref-for-intersectionobserverentry④\">IntersectionObserverEntry</a></code>, passing in <var>time</var>, <var>rootBounds</var>, <var>boundingClientRect</var>, <var>intersectionRect</var>, <var>isIntersecting</var>, and <var>target</var>.</p>"
+        },
+        {
+          "html": "<p>Append it to <var>observer</var>’s internal <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/IntersectionObserver/#dom-intersectionobserver-queuedentries-slot\" id=\"ref-for-dom-intersectionobserver-queuedentries-slot⑤\">[[QueuedEntries]]</a></code> slot.</p>"
+        },
+        {
+          "html": "<p><a data-link-type=\"dfn\" href=\"https://w3c.github.io/IntersectionObserver/#queue-an-intersection-observer-task\" id=\"ref-for-queue-an-intersection-observer-task\">Queue an intersection observer task</a> for <var>document</var>.</p>"
+        }
+      ]
+    },
+    {
       "name": "compute the intersection",
       "href": "https://w3c.github.io/IntersectionObserver/#compute-the-intersection",
       "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"compute-the-intersection\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">compute the intersection</dfn> between a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IntersectionObserver/#intersectionobserver-target\" id=\"ref-for-intersectionobserver-target①②\">target</a> <var>target</var> and an <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IntersectionObserver/#intersectionobserver-intersection-root\" id=\"ref-for-intersectionobserver-intersection-root①④\">intersection root</a> <var>root</var>,\nrun these steps:",

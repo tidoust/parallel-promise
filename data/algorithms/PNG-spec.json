@@ -45,6 +45,21 @@
           "html": "<a href=\"https://w3c.github.io/PNG-spec/#dfn-png-editor\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-png-editor-14\">PNG editors</a> shall terminate on encountering an unrecognized critical chunk type, because there is no way to be\n          certain that a valid datastream will result from modifying a datastream containing such a chunk. (Simply discarding the\n          chunk is not good enough, because it might have unknown implications for the interpretation of other chunks.) The\n          safe/unsafe mechanism is intended for use with ancillary chunks. The safe-to-copy bit will always be 0 for critical\n          chunks."
         }
       ]
+    },
+    {
+      "html": "This registration updates the earlier one:",
+      "rationale": "change",
+      "steps": [
+        {
+          "html": "The old one points to an expired Internet Draft. This updated registration points to a <abbr title=\"World Wide Web Consortium\">W3C</abbr> Recommendation."
+        },
+        {
+          "html": "The old contact person is sadly deceased. The new contact email is a publicly archived <abbr title=\"World Wide Web Consortium\">W3C</abbr> mailing list for the PNG\n            Working Group."
+        },
+        {
+          "html": "Change controller is <abbr title=\"World Wide Web Consortium\">W3C</abbr>"
+        }
+      ]
     }
   ]
 }

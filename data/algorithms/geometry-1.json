@@ -1002,6 +1002,23 @@
       ]
     },
     {
+      "name": "DOMMatrix/translateSelf(tx, ty, tz)",
+      "href": "https://drafts.fxtf.org/geometry-1/#dom-dommatrix-translateself",
+      "html": "",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "<p><a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#post-multiply\" id=\"ref-for-post-multiply③\">Post-multiply</a> a translation transformation on the current matrix. The 3D\ntranslation matrix is <a href=\"https://drafts.csswg.org/css-transforms-1/#TranslateDefined\">described</a> in CSS\nTransforms. <a data-link-type=\"biblio\" href=\"https://drafts.fxtf.org/geometry-1/#biblio-css3-transforms\" title=\"CSS Transforms Module Level 1\">[CSS3-TRANSFORMS]</a></p>"
+        },
+        {
+          "html": "<p>If <var>tz</var> is specified and not <span class=\"css\">0</span> or <span class=\"css\">-0</span>, set <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#matrix-is-2d\" id=\"ref-for-matrix-is-2d②②\">is 2D</a> of the\ncurrent matrix to <code>false</code>.</p>"
+        },
+        {
+          "html": "<p>Return the current matrix.</p>"
+        }
+      ]
+    },
+    {
       "name": "DOMMatrix/scaleSelf(scaleX, scaleY, scaleZ, originX, originY, originZ)",
       "href": "https://drafts.fxtf.org/geometry-1/#dom-dommatrix-scaleself",
       "html": "",
@@ -1079,6 +1096,82 @@
         },
         {
           "html": "<p><a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#post-multiply\" id=\"ref-for-post-multiply⑧\">Post-multiply</a> a rotation transformation on the current matrix around the vector 1,\n0, 0 by the specified rotation <var>rotX</var> in degrees. The 3D rotation matrix is <a href=\"https://drafts.csswg.org/css-transforms-1/#RotateDefined\">described</a> in CSS Transforms\nwith <var>alpha</var> = <var>rotX</var> in degrees. <a data-link-type=\"biblio\" href=\"https://drafts.fxtf.org/geometry-1/#biblio-css3-transforms\" title=\"CSS Transforms Module Level 1\">[CSS3-TRANSFORMS]</a></p>"
+        },
+        {
+          "html": "<p>Return the current matrix.</p>"
+        }
+      ]
+    },
+    {
+      "name": "DOMMatrix/rotateFromVectorSelf(x, y)",
+      "href": "https://drafts.fxtf.org/geometry-1/#dom-dommatrix-rotatefromvectorself",
+      "html": "",
+      "rationale": "return",
+      "steps": [
+        {
+          "html": "<p><a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#post-multiply\" id=\"ref-for-post-multiply⑨\">Post-multiply</a> a rotation transformation on the current matrix. The rotation angle\nis determined by the angle between the vector (1,0)<sup>T</sup> and\n(<var>x</var>,<var>y</var>)<sup>T</sup> in the clockwise direction. If <var>x</var> and <var>y</var> should both be <span class=\"css\">0</span> or <span class=\"css\">-0</span>, the angle is specified as <span class=\"css\">0</span>. The 2D rotation\nmatrix is <a href=\"https://drafts.csswg.org/css-transforms-1/#RotateDefined\">described</a> in CSS\nTransforms where <code>alpha</code> is the angle between the vector (1,0)<sup>T</sup> and\n(<var>x</var>,<var>y</var>)<sup>T</sup> in degrees. <a data-link-type=\"biblio\" href=\"https://drafts.fxtf.org/geometry-1/#biblio-css3-transforms\" title=\"CSS Transforms Module Level 1\">[CSS3-TRANSFORMS]</a></p>"
+        },
+        {
+          "html": "<p>Return the current matrix.</p>"
+        }
+      ]
+    },
+    {
+      "name": "DOMMatrix/rotateAxisAngleSelf(x, y, z, angle)",
+      "href": "https://drafts.fxtf.org/geometry-1/#dom-dommatrix-rotateaxisangleself",
+      "html": "",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "<p><a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#post-multiply\" id=\"ref-for-post-multiply①⓪\">Post-multiply</a> a rotation transformation on the current matrix around the specified\nvector <var>x</var>, <var>y</var>, <var>z</var> by the specified rotation <var>angle</var> in\ndegrees. The 3D rotation matrix is <a href=\"https://drafts.csswg.org/css-transforms-1/#RotateDefined\">described</a> in CSS Transforms\nwith <var>alpha</var> = <var>angle</var> in degrees. <a data-link-type=\"biblio\" href=\"https://drafts.fxtf.org/geometry-1/#biblio-css3-transforms\" title=\"CSS Transforms Module Level 1\">[CSS3-TRANSFORMS]</a></p>"
+        },
+        {
+          "html": "<p>If <var>x</var> or <var>y</var> are not <span class=\"css\">0</span> or <span class=\"css\">-0</span>, set <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#matrix-is-2d\" id=\"ref-for-matrix-is-2d②⑥\">is 2D</a> of\nthe current matrix to <code>false</code>.</p>"
+        },
+        {
+          "html": "<p>Return the current matrix.</p>"
+        }
+      ]
+    },
+    {
+      "name": "DOMMatrix/skewXSelf(sx)",
+      "href": "https://drafts.fxtf.org/geometry-1/#dom-dommatrix-skewxself",
+      "html": "",
+      "rationale": "return",
+      "steps": [
+        {
+          "html": "<p><a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#post-multiply\" id=\"ref-for-post-multiply①①\">Post-multiply</a> a skewX transformation on the current matrix by the specified angle <var>sx</var> in degrees. The 2D skewX matrix is <a href=\"https://drafts.csswg.org/css-transforms-1/#SkewXDefined\">described</a> in CSS Transforms\nwith <var>alpha</var> = <var>sx</var> in degrees. <a data-link-type=\"biblio\" href=\"https://drafts.fxtf.org/geometry-1/#biblio-css3-transforms\" title=\"CSS Transforms Module Level 1\">[CSS3-TRANSFORMS]</a></p>"
+        },
+        {
+          "html": "<p>Return the current matrix.</p>"
+        }
+      ]
+    },
+    {
+      "name": "DOMMatrix/skewYSelf(sy)",
+      "href": "https://drafts.fxtf.org/geometry-1/#dom-dommatrix-skewyself",
+      "html": "",
+      "rationale": "return",
+      "steps": [
+        {
+          "html": "<p><a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#post-multiply\" id=\"ref-for-post-multiply①②\">Post-multiply</a> a skewX transformation on the current matrix by the specified angle <var>sy</var> in degrees. The 2D skewY matrix is <a href=\"https://drafts.csswg.org/css-transforms-1/#SkewYDefined\">described</a> in CSS Transforms\nwith <var>beta</var> = <var>sy</var> in degrees. <a data-link-type=\"biblio\" href=\"https://drafts.fxtf.org/geometry-1/#biblio-css3-transforms\" title=\"CSS Transforms Module Level 1\">[CSS3-TRANSFORMS]</a></p>"
+        },
+        {
+          "html": "<p>Return the current matrix.</p>"
+        }
+      ]
+    },
+    {
+      "name": "DOMMatrix/invertSelf()",
+      "href": "https://drafts.fxtf.org/geometry-1/#dom-dommatrix-invertself",
+      "html": "",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "<p>Invert the current matrix.</p>"
+        },
+        {
+          "html": "<p>If the current matrix is not invertible set all attributes to <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-values-4/#valdef-calc-nan\" id=\"ref-for-valdef-calc-nan②\">NaN</a> and set <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#matrix-is-2d\" id=\"ref-for-matrix-is-2d②⑦\">is 2D</a> to <code>false</code>.</p>"
         },
         {
           "html": "<p>Return the current matrix.</p>"

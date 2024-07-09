@@ -217,9 +217,30 @@
                   "html": "Append the value of <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-qualified-name\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-qualified-name-7\"><var>qualified name</var></a> to <var>markup</var>."
                 },
                 {
-                  "html": "Append the following to <var>markup</var>, in the order listed:\n\n        \n\n        <ol>\n          <li>\"<code> </code>\" (U+0020 SPACE);\n\n          </li><li>The string \"<code>xmlns:</code>\";\n\n          </li><li>The value of <var>prefix</var>;\n\n          </li><li>\"<code>=\"</code>\" (U+003D EQUALS SIGN, U+0022 QUOTATION MARK);\n\n          </li><li>The result of <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-serializing-an-attribute-value\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-serializing-an-attribute-value-1\">serializing an attribute value</a> given <var>ns</var> and the\n          <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-require-well-formed\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-require-well-formed-7\"><var>require well-formed</var></a> flag as input;\n\n          </li><li>\"<code>\"</code>\" (U+0022 QUOTATION MARK).\n\n          </li><li>If <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-local-default-namespace\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-local-default-namespace-6\"><var>local default namespace</var></a> is not <code>null</code> (there exists a\n          locally-defined default namespace declaration attribute), then let\n          <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-inherited-ns\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-inherited-ns-4\"><var>inherited ns</var></a> get the value of <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-local-default-namespace\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-local-default-namespace-7\"><var>local default namespace</var></a>\n          unless the <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-local-default-namespace\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-local-default-namespace-8\"><var>local default namespace</var></a> is the empty string in which case let\n          it get <code>null</code>.\n        </li></ol>",
-                  "ignored": [
-                    "\" \" (U+0020 SPACE); The string \"xmlns:\"; The value of prefix; \"=\"\" (U+003D EQUALS SIGN, U+0022 QUOTATION MARK); The result of serializing an attribute value given ns and the require well-formed flag as input; \"\"\" (U+0022 QUOTATION MARK). If local default namespace is not null (there exists a locally-defined default namespace declaration attribute), then let inherited ns get the value of local default namespace unless the local default namespace is the empty string in which case let it get null."
+                  "html": "Append the following to <var>markup</var>, in the order listed:",
+                  "rationale": "if",
+                  "steps": [
+                    {
+                      "html": "\"<code> </code>\" (U+0020 SPACE);"
+                    },
+                    {
+                      "html": "The string \"<code>xmlns:</code>\";"
+                    },
+                    {
+                      "html": "The value of <var>prefix</var>;"
+                    },
+                    {
+                      "html": "\"<code>=\"</code>\" (U+003D EQUALS SIGN, U+0022 QUOTATION MARK);"
+                    },
+                    {
+                      "html": "The result of <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-serializing-an-attribute-value\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-serializing-an-attribute-value-1\">serializing an attribute value</a> given <var>ns</var> and the\n          <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-require-well-formed\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-require-well-formed-7\"><var>require well-formed</var></a> flag as input;"
+                    },
+                    {
+                      "html": "\"<code>\"</code>\" (U+0022 QUOTATION MARK)."
+                    },
+                    {
+                      "html": "If <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-local-default-namespace\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-local-default-namespace-6\"><var>local default namespace</var></a> is not <code>null</code> (there exists a\n          locally-defined default namespace declaration attribute), then let\n          <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-inherited-ns\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-inherited-ns-4\"><var>inherited ns</var></a> get the value of <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-local-default-namespace\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-local-default-namespace-7\"><var>local default namespace</var></a>\n          unless the <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-local-default-namespace\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-local-default-namespace-8\"><var>local default namespace</var></a> is the empty string in which case let\n          it get <code>null</code>."
+                    }
                   ]
                 }
               ]

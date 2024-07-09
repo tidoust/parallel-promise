@@ -452,8 +452,20 @@
                   "steps": [
                     {
                       "html": "<ol>\n                    <li>Notify the <a data-link-type=\"idl\" data-lt=\"MediaSource\" href=\"https://w3c.github.io/media-source/#dom-mediasource\" class=\"internalDFN\" id=\"ref-for-dom-mediasource-80\"><code>MediaSource</code></a> using an internal <code>detach</code> message posted to\n                    <a data-link-type=\"attribute\" data-lt=\"[[port to worker]]\" href=\"https://w3c.github.io/media-source/#dfn-port-to-worker\" class=\"internalDFN\" id=\"ref-for-dfn-port-to-worker-4\"><code>[[port to worker]]</code></a>.\n                    </li>\n                    <li>Set <a data-link-type=\"attribute\" data-lt=\"[[port to worker]]\" href=\"https://w3c.github.io/media-source/#dfn-port-to-worker\" class=\"internalDFN\" id=\"ref-for-dfn-port-to-worker-5\"><code>[[port to worker]]</code></a> null.\n                    </li>\n                    <li>Set <a data-link-type=\"attribute\" data-lt=\"[[channel with worker]]\" href=\"https://w3c.github.io/media-source/#dfn-channel-with-worker\" class=\"internalDFN\" id=\"ref-for-dfn-channel-with-worker-7\"><code>[[channel with worker]]</code></a> null.\n                    </li>\n                    <li>The implicit message handler for this <code>detach</code> notification runs the\n                    remainder of these steps in the <a data-link-type=\"idl\" data-lt=\"DedicatedWorkerGlobalScope\" data-type=\"interface\" href=\"https://html.spec.whatwg.org/multipage/workers.html#dedicatedworkerglobalscope\"><code>DedicatedWorkerGlobalScope</code></a> <a data-link-type=\"idl\" data-lt=\"MediaSource\" href=\"https://w3c.github.io/media-source/#dom-mediasource\" class=\"internalDFN\" id=\"ref-for-dom-mediasource-81\"><code>MediaSource</code></a>.\n                    </li>\n                  </ol>",
-                      "ignored": [
-                        "Notify the MediaSource using an internal detach message posted to [[port to worker]]. Set [[port to worker]] null. Set [[channel with worker]] null. The implicit message handler for this detach notification runs the remainder of these steps in the DedicatedWorkerGlobalScope MediaSource."
+                      "rationale": "set",
+                      "steps": [
+                        {
+                          "html": "Notify the <a data-link-type=\"idl\" data-lt=\"MediaSource\" href=\"https://w3c.github.io/media-source/#dom-mediasource\" class=\"internalDFN\" id=\"ref-for-dom-mediasource-80\"><code>MediaSource</code></a> using an internal <code>detach</code> message posted to\n                    <a data-link-type=\"attribute\" data-lt=\"[[port to worker]]\" href=\"https://w3c.github.io/media-source/#dfn-port-to-worker\" class=\"internalDFN\" id=\"ref-for-dfn-port-to-worker-4\"><code>[[port to worker]]</code></a>."
+                        },
+                        {
+                          "html": "Set <a data-link-type=\"attribute\" data-lt=\"[[port to worker]]\" href=\"https://w3c.github.io/media-source/#dfn-port-to-worker\" class=\"internalDFN\" id=\"ref-for-dfn-port-to-worker-5\"><code>[[port to worker]]</code></a> null."
+                        },
+                        {
+                          "html": "Set <a data-link-type=\"attribute\" data-lt=\"[[channel with worker]]\" href=\"https://w3c.github.io/media-source/#dfn-channel-with-worker\" class=\"internalDFN\" id=\"ref-for-dfn-channel-with-worker-7\"><code>[[channel with worker]]</code></a> null."
+                        },
+                        {
+                          "html": "The implicit message handler for this <code>detach</code> notification runs the\n                    remainder of these steps in the <a data-link-type=\"idl\" data-lt=\"DedicatedWorkerGlobalScope\" data-type=\"interface\" href=\"https://html.spec.whatwg.org/multipage/workers.html#dedicatedworkerglobalscope\"><code>DedicatedWorkerGlobalScope</code></a> <a data-link-type=\"idl\" data-lt=\"MediaSource\" href=\"https://w3c.github.io/media-source/#dom-mediasource\" class=\"internalDFN\" id=\"ref-for-dom-mediasource-81\"><code>MediaSource</code></a>."
+                        }
                       ]
                     }
                   ]
@@ -1285,7 +1297,7 @@
     },
     {
       "html": "When the segment parser loop algorithm is invoked, run the following steps:",
-      "rationale": "run the following steps",
+      "rationale": "if",
       "steps": [
         {
           "html": "<i>Loop Top:</i> If the <a data-link-type=\"attribute\" data-lt=\"[[input buffer]]\" href=\"https://w3c.github.io/media-source/#dfn-input-buffer\" class=\"internalDFN\" id=\"ref-for-dfn-input-buffer-2\"><code>[[input buffer]]</code></a> is empty, then jump to the\n              <i>need more data</i> step below."
@@ -1948,7 +1960,7 @@
       "steps": [
         {
           "html": "For each <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/media-source/#dfn-coded-frame\" class=\"internalDFN\" id=\"ref-for-dfn-coded-frame-32\">coded frame</a> in the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/media-source/#dfn-media-segment\" class=\"internalDFN\" id=\"ref-for-dfn-media-segment-13\">media segment</a> run the following steps:",
-          "rationale": "run the following steps",
+          "rationale": "let",
           "steps": [
             {
               "html": "<i>Loop Top:</i>",

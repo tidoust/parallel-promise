@@ -319,6 +319,56 @@
       ]
     },
     {
+      "name": "create a constructed CSSStyleSheet",
+      "href": "https://drafts.csswg.org/cssom-1/#create-a-constructed-cssstylesheet",
+      "html": "",
+      "rationale": "set",
+      "steps": [
+        {
+          "html": "Construct a new <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/cssom-1/#cssstylesheet\" id=\"ref-for-cssstylesheet②\">CSSStyleSheet</a></code> object <var>sheet</var>."
+        },
+        {
+          "html": "Set <var>sheet</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#concept-css-style-sheet-location\" id=\"ref-for-concept-css-style-sheet-location\">location</a> to the <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/semantics.html#link-options-base-url\" id=\"ref-for-link-options-base-url\">base URL</a> of the <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/nav-history-apis.html#concept-document-window\" id=\"ref-for-concept-document-window\">associated Document</a> for the <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#current-global-object\" id=\"ref-for-current-global-object\">current global object</a>."
+        },
+        {
+          "html": "Set <var>sheet</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#concept-css-style-sheet-stylesheet-base-url\" id=\"ref-for-concept-css-style-sheet-stylesheet-base-url\">stylesheet base URL</a> to the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/cssom-1/#dom-cssstylesheetinit-baseurl\" id=\"ref-for-dom-cssstylesheetinit-baseurl\">baseURL</a></code> attribute value from <var>options</var>."
+        },
+        {
+          "html": "Set <var>sheet</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#concept-css-rule-parent-css-style-sheet\" id=\"ref-for-concept-css-rule-parent-css-style-sheet\">parent CSS style sheet</a> to null."
+        },
+        {
+          "html": "Set <var>sheet</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#concept-css-style-sheet-owner-node\" id=\"ref-for-concept-css-style-sheet-owner-node\">owner node</a> to null."
+        },
+        {
+          "html": "Set <var>sheet</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#concept-css-style-sheet-owner-css-rule\" id=\"ref-for-concept-css-style-sheet-owner-css-rule\">owner CSS rule</a> to null."
+        },
+        {
+          "html": "Set <var>sheet</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#concept-css-style-sheet-title\" id=\"ref-for-concept-css-style-sheet-title\">title</a> to the empty string."
+        },
+        {
+          "html": "Unset <var>sheet</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#concept-css-style-sheet-alternate-flag\" id=\"ref-for-concept-css-style-sheet-alternate-flag\">alternate flag</a>."
+        },
+        {
+          "html": "Set <var>sheet</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#concept-css-style-sheet-origin-clean-flag\" id=\"ref-for-concept-css-style-sheet-origin-clean-flag\">origin-clean flag</a>."
+        },
+        {
+          "html": "Set <var>sheet</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#concept-css-style-sheet-constructed-flag\" id=\"ref-for-concept-css-style-sheet-constructed-flag\">constructed flag</a>."
+        },
+        {
+          "html": "Set <var>sheet</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#concept-css-style-sheet-constructor-document\" id=\"ref-for-concept-css-style-sheet-constructor-document\">Constructor document</a> to the <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/nav-history-apis.html#concept-document-window\" id=\"ref-for-concept-document-window①\">associated Document</a> for the <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#current-global-object\" id=\"ref-for-current-global-object①\">current global object</a>."
+        },
+        {
+          "html": "If the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/cssom-1/#dom-cssstylesheetinit-media\" id=\"ref-for-dom-cssstylesheetinit-media\">media</a></code> attribute of <var>options</var> is a string, <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#create-a-medialist-object\" id=\"ref-for-create-a-medialist-object\">create a MediaList object</a> from the string\n        and assign it as <var>sheet</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#concept-css-style-sheet-media\" id=\"ref-for-concept-css-style-sheet-media\">media</a>.\n        Otherwise, <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-media-query-list\" id=\"ref-for-serialize-a-media-query-list①\">serialize a media query list</a> from the attribute and then <span id=\"ref-for-create-a-medialist-object①\">create a MediaList object</span> from the resulting string and set it as <var>sheet</var>’s <span id=\"ref-for-concept-css-style-sheet-media①\">media</span>."
+        },
+        {
+          "html": "If the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/cssom-1/#dom-cssstylesheetinit-disabled\" id=\"ref-for-dom-cssstylesheetinit-disabled\">disabled</a></code> attribute of <var>options</var> is true,\n        set <var>sheet</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#concept-css-style-sheet-disabled-flag\" id=\"ref-for-concept-css-style-sheet-disabled-flag\">disabled flag</a>."
+        },
+        {
+          "html": "Return <var>sheet</var>."
+        }
+      ]
+    },
+    {
       "name": "CSSStyleSheet/cssRules",
       "href": "https://drafts.csswg.org/cssom-1/#dom-cssstylesheet-cssrules",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"CSSStyleSheet\" data-dfn-type=\"attribute\" data-export=\"\" id=\"dom-cssstylesheet-cssrules\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>cssRules</code></dfn> attribute must follow these steps:",
@@ -533,6 +583,20 @@
         },
         {
           "html": "Unset the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#concept-css-style-sheet-disabled-flag\" id=\"ref-for-concept-css-style-sheet-disabled-flag①⓪\">disabled flag</a> for each <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#css-style-sheet\" id=\"ref-for-css-style-sheet③②\">CSS style sheet</a> in a <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#css-style-sheet-set\" id=\"ref-for-css-style-sheet-set③\">CSS style sheet set</a> whose <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#css-style-sheet-set-name\" id=\"ref-for-css-style-sheet-set-name\">CSS style sheet set name</a> is a <a data-link-type=\"dfn\">case-sensitive</a> match for <var>name</var> and set it for all other <span id=\"ref-for-css-style-sheet③③\">CSS style sheets</span> in a <span id=\"ref-for-css-style-sheet-set④\">CSS style sheet set</span>."
+        }
+      ]
+    },
+    {
+      "name": "select a CSS style sheet set",
+      "href": "https://drafts.csswg.org/cssom-1/#select-a-css-style-sheet-set",
+      "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-export=\"\" id=\"select-a-css-style-sheet-set\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">select a CSS style sheet set</dfn> with name <var>name</var>, run these steps:",
+      "rationale": "set",
+      "steps": [
+        {
+          "html": "<a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#enable-a-css-style-sheet-set\" id=\"ref-for-enable-a-css-style-sheet-set\">enable a CSS style sheet set</a> with name <var>name</var>."
+        },
+        {
+          "html": "Set <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#last-css-style-sheet-set-name\" id=\"ref-for-last-css-style-sheet-set-name②\">last CSS style sheet set name</a> to <var>name</var>."
         }
       ]
     },
@@ -801,9 +865,21 @@
               "case": "CSSImportRule",
               "steps": [
                 {
-                  "html": "The result of concatenating the following: \n     <ol>\n      <li>The string \"<code>@import</code>\" followed by a single SPACE (U+0020). \n      </li><li>The result of performing <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-url\" id=\"ref-for-serialize-a-url\">serialize a URL</a> on the rule’s location. \n      </li><li>If the rule’s associated media list is not empty, a single SPACE (U+0020) followed by the\n   result of performing <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-media-query-list\" id=\"ref-for-serialize-a-media-query-list②\">serialize a media query list</a> on the media list. \n      </li><li>The string \"<code>;</code>\", i.e., SEMICOLON (U+003B). \n     </li></ol>\n     <div class=\"example\" id=\"example-844003e0\">\n      <a class=\"self-link\" href=\"https://drafts.csswg.org/cssom-1/#example-844003e0\"></a> \n<pre>@import url(\"import.css\");</pre>\n<pre>@import url(\"print.css\") print;</pre>\n     </div>",
-                  "ignored": [
-                    "The string \"@import\" followed by a single SPACE (U+0020). The result of performing serialize a URL on the rule’s location. If the rule’s associated media list is not empty, a single SPACE (U+0020) followed by the result of performing serialize a media query list on the media list. The string \";\", i.e., SEMICOLON (U+003B)."
+                  "html": "The result of concatenating the following:",
+                  "rationale": "if",
+                  "steps": [
+                    {
+                      "html": "The string \"<code>@import</code>\" followed by a single SPACE (U+0020)."
+                    },
+                    {
+                      "html": "The result of performing <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-url\" id=\"ref-for-serialize-a-url\">serialize a URL</a> on the rule’s location."
+                    },
+                    {
+                      "html": "If the rule’s associated media list is not empty, a single SPACE (U+0020) followed by the\n   result of performing <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-media-query-list\" id=\"ref-for-serialize-a-media-query-list②\">serialize a media query list</a> on the media list."
+                    },
+                    {
+                      "html": "The string \"<code>;</code>\", i.e., SEMICOLON (U+003B)."
+                    }
                   ]
                 }
               ]
@@ -823,9 +899,48 @@
               "case": "CSSFontFaceRule",
               "steps": [
                 {
-                  "html": "The result of concatenating the following: \n     <ol>\n      <li>The string \"<code>@font-face {</code>\", followed by a single SPACE (U+0020).\n      </li><li>The string \"<code>font-family:</code>\", followed by a single SPACE (U+0020).\n      </li><li>The result of performing <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-string\" id=\"ref-for-serialize-a-string④\">serialize a string</a> on the rule’s font family name.\n      </li><li>The string \"<code>;</code>\", i.e., SEMICOLON (U+003B). \n      </li><li>\n        If the rule’s associated source list is not empty, follow these substeps: \n       <ol>\n        <li>A single SPACE (U+0020), followed by the string \"<code>src:</code>\", followed by a single\n     SPACE (U+0020).\n        </li><li>The result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-comma-separated-list\" id=\"ref-for-serialize-a-comma-separated-list③\">serialize a comma-separated list</a> on performing <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-url\" id=\"ref-for-serialize-a-url①\">serialize a\n     URL</a> or <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-local\" id=\"ref-for-serialize-a-local\">serialize a LOCAL</a> for each source on the source list.\n        </li><li>The string \"<code>;</code>\", i.e., SEMICOLON (U+003B).\n       </li></ol>\n      </li><li>If rule’s associated <a class=\"property css\" data-link-type=\"property\">unicode-range</a> descriptor is present, a single\n   SPACE (U+0020), followed by the string \"<code>unicode-range:</code>\", followed by a single SPACE\n   (U+0020), followed by the result of performing serialize a <span class=\"production\">&lt;'unicode-range'&gt;</span>, followed by the\n   string \"<code>;</code>\", i.e., SEMICOLON (U+003B).\n      </li><li>If rule’s associated <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-fonts-4/#propdef-font-variant\" id=\"ref-for-propdef-font-variant\">font-variant</a> descriptor is present, a single\n   SPACE (U+0020), followed by the string \"<code>font-variant:</code>\", followed by a single SPACE\n   (U+0020), followed by the result of performing serialize a <span class=\"production\" id=\"ref-for-propdef-font-variant①\">&lt;'font-variant'&gt;</span>, followed by the\n   string \"<code>;</code>\", i.e., SEMICOLON (U+003B).\n      </li><li>If rule’s associated <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-fonts-4/#propdef-font-feature-settings\" id=\"ref-for-propdef-font-feature-settings\">font-feature-settings</a> descriptor is present, a\n   single SPACE (U+0020), followed by the string \"<code>font-feature-settings:</code>\", followed by\n   a single SPACE (U+0020), followed by the result of performing serialize a <span class=\"production\" id=\"ref-for-propdef-font-feature-settings①\">&lt;'font-feature-settings'&gt;</span>, followed by the string \"<code>;</code>\", i.e., SEMICOLON\n   (U+003B).\n      </li><li>If rule’s associated <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-fonts-4/#propdef-font-stretch\" id=\"ref-for-propdef-font-stretch\">font-stretch</a> descriptor is present, a single\n   SPACE (U+0020), followed by the string \"<code>font-stretch:</code>\", followed by a single SPACE\n   (U+0020), followed by the result of performing serialize a <span class=\"production\" id=\"ref-for-propdef-font-stretch①\">&lt;'font-stretch'&gt;</span>, followed by the\n   string \"<code>;</code>\", i.e., SEMICOLON (U+003B).\n      </li><li>If rule’s associated <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-fonts-4/#propdef-font-weight\" id=\"ref-for-propdef-font-weight\">font-weight</a> descriptor is present, a single SPACE\n   (U+0020), followed by the string \"<code>font-weight:</code>\", followed by a single SPACE\n   (U+0020), followed by the result of performing serialize a <span class=\"production\" id=\"ref-for-propdef-font-weight①\">&lt;'font-weight'&gt;</span>, followed by the\n   string \"<code>;</code>\", i.e., SEMICOLON (U+003B).\n      </li><li>If rule’s associated <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-fonts-4/#propdef-font-style\" id=\"ref-for-propdef-font-style\">font-style</a> descriptor is present, a single SPACE\n   (U+0020), followed by the string \"<code>font-style:</code>\", followed by a single SPACE (U+0020),\n   followed by the result of performing serialize a <span class=\"production\" id=\"ref-for-propdef-font-style①\">&lt;'font-style'&gt;</span>, followed by the string\n   \"<code>;</code>\", i.e., SEMICOLON (U+003B).\n      </li><li>A single SPACE (U+0020), followed by the string \"}\", i.e., RIGHT CURLY BRACKET (U+007D).\n     </li></ol>\n     <p class=\"issue\" id=\"issue-f92cf3b3\"><a class=\"self-link\" href=\"https://drafts.csswg.org/cssom-1/#issue-f92cf3b3\"></a> Need to define how the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/css-fonts-4/#cssfontfacerule\" id=\"ref-for-cssfontfacerule①\">CSSFontFaceRule</a></code> descriptors' values are serialized.</p>",
-                  "ignored": [
-                    "The string \"@font-face {\", followed by a single SPACE (U+0020). The string \"font-family:\", followed by a single SPACE (U+0020). The result of performing serialize a string on the rule’s font family name. The string \";\", i.e., SEMICOLON (U+003B). If the rule’s associated source list is not empty, follow these substeps: A single SPACE (U+0020), followed by the string \"src:\", followed by a single SPACE (U+0020). The result of invoking serialize a comma-separated list on performing serialize a URL or serialize a LOCAL for each source on the source list. The string \";\", i.e., SEMICOLON (U+003B). If rule’s associated unicode-range descriptor is present, a single SPACE (U+0020), followed by the string \"unicode-range:\", followed by a single SPACE (U+0020), followed by the result of performing serialize a <'unicode-range'>, followed by the string \";\", i.e., SEMICOLON (U+003B). If rule’s associated font-variant descriptor is present, a single SPACE (U+0020), followed by the string \"font-variant:\", followed by a single SPACE (U+0020), followed by the result of performing serialize a <'font-variant'>, followed by the string \";\", i.e., SEMICOLON (U+003B). If rule’s associated font-feature-settings descriptor is present, a single SPACE (U+0020), followed by the string \"font-feature-settings:\", followed by a single SPACE (U+0020), followed by the result of performing serialize a <'font-feature-settings'>, followed by the string \";\", i.e., SEMICOLON (U+003B). If rule’s associated font-stretch descriptor is present, a single SPACE (U+0020), followed by the string \"font-stretch:\", followed by a single SPACE (U+0020), followed by the result of performing serialize a <'font-stretch'>, followed by the string \";\", i.e., SEMICOLON (U+003B). If rule’s associated font-weight descriptor is present, a single SPACE (U+0020), followed by the string \"font-weight:\", followed by a single SPACE (U+0020), followed by the result of performing serialize a <'font-weight'>, followed by the string \";\", i.e., SEMICOLON (U+003B). If rule’s associated font-style descriptor is present, a single SPACE (U+0020), followed by the string \"font-style:\", followed by a single SPACE (U+0020), followed by the result of performing serialize a <'font-style'>, followed by the string \";\", i.e., SEMICOLON (U+003B). A single SPACE (U+0020), followed by the string \"}\", i.e., RIGHT CURLY BRACKET (U+007D)."
+                  "html": "The result of concatenating the following:",
+                  "rationale": "if",
+                  "steps": [
+                    {
+                      "html": "The string \"<code>@font-face {</code>\", followed by a single SPACE (U+0020)."
+                    },
+                    {
+                      "html": "The string \"<code>font-family:</code>\", followed by a single SPACE (U+0020)."
+                    },
+                    {
+                      "html": "The result of performing <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-string\" id=\"ref-for-serialize-a-string④\">serialize a string</a> on the rule’s font family name."
+                    },
+                    {
+                      "html": "The string \"<code>;</code>\", i.e., SEMICOLON (U+003B)."
+                    },
+                    {
+                      "html": "If the rule’s associated source list is not empty, follow these substeps: \n       <ol>\n        <li>A single SPACE (U+0020), followed by the string \"<code>src:</code>\", followed by a single\n     SPACE (U+0020).\n        </li><li>The result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-comma-separated-list\" id=\"ref-for-serialize-a-comma-separated-list③\">serialize a comma-separated list</a> on performing <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-url\" id=\"ref-for-serialize-a-url①\">serialize a\n     URL</a> or <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-local\" id=\"ref-for-serialize-a-local\">serialize a LOCAL</a> for each source on the source list.\n        </li><li>The string \"<code>;</code>\", i.e., SEMICOLON (U+003B).\n       </li></ol>",
+                      "ignored": [
+                        "A single SPACE (U+0020), followed by the string \"src:\", followed by a single SPACE (U+0020). The result of invoking serialize a comma-separated list on performing serialize a URL or serialize a LOCAL for each source on the source list. The string \";\", i.e., SEMICOLON (U+003B)."
+                      ]
+                    },
+                    {
+                      "html": "If rule’s associated <a class=\"property css\" data-link-type=\"property\">unicode-range</a> descriptor is present, a single\n   SPACE (U+0020), followed by the string \"<code>unicode-range:</code>\", followed by a single SPACE\n   (U+0020), followed by the result of performing serialize a <span class=\"production\">&lt;'unicode-range'&gt;</span>, followed by the\n   string \"<code>;</code>\", i.e., SEMICOLON (U+003B)."
+                    },
+                    {
+                      "html": "If rule’s associated <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-fonts-4/#propdef-font-variant\" id=\"ref-for-propdef-font-variant\">font-variant</a> descriptor is present, a single\n   SPACE (U+0020), followed by the string \"<code>font-variant:</code>\", followed by a single SPACE\n   (U+0020), followed by the result of performing serialize a <span class=\"production\" id=\"ref-for-propdef-font-variant①\">&lt;'font-variant'&gt;</span>, followed by the\n   string \"<code>;</code>\", i.e., SEMICOLON (U+003B)."
+                    },
+                    {
+                      "html": "If rule’s associated <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-fonts-4/#propdef-font-feature-settings\" id=\"ref-for-propdef-font-feature-settings\">font-feature-settings</a> descriptor is present, a\n   single SPACE (U+0020), followed by the string \"<code>font-feature-settings:</code>\", followed by\n   a single SPACE (U+0020), followed by the result of performing serialize a <span class=\"production\" id=\"ref-for-propdef-font-feature-settings①\">&lt;'font-feature-settings'&gt;</span>, followed by the string \"<code>;</code>\", i.e., SEMICOLON\n   (U+003B)."
+                    },
+                    {
+                      "html": "If rule’s associated <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-fonts-4/#propdef-font-stretch\" id=\"ref-for-propdef-font-stretch\">font-stretch</a> descriptor is present, a single\n   SPACE (U+0020), followed by the string \"<code>font-stretch:</code>\", followed by a single SPACE\n   (U+0020), followed by the result of performing serialize a <span class=\"production\" id=\"ref-for-propdef-font-stretch①\">&lt;'font-stretch'&gt;</span>, followed by the\n   string \"<code>;</code>\", i.e., SEMICOLON (U+003B)."
+                    },
+                    {
+                      "html": "If rule’s associated <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-fonts-4/#propdef-font-weight\" id=\"ref-for-propdef-font-weight\">font-weight</a> descriptor is present, a single SPACE\n   (U+0020), followed by the string \"<code>font-weight:</code>\", followed by a single SPACE\n   (U+0020), followed by the result of performing serialize a <span class=\"production\" id=\"ref-for-propdef-font-weight①\">&lt;'font-weight'&gt;</span>, followed by the\n   string \"<code>;</code>\", i.e., SEMICOLON (U+003B)."
+                    },
+                    {
+                      "html": "If rule’s associated <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-fonts-4/#propdef-font-style\" id=\"ref-for-propdef-font-style\">font-style</a> descriptor is present, a single SPACE\n   (U+0020), followed by the string \"<code>font-style:</code>\", followed by a single SPACE (U+0020),\n   followed by the result of performing serialize a <span class=\"production\" id=\"ref-for-propdef-font-style①\">&lt;'font-style'&gt;</span>, followed by the string\n   \"<code>;</code>\", i.e., SEMICOLON (U+003B)."
+                    },
+                    {
+                      "html": "A single SPACE (U+0020), followed by the string \"}\", i.e., RIGHT CURLY BRACKET (U+007D)."
+                    }
                   ]
                 }
               ]
@@ -861,9 +976,24 @@
               "case": "CSSKeyframeRule",
               "steps": [
                 {
-                  "html": "The result of concatenating the following: \n     <ol>\n      <li>The <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/css-animations-1/#dom-csskeyframerule-keytext\" id=\"ref-for-dom-csskeyframerule-keytext\">keyText</a></code>. \n      </li><li>The string \"<code> { </code>\", i.e., a single SPACE (U+0020), followed by LEFT CURLY BRACKET (U+007B), followed by a single SPACE (U+0020). \n      </li><li>The result of performing <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-css-declaration-block\" id=\"ref-for-serialize-a-css-declaration-block①\">serialize a CSS declaration block</a> on the rule’s associated declarations. \n      </li><li>If the rule is associated with one or more declarations, the string \"<code> </code>\", i.e., a single SPACE (U+0020). \n      </li><li>The string \"<code>}</code>\", RIGHT CURLY BRACKET (U+007D). \n     </li></ol>",
-                  "ignored": [
-                    "The keyText. The string \" { \", i.e., a single SPACE (U+0020), followed by LEFT CURLY BRACKET (U+007B), followed by a single SPACE (U+0020). The result of performing serialize a CSS declaration block on the rule’s associated declarations. If the rule is associated with one or more declarations, the string \" \", i.e., a single SPACE (U+0020). The string \"}\", RIGHT CURLY BRACKET (U+007D)."
+                  "html": "The result of concatenating the following:",
+                  "rationale": "if",
+                  "steps": [
+                    {
+                      "html": "The <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/css-animations-1/#dom-csskeyframerule-keytext\" id=\"ref-for-dom-csskeyframerule-keytext\">keyText</a></code>."
+                    },
+                    {
+                      "html": "The string \"<code> { </code>\", i.e., a single SPACE (U+0020), followed by LEFT CURLY BRACKET (U+007B), followed by a single SPACE (U+0020)."
+                    },
+                    {
+                      "html": "The result of performing <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-css-declaration-block\" id=\"ref-for-serialize-a-css-declaration-block①\">serialize a CSS declaration block</a> on the rule’s associated declarations."
+                    },
+                    {
+                      "html": "If the rule is associated with one or more declarations, the string \"<code> </code>\", i.e., a single SPACE (U+0020)."
+                    },
+                    {
+                      "html": "The string \"<code>}</code>\", RIGHT CURLY BRACKET (U+007D)."
+                    }
                   ]
                 }
               ]
@@ -1290,6 +1420,26 @@
         },
         {
           "html": "Unset <var>declaration block</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#cssstyledeclaration-updating-flag\" id=\"ref-for-cssstyledeclaration-updating-flag②\">updating flag</a>."
+        }
+      ]
+    },
+    {
+      "name": "preferred order",
+      "href": "https://drafts.csswg.org/cssom-1/#concept-shorthands-preferred-order",
+      "html": "The <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-export=\"\" id=\"concept-shorthands-preferred-order\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">preferred order</dfn> of a list of shorthand properties <var>shorthands</var> is as follows:",
+      "rationale": "move",
+      "steps": [
+        {
+          "html": "Order <var>shorthands</var> lexicographically."
+        },
+        {
+          "html": "Move all items in <var>shorthands</var> that begin with \"<code>-</code>\" (U+002D) last in the list, retaining their relative order."
+        },
+        {
+          "html": "Move all items in <var>shorthands</var> that begin with \"<code>-</code>\" (U+002D) but do not begin with \"<code>-webkit-</code>\" last in the\n list, retaining their relative order."
+        },
+        {
+          "html": "Order <var>shorthands</var> by the number of longhand properties that map to it, with the greatest number first."
         }
       ]
     },

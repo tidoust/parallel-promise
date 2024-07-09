@@ -50,7 +50,7 @@
         },
         {
           "html": "<a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task\" id=\"ref-for-queue-a-task\">Queue a task</a> to run the following steps on <var>newContext</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/window-object.html#window\" id=\"ref-for-window\">Window</a></code> object’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#environment-settings-object\" id=\"ref-for-environment-settings-object\">environment settings object</a>'s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#responsible-event-loop\" id=\"ref-for-responsible-event-loop\">responsible event loop</a> using the <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#user-interaction-task-source\" id=\"ref-for-user-interaction-task-source\">user interaction task source</a>:",
-          "rationale": "abort these steps",
+          "rationale": "if",
           "steps": [
             {
               "html": "<p><i>HandleNavigate</i>: <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsing-the-web.html#navigate\" id=\"ref-for-navigate\">Navigate</a> <var>newContext</var> to <var>entry</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/content-index/spec/#content-index-entry-launch-url\" id=\"ref-for-content-index-entry-launch-url\">launch url</a> with <a data-link-type=\"dfn\">exceptions enabled</a> and <a data-link-type=\"dfn\">replacement enabled</a>.</p>"

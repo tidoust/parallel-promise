@@ -464,7 +464,7 @@
         },
         {
           "html": "Run the following steps <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#in-parallel\" id=\"ref-for-in-parallel②\">in parallel</a>:",
-          "rationale": "in parallel",
+          "rationale": "display",
           "steps": [
             {
               "html": "<p>Optionally, wait until any prior execution of this algorithm has terminated.</p>"
@@ -547,7 +547,7 @@
         },
         {
           "html": "Run the following steps <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#in-parallel\" id=\"ref-for-in-parallel④\">in parallel</a>:",
-          "rationale": "in parallel",
+          "rationale": "display",
           "steps": [
             {
               "html": "<p>Optionally, wait until any prior execution of this algorithm has terminated.</p>"
@@ -621,7 +621,7 @@
         },
         {
           "html": "Run the following steps <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#in-parallel\" id=\"ref-for-in-parallel⑥\">in parallel</a>:",
-          "rationale": "in parallel",
+          "rationale": "display",
           "steps": [
             {
               "html": "<p>Optionally, wait until any prior execution of this algorithm has terminated.</p>"

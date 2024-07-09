@@ -1088,7 +1088,7 @@
             },
             {
               "html": "<a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task\" id=\"ref-for-queue-a-task①③\">Queue a task</a> to run the following steps on <var>newContext</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/nav-history-apis.html#window\" id=\"ref-for-window⑥\">Window</a></code> object’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#environment-settings-object\" id=\"ref-for-environment-settings-object①⓪\">environment settings object</a>'s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#responsible-event-loop\" id=\"ref-for-responsible-event-loop⑤\">responsible event loop</a> using the <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#user-interaction-task-source\" id=\"ref-for-user-interaction-task-source③\">user interaction task source</a>:",
-              "rationale": "abort these steps",
+              "rationale": "if",
               "steps": [
                 {
                   "html": "<p><em>HandleNavigate</em>: <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsing-the-web.html#navigate\" id=\"ref-for-navigate⑤\">Navigate</a> <var>newContext</var> to <var>url</var> with <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsing-the-web.html#exceptions-enabled\" id=\"ref-for-exceptions-enabled①\">exceptionsEnabled</a> true, and <a data-link-type=\"dfn\">historyHandling</a> \"<code>replace</code>\".</p>"

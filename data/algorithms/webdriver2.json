@@ -24,7 +24,7 @@
       "steps": [
         {
           "html": "<a data-link-type=\"dfn|abstract-op\" data-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#iteration-while\" id=\"ref-for-index-term-while-for-iteration-1\">While</a> the <a href=\"https://w3c.github.io/webdriver/#dfn-connection\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-connection-3\">connection</a> is not closed:",
-          "rationale": "run the following steps",
+          "rationale": "let",
           "steps": [
             {
               "html": "<p><a href=\"https://w3c.github.io/webdriver/#dfn-read-bytes\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-read-bytes-1\">Read bytes</a> from the <a href=\"https://w3c.github.io/webdriver/#dfn-connection\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-connection-4\">connection</a> until a\n    complete <a href=\"https://w3c.github.io/webdriver/#dfn-http-request\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-http-request-2\">HTTP request</a> can be constructed from the data.\n    Let <var>request</var> be a <a href=\"https://w3c.github.io/webdriver/#dfn-http-request\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-http-request-3\">request</a> constructed from the\n    received data, according to the requirements of [<cite><a class=\"bibref\" data-link-type=\"biblio\" href=\"https://w3c.github.io/webdriver/#bib-rfc7230\" title=\"Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing\">RFC7230</a></cite>]. If it\n    is not possible to construct a complete <a href=\"https://w3c.github.io/webdriver/#dfn-http-request\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-http-request-4\">HTTP request</a>,\n    the <a href=\"https://w3c.github.io/webdriver/#dfn-remote-ends\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-remote-ends-18\">remote end</a> must either close the <a href=\"https://w3c.github.io/webdriver/#dfn-connection\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-connection-5\">connection</a>,\n    return an HTTP response with status code 500, or return\n    an <a href=\"https://w3c.github.io/webdriver/#dfn-error\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-error-3\">error</a> with <a href=\"https://w3c.github.io/webdriver/#dfn-error-code\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-error-code-2\">error code</a> <a href=\"https://w3c.github.io/webdriver/#dfn-unknown-error\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-unknown-error-1\">unknown error</a>.\n\n   </p>"
@@ -5708,9 +5708,15 @@
           "html": "<p>If <var>last</var> is true, return.\n\n </p>"
         },
         {
-          "html": "<p>Run the following substeps <a data-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#in-parallel\" id=\"ref-for-index-term-in-parallel-5\">in parallel</a>:\n\n  </p>\n\n <ol>\n   <li><p><a href=\"https://w3c.github.io/webdriver/#dfn-asynchronously-wait\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-asynchronously-wait-3\">Asynchronously wait</a> for an implementation defined\n    amount of time to pass.\n\n   </p>\n\n   </li><li><p><a href=\"https://w3c.github.io/webdriver/#dfn-perform-a-pointer-move\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-perform-a-pointer-move-2\">Perform a pointer move</a> with arguments\n    <var>input state</var>, <var>duration</var>,\n    <var>start x</var>, <var>start y</var>, <var>target x</var>,\n    <var>target y</var>.\n </p></li></ol>",
-          "ignored": [
-            "Asynchronously wait for an implementation defined amount of time to pass. Perform a pointer move with arguments input state, duration, start x, start y, target x, target y."
+          "html": "Run the following substeps <a data-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#in-parallel\" id=\"ref-for-index-term-in-parallel-5\">in parallel</a>:",
+          "rationale": "perform",
+          "steps": [
+            {
+              "html": "<p><a href=\"https://w3c.github.io/webdriver/#dfn-asynchronously-wait\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-asynchronously-wait-3\">Asynchronously wait</a> for an implementation defined\n    amount of time to pass.\n\n   </p>"
+            },
+            {
+              "html": "<p><a href=\"https://w3c.github.io/webdriver/#dfn-perform-a-pointer-move\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-perform-a-pointer-move-2\">Perform a pointer move</a> with arguments\n    <var>input state</var>, <var>duration</var>,\n    <var>start x</var>, <var>start y</var>, <var>target x</var>,\n    <var>target y</var>.\n </p>"
+            }
           ]
         }
       ]
@@ -5807,9 +5813,15 @@
           "html": "<p>If <var>last</var> is true, return.\n\n </p>"
         },
         {
-          "html": "<p>Run the following substeps <a data-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#in-parallel\" id=\"ref-for-index-term-in-parallel-6\">in parallel</a>:\n\n  </p>\n\n <ol>\n   <li><p><a href=\"https://w3c.github.io/webdriver/#dfn-asynchronously-wait\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-asynchronously-wait-5\">Asynchronously wait</a> for an implementation defined\n    amount of time to pass.\n\n   </p>\n\n   </li><li><p><a href=\"https://w3c.github.io/webdriver/#dfn-perform-a-scroll\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-perform-a-scroll-2\">Perform a scroll</a> with arguments\n    <var>duration</var>, <var>x</var>, <var>y</var>,\n    <var>target delta x</var>, <var>target delta y</var>,\n    <var>current delta x</var>, <var>current delta y</var>.\n </p></li></ol>",
-          "ignored": [
-            "Asynchronously wait for an implementation defined amount of time to pass. Perform a scroll with arguments duration, x, y, target delta x, target delta y, current delta x, current delta y."
+          "html": "Run the following substeps <a data-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#in-parallel\" id=\"ref-for-index-term-in-parallel-6\">in parallel</a>:",
+          "rationale": "perform",
+          "steps": [
+            {
+              "html": "<p><a href=\"https://w3c.github.io/webdriver/#dfn-asynchronously-wait\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-asynchronously-wait-5\">Asynchronously wait</a> for an implementation defined\n    amount of time to pass.\n\n   </p>"
+            },
+            {
+              "html": "<p><a href=\"https://w3c.github.io/webdriver/#dfn-perform-a-scroll\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-perform-a-scroll-2\">Perform a scroll</a> with arguments\n    <var>duration</var>, <var>x</var>, <var>y</var>,\n    <var>target delta x</var>, <var>target delta y</var>,\n    <var>current delta x</var>, <var>current delta y</var>.\n </p>"
+            }
           ]
         }
       ]

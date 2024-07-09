@@ -30,6 +30,27 @@
           "html": "The page float is placed in the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-page-floats-3/#float-reference\" id=\"ref-for-float-reference④②\">float reference</a> according to the rules\n    of 'float stacking' and 'float reference growth'."
         }
       ]
+    },
+    {
+      "html": "When resolving over-constrained layouts, the order of importance for defined\n  goals are:",
+      "rationale": "display",
+      "steps": [
+        {
+          "html": "honor 'clear: top/bottom'"
+        },
+        {
+          "html": "honor <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-page-floats-3/#propdef-float-defer\" id=\"ref-for-propdef-float-defer②\">float-defer</a>"
+        },
+        {
+          "html": "honor 'float: top/bottom'"
+        },
+        {
+          "html": "display all content (as described by other CSS properties)"
+        },
+        {
+          "html": "keep the number of pages to a minimum"
+        }
+      ]
     }
   ]
 }

@@ -304,15 +304,41 @@
       ]
     },
     {
-      "html": "Recursively descend into <var>value</var> as follows to check any sub-properties\n\t\t\t\t\t\t\t\t\tfirst:",
+      "name": "global data checks",
+      "href": "https://w3c.github.io/pub-manifest/#dfn-global-data-checks",
+      "html": "To process the <dfn id=\"dfn-global-data-checks\" tabindex=\"0\" aria-haspopup=\"dialog\" data-dfn-type=\"dfn\">global data checks</dfn> on a property <var>term</var>'s <var>value</var>\n\t\t\t\t\t\t\twith an optional <a href=\"https://w3c.github.io/pub-manifest/#dfn-context\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-context-2\">context</a>\n\t\t\t\t\t\t\t<var>context</var>, run these steps:",
       "rationale": "if",
       "steps": [
         {
-          "html": "if <var>value</var> is a <a href=\"https://infra.spec.whatwg.org/#ordered-map\">map</a>:",
+          "html": "<p>(<a href=\"https://w3c.github.io/pub-manifest/#properties-value-categories\" class=\"sec-ref\"><bdi class=\"secno\">4.2 </bdi>Value Categories</a>) If <var>term</var> has a known <a href=\"https://w3c.github.io/pub-manifest/#properties-value-categories\">value category</a>, set <var>value</var> to\n\t\t\t\t\t\t\t\t\tthe result of calling <a href=\"https://w3c.github.io/pub-manifest/#dfn-verify-value-category\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-verify-value-category-1\">verify value category</a>, when successful, given the\n\t\t\t\t\t\t\t\t\tvariables <var>term</var>, <var>value</var> and <var>context</var>. If failure is\n\t\t\t\t\t\t\t\t\treturned, return failure.</p>\n\t\t\t\t\t\t\t\t<p>Otherwise, return <var>value</var>.</p>\n\t\t\t\t\t\t\t\t<details>\n\t\t\t\t\t\t\t\t\t<summary>Explanation</summary>\n\t\t\t\t\t\t\t\t\t<p>This step verifies that the value of the term matches the expected category\n\t\t\t\t\t\t\t\t\t\trequired for the term. For example, the abridged term requires a boolean value,\n\t\t\t\t\t\t\t\t\t\tso any other value used with the term will result in a failure.</p>\n\t\t\t\t\t\t\t\t\t<p>If a failure occurs calling the function, this step also returns a failure so\n\t\t\t\t\t\t\t\t\t\tthat the property is removed from the final data set.</p>\n\t\t\t\t\t\t\t\t\t<p>Terms without a known value category are not processed, so the incoming value is\n\t\t\t\t\t\t\t\t\t\treturned.</p>\n\t\t\t\t\t\t\t\t</details>"
+        },
+        {
+          "html": "Recursively descend into <var>value</var> as follows to check any sub-properties\n\t\t\t\t\t\t\t\t\tfirst:",
           "rationale": "if",
           "steps": [
             {
-              "html": "<p>if <var>value[\"type\"]</var> includes a <a href=\"https://w3c.github.io/pub-manifest/#dfn-recognized-types\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-recognized-types-3\">recognized type</a>, <a href=\"https://infra.spec.whatwg.org/#map-iterate\">for each</a>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<var>key</var> → <var>keyValue</var> of <var>value</var>, set\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<var>value[key]</var> to the result of running <a href=\"https://w3c.github.io/pub-manifest/#dfn-global-data-checks\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-global-data-checks-2\">global data\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tchecks</a>, when successful, given <var>key</var>,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<var>keyValue</var> and using <var>value[\"type\"]</var> as the\n\t\t\t\t\t\t\t\t\t\t\t\t\tcontext. If failure is returned, <a href=\"https://infra.spec.whatwg.org/#map-remove\">remove</a>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<var>value[key]</var>.</p>"
+              "html": "if <var>value</var> is a <a href=\"https://infra.spec.whatwg.org/#ordered-map\">map</a>:",
+              "rationale": "if",
+              "steps": [
+                {
+                  "html": "<p>if <var>value[\"type\"]</var> includes a <a href=\"https://w3c.github.io/pub-manifest/#dfn-recognized-types\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-recognized-types-3\">recognized type</a>, <a href=\"https://infra.spec.whatwg.org/#map-iterate\">for each</a>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<var>key</var> → <var>keyValue</var> of <var>value</var>, set\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<var>value[key]</var> to the result of running <a href=\"https://w3c.github.io/pub-manifest/#dfn-global-data-checks\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-global-data-checks-2\">global data\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tchecks</a>, when successful, given <var>key</var>,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<var>keyValue</var> and using <var>value[\"type\"]</var> as the\n\t\t\t\t\t\t\t\t\t\t\t\t\tcontext. If failure is returned, <a href=\"https://infra.spec.whatwg.org/#map-remove\">remove</a>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<var>value[key]</var>.</p>"
+                },
+                {
+                  "html": "<p>otherwise, do nothing.</p>"
+                }
+              ]
+            },
+            {
+              "html": "otherwise, if <var>value</var> is a <a href=\"https://infra.spec.whatwg.org/#list\">list</a>, <a href=\"https://infra.spec.whatwg.org/#list-iterate\">for each</a>\n\t\t\t\t\t\t\t\t\t\t\t<var>item</var> of <var>value</var>, if <var>item</var> is a <a href=\"https://infra.spec.whatwg.org/#ordered-map\">map</a>:",
+              "rationale": "if",
+              "steps": [
+                {
+                  "html": "<p>if <var>item[\"type\"]</var> includes a <a href=\"https://w3c.github.io/pub-manifest/#dfn-recognized-types\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-recognized-types-4\">recognized type</a>, <a href=\"https://infra.spec.whatwg.org/#map-iterate\">for each</a>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<var>key</var> → <var>keyValue</var> of <var>item</var>, set\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<var>item[key]</var> to the result of running <a href=\"https://w3c.github.io/pub-manifest/#dfn-global-data-checks\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-global-data-checks-3\">global data\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tchecks</a>, when successful, given <var>key</var>,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<var>keyValue</var> and using <var>item[\"type\"]</var> as the\n\t\t\t\t\t\t\t\t\t\t\t\t\tcontext. If failure is returned, <a href=\"https://infra.spec.whatwg.org/#map-remove\">remove</a>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<var>item[key]</var>.</p>"
+                },
+                {
+                  "html": "<p>otherwise, do nothing.</p>"
+                }
+              ]
             },
             {
               "html": "<p>otherwise, do nothing.</p>"
@@ -320,64 +346,72 @@
           ]
         },
         {
-          "html": "otherwise, if <var>value</var> is a <a href=\"https://infra.spec.whatwg.org/#list\">list</a>, <a href=\"https://infra.spec.whatwg.org/#list-iterate\">for each</a>\n\t\t\t\t\t\t\t\t\t\t\t<var>item</var> of <var>value</var>, if <var>item</var> is a <a href=\"https://infra.spec.whatwg.org/#ordered-map\">map</a>:",
+          "html": "<p>(<a href=\"https://w3c.github.io/pub-manifest/#manifest-lang-dir-global\" class=\"sec-ref\"><bdi class=\"secno\">4.4.1 </bdi>Global Declarations</a> and <a href=\"https://w3c.github.io/pub-manifest/#manifest-lang-dir-local\" class=\"sec-ref\"><bdi class=\"secno\">4.4.2 </bdi>Item-Specific Declarations</a>) If <var>term</var> expects an <a href=\"https://w3c.github.io/pub-manifest/#value-array\">array</a> of\n\t\t\t\t\t\t\t\t\t\t\t<a href=\"https://w3c.github.io/pub-manifest/#dfn-localizablestrings\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-localizablestrings-3\"><code><code>LocalizableStrings</code></code></a>, <a href=\"https://infra.spec.whatwg.org/#list-iterate\">for each</a>\n\t\t\t\t\t\t\t\t\t<var>item</var> of <var>value</var>:</p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>if <var>item[\"value\"]</var> is not set, <a href=\"https://infra.spec.whatwg.org/#list-remove\">remove</a>\n\t\t\t\t\t\t\t\t\t\t\t<var>item</var> from <var>value</var>.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>if <var>item[\"language\"]</var> is set and its value is not <a href=\"https://tools.ietf.org/html/bcp47#section-2.2.9\">well-formed</a>&nbsp;[<cite><a class=\"bibref\" data-link-type=\"biblio\" href=\"https://w3c.github.io/pub-manifest/#bib-bcp47\" title=\"Tags for Identifying Languages\">bcp47</a></cite>], <a href=\"https://w3c.github.io/pub-manifest/#dfn-validation-errors\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-validation-errors-24\">validation error</a>, <a href=\"https://infra.spec.whatwg.org/#map-remove\">remove</a>\n\t\t\t\t\t\t\t\t\t\t\t<var>item[\"language\"]</var>.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>if <var>item[\"direction\"]</var> is set and its value is not one of\n\t\t\t\t\t\t\t\t\t\t\t\t\"<code>ltr</code>\" or \"<code>rtl</code>\", <a href=\"https://w3c.github.io/pub-manifest/#dfn-validation-errors\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-validation-errors-25\">validation error</a>, <a href=\"https://infra.spec.whatwg.org/#map-remove\">remove</a>\n\t\t\t\t\t\t\t\t\t\t\t<var>item[\"direction\"]</var>.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t<details>\n\t\t\t\t\t\t\t\t\t<summary>Explanation</summary>\n\t\t\t\t\t\t\t\t\t<p>This step checks that localizable strings have values, that their language\n\t\t\t\t\t\t\t\t\t\tdeclarations are well formed, and that their direction declarations have either\n\t\t\t\t\t\t\t\t\t\tthe value \"ltr\" or \"rtl\".</p>\n\t\t\t\t\t\t\t\t</details>"
+        },
+        {
+          "html": "<p>(<a href=\"https://w3c.github.io/pub-manifest/#value-entity\" class=\"sec-ref\"><bdi class=\"secno\">4.2.4.2 </bdi>Entities</a>) If <var>term</var> expects an <a href=\"https://w3c.github.io/pub-manifest/#value-array\">array</a> of <a href=\"https://w3c.github.io/pub-manifest/#value-entity\">entities</a>, <a href=\"https://infra.spec.whatwg.org/#list-iterate\">for each</a>\n\t\t\t\t\t\t\t\t\t<var>item</var> of <var>value</var>, check whether <var>item[\"name\"]</var> is\n\t\t\t\t\t\t\t\t\tset:</p>\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t<p>If not, <a href=\"https://w3c.github.io/pub-manifest/#dfn-validation-errors\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-validation-errors-26\">validation error</a>, <a href=\"https://infra.spec.whatwg.org/#list-remove\">remove</a>\n\t\t\t\t\t\t\t\t\t\t\t<var>item</var> from <var>value</var>.</p>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t<li>If so, <a href=\"https://infra.spec.whatwg.org/#list-iterate\">for each</a>\n\t\t\t\t\t\t\t\t\t\t<var>name</var> of <var>item[\"name\"]</var>, if <var>name[\"value\"]</var> is not\n\t\t\t\t\t\t\t\t\t\tset, or is an empty string, <a href=\"https://infra.spec.whatwg.org/#list-remove\">remove</a>\n\t\t\t\t\t\t\t\t\t\t<var>name</var> from <var>item[\"name\"]</var>.</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t<details>\n\t\t\t\t\t\t\t\t\t<summary>Explanation</summary>\n\t\t\t\t\t\t\t\t\t<p>This step ensures that all entities have a name. Entities without a name are\n\t\t\t\t\t\t\t\t\t\tremoved.</p>\n\t\t\t\t\t\t\t\t</details>"
+        },
+        {
+          "html": "This step performs the following two checks on the terms of a\n\t\t\t\t\t\t\t\t\t\t\t<code>LinkedResource</code>:",
           "rationale": "if",
           "steps": [
             {
-              "html": "<p>if <var>item[\"type\"]</var> includes a <a href=\"https://w3c.github.io/pub-manifest/#dfn-recognized-types\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-recognized-types-4\">recognized type</a>, <a href=\"https://infra.spec.whatwg.org/#map-iterate\">for each</a>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<var>key</var> → <var>keyValue</var> of <var>item</var>, set\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<var>item[key]</var> to the result of running <a href=\"https://w3c.github.io/pub-manifest/#dfn-global-data-checks\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-global-data-checks-3\">global data\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tchecks</a>, when successful, given <var>key</var>,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<var>keyValue</var> and using <var>item[\"type\"]</var> as the\n\t\t\t\t\t\t\t\t\t\t\t\t\tcontext. If failure is returned, <a href=\"https://infra.spec.whatwg.org/#map-remove\">remove</a>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<var>item[key]</var>.</p>"
+              "html": "If a URL is not specified, or is invalid, the <code>LinkedResource</code> is\n\t\t\t\t\t\t\t\t\t\t\tremoved."
             },
             {
-              "html": "<p>otherwise, do nothing.</p>"
+              "html": "If the duration of the resource is specified, or is not a value ISO 8601\n\t\t\t\t\t\t\t\t\t\t\tduration value, the duration property is removed."
             }
           ]
         },
         {
-          "html": "<p>otherwise, do nothing.</p>"
+          "html": "<p>Return <var>value</var>.</p>"
         }
       ]
     },
     {
-      "html": "This step performs the following two checks on the terms of a\n\t\t\t\t\t\t\t\t\t\t\t<code>LinkedResource</code>:",
+      "name": "verify value category",
+      "href": "https://w3c.github.io/pub-manifest/#dfn-verify-value-category",
+      "html": "To <dfn id=\"dfn-verify-value-category\" tabindex=\"0\" aria-haspopup=\"dialog\" data-dfn-type=\"dfn\">verify value category</dfn> of a property <var>term</var>'s <var>value</var> with a\n\t\t\t\t\t\t\t\t<a href=\"https://w3c.github.io/pub-manifest/#dfn-context\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-context-3\">context</a>\n\t\t\t\t\t\t\t<var>context</var>, run these steps:",
       "rationale": "if",
       "steps": [
         {
-          "html": "If a URL is not specified, or is invalid, the <code>LinkedResource</code> is\n\t\t\t\t\t\t\t\t\t\t\tremoved."
-        },
-        {
-          "html": "If the duration of the resource is specified, or is not a value ISO 8601\n\t\t\t\t\t\t\t\t\t\t\tduration value, the duration property is removed."
-        }
-      ]
-    },
-    {
-      "html": "If, depending on the <var>context</var>, <var>term</var> expects an <a href=\"https://w3c.github.io/pub-manifest/#value-array\">array</a>:",
-      "rationale": "if",
-      "steps": [
-        {
-          "html": "<p>if <var>value</var> is not a <a href=\"https://infra.spec.whatwg.org/#list\">list</a>, <a href=\"https://w3c.github.io/pub-manifest/#dfn-validation-errors\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-validation-errors-30\">validation error</a>, return failure.</p>"
-        },
-        {
-          "html": "otherwise, <a href=\"https://infra.spec.whatwg.org/#list-iterate\">for each</a>\n\t\t\t\t\t\t\t\t\t\t\t<var>item</var> of <var>value</var>:",
+          "html": "If, depending on the <var>context</var>, <var>term</var> expects an <a href=\"https://w3c.github.io/pub-manifest/#value-array\">array</a>:",
           "rationale": "if",
           "steps": [
             {
-              "html": "<p>if <var>item</var> does not match the expected value category of the\n\t\t\t\t\t\t\t\t\t\t\t\t\tarray, <a href=\"https://w3c.github.io/pub-manifest/#dfn-validation-errors\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-validation-errors-31\">validation error</a>, <a href=\"https://infra.spec.whatwg.org/#list-remove\">remove</a>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<var>item</var> from <var>value</var>, then <a href=\"https://infra.spec.whatwg.org/#iteration-continue\">continue</a>.</p>"
+              "html": "<p>if <var>value</var> is not a <a href=\"https://infra.spec.whatwg.org/#list\">list</a>, <a href=\"https://w3c.github.io/pub-manifest/#dfn-validation-errors\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-validation-errors-30\">validation error</a>, return failure.</p>"
             },
             {
-              "html": "<p>if <var>item</var> is a <a href=\"https://infra.spec.whatwg.org/#ordered-map\">map</a>, <a href=\"https://infra.spec.whatwg.org/#map-iterate\">for each</a>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<var>key</var> → <var>keyValue</var> of <var>item</var>, if\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<var>key</var> has an expected value category, set\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<var>key</var> to the result of running <a href=\"https://w3c.github.io/pub-manifest/#dfn-verify-value-category\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-verify-value-category-2\">verify value\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tcategory</a> given <var>key</var>, <var>keyValue</var>, and\n\t\t\t\t\t\t\t\t\t\t\t\t\tusing <var>item[\"type\"]</var> as the context. If the result of\n\t\t\t\t\t\t\t\t\t\t\t\t\tprocessing <var>item</var> is an empty <a href=\"https://infra.spec.whatwg.org/#ordered-map\">map</a>,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"https://w3c.github.io/pub-manifest/#dfn-validation-errors\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-validation-errors-32\">validation error</a>, <a href=\"https://infra.spec.whatwg.org/#list-remove\">remove</a>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<var>item</var> from <var>value</var>.</p>"
+              "html": "otherwise, <a href=\"https://infra.spec.whatwg.org/#list-iterate\">for each</a>\n\t\t\t\t\t\t\t\t\t\t\t<var>item</var> of <var>value</var>:",
+              "rationale": "if",
+              "steps": [
+                {
+                  "html": "<p>if <var>item</var> does not match the expected value category of the\n\t\t\t\t\t\t\t\t\t\t\t\t\tarray, <a href=\"https://w3c.github.io/pub-manifest/#dfn-validation-errors\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-validation-errors-31\">validation error</a>, <a href=\"https://infra.spec.whatwg.org/#list-remove\">remove</a>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<var>item</var> from <var>value</var>, then <a href=\"https://infra.spec.whatwg.org/#iteration-continue\">continue</a>.</p>"
+                },
+                {
+                  "html": "<p>if <var>item</var> is a <a href=\"https://infra.spec.whatwg.org/#ordered-map\">map</a>, <a href=\"https://infra.spec.whatwg.org/#map-iterate\">for each</a>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<var>key</var> → <var>keyValue</var> of <var>item</var>, if\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<var>key</var> has an expected value category, set\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<var>key</var> to the result of running <a href=\"https://w3c.github.io/pub-manifest/#dfn-verify-value-category\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-verify-value-category-2\">verify value\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tcategory</a> given <var>key</var>, <var>keyValue</var>, and\n\t\t\t\t\t\t\t\t\t\t\t\t\tusing <var>item[\"type\"]</var> as the context. If the result of\n\t\t\t\t\t\t\t\t\t\t\t\t\tprocessing <var>item</var> is an empty <a href=\"https://infra.spec.whatwg.org/#ordered-map\">map</a>,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"https://w3c.github.io/pub-manifest/#dfn-validation-errors\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-validation-errors-32\">validation error</a>, <a href=\"https://infra.spec.whatwg.org/#list-remove\">remove</a>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<var>item</var> from <var>value</var>.</p>"
+                }
+              ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "html": "Otherwise, if, depending on the <var>context</var>, <var>term</var> expects a <a href=\"https://infra.spec.whatwg.org/#ordered-map\">map</a>:",
-      "rationale": "if",
-      "steps": [
-        {
-          "html": "<p>if <var>value</var> is not a <a href=\"https://infra.spec.whatwg.org/#ordered-map\">map</a>, <a href=\"https://w3c.github.io/pub-manifest/#dfn-validation-errors\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-validation-errors-34\">validation\n\t\t\t\t\t\t\t\t\t\t\t\terror</a>, return failure.</p>"
         },
         {
-          "html": "<p>otherwise, <a href=\"https://infra.spec.whatwg.org/#map-iterate\">for each</a>\n\t\t\t\t\t\t\t\t\t\t\t<var>key</var> → <var>keyValue</var> of <var>value</var>, if <var>key</var>\n\t\t\t\t\t\t\t\t\t\t\thas an expected value category, set <var>key</var> to the result of running\n\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"https://w3c.github.io/pub-manifest/#dfn-verify-value-category\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-verify-value-category-3\">verify value category</a> given <var>key</var>, <var>keyValue</var>\n\t\t\t\t\t\t\t\t\t\t\tand using <var>value[\"type\"]</var> as the context. If the result of\n\t\t\t\t\t\t\t\t\t\t\tprocessing <var>value</var> is an empty <a href=\"https://infra.spec.whatwg.org/#ordered-map\">map</a>, <a href=\"https://w3c.github.io/pub-manifest/#dfn-validation-errors\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-validation-errors-35\">validation\n\t\t\t\t\t\t\t\t\t\t\t\terror</a>, return failure.</p>"
+          "html": "Otherwise, if, depending on the <var>context</var>, <var>term</var> expects a <a href=\"https://infra.spec.whatwg.org/#ordered-map\">map</a>:",
+          "rationale": "if",
+          "steps": [
+            {
+              "html": "<p>if <var>value</var> is not a <a href=\"https://infra.spec.whatwg.org/#ordered-map\">map</a>, <a href=\"https://w3c.github.io/pub-manifest/#dfn-validation-errors\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-validation-errors-34\">validation\n\t\t\t\t\t\t\t\t\t\t\t\terror</a>, return failure.</p>"
+            },
+            {
+              "html": "<p>otherwise, <a href=\"https://infra.spec.whatwg.org/#map-iterate\">for each</a>\n\t\t\t\t\t\t\t\t\t\t\t<var>key</var> → <var>keyValue</var> of <var>value</var>, if <var>key</var>\n\t\t\t\t\t\t\t\t\t\t\thas an expected value category, set <var>key</var> to the result of running\n\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"https://w3c.github.io/pub-manifest/#dfn-verify-value-category\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-verify-value-category-3\">verify value category</a> given <var>key</var>, <var>keyValue</var>\n\t\t\t\t\t\t\t\t\t\t\tand using <var>value[\"type\"]</var> as the context. If the result of\n\t\t\t\t\t\t\t\t\t\t\tprocessing <var>value</var> is an empty <a href=\"https://infra.spec.whatwg.org/#ordered-map\">map</a>, <a href=\"https://w3c.github.io/pub-manifest/#dfn-validation-errors\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-validation-errors-35\">validation\n\t\t\t\t\t\t\t\t\t\t\t\terror</a>, return failure.</p>"
+            }
+          ]
+        },
+        {
+          "html": "<p>Otherwise, if, depending on the <var>context</var>, <var>value</var> does not match\n\t\t\t\t\t\t\t\t\tthe expected value category of <var>term</var>, <a href=\"https://w3c.github.io/pub-manifest/#dfn-validation-errors\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-validation-errors-36\">validation error</a>, return\n\t\t\t\t\t\t\t\t\tfailure.</p>"
+        },
+        {
+          "html": "<p>Return <var>value</var>.</p>"
         }
       ]
     },
@@ -437,6 +471,47 @@
       ]
     },
     {
+      "name": "add default values",
+      "href": "https://w3c.github.io/pub-manifest/#dfn-add-default-values",
+      "html": "To <dfn id=\"dfn-add-default-values\" tabindex=\"0\" aria-haspopup=\"dialog\" data-dfn-type=\"dfn\">add default values</dfn> for missing properties in <a href=\"https://infra.spec.whatwg.org/#ordered-map\">map</a>\n\t\t\t\t\t\t<var>data</var> with an optional <a href=\"https://html.spec.whatwg.org/multipage/dom.html#the-document-object\">HTML Document\n\t\t\t\t\t\t\t(DOM) Node</a>&nbsp;[<cite><a class=\"bibref\" data-link-type=\"biblio\" href=\"https://w3c.github.io/pub-manifest/#bib-html\" title=\"HTML Standard\">html</a></cite>] <var>document</var>, run the following steps:",
+      "rationale": "let",
+      "steps": [
+        {
+          "html": "<p>(<a href=\"https://w3c.github.io/pub-manifest/#pub-title\" class=\"sec-ref\"><bdi class=\"secno\">4.7.1.11 </bdi>Title</a>) If <var>data[\"name\"]</var> is not set:</p>\n\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t<p>Let <var>title</var> be an empty <a href=\"https://infra.spec.whatwg.org/#ordered-map\">map</a>. Set its values as\n\t\t\t\t\t\t\t\t\t\tfollows:</p>\n\t\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t<p>if <var>document</var> is set, if the <a href=\"https://html.spec.whatwg.org/multipage/semantics.html#the-title-element\"><code>title</code></a> element&nbsp;[<cite><a class=\"bibref\" data-link-type=\"biblio\" href=\"https://w3c.github.io/pub-manifest/#bib-html\" title=\"HTML Standard\">html</a></cite>] of\n\t\t\t\t\t\t\t\t\t\t\t\t\t<var>document</var> is set and is not empty, set\n\t\t\t\t\t\t\t\t\t\t\t\t\t<var>title[\"value\"]</var> to the text content of the\n\t\t\t\t\t\t\t\t\t\t\t\t\t<code>title</code> element.</p>\n\t\t\t\t\t\t\t\t\t\t\t<p>Set <var>title[\"language\"]</var> to the <a href=\"https://html.spec.whatwg.org/multipage/dom.html#the-lang-and-xml%3Alang-attributes\">language</a>&nbsp;[<cite><a class=\"bibref\" data-link-type=\"biblio\" href=\"https://w3c.github.io/pub-manifest/#bib-html\" title=\"HTML Standard\">html</a></cite>], if available, and\n\t\t\t\t\t\t\t\t\t\t\t\t\t<var>title[\"direction\"]</var> to the <a href=\"https://html.spec.whatwg.org/multipage/dom.html#the-dir-attribute\">base direction</a>&nbsp;[<cite><a class=\"bibref\" data-link-type=\"biblio\" href=\"https://w3c.github.io/pub-manifest/#bib-html\" title=\"HTML Standard\">html</a></cite>] if that value is available and\n\t\t\t\t\t\t\t\t\t\t\t\tits value is either \"<code>ltr</code>\" or \"<code>rtl</code>\". </p>\n\t\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t<p>otherwise, <a href=\"https://w3c.github.io/pub-manifest/#dfn-validation-errors\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-validation-errors-39\">validation error</a>, generate a value for\n\t\t\t\t\t\t\t\t\t\t\t\t\t<var>title[\"value\"]</var> (see the <a href=\"https://w3c.github.io/pub-manifest/#generate_title\">separate note for details</a>). Set <var>title[\"language\"]</var>\n\t\t\t\t\t\t\t\t\t\t\t\tand <var>title[\"direction\"]</var> as appropriate for the generated\n\t\t\t\t\t\t\t\t\t\t\t\ttitle.</p>\n\t\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li>Set <var>data[\"name\"]</var> to the <a href=\"https://infra.spec.whatwg.org/#list\">list</a>: <code>«&nbsp;<var>title</var>&nbsp;»</code>.</li>\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t<details>\n\t\t\t\t\t\t\t\t<summary>Explanation</summary>\n\t\t\t\t\t\t\t\t<p>This step adds the content of the <code>title</code> element of <var>document</var>\n\t\t\t\t\t\t\t\t\twhen the <code>name</code> property is not specified in the manifest. For\n\t\t\t\t\t\t\t\t\texample:</p>\n\t\t\t\t\t\t\t\t<div class=\"example\" id=\"example-63\">\n        <div class=\"marker\">\n    <a class=\"self-link\" href=\"https://w3c.github.io/pub-manifest/#example-63\">Example<bdi> 63</bdi></a>\n  </div> <pre aria-busy=\"false\"><code class=\"hljs\"></code></pre>\n      </div>\n\t\t\t\t\t\t\t\t<p>yields:</p>\n\t\t\t\t\t\t\t\t<div class=\"example\" id=\"example-64\">\n        <div class=\"marker\">\n    <a class=\"self-link\" href=\"https://w3c.github.io/pub-manifest/#example-64\">Example<bdi> 64</bdi></a>\n  </div> <pre aria-busy=\"false\"><code class=\"hljs\"></code></pre>\n      </div>\n\t\t\t\t\t\t\t</details>"
+        },
+        {
+          "html": "<p>(<a href=\"https://w3c.github.io/pub-manifest/#default-reading-order\" class=\"sec-ref\"><bdi class=\"secno\">4.7.2.1 </bdi>Default Reading Order</a> and <a href=\"https://w3c.github.io/pub-manifest/#manifest-link\" class=\"sec-ref\"><bdi class=\"secno\">6.1 </bdi>Linking</a>) If\n\t\t\t\t\t\t\t\t\t<var>data[\"readingOrder\"]</var> is not set:</p>\n\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t<p>if either <var>document</var> or <a data-cite=\"!dom#concept-document-url\" href=\"https://dom.spec.whatwg.org/#concept-document-url\"><var>document.URL</var></a> is not set, <a href=\"https://w3c.github.io/pub-manifest/#dfn-fatal-errors\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-fatal-errors-4\">fatal error</a>, return\n\t\t\t\t\t\t\t\t\t\tfailure.</p>\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t<p>set <var>data[\"readingOrder\"]</var> to an empty <a href=\"https://infra.spec.whatwg.org/#list\">list</a> and <a href=\"https://infra.spec.whatwg.org/#list-append\">append</a> the <a href=\"https://infra.spec.whatwg.org/#ordered-map\">map</a>\n\t\t\t\t\t\t\t\t\t\t<code>«[&nbsp;\"url\" → <a data-cite=\"!dom#concept-document-url\" href=\"https://dom.spec.whatwg.org/#concept-document-url\"><var>document.URL</var></a>&nbsp;]»</code>.</p>\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t<p><a href=\"https://infra.spec.whatwg.org/#set-append\">append</a>\n\t\t\t\t\t\t\t\t\t\t<a data-cite=\"!dom#concept-document-url\" href=\"https://dom.spec.whatwg.org/#concept-document-url\"><var>document.URL</var></a> to\n\t\t\t\t\t\t\t\t\t\t\t<var>data[\"uniqueResources\"]</var>.</p>\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t<details>\n\t\t\t\t\t\t\t\t<summary>Explanation</summary>\n\t\t\t\t\t\t\t\t<p>If the Digital Publication consists only of the referencing document, the default\n\t\t\t\t\t\t\t\t\treading order can be omitted; it will consist, automatically, of that single\n\t\t\t\t\t\t\t\t\tresource. </p>\n\t\t\t\t\t\t\t</details>"
+        },
+        {
+          "html": "<p>If a <a href=\"https://w3c.github.io/pub-manifest/#dfn-profiles\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-profiles-16\">profile</a> specifies default values the user agent has to generate, those steps\n\t\t\t\t\t\t\t\tare executed at this point.</p>"
+        },
+        {
+          "html": "<p>(<a href=\"https://w3c.github.io/pub-manifest/#manifest-link\" class=\"sec-ref\"><bdi class=\"secno\">6.1 </bdi>Linking</a>) If <a data-cite=\"!dom#concept-document-url\" href=\"https://dom.spec.whatwg.org/#concept-document-url\"><var>document.URL</var></a> is set and <var>data[\"uniqueResources\"]</var> does\n\t\t\t\t\t\t\t\tnot <a href=\"https://infra.spec.whatwg.org/#list-contain\">contain</a>\n\t\t\t\t\t\t\t\t<var>document.URL</var>, <a href=\"https://w3c.github.io/pub-manifest/#dfn-validation-errors\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-validation-errors-40\">validation error</a>.</p>\n\t\t\t\t\t\t\t<details>\n\t\t\t\t\t\t\t\t<summary>Explanation</summary>\n\t\t\t\t\t\t\t\t<p>If the page that links to the manifest is not listed as a unique resource of the\n\t\t\t\t\t\t\t\t\tpublication after processing core and extension default value rules, an error is\n\t\t\t\t\t\t\t\t\traised as it has to be a publication resource.</p>\n\t\t\t\t\t\t\t</details>"
+        },
+        {
+          "html": "<p>Return <var>data</var>.</p>"
+        }
+      ]
+    },
+    {
+      "html": "For a profile to be compatible with this specification, the following conditions <em class=\"rfc2119\">MUST</em> be met:",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "It <em class=\"rfc2119\">MUST</em> adhere to the requirements for constructing a manifest as defined in <a href=\"https://w3c.github.io/pub-manifest/#manifest\" class=\"sec-ref\"><bdi class=\"secno\">4. </bdi>Publication Manifest</a>."
+        },
+        {
+          "html": "It <em class=\"rfc2119\">MUST</em> define a unique conformance URL and require that conforming publications include this URL in\n\t\t\t\t\ttheir <a href=\"https://w3c.github.io/pub-manifest/#profile-conformance\"><code>conformsTo</code> property</a>."
+        },
+        {
+          "html": "One or both <a href=\"https://w3c.github.io/pub-manifest/#manifest-link\">linking methods</a> <em class=\"rfc2119\">MUST</em> be used in the discovery of the\n\t\t\t\t\tmanifest."
+        },
+        {
+          "html": "The generic processing steps described in <a href=\"https://w3c.github.io/pub-manifest/#manifest-processing\" class=\"sec-ref\"><bdi class=\"secno\">7. </bdi>Processing a Manifest</a> <em class=\"rfc2119\">MUST</em> remain valid for\n\t\t\t\t\tthe extended manifest. To achieve this, and if new terms are added to the general manifest, then: <ul>\n\t\t\t\t\t\t<li>The term <em class=\"rfc2119\">SHOULD</em> be categorized, if applicable, to one or more of the general term categories\n\t\t\t\t\t\t\tused in the algorithm (e.g., <a href=\"https://w3c.github.io/pub-manifest/#value-array\">array</a> or <a href=\"https://w3c.github.io/pub-manifest/#value-localizable-string\">localizable string</a>). This means the relevant\n\t\t\t\t\t\t\tprocessing steps will be automatically executed for those terms </li>\n\t\t\t\t\t\t<li>If necessary, the profile <em class=\"rfc2119\">MAY</em> define its own processing step(s), to be executed at the\n\t\t\t\t\t\t\tdesignated extension points within the <a href=\"https://w3c.github.io/pub-manifest/#manifest-processing\">processing\n\t\t\t\t\t\t\t\talgorithm</a>. Such extra steps <em class=\"rfc2119\">MUST NOT</em> invalidate the results of any of the steps\n\t\t\t\t\t\t\tdefined for the <a href=\"https://w3c.github.io/pub-manifest/#manifest-processing\">processing algorithm</a> in general.</li>\n\t\t\t\t\t</ul>"
+        }
+      ]
+    },
+    {
       "html": "If successful, this algorithm returns an alternate resource. Otherwise, it returns failure.",
       "rationale": "let",
       "steps": [
@@ -490,7 +565,7 @@
         },
         {
           "html": "Walk over the DOM in <a href=\"https://dom.spec.whatwg.org/#concept-tree-order\">tree\n\t\t\t\t\t\t\torder</a>&nbsp;[<cite><a class=\"bibref\" data-link-type=\"biblio\" href=\"https://w3c.github.io/pub-manifest/#bib-dom\" title=\"DOM Standard\">dom</a></cite>], starting with the element the table of contents is being built\n\t\t\t\t\t\t\tfrom, and trigger the first relevant step below for each element as the walk enters and\n\t\t\t\t\t\t\texits it.",
-          "rationale": "resolve",
+          "rationale": "run these steps",
           "steps": [
             {
               "html": "Run these steps:",

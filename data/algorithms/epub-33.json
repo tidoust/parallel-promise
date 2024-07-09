@@ -99,9 +99,27 @@
               "html": "set <var>inner</var> to 0"
             },
             {
-              "html": "<span>while <var>inner</var> &lt; 20 and not (<var>source</var> at EOF)</span>\n\t\t\t\t\t\t\t\t\t<ol>\n\t\t\t\t\t\t\t\t\t\t<li>read 1 byte from <var>source</var> (Assumes read advances file\n\t\t\t\t\t\t\t\t\t\t\tposition)</li>\n\t\t\t\t\t\t\t\t\t\t<li>set <var>sourceByte</var> to result of read</li>\n\t\t\t\t\t\t\t\t\t\t<li>set <var>keyByte</var> to byte <var>inner</var> of <var>keyData</var></li>\n\t\t\t\t\t\t\t\t\t\t<li>set <var>obfuscatedByte</var> to (<var>sourceByte</var> XOR\n\t\t\t\t\t\t\t\t\t\t\t\t<var>keyByte</var>)</li>\n\t\t\t\t\t\t\t\t\t\t<li>write <var>obfuscatedByte</var> to <var>destination</var></li>\n\t\t\t\t\t\t\t\t\t\t<li>increment <var>inner</var></li>\n\t\t\t\t\t\t\t\t\t</ol>\n\t\t\t\t\t\t\t\t\t<span>end while</span>",
-              "ignored": [
-                "read 1 byte from source (Assumes read advances file position) set sourceByte to result of read set keyByte to byte inner of keyData set obfuscatedByte to (sourceByte XOR keyByte) write obfuscatedByte to destination increment inner"
+              "html": "<span>while <var>inner</var> &lt; 20 and not (<var>source</var> at EOF)</span>",
+              "rationale": "set",
+              "steps": [
+                {
+                  "html": "read 1 byte from <var>source</var> (Assumes read advances file\n\t\t\t\t\t\t\t\t\t\t\tposition)"
+                },
+                {
+                  "html": "set <var>sourceByte</var> to result of read"
+                },
+                {
+                  "html": "set <var>keyByte</var> to byte <var>inner</var> of <var>keyData</var>"
+                },
+                {
+                  "html": "set <var>obfuscatedByte</var> to (<var>sourceByte</var> XOR\n\t\t\t\t\t\t\t\t\t\t\t\t<var>keyByte</var>)"
+                },
+                {
+                  "html": "write <var>obfuscatedByte</var> to <var>destination</var>"
+                },
+                {
+                  "html": "increment <var>inner</var>"
+                }
               ]
             },
             {

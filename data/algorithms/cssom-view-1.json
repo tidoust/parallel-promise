@@ -196,6 +196,104 @@
       ]
     },
     {
+      "name": "Window/moveTo(x, y)",
+      "href": "https://drafts.csswg.org/cssom-view-1/#dom-window-moveto",
+      "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"Window\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-window-moveto\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>moveTo(<var>x</var>, <var>y</var>)</code></dfn> method must follow these steps:",
+      "rationale": "let",
+      "steps": [
+        {
+          "html": "<p>Optionally, return.</p>"
+        },
+        {
+          "html": "<p>Let <var>target</var> be <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\" id=\"ref-for-this①\">this</a>'s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#concept-relevant-global\" id=\"ref-for-concept-relevant-global\">relevant global object</a>'s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/nav-history-apis.html#window-bc\" id=\"ref-for-window-bc\">browsing context</a>.</p>"
+        },
+        {
+          "html": "<p>If <var>target</var> is not an <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/document-sequences.html#auxiliary-browsing-context\" id=\"ref-for-auxiliary-browsing-context\">auxiliary browsing context</a> that was created by a script (as opposed to by an action of the user), then return.</p>"
+        },
+        {
+          "html": "<p>Optionally, clamp <var>x</var> and <var>y</var> in a user-agent-defined manner so that the window does not move outside the available space.</p>"
+        },
+        {
+          "html": "<p>Move <var>target</var>’s window such that the window’s top left corner is at coordinates (<var>x</var>, <var>y</var>) relative to the top left corner of the output device, measured in <a class=\"css\" data-link-type=\"value\" href=\"https://drafts.csswg.org/css-values-4/#px\" id=\"ref-for-px⑥\">CSS pixels</a> of <var>target</var>. The positive axes are rightward and downward.</p>"
+        }
+      ]
+    },
+    {
+      "name": "Window/moveBy(x, y)",
+      "href": "https://drafts.csswg.org/cssom-view-1/#dom-window-moveby",
+      "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"Window\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-window-moveby\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>moveBy(<var>x</var>, <var>y</var>)</code></dfn> method must follow these steps:",
+      "rationale": "let",
+      "steps": [
+        {
+          "html": "<p>Optionally, return.</p>"
+        },
+        {
+          "html": "<p>Let <var>target</var> be <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\" id=\"ref-for-this②\">this</a>'s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#concept-relevant-global\" id=\"ref-for-concept-relevant-global①\">relevant global object</a>'s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/nav-history-apis.html#window-bc\" id=\"ref-for-window-bc①\">browsing context</a>.</p>"
+        },
+        {
+          "html": "<p>If <var>target</var> is not an <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/document-sequences.html#auxiliary-browsing-context\" id=\"ref-for-auxiliary-browsing-context①\">auxiliary browsing context</a> that was created by a script (as opposed to by an action of the user), then return.</p>"
+        },
+        {
+          "html": "<p>Optionally, clamp <var>x</var> and <var>y</var> in a user-agent-defined manner so that the window does not move outside the available space.</p>"
+        },
+        {
+          "html": "<p>Move <var>target</var>’s window <var>x</var> <a class=\"css\" data-link-type=\"value\" href=\"https://drafts.csswg.org/css-values-4/#px\" id=\"ref-for-px⑦\">CSS pixels</a> of <var>target</var> rightward and <var>y</var> <span id=\"ref-for-px⑧\">CSS pixels</span> of <var>target</var> downward.</p>"
+        }
+      ]
+    },
+    {
+      "name": "Window/resizeTo(width, height)",
+      "href": "https://drafts.csswg.org/cssom-view-1/#dom-window-resizeto",
+      "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"Window\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-window-resizeto\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>resizeTo(<var>width</var>, <var>height</var>)</code></dfn> method must follow these steps:",
+      "rationale": "let",
+      "steps": [
+        {
+          "html": "<p>Optionally, return.</p>"
+        },
+        {
+          "html": "<p>Let <var>target</var> be <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\" id=\"ref-for-this③\">this</a>'s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#concept-relevant-global\" id=\"ref-for-concept-relevant-global②\">relevant global object</a>'s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/nav-history-apis.html#window-bc\" id=\"ref-for-window-bc②\">browsing context</a>.</p>"
+        },
+        {
+          "html": "<p>If <var>target</var> is not an <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/document-sequences.html#auxiliary-browsing-context\" id=\"ref-for-auxiliary-browsing-context②\">auxiliary browsing context</a> that was created by a script (as opposed to by an action of the user), then return.</p>"
+        },
+        {
+          "html": "<p>Optionally, clamp <var>width</var> and <var>height</var> in a user-agent-defined manner so that the window does not get too small or bigger than the available space.</p>"
+        },
+        {
+          "html": "<p>Resize <var>target</var>’s window by moving its right and bottom edges such that the distance between the left and right edges of the viewport are <var>width</var> <a class=\"css\" data-link-type=\"value\" href=\"https://drafts.csswg.org/css-values-4/#px\" id=\"ref-for-px⑨\">CSS pixels</a> of <var>target</var> and the distance between the top and bottom edges of the viewport are <var>height</var> <span id=\"ref-for-px①⓪\">CSS pixels</span> of <var>target</var>.</p>"
+        },
+        {
+          "html": "<p>Optionally, move <var>target</var>’s window in a user-agent-defined manner so that it does not grow outside the available space.</p>"
+        }
+      ]
+    },
+    {
+      "name": "Window/resizeBy(x, y)",
+      "href": "https://drafts.csswg.org/cssom-view-1/#dom-window-resizeby",
+      "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"Window\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-window-resizeby\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>resizeBy(<var>x</var>, <var>y</var>)</code></dfn> method must follow these steps:",
+      "rationale": "let",
+      "steps": [
+        {
+          "html": "<p>Optionally, return.</p>"
+        },
+        {
+          "html": "<p>Let <var>target</var> be <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\" id=\"ref-for-this④\">this</a>'s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#concept-relevant-global\" id=\"ref-for-concept-relevant-global③\">relevant global object</a>'s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/nav-history-apis.html#window-bc\" id=\"ref-for-window-bc③\">browsing context</a>.</p>"
+        },
+        {
+          "html": "<p>If <var>target</var> is not an <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/document-sequences.html#auxiliary-browsing-context\" id=\"ref-for-auxiliary-browsing-context③\">auxiliary browsing context</a> that was created by a script (as opposed to by an action of the user), then return.</p>"
+        },
+        {
+          "html": "<p>Optionally, clamp <var>x</var> and <var>y</var> in a user-agent-defined manner so that the window does not get too small or bigger than the available space.</p>"
+        },
+        {
+          "html": "<p>Resize <var>target</var>’s window by moving its right edge <var>x</var> <a class=\"css\" data-link-type=\"value\" href=\"https://drafts.csswg.org/css-values-4/#px\" id=\"ref-for-px①①\">CSS pixels</a> of <var>target</var> rightward and its bottom edge <var>y</var> <span id=\"ref-for-px①②\">CSS pixels</span> of <var>target</var> downward.</p>"
+        },
+        {
+          "html": "<p>Optionally, move <var>target</var>’s window in a user-agent-defined manner so that it does not grow outside the available space.</p>"
+        }
+      ]
+    },
+    {
       "name": "Window/scroll(x, y)",
       "href": "https://drafts.csswg.org/cssom-view-1/#dom-window-scroll",
       "html": "When the <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"Window\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"scroll(x, y)|scroll(options)|scroll()\" id=\"dom-window-scroll\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>scroll()</code></dfn> method is invoked these\nsteps must be run:",

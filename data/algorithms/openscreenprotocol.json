@@ -5,6 +5,45 @@
   },
   "algorithms": [
     {
+      "html": "For additional terms and idioms specific to the <a data-link-type=\"biblio\" href=\"https://w3c.github.io/openscreenprotocol/#biblio-presentation-api\" title=\"Presentation API\">Presentation API</a> or <a data-link-type=\"biblio\" href=\"https://w3c.github.io/openscreenprotocol/#biblio-remote-playback\" title=\"Remote Playback API\">Remote Playback API</a>,\nplease consult the respective specifications.",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "<p>A <a data-link-type=\"dfn\" href=\"https://w3c.github.io/openscreenprotocol/#controller\" id=\"ref-for-controller①\">controller</a> must be able to determine if a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/openscreenprotocol/#receiver\" id=\"ref-for-receiver①\">receiver</a> is reasonably\ncapable of rendering a specific <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/presentation-api/#dfn-presentation-request-url\" id=\"ref-for-dfn-presentation-request-url\">presentation request URL</a>.</p>"
+        },
+        {
+          "html": "<p>A controller must be able to start a new <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/presentation-api/#dfn-receiving-browsing-context\" id=\"ref-for-dfn-receiving-browsing-context①\">presentation</a> on a\nreceiver given a <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/presentation-api/#dfn-presentation-request-url\" id=\"ref-for-dfn-presentation-request-url①\">presentation request URL</a> and <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/presentation-api/#dfn-presentation-identifier\" id=\"ref-for-dfn-presentation-identifier\">presentation\nidentifier</a>.</p>"
+        },
+        {
+          "html": "<p>A controller must be able to create a new <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/presentation-api/#dom-presentationconnection\" id=\"ref-for-dom-presentationconnection\">PresentationConnection</a></code> to an\nexisting presentation on the receiver, given its <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/presentation-api/#dfn-presentation-request-url\" id=\"ref-for-dfn-presentation-request-url②\">presentation request\nURL</a> and <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/presentation-api/#dfn-presentation-identifier\" id=\"ref-for-dfn-presentation-identifier①\">presentation identifier</a>.</p>"
+        },
+        {
+          "html": "<p>It must be possible to close a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/presentation-api/#dom-presentationconnection\" id=\"ref-for-dom-presentationconnection①\">PresentationConnection</a></code> between a\ncontroller and a presentation, and signal both parties with the reason why\nthe connection was closed.</p>"
+        },
+        {
+          "html": "<p>Multiple controllers must be able to connect to a single presentation\nsimultaneously.</p>"
+        },
+        {
+          "html": "<p>Messages sent by the controller must be delivered to the presentation (or\nvice versa) in a reliable and in-order fashion.</p>"
+        },
+        {
+          "html": "<p>If a message cannot be delivered, then the controller must be\nable to signal the receiver (or vice versa) that the connection should be\nclosed with reason <code>error</code>.</p>"
+        },
+        {
+          "html": "<p>The controller and presentation must be able to send and receive <code>DOMString</code> messages (represented as <code>string</code> type in ECMAScript).</p>"
+        },
+        {
+          "html": "<p>The controller and presentation must be able to send and receive binary\nmessages (represented as <code>Blob</code> objects in HTML5, or <code>ArrayBuffer</code> or <code>ArrayBufferView</code> types in ECMAScript).</p>"
+        },
+        {
+          "html": "<p>The controller must be able to signal to the receiver to\nterminate a presentation, given its <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/presentation-api/#dfn-presentation-request-url\" id=\"ref-for-dfn-presentation-request-url③\">presentation request URL</a> and <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/presentation-api/#dfn-presentation-identifier\" id=\"ref-for-dfn-presentation-identifier②\">presentation identifier</a>.</p>"
+        },
+        {
+          "html": "<p>The receiver must be able to signal all connected controllers\nwhen a presentation is terminated.</p>"
+        }
+      ]
+    },
+    {
       "name": "agent fingerprint",
       "href": "https://w3c.github.io/openscreenprotocol/#agent-fingerprint",
       "html": "The <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"agent-fingerprint\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">agent fingerprint</dfn> of an agent is computed by following these\nsteps:",
@@ -107,6 +146,18 @@
         },
         {
           "html": "<p>Construct a text <a data-link-type=\"dfn\" href=\"https://www.iso.org/standard/62021.html#\" id=\"ref-for-something②\">QR code</a> with the value of <code>N</code>.</p>"
+        }
+      ]
+    },
+    {
+      "html": "To decode a PSK <code>P</code> given a QR code, follow these steps:",
+      "rationale": "parse",
+      "steps": [
+        {
+          "html": "<p>Obtain the string <code>N</code> by decoding the QR code.</p>"
+        },
+        {
+          "html": "<p>Parse <code>N</code> as a hexadecimal number to obtain <code>P</code>.</p>"
         }
       ]
     }

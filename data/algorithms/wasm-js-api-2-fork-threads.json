@@ -72,7 +72,7 @@
         },
         {
           "html": "Run the following steps <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#in-parallel\" id=\"ref-for-in-parallel\">in parallel</a>:",
-          "rationale": "reject",
+          "rationale": "queue",
           "steps": [
             {
               "html": "<p><a data-link-type=\"dfn\" href=\"https://webassembly.github.io/threads/js-api/#compile-a-webassembly-module\" id=\"ref-for-compile-a-webassembly-module①\">Compile the WebAssembly module</a> <var>bytes</var> and store the result as <var>module</var>.</p>"
@@ -526,7 +526,7 @@
         },
         {
           "html": "<a data-link-type=\"dfn\" href=\"https://www.w3.org/2001/tag/doc/promises-guide/#upon-fulfillment\" id=\"ref-for-upon-fulfillment\">Upon fulfillment</a> of <var>promiseOfModule</var> with value <var>module</var>:",
-          "rationale": "reject",
+          "rationale": "resolve",
           "steps": [
             {
               "html": "<p><a data-link-type=\"dfn\" href=\"https://webassembly.github.io/threads/js-api/#asynchronously-instantiate-a-webassembly-module\" id=\"ref-for-asynchronously-instantiate-a-webassembly-module\">Instantiate the WebAssembly module</a> <var>module</var> importing <var>importObject</var>, and let <var>innerPromise</var> be the result.</p>"
@@ -817,9 +817,15 @@
           "rationale": "if",
           "steps": [
             {
-              "html": "<p>If <var>max</var> &gt; (65536 × 65536),</p>\n        <ol>\n         <li data-md=\"\">\n          <p class=\"issue\" id=\"issue-38f25e73\"><a class=\"self-link\" href=\"https://webassembly.github.io/threads/js-api/#issue-38f25e73\"></a> Can this happen?</p>\n         </li><li data-md=\"\">\n          <p>Throw a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://tc39.github.io/ecma262/#sec-native-error-types-used-in-this-standard-rangeerror\" id=\"ref-for-sec-native-error-types-used-in-this-standard-rangeerror\">RangeError</a></code> exception.</p>\n        </li></ol>",
-              "ignored": [
-                "Can this happen? Throw a RangeError exception."
+              "html": "If <var>max</var> &gt; (65536 × 65536),",
+              "rationale": "throw",
+              "steps": [
+                {
+                  "html": "<p class=\"issue\" id=\"issue-38f25e73\"><a class=\"self-link\" href=\"https://webassembly.github.io/threads/js-api/#issue-38f25e73\"></a> Can this happen?</p>"
+                },
+                {
+                  "html": "<p>Throw a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://tc39.github.io/ecma262/#sec-native-error-types-used-in-this-standard-rangeerror\" id=\"ref-for-sec-native-error-types-used-in-this-standard-rangeerror\">RangeError</a></code> exception.</p>"
+                }
               ]
             },
             {
@@ -1022,9 +1028,21 @@
           ]
         },
         {
-          "html": "<p>Otherwise,</p>\n      <ol>\n       <li data-md=\"\">\n        <p class=\"issue\" id=\"issue-9bc3a49b\"><a class=\"self-link\" href=\"https://webassembly.github.io/threads/js-api/#issue-9bc3a49b\"></a> Is this safe for a SharedArrayBuffer?</p>\n       </li><li data-md=\"\">\n        <p>Let <var>block</var> be a <a data-link-type=\"dfn\">Data Block</a> which is <a data-link-type=\"dfn\" href=\"https://webassembly.github.io/threads/js-api/#identified-with\" id=\"ref-for-identified-with⑤\">identified with</a> the underlying memory of <var>memaddr</var>.</p>\n       </li><li data-md=\"\">\n        <p>Set <var>buffer</var>.[[ArrayBufferData]] to <var>block</var>.</p>\n       </li><li data-md=\"\">\n        <p>Set <var>buffer</var>.[[ArrayBufferByteLength]] to the length of <var>block</var>.</p>\n      </li></ol>",
-          "ignored": [
-            "Is this safe for a SharedArrayBuffer? Let block be a Data Block which is identified with the underlying memory of memaddr. Set buffer.[[ArrayBufferData]] to block. Set buffer.[[ArrayBufferByteLength]] to the length of block."
+          "html": "Otherwise,",
+          "rationale": "let",
+          "steps": [
+            {
+              "html": "<p class=\"issue\" id=\"issue-9bc3a49b\"><a class=\"self-link\" href=\"https://webassembly.github.io/threads/js-api/#issue-9bc3a49b\"></a> Is this safe for a SharedArrayBuffer?</p>"
+            },
+            {
+              "html": "<p>Let <var>block</var> be a <a data-link-type=\"dfn\">Data Block</a> which is <a data-link-type=\"dfn\" href=\"https://webassembly.github.io/threads/js-api/#identified-with\" id=\"ref-for-identified-with⑤\">identified with</a> the underlying memory of <var>memaddr</var>.</p>"
+            },
+            {
+              "html": "<p>Set <var>buffer</var>.[[ArrayBufferData]] to <var>block</var>.</p>"
+            },
+            {
+              "html": "<p>Set <var>buffer</var>.[[ArrayBufferByteLength]] to the length of <var>block</var>.</p>"
+            }
           ]
         }
       ]

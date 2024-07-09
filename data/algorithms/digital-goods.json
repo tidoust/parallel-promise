@@ -71,9 +71,33 @@
           "html": "<p>If <var>result</var> is an error, then return <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#a-promise-rejected-with\" id=\"ref-for-a-promise-rejected-with⑥\">a promise rejected with</a> an <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#operationerror\" id=\"ref-for-operationerror①\">OperationError</a></code>.</p>"
         },
         {
-          "html": "<p>For each <var>itemDetails</var> in <var>result</var>:</p>\n      <ol>\n       <li data-md=\"\">\n        <p><var>itemDetails</var>.itemId SHOULD NOT be the empty string.</p>\n       </li><li data-md=\"\">\n        <p><var>itemIds</var> SHOULD <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-contain\" id=\"ref-for-list-contain\">contain</a> <var>itemDetails</var>.itemId.</p>\n       </li><li data-md=\"\">\n        <p><var>itemDetails</var>.title SHOULD NOT be the empty string.</p>\n       </li><li data-md=\"\">\n        <p><var>itemDetails</var>.price MUST be a <a data-link-type=\"dfn\" href=\"https://wicg.github.io/digital-goods/#canonical-paymentcurrencyamount\" id=\"ref-for-canonical-paymentcurrencyamount\">canonical PaymentCurrencyAmount</a>.</p>\n       </li><li data-md=\"\">\n        <p>If present, <var>itemDetails</var>.subscriptionPeriod MUST be be a <a data-link-type=\"dfn\" href=\"https://wicg.github.io/digital-goods/#iso-8601\" id=\"ref-for-iso-8601\">iso-8601</a> duration.</p>\n       </li><li data-md=\"\">\n        <p>If present, <var>itemDetails</var>.freeTrialPeriod MUST be be a <a data-link-type=\"dfn\" href=\"https://wicg.github.io/digital-goods/#iso-8601\" id=\"ref-for-iso-8601①\">iso-8601</a> duration.</p>\n       </li><li data-md=\"\">\n        <p>If present, <var>itemDetails</var>.introductoryPrice MUST be a <a data-link-type=\"dfn\" href=\"https://wicg.github.io/digital-goods/#canonical-paymentcurrencyamount\" id=\"ref-for-canonical-paymentcurrencyamount①\">canonical PaymentCurrencyAmount</a>.</p>\n       </li><li data-md=\"\">\n        <p>If present, <var>itemDetails</var>.introductoryPricePeriod MUST be be a <a data-link-type=\"dfn\" href=\"https://wicg.github.io/digital-goods/#iso-8601\" id=\"ref-for-iso-8601②\">iso-8601</a> duration.</p>\n      </li></ol>",
-          "ignored": [
-            "itemDetails.itemId SHOULD NOT be the empty string. itemIds SHOULD contain itemDetails.itemId. itemDetails.title SHOULD NOT be the empty string. itemDetails.price MUST be a canonical PaymentCurrencyAmount. If present, itemDetails.subscriptionPeriod MUST be be a iso-8601 duration. If present, itemDetails.freeTrialPeriod MUST be be a iso-8601 duration. If present, itemDetails.introductoryPrice MUST be a canonical PaymentCurrencyAmount. If present, itemDetails.introductoryPricePeriod MUST be be a iso-8601 duration."
+          "html": "For each <var>itemDetails</var> in <var>result</var>:",
+          "rationale": "if",
+          "steps": [
+            {
+              "html": "<p><var>itemDetails</var>.itemId SHOULD NOT be the empty string.</p>"
+            },
+            {
+              "html": "<p><var>itemIds</var> SHOULD <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-contain\" id=\"ref-for-list-contain\">contain</a> <var>itemDetails</var>.itemId.</p>"
+            },
+            {
+              "html": "<p><var>itemDetails</var>.title SHOULD NOT be the empty string.</p>"
+            },
+            {
+              "html": "<p><var>itemDetails</var>.price MUST be a <a data-link-type=\"dfn\" href=\"https://wicg.github.io/digital-goods/#canonical-paymentcurrencyamount\" id=\"ref-for-canonical-paymentcurrencyamount\">canonical PaymentCurrencyAmount</a>.</p>"
+            },
+            {
+              "html": "<p>If present, <var>itemDetails</var>.subscriptionPeriod MUST be be a <a data-link-type=\"dfn\" href=\"https://wicg.github.io/digital-goods/#iso-8601\" id=\"ref-for-iso-8601\">iso-8601</a> duration.</p>"
+            },
+            {
+              "html": "<p>If present, <var>itemDetails</var>.freeTrialPeriod MUST be be a <a data-link-type=\"dfn\" href=\"https://wicg.github.io/digital-goods/#iso-8601\" id=\"ref-for-iso-8601①\">iso-8601</a> duration.</p>"
+            },
+            {
+              "html": "<p>If present, <var>itemDetails</var>.introductoryPrice MUST be a <a data-link-type=\"dfn\" href=\"https://wicg.github.io/digital-goods/#canonical-paymentcurrencyamount\" id=\"ref-for-canonical-paymentcurrencyamount①\">canonical PaymentCurrencyAmount</a>.</p>"
+            },
+            {
+              "html": "<p>If present, <var>itemDetails</var>.introductoryPricePeriod MUST be be a <a data-link-type=\"dfn\" href=\"https://wicg.github.io/digital-goods/#iso-8601\" id=\"ref-for-iso-8601②\">iso-8601</a> duration.</p>"
+            }
           ]
         },
         {

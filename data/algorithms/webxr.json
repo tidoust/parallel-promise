@@ -524,7 +524,7 @@
         },
         {
           "html": "<a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task\" id=\"ref-for-queue-a-task①⓪\">Queue a task</a> to perform the following steps:",
-          "rationale": "resolve",
+          "rationale": "let",
           "steps": [
             {
               "html": "<p>The <a data-link-type=\"dfn\" href=\"https://immersive-web.github.io/webxr/#xr-compositor\" id=\"ref-for-xr-compositor\">XR Compositor</a> MAY use <var>rate</var> to calculate a new <a data-link-type=\"dfn\" href=\"https://immersive-web.github.io/webxr/#display-frame-rate\" id=\"ref-for-display-frame-rate\">display frame rate</a> and/or <a data-link-type=\"dfn\" href=\"https://immersive-web.github.io/webxr/#nominal-frame-rate\" id=\"ref-for-nominal-frame-rate\">nominal frame rate</a>.</p>"
@@ -534,7 +534,7 @@
             },
             {
               "html": "<a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task\" id=\"ref-for-queue-a-task①①\">Queue a task</a> to perform the following steps:",
-              "rationale": "resolve",
+              "rationale": "apply",
               "steps": [
                 {
                   "html": "<p>Await until the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://immersive-web.github.io/webxr/#xrsystem\" id=\"ref-for-xrsystem①①\">XRSystem</a></code>'s actions to update the <a data-link-type=\"dfn\" href=\"https://immersive-web.github.io/webxr/#nominal-frame-rate\" id=\"ref-for-nominal-frame-rate②\">nominal frame rate</a> to <var>newrate</var> have taken effect.</p>"
@@ -2040,7 +2040,7 @@
                       "steps": [
                         {
                           "html": "<a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task\" id=\"ref-for-queue-a-task③②\">Queue a task</a> on the <a data-link-type=\"dfn\" href=\"https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.15\" id=\"ref-for-5.15\">WebGL task source</a> to perform the following steps:",
-                          "rationale": "abort these steps",
+                          "rationale": "handle",
                           "steps": [
                             {
                               "html": "<p>Force <var>context</var> to be lost.</p>"
@@ -2076,7 +2076,7 @@
                                     },
                                     {
                                       "html": "Run the following steps <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#in-parallel\" id=\"ref-for-in-parallel⑨\">in parallel</a>.",
-                                      "rationale": "resolve",
+                                      "rationale": "queue",
                                       "steps": [
                                         {
                                           "html": "<p>Await a restorable drawing buffer on a <a data-link-type=\"dfn\" href=\"https://immersive-web.github.io/webxr/#compatible-graphics-adapter\" id=\"ref-for-compatible-graphics-adapter⑦\">compatible graphics adapter</a> for <var>device</var>.</p>"
@@ -2342,7 +2342,7 @@
         },
         {
           "html": "For each <var>feature</var> in <var>consentRequired</var> perform the following steps:",
-          "rationale": "abort these steps",
+          "rationale": "if",
           "steps": [
             {
               "html": "<p>The user agent MAY at this point ask the user’s permission for the calling algorithm to use <var>feature</var>. The results of these prompts should be included when determining if there is a clear signal of <a data-link-type=\"dfn\" href=\"https://immersive-web.github.io/webxr/#user-intent\" id=\"ref-for-user-intent①⑤\">user intent</a> to enable <var>feature</var>.</p>"
@@ -2356,9 +2356,18 @@
           ]
         },
         {
-          "html": "<p>For each <var>feature</var> in <var>consentOptional</var> perform the following steps:</p>\n        <ol>\n         <li data-md=\"\">\n          <p>The user agent MAY at this point ask the user’s permission for the calling algorithm to use <var>feature</var>. The results of these prompts should be included when determining if there is a clear signal of <a data-link-type=\"dfn\" href=\"https://immersive-web.github.io/webxr/#user-intent\" id=\"ref-for-user-intent①⑦\">user intent</a> to enable <var>feature</var>.</p>\n         </li><li data-md=\"\">\n          <p>If a clear signal of <a data-link-type=\"dfn\" href=\"https://immersive-web.github.io/webxr/#user-intent\" id=\"ref-for-user-intent①⑧\">user intent</a> to enable <var>feature</var> has not been determined, continue to the next entry.</p>\n         </li><li data-md=\"\">\n          <p>If <var>feature</var> is not in <var>granted</var>, append <var>feature</var> to <var>granted</var>.</p>\n        </li></ol>",
-          "ignored": [
-            "The user agent MAY at this point ask the user’s permission for the calling algorithm to use feature. The results of these prompts should be included when determining if there is a clear signal of user intent to enable feature. If a clear signal of user intent to enable feature has not been determined, continue to the next entry. If feature is not in granted, append feature to granted."
+          "html": "For each <var>feature</var> in <var>consentOptional</var> perform the following steps:",
+          "rationale": "if",
+          "steps": [
+            {
+              "html": "<p>The user agent MAY at this point ask the user’s permission for the calling algorithm to use <var>feature</var>. The results of these prompts should be included when determining if there is a clear signal of <a data-link-type=\"dfn\" href=\"https://immersive-web.github.io/webxr/#user-intent\" id=\"ref-for-user-intent①⑦\">user intent</a> to enable <var>feature</var>.</p>"
+            },
+            {
+              "html": "<p>If a clear signal of <a data-link-type=\"dfn\" href=\"https://immersive-web.github.io/webxr/#user-intent\" id=\"ref-for-user-intent①⑧\">user intent</a> to enable <var>feature</var> has not been determined, continue to the next entry.</p>"
+            },
+            {
+              "html": "<p>If <var>feature</var> is not in <var>granted</var>, append <var>feature</var> to <var>granted</var>.</p>"
+            }
           ]
         },
         {

@@ -1604,7 +1604,7 @@
       "name": "process an attribution eligible response",
       "href": "https://wicg.github.io/attribution-reporting-api/#process-an-attribution-eligible-response",
       "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-export=\"\" id=\"process-an-attribution-eligible-response\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">process an attribution eligible response</dfn> given a <a data-link-type=\"dfn\" href=\"https://wicg.github.io/attribution-reporting-api/#suitable-origin\" id=\"ref-for-suitable-origin①④\">suitable origin</a> <var>contextOrigin</var>, an <a data-link-type=\"dfn\" href=\"https://wicg.github.io/attribution-reporting-api/#eligibility\" id=\"ref-for-eligibility⑦\">eligibility</a> <var>eligibility</var>, a <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#boolean\" id=\"ref-for-boolean①⑤\">boolean</a> <var>fenced</var>,\na possibly null <a data-link-type=\"dfn\" href=\"https://wicg.github.io/attribution-reporting-api/#trigger-verification-metadata\" id=\"ref-for-trigger-verification-metadata③\">trigger verification metadata</a> <var>triggerVerificationMetadata</var>, and a <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-response\" id=\"ref-for-concept-response③\">response</a> <var>response</var>:",
-      "rationale": "run the following steps",
+      "rationale": "queue",
       "steps": [
         {
           "html": "<p>The user-agent MAY ignore the response; if so, return.</p>"
@@ -6364,6 +6364,81 @@
       ]
     },
     {
+      "name": "attempt to deliver a debug report",
+      "href": "https://wicg.github.io/attribution-reporting-api/#attempt-to-deliver-a-debug-report",
+      "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"attempt-to-deliver-a-debug-report\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">attempt to deliver a debug report</dfn> given an <a data-link-type=\"dfn\" href=\"https://wicg.github.io/attribution-reporting-api/#attribution-report\" id=\"ref-for-attribution-report①③\">attribution report</a> <var>report</var>:",
+      "rationale": "let",
+      "steps": [
+        {
+          "html": "<p>The user-agent MAY ignore the report; if so, return.</p>"
+        },
+        {
+          "html": "<p>Let <var>url</var> be the result of executing <a data-link-type=\"dfn\" href=\"https://wicg.github.io/attribution-reporting-api/#generate-an-attribution-report-url\" id=\"ref-for-generate-an-attribution-report-url①\">generate an attribution report URL</a> on <var>report</var> with <a data-link-type=\"dfn\" href=\"https://wicg.github.io/attribution-reporting-api/#generate-an-attribution-report-url-isdebugreport\" id=\"ref-for-generate-an-attribution-report-url-isdebugreport\">isDebugReport</a> set to true.</p>"
+        },
+        {
+          "html": "<p>Let <var>data</var> be the result of executing <a data-link-type=\"dfn\" href=\"https://wicg.github.io/attribution-reporting-api/#serialize-an-attribution-report\" id=\"ref-for-serialize-an-attribution-report①\">serialize an attribution report</a> on <var>report</var>.</p>"
+        },
+        {
+          "html": "<p>If <var>data</var> is an error, return.</p>"
+        },
+        {
+          "html": "<p>Let <var>headers</var> be the result of executing <a data-link-type=\"dfn\" href=\"https://wicg.github.io/attribution-reporting-api/#generate-attribution-report-headers\" id=\"ref-for-generate-attribution-report-headers①\">generate attribution report headers</a>.</p>"
+        },
+        {
+          "html": "<p>Let <var>request</var> be the result of executing <a data-link-type=\"dfn\" href=\"https://wicg.github.io/attribution-reporting-api/#create-a-report-request\" id=\"ref-for-create-a-report-request①\">create a report request</a> on <var>url</var>, <var>data</var>, and <var>headers</var>.</p>"
+        },
+        {
+          "html": "<p><a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-fetch\" id=\"ref-for-concept-fetch⑤\">Fetch</a> <var>request</var>.</p>"
+        }
+      ]
+    },
+    {
+      "name": "attempt to deliver a verbose debug report",
+      "href": "https://wicg.github.io/attribution-reporting-api/#attempt-to-deliver-a-verbose-debug-report",
+      "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"attempt-to-deliver-a-verbose-debug-report\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">attempt to deliver a verbose debug report</dfn> given a <a data-link-type=\"dfn\" href=\"https://wicg.github.io/attribution-reporting-api/#verbose-debug-report\" id=\"ref-for-verbose-debug-report⑤\">verbose debug report</a> <var>report</var>:",
+      "rationale": "let",
+      "steps": [
+        {
+          "html": "<p>The user-agent MAY ignore the report; if so, return.</p>"
+        },
+        {
+          "html": "<p>Let <var>url</var> be the result of executing <a data-link-type=\"dfn\" href=\"https://wicg.github.io/attribution-reporting-api/#generate-a-verbose-debug-report-url\" id=\"ref-for-generate-a-verbose-debug-report-url\">generate a verbose debug report URL</a> on <var>report</var>.</p>"
+        },
+        {
+          "html": "<p>Let <var>data</var> be the result of executing <a data-link-type=\"dfn\" href=\"https://wicg.github.io/attribution-reporting-api/#serialize-a-verbose-debug-report\" id=\"ref-for-serialize-a-verbose-debug-report\">serialize a verbose debug report</a> on <var>report</var>.</p>"
+        },
+        {
+          "html": "<p>Let <var>request</var> be the result of executing <a data-link-type=\"dfn\" href=\"https://wicg.github.io/attribution-reporting-api/#create-a-report-request\" id=\"ref-for-create-a-report-request②\">create a report request</a> on <var>url</var> and <var>data</var>.</p>"
+        },
+        {
+          "html": "<p><a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-fetch\" id=\"ref-for-concept-fetch⑥\">Fetch</a> <var>request</var>.</p>"
+        }
+      ]
+    },
+    {
+      "name": "attempt to deliver an aggregatable debug report",
+      "href": "https://wicg.github.io/attribution-reporting-api/#attempt-to-deliver-an-aggregatable-debug-report",
+      "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"attempt-to-deliver-an-aggregatable-debug-report\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">attempt to deliver an aggregatable debug report</dfn> given an <a data-link-type=\"dfn\" href=\"https://wicg.github.io/attribution-reporting-api/#aggregatable-debug-report\" id=\"ref-for-aggregatable-debug-report①②\">aggregatable debug report</a> <var>report</var>:",
+      "rationale": "let",
+      "steps": [
+        {
+          "html": "<p>The user-agent MAY ignore the report; if so, return.</p>"
+        },
+        {
+          "html": "<p>Let <var>url</var> be the result of executing <a data-link-type=\"dfn\" href=\"https://wicg.github.io/attribution-reporting-api/#generate-an-aggregatable-debug-report-url\" id=\"ref-for-generate-an-aggregatable-debug-report-url\">generate an aggregatable debug report URL</a> on <var>report</var>.</p>"
+        },
+        {
+          "html": "<p>Let <var>data</var> be the result of executing <a data-link-type=\"dfn\" href=\"https://wicg.github.io/attribution-reporting-api/#serialize-an-aggregatable-debug-report\" id=\"ref-for-serialize-an-aggregatable-debug-report\">serialize an aggregatable debug report</a> on <var>report</var>.</p>"
+        },
+        {
+          "html": "<p>Let <var>request</var> be the result of executing <a data-link-type=\"dfn\" href=\"https://wicg.github.io/attribution-reporting-api/#create-a-report-request\" id=\"ref-for-create-a-report-request③\">create a report request</a> on <var>url</var> and <var>data</var>.</p>"
+        },
+        {
+          "html": "<p><a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-fetch\" id=\"ref-for-concept-fetch⑦\">Fetch</a> <var>request</var>.</p>"
+        }
+      ]
+    },
+    {
       "name": "get OS registrations from a header value",
       "href": "https://wicg.github.io/attribution-reporting-api/#get-os-registrations-from-a-header-value",
       "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"get-os-registrations-from-a-header-value\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">get <a data-link-type=\"dfn\" href=\"https://wicg.github.io/attribution-reporting-api/#os-registration\" id=\"ref-for-os-registration\">OS registrations</a> from a header value</dfn> given a <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#header-value\" id=\"ref-for-header-value⑦\">header value</a> <var>header</var>:",
@@ -6696,6 +6771,24 @@
         },
         {
           "html": "<p>Cross-site information embedded in an <a data-link-type=\"dfn\" href=\"https://wicg.github.io/attribution-reporting-api/#aggregatable-attribution-report\" id=\"ref-for-aggregatable-attribution-report②⑧\">aggregatable attribution report</a>'s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/attribution-reporting-api/#aggregatable-report-contributions\" id=\"ref-for-aggregatable-report-contributions⑦\">contributions</a> is encrypted with a <a data-link-type=\"dfn\" href=\"https://wicg.github.io/attribution-reporting-api/#obtain-the-public-key-for-encryption\" id=\"ref-for-obtain-the-public-key-for-encryption①\">public key</a>, ensuring that individual\ncontributions cannot be accessed until an aggregation service subjects them to aggregation\nand an additive noise process.</p>"
+        }
+      ]
+    },
+    {
+      "html": "Possible mitigations:",
+      "rationale": "send",
+      "steps": [
+        {
+          "html": "<p>Only send reports with a given reporting origin when the browser has already\nmade a request to that origin on the same network. This prevents the network\nadministrator from gaining additional information from the Attribution\nReporting API. However, it increases report loss and report delays, which\nreduces the utility of the API for the reporting origin. It might also\nincrease the effectiveness of timing attacks, as the origin may be able to\nbetter link the report with the user’s request that allowed the report to be released.</p>"
+        },
+        {
+          "html": "<p>Send reports immediately: This reduces the likelihood of a report being\nstored and sent on different networks. However, it increases the likelihood\nthat the reporting origin can correlate the original request made to the\nreporting origin for attribution to the report, which weakens the\nattribution-side privacy controls of the API. In particular,\nthis destroys the differential privacy framework we have\nfor event-level reports. It would also make the <a data-link-type=\"dfn\" href=\"https://wicg.github.io/attribution-reporting-api/#event-level-report-trigger-priority\" id=\"ref-for-event-level-report-trigger-priority⑤\">trigger priority</a> functionality impossible, as there\nwould be no way to replace a lower-priority report that was already sent.</p>"
+        },
+        {
+          "html": "<p>Use a trusted proxy server to send reports: This effectively moves the\nreporting origin into the report body, so only the proxy server would be\nvisible to the network administrator.</p>"
+        },
+        {
+          "html": "<p>Require <a href=\"https://datatracker.ietf.org/doc/html/rfc8484\">DNS over HTTPS</a>:\nThis effectively hides the reporting origin from the network administrator, but is\nlikely impractical to enforce and is itself perhaps circumventable by the network\nadministrator.</p>"
         }
       ]
     },

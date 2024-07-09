@@ -1116,9 +1116,15 @@
       "rationale": "for",
       "steps": [
         {
-          "html": "<p>For each <var>keyframe</var> in <var>interval endpoints</var>:</p>\n     <ol>\n      <li data-md=\"\">\n       <p>(As in web-animations-1).</p>\n      </li><li data-md=\"\">\n       <p>If this <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/web-animations-1/#keyframe-effect\" id=\"ref-for-keyframe-effect④\">keyframe effect</a> has an <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/web-animations-2/#iteration-composite-operation\" id=\"ref-for-iteration-composite-operation\">iteration\ncomposite operation</a> of <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/web-animations-2/#iteration-composite-operation-accumulate\" id=\"ref-for-iteration-composite-operation-accumulate\">accumulate</a>,\napply the following step <var>current iteration</var> times:</p>\n       <ul>\n        <li data-md=\"\">\n         <p>replace the property value of <var>target property</var> on <var>keyframe</var> with the result of combining the\nproperty value on the final keyframe in <var>property-specific\nkeyframes</var> (<var>V</var><sub>a</sub>) with the\nproperty value on <var>keyframe</var> (<var>V</var><sub>b</sub>) using the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-values-4/#accumulation\" id=\"ref-for-accumulation\">accumulation procedure</a> defined for <var>target property</var>.</p>\n       </li></ul>\n       \n     </li></ol>",
-          "ignored": [
-            "(As in web-animations-1). If this keyframe effect has an iteration composite operation of accumulate, apply the following step current iteration times: replace the property value of target property on keyframe with the result of combining the property value on the final keyframe in property-specific keyframes (Va) with the property value on keyframe (Vb) using the accumulation procedure defined for target property."
+          "html": "For each <var>keyframe</var> in <var>interval endpoints</var>:",
+          "rationale": "if",
+          "steps": [
+            {
+              "html": "<p>(As in web-animations-1).</p>"
+            },
+            {
+              "html": "<p>If this <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/web-animations-1/#keyframe-effect\" id=\"ref-for-keyframe-effect④\">keyframe effect</a> has an <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/web-animations-2/#iteration-composite-operation\" id=\"ref-for-iteration-composite-operation\">iteration\ncomposite operation</a> of <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/web-animations-2/#iteration-composite-operation-accumulate\" id=\"ref-for-iteration-composite-operation-accumulate\">accumulate</a>,\napply the following step <var>current iteration</var> times:</p>\n       <ul>\n        <li data-md=\"\">\n         <p>replace the property value of <var>target property</var> on <var>keyframe</var> with the result of combining the\nproperty value on the final keyframe in <var>property-specific\nkeyframes</var> (<var>V</var><sub>a</sub>) with the\nproperty value on <var>keyframe</var> (<var>V</var><sub>b</sub>) using the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-values-4/#accumulation\" id=\"ref-for-accumulation\">accumulation procedure</a> defined for <var>target property</var>.</p>\n       </li></ul>"
+            }
           ]
         }
       ]

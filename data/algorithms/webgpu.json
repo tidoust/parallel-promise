@@ -20,6 +20,21 @@
       ]
     },
     {
+      "html": "If the shader attempts to write data outside of <a data-link-type=\"dfn\" href=\"https://gpuweb.github.io/gpuweb/#physical-resources\" id=\"ref-for-physical-resources③\">physical resource</a> bounds,\nthe implementation is allowed to:",
+      "rationale": "discard",
+      "steps": [
+        {
+          "html": "<p>write the value to a different location within the resource bounds</p>"
+        },
+        {
+          "html": "<p>discard the write operation</p>"
+        },
+        {
+          "html": "<p>partially discard the draw or dispatch call</p>"
+        }
+      ]
+    },
+    {
       "name": "create a new WebGPU object",
       "href": "https://gpuweb.github.io/gpuweb/#abstract-opdef-create-a-new-webgpu-object",
       "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"abstract-op\" data-export=\"\" id=\"abstract-opdef-create-a-new-webgpu-object\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">create a new WebGPU object</dfn>(<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#gpuobjectbase\" id=\"ref-for-gpuobjectbase①\">GPUObjectBase</a></code> <var>parent</var>,\n    interface <var>T</var>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dictdef-gpuobjectdescriptorbase\" id=\"ref-for-dictdef-gpuobjectdescriptorbase\">GPUObjectDescriptorBase</a></code> <var>descriptor</var>)\n    (where <var>T</var> extends <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#gpuobjectbase\" id=\"ref-for-gpuobjectbase②\">GPUObjectBase</a></code>), run the following <a data-link-type=\"dfn\" href=\"https://gpuweb.github.io/gpuweb/#content-timeline\" id=\"ref-for-content-timeline③\">content timeline</a> steps:",
@@ -2079,14 +2094,20 @@
     },
     {
       "name": "GPUShaderModule.getCompilationInfo",
-      "html": "When the <a data-link-type=\"dfn\" href=\"https://gpuweb.github.io/gpuweb/#device-timeline\" id=\"ref-for-device-timeline⑤⑧\">device timeline</a> becomes informed that <a data-link-type=\"dfn\" href=\"https://gpuweb.github.io/gpuweb/wgsl/#shader-module-creation\" id=\"ref-for-shader-module-creation①\">shader module creation</a> has\ncompleted for <var>this</var>:",
+      "html": "<a data-link-type=\"dfn\" href=\"https://gpuweb.github.io/gpuweb/#device-timeline\" id=\"ref-for-device-timeline⑤⑦\">Device timeline</a> <var>synchronization steps</var>:",
       "rationale": "let",
       "steps": [
         {
-          "html": "<p>Let <var>messages</var> be a list of any errors, warnings, or informational messages\ngenerated during <a data-link-type=\"dfn\" href=\"https://gpuweb.github.io/gpuweb/wgsl/#shader-module-creation\" id=\"ref-for-shader-module-creation②\">shader module creation</a> for <var>this</var>.</p>"
-        },
-        {
-          "html": "<p>Issue the subsequent steps on <var data-timeline=\"content\">contentTimeline</var>.</p>"
+          "html": "When the <a data-link-type=\"dfn\" href=\"https://gpuweb.github.io/gpuweb/#device-timeline\" id=\"ref-for-device-timeline⑤⑧\">device timeline</a> becomes informed that <a data-link-type=\"dfn\" href=\"https://gpuweb.github.io/gpuweb/wgsl/#shader-module-creation\" id=\"ref-for-shader-module-creation①\">shader module creation</a> has\ncompleted for <var>this</var>:",
+          "rationale": "let",
+          "steps": [
+            {
+              "html": "<p>Let <var>messages</var> be a list of any errors, warnings, or informational messages\ngenerated during <a data-link-type=\"dfn\" href=\"https://gpuweb.github.io/gpuweb/wgsl/#shader-module-creation\" id=\"ref-for-shader-module-creation②\">shader module creation</a> for <var>this</var>.</p>"
+            },
+            {
+              "html": "<p>Issue the subsequent steps on <var data-timeline=\"content\">contentTimeline</var>.</p>"
+            }
+          ]
         }
       ]
     },
@@ -2877,8 +2898,26 @@
         },
         {
           "html": "<p>All of the requirements in the following steps <var>must</var> be met.\nIf any are unmet, <a data-link-type=\"abstract-op\" href=\"https://gpuweb.github.io/gpuweb/#abstract-opdef-generate-a-validation-error\" id=\"ref-for-abstract-opdef-generate-a-validation-error①⑦\" data-timeline=\"device\">generate a validation error</a>, <a data-link-type=\"abstract-op\" href=\"https://gpuweb.github.io/gpuweb/#abstract-opdef-invalidate\" id=\"ref-for-abstract-opdef-invalidate①③\" data-timeline=\"device\">invalidate</a> <var>pipeline</var>, and stop.</p>\n         <div class=\"validusage\">\n          <ol>\n           <li data-md=\"\">\n            <p><var>layout</var> <var>must</var> be <a data-link-type=\"abstract-op\" href=\"https://gpuweb.github.io/gpuweb/#abstract-opdef-valid-to-use-with\" id=\"ref-for-abstract-opdef-valid-to-use-with①⓪\" data-timeline=\"device\">valid to use with</a> <var>this</var>.</p>\n           </li><li data-md=\"\">\n            <p><a data-link-type=\"abstract-op\" href=\"https://gpuweb.github.io/gpuweb/#abstract-opdef-validating-gpuprogrammablestage\" id=\"ref-for-abstract-opdef-validating-gpuprogrammablestage\" data-timeline=\"device\">validating GPUProgrammableStage</a>(<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gpushaderstage-compute\" id=\"ref-for-dom-gpushaderstage-compute②\">COMPUTE</a></code>, <var>descriptor</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gpucomputepipelinedescriptor-compute\" id=\"ref-for-dom-gpucomputepipelinedescriptor-compute①\">compute</a></code>, <var>layout</var>) <var>must</var> succeed.</p>\n           </li><li data-md=\"\">\n            <p>Let <var>entryPoint</var> be <a data-link-type=\"abstract-op\" href=\"https://gpuweb.github.io/gpuweb/#abstract-opdef-get-the-entry-point\" id=\"ref-for-abstract-opdef-get-the-entry-point③\" data-timeline=\"device\">get the entry point</a>(<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gpushaderstage-compute\" id=\"ref-for-dom-gpushaderstage-compute③\">COMPUTE</a></code>, <var>descriptor</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gpucomputepipelinedescriptor-compute\" id=\"ref-for-dom-gpucomputepipelinedescriptor-compute②\">compute</a></code>).</p>\n            <p><a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#assert\" id=\"ref-for-assert①②\">Assert</a> <var>entryPoint</var> is not <code>null</code>.</p>\n           </li><li data-md=\"\">\n            <p>Let <var>workgroupStorageUsed</var> be the sum of <a data-link-type=\"dfn\" href=\"https://gpuweb.github.io/gpuweb/wgsl/#roundup\" id=\"ref-for-roundup\">roundUp</a>(16, <a data-link-type=\"abstract-op\" href=\"https://gpuweb.github.io/gpuweb/wgsl/#sizeof\" id=\"ref-for-sizeof①\">SizeOf</a>(<var>T</var>)) over each\ntype <var>T</var> of all variables with address space \"<a data-link-type=\"dfn\" href=\"https://gpuweb.github.io/gpuweb/wgsl/#address-spaces-workgroup\" id=\"ref-for-address-spaces-workgroup①\">workgroup</a>\" <a data-link-type=\"dfn\" href=\"https://gpuweb.github.io/gpuweb/#statically-used\" id=\"ref-for-statically-used⑥\" data-timeline=\"const\">statically used</a> by <var>entryPoint</var>.</p>\n            <p><var>workgroupStorageUsed</var> <var>must</var> be ≤ <var>device</var>.limits.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-supported-limits-maxcomputeworkgroupstoragesize\" id=\"ref-for-dom-supported-limits-maxcomputeworkgroupstoragesize\">maxComputeWorkgroupStorageSize</a></code>.</p>\n           </li><li data-md=\"\">\n            <p><var>entryPoint</var> <var>must</var> use ≤ <var>device</var>.limits.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-supported-limits-maxcomputeinvocationsperworkgroup\" id=\"ref-for-dom-supported-limits-maxcomputeinvocationsperworkgroup④\">maxComputeInvocationsPerWorkgroup</a></code> per\nworkgroup.</p>\n           </li><li data-md=\"\">\n            <p>Each component of <var>entryPoint</var>’s <code>workgroup_size</code> attribute <var>must</var> be ≤ the corresponding component in\n[<var>device</var>.limits.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-supported-limits-maxcomputeworkgroupsizex\" id=\"ref-for-dom-supported-limits-maxcomputeworkgroupsizex②\">maxComputeWorkgroupSizeX</a></code>, <var>device</var>.limits.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-supported-limits-maxcomputeworkgroupsizey\" id=\"ref-for-dom-supported-limits-maxcomputeworkgroupsizey②\">maxComputeWorkgroupSizeY</a></code>, <var>device</var>.limits.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-supported-limits-maxcomputeworkgroupsizez\" id=\"ref-for-dom-supported-limits-maxcomputeworkgroupsizez②\">maxComputeWorkgroupSizeZ</a></code>].</p>\n          </li></ol>\n         </div>",
-          "ignored": [
-            "layout must be valid to use with this. validating GPUProgrammableStage(COMPUTE, descriptor.compute, layout) must succeed. Let entryPoint be get the entry point(COMPUTE, descriptor.compute). Assert entryPoint is not null. Let workgroupStorageUsed be the sum of roundUp(16, SizeOf(T)) over each type T of all variables with address space \"workgroup\" statically used by entryPoint. workgroupStorageUsed must be ≤ device.limits.maxComputeWorkgroupStorageSize. entryPoint must use ≤ device.limits.maxComputeInvocationsPerWorkgroup per workgroup. Each component of entryPoint’s workgroup_size attribute must be ≤ the corresponding component in [device.limits.maxComputeWorkgroupSizeX, device.limits.maxComputeWorkgroupSizeY, device.limits.maxComputeWorkgroupSizeZ]."
+          "rationale": "let",
+          "steps": [
+            {
+              "html": "<p><var>layout</var> <var>must</var> be <a data-link-type=\"abstract-op\" href=\"https://gpuweb.github.io/gpuweb/#abstract-opdef-valid-to-use-with\" id=\"ref-for-abstract-opdef-valid-to-use-with①⓪\" data-timeline=\"device\">valid to use with</a> <var>this</var>.</p>"
+            },
+            {
+              "html": "<p><a data-link-type=\"abstract-op\" href=\"https://gpuweb.github.io/gpuweb/#abstract-opdef-validating-gpuprogrammablestage\" id=\"ref-for-abstract-opdef-validating-gpuprogrammablestage\" data-timeline=\"device\">validating GPUProgrammableStage</a>(<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gpushaderstage-compute\" id=\"ref-for-dom-gpushaderstage-compute②\">COMPUTE</a></code>, <var>descriptor</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gpucomputepipelinedescriptor-compute\" id=\"ref-for-dom-gpucomputepipelinedescriptor-compute①\">compute</a></code>, <var>layout</var>) <var>must</var> succeed.</p>"
+            },
+            {
+              "html": "<p>Let <var>entryPoint</var> be <a data-link-type=\"abstract-op\" href=\"https://gpuweb.github.io/gpuweb/#abstract-opdef-get-the-entry-point\" id=\"ref-for-abstract-opdef-get-the-entry-point③\" data-timeline=\"device\">get the entry point</a>(<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gpushaderstage-compute\" id=\"ref-for-dom-gpushaderstage-compute③\">COMPUTE</a></code>, <var>descriptor</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gpucomputepipelinedescriptor-compute\" id=\"ref-for-dom-gpucomputepipelinedescriptor-compute②\">compute</a></code>).</p>\n            <p><a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#assert\" id=\"ref-for-assert①②\">Assert</a> <var>entryPoint</var> is not <code>null</code>.</p>"
+            },
+            {
+              "html": "<p>Let <var>workgroupStorageUsed</var> be the sum of <a data-link-type=\"dfn\" href=\"https://gpuweb.github.io/gpuweb/wgsl/#roundup\" id=\"ref-for-roundup\">roundUp</a>(16, <a data-link-type=\"abstract-op\" href=\"https://gpuweb.github.io/gpuweb/wgsl/#sizeof\" id=\"ref-for-sizeof①\">SizeOf</a>(<var>T</var>)) over each\ntype <var>T</var> of all variables with address space \"<a data-link-type=\"dfn\" href=\"https://gpuweb.github.io/gpuweb/wgsl/#address-spaces-workgroup\" id=\"ref-for-address-spaces-workgroup①\">workgroup</a>\" <a data-link-type=\"dfn\" href=\"https://gpuweb.github.io/gpuweb/#statically-used\" id=\"ref-for-statically-used⑥\" data-timeline=\"const\">statically used</a> by <var>entryPoint</var>.</p>\n            <p><var>workgroupStorageUsed</var> <var>must</var> be ≤ <var>device</var>.limits.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-supported-limits-maxcomputeworkgroupstoragesize\" id=\"ref-for-dom-supported-limits-maxcomputeworkgroupstoragesize\">maxComputeWorkgroupStorageSize</a></code>.</p>"
+            },
+            {
+              "html": "<p><var>entryPoint</var> <var>must</var> use ≤ <var>device</var>.limits.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-supported-limits-maxcomputeinvocationsperworkgroup\" id=\"ref-for-dom-supported-limits-maxcomputeinvocationsperworkgroup④\">maxComputeInvocationsPerWorkgroup</a></code> per\nworkgroup.</p>"
+            },
+            {
+              "html": "<p>Each component of <var>entryPoint</var>’s <code>workgroup_size</code> attribute <var>must</var> be ≤ the corresponding component in\n[<var>device</var>.limits.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-supported-limits-maxcomputeworkgroupsizex\" id=\"ref-for-dom-supported-limits-maxcomputeworkgroupsizex②\">maxComputeWorkgroupSizeX</a></code>, <var>device</var>.limits.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-supported-limits-maxcomputeworkgroupsizey\" id=\"ref-for-dom-supported-limits-maxcomputeworkgroupsizey②\">maxComputeWorkgroupSizeY</a></code>, <var>device</var>.limits.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-supported-limits-maxcomputeworkgroupsizez\" id=\"ref-for-dom-supported-limits-maxcomputeworkgroupsizez②\">maxComputeWorkgroupSizeZ</a></code>].</p>"
+            }
           ]
         },
         {
@@ -3629,8 +3668,68 @@
         },
         {
           "html": "<p>Return <code>true</code> if and only if all of the following conditions apply:</p>\n      <div class=\"validusage\">\n       <ol>\n        <li data-md=\"\">\n         <p><a data-link-type=\"abstract-op\" href=\"https://gpuweb.github.io/gpuweb/#abstract-opdef-validating-gpuimagecopytexture\" id=\"ref-for-abstract-opdef-validating-gpuimagecopytexture\" data-timeline=\"device\">validating GPUImageCopyTexture</a>(<var>imageCopyTexture</var>, <var>copySize</var>) returns <code>true</code>.</p>\n        </li><li data-md=\"\">\n         <p><var>texture</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gputexture-samplecount\" id=\"ref-for-dom-gputexture-samplecount④\">sampleCount</a></code> is 1.</p>\n        </li><li data-md=\"\">\n         <p><var>texture</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gputexture-usage\" id=\"ref-for-dom-gputexture-usage③\">usage</a></code> contains <var>textureUsage</var>.</p>\n        </li><li data-md=\"\">\n         <p>If <var>texture</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gputexture-format\" id=\"ref-for-dom-gputexture-format①③\">format</a></code> is a <a data-link-type=\"dfn\" href=\"https://gpuweb.github.io/gpuweb/#depth-or-stencil-format\" id=\"ref-for-depth-or-stencil-format⑨\">depth-or-stencil format</a> format:</p>\n         <ol>\n          <li data-md=\"\">\n           <p><var>imageCopyTexture</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gpuimagecopytexture-aspect\" id=\"ref-for-dom-gpuimagecopytexture-aspect②\">aspect</a></code> must refer to a single aspect of <var>texture</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gputexture-format\" id=\"ref-for-dom-gputexture-format①④\">format</a></code>.</p>\n          </li><li data-md=\"\">\n           <p>If <var>textureUsage</var> is:</p>\n           <dl class=\"switch\">\n            <dt data-md=\"\"><code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gputextureusage-copy_src\" id=\"ref-for-dom-gputextureusage-copy_src②\">COPY_SRC</a></code>\n            </dt><dd data-md=\"\">\n             <p>That aspect must be a valid image copy source according to <a href=\"https://gpuweb.github.io/gpuweb/#depth-formats\">§ 26.1.2 Depth-stencil formats</a>.</p>\n            </dd><dt data-md=\"\"><code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gputextureusage-copy_dst\" id=\"ref-for-dom-gputextureusage-copy_dst②\">COPY_DST</a></code>\n            </dt><dd data-md=\"\">\n             <p>That aspect must be a valid image copy destination according to <a href=\"https://gpuweb.github.io/gpuweb/#depth-formats\">§ 26.1.2 Depth-stencil formats</a>.</p>\n           </dd></dl>\n          </li><li data-md=\"\">\n           <p>Set <var>aspectSpecificFormat</var> to the <a data-link-type=\"dfn\" href=\"https://gpuweb.github.io/gpuweb/#aspect-specific-format\" id=\"ref-for-aspect-specific-format①\">aspect-specific format</a> according to <a href=\"https://gpuweb.github.io/gpuweb/#depth-formats\">§ 26.1.2 Depth-stencil formats</a>.</p>\n          </li><li data-md=\"\">\n           <p>Set <var>offsetAlignment</var> to 4.</p>\n         </li></ol>\n        </li><li data-md=\"\">\n         <p>If <var>aligned</var> is <code>true</code>:</p>\n         <ol>\n          <li data-md=\"\">\n           <p><var>dataLayout</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gpuimagedatalayout-offset\" id=\"ref-for-dom-gpuimagedatalayout-offset②\">offset</a></code> is a multiple of <var>offsetAlignment</var>.</p>\n         </li></ol>\n        </li><li data-md=\"\">\n         <p><a data-link-type=\"abstract-op\" href=\"https://gpuweb.github.io/gpuweb/#abstract-opdef-validating-linear-texture-data\" id=\"ref-for-abstract-opdef-validating-linear-texture-data\" data-timeline=\"device\">validating linear texture data</a>(<var>dataLayout</var>, <var>dataLength</var>, <var>aspectSpecificFormat</var>, <var>copySize</var>) succeeds.</p>\n       </li></ol>\n      </div>",
-          "ignored": [
-            "validating GPUImageCopyTexture(imageCopyTexture, copySize) returns true. texture.sampleCount is 1. texture.usage contains textureUsage. If texture.format is a depth-or-stencil format format: imageCopyTexture.aspect must refer to a single aspect of texture.format. If textureUsage is: COPY_SRC That aspect must be a valid image copy source according to § 26.1.2 Depth-stencil formats. COPY_DST That aspect must be a valid image copy destination according to § 26.1.2 Depth-stencil formats. Set aspectSpecificFormat to the aspect-specific format according to § 26.1.2 Depth-stencil formats. Set offsetAlignment to 4. If aligned is true: dataLayout.offset is a multiple of offsetAlignment. validating linear texture data(dataLayout, dataLength, aspectSpecificFormat, copySize) succeeds."
+          "rationale": "if",
+          "steps": [
+            {
+              "html": "<p><a data-link-type=\"abstract-op\" href=\"https://gpuweb.github.io/gpuweb/#abstract-opdef-validating-gpuimagecopytexture\" id=\"ref-for-abstract-opdef-validating-gpuimagecopytexture\" data-timeline=\"device\">validating GPUImageCopyTexture</a>(<var>imageCopyTexture</var>, <var>copySize</var>) returns <code>true</code>.</p>"
+            },
+            {
+              "html": "<p><var>texture</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gputexture-samplecount\" id=\"ref-for-dom-gputexture-samplecount④\">sampleCount</a></code> is 1.</p>"
+            },
+            {
+              "html": "<p><var>texture</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gputexture-usage\" id=\"ref-for-dom-gputexture-usage③\">usage</a></code> contains <var>textureUsage</var>.</p>"
+            },
+            {
+              "html": "If <var>texture</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gputexture-format\" id=\"ref-for-dom-gputexture-format①③\">format</a></code> is a <a data-link-type=\"dfn\" href=\"https://gpuweb.github.io/gpuweb/#depth-or-stencil-format\" id=\"ref-for-depth-or-stencil-format⑨\">depth-or-stencil format</a> format:",
+              "rationale": "if",
+              "steps": [
+                {
+                  "html": "<p><var>imageCopyTexture</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gpuimagecopytexture-aspect\" id=\"ref-for-dom-gpuimagecopytexture-aspect②\">aspect</a></code> must refer to a single aspect of <var>texture</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gputexture-format\" id=\"ref-for-dom-gputexture-format①④\">format</a></code>.</p>"
+                },
+                {
+                  "html": "If <var>textureUsage</var> is:",
+                  "rationale": ".switch",
+                  "steps": [
+                    {
+                      "operation": "switch",
+                      "steps": [
+                        {
+                          "case": "COPY_SRC",
+                          "steps": [
+                            {
+                              "html": "<p>That aspect must be a valid image copy source according to <a href=\"https://gpuweb.github.io/gpuweb/#depth-formats\">§ 26.1.2 Depth-stencil formats</a>.</p>"
+                            }
+                          ]
+                        },
+                        {
+                          "case": "COPY_DST",
+                          "steps": [
+                            {
+                              "html": "<p>That aspect must be a valid image copy destination according to <a href=\"https://gpuweb.github.io/gpuweb/#depth-formats\">§ 26.1.2 Depth-stencil formats</a>.</p>"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "html": "<p>Set <var>aspectSpecificFormat</var> to the <a data-link-type=\"dfn\" href=\"https://gpuweb.github.io/gpuweb/#aspect-specific-format\" id=\"ref-for-aspect-specific-format①\">aspect-specific format</a> according to <a href=\"https://gpuweb.github.io/gpuweb/#depth-formats\">§ 26.1.2 Depth-stencil formats</a>.</p>"
+                },
+                {
+                  "html": "<p>Set <var>offsetAlignment</var> to 4.</p>"
+                }
+              ]
+            },
+            {
+              "html": "<p>If <var>aligned</var> is <code>true</code>:</p>\n         <ol>\n          <li data-md=\"\">\n           <p><var>dataLayout</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gpuimagedatalayout-offset\" id=\"ref-for-dom-gpuimagedatalayout-offset②\">offset</a></code> is a multiple of <var>offsetAlignment</var>.</p>\n         </li></ol>",
+              "ignored": [
+                "dataLayout.offset is a multiple of offsetAlignment."
+              ]
+            },
+            {
+              "html": "<p><a data-link-type=\"abstract-op\" href=\"https://gpuweb.github.io/gpuweb/#abstract-opdef-validating-linear-texture-data\" id=\"ref-for-abstract-opdef-validating-linear-texture-data\" data-timeline=\"device\">validating linear texture data</a>(<var>dataLayout</var>, <var>dataLength</var>, <var>aspectSpecificFormat</var>, <var>copySize</var>) succeeds.</p>"
+            }
           ]
         }
       ]
@@ -5707,8 +5806,68 @@
         },
         {
           "html": "<p>All of the requirements in the following steps <var>must</var> be met.\nIf any are unmet, <a data-link-type=\"abstract-op\" href=\"https://gpuweb.github.io/gpuweb/#abstract-opdef-invalidate\" id=\"ref-for-abstract-opdef-invalidate④⑥\" data-timeline=\"device\">invalidate</a> <var>this</var> and stop.</p>\n         <div class=\"validusage\">\n          <ol>\n           <li data-md=\"\">\n            <p>It <var>must</var> be <a data-link-type=\"abstract-op\" href=\"https://gpuweb.github.io/gpuweb/#abstract-opdef-valid-to-draw\" id=\"ref-for-abstract-opdef-valid-to-draw①\" data-timeline=\"device\">valid to draw</a> with <var>this</var>.</p>\n           </li><li data-md=\"\">\n            <p>Let <var>buffers</var> be <var>this</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gpurendercommandsmixin-pipeline-slot\" id=\"ref-for-dom-gpurendercommandsmixin-pipeline-slot①\">[[pipeline]]</a></code>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gpurenderpipeline-descriptor-slot\" id=\"ref-for-dom-gpurenderpipeline-descriptor-slot②\">[[descriptor]]</a></code>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gpurenderpipelinedescriptor-vertex\" id=\"ref-for-dom-gpurenderpipelinedescriptor-vertex⑨\">vertex</a></code>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gpuvertexstate-buffers\" id=\"ref-for-dom-gpuvertexstate-buffers⑨\">buffers</a></code>.</p>\n           </li><li data-md=\"\">\n            <p>For each <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#typedefdef-gpuindex32\" id=\"ref-for-typedefdef-gpuindex32①⑥\">GPUIndex32</a></code> <var>slot</var> from <code>0</code> to <var>buffers</var>.length (non-inclusive):</p>\n            <ol>\n             <li data-md=\"\">\n              <p>If <var>buffers</var>[<var>slot</var>] is <code>null</code>, <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#iteration-continue\" id=\"ref-for-iteration-continue\">continue</a>.</p>\n             </li><li data-md=\"\">\n              <p>Let <var>bufferSize</var> be <var>this</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gpurendercommandsmixin-vertex_buffer_sizes-slot\" id=\"ref-for-dom-gpurendercommandsmixin-vertex_buffer_sizes-slot②\">[[vertex_buffer_sizes]]</a></code>[<var>slot</var>].</p>\n             </li><li data-md=\"\">\n              <p>Let <var>stride</var> be <var>buffers</var>[<var>slot</var>].<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gpuvertexbufferlayout-arraystride\" id=\"ref-for-dom-gpuvertexbufferlayout-arraystride⑨\">arrayStride</a></code>.</p>\n             </li><li data-md=\"\">\n              <p>Let <var>attributes</var> be <var>buffers</var>[<var>slot</var>].<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gpuvertexbufferlayout-attributes\" id=\"ref-for-dom-gpuvertexbufferlayout-attributes⑥\">attributes</a></code></p>\n             </li><li data-md=\"\">\n              <p>Let <var>lastStride</var> be the maximum value of\n(<var>attribute</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gpuvertexattribute-offset\" id=\"ref-for-dom-gpuvertexattribute-offset⑤\">offset</a></code> + sizeof(<var>attribute</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gpuvertexattribute-format\" id=\"ref-for-dom-gpuvertexattribute-format⑥\">format</a></code>))\nover each <var>attribute</var> in <var>attributes</var>, or 0 if <var>attributes</var> is <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-empty\" id=\"ref-for-list-empty\">empty</a>.</p>\n             </li><li data-md=\"\">\n              <p>Let <var>strideCount</var> be computed based on <var>buffers</var>[<var>slot</var>].<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gpuvertexbufferlayout-stepmode\" id=\"ref-for-dom-gpuvertexbufferlayout-stepmode①\">stepMode</a></code>:</p>\n              <dl class=\"switch\">\n               <dt data-md=\"\"><code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gpuvertexstepmode-vertex\" id=\"ref-for-dom-gpuvertexstepmode-vertex①\">\"vertex\"</a></code>\n               </dt><dd data-md=\"\">\n                <p><var>firstVertex</var> + <var>vertexCount</var></p>\n               </dd><dt data-md=\"\"><code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gpuvertexstepmode-instance\" id=\"ref-for-dom-gpuvertexstepmode-instance①\">\"instance\"</a></code>\n               </dt><dd data-md=\"\">\n                <p><var>firstInstance</var> + <var>instanceCount</var></p>\n              </dd></dl>\n             </li><li data-md=\"\">\n              <p>If <var>strideCount</var> ≠ <code>0</code>:</p>\n              <ol>\n               <li data-md=\"\">\n                <p>(<var>strideCount</var> − <code>1</code>) × <var>stride</var> + <var>lastStride</var> <var>must</var> be ≤ <var>bufferSize</var>.</p>\n              </li></ol>\n            </li></ol>\n          </li></ol>\n         </div>",
-          "ignored": [
-            "It must be valid to draw with this. Let buffers be this.[[pipeline]].[[descriptor]].vertex.buffers. For each GPUIndex32 slot from 0 to buffers.length (non-inclusive): If buffers[slot] is null, continue. Let bufferSize be this.[[vertex_buffer_sizes]][slot]. Let stride be buffers[slot].arrayStride. Let attributes be buffers[slot].attributes Let lastStride be the maximum value of (attribute.offset + sizeof(attribute.format)) over each attribute in attributes, or 0 if attributes is empty. Let strideCount be computed based on buffers[slot].stepMode: \"vertex\" firstVertex + vertexCount \"instance\" firstInstance + instanceCount If strideCount ≠ 0: (strideCount − 1) × stride + lastStride must be ≤ bufferSize."
+          "rationale": "let",
+          "steps": [
+            {
+              "html": "<p>It <var>must</var> be <a data-link-type=\"abstract-op\" href=\"https://gpuweb.github.io/gpuweb/#abstract-opdef-valid-to-draw\" id=\"ref-for-abstract-opdef-valid-to-draw①\" data-timeline=\"device\">valid to draw</a> with <var>this</var>.</p>"
+            },
+            {
+              "html": "<p>Let <var>buffers</var> be <var>this</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gpurendercommandsmixin-pipeline-slot\" id=\"ref-for-dom-gpurendercommandsmixin-pipeline-slot①\">[[pipeline]]</a></code>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gpurenderpipeline-descriptor-slot\" id=\"ref-for-dom-gpurenderpipeline-descriptor-slot②\">[[descriptor]]</a></code>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gpurenderpipelinedescriptor-vertex\" id=\"ref-for-dom-gpurenderpipelinedescriptor-vertex⑨\">vertex</a></code>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gpuvertexstate-buffers\" id=\"ref-for-dom-gpuvertexstate-buffers⑨\">buffers</a></code>.</p>"
+            },
+            {
+              "html": "For each <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#typedefdef-gpuindex32\" id=\"ref-for-typedefdef-gpuindex32①⑥\">GPUIndex32</a></code> <var>slot</var> from <code>0</code> to <var>buffers</var>.length (non-inclusive):",
+              "rationale": "if",
+              "steps": [
+                {
+                  "html": "<p>If <var>buffers</var>[<var>slot</var>] is <code>null</code>, <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#iteration-continue\" id=\"ref-for-iteration-continue\">continue</a>.</p>"
+                },
+                {
+                  "html": "<p>Let <var>bufferSize</var> be <var>this</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gpurendercommandsmixin-vertex_buffer_sizes-slot\" id=\"ref-for-dom-gpurendercommandsmixin-vertex_buffer_sizes-slot②\">[[vertex_buffer_sizes]]</a></code>[<var>slot</var>].</p>"
+                },
+                {
+                  "html": "<p>Let <var>stride</var> be <var>buffers</var>[<var>slot</var>].<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gpuvertexbufferlayout-arraystride\" id=\"ref-for-dom-gpuvertexbufferlayout-arraystride⑨\">arrayStride</a></code>.</p>"
+                },
+                {
+                  "html": "<p>Let <var>attributes</var> be <var>buffers</var>[<var>slot</var>].<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gpuvertexbufferlayout-attributes\" id=\"ref-for-dom-gpuvertexbufferlayout-attributes⑥\">attributes</a></code></p>"
+                },
+                {
+                  "html": "<p>Let <var>lastStride</var> be the maximum value of\n(<var>attribute</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gpuvertexattribute-offset\" id=\"ref-for-dom-gpuvertexattribute-offset⑤\">offset</a></code> + sizeof(<var>attribute</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gpuvertexattribute-format\" id=\"ref-for-dom-gpuvertexattribute-format⑥\">format</a></code>))\nover each <var>attribute</var> in <var>attributes</var>, or 0 if <var>attributes</var> is <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-empty\" id=\"ref-for-list-empty\">empty</a>.</p>"
+                },
+                {
+                  "html": "Let <var>strideCount</var> be computed based on <var>buffers</var>[<var>slot</var>].<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-gpuvertexbufferlayout-stepmode\" id=\"ref-for-dom-gpuvertexbufferlayout-stepmode①\">stepMode</a></code>:",
+                  "rationale": ".switch",
+                  "steps": [
+                    {
+                      "operation": "switch",
+                      "steps": [
+                        {
+                          "case": "\"vertex\"",
+                          "steps": [
+                            {
+                              "html": "<p><var>firstVertex</var> + <var>vertexCount</var></p>"
+                            }
+                          ]
+                        },
+                        {
+                          "case": "\"instance\"",
+                          "steps": [
+                            {
+                              "html": "<p><var>firstInstance</var> + <var>instanceCount</var></p>"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "html": "<p>If <var>strideCount</var> ≠ <code>0</code>:</p>\n              <ol>\n               <li data-md=\"\">\n                <p>(<var>strideCount</var> − <code>1</code>) × <var>stride</var> + <var>lastStride</var> <var>must</var> be ≤ <var>bufferSize</var>.</p>\n              </li></ol>",
+                  "ignored": [
+                    "(strideCount − 1) × stride + lastStride must be ≤ bufferSize."
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -5944,6 +6103,20 @@
         },
         {
           "html": "<p><a data-link-type=\"abstract-op\" href=\"https://gpuweb.github.io/gpuweb/#abstract-opdef-enqueue-a-render-command\" id=\"ref-for-abstract-opdef-enqueue-a-render-command⑤\" data-timeline=\"device\">Enqueue a render command</a> on <var>this</var> which issues the subsequent steps on the <a data-link-type=\"dfn\" href=\"https://gpuweb.github.io/gpuweb/#queue-timeline\" id=\"ref-for-queue-timeline④④\">Queue timeline</a> with <var>renderState</var> when executed.</p>"
+        }
+      ]
+    },
+    {
+      "name": "GPURenderPassEncoder.setViewport",
+      "href": "https://gpuweb.github.io/gpuweb/#dom-gpurenderpassencoder-setviewport-x-y-width-height-mindepth-maxdepth-x",
+      "html": "<a data-link-type=\"dfn\" href=\"https://gpuweb.github.io/gpuweb/#queue-timeline\" id=\"ref-for-queue-timeline④⑤\">Queue timeline</a> steps:",
+      "rationale": "set",
+      "steps": [
+        {
+          "html": "<p>Round <var>x</var>, <var>y</var>, <var>width</var>, and <var>height</var> to some uniform precision, no less precise than integer rounding.</p>"
+        },
+        {
+          "html": "<p>Set <var>renderState</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://gpuweb.github.io/gpuweb/#dom-renderstate-viewport-slot\" id=\"ref-for-dom-renderstate-viewport-slot①\">[[viewport]]</a></code> to the extents <var>x</var>, <var>y</var>, <var>width</var>, <var>height</var>, <var>minDepth</var>, and <var>maxDepth</var>.</p>"
         }
       ]
     },
@@ -6647,11 +6820,17 @@
     },
     {
       "name": "GPUQueue.onSubmittedWorkDone",
-      "html": "When the <a data-link-type=\"dfn\" href=\"https://gpuweb.github.io/gpuweb/#device-timeline\" id=\"ref-for-device-timeline①⑧⓪\">device timeline</a> becomes informed of the completion of all <span data-timeline=\"queue\">currently-enqueued operations</span> on <var>this</var>, or\nif <var>this</var> is <a data-link-type=\"abstract-op\" href=\"https://gpuweb.github.io/gpuweb/#abstract-opdef-invalid\" id=\"ref-for-abstract-opdef-invalid①⑥\" data-timeline=\"device\">lost</a>, or when <var>this</var> <a data-link-type=\"dfn\" href=\"https://gpuweb.github.io/gpuweb/#lose-the-device\" id=\"ref-for-lose-the-device⑥\" data-timeline=\"device\">becomes lost</a>:",
+      "html": "<a data-link-type=\"dfn\" href=\"https://gpuweb.github.io/gpuweb/#device-timeline\" id=\"ref-for-device-timeline①⑦⑨\">Device timeline</a> <var>synchronization steps</var>:",
       "rationale": "issue",
       "steps": [
         {
-          "html": "<p>Issue the subsequent steps on <var data-timeline=\"content\">contentTimeline</var>.</p>"
+          "html": "When the <a data-link-type=\"dfn\" href=\"https://gpuweb.github.io/gpuweb/#device-timeline\" id=\"ref-for-device-timeline①⑧⓪\">device timeline</a> becomes informed of the completion of all <span data-timeline=\"queue\">currently-enqueued operations</span> on <var>this</var>, or\nif <var>this</var> is <a data-link-type=\"abstract-op\" href=\"https://gpuweb.github.io/gpuweb/#abstract-opdef-invalid\" id=\"ref-for-abstract-opdef-invalid①⑥\" data-timeline=\"device\">lost</a>, or when <var>this</var> <a data-link-type=\"dfn\" href=\"https://gpuweb.github.io/gpuweb/#lose-the-device\" id=\"ref-for-lose-the-device⑥\" data-timeline=\"device\">becomes lost</a>:",
+          "rationale": "issue",
+          "steps": [
+            {
+              "html": "<p>Issue the subsequent steps on <var data-timeline=\"content\">contentTimeline</var>.</p>"
+            }
+          ]
         }
       ]
     },

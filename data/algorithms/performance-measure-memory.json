@@ -329,32 +329,37 @@
       ]
     },
     {
-      "html": "Otherwise:",
       "rationale": "let",
       "steps": [
         {
-          "html": "<p>Let <var>token</var> be an empty <a data-link-type=\"dfn\" href=\"https://wicg.github.io/performance-measure-memory/#memory-attribution-token\" id=\"ref-for-memory-attribution-token⑥\">memory attribution token</a>.</p>"
-        },
-        {
-          "html": "If <var>browsingContext</var> is not a top-level browsing context, then:",
+          "html": "Otherwise:",
           "rationale": "let",
           "steps": [
             {
-              "html": "<p>Let <var>parentToken</var> be <var>parentEnvironment</var>’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#concept-settings-object-global\" id=\"ref-for-concept-settings-object-global①\">global object</a>'s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/performance-measure-memory/#windoworworkerglobalscope-memory-attribution-token\" id=\"ref-for-windoworworkerglobalscope-memory-attribution-token⑤\">memory attribution token</a>.</p>"
+              "html": "<p>Let <var>token</var> be an empty <a data-link-type=\"dfn\" href=\"https://wicg.github.io/performance-measure-memory/#memory-attribution-token\" id=\"ref-for-memory-attribution-token⑥\">memory attribution token</a>.</p>"
             },
             {
-              "html": "<p>Set <var>token</var> to the result of <a data-link-type=\"dfn\" href=\"https://wicg.github.io/performance-measure-memory/#obtain-a-window-memory-attribution-token\" id=\"ref-for-obtain-a-window-memory-attribution-token\">obtaining a window memory attribution token</a> with <var>origin</var>, <var>parentEnvironment</var>’s origin, <var>topLevelOrigin</var>, <var>browsingContext</var>’s container, <var>parentToken</var>.</p>"
+              "html": "If <var>browsingContext</var> is not a top-level browsing context, then:",
+              "rationale": "let",
+              "steps": [
+                {
+                  "html": "<p>Let <var>parentToken</var> be <var>parentEnvironment</var>’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#concept-settings-object-global\" id=\"ref-for-concept-settings-object-global①\">global object</a>'s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/performance-measure-memory/#windoworworkerglobalscope-memory-attribution-token\" id=\"ref-for-windoworworkerglobalscope-memory-attribution-token⑤\">memory attribution token</a>.</p>"
+                },
+                {
+                  "html": "<p>Set <var>token</var> to the result of <a data-link-type=\"dfn\" href=\"https://wicg.github.io/performance-measure-memory/#obtain-a-window-memory-attribution-token\" id=\"ref-for-obtain-a-window-memory-attribution-token\">obtaining a window memory attribution token</a> with <var>origin</var>, <var>parentEnvironment</var>’s origin, <var>topLevelOrigin</var>, <var>browsingContext</var>’s container, <var>parentToken</var>.</p>"
+                }
+              ]
+            },
+            {
+              "html": "<p>Else, set <var>token</var> to the result of <a data-link-type=\"dfn\" href=\"https://wicg.github.io/performance-measure-memory/#obtain-a-window-memory-attribution-token\" id=\"ref-for-obtain-a-window-memory-attribution-token①\">obtaining a window memory attribution token</a> with <var>origin</var>, null <var>topLevelOrigin</var>, null, null.</p>"
+            },
+            {
+              "html": "<p>Let <var>window global scope</var> be the <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#concept-realm-global\" id=\"ref-for-concept-realm-global⑤\">global object</a> of <var>realm execution context</var>’s Realm component.</p>"
+            },
+            {
+              "html": "<p>Set <var>window global scope</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/performance-measure-memory/#windoworworkerglobalscope-memory-attribution-token\" id=\"ref-for-windoworworkerglobalscope-memory-attribution-token⑥\">memory attribution token</a> to <var>token</var>.</p>"
             }
           ]
-        },
-        {
-          "html": "<p>Else, set <var>token</var> to the result of <a data-link-type=\"dfn\" href=\"https://wicg.github.io/performance-measure-memory/#obtain-a-window-memory-attribution-token\" id=\"ref-for-obtain-a-window-memory-attribution-token①\">obtaining a window memory attribution token</a> with <var>origin</var>, null <var>topLevelOrigin</var>, null, null.</p>"
-        },
-        {
-          "html": "<p>Let <var>window global scope</var> be the <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#concept-realm-global\" id=\"ref-for-concept-realm-global⑤\">global object</a> of <var>realm execution context</var>’s Realm component.</p>"
-        },
-        {
-          "html": "<p>Set <var>window global scope</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/performance-measure-memory/#windoworworkerglobalscope-memory-attribution-token\" id=\"ref-for-windoworworkerglobalscope-memory-attribution-token⑥\">memory attribution token</a> to <var>token</var>.</p>"
         }
       ]
     },

@@ -103,6 +103,24 @@
           "html": "A corollary of previous steps is that <var>E</var> forms a stacking context. Produce and\n          deliver a frame consisting of an independent rendering of that stacking context, clipped\n          to <var>intersection</var>."
         }
       ]
+    },
+    {
+      "html": "For example, using pre-existing mechanisms, video-conferencing applications can:",
+      "rationale": "prompt",
+      "steps": [
+        {
+          "html": "<p>Embed content in an iframe.</p>"
+        },
+        {
+          "html": "<p>\n              Prompt the user to capture the current tab. (Using\n              <a data-link-type=\"idl\" data-xref-type=\"method\" data-link-for=\"MediaDevices\" data-xref-for=\"MediaDevices\" data-lt=\"getDisplayMedia()\" data-cite=\"screen-capture\" data-cite-path=\"/\" data-cite-frag=\"dom-mediadevices-getdisplaymedia\" data-type=\"method\" href=\"https://www.w3.org/TR/screen-capture/#dom-mediadevices-getdisplaymedia\"><code>getDisplayMedia</code></a><code>()</code>.)\n            </p>"
+        },
+        {
+          "html": "<p>\n              Crop the resulting capture to just the iframe that's intended for capture. (Using\n              <a data-link-type=\"idl\" data-xref-type=\"method\" data-link-for=\"BrowserCaptureMediaStreamTrack\" data-xref-for=\"BrowserCaptureMediaStreamTrack\" data-lt=\"cropTo()\" data-cite=\"mediacapture-region\" data-cite-path=\"/\" data-cite-frag=\"dom-browsercapturemediastreamtrack-cropto\" data-type=\"method\" href=\"https://www.w3.org/TR/mediacapture-region/#dom-browsercapturemediastreamtrack-cropto\"><code>cropTo</code></a><code>()</code>.)\n            </p>"
+        },
+        {
+          "html": "<p>\n              Transmit the resulting pixels to remote participants. (Using\n              <a data-cite=\"webrtc#dom-rtcpeerconnection\" href=\"https://www.w3.org/TR/webrtc/#dom-rtcpeerconnection\">RTCPeerConnection</a>.)\n            </p>"
+        }
+      ]
     }
   ]
 }

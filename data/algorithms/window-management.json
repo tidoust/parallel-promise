@@ -5,6 +5,33 @@
   },
   "algorithms": [
     {
+      "html": "To support multi-screen experiences, the API allows web applications to:",
+      "rationale": "place",
+      "steps": [
+        {
+          "html": "<p>Detect if the device has more than one screen</p>"
+        },
+        {
+          "html": "<p>Request information required to place content on specific screens</p>"
+        },
+        {
+          "html": "<p>Detect when a screen is added or removed</p>"
+        },
+        {
+          "html": "<p>Detect when the current screen or an attribute thereof changes</p>"
+        },
+        {
+          "html": "<p>Show an element fullscreen on a specific screen</p>"
+        },
+        {
+          "html": "<p>Place a window on a specific screen</p>"
+        },
+        {
+          "html": "<p>Initiate a multi-screen experience from a single transient user activation</p>"
+        }
+      ]
+    },
+    {
       "name": "device pixel ratio",
       "href": "https://w3c.github.io/window-management/#screen-device-pixel-ratio",
       "html": "A <a data-link-type=\"dfn\" href=\"https://w3c.github.io/window-management/#screen\" id=\"ref-for-screen⑦\">screen</a> has a <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-for=\"screen\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"screen-device-pixel-ratio\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">device pixel ratio</dfn>, similar to <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/nav-history-apis.html#window\" id=\"ref-for-window①\">Window</a></code>'s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/cssom-view-1/#dom-window-devicepixelratio\" id=\"ref-for-dom-window-devicepixelratio\">devicePixelRatio</a></code>, which is the result of the following algorithm:",
@@ -73,6 +100,18 @@
         },
         {
           "html": "<p>Return <var>promise</var>.</p>"
+        }
+      ]
+    },
+    {
+      "html": "The <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/nav-history-apis.html#dom-open\" id=\"ref-for-dom-open③\">Window.open()</a></code> method steps, and the steps of methods invoked therein, are updated to optionally:",
+      "rationale": "set",
+      "steps": [
+        {
+          "html": "<p>Waive the <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/interaction.html#transient-activation\" id=\"ref-for-transient-activation\">transient activation</a> state requirement when the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/hr-time/#dfn-current-high-resolution-time\" id=\"ref-for-dfn-current-high-resolution-time\">current high resolution time</a> of the <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#concept-relevant-global\" id=\"ref-for-concept-relevant-global④\">relevant global object</a> is greater than or equal to <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\" id=\"ref-for-this⑥\">this</a>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/window-management/#dom-window-targetscreenfullscreen-slot\" id=\"ref-for-dom-window-targetscreenfullscreen-slot\">[[targetScreenFullscreen]]</a></code>, and less than <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\" id=\"ref-for-this⑦\">this</a>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/window-management/#dom-window-targetscreenfullscreen-slot\" id=\"ref-for-dom-window-targetscreenfullscreen-slot①\">[[targetScreenFullscreen]]</a></code> plus the <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/#transient-activation-duration\" id=\"ref-for-transient-activation-duration\">transient activation duration</a>.</p>"
+        },
+        {
+          "html": "<p>Set <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\" id=\"ref-for-this⑧\">this</a>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/window-management/#dom-window-targetscreenfullscreen-slot\" id=\"ref-for-dom-window-targetscreenfullscreen-slot②\">[[targetScreenFullscreen]]</a></code> to negative infinity immediately after following the steps to <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/interaction.html#consume-user-activation\" id=\"ref-for-consume-user-activation①\">consume user activation</a>.</p>"
         }
       ]
     },

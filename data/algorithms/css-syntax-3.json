@@ -72,6 +72,21 @@
       ]
     },
     {
+      "html": "<span class=\"marker\">Note:</span> This algorithm assumes that the initial \"url(\" has already been consumed.\n\tThis algorithm also assumes that it’s being called to consume an \"unquoted\" value,\n\tlike <span class=\"css\">url(foo)</span>.\n\tA quoted value, like <span class=\"css\">url(\"foo\")</span>,\n\tis parsed as a <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.csswg.org/css-syntax-3/#typedef-function-token\" id=\"ref-for-typedef-function-token⑥\">&lt;function-token&gt;</a>. <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#consume-an-ident-like-token\" id=\"ref-for-consume-an-ident-like-token④\">Consume an ident-like token</a> automatically handles this distinction;\n\tthis algorithm shouldn’t be called directly otherwise.",
+      "rationale": "consume",
+      "steps": [
+        {
+          "html": "Initially create a <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.csswg.org/css-syntax-3/#typedef-url-token\" id=\"ref-for-typedef-url-token④\">&lt;url-token&gt;</a> with its value set to the empty string."
+        },
+        {
+          "html": "Consume as much <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#whitespace\" id=\"ref-for-whitespace⑤\">whitespace</a> as possible."
+        },
+        {
+          "html": "Repeatedly consume the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#next-input-code-point\" id=\"ref-for-next-input-code-point②⓪\">next input code point</a> from the stream: \n     <dl>\n      <dt>U+0029 RIGHT PARENTHESIS ()) \n      </dt><dd> Return the <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.csswg.org/css-syntax-3/#typedef-url-token\" id=\"ref-for-typedef-url-token⑤\">&lt;url-token&gt;</a>. \n      </dd><dt>EOF \n      </dt><dd> This is a <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#parse-error\" id=\"ref-for-parse-error④\">parse error</a>.\n\t\t\t\t\tReturn the <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.csswg.org/css-syntax-3/#typedef-url-token\" id=\"ref-for-typedef-url-token⑥\">&lt;url-token&gt;</a>. \n      </dd><dt><a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#whitespace\" id=\"ref-for-whitespace⑥\">whitespace</a> \n      </dt><dd> Consume as much <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#whitespace\" id=\"ref-for-whitespace⑦\">whitespace</a> as possible.\n\t\t\t\t\tIf the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#next-input-code-point\" id=\"ref-for-next-input-code-point②①\">next input code point</a> is U+0029 RIGHT PARENTHESIS ()) or EOF,\n\t\t\t\t\tconsume it and return the <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.csswg.org/css-syntax-3/#typedef-url-token\" id=\"ref-for-typedef-url-token⑦\">&lt;url-token&gt;</a> (if EOF was encountered, this is a <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#parse-error\" id=\"ref-for-parse-error⑤\">parse error</a>);\n\t\t\t\t\totherwise, <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#consume-the-remnants-of-a-bad-url\" id=\"ref-for-consume-the-remnants-of-a-bad-url\">consume the remnants of a bad url</a>,\n\t\t\t\t\tcreate a <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.csswg.org/css-syntax-3/#typedef-bad-url-token\" id=\"ref-for-typedef-bad-url-token②\">&lt;bad-url-token&gt;</a>,\n\t\t\t\t\tand return it. \n      </dd><dt>U+0022 QUOTATION MARK (\") \n      </dt><dt>U+0027 APOSTROPHE (') \n      </dt><dt>U+0028 LEFT PARENTHESIS (() \n      </dt><dt><a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#non-printable-code-point\" id=\"ref-for-non-printable-code-point\">non-printable code point</a> \n      </dt><dd> This is a <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#parse-error\" id=\"ref-for-parse-error⑥\">parse error</a>. <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#consume-the-remnants-of-a-bad-url\" id=\"ref-for-consume-the-remnants-of-a-bad-url①\">Consume the remnants of a bad url</a>,\n\t\t\t\t\tcreate a <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.csswg.org/css-syntax-3/#typedef-bad-url-token\" id=\"ref-for-typedef-bad-url-token③\">&lt;bad-url-token&gt;</a>,\n\t\t\t\t\tand return it. \n      </dd><dt>U+005C REVERSE SOLIDUS (\\) \n      </dt><dd>\n        If the stream <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#check-if-two-code-points-are-a-valid-escape\" id=\"ref-for-check-if-two-code-points-are-a-valid-escape③\">starts with a valid escape</a>, <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#consume-an-escaped-code-point\" id=\"ref-for-consume-an-escaped-code-point①\">consume an escaped code point</a> and append the returned <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#code-point\" id=\"ref-for-code-point④⑤\">code point</a> to the <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.csswg.org/css-syntax-3/#typedef-url-token\" id=\"ref-for-typedef-url-token⑧\">&lt;url-token&gt;</a>’s value. \n       <p>Otherwise,\n\t\t\t\t\tthis is a <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#parse-error\" id=\"ref-for-parse-error⑦\">parse error</a>. <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#consume-the-remnants-of-a-bad-url\" id=\"ref-for-consume-the-remnants-of-a-bad-url②\">Consume the remnants of a bad url</a>,\n\t\t\t\t\tcreate a <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.csswg.org/css-syntax-3/#typedef-bad-url-token\" id=\"ref-for-typedef-bad-url-token④\">&lt;bad-url-token&gt;</a>,\n\t\t\t\t\tand return it.</p>\n      </dd><dt>anything else \n      </dt><dd> Append the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#current-input-code-point\" id=\"ref-for-current-input-code-point①②\">current input code point</a> to the <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.csswg.org/css-syntax-3/#typedef-url-token\" id=\"ref-for-typedef-url-token⑨\">&lt;url-token&gt;</a>’s value. \n     </dd></dl>"
+        }
+      ]
+    },
+    {
       "html": "Execute the following steps in order:",
       "rationale": "let",
       "steps": [
@@ -551,6 +566,21 @@
         },
         {
           "html": "<p>Return <var>result</var>.</p>"
+        }
+      ]
+    },
+    {
+      "html": "To <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#parse-a-stylesheet\" id=\"ref-for-parse-a-stylesheet③\">parse a stylesheet</a> from an <var>input</var> \n       <ins>given an optional <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url\" id=\"ref-for-concept-url①\">url</a> <var>location</var></ins>\n       :",
+      "rationale": "create",
+      "steps": [
+        {
+          "html": "..."
+        },
+        {
+          "html": "Create a new stylesheet\n        <ins>, with its <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#concept-css-style-sheet-location\" id=\"ref-for-concept-css-style-sheet-location①\">location</a> set to <var>location</var> (or null, if <var>location</var> was not passed).</ins>"
+        },
+        {
+          "html": "..."
         }
       ]
     }

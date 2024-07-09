@@ -34,6 +34,21 @@
       ]
     },
     {
+      "html": "This document clearly indicates which information <em class=\"rfc2119\">must</em> be available to Members or the public,\n\teven though that information was initially communicated on <a data-link-type=\"dfn\" href=\"https://www.w3.org/Consortium/Process/#Team-only\" id=\"ref-for-Team-only⑤\">Team-only</a> or <a data-link-type=\"dfn\" href=\"https://www.w3.org/Consortium/Process/#Member-only\" id=\"ref-for-Member-only①①\">Member-only</a> channels.\n\tOnly the <a data-link-type=\"dfn\" href=\"https://www.w3.org/Consortium/Process/#team\" id=\"ref-for-team①①②\">Team</a> and parties authorized by the Team\n\tmay change the level of confidentiality of this information.\n\tWhen doing so:",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "The <a data-link-type=\"dfn\" href=\"https://www.w3.org/Consortium/Process/#team\" id=\"ref-for-team①①③\">Team</a> <em class=\"rfc2119\">must</em> use a version of the information\n\t\t\tthat was expressly provided by the author for the new confidentiality level.\n\t\t\tIn Calls for Review and other similar messages,\n\t\t\tthe Team <em class=\"rfc2119\">should</em> remind recipients to provide such alternatives."
+        },
+        {
+          "html": "The <a data-link-type=\"dfn\" href=\"https://www.w3.org/Consortium/Process/#team\" id=\"ref-for-team①①④\">Team</a> <em class=\"rfc2119\">must not</em> attribute the version\n\t\t\tfor the new confidentiality level to the author without the author’s consent."
+        },
+        {
+          "html": "If the author has not conveyed to the <a data-link-type=\"dfn\" href=\"https://www.w3.org/Consortium/Process/#team\" id=\"ref-for-team①①⑤\">Team</a> a version\n\t\t\tthat is suitable for another confidentiality level,\n\t\t\tthe Team <em class=\"rfc2119\">may</em> make available a version that reasonably communicates what is required,\n\t\t\twhile respecting the original level of confidentiality,\n\t\t\tand without attribution to the original author."
+        }
+      ]
+    },
+    {
       "html": "The Submission process consists of the following steps:",
       "rationale": "reject",
       "steps": [

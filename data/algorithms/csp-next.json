@@ -5,6 +5,21 @@
   },
   "algorithms": [
     {
+      "html": "The <a data-link-type=\"biblio\" href=\"https://wicg.github.io/csp-next/scripting-policy.html#biblio-artur\">[ARTUR]</a> proposal is a tounge-in-cheek proposal that’s a fairly bad idea as specified, but\nseems like an interesting foundation conceptually. If we step back from CSP’s current syntax, and\nthe contortions it takes to remain backwards compatible, it seems like we could extract a concise\nand comprehensible mechanism that would encompass the kinds of requirements that hard experience\nhas taught us can be effective (e.g. those expressed in <a data-link-type=\"biblio\" href=\"https://wicg.github.io/csp-next/scripting-policy.html#biblio-strict-csp\">[STRICT-CSP]</a>):",
+      "rationale": "create",
+      "steps": [
+        {
+          "html": "<p>Turn off dangerous parts of the platform that influence scripting (e.g. <code><a data-link-type=\"element\" href=\"https://html.spec.whatwg.org/multipage/semantics.html#the-base-element\" id=\"ref-for-the-base-element\">base</a></code>, <code><a data-link-type=\"element\" href=\"https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-embed-element\" id=\"ref-for-the-embed-element\">embed</a></code>,\nand <code><a data-link-type=\"element\" href=\"https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-object-element\" id=\"ref-for-the-object-element\">object</a></code>.</p>"
+        },
+        {
+          "html": "<p>Create an out-of-band signal that a given script is intended to execute (e.g. the aforementioned\nnonces and hashes).</p>"
+        },
+        {
+          "html": "<p>Allow developers to roll the above out in a report-only manner.</p>"
+        }
+      ]
+    },
+    {
       "html": "This mechanism assumes an attacker can:",
       "rationale": "cause",
       "steps": [
@@ -192,6 +207,24 @@
       ]
     },
     {
+      "html": "<strong>Monkeypatching <a data-link-type=\"biblio\" href=\"https://wicg.github.io/csp-next/scripting-policy.html#biblio-html\">[HTML]</a>'s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/workers.html#run-a-worker\" id=\"ref-for-run-a-worker①\">run a worker</a> algorithm:</strong>",
+      "rationale": "initialize",
+      "steps": [
+        {
+          "html": "In both cases, ...",
+          "rationale": "initialize",
+          "steps": [
+            {
+              "html": "<p>...</p>"
+            },
+            {
+              "html": "<p><a data-link-type=\"abstract-op\" href=\"https://wicg.github.io/csp-next/scripting-policy.html#abstract-opdef-initialize-a-global-objects-scripting-policy\" id=\"ref-for-abstract-opdef-initialize-a-global-objects-scripting-policy\">Initialize a global\n  object’s Scripting Policy</a> given <var>worker global scope</var> and <var>response</var>.</p>"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "block script element",
       "href": "https://wicg.github.io/csp-next/scripting-policy.html#abstract-opdef-determine-whether-a-script-element-should-be-blocked-by-scripting-policy",
       "html": "To <dfn data-dfn-type=\"abstract-op\" data-export=\"\" data-local-lt=\"block script element\" data-lt=\"determine whether a script element should be blocked by Scripting Policy\" id=\"abstract-opdef-determine-whether-a-script-element-should-be-blocked-by-scripting-policy\">determine whether a script element should\n    be blocked by Scripting Policy<a class=\"self-link\" href=\"https://wicg.github.io/csp-next/scripting-policy.html#abstract-opdef-determine-whether-a-script-element-should-be-blocked-by-scripting-policy\"></a></dfn>, given an <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://dom.spec.whatwg.org/#element\" id=\"ref-for-element\">Element</a></code> (<var>el</var>), execute the following\n    algorithm. It will return \"<code>Blocked</code>\" or \"<code>Allowed</code>\".",
@@ -349,6 +382,24 @@
         },
         {
           "html": "<p>Return \"<code>Allowed</code>\".</p>"
+        }
+      ]
+    },
+    {
+      "html": "<strong>Monkeypatching <a data-link-type=\"biblio\" href=\"https://wicg.github.io/csp-next/scripting-policy.html#biblio-html\">[HTML]</a>'s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#event-handler-content-attributes\" id=\"ref-for-event-handler-content-attributes\">event handler content attribute</a>'s <a data-link-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-element-attributes-change-ext\" id=\"ref-for-concept-element-attributes-change-ext\">attribute change steps</a></strong>:",
+      "rationale": "if",
+      "steps": [
+        {
+          "html": "Otherwise:",
+          "rationale": "if",
+          "steps": [
+            {
+              "html": "<p>...</p>"
+            },
+            {
+              "html": "<p>If <a data-link-type=\"abstract-op\" href=\"https://wicg.github.io/csp-next/scripting-policy.html#abstract-opdef-determine-whether-an-event-handler-be-blocked-by-scripting-policy\" id=\"ref-for-abstract-opdef-determine-whether-an-event-handler-be-blocked-by-scripting-policy\">Should an event handler be blocked by Scripting Policy?</a> returns \"<code>Blocked</code>\" when executed upon <var>element</var> and <var>value</var>, then return.</p>"
+            }
+          ]
         }
       ]
     },

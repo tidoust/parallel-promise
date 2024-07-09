@@ -118,9 +118,15 @@
               ]
             },
             {
-              "html": "For each relation_type in relation_types: <ol><li>Case-normalise relation_type to lowercase.</li><li>Append a link object to links with the target target_uri, relation type of relation_type, context of context_uri, and target attributes target_attributes.</li></ol>",
-              "ignored": [
-                "Case-normalise relation_type to lowercase.Append a link object to links with the target target_uri, relation type of relation_type, context of context_uri, and target attributes target_attributes."
+              "html": "For each relation_type in relation_types:",
+              "rationale": "append",
+              "steps": [
+                {
+                  "html": "Case-normalise relation_type to lowercase."
+                },
+                {
+                  "html": "Append a link object to links with the target target_uri, relation type of relation_type, context of context_uri, and target attributes target_attributes."
+                }
               ]
             }
           ]

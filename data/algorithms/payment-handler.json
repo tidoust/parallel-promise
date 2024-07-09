@@ -364,7 +364,7 @@
             },
             {
               "html": "The user agent <em class=\"rfc2119\">MUST</em> run the <a data-cite=\"payment-request#user-accepts-the-payment-request-algorithm\" data-link-type=\"dfn\" href=\"https://www.w3.org/TR/payment-request/#user-accepts-the-payment-request-algorithm\">user accepts the payment\n              request algorithm</a> as defined in [<cite><a class=\"bibref\" data-link-type=\"biblio\" href=\"https://w3c.github.io/payment-handler/#bib-payment-request\" title=\"Payment Request API\">payment-request</a></cite>],\n              replacing steps 9-15 with these steps or their equivalent.",
-              "rationale": "terminate these steps",
+              "rationale": "for",
               "steps": [
                 {
                   "html": "Deserialize serialized members:",

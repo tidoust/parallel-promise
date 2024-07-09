@@ -21,7 +21,7 @@
     },
     {
       "html": "The user agent <em class=\"bcp14\">MUST</em> use an algorithm equivalent to the following algorithm to parse a cookie-date. Note that the various boolean flags defined as a part of the algorithm (i.e., found-time, found-day-of-month, found-month, found-year) are initially \"not set\".",
-      "rationale": "abort these steps",
+      "rationale": "process",
       "steps": [
         {
           "html": "Using the grammar below, divide the cookie-date into date-tokens. <span id=\"rfc.figure.u.14\"><span><pre class=\"inline\">cookie-date     = *delimiter date-token-list *delimiter\ndate-token-list = date-token *( 1*delimiter date-token )\ndate-token      = 1*non-delimiter\n\ndelimiter       = %x09 / %x20-2F / %x3B-40 / %x5B-60 / %x7B-7E\nnon-delimiter   = %x00-08 / %x0A-1F / DIGIT / \":\" / ALPHA / %x7F-FF\nnon-digit       = %x00-2F / %x3A-FF\n\nday-of-month    = 1*2DIGIT ( non-digit *OCTET )\nmonth           = ( \"jan\" / \"feb\" / \"mar\" / \"apr\" /\n                    \"may\" / \"jun\" / \"jul\" / \"aug\" /\n                    \"sep\" / \"oct\" / \"nov\" / \"dec\" ) *OCTET\nyear            = 2*4DIGIT ( non-digit *OCTET )\ntime            = hms-time ( non-digit *OCTET )\nhms-time        = time-field \":\" time-field \":\" time-field\ntime-field      = 1*2DIGIT\n              </pre></span></span>"
@@ -150,7 +150,7 @@
     },
     {
       "html": "When the user agent \"receives a cookie\" from a request-uri with name cookie-name, value cookie-value, and attributes cookie-attribute-list, the user agent <em class=\"bcp14\">MUST</em> process the cookie as follows:",
-      "rationale": "abort these steps",
+      "rationale": "create",
       "steps": [
         {
           "html": "A user agent <em class=\"bcp14\">MAY</em> ignore a received cookie in its entirety. For example, the user agent might wish to block receiving cookies from \"third-party\" responses or the user agent might not wish to store cookies that exceed some size."
@@ -219,9 +219,15 @@
           "html": "Update the last-access-time of each cookie in the cookie-list to the current date and time."
         },
         {
-          "html": "Serialize the cookie-list into a cookie-string by processing each cookie in the cookie-list in order: <ol><li>Output the cookie's name, the %x3D (\"=\") character, and the cookie's value.</li><li>If there is an unprocessed cookie in the cookie-list, output the characters %x3B and %x20 (\"; \").</li></ol>",
-          "ignored": [
-            "Output the cookie's name, the %x3D (\"=\") character, and the cookie's value.If there is an unprocessed cookie in the cookie-list, output the characters %x3B and %x20 (\"; \")."
+          "html": "Serialize the cookie-list into a cookie-string by processing each cookie in the cookie-list in order:",
+          "rationale": "if",
+          "steps": [
+            {
+              "html": "Output the cookie's name, the %x3D (\"=\") character, and the cookie's value."
+            },
+            {
+              "html": "If there is an unprocessed cookie in the cookie-list, output the characters %x3B and %x20 (\"; \")."
+            }
           ]
         }
       ]

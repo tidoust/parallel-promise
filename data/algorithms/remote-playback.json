@@ -19,7 +19,7 @@
         },
         {
           "html": "If the user agent is unable to <a href=\"https://w3c.github.io/remote-playback/#dfn-monitor-the-list-of-available-remote-playback-devices\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-monitor-the-list-of-available-remote-playback-devices-9\">monitor the list of\n                available remote playback devices</a> for the entire lifetime of\n                the <a data-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/document-sequences.html#browsing-context\">browsing context</a> (for instance, because the user has\n                disabled this feature), then run the following steps <a data-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#in-parallel\">in parallel</a>:",
-          "rationale": "/queue a( \\w+)? task/i",
+          "rationale": "queue",
           "steps": [
             {
               "html": "Fulfill <var data-type=\"Promise\">promise</var>."
@@ -68,7 +68,7 @@
       "name": "monitor the list of available remote playback devices",
       "href": "https://w3c.github.io/remote-playback/#dfn-monitor-the-list-of-available-remote-playback-devices",
       "html": "If the <a href=\"https://w3c.github.io/remote-playback/#dfn-set-of-availability-callbacks\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-set-of-availability-callbacks-7\">set of availability callbacks</a> is non-empty, or\n              there is a pending request to <a data-lt=\"prompt\" href=\"https://w3c.github.io/remote-playback/#dom-remoteplayback-prompt\" class=\"internalDFN\" data-link-type=\"idl\" id=\"ref-for-dom-remoteplayback-prompt-3\">\n              initiate remote playback</a>, the user agent\n              <em class=\"rfc2119\">MUST</em> <dfn id=\"dfn-monitor-the-list-of-available-remote-playback-devices\" tabindex=\"0\" aria-haspopup=\"dialog\" data-dfn-type=\"dfn\">monitor the list of available remote playback\n              devices</dfn> by running the following steps:",
-      "rationale": "/queue a( \\w+)? task/i",
+      "rationale": "for",
       "steps": [
         {
           "html": "Retrieve available remote playback devices (using an\n                implementation specific mechanism) and let <var data-type=\"list\">newDevices</var>\n                be this list."
@@ -183,9 +183,15 @@
           ]
         },
         {
-          "html": "Otherwise, if the user chose to disconnect from the <a href=\"https://w3c.github.io/remote-playback/#dfn-remote-playback-devices\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-remote-playback-devices-34\">remote\n              playback device</a> <var data-type=\"remote\n              playback device\">device</var>, the user agent <em class=\"rfc2119\">MUST</em> run the\n              following steps:\n              <ol>\n                <li>\n                  Fulfill <var data-type=\"Promise\">promise</var>.\n                </li>\n                <li>\n                  Run the <a href=\"https://w3c.github.io/remote-playback/#dfn-disconnect-from-a-remote-playback-device\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-disconnect-from-a-remote-playback-device-2\">disconnect from a remote playback device</a>\n                  algorithm for the <var data-type=\"remote\n              playback device\">device</var>.\n                </li>\n              </ol>",
-          "ignored": [
-            "Fulfill promise. Run the disconnect from a remote playback device algorithm for the device."
+          "html": "Otherwise, if the user chose to disconnect from the <a href=\"https://w3c.github.io/remote-playback/#dfn-remote-playback-devices\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-remote-playback-devices-34\">remote\n              playback device</a> <var data-type=\"remote\n              playback device\">device</var>, the user agent <em class=\"rfc2119\">MUST</em> run the\n              following steps:",
+          "rationale": "run",
+          "steps": [
+            {
+              "html": "Fulfill <var data-type=\"Promise\">promise</var>."
+            },
+            {
+              "html": "Run the <a href=\"https://w3c.github.io/remote-playback/#dfn-disconnect-from-a-remote-playback-device\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-disconnect-from-a-remote-playback-device-2\">disconnect from a remote playback device</a>\n                  algorithm for the <var data-type=\"remote\n              playback device\">device</var>."
+            }
           ]
         },
         {
@@ -245,7 +251,7 @@
         },
         {
           "html": "<a data-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task\">Queue a task</a> to run the following steps:",
-          "rationale": "fire an event",
+          "rationale": "change",
           "steps": [
             {
               "html": "Request disconnection of <var data-type=\"RemotePlayback\">remote</var> from <var data-type=\"remote playback device\">device</var>. The\n                  implementation of this step is specific to the user agent."

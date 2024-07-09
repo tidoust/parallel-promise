@@ -139,9 +139,27 @@
           "html": "Otherwise, set the <var>available actions</var> to the list of keys\n          available in the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/mediasession/#active-media-session\" id=\"ref-for-active-media-session②②\">active media session</a>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/mediasession/#supported-media-session-actions\" id=\"ref-for-supported-media-session-actions⑤\">supported media\n          session actions</a>."
         },
         {
-          "html": "For each <a data-link-type=\"dfn\" href=\"https://w3c.github.io/mediasession/#media-session-action-source\" id=\"ref-for-media-session-action-source⑥\">media session action source</a> <var>source</var>, run the\n          following substeps: \n       <ol>\n        <li>\n          Optionally, if the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/mediasession/#active-media-session\" id=\"ref-for-active-media-session②③\">active media session</a> is not null: \n         <ol>\n          <li> If the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/mediasession/#active-media-session\" id=\"ref-for-active-media-session②④\">active media session</a>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/mediasession/#actual-playback-state\" id=\"ref-for-actual-playback-state③\">actual playback\n                  state</a> is <a class=\"idl-code\" data-link-type=\"enum-value\" href=\"https://w3c.github.io/mediasession/#dom-mediasessionplaybackstate-playing\" id=\"ref-for-dom-mediasessionplaybackstate-playing④\">playing</a>, remove <a class=\"idl-code\" data-link-type=\"enum-value\" href=\"https://w3c.github.io/mediasession/#dom-mediasessionaction-play\" id=\"ref-for-dom-mediasessionaction-play⑤\">play</a> from <var>available\n                  actions</var>. \n          </li><li> Otherwise, remove <a class=\"idl-code\" data-link-type=\"enum-value\" href=\"https://w3c.github.io/mediasession/#dom-mediasessionaction-pause\" id=\"ref-for-dom-mediasessionaction-pause⑥\">pause</a> from <var>available\n                  actions</var>. \n         </li></ol>\n        </li><li> If the <var>source</var> is a UI element created by the user\n              agent, it MAY remove some elements from <var>available\n              actions</var> if there are too many of them compared to the\n              available space. \n        </li><li> Notify the <var>source</var> with the updated list of <var>available actions</var>. \n       </li></ol>",
-          "ignored": [
-            "Optionally, if the active media session is not null: If the active media session’s actual playback state is playing, remove play from available actions. Otherwise, remove pause from available actions. If the source is a UI element created by the user agent, it MAY remove some elements from available actions if there are too many of them compared to the available space. Notify the source with the updated list of available actions."
+          "html": "For each <a data-link-type=\"dfn\" href=\"https://w3c.github.io/mediasession/#media-session-action-source\" id=\"ref-for-media-session-action-source⑥\">media session action source</a> <var>source</var>, run the\n          following substeps:",
+          "rationale": "if",
+          "steps": [
+            {
+              "html": "Optionally, if the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/mediasession/#active-media-session\" id=\"ref-for-active-media-session②③\">active media session</a> is not null:",
+              "rationale": "if",
+              "steps": [
+                {
+                  "html": "If the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/mediasession/#active-media-session\" id=\"ref-for-active-media-session②④\">active media session</a>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/mediasession/#actual-playback-state\" id=\"ref-for-actual-playback-state③\">actual playback\n                  state</a> is <a class=\"idl-code\" data-link-type=\"enum-value\" href=\"https://w3c.github.io/mediasession/#dom-mediasessionplaybackstate-playing\" id=\"ref-for-dom-mediasessionplaybackstate-playing④\">playing</a>, remove <a class=\"idl-code\" data-link-type=\"enum-value\" href=\"https://w3c.github.io/mediasession/#dom-mediasessionaction-play\" id=\"ref-for-dom-mediasessionaction-play⑤\">play</a> from <var>available\n                  actions</var>."
+                },
+                {
+                  "html": "Otherwise, remove <a class=\"idl-code\" data-link-type=\"enum-value\" href=\"https://w3c.github.io/mediasession/#dom-mediasessionaction-pause\" id=\"ref-for-dom-mediasessionaction-pause⑥\">pause</a> from <var>available\n                  actions</var>."
+                }
+              ]
+            },
+            {
+              "html": "If the <var>source</var> is a UI element created by the user\n              agent, it MAY remove some elements from <var>available\n              actions</var> if there are too many of them compared to the\n              available space."
+            },
+            {
+              "html": "Notify the <var>source</var> with the updated list of <var>available actions</var>."
+            }
           ]
         }
       ]

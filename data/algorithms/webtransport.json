@@ -619,7 +619,7 @@
               "steps": [
                 {
                   "html": "If <var>transport</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webtransport/#dom-webtransport-state-slot\" id=\"ref-for-dom-webtransport-state-slot①②\">[[State]]</a></code> is not <code>\"connecting\"</code>:",
-                  "rationale": "abort these steps",
+                  "rationale": "in parallel",
                   "steps": [
                     {
                       "html": "<p><a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#in-parallel\" id=\"ref-for-in-parallel①\">In parallel</a>, <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webtransport/#session-terminate\" id=\"ref-for-session-terminate\">terminate</a> <var>session</var>.</p>"
@@ -1827,7 +1827,7 @@
         },
         {
           "html": "Run the following steps <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#in-parallel\" id=\"ref-for-in-parallel①⑦\">in parallel</a>:",
-          "rationale": "resolve",
+          "rationale": "if",
           "steps": [
             {
               "html": "<p><a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#arraybuffer-write\" id=\"ref-for-arraybuffer-write\">Write</a> the bytes that area <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webtransport/#stream-receive\" id=\"ref-for-stream-receive\">read</a> from <var>internalStream</var> into <var>buffer</var> with offset <var>offset</var>, up to <var>maxBytes</var> bytes. Wait until either at least one byte is\n read or FIN is received. Let <var>read</var> be the number of read bytes, and let <var>hasReceivedFIN</var> be\n whether FIN was accompanied.</p>\n        <p>The user-agent MAY have a buffer to improve the transfer performance. Such a buffer\n SHOULD have a fixed upper limit, to carry the backpressure information to the server.</p>"

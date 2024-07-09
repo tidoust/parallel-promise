@@ -4410,9 +4410,39 @@
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "<p>Let <var>keyString</var> be the <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#string-concatenate\" id=\"ref-for-string-concatenate⑧\">concatenation</a> of the following strings separated with U+000A (LF):</p>\n      <ol>\n       <li data-md=\"\">\n        <p>\"NameReport\"</p>\n       </li><li data-md=\"\">\n        <p>the <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsers.html#ascii-serialisation-of-an-origin\" id=\"ref-for-ascii-serialisation-of-an-origin⑧\">serialization</a> of <var>ig</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/turtledove/#interest-group-owner\" id=\"ref-for-interest-group-owner④⑤\">owner</a></p>\n       </li><li data-md=\"\">\n        <p>the <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-serializer\" id=\"ref-for-concept-url-serializer⑨\">serialization</a> of <var>ig</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/turtledove/#interest-group-bidding-url\" id=\"ref-for-interest-group-bidding-url⑧\">bidding url</a></p>\n       </li><li data-md=\"\">\n        <p>the <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-serializer\" id=\"ref-for-concept-url-serializer①⓪\">serialization</a> of <var>igAd</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/turtledove/#interest-group-ad-render-url\" id=\"ref-for-interest-group-ad-render-url①⓪\">render url</a></p>\n       </li><li data-md=\"\">\n        <p>If <var>igAd</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/turtledove/#interest-group-ad-buyer-and-seller-reporting-id\" id=\"ref-for-interest-group-ad-buyer-and-seller-reporting-id④\">buyer and seller reporting ID</a> <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#map-exists\" id=\"ref-for-map-exists①⓪①\">exists</a>:</p>\n        <ol>\n         <li data-md=\"\">\n          <p>\"BuyerAndSellerReportingId\"</p>\n         </li><li data-md=\"\">\n          <p><var>igAd</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/turtledove/#interest-group-ad-buyer-and-seller-reporting-id\" id=\"ref-for-interest-group-ad-buyer-and-seller-reporting-id⑤\">buyer and seller reporting ID</a></p>\n        </li></ol>\n       </li><li data-md=\"\">\n        <p>Otherwise, if <var>igAd</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/turtledove/#interest-group-ad-buyer-reporting-id\" id=\"ref-for-interest-group-ad-buyer-reporting-id③\">buyer reporting ID</a> <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#map-exists\" id=\"ref-for-map-exists①⓪②\">exists</a>:</p>\n        <ol>\n         <li data-md=\"\">\n          <p>\"BuyerReportingId\"</p>\n         </li><li data-md=\"\">\n          <p><var>igAd</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/turtledove/#interest-group-ad-buyer-reporting-id\" id=\"ref-for-interest-group-ad-buyer-reporting-id④\">buyer reporting ID</a></p>\n        </li></ol>\n       </li><li data-md=\"\">\n        <p>Otherwise:</p>\n        <ol>\n         <li data-md=\"\">\n          <p>\"IgName\"</p>\n         </li><li data-md=\"\">\n          <p><var>ig</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/turtledove/#interest-group-name\" id=\"ref-for-interest-group-name①⑨\">name</a>.</p>\n        </li></ol>\n      </li></ol>",
-          "ignored": [
-            "\"NameReport\" the serialization of ig’s owner the serialization of ig’s bidding url the serialization of igAd’s render url If igAd’s buyer and seller reporting ID exists: \"BuyerAndSellerReportingId\" igAd’s buyer and seller reporting ID Otherwise, if igAd’s buyer reporting ID exists: \"BuyerReportingId\" igAd’s buyer reporting ID Otherwise: \"IgName\" ig’s name."
+          "html": "Let <var>keyString</var> be the <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#string-concatenate\" id=\"ref-for-string-concatenate⑧\">concatenation</a> of the following strings separated with U+000A (LF):",
+          "rationale": "if",
+          "steps": [
+            {
+              "html": "<p>\"NameReport\"</p>"
+            },
+            {
+              "html": "<p>the <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsers.html#ascii-serialisation-of-an-origin\" id=\"ref-for-ascii-serialisation-of-an-origin⑧\">serialization</a> of <var>ig</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/turtledove/#interest-group-owner\" id=\"ref-for-interest-group-owner④⑤\">owner</a></p>"
+            },
+            {
+              "html": "<p>the <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-serializer\" id=\"ref-for-concept-url-serializer⑨\">serialization</a> of <var>ig</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/turtledove/#interest-group-bidding-url\" id=\"ref-for-interest-group-bidding-url⑧\">bidding url</a></p>"
+            },
+            {
+              "html": "<p>the <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-serializer\" id=\"ref-for-concept-url-serializer①⓪\">serialization</a> of <var>igAd</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/turtledove/#interest-group-ad-render-url\" id=\"ref-for-interest-group-ad-render-url①⓪\">render url</a></p>"
+            },
+            {
+              "html": "<p>If <var>igAd</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/turtledove/#interest-group-ad-buyer-and-seller-reporting-id\" id=\"ref-for-interest-group-ad-buyer-and-seller-reporting-id④\">buyer and seller reporting ID</a> <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#map-exists\" id=\"ref-for-map-exists①⓪①\">exists</a>:</p>\n        <ol>\n         <li data-md=\"\">\n          <p>\"BuyerAndSellerReportingId\"</p>\n         </li><li data-md=\"\">\n          <p><var>igAd</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/turtledove/#interest-group-ad-buyer-and-seller-reporting-id\" id=\"ref-for-interest-group-ad-buyer-and-seller-reporting-id⑤\">buyer and seller reporting ID</a></p>\n        </li></ol>",
+              "ignored": [
+                "\"BuyerAndSellerReportingId\" igAd’s buyer and seller reporting ID"
+              ]
+            },
+            {
+              "html": "<p>Otherwise, if <var>igAd</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/turtledove/#interest-group-ad-buyer-reporting-id\" id=\"ref-for-interest-group-ad-buyer-reporting-id③\">buyer reporting ID</a> <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#map-exists\" id=\"ref-for-map-exists①⓪②\">exists</a>:</p>\n        <ol>\n         <li data-md=\"\">\n          <p>\"BuyerReportingId\"</p>\n         </li><li data-md=\"\">\n          <p><var>igAd</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/turtledove/#interest-group-ad-buyer-reporting-id\" id=\"ref-for-interest-group-ad-buyer-reporting-id④\">buyer reporting ID</a></p>\n        </li></ol>",
+              "ignored": [
+                "\"BuyerReportingId\" igAd’s buyer reporting ID"
+              ]
+            },
+            {
+              "html": "<p>Otherwise:</p>\n        <ol>\n         <li data-md=\"\">\n          <p>\"IgName\"</p>\n         </li><li data-md=\"\">\n          <p><var>ig</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/turtledove/#interest-group-name\" id=\"ref-for-interest-group-name①⑨\">name</a>.</p>\n        </li></ol>",
+              "ignored": [
+                "\"IgName\" ig’s name."
+              ]
+            }
           ]
         },
         {
@@ -6242,9 +6272,27 @@
           "html": "<p>The <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#string-length\" id=\"ref-for-string-length①①\">length</a> of <var>ig</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/turtledove/#interest-group-user-bidding-signals\" id=\"ref-for-interest-group-user-bidding-signals③\">user bidding signals</a>.</p>"
         },
         {
-          "html": "<p>If <var>ig</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/turtledove/#interest-group-ads\" id=\"ref-for-interest-group-ads①⑨\">ads</a> is not null, <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-iterate\" id=\"ref-for-list-iterate⑥③\">for each</a> <var>ad</var> of it:</p>\n      <ol>\n       <li data-md=\"\">\n        <p>The <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#string-length\" id=\"ref-for-string-length①②\">length</a> of the <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-serializer\" id=\"ref-for-concept-url-serializer①⑨\">serialization</a> of <var>ad</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/turtledove/#interest-group-ad-render-url\" id=\"ref-for-interest-group-ad-render-url①⑤\">render url</a>.</p>\n       </li><li data-md=\"\">\n        <p>The <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#string-length\" id=\"ref-for-string-length①③\">length</a> of <var>ad</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/turtledove/#interest-group-ad-metadata\" id=\"ref-for-interest-group-ad-metadata⑦\">metadata</a> if the field is not null.</p>\n       </li><li data-md=\"\">\n        <p>The <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#string-length\" id=\"ref-for-string-length①④\">length</a> of <var>ad</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/turtledove/#interest-group-ad-buyer-reporting-id\" id=\"ref-for-interest-group-ad-buyer-reporting-id⑥\">buyer reporting ID</a> if the field is not null.</p>\n       </li><li data-md=\"\">\n        <p>The <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#string-length\" id=\"ref-for-string-length①⑤\">length</a> of <var>ad</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/turtledove/#interest-group-ad-buyer-and-seller-reporting-id\" id=\"ref-for-interest-group-ad-buyer-and-seller-reporting-id⑦\">buyer and seller reporting ID</a> if the\nfield is not null.</p>\n       </li><li data-md=\"\">\n        <p>If <var>ad</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/turtledove/#interest-group-ad-allowed-reporting-origins\" id=\"ref-for-interest-group-ad-allowed-reporting-origins②\">allowed reporting origins</a> is not null, <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-iterate\" id=\"ref-for-list-iterate⑥④\">for each</a> <var>origin</var> of it:</p>\n        <ol>\n         <li data-md=\"\">\n          <p>The <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#string-length\" id=\"ref-for-string-length①⑥\">length</a> of the <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsers.html#ascii-serialisation-of-an-origin\" id=\"ref-for-ascii-serialisation-of-an-origin①②\">serialization</a> of <var>origin</var>.</p>\n        </li></ol>\n      </li></ol>",
-          "ignored": [
-            "The length of the serialization of ad’s render url. The length of ad’s metadata if the field is not null. The length of ad’s buyer reporting ID if the field is not null. The length of ad’s buyer and seller reporting ID if the field is not null. If ad’s allowed reporting origins is not null, for each origin of it: The length of the serialization of origin."
+          "html": "If <var>ig</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/turtledove/#interest-group-ads\" id=\"ref-for-interest-group-ads①⑨\">ads</a> is not null, <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-iterate\" id=\"ref-for-list-iterate⑥③\">for each</a> <var>ad</var> of it:",
+          "rationale": "if",
+          "steps": [
+            {
+              "html": "<p>The <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#string-length\" id=\"ref-for-string-length①②\">length</a> of the <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-serializer\" id=\"ref-for-concept-url-serializer①⑨\">serialization</a> of <var>ad</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/turtledove/#interest-group-ad-render-url\" id=\"ref-for-interest-group-ad-render-url①⑤\">render url</a>.</p>"
+            },
+            {
+              "html": "<p>The <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#string-length\" id=\"ref-for-string-length①③\">length</a> of <var>ad</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/turtledove/#interest-group-ad-metadata\" id=\"ref-for-interest-group-ad-metadata⑦\">metadata</a> if the field is not null.</p>"
+            },
+            {
+              "html": "<p>The <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#string-length\" id=\"ref-for-string-length①④\">length</a> of <var>ad</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/turtledove/#interest-group-ad-buyer-reporting-id\" id=\"ref-for-interest-group-ad-buyer-reporting-id⑥\">buyer reporting ID</a> if the field is not null.</p>"
+            },
+            {
+              "html": "<p>The <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#string-length\" id=\"ref-for-string-length①⑤\">length</a> of <var>ad</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/turtledove/#interest-group-ad-buyer-and-seller-reporting-id\" id=\"ref-for-interest-group-ad-buyer-and-seller-reporting-id⑦\">buyer and seller reporting ID</a> if the\nfield is not null.</p>"
+            },
+            {
+              "html": "<p>If <var>ad</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/turtledove/#interest-group-ad-allowed-reporting-origins\" id=\"ref-for-interest-group-ad-allowed-reporting-origins②\">allowed reporting origins</a> is not null, <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-iterate\" id=\"ref-for-list-iterate⑥④\">for each</a> <var>origin</var> of it:</p>\n        <ol>\n         <li data-md=\"\">\n          <p>The <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#string-length\" id=\"ref-for-string-length①⑥\">length</a> of the <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsers.html#ascii-serialisation-of-an-origin\" id=\"ref-for-ascii-serialisation-of-an-origin①②\">serialization</a> of <var>origin</var>.</p>\n        </li></ol>",
+              "ignored": [
+                "The length of the serialization of origin."
+              ]
+            }
           ]
         },
         {

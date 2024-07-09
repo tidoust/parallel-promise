@@ -179,7 +179,7 @@
                 },
                 {
                   "html": "If the lock request succeed:",
-                  "rationale": "fire an event",
+                  "rationale": "set",
                   "steps": [
                     {
                       "html": "Enter <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/pointerlock/#dfn-pointer-lock-state\" class=\"internalDFN\" id=\"ref-for-dfn-pointer-lock-state-7\">pointer lock state</a> by performing the\n                        following:",

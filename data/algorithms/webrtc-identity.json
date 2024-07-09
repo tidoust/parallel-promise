@@ -18,7 +18,7 @@
     },
     {
       "html": "The identity assertion request process is triggered by a call to\n      <code>createOffer</code>, <code>createAnswer</code>, or\n      <code>getIdentityAssertion</code>. When these calls are invoked and an\n      identity provider has been set, the following steps are executed:",
-      "rationale": "resolve",
+      "rationale": "if",
       "steps": [
         {
           "html": "<p>The <code>RTCPeerConnection</code> instantiates an IdP as\n          described in <a href=\"https://w3c.github.io/webrtc-identity/#sec.identity-proxy-communications\">Identity\n          Provider Selection</a> and <a href=\"https://w3c.github.io/webrtc-identity/#sec.register-idp\">Registering an\n          IdP Proxy</a>. If the IdP cannot be loaded, instantiated, or the IdP\n          proxy is not registered, this process fails.</p>"
@@ -45,7 +45,7 @@
     },
     {
       "html": "The identity assertion request process involves the following\n      asynchronous steps:",
-      "rationale": "resolve",
+      "rationale": "if",
       "steps": [
         {
           "html": "<p>The <code>RTCPeerConnection</code> awaits any prior identity\n          validation. Only one identity validation can run at a time for an\n          <code>RTCPeerConnection</code>. This can happen because the\n          resolution of <code>setRemoteDescription</code> is not blocked by\n          identity validation unless there is a <a href=\"https://w3c.github.io/webrtc-identity/#target-peer-identity\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-target-peer-identity-1\">target peer\n          identity</a>.</p>"

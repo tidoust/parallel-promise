@@ -1226,38 +1226,98 @@
           ]
         },
         {
-          "html": "<dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"rs-pipeTo-shutdown-with-action\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><i>Shutdown with an action</i></dfn>: if any of the\n above requirements ask to shutdown with an action <var>action</var>, optionally with an error <var>originalError</var>, then:",
+          "html": "<strong>Error and close states must be propagated:</strong> the following conditions must be\n applied in order.",
           "rationale": "if",
           "steps": [
             {
-              "html": "<p>If <var>shuttingDown</var> is true, abort these substeps.</p>"
-            },
-            {
-              "html": "<p>Set <var>shuttingDown</var> to true.</p>"
-            },
-            {
-              "html": "If <var>dest</var>.<a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#writablestream-state\" id=\"ref-for-writablestream-state③\">[[state]]</a> is \"<code>writable</code>\" and ! <a data-link-type=\"abstract-op\" href=\"https://streams.spec.whatwg.org/#writable-stream-close-queued-or-in-flight\" id=\"ref-for-writable-stream-close-queued-or-in-flight①\">WritableStreamCloseQueuedOrInFlight</a>(<var>dest</var>) is false,",
+              "html": "<strong>Errors must be propagated forward:</strong> if <var>source</var>.<a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#readablestream-state\" id=\"ref-for-readablestream-state④\">[[state]]</a> is or becomes \"<code>errored</code>\", then",
               "rationale": "if",
               "steps": [
                 {
-                  "html": "<p>If any <a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#chunk\" id=\"ref-for-chunk④③\">chunks</a> have been read but not yet written, write them to <var>dest</var>.</p>"
+                  "html": "<p>If <var>preventAbort</var> is false, <a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#rs-pipeTo-shutdown-with-action\" id=\"ref-for-rs-pipeTo-shutdown-with-action①\">shutdown with an action</a> of ! <a data-link-type=\"abstract-op\" href=\"https://streams.spec.whatwg.org/#writable-stream-abort\" id=\"ref-for-writable-stream-abort①\">WritableStreamAbort</a>(<var>dest</var>, <var>source</var>.<a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#readablestream-storederror\" id=\"ref-for-readablestream-storederror①\">[[storedError]]</a>) and with <var>source</var>.<a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#readablestream-storederror\" id=\"ref-for-readablestream-storederror②\">[[storedError]]</a>.</p>"
                 },
                 {
-                  "html": "<p>Wait until every <a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#chunk\" id=\"ref-for-chunk④④\">chunk</a> that has been read has been written (i.e. the corresponding\n  promises have settled).</p>"
+                  "html": "<p>Otherwise, <a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#rs-pipeTo-shutdown\" id=\"ref-for-rs-pipeTo-shutdown\">shutdown</a> with <var>source</var>.<a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#readablestream-storederror\" id=\"ref-for-readablestream-storederror③\">[[storedError]]</a>.</p>"
                 }
               ]
             },
             {
-              "html": "<p>Let <var>p</var> be the result of performing <var>action</var>.</p>"
+              "html": "<strong>Errors must be propagated backward:</strong> if <var>dest</var>.<a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#writablestream-state\" id=\"ref-for-writablestream-state①\">[[state]]</a> is or becomes \"<code>errored</code>\", then",
+              "rationale": "if",
+              "steps": [
+                {
+                  "html": "<p>If <var>preventCancel</var> is false, <a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#rs-pipeTo-shutdown-with-action\" id=\"ref-for-rs-pipeTo-shutdown-with-action②\">shutdown with an action</a> of ! <a data-link-type=\"abstract-op\" href=\"https://streams.spec.whatwg.org/#readable-stream-cancel\" id=\"ref-for-readable-stream-cancel②\">ReadableStreamCancel</a>(<var>source</var>, <var>dest</var>.<a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#writablestream-storederror\" id=\"ref-for-writablestream-storederror\">[[storedError]]</a>) and with <var>dest</var>.<a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#writablestream-storederror\" id=\"ref-for-writablestream-storederror①\">[[storedError]]</a>.</p>"
+                },
+                {
+                  "html": "<p>Otherwise, <a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#rs-pipeTo-shutdown\" id=\"ref-for-rs-pipeTo-shutdown①\">shutdown</a> with <var>dest</var>.<a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#writablestream-storederror\" id=\"ref-for-writablestream-storederror②\">[[storedError]]</a>.</p>"
+                }
+              ]
             },
             {
-              "html": "<p><a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#upon-fulfillment\" id=\"ref-for-upon-fulfillment\">Upon fulfillment</a> of <var>p</var>, <a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#rs-pipeTo-finalize\" id=\"ref-for-rs-pipeTo-finalize\">finalize</a>, passing along <var>originalError</var> if it was given.</p>"
+              "html": "<strong>Closing must be propagated forward:</strong> if <var>source</var>.<a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#readablestream-state\" id=\"ref-for-readablestream-state⑤\">[[state]]</a> is or becomes \"<code>closed</code>\", then",
+              "rationale": "if",
+              "steps": [
+                {
+                  "html": "<p>If <var>preventClose</var> is false, <a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#rs-pipeTo-shutdown-with-action\" id=\"ref-for-rs-pipeTo-shutdown-with-action③\">shutdown with an action</a> of ! <a data-link-type=\"abstract-op\" href=\"https://streams.spec.whatwg.org/#writable-stream-default-writer-close-with-error-propagation\" id=\"ref-for-writable-stream-default-writer-close-with-error-propagation\">WritableStreamDefaultWriterCloseWithErrorPropagation</a>(<var>writer</var>).</p>"
+                },
+                {
+                  "html": "<p>Otherwise, <a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#rs-pipeTo-shutdown\" id=\"ref-for-rs-pipeTo-shutdown②\">shutdown</a>.</p>"
+                }
+              ]
             },
             {
-              "html": "<p><a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#upon-rejection\" id=\"ref-for-upon-rejection\">Upon rejection</a> of <var>p</var> with reason <var>newError</var>, <a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#rs-pipeTo-finalize\" id=\"ref-for-rs-pipeTo-finalize①\">finalize</a> with <var>newError</var>.</p>"
+              "html": "<strong>Closing must be propagated backward:</strong> if ! <a data-link-type=\"abstract-op\" href=\"https://streams.spec.whatwg.org/#writable-stream-close-queued-or-in-flight\" id=\"ref-for-writable-stream-close-queued-or-in-flight\">WritableStreamCloseQueuedOrInFlight</a>(<var>dest</var>) is true or <var>dest</var>.<a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#writablestream-state\" id=\"ref-for-writablestream-state②\">[[state]]</a> is \"<code>closed</code>\", then",
+              "rationale": "assert",
+              "steps": [
+                {
+                  "html": "<p class=\"assertion\">Assert: no <a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#chunk\" id=\"ref-for-chunk④②\">chunks</a> have been read or written.</p>"
+                },
+                {
+                  "html": "<p>Let <var>destClosed</var> be a new <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://tc39.es/ecma262/#sec-native-error-types-used-in-this-standard-typeerror\" id=\"ref-for-sec-native-error-types-used-in-this-standard-typeerror③⓪\">TypeError</a></code>.</p>"
+                },
+                {
+                  "html": "<p>If <var>preventCancel</var> is false, <a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#rs-pipeTo-shutdown-with-action\" id=\"ref-for-rs-pipeTo-shutdown-with-action④\">shutdown with an action</a> of ! <a data-link-type=\"abstract-op\" href=\"https://streams.spec.whatwg.org/#readable-stream-cancel\" id=\"ref-for-readable-stream-cancel③\">ReadableStreamCancel</a>(<var>source</var>, <var>destClosed</var>) and with <var>destClosed</var>.</p>"
+                },
+                {
+                  "html": "<p>Otherwise, <a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#rs-pipeTo-shutdown\" id=\"ref-for-rs-pipeTo-shutdown③\">shutdown</a> with <var>destClosed</var>.</p>"
+                }
+              ]
             }
           ],
           "additional": [
+            {
+              "html": "<dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"rs-pipeTo-shutdown-with-action\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><i>Shutdown with an action</i></dfn>: if any of the\n above requirements ask to shutdown with an action <var>action</var>, optionally with an error <var>originalError</var>, then:",
+              "rationale": "if",
+              "steps": [
+                {
+                  "html": "<p>If <var>shuttingDown</var> is true, abort these substeps.</p>"
+                },
+                {
+                  "html": "<p>Set <var>shuttingDown</var> to true.</p>"
+                },
+                {
+                  "html": "If <var>dest</var>.<a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#writablestream-state\" id=\"ref-for-writablestream-state③\">[[state]]</a> is \"<code>writable</code>\" and ! <a data-link-type=\"abstract-op\" href=\"https://streams.spec.whatwg.org/#writable-stream-close-queued-or-in-flight\" id=\"ref-for-writable-stream-close-queued-or-in-flight①\">WritableStreamCloseQueuedOrInFlight</a>(<var>dest</var>) is false,",
+                  "rationale": "if",
+                  "steps": [
+                    {
+                      "html": "<p>If any <a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#chunk\" id=\"ref-for-chunk④③\">chunks</a> have been read but not yet written, write them to <var>dest</var>.</p>"
+                    },
+                    {
+                      "html": "<p>Wait until every <a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#chunk\" id=\"ref-for-chunk④④\">chunk</a> that has been read has been written (i.e. the corresponding\n  promises have settled).</p>"
+                    }
+                  ]
+                },
+                {
+                  "html": "<p>Let <var>p</var> be the result of performing <var>action</var>.</p>"
+                },
+                {
+                  "html": "<p><a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#upon-fulfillment\" id=\"ref-for-upon-fulfillment\">Upon fulfillment</a> of <var>p</var>, <a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#rs-pipeTo-finalize\" id=\"ref-for-rs-pipeTo-finalize\">finalize</a>, passing along <var>originalError</var> if it was given.</p>"
+                },
+                {
+                  "html": "<p><a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#upon-rejection\" id=\"ref-for-upon-rejection\">Upon rejection</a> of <var>p</var> with reason <var>newError</var>, <a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#rs-pipeTo-finalize\" id=\"ref-for-rs-pipeTo-finalize①\">finalize</a> with <var>newError</var>.</p>"
+                }
+              ]
+            },
             {
               "html": "<dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"rs-pipeTo-shutdown\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><i>Shutdown</i></dfn>: if any of the above requirements or steps\n ask to shutdown, optionally with an error <var>error</var>, then:",
               "rationale": "if",
@@ -1309,9 +1369,6 @@
                 }
               ]
             }
-          ],
-          "ignored": [
-            "Errors must be propagated forward: if source.[[state]] is or becomes \"errored\", then If preventAbort is false, shutdown with an action of ! WritableStreamAbort(dest, source.[[storedError]]) and with source.[[storedError]]. Otherwise, shutdown with source.[[storedError]]. Errors must be propagated backward: if dest.[[state]] is or becomes \"errored\", then If preventCancel is false, shutdown with an action of ! ReadableStreamCancel(source, dest.[[storedError]]) and with dest.[[storedError]]. Otherwise, shutdown with dest.[[storedError]]. Closing must be propagated forward: if source.[[state]] is or becomes \"closed\", then If preventClose is false, shutdown with an action of ! WritableStreamDefaultWriterCloseWithErrorPropagation(writer). Otherwise, shutdown. Closing must be propagated backward: if ! WritableStreamCloseQueuedOrInFlight(dest) is true or dest.[[state]] is \"closed\", then Assert: no chunks have been read or written. Let destClosed be a new TypeError. If preventCancel is false, shutdown with an action of ! ReadableStreamCancel(source, destClosed) and with destClosed. Otherwise, shutdown with destClosed."
           ]
         },
         {
@@ -7355,7 +7412,7 @@
                 },
                 {
                   "html": "If <var>result</var> is an abrupt completion,",
-                  "rationale": "reject",
+                  "rationale": "return",
                   "steps": [
                     {
                       "html": "<p>Disentangle <var>port</var>.</p>"
@@ -7774,9 +7831,15 @@
           "html": "<p>Remove the first <var>pullSize</var> bytes from <var>bytes</var>.</p>"
         },
         {
-          "html": "<p>If <var>stream</var>’s <a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#readablestream-current-byob-request-view\" id=\"ref-for-readablestream-current-byob-request-view⑧\">current BYOB request view</a> is non-null, then:</p>\n      <ol>\n       <li data-md=\"\">\n        <p><a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#arraybufferview-write\" id=\"ref-for-arraybufferview-write①\">Write</a> <var>pulled</var> into <var>stream</var>’s <a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#readablestream-current-byob-request-view\" id=\"ref-for-readablestream-current-byob-request-view⑨\">current BYOB request\n  view</a>.</p>\n       </li><li data-md=\"\">\n        <p>Perform ? <a data-link-type=\"abstract-op\" href=\"https://streams.spec.whatwg.org/#readable-byte-stream-controller-respond\" id=\"ref-for-readable-byte-stream-controller-respond⑥\">ReadableByteStreamControllerRespond</a>(<var>stream</var>.<a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#readablestream-controller\" id=\"ref-for-readablestream-controller⑦③\">[[controller]]</a>, <var>pullSize</var>).</p>\n      </li></ol>",
-          "ignored": [
-            "Write pulled into stream’s current BYOB request view. Perform ? ReadableByteStreamControllerRespond(stream.[[controller]], pullSize)."
+          "html": "If <var>stream</var>’s <a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#readablestream-current-byob-request-view\" id=\"ref-for-readablestream-current-byob-request-view⑧\">current BYOB request view</a> is non-null, then:",
+          "rationale": "perform",
+          "steps": [
+            {
+              "html": "<p><a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#arraybufferview-write\" id=\"ref-for-arraybufferview-write①\">Write</a> <var>pulled</var> into <var>stream</var>’s <a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#readablestream-current-byob-request-view\" id=\"ref-for-readablestream-current-byob-request-view⑨\">current BYOB request\n  view</a>.</p>"
+            },
+            {
+              "html": "<p>Perform ? <a data-link-type=\"abstract-op\" href=\"https://streams.spec.whatwg.org/#readable-byte-stream-controller-respond\" id=\"ref-for-readable-byte-stream-controller-respond⑥\">ReadableByteStreamControllerRespond</a>(<var>stream</var>.<a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#readablestream-controller\" id=\"ref-for-readablestream-controller⑦③\">[[controller]]</a>, <var>pullSize</var>).</p>"
+            }
           ]
         },
         {

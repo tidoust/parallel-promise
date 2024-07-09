@@ -100,7 +100,7 @@
       "name": "requestWindow(options)",
       "href": "https://wicg.github.io/document-picture-in-picture/#dom-documentpictureinpicture-requestwindow",
       "html": "For both video and document picture-in-picture, user agents often display a\nbutton for the user to return to the original page and close the\npicture-in-picture window. While this action makes sense in most cases\n(especially for a video picture-in-picture window that returns the video to the\nmain document), it does not always make sense for document picture-in-picture\nwindows. <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://wicg.github.io/document-picture-in-picture/#dom-documentpictureinpictureoptions-disallowreturntoopener\" id=\"ref-for-dom-documentpictureinpictureoptions-disallowreturntoopener①\">disallowReturnToOpener</a></code> is a hint to\nthe user agent from the website as to whether that action makes sense for their\nparticular document picture-in-picture experience.",
-      "rationale": "fire an event",
+      "rationale": "set",
       "steps": [
         {
           "html": "<p>Configure <var>pip traversable</var>’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/document-sequences.html#nav-bc\" id=\"ref-for-nav-bc③\">active browsing context</a>’s window to\nfloat on top of other windows.</p>"
