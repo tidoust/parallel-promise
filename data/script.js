@@ -37,22 +37,23 @@ function showAlgo(a, level = 0) {
     intro.innerHTML = a.html;
     ret.push(intro);
   }
-  if (!a.steps) return ret;
-  const container = document.createElement(a.operation === "switch" ? "dl" : "ol");
-  for (const step of a.steps) {
-    if (step.case) {
-      const dt = document.createElement("dt");
-      dt.innerHTML = step.case;
-      const dd = document.createElement("dd");
-      dd.append(...showAlgo(step, level + 1));
-      container.append(dt, dd);
-    } else {
-      const li = document.createElement("li");
-      li.append(...showAlgo(step, level + 1));
-      container.append(li);
+  if (a.steps) {
+    const container = document.createElement(a.operation === "switch" ? "dl" : "ol");
+    for (const step of a.steps) {
+      if (step.case) {
+        const dt = document.createElement("dt");
+        dt.innerHTML = step.case;
+        const dd = document.createElement("dd");
+        dd.append(...showAlgo(step, level + 1));
+        container.append(dt, dd);
+      } else {
+        const li = document.createElement("li");
+        li.append(...showAlgo(step, level + 1));
+        container.append(li);
+      }
     }
+    ret.push(container);
   }
-  ret.push(container);
   const additional = a.additional ?? a.additionalAlgorithms;
   if (additional) {
     const div = document.createElement("div");
