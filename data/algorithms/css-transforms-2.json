@@ -23,19 +23,11 @@
               "steps": [
                 {
                   "case": "If transform is a 2D matrix",
-                  "steps": [
-                    {
-                      "html": "Serialize <var>transform</var> to a <a class=\"production css\" data-link-type=\"function\" href=\"https://drafts.csswg.org/css-transforms-1/#funcdef-transform-matrix\" id=\"ref-for-funcdef-transform-matrix②\">&lt;matrix()&gt;</a> function."
-                    }
-                  ]
+                  "html": "Serialize <var>transform</var> to a <a class=\"production css\" data-link-type=\"function\" href=\"https://drafts.csswg.org/css-transforms-1/#funcdef-transform-matrix\" id=\"ref-for-funcdef-transform-matrix②\">&lt;matrix()&gt;</a> function."
                 },
                 {
                   "case": "Otherwise",
-                  "steps": [
-                    {
-                      "html": "Serialize <var>transform</var> to a <a class=\"production css\" data-link-type=\"function\" href=\"https://drafts.csswg.org/css-transforms-2/#funcdef-matrix3d\" id=\"ref-for-funcdef-matrix3d②\">&lt;matrix3d()&gt;</a> function."
-                    }
-                  ]
+                  "html": "Serialize <var>transform</var> to a <a class=\"production css\" data-link-type=\"function\" href=\"https://drafts.csswg.org/css-transforms-2/#funcdef-matrix3d\" id=\"ref-for-funcdef-matrix3d②\">&lt;matrix3d()&gt;</a> function."
                 }
               ]
             }

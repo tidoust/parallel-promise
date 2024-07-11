@@ -14,7 +14,7 @@
           "html": "<p>Let <var>selectedUsage</var> be <code>null</code>.</p>"
         },
         {
-          "html": "Initialize <var>selectedUsage</var> as follows:",
+          "html": "In order to <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"find-supported-configuration-combination\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">find supported configuration combination</dfn><span style=\"position: relative; height: 0px;\"></span><span style=\"position: relative; height: 0px;\"></span> for depth sensing API given <var>usagePreference</var> and <var>dataFormatPreference</var> sequences, the user agent MUST run the following algorithm:",
           "rationale": ".switch",
           "steps": [
             {
@@ -22,26 +22,18 @@
               "steps": [
                 {
                   "case": "If the usagePreference sequence is empty",
-                  "steps": [
-                    {
-                      "html": "Initialize <var>selectedUsage</var> to the device’s <a data-link-type=\"dfn\" href=\"https://immersive-web.github.io/depth-sensing/#preferred-native-depth-sensing-capability\" id=\"ref-for-preferred-native-depth-sensing-capability\">preferred native depth sensing capability</a>."
-                    }
-                  ]
+                  "html": "Initialize <var>selectedUsage</var> to the device’s <a data-link-type=\"dfn\" href=\"https://immersive-web.github.io/depth-sensing/#preferred-native-depth-sensing-capability\" id=\"ref-for-preferred-native-depth-sensing-capability\">preferred native depth sensing capability</a>."
                 },
                 {
                   "case": "Otherwise",
+                  "html": "In order to <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"find-supported-configuration-combination\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">find supported configuration combination</dfn><span style=\"position: relative; height: 0px;\"></span><span style=\"position: relative; height: 0px;\"></span> for depth sensing API given <var>usagePreference</var> and <var>dataFormatPreference</var> sequences, the user agent MUST run the following algorithm:",
+                  "rationale": "if",
                   "steps": [
                     {
-                      "html": "For each <var>usage</var> in <var>usagePreference</var> sequence, perform the following steps:",
-                      "rationale": "if",
-                      "steps": [
-                        {
-                          "html": "<p>If <var>usage</var> is not considered a <a data-link-type=\"dfn\" href=\"https://immersive-web.github.io/depth-sensing/#support-depth-sensing-usage\" id=\"ref-for-support-depth-sensing-usage\">supported depth sensing usage</a> by the <a data-link-type=\"dfn\" href=\"https://immersive-web.github.io/depth-sensing/#native-depth-sensing\" id=\"ref-for-native-depth-sensing①\">native depth sensing</a> capabilities of the device, continue to the next entry.</p>"
-                        },
-                        {
-                          "html": "<p>Set <var>selectedUsage</var> to <var>usage</var> and abort these nested steps.</p>"
-                        }
-                      ]
+                      "html": "<p>If <var>usage</var> is not considered a <a data-link-type=\"dfn\" href=\"https://immersive-web.github.io/depth-sensing/#support-depth-sensing-usage\" id=\"ref-for-support-depth-sensing-usage\">supported depth sensing usage</a> by the <a data-link-type=\"dfn\" href=\"https://immersive-web.github.io/depth-sensing/#native-depth-sensing\" id=\"ref-for-native-depth-sensing①\">native depth sensing</a> capabilities of the device, continue to the next entry.</p>"
+                    },
+                    {
+                      "html": "<p>Set <var>selectedUsage</var> to <var>usage</var> and abort these nested steps.</p>"
                     }
                   ]
                 }
@@ -56,7 +48,7 @@
           "html": "<p>Let <var>selectedDataFormat</var> be <code>null</code>.</p>"
         },
         {
-          "html": "Initialize <var>selectedDataFormat</var> as follows:",
+          "html": "In order to <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"find-supported-configuration-combination\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">find supported configuration combination</dfn><span style=\"position: relative; height: 0px;\"></span><span style=\"position: relative; height: 0px;\"></span> for depth sensing API given <var>usagePreference</var> and <var>dataFormatPreference</var> sequences, the user agent MUST run the following algorithm:",
           "rationale": ".switch",
           "steps": [
             {
@@ -64,26 +56,18 @@
               "steps": [
                 {
                   "case": "If the usagePreference sequence is empty",
-                  "steps": [
-                    {
-                      "html": "Initialize <var>selectedDataFormat</var> to the device’s <a data-link-type=\"dfn\" href=\"https://immersive-web.github.io/depth-sensing/#preferred-native-depth-sensing-format\" id=\"ref-for-preferred-native-depth-sensing-format\">preferred native depth sensing format</a>."
-                    }
-                  ]
+                  "html": "Initialize <var>selectedDataFormat</var> to the device’s <a data-link-type=\"dfn\" href=\"https://immersive-web.github.io/depth-sensing/#preferred-native-depth-sensing-format\" id=\"ref-for-preferred-native-depth-sensing-format\">preferred native depth sensing format</a>."
                 },
                 {
                   "case": "Otherwise",
+                  "html": "In order to <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"find-supported-configuration-combination\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">find supported configuration combination</dfn><span style=\"position: relative; height: 0px;\"></span><span style=\"position: relative; height: 0px;\"></span> for depth sensing API given <var>usagePreference</var> and <var>dataFormatPreference</var> sequences, the user agent MUST run the following algorithm:",
+                  "rationale": "if",
                   "steps": [
                     {
-                      "html": "For each <var>dataFormat</var> in <var>dataFormatPreference</var>, perform the following steps:",
-                      "rationale": "if",
-                      "steps": [
-                        {
-                          "html": "<p>If <var>selectedUsage</var>,<var>dataFormat</var> is not considered a <a data-link-type=\"dfn\" href=\"https://immersive-web.github.io/depth-sensing/#support-depth-sensing-usage-and-data-format-combination\" id=\"ref-for-support-depth-sensing-usage-and-data-format-combination\">supported depth sensng usage and data format combination</a> by the <a data-link-type=\"dfn\" href=\"https://immersive-web.github.io/depth-sensing/#native-depth-sensing\" id=\"ref-for-native-depth-sensing②\">native depth sensing</a> capabilities of the device, continue to the next entry.</p>"
-                        },
-                        {
-                          "html": "<p>Set <var>selectedDataFormat</var> to <var>dataFormat</var> and abort these nested steps.</p>"
-                        }
-                      ]
+                      "html": "<p>If <var>selectedUsage</var>,<var>dataFormat</var> is not considered a <a data-link-type=\"dfn\" href=\"https://immersive-web.github.io/depth-sensing/#support-depth-sensing-usage-and-data-format-combination\" id=\"ref-for-support-depth-sensing-usage-and-data-format-combination\">supported depth sensng usage and data format combination</a> by the <a data-link-type=\"dfn\" href=\"https://immersive-web.github.io/depth-sensing/#native-depth-sensing\" id=\"ref-for-native-depth-sensing②\">native depth sensing</a> capabilities of the device, continue to the next entry.</p>"
+                    },
+                    {
+                      "html": "<p>Set <var>selectedDataFormat</var> to <var>dataFormat</var> and abort these nested steps.</p>"
                     }
                   ]
                 }
@@ -335,7 +319,7 @@
           "html": "<p>Initialize <var>result</var>’s <a data-link-type=\"dfn\" href=\"https://immersive-web.github.io/depth-sensing/#xrdepthinformation-view\" id=\"ref-for-xrdepthinformation-view⑤\">view</a> to <var>view</var>.</p>"
         },
         {
-          "html": "Initialize <var>result</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://immersive-web.github.io/depth-sensing/#dom-xrwebgldepthinformation-texturetype\" id=\"ref-for-dom-xrwebgldepthinformation-texturetype②\">textureType</a></code> as follows:",
+          "html": "In order to <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"create-a-webgl-depth-information-instance\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">create a WebGL depth information instance</dfn><span style=\"position: relative; height: 0px;\"></span><span style=\"position: relative; height: 0px;\"></span> given <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://www.w3.org/TR/webxr/#xrframe-interface\" id=\"ref-for-xrframe-interface④\">XRFrame</a></code> <var>frame</var> and <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://immersive-web.github.io/webxr/#xrview\" id=\"ref-for-xrview⑥\">XRView</a></code> <var>view</var>, the user agent MUST run the following steps:",
           "rationale": ".switch",
           "steps": [
             {
@@ -343,26 +327,18 @@
               "steps": [
                 {
                   "case": "If the result’s texture was created with a textureType of texture-array:",
-                  "steps": [
-                    {
-                      "html": "Initialize <var>result</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://immersive-web.github.io/depth-sensing/#dom-xrwebgldepthinformation-texturetype\" id=\"ref-for-dom-xrwebgldepthinformation-texturetype③\">textureType</a></code> to \"<a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/webxrlayers-1/#dom-xrtexturetype-texture-array\" id=\"ref-for-dom-xrtexturetype-texture-array①\">texture-array</a>\"."
-                    }
-                  ]
+                  "html": "Initialize <var>result</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://immersive-web.github.io/depth-sensing/#dom-xrwebgldepthinformation-texturetype\" id=\"ref-for-dom-xrwebgldepthinformation-texturetype③\">textureType</a></code> to \"<a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/webxrlayers-1/#dom-xrtexturetype-texture-array\" id=\"ref-for-dom-xrtexturetype-texture-array①\">texture-array</a>\"."
                 },
                 {
                   "case": "Otherwise",
-                  "steps": [
-                    {
-                      "html": "Initialize <var>result</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://immersive-web.github.io/depth-sensing/#dom-xrwebgldepthinformation-texturetype\" id=\"ref-for-dom-xrwebgldepthinformation-texturetype④\">textureType</a></code> to \"<a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/webxrlayers-1/#dom-xrtexturetype-texture\" id=\"ref-for-dom-xrtexturetype-texture\">texture</a>\"."
-                    }
-                  ]
+                  "html": "Initialize <var>result</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://immersive-web.github.io/depth-sensing/#dom-xrwebgldepthinformation-texturetype\" id=\"ref-for-dom-xrwebgldepthinformation-texturetype④\">textureType</a></code> to \"<a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/webxrlayers-1/#dom-xrtexturetype-texture\" id=\"ref-for-dom-xrtexturetype-texture\">texture</a>\"."
                 }
               ]
             }
           ]
         },
         {
-          "html": "Initialize <var>result</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://immersive-web.github.io/depth-sensing/#dom-xrwebgldepthinformation-imageindex\" id=\"ref-for-dom-xrwebgldepthinformation-imageindex①\">imageIndex</a></code> as follows:",
+          "html": "In order to <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"create-a-webgl-depth-information-instance\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">create a WebGL depth information instance</dfn><span style=\"position: relative; height: 0px;\"></span><span style=\"position: relative; height: 0px;\"></span> given <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://www.w3.org/TR/webxr/#xrframe-interface\" id=\"ref-for-xrframe-interface④\">XRFrame</a></code> <var>frame</var> and <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://immersive-web.github.io/webxr/#xrview\" id=\"ref-for-xrview⑥\">XRView</a></code> <var>view</var>, the user agent MUST run the following steps:",
           "rationale": ".switch",
           "steps": [
             {
@@ -370,27 +346,15 @@
               "steps": [
                 {
                   "case": "If textureType is texture",
-                  "steps": [
-                    {
-                      "html": "Initialize <var>result</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://immersive-web.github.io/depth-sensing/#dom-xrwebgldepthinformation-imageindex\" id=\"ref-for-dom-xrwebgldepthinformation-imageindex②\">imageIndex</a></code> to <code>null</code>."
-                    }
-                  ]
+                  "html": "Initialize <var>result</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://immersive-web.github.io/depth-sensing/#dom-xrwebgldepthinformation-imageindex\" id=\"ref-for-dom-xrwebgldepthinformation-imageindex②\">imageIndex</a></code> to <code>null</code>."
                 },
                 {
                   "case": "Else if view’s eye is \"right\"",
-                  "steps": [
-                    {
-                      "html": "Initialize <var>result</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://immersive-web.github.io/depth-sensing/#dom-xrwebgldepthinformation-imageindex\" id=\"ref-for-dom-xrwebgldepthinformation-imageindex③\">imageIndex</a></code> to <code>1</code>."
-                    }
-                  ]
+                  "html": "Initialize <var>result</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://immersive-web.github.io/depth-sensing/#dom-xrwebgldepthinformation-imageindex\" id=\"ref-for-dom-xrwebgldepthinformation-imageindex③\">imageIndex</a></code> to <code>1</code>."
                 },
                 {
                   "case": "Otherwise",
-                  "steps": [
-                    {
-                      "html": "Initialize <var>result</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://immersive-web.github.io/depth-sensing/#dom-xrwebgldepthinformation-imageindex\" id=\"ref-for-dom-xrwebgldepthinformation-imageindex④\">imageIndex</a></code> to <code>0</code>."
-                    }
-                  ]
+                  "html": "Initialize <var>result</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://immersive-web.github.io/depth-sensing/#dom-xrwebgldepthinformation-imageindex\" id=\"ref-for-dom-xrwebgldepthinformation-imageindex④\">imageIndex</a></code> to <code>0</code>."
                 }
               ]
             }

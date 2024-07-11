@@ -11,7 +11,7 @@
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "For each <a data-link-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-tree-descendant\" id=\"ref-for-concept-tree-descendant\">descendant</a> <var>el</var> within <var>outerRoot</var>:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"calculate-the-part-element-map\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">calculate the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-shadow-parts-1/#shadow-root-part-element-map\" id=\"ref-for-shadow-root-part-element-map③\">part element map</a></dfn> of a shadow root, <var>outerRoot</var>:",
           "rationale": "for",
           "steps": [
             {
@@ -24,7 +24,7 @@
               "html": "<p><a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-shadow-parts-1/#calculate-the-part-element-map\" id=\"ref-for-calculate-the-part-element-map\">Calculate</a> <var>innerRoot</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-shadow-parts-1/#shadow-root-part-element-map\" id=\"ref-for-shadow-root-part-element-map⑤\">part element map</a>.</p>"
             },
             {
-              "html": "For each <var>innerName</var>/<var>outerName</var> in <var>el</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-shadow-parts-1/#element-forwarded-part-name-list\" id=\"ref-for-element-forwarded-part-name-list①\">forwarded part name list</a>:",
+              "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"calculate-the-part-element-map\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">calculate the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-shadow-parts-1/#shadow-root-part-element-map\" id=\"ref-for-shadow-root-part-element-map③\">part element map</a></dfn> of a shadow root, <var>outerRoot</var>:",
               "rationale": "let",
               "steps": [
                 {
@@ -48,27 +48,15 @@
           "steps": [
             {
               "case": "innerIdent : outerIdent",
-              "steps": [
-                {
-                  "html": "<p>Adds <code>innerIdent</code>/<code>outerIdent</code> to el’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-shadow-parts-1/#element-forwarded-part-name-list\" id=\"ref-for-element-forwarded-part-name-list②\">forwarded part name list</a>.</p>"
-                }
-              ]
+              "html": "<p>Adds <code>innerIdent</code>/<code>outerIdent</code> to el’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-shadow-parts-1/#element-forwarded-part-name-list\" id=\"ref-for-element-forwarded-part-name-list②\">forwarded part name list</a>.</p>"
             },
             {
               "case": "ident",
-              "steps": [
-                {
-                  "html": "<p>Adds <code>ident</code>/<code>ident</code> to el’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-shadow-parts-1/#element-forwarded-part-name-list\" id=\"ref-for-element-forwarded-part-name-list③\">forwarded part name list</a>.</p>"
-                }
-              ]
+              "html": "<p>Adds <code>ident</code>/<code>ident</code> to el’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-shadow-parts-1/#element-forwarded-part-name-list\" id=\"ref-for-element-forwarded-part-name-list③\">forwarded part name list</a>.</p>"
             },
             {
               "case": "anything else",
-              "steps": [
-                {
-                  "html": "<p>Ignored for error-recovery / future compatibility.</p>"
-                }
-              ]
+              "html": "<p>Ignored for error-recovery / future compatibility.</p>"
             }
           ]
         }

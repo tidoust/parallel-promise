@@ -5,6 +5,60 @@
   },
   "algorithms": [
     {
+      "name": "escape a character",
+      "href": "https://drafts.csswg.org/cssom-1/#escape-a-character",
+      "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-export=\"\" id=\"escape-a-character\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">escape a character</dfn> means to create a string of\n\"<code>\\</code>\" (U+005C), followed by the character.",
+      "rationale": "To <dfn>"
+    },
+    {
+      "name": "serialize an identifier",
+      "href": "https://drafts.csswg.org/cssom-1/#serialize-an-identifier",
+      "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-export=\"\" id=\"serialize-an-identifier\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">serialize an identifier</dfn> means to create a string represented\nby the concatenation of, for each character of the identifier:",
+      "rationale": "To <dfn>"
+    },
+    {
+      "name": "serialize a string",
+      "href": "https://drafts.csswg.org/cssom-1/#serialize-a-string",
+      "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-export=\"\" id=\"serialize-a-string\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">serialize a string</dfn> means to create a string represented\nby '\"' (U+0022), followed by the result of applying the rules\nbelow to each character of the given string, followed by\n'\"' (U+0022):",
+      "rationale": "To <dfn>"
+    },
+    {
+      "name": "serialize a URL",
+      "href": "https://drafts.csswg.org/cssom-1/#serialize-a-url",
+      "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-export=\"\" id=\"serialize-a-url\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">serialize a URL</dfn> means to create a string represented by\n\"<code>url(</code>\", followed by the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-string\" id=\"ref-for-serialize-a-string\">serialization</a> of the URL as a\nstring, followed by \"<code>)</code>\".",
+      "rationale": "To <dfn>"
+    },
+    {
+      "name": "serialize a LOCAL",
+      "href": "https://drafts.csswg.org/cssom-1/#serialize-a-local",
+      "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-export=\"\" id=\"serialize-a-local\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">serialize a LOCAL</dfn> means to create a string represented by\n\"<code>local(</code>\", followed by the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-string\" id=\"ref-for-serialize-a-string①\">serialization</a> of the LOCAL as a\nstring, followed by \"<code>)</code>\".",
+      "rationale": "To <dfn>"
+    },
+    {
+      "name": "serialize a comma-separated list",
+      "href": "https://drafts.csswg.org/cssom-1/#serialize-a-comma-separated-list",
+      "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-export=\"\" id=\"serialize-a-comma-separated-list\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">serialize a comma-separated list</dfn> concatenate all items of\nthe list in list order while separating them by \"<code>, </code>\", i.e.,\nCOMMA (U+002C) followed by a single SPACE (U+0020).",
+      "rationale": "To <dfn>"
+    },
+    {
+      "name": "serialize a whitespace-separated list",
+      "href": "https://drafts.csswg.org/cssom-1/#serialize-a-whitespace-separated-list",
+      "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-export=\"\" id=\"serialize-a-whitespace-separated-list\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">serialize a whitespace-separated list</dfn> concatenate all\nitems of the list in list order while separating them by \"<code> </code>\", i.e.,\na single SPACE (U+0020).",
+      "rationale": "To <dfn>"
+    },
+    {
+      "name": "parse a media query list",
+      "href": "https://drafts.csswg.org/cssom-1/#parse-a-media-query-list",
+      "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-export=\"\" id=\"parse-a-media-query-list\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">parse a media query list</dfn> for a\ngiven string <var>s</var> into a <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/mediaqueries-5/#media-query-list\" id=\"ref-for-media-query-list\">media query list</a> is defined in\nthe Media Queries specification. Return the list of media\nqueries that the algorithm defined there gives.",
+      "rationale": "To <dfn>"
+    },
+    {
+      "name": "parse a media query",
+      "href": "https://drafts.csswg.org/cssom-1/#parse-a-media-query",
+      "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-export=\"\" id=\"parse-a-media-query\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">parse a media query</dfn> for a given string <var>s</var> means to follow the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#parse-a-media-query-list\" id=\"ref-for-parse-a-media-query-list\">parse a media query list</a> steps and return null if more\nthan one media query is returned or a media query if a\nsingle media query is returned.",
+      "rationale": "To <dfn>"
+    },
+    {
       "name": "serialize a media query list",
       "href": "https://drafts.csswg.org/cssom-1/#serialize-a-media-query-list",
       "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-export=\"\" id=\"serialize-a-media-query-list\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">serialize a media query list</dfn> run these steps:",
@@ -58,6 +112,18 @@
           "html": "Return <var>s</var>."
         }
       ]
+    },
+    {
+      "name": "serialize a media feature value",
+      "href": "https://drafts.csswg.org/cssom-1/#serialize-a-media-feature-value",
+      "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-export=\"\" id=\"serialize-a-media-feature-value\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">serialize a media feature value</dfn> named <var>v</var> locate <var>v</var> in the first\ncolumn of the table below and use the serialization format described in\nthe second column:",
+      "rationale": "To <dfn>"
+    },
+    {
+      "name": "compare media queries",
+      "href": "https://drafts.csswg.org/cssom-1/#compare-media-queries",
+      "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-export=\"\" id=\"compare-media-queries\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">compare media queries</dfn> <var>m1</var> and <var>m2</var> means to <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-media-query\" id=\"ref-for-serialize-a-media-query①\">serialize</a> them both and\nreturn true if they are a <a data-link-type=\"dfn\">case-sensitive</a> match and false if they\nare not.",
+      "rationale": "To <dfn>"
     },
     {
       "name": "create a MediaList object",
@@ -131,6 +197,18 @@
       ]
     },
     {
+      "name": "parse a group of selectors",
+      "href": "https://drafts.csswg.org/cssom-1/#parse-a-group-of-selectors",
+      "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-export=\"\" id=\"parse-a-group-of-selectors\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">parse a group of selectors</dfn> means to parse the value using the <code>selectors_group</code> production defined in the Selectors specification and return either a\ngroup of selectors if parsing did not fail or null if parsing did\nfail.",
+      "rationale": "To <dfn>"
+    },
+    {
+      "name": "serialize a group of selectors",
+      "href": "https://drafts.csswg.org/cssom-1/#serialize-a-group-of-selectors",
+      "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-export=\"\" id=\"serialize-a-group-of-selectors\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">serialize a group of selectors</dfn> <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-selector\" id=\"ref-for-serialize-a-selector\">serialize</a> each selector in the\ngroup of selectors and then <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-comma-separated-list\" id=\"ref-for-serialize-a-comma-separated-list①\">serialize</a> a\ncomma-separated list of these serializations.",
+      "rationale": "To <dfn>"
+    },
+    {
       "name": "serialize a selector",
       "href": "https://drafts.csswg.org/cssom-1/#serialize-a-selector",
       "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-export=\"\" id=\"serialize-a-selector\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">serialize a selector</dfn> let <var>s</var> be the empty string, run the steps below for each\npart of the chain of the selector, and finally return <var>s</var>:",
@@ -161,154 +239,106 @@
           "steps": [
             {
               "case": "type selector",
+              "html": "",
+              "rationale": "if",
               "steps": [
                 {
-                  "html": "<ol>\n      <li>If the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-namespaces-3/#namespace-prefix\" id=\"ref-for-namespace-prefix①\">namespace prefix</a> maps to a namespace that is\n   not the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-namespaces-3/#default-namespace\" id=\"ref-for-default-namespace①\">default namespace</a> and is not the\n   null namespace (not in a namespace) append the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-an-identifier\" id=\"ref-for-serialize-an-identifier①\">serialization</a> of the <span id=\"ref-for-namespace-prefix②\">namespace prefix</span> as an identifier, followed by a\n   \"<code>|</code>\" (U+007C) to <var>s</var>. \n      </li><li>If the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-namespaces-3/#namespace-prefix\" id=\"ref-for-namespace-prefix③\">namespace prefix</a> maps to a namespace that is\n   the null namespace (not in a namespace) append\n   \"<code>|</code>\" (U+007C) to <var>s</var>. \n      </li><li>If this is a type selector append the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-an-identifier\" id=\"ref-for-serialize-an-identifier②\">serialization</a> of the element name\n   as an identifier to <var>s</var>. \n      </li><li>If this is a universal selector append \"<code>*</code>\" (U+002A)\n   to <var>s</var>. \n     </li></ol>",
-                  "rationale": "if",
-                  "steps": [
-                    {
-                      "html": "If the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-namespaces-3/#namespace-prefix\" id=\"ref-for-namespace-prefix①\">namespace prefix</a> maps to a namespace that is\n   not the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-namespaces-3/#default-namespace\" id=\"ref-for-default-namespace①\">default namespace</a> and is not the\n   null namespace (not in a namespace) append the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-an-identifier\" id=\"ref-for-serialize-an-identifier①\">serialization</a> of the <span id=\"ref-for-namespace-prefix②\">namespace prefix</span> as an identifier, followed by a\n   \"<code>|</code>\" (U+007C) to <var>s</var>."
-                    },
-                    {
-                      "html": "If the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-namespaces-3/#namespace-prefix\" id=\"ref-for-namespace-prefix③\">namespace prefix</a> maps to a namespace that is\n   the null namespace (not in a namespace) append\n   \"<code>|</code>\" (U+007C) to <var>s</var>."
-                    },
-                    {
-                      "html": "If this is a type selector append the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-an-identifier\" id=\"ref-for-serialize-an-identifier②\">serialization</a> of the element name\n   as an identifier to <var>s</var>."
-                    },
-                    {
-                      "html": "If this is a universal selector append \"<code>*</code>\" (U+002A)\n   to <var>s</var>."
-                    }
-                  ]
+                  "html": "If the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-namespaces-3/#namespace-prefix\" id=\"ref-for-namespace-prefix①\">namespace prefix</a> maps to a namespace that is\n   not the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-namespaces-3/#default-namespace\" id=\"ref-for-default-namespace①\">default namespace</a> and is not the\n   null namespace (not in a namespace) append the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-an-identifier\" id=\"ref-for-serialize-an-identifier①\">serialization</a> of the <span id=\"ref-for-namespace-prefix②\">namespace prefix</span> as an identifier, followed by a\n   \"<code>|</code>\" (U+007C) to <var>s</var>."
+                },
+                {
+                  "html": "If the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-namespaces-3/#namespace-prefix\" id=\"ref-for-namespace-prefix③\">namespace prefix</a> maps to a namespace that is\n   the null namespace (not in a namespace) append\n   \"<code>|</code>\" (U+007C) to <var>s</var>."
+                },
+                {
+                  "html": "If this is a type selector append the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-an-identifier\" id=\"ref-for-serialize-an-identifier②\">serialization</a> of the element name\n   as an identifier to <var>s</var>."
+                },
+                {
+                  "html": "If this is a universal selector append \"<code>*</code>\" (U+002A)\n   to <var>s</var>."
                 }
               ]
             },
             {
               "case": "universal selector",
+              "html": "",
+              "rationale": "if",
               "steps": [
                 {
-                  "html": "<ol>\n      <li>If the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-namespaces-3/#namespace-prefix\" id=\"ref-for-namespace-prefix①\">namespace prefix</a> maps to a namespace that is\n   not the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-namespaces-3/#default-namespace\" id=\"ref-for-default-namespace①\">default namespace</a> and is not the\n   null namespace (not in a namespace) append the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-an-identifier\" id=\"ref-for-serialize-an-identifier①\">serialization</a> of the <span id=\"ref-for-namespace-prefix②\">namespace prefix</span> as an identifier, followed by a\n   \"<code>|</code>\" (U+007C) to <var>s</var>. \n      </li><li>If the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-namespaces-3/#namespace-prefix\" id=\"ref-for-namespace-prefix③\">namespace prefix</a> maps to a namespace that is\n   the null namespace (not in a namespace) append\n   \"<code>|</code>\" (U+007C) to <var>s</var>. \n      </li><li>If this is a type selector append the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-an-identifier\" id=\"ref-for-serialize-an-identifier②\">serialization</a> of the element name\n   as an identifier to <var>s</var>. \n      </li><li>If this is a universal selector append \"<code>*</code>\" (U+002A)\n   to <var>s</var>. \n     </li></ol>",
-                  "rationale": "if",
-                  "steps": [
-                    {
-                      "html": "If the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-namespaces-3/#namespace-prefix\" id=\"ref-for-namespace-prefix①\">namespace prefix</a> maps to a namespace that is\n   not the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-namespaces-3/#default-namespace\" id=\"ref-for-default-namespace①\">default namespace</a> and is not the\n   null namespace (not in a namespace) append the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-an-identifier\" id=\"ref-for-serialize-an-identifier①\">serialization</a> of the <span id=\"ref-for-namespace-prefix②\">namespace prefix</span> as an identifier, followed by a\n   \"<code>|</code>\" (U+007C) to <var>s</var>."
-                    },
-                    {
-                      "html": "If the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-namespaces-3/#namespace-prefix\" id=\"ref-for-namespace-prefix③\">namespace prefix</a> maps to a namespace that is\n   the null namespace (not in a namespace) append\n   \"<code>|</code>\" (U+007C) to <var>s</var>."
-                    },
-                    {
-                      "html": "If this is a type selector append the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-an-identifier\" id=\"ref-for-serialize-an-identifier②\">serialization</a> of the element name\n   as an identifier to <var>s</var>."
-                    },
-                    {
-                      "html": "If this is a universal selector append \"<code>*</code>\" (U+002A)\n   to <var>s</var>."
-                    }
-                  ]
+                  "html": "If the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-namespaces-3/#namespace-prefix\" id=\"ref-for-namespace-prefix①\">namespace prefix</a> maps to a namespace that is\n   not the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-namespaces-3/#default-namespace\" id=\"ref-for-default-namespace①\">default namespace</a> and is not the\n   null namespace (not in a namespace) append the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-an-identifier\" id=\"ref-for-serialize-an-identifier①\">serialization</a> of the <span id=\"ref-for-namespace-prefix②\">namespace prefix</span> as an identifier, followed by a\n   \"<code>|</code>\" (U+007C) to <var>s</var>."
+                },
+                {
+                  "html": "If the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-namespaces-3/#namespace-prefix\" id=\"ref-for-namespace-prefix③\">namespace prefix</a> maps to a namespace that is\n   the null namespace (not in a namespace) append\n   \"<code>|</code>\" (U+007C) to <var>s</var>."
+                },
+                {
+                  "html": "If this is a type selector append the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-an-identifier\" id=\"ref-for-serialize-an-identifier②\">serialization</a> of the element name\n   as an identifier to <var>s</var>."
+                },
+                {
+                  "html": "If this is a universal selector append \"<code>*</code>\" (U+002A)\n   to <var>s</var>."
                 }
               ]
             },
             {
               "case": "attribute selector",
+              "html": "",
+              "rationale": "append",
               "steps": [
                 {
-                  "html": "<ol>\n      <li>Append \"<code>[</code>\" (U+005B) to <var>s</var>. \n      </li><li>If the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-namespaces-3/#namespace-prefix\" id=\"ref-for-namespace-prefix④\">namespace prefix</a> maps to a namespace that is\n   not the null namespace (not in a namespace) append the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-an-identifier\" id=\"ref-for-serialize-an-identifier③\">serialization</a> of the <span id=\"ref-for-namespace-prefix⑤\">namespace prefix</span> as an identifier, followed by a\n   \"<code>|</code>\" (U+007C) to <var>s</var>. \n      </li><li>Append the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-an-identifier\" id=\"ref-for-serialize-an-identifier④\">serialization</a> of the attribute name as an identifier to <var>s</var>. \n      </li><li>If there is an attribute value specified, append\n   \"<code>=</code>\",\n   \"<code>~=</code>\",\n   \"<code>|=</code>\",\n   \"<code>^=</code>\",\n   \"<code>$=</code>\", or\n   \"<code>*=</code>\"\n   as appropriate (depending on the type of attribute selector), followed\n   by the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-string\" id=\"ref-for-serialize-a-string②\">serialization</a> of the\n   attribute value as a string, to <var>s</var>. \n      </li><li>If the attribute selector has the case-sensitivity flag present,\n   append \"<code> i</code>\" (U+0020 U+0069) to <var>s</var>. \n      </li><li>Append \"<code>]</code>\" (U+005D) to <var>s</var>. \n     </li></ol>",
-                  "rationale": "append",
-                  "steps": [
-                    {
-                      "html": "Append \"<code>[</code>\" (U+005B) to <var>s</var>."
-                    },
-                    {
-                      "html": "If the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-namespaces-3/#namespace-prefix\" id=\"ref-for-namespace-prefix④\">namespace prefix</a> maps to a namespace that is\n   not the null namespace (not in a namespace) append the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-an-identifier\" id=\"ref-for-serialize-an-identifier③\">serialization</a> of the <span id=\"ref-for-namespace-prefix⑤\">namespace prefix</span> as an identifier, followed by a\n   \"<code>|</code>\" (U+007C) to <var>s</var>."
-                    },
-                    {
-                      "html": "Append the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-an-identifier\" id=\"ref-for-serialize-an-identifier④\">serialization</a> of the attribute name as an identifier to <var>s</var>."
-                    },
-                    {
-                      "html": "If there is an attribute value specified, append\n   \"<code>=</code>\",\n   \"<code>~=</code>\",\n   \"<code>|=</code>\",\n   \"<code>^=</code>\",\n   \"<code>$=</code>\", or\n   \"<code>*=</code>\"\n   as appropriate (depending on the type of attribute selector), followed\n   by the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-string\" id=\"ref-for-serialize-a-string②\">serialization</a> of the\n   attribute value as a string, to <var>s</var>."
-                    },
-                    {
-                      "html": "If the attribute selector has the case-sensitivity flag present,\n   append \"<code> i</code>\" (U+0020 U+0069) to <var>s</var>."
-                    },
-                    {
-                      "html": "Append \"<code>]</code>\" (U+005D) to <var>s</var>."
-                    }
-                  ]
+                  "html": "Append \"<code>[</code>\" (U+005B) to <var>s</var>."
+                },
+                {
+                  "html": "If the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-namespaces-3/#namespace-prefix\" id=\"ref-for-namespace-prefix④\">namespace prefix</a> maps to a namespace that is\n   not the null namespace (not in a namespace) append the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-an-identifier\" id=\"ref-for-serialize-an-identifier③\">serialization</a> of the <span id=\"ref-for-namespace-prefix⑤\">namespace prefix</span> as an identifier, followed by a\n   \"<code>|</code>\" (U+007C) to <var>s</var>."
+                },
+                {
+                  "html": "Append the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-an-identifier\" id=\"ref-for-serialize-an-identifier④\">serialization</a> of the attribute name as an identifier to <var>s</var>."
+                },
+                {
+                  "html": "If there is an attribute value specified, append\n   \"<code>=</code>\",\n   \"<code>~=</code>\",\n   \"<code>|=</code>\",\n   \"<code>^=</code>\",\n   \"<code>$=</code>\", or\n   \"<code>*=</code>\"\n   as appropriate (depending on the type of attribute selector), followed\n   by the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-string\" id=\"ref-for-serialize-a-string②\">serialization</a> of the\n   attribute value as a string, to <var>s</var>."
+                },
+                {
+                  "html": "If the attribute selector has the case-sensitivity flag present,\n   append \"<code> i</code>\" (U+0020 U+0069) to <var>s</var>."
+                },
+                {
+                  "html": "Append \"<code>]</code>\" (U+005D) to <var>s</var>."
                 }
               ]
             },
             {
               "case": "class selector",
-              "steps": [
-                {
-                  "html": "Append a \"<code>.</code>\" (U+002E), followed by the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-an-identifier\" id=\"ref-for-serialize-an-identifier⑤\">serialization</a> of the class name\n as an identifier to <var>s</var>."
-                }
-              ]
+              "html": "Append a \"<code>.</code>\" (U+002E), followed by the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-an-identifier\" id=\"ref-for-serialize-an-identifier⑤\">serialization</a> of the class name\n as an identifier to <var>s</var>."
             },
             {
               "case": "ID selector",
-              "steps": [
-                {
-                  "html": "Append a \"<code>#</code>\" (U+0023), followed by the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-an-identifier\" id=\"ref-for-serialize-an-identifier⑥\">serialization</a> of the ID\n as an identifier to <var>s</var>."
-                }
-              ]
+              "html": "Append a \"<code>#</code>\" (U+0023), followed by the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-an-identifier\" id=\"ref-for-serialize-an-identifier⑥\">serialization</a> of the ID\n as an identifier to <var>s</var>."
             },
             {
               "case": "pseudo-class",
+              "html": "Otherwise, append \"<code>:</code>\" (U+003A), followed by the name of\n  the pseudo-class, followed by \"<code>(</code>\" (U+0028), followed by the\n  value of the pseudo-class argument(s) determined as per below, followed by\n  \"<code>)</code>\" (U+0029), to <var>s</var>.",
+              "rationale": ".switch",
               "steps": [
                 {
-                  "html": "Otherwise, append \"<code>:</code>\" (U+003A), followed by the name of\n  the pseudo-class, followed by \"<code>(</code>\" (U+0028), followed by the\n  value of the pseudo-class argument(s) determined as per below, followed by\n  \"<code>)</code>\" (U+0029), to <var>s</var>.",
-                  "rationale": ".switch",
+                  "operation": "switch",
                   "steps": [
                     {
-                      "operation": "switch",
-                      "steps": [
-                        {
-                          "case": ":lang()",
-                          "steps": [
-                            {
-                              "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-comma-separated-list\" id=\"ref-for-serialize-a-comma-separated-list②\">serialization of a\n   comma-separated list</a> of each argument’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-string\" id=\"ref-for-serialize-a-string③\">serialization as a string</a>, preserving\n   relative order."
-                            }
-                          ]
-                        },
-                        {
-                          "case": ":nth-child()",
-                          "steps": [
-                            {
-                              "html": "The result of serializing the value using the rules to <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#serialize-an-anb-value\" id=\"ref-for-serialize-an-anb-value\">serialize an &lt;an+b&gt; value</a>."
-                            }
-                          ]
-                        },
-                        {
-                          "case": ":nth-last-child()",
-                          "steps": [
-                            {
-                              "html": "The result of serializing the value using the rules to <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#serialize-an-anb-value\" id=\"ref-for-serialize-an-anb-value\">serialize an &lt;an+b&gt; value</a>."
-                            }
-                          ]
-                        },
-                        {
-                          "case": ":nth-of-type()",
-                          "steps": [
-                            {
-                              "html": "The result of serializing the value using the rules to <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#serialize-an-anb-value\" id=\"ref-for-serialize-an-anb-value\">serialize an &lt;an+b&gt; value</a>."
-                            }
-                          ]
-                        },
-                        {
-                          "case": ":nth-last-of-type()",
-                          "steps": [
-                            {
-                              "html": "The result of serializing the value using the rules to <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#serialize-an-anb-value\" id=\"ref-for-serialize-an-anb-value\">serialize an &lt;an+b&gt; value</a>."
-                            }
-                          ]
-                        },
-                        {
-                          "case": ":not()",
-                          "steps": [
-                            {
-                              "html": "The result of serializing the value using the rules for <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-group-of-selectors\" id=\"ref-for-serialize-a-group-of-selectors\">serializing a group of selectors</a>."
-                            }
-                          ]
-                        }
-                      ]
+                      "case": ":lang()",
+                      "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-comma-separated-list\" id=\"ref-for-serialize-a-comma-separated-list②\">serialization of a\n   comma-separated list</a> of each argument’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-string\" id=\"ref-for-serialize-a-string③\">serialization as a string</a>, preserving\n   relative order."
+                    },
+                    {
+                      "case": ":nth-child()",
+                      "html": "The result of serializing the value using the rules to <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#serialize-an-anb-value\" id=\"ref-for-serialize-an-anb-value\">serialize an &lt;an+b&gt; value</a>."
+                    },
+                    {
+                      "case": ":nth-last-child()",
+                      "html": "The result of serializing the value using the rules to <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#serialize-an-anb-value\" id=\"ref-for-serialize-an-anb-value\">serialize an &lt;an+b&gt; value</a>."
+                    },
+                    {
+                      "case": ":nth-of-type()",
+                      "html": "The result of serializing the value using the rules to <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#serialize-an-anb-value\" id=\"ref-for-serialize-an-anb-value\">serialize an &lt;an+b&gt; value</a>."
+                    },
+                    {
+                      "case": ":nth-last-of-type()",
+                      "html": "The result of serializing the value using the rules to <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#serialize-an-anb-value\" id=\"ref-for-serialize-an-anb-value\">serialize an &lt;an+b&gt; value</a>."
+                    },
+                    {
+                      "case": ":not()",
+                      "html": "The result of serializing the value using the rules for <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-group-of-selectors\" id=\"ref-for-serialize-a-group-of-selectors\">serializing a group of selectors</a>."
                     }
                   ]
                 }
@@ -641,7 +671,7 @@
           "html": "Let <var>request</var> be a new <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request\" id=\"ref-for-concept-request①\">request</a>, with the <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-url\" id=\"ref-for-concept-request-url\">url</a> <var>parsed URL</var>, <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-origin\" id=\"ref-for-concept-request-origin\">origin</a> <var>origin</var>, <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-referrer\" id=\"ref-for-concept-request-referrer\">referrer</a> <var>referrer</var>, and if specified the set of parameters <var>parameters</var>."
         },
         {
-          "html": "<a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-fetch\" id=\"ref-for-concept-fetch\">Fetch</a> <var>request</var>,\n   with <var>processResponseEndOfBody</var>, given <var>response</var>,\n   being the following steps:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-export=\"\" id=\"fetch-a-css-style-sheet\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">fetch a CSS style sheet</dfn> with parsed URL <var>parsed URL</var>,\n referrer <var>referrer</var>,\n document <var>document</var>,\n optionally a set of parameters <var>parameters</var> (used as input to creating a <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request\" id=\"ref-for-concept-request\">request</a>),\n and an algorithm for handling the response result <var>processTheResponse</var> that takes a response,\n follow these steps:",
           "rationale": "if",
           "steps": [
             {
@@ -736,10 +766,10 @@
           "html": "If one of the (other) link relation types is an <a data-link-type=\"dfn\">ASCII case-insensitive</a> match for\n  \"<code>alternate</code>\" and <var>title</var> is the\n  empty string, then return."
         },
         {
-          "html": "Let <var>input URL</var> be the value specified. \n      <p class=\"issue\" id=\"issue-d4a93110\"><a class=\"self-link\" href=\"https://drafts.csswg.org/cssom-1/#issue-d4a93110\"></a> Be more specific</p>"
+          "html": "Let <var>input URL</var> be the value specified."
         },
         {
-          "html": "Let <var>base URL</var> be the document’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/urls-and-fetching.html#document-base-url\" id=\"ref-for-document-base-url①\">document base URL</a>. \n      <p class=\"issue\" id=\"issue-af048285\"><a class=\"self-link\" href=\"https://drafts.csswg.org/cssom-1/#issue-af048285\"></a> Is there a document at this point?</p>"
+          "html": "Let <var>base URL</var> be the document’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/urls-and-fetching.html#document-base-url\" id=\"ref-for-document-base-url①\">document base URL</a>."
         },
         {
           "html": "Let <var>referrer</var> be the document’s <a data-link-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-document-url\" id=\"ref-for-concept-document-url①\">address</a>."
@@ -754,7 +784,7 @@
           "html": "If <var>parsed URL</var> is failure, then return."
         },
         {
-          "html": "<a class=\"self-link\" href=\"https://drafts.csswg.org/cssom-1/#issue-45012e41\"></a> What if the HTML parser hasn’t decided on quirks/non-quirks yet?",
+          "html": "<a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#fetch-a-css-style-sheet\" id=\"ref-for-fetch-a-css-style-sheet①\">Fetch a CSS style sheet</a> with parsed URL <var>parsed URL</var>,\n   referrer <var>referrer</var>,\n   document being the document,\n   and <var>processTheResponse</var>, given <var>response</var>, being the following steps:",
           "rationale": "create",
           "steps": [
             {
@@ -795,67 +825,63 @@
           "steps": [
             {
               "case": "CSSStyleRule",
+              "html": "Return the result of the following steps:",
+              "rationale": "let",
               "steps": [
                 {
-                  "html": "Return the result of the following steps:",
-                  "rationale": "let",
+                  "html": "Let <var>s</var> initially be\n        the result of performing <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-group-of-selectors\" id=\"ref-for-serialize-a-group-of-selectors①\">serialize a group of selectors</a> on the rule’s associated selectors,\n        followed by the string \"<code> {</code>\", i.e., a single SPACE (U+0020), followed by LEFT CURLY BRACKET (U+007B)."
+                },
+                {
+                  "html": "Let <var>decls</var> be the result of performing <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-css-declaration-block\" id=\"ref-for-serialize-a-css-declaration-block\">serialize a CSS declaration block</a> on the rule’s associated declarations, or null if there are no such declarations."
+                },
+                {
+                  "html": "Let <var>rules</var> be the result of performing <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-css-rule\" id=\"ref-for-serialize-a-css-rule\">serialize a CSS rule</a> on each rule in the rule’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://www.w3.org/TR/css-nesting-1/#dom-cssstylerule-cssrules\" id=\"ref-for-dom-cssstylerule-cssrules\">cssRules</a></code> list, or null if there are no such rules."
+                },
+                {
+                  "html": "If <var>decls</var> and <var>rules</var> are both null, append \" }\" to <var>s</var> (i.e. a single SPACE (U+0020) followed by RIGHT CURLY BRACKET (U+007D)) and return <var>s</var>."
+                },
+                {
+                  "html": "If <var>rules</var> is null:",
+                  "rationale": "append",
                   "steps": [
                     {
-                      "html": "Let <var>s</var> initially be\n        the result of performing <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-group-of-selectors\" id=\"ref-for-serialize-a-group-of-selectors①\">serialize a group of selectors</a> on the rule’s associated selectors,\n        followed by the string \"<code> {</code>\", i.e., a single SPACE (U+0020), followed by LEFT CURLY BRACKET (U+007B)."
+                      "html": "Append a single SPACE (U+0020) to <var>s</var>"
                     },
                     {
-                      "html": "Let <var>decls</var> be the result of performing <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-css-declaration-block\" id=\"ref-for-serialize-a-css-declaration-block\">serialize a CSS declaration block</a> on the rule’s associated declarations, or null if there are no such declarations."
+                      "html": "Append <var>decls</var> to <var>s</var>"
                     },
                     {
-                      "html": "Let <var>rules</var> be the result of performing <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-css-rule\" id=\"ref-for-serialize-a-css-rule\">serialize a CSS rule</a> on each rule in the rule’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://www.w3.org/TR/css-nesting-1/#dom-cssstylerule-cssrules\" id=\"ref-for-dom-cssstylerule-cssrules\">cssRules</a></code> list, or null if there are no such rules."
+                      "html": "Append \" }\" to <var>s</var> (i.e. a single SPACE (U+0020) followed by RIGHT CURLY BRACKET (U+007D))."
                     },
                     {
-                      "html": "If <var>decls</var> and <var>rules</var> are both null, append \" }\" to <var>s</var> (i.e. a single SPACE (U+0020) followed by RIGHT CURLY BRACKET (U+007D)) and return <var>s</var>."
+                      "html": "Return <var>s</var>."
+                    }
+                  ]
+                },
+                {
+                  "html": "Otherwise:",
+                  "rationale": "if",
+                  "steps": [
+                    {
+                      "html": "If <var>decls</var> is not null, prepend it to <var>rules</var>."
                     },
                     {
-                      "html": "If <var>rules</var> is null:",
+                      "html": "For each <var>rule</var> in <var>rules</var>:",
                       "rationale": "append",
                       "steps": [
                         {
-                          "html": "Append a single SPACE (U+0020) to <var>s</var>"
+                          "html": "Append a newline followed by two spaces to <var>s</var>."
                         },
                         {
-                          "html": "Append <var>decls</var> to <var>s</var>"
-                        },
-                        {
-                          "html": "Append \" }\" to <var>s</var> (i.e. a single SPACE (U+0020) followed by RIGHT CURLY BRACKET (U+007D))."
-                        },
-                        {
-                          "html": "Return <var>s</var>."
+                          "html": "Append <var>rule</var> to <var>s</var>."
                         }
                       ]
                     },
                     {
-                      "html": "Otherwise:",
-                      "rationale": "if",
-                      "steps": [
-                        {
-                          "html": "If <var>decls</var> is not null, prepend it to <var>rules</var>."
-                        },
-                        {
-                          "html": "For each <var>rule</var> in <var>rules</var>:",
-                          "rationale": "append",
-                          "steps": [
-                            {
-                              "html": "Append a newline followed by two spaces to <var>s</var>."
-                            },
-                            {
-                              "html": "Append <var>rule</var> to <var>s</var>."
-                            }
-                          ]
-                        },
-                        {
-                          "html": "Append a newline followed by RIGHT CURLY BRACKET (U+007D) to <var>s</var>."
-                        },
-                        {
-                          "html": "Return <var>s</var>."
-                        }
-                      ]
+                      "html": "Append a newline followed by RIGHT CURLY BRACKET (U+007D) to <var>s</var>."
+                    },
+                    {
+                      "html": "Return <var>s</var>."
                     }
                   ]
                 }
@@ -863,138 +889,110 @@
             },
             {
               "case": "CSSImportRule",
+              "html": "The result of concatenating the following:",
+              "rationale": "if",
               "steps": [
                 {
-                  "html": "The result of concatenating the following:",
-                  "rationale": "if",
-                  "steps": [
-                    {
-                      "html": "The string \"<code>@import</code>\" followed by a single SPACE (U+0020)."
-                    },
-                    {
-                      "html": "The result of performing <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-url\" id=\"ref-for-serialize-a-url\">serialize a URL</a> on the rule’s location."
-                    },
-                    {
-                      "html": "If the rule’s associated media list is not empty, a single SPACE (U+0020) followed by the\n   result of performing <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-media-query-list\" id=\"ref-for-serialize-a-media-query-list②\">serialize a media query list</a> on the media list."
-                    },
-                    {
-                      "html": "The string \"<code>;</code>\", i.e., SEMICOLON (U+003B)."
-                    }
-                  ]
+                  "html": "The string \"<code>@import</code>\" followed by a single SPACE (U+0020)."
+                },
+                {
+                  "html": "The result of performing <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-url\" id=\"ref-for-serialize-a-url\">serialize a URL</a> on the rule’s location."
+                },
+                {
+                  "html": "If the rule’s associated media list is not empty, a single SPACE (U+0020) followed by the\n   result of performing <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-media-query-list\" id=\"ref-for-serialize-a-media-query-list②\">serialize a media query list</a> on the media list."
+                },
+                {
+                  "html": "The string \"<code>;</code>\", i.e., SEMICOLON (U+003B)."
                 }
               ]
             },
             {
               "case": "CSSMediaRule",
-              "steps": [
-                {
-                  "html": "The result of concatenating the following: \n     <ol>\n      <li>The string \"<code>@media</code>\", followed by a single SPACE (U+0020).\n      </li><li>The result of performing <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-media-query-list\" id=\"ref-for-serialize-a-media-query-list③\">serialize a media query list</a> on rule’s media query list.\n      </li><li>A single SPACE (U+0020), followed by the string \"{\", i.e., LEFT CURLY BRACKET (U+007B), followed by a newline.\n      </li><li>The result of performing <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-css-rule\" id=\"ref-for-serialize-a-css-rule①\">serialize a CSS rule</a> on each rule in the rule’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/cssom-1/#dom-cssgroupingrule-cssrules\" id=\"ref-for-dom-cssgroupingrule-cssrules\">cssRules</a></code> list, separated by a newline and indented by two spaces.\n      </li><li>A newline, followed by the string \"}\", i.e., RIGHT CURLY BRACKET (U+007D)\n     </li></ol>",
-                  "ignored": [
-                    "The string \"@media\", followed by a single SPACE (U+0020). The result of performing serialize a media query list on rule’s media query list. A single SPACE (U+0020), followed by the string \"{\", i.e., LEFT CURLY BRACKET (U+007B), followed by a newline. The result of performing serialize a CSS rule on each rule in the rule’s cssRules list, separated by a newline and indented by two spaces. A newline, followed by the string \"}\", i.e., RIGHT CURLY BRACKET (U+007D)"
-                  ]
-                }
+              "html": "The result of concatenating the following:",
+              "ignored": [
+                "The string \"@media\", followed by a single SPACE (U+0020). The result of performing serialize a media query list on rule’s media query list. A single SPACE (U+0020), followed by the string \"{\", i.e., LEFT CURLY BRACKET (U+007B), followed by a newline. The result of performing serialize a CSS rule on each rule in the rule’s cssRules list, separated by a newline and indented by two spaces. A newline, followed by the string \"}\", i.e., RIGHT CURLY BRACKET (U+007D)"
               ]
             },
             {
               "case": "CSSFontFaceRule",
+              "html": "The result of concatenating the following:",
+              "rationale": "if",
               "steps": [
                 {
-                  "html": "The result of concatenating the following:",
-                  "rationale": "if",
-                  "steps": [
-                    {
-                      "html": "The string \"<code>@font-face {</code>\", followed by a single SPACE (U+0020)."
-                    },
-                    {
-                      "html": "The string \"<code>font-family:</code>\", followed by a single SPACE (U+0020)."
-                    },
-                    {
-                      "html": "The result of performing <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-string\" id=\"ref-for-serialize-a-string④\">serialize a string</a> on the rule’s font family name."
-                    },
-                    {
-                      "html": "The string \"<code>;</code>\", i.e., SEMICOLON (U+003B)."
-                    },
-                    {
-                      "html": "If the rule’s associated source list is not empty, follow these substeps: \n       <ol>\n        <li>A single SPACE (U+0020), followed by the string \"<code>src:</code>\", followed by a single\n     SPACE (U+0020).\n        </li><li>The result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-comma-separated-list\" id=\"ref-for-serialize-a-comma-separated-list③\">serialize a comma-separated list</a> on performing <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-url\" id=\"ref-for-serialize-a-url①\">serialize a\n     URL</a> or <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-local\" id=\"ref-for-serialize-a-local\">serialize a LOCAL</a> for each source on the source list.\n        </li><li>The string \"<code>;</code>\", i.e., SEMICOLON (U+003B).\n       </li></ol>",
-                      "ignored": [
-                        "A single SPACE (U+0020), followed by the string \"src:\", followed by a single SPACE (U+0020). The result of invoking serialize a comma-separated list on performing serialize a URL or serialize a LOCAL for each source on the source list. The string \";\", i.e., SEMICOLON (U+003B)."
-                      ]
-                    },
-                    {
-                      "html": "If rule’s associated <a class=\"property css\" data-link-type=\"property\">unicode-range</a> descriptor is present, a single\n   SPACE (U+0020), followed by the string \"<code>unicode-range:</code>\", followed by a single SPACE\n   (U+0020), followed by the result of performing serialize a <span class=\"production\">&lt;'unicode-range'&gt;</span>, followed by the\n   string \"<code>;</code>\", i.e., SEMICOLON (U+003B)."
-                    },
-                    {
-                      "html": "If rule’s associated <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-fonts-4/#propdef-font-variant\" id=\"ref-for-propdef-font-variant\">font-variant</a> descriptor is present, a single\n   SPACE (U+0020), followed by the string \"<code>font-variant:</code>\", followed by a single SPACE\n   (U+0020), followed by the result of performing serialize a <span class=\"production\" id=\"ref-for-propdef-font-variant①\">&lt;'font-variant'&gt;</span>, followed by the\n   string \"<code>;</code>\", i.e., SEMICOLON (U+003B)."
-                    },
-                    {
-                      "html": "If rule’s associated <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-fonts-4/#propdef-font-feature-settings\" id=\"ref-for-propdef-font-feature-settings\">font-feature-settings</a> descriptor is present, a\n   single SPACE (U+0020), followed by the string \"<code>font-feature-settings:</code>\", followed by\n   a single SPACE (U+0020), followed by the result of performing serialize a <span class=\"production\" id=\"ref-for-propdef-font-feature-settings①\">&lt;'font-feature-settings'&gt;</span>, followed by the string \"<code>;</code>\", i.e., SEMICOLON\n   (U+003B)."
-                    },
-                    {
-                      "html": "If rule’s associated <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-fonts-4/#propdef-font-stretch\" id=\"ref-for-propdef-font-stretch\">font-stretch</a> descriptor is present, a single\n   SPACE (U+0020), followed by the string \"<code>font-stretch:</code>\", followed by a single SPACE\n   (U+0020), followed by the result of performing serialize a <span class=\"production\" id=\"ref-for-propdef-font-stretch①\">&lt;'font-stretch'&gt;</span>, followed by the\n   string \"<code>;</code>\", i.e., SEMICOLON (U+003B)."
-                    },
-                    {
-                      "html": "If rule’s associated <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-fonts-4/#propdef-font-weight\" id=\"ref-for-propdef-font-weight\">font-weight</a> descriptor is present, a single SPACE\n   (U+0020), followed by the string \"<code>font-weight:</code>\", followed by a single SPACE\n   (U+0020), followed by the result of performing serialize a <span class=\"production\" id=\"ref-for-propdef-font-weight①\">&lt;'font-weight'&gt;</span>, followed by the\n   string \"<code>;</code>\", i.e., SEMICOLON (U+003B)."
-                    },
-                    {
-                      "html": "If rule’s associated <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-fonts-4/#propdef-font-style\" id=\"ref-for-propdef-font-style\">font-style</a> descriptor is present, a single SPACE\n   (U+0020), followed by the string \"<code>font-style:</code>\", followed by a single SPACE (U+0020),\n   followed by the result of performing serialize a <span class=\"production\" id=\"ref-for-propdef-font-style①\">&lt;'font-style'&gt;</span>, followed by the string\n   \"<code>;</code>\", i.e., SEMICOLON (U+003B)."
-                    },
-                    {
-                      "html": "A single SPACE (U+0020), followed by the string \"}\", i.e., RIGHT CURLY BRACKET (U+007D)."
-                    }
+                  "html": "The string \"<code>@font-face {</code>\", followed by a single SPACE (U+0020)."
+                },
+                {
+                  "html": "The string \"<code>font-family:</code>\", followed by a single SPACE (U+0020)."
+                },
+                {
+                  "html": "The result of performing <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-string\" id=\"ref-for-serialize-a-string④\">serialize a string</a> on the rule’s font family name."
+                },
+                {
+                  "html": "The string \"<code>;</code>\", i.e., SEMICOLON (U+003B)."
+                },
+                {
+                  "html": "If the rule’s associated source list is not empty, follow these substeps:",
+                  "ignored": [
+                    "A single SPACE (U+0020), followed by the string \"src:\", followed by a single SPACE (U+0020). The result of invoking serialize a comma-separated list on performing serialize a URL or serialize a LOCAL for each source on the source list. The string \";\", i.e., SEMICOLON (U+003B)."
                   ]
+                },
+                {
+                  "html": "If rule’s associated <a class=\"property css\" data-link-type=\"property\">unicode-range</a> descriptor is present, a single\n   SPACE (U+0020), followed by the string \"<code>unicode-range:</code>\", followed by a single SPACE\n   (U+0020), followed by the result of performing serialize a <span class=\"production\">&lt;'unicode-range'&gt;</span>, followed by the\n   string \"<code>;</code>\", i.e., SEMICOLON (U+003B)."
+                },
+                {
+                  "html": "If rule’s associated <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-fonts-4/#propdef-font-variant\" id=\"ref-for-propdef-font-variant\">font-variant</a> descriptor is present, a single\n   SPACE (U+0020), followed by the string \"<code>font-variant:</code>\", followed by a single SPACE\n   (U+0020), followed by the result of performing serialize a <span class=\"production\" id=\"ref-for-propdef-font-variant①\">&lt;'font-variant'&gt;</span>, followed by the\n   string \"<code>;</code>\", i.e., SEMICOLON (U+003B)."
+                },
+                {
+                  "html": "If rule’s associated <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-fonts-4/#propdef-font-feature-settings\" id=\"ref-for-propdef-font-feature-settings\">font-feature-settings</a> descriptor is present, a\n   single SPACE (U+0020), followed by the string \"<code>font-feature-settings:</code>\", followed by\n   a single SPACE (U+0020), followed by the result of performing serialize a <span class=\"production\" id=\"ref-for-propdef-font-feature-settings①\">&lt;'font-feature-settings'&gt;</span>, followed by the string \"<code>;</code>\", i.e., SEMICOLON\n   (U+003B)."
+                },
+                {
+                  "html": "If rule’s associated <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-fonts-4/#propdef-font-stretch\" id=\"ref-for-propdef-font-stretch\">font-stretch</a> descriptor is present, a single\n   SPACE (U+0020), followed by the string \"<code>font-stretch:</code>\", followed by a single SPACE\n   (U+0020), followed by the result of performing serialize a <span class=\"production\" id=\"ref-for-propdef-font-stretch①\">&lt;'font-stretch'&gt;</span>, followed by the\n   string \"<code>;</code>\", i.e., SEMICOLON (U+003B)."
+                },
+                {
+                  "html": "If rule’s associated <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-fonts-4/#propdef-font-weight\" id=\"ref-for-propdef-font-weight\">font-weight</a> descriptor is present, a single SPACE\n   (U+0020), followed by the string \"<code>font-weight:</code>\", followed by a single SPACE\n   (U+0020), followed by the result of performing serialize a <span class=\"production\" id=\"ref-for-propdef-font-weight①\">&lt;'font-weight'&gt;</span>, followed by the\n   string \"<code>;</code>\", i.e., SEMICOLON (U+003B)."
+                },
+                {
+                  "html": "If rule’s associated <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-fonts-4/#propdef-font-style\" id=\"ref-for-propdef-font-style\">font-style</a> descriptor is present, a single SPACE\n   (U+0020), followed by the string \"<code>font-style:</code>\", followed by a single SPACE (U+0020),\n   followed by the result of performing serialize a <span class=\"production\" id=\"ref-for-propdef-font-style①\">&lt;'font-style'&gt;</span>, followed by the string\n   \"<code>;</code>\", i.e., SEMICOLON (U+003B)."
+                },
+                {
+                  "html": "A single SPACE (U+0020), followed by the string \"}\", i.e., RIGHT CURLY BRACKET (U+007D)."
                 }
               ]
             },
             {
               "case": "CSSPageRule",
-              "steps": [
-                {
-                  "html": "<p class=\"issue\" id=\"issue-be6dc86c\"><a class=\"self-link\" href=\"https://drafts.csswg.org/cssom-1/#issue-be6dc86c\"></a> Need to define how <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/cssom-1/#csspagerule\" id=\"ref-for-csspagerule①\">CSSPageRule</a></code> is serialized.</p>"
-                }
-              ]
+              "html": ""
             },
             {
               "case": "CSSNamespaceRule",
-              "steps": [
-                {
-                  "html": "The literal string \"<code>@namespace</code>\", followed by a single SPACE\n (U+0020), followed by the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-an-identifier\" id=\"ref-for-serialize-an-identifier⑦\">serialization as an identifier</a> of the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/cssom-1/#dom-cssnamespacerule-prefix\" id=\"ref-for-dom-cssnamespacerule-prefix\">prefix</a></code> attribute (if\n any), followed by a single SPACE (U+0020) if there is a prefix, followed by the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-url\" id=\"ref-for-serialize-a-url②\">serialization as URL</a> of the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/cssom-1/#dom-cssnamespacerule-namespaceuri\" id=\"ref-for-dom-cssnamespacerule-namespaceuri\">namespaceURI</a></code> attribute, followed the character \"<code>;</code>\" (U+003B)."
-                }
-              ]
+              "html": "The literal string \"<code>@namespace</code>\", followed by a single SPACE\n (U+0020), followed by the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-an-identifier\" id=\"ref-for-serialize-an-identifier⑦\">serialization as an identifier</a> of the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/cssom-1/#dom-cssnamespacerule-prefix\" id=\"ref-for-dom-cssnamespacerule-prefix\">prefix</a></code> attribute (if\n any), followed by a single SPACE (U+0020) if there is a prefix, followed by the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-url\" id=\"ref-for-serialize-a-url②\">serialization as URL</a> of the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/cssom-1/#dom-cssnamespacerule-namespaceuri\" id=\"ref-for-dom-cssnamespacerule-namespaceuri\">namespaceURI</a></code> attribute, followed the character \"<code>;</code>\" (U+003B)."
             },
             {
               "case": "CSSKeyframesRule",
-              "steps": [
-                {
-                  "html": "The result of concatenating the following: \n     <ol>\n      <li>The literal string \"<code>@keyframes</code>\", followed by a single SPACE (U+0020). \n      </li><li>The serialization of the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/css-animations-1/#dom-csskeyframesrule-name\" id=\"ref-for-dom-csskeyframesrule-name\">name</a></code> attribute. If the attribute is a CSS wide keyword, or the value <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-ui-4/#valdef-cursor-default\" id=\"ref-for-valdef-cursor-default\">default</a>, or the value <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-anchor-position-1/#valdef-anchor-name-none\" id=\"ref-for-valdef-anchor-name-none\">none</a>,\n\t then it is <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-string\" id=\"ref-for-serialize-a-string⑤\">serialized as a string</a>. Otherwise, it is <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-an-identifier\" id=\"ref-for-serialize-an-identifier⑧\">serialized as an identifier</a>. \n      </li><li>The string \"<code> { </code>\", i.e., a single SPACE (U+0020), followed by LEFT CURLY BRACKET (U+007B), followed by a single SPACE (U+0020). \n      </li><li>The result of performing <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-css-rule\" id=\"ref-for-serialize-a-css-rule②\">serialize a CSS rule</a> on each rule in the rule’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/css-animations-1/#dom-csskeyframesrule-cssrules\" id=\"ref-for-dom-csskeyframesrule-cssrules\">cssRules</a></code> list, separated by a newline and indented by two spaces.\n      </li><li>A newline, followed by the string \"}\", i.e., RIGHT CURLY BRACKET (U+007D)\n     </li></ol>",
-                  "ignored": [
-                    "The literal string \"@keyframes\", followed by a single SPACE (U+0020). The serialization of the name attribute. If the attribute is a CSS wide keyword, or the value default, or the value none, then it is serialized as a string. Otherwise, it is serialized as an identifier. The string \" { \", i.e., a single SPACE (U+0020), followed by LEFT CURLY BRACKET (U+007B), followed by a single SPACE (U+0020). The result of performing serialize a CSS rule on each rule in the rule’s cssRules list, separated by a newline and indented by two spaces. A newline, followed by the string \"}\", i.e., RIGHT CURLY BRACKET (U+007D)"
-                  ]
-                }
+              "html": "The result of concatenating the following:",
+              "ignored": [
+                "The literal string \"@keyframes\", followed by a single SPACE (U+0020). The serialization of the name attribute. If the attribute is a CSS wide keyword, or the value default, or the value none, then it is serialized as a string. Otherwise, it is serialized as an identifier. The string \" { \", i.e., a single SPACE (U+0020), followed by LEFT CURLY BRACKET (U+007B), followed by a single SPACE (U+0020). The result of performing serialize a CSS rule on each rule in the rule’s cssRules list, separated by a newline and indented by two spaces. A newline, followed by the string \"}\", i.e., RIGHT CURLY BRACKET (U+007D)"
               ]
             },
             {
               "case": "CSSKeyframeRule",
+              "html": "The result of concatenating the following:",
+              "rationale": "if",
               "steps": [
                 {
-                  "html": "The result of concatenating the following:",
-                  "rationale": "if",
-                  "steps": [
-                    {
-                      "html": "The <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/css-animations-1/#dom-csskeyframerule-keytext\" id=\"ref-for-dom-csskeyframerule-keytext\">keyText</a></code>."
-                    },
-                    {
-                      "html": "The string \"<code> { </code>\", i.e., a single SPACE (U+0020), followed by LEFT CURLY BRACKET (U+007B), followed by a single SPACE (U+0020)."
-                    },
-                    {
-                      "html": "The result of performing <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-css-declaration-block\" id=\"ref-for-serialize-a-css-declaration-block①\">serialize a CSS declaration block</a> on the rule’s associated declarations."
-                    },
-                    {
-                      "html": "If the rule is associated with one or more declarations, the string \"<code> </code>\", i.e., a single SPACE (U+0020)."
-                    },
-                    {
-                      "html": "The string \"<code>}</code>\", RIGHT CURLY BRACKET (U+007D)."
-                    }
-                  ]
+                  "html": "The <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/css-animations-1/#dom-csskeyframerule-keytext\" id=\"ref-for-dom-csskeyframerule-keytext\">keyText</a></code>."
+                },
+                {
+                  "html": "The string \"<code> { </code>\", i.e., a single SPACE (U+0020), followed by LEFT CURLY BRACKET (U+007B), followed by a single SPACE (U+0020)."
+                },
+                {
+                  "html": "The result of performing <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-css-declaration-block\" id=\"ref-for-serialize-a-css-declaration-block①\">serialize a CSS declaration block</a> on the rule’s associated declarations."
+                },
+                {
+                  "html": "If the rule is associated with one or more declarations, the string \"<code> </code>\", i.e., a single SPACE (U+0020)."
+                },
+                {
+                  "html": "The string \"<code>}</code>\", RIGHT CURLY BRACKET (U+007D)."
                 }
               ]
             }
@@ -1074,107 +1072,55 @@
           "steps": [
             {
               "case": "If the object is a CSSStyleRule",
-              "steps": [
-                {
-                  "html": "Return 1."
-                }
-              ]
+              "html": "Return 1."
             },
             {
               "case": "If the object is a CSSImportRule",
-              "steps": [
-                {
-                  "html": "Return 3."
-                }
-              ]
+              "html": "Return 3."
             },
             {
               "case": "If the object is a CSSMediaRule",
-              "steps": [
-                {
-                  "html": "Return 4."
-                }
-              ]
+              "html": "Return 4."
             },
             {
               "case": "If the object is a CSSFontFaceRule",
-              "steps": [
-                {
-                  "html": "Return 5."
-                }
-              ]
+              "html": "Return 5."
             },
             {
               "case": "If the object is a CSSPageRule",
-              "steps": [
-                {
-                  "html": "Return 6."
-                }
-              ]
+              "html": "Return 6."
             },
             {
               "case": "If the object is a CSSKeyframesRule",
-              "steps": [
-                {
-                  "html": "Return 7."
-                }
-              ]
+              "html": "Return 7."
             },
             {
               "case": "If the object is a CSSKeyframeRule",
-              "steps": [
-                {
-                  "html": "Return 8."
-                }
-              ]
+              "html": "Return 8."
             },
             {
               "case": "If the object is a CSSMarginRule",
-              "steps": [
-                {
-                  "html": "Return 9."
-                }
-              ]
+              "html": "Return 9."
             },
             {
               "case": "If the object is a CSSNamespaceRule",
-              "steps": [
-                {
-                  "html": "Return 10."
-                }
-              ]
+              "html": "Return 10."
             },
             {
               "case": "If the object is a CSSCounterStyleRule",
-              "steps": [
-                {
-                  "html": "Return 11."
-                }
-              ]
+              "html": "Return 11."
             },
             {
               "case": "If the object is a CSSSupportsRule",
-              "steps": [
-                {
-                  "html": "Return 12."
-                }
-              ]
+              "html": "Return 12."
             },
             {
               "case": "If the object is a CSSFontFeatureValuesRule",
-              "steps": [
-                {
-                  "html": "Return 14."
-                }
-              ]
+              "html": "Return 14."
             },
             {
               "case": "Otherwise",
-              "steps": [
-                {
-                  "html": "Return 0."
-                }
-              ]
+              "html": "Return 0."
             }
           ]
         }
@@ -1623,6 +1569,12 @@
       ]
     },
     {
+      "name": "set a CSS declaration",
+      "href": "https://drafts.csswg.org/cssom-1/#set-a-css-declaration",
+      "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-export=\"\" id=\"set-a-css-declaration\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">set a CSS declaration</dfn> <var>property</var> with a value <var>component value list</var> and optionally with an <i>important</i> flag set, in\na list of declarations <var>declarations</var>, the user agent must ensure the following constraints hold after its steps:",
+      "rationale": "To <dfn>"
+    },
+    {
       "name": "CSSStyleDeclaration/removeProperty(property)",
       "href": "https://drafts.csswg.org/cssom-1/#dom-cssstyledeclaration-removeproperty",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"CSSStyleDeclaration\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-cssstyledeclaration-removeproperty\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>removeProperty(<var>property</var>)</code></dfn> method must run these steps:",
@@ -1793,203 +1745,127 @@
           "steps": [
             {
               "case": "keyword",
-              "steps": [
-                {
-                  "html": "The keyword <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#ascii-lowercase\" id=\"ref-for-ascii-lowercase⑦\">converted to ASCII lowercase</a>."
-                }
-              ]
+              "html": "The keyword <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#ascii-lowercase\" id=\"ref-for-ascii-lowercase⑦\">converted to ASCII lowercase</a>."
             },
             {
               "case": "<angle>",
-              "steps": [
-                {
-                  "html": "The &lt;number&gt; component serialized as per &lt;number&gt; followed by the unit in canonical form as defined in its respective specification. \n     <p class=\"issue\" id=\"issue-87977b18\"><a class=\"self-link\" href=\"https://drafts.csswg.org/cssom-1/#issue-87977b18\"></a> Probably should distinguish between declared and computed / resolved values.</p>"
-                }
-              ]
+              "html": "The &lt;number&gt; component serialized as per &lt;number&gt; followed by the unit in canonical form as defined in its respective specification."
             },
             {
               "case": "<color>",
-              "steps": [
-                {
-                  "html": "If &lt;color&gt; is a component of a resolved value, see <a href=\"https://drafts.csswg.org/css-color-4/#resolving-color-values\"><cite>CSS Color 4</cite> §  14. Resolving &lt;color&gt; Values</a>. \n     <p>If &lt;color&gt; is a component of a computed value, see <a href=\"https://drafts.csswg.org/css-color-4/#serializing-color-values\"><cite>CSS Color 4</cite> §  15. Serializing &lt;color&gt; Values</a>.</p>\n     <p>If <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.csswg.org/css-color-5/#typedef-color\" id=\"ref-for-typedef-color①\" title=\"Expands to: <alpha-value> | accentcolor | accentcolortext | activeborder | activecaption | activetext | aliceblue | antiquewhite | appworkspace | aqua | aquamarine | azure | background | beige | bisque | black | blanchedalmond | blue | blueviolet | brown | burlywood | buttonborder | buttonface | buttonhighlight | buttonshadow | buttontext | cadetblue | canvas | canvastext | captiontext | chartreuse | chocolate | coral | cornflowerblue | cornsilk | crimson | currentcolor | cyan | darkblue | darkcyan | darkgoldenrod | darkgray | darkgreen | darkgrey | darkkhaki | darkmagenta | darkolivegreen | darkorange | darkorchid | darkred | darksalmon | darkseagreen | darkslateblue | darkslategray | darkslategrey | darkturquoise | darkviolet | deeppink | deepskyblue | dimgray | dimgrey | dodgerblue | field | fieldtext | firebrick | floralwhite | forestgreen | fuchsia | gainsboro | ghostwhite | gold | goldenrod | gray | graytext | green | greenyellow | grey | highlight | highlighttext | honeydew | hotpink | inactiveborder | inactivecaption | inactivecaptiontext | indianred | indigo | infobackground | infotext | ivory | khaki | lavender | lavenderblush | lawngreen | lemonchiffon | lightblue | lightcoral | lightcyan | lightgoldenrodyellow | lightgray | lightgreen | lightgrey | lightpink | lightsalmon | lightseagreen | lightskyblue | lightslategray | lightslategrey | lightsteelblue | lightyellow | lime | limegreen | linen | linktext | magenta | mark | marktext | maroon | mediumaquamarine | mediumblue | mediumorchid | mediumpurple | mediumseagreen | mediumslateblue | mediumspringgreen | mediumturquoise | mediumvioletred | menu | menutext | midnightblue | mintcream | mistyrose | moccasin | navajowhite | navy | none | oldlace | olive | olivedrab | orange | orangered | orchid | palegoldenrod | palegreen | paleturquoise | palevioletred | papayawhip | peachpuff | peru | pink | plum | powderblue | purple | rebeccapurple | red | rosybrown | royalblue | saddlebrown | salmon | sandybrown | scrollbar | seagreen | seashell | selecteditem | selecteditemtext | sienna | silver | skyblue | slateblue | slategray | slategrey | snow | springgreen | steelblue | tan | teal | thistle | threeddarkshadow | threedface | threedhighlight | threedlightshadow | threedshadow | tomato | transparent | turquoise | violet | visitedtext | wheat | white | whitesmoke | window | windowframe | windowtext | yellow | yellowgreen\">&lt;color&gt;</a> is a component of a declared value, then\nfor sRGB values, see <a href=\"https://drafts.csswg.org/css-color-4/#resolving-sRGB-values\"><cite>CSS Color 4</cite> § 14.1 Resolving sRGB values</a>.\nFor other color functions, see <a href=\"https://drafts.csswg.org/css-color-4/#resolving-color-values\"><cite>CSS Color 4</cite> §  14. Resolving &lt;color&gt; Values</a>.</p>"
-                }
-              ]
+              "html": "If &lt;color&gt; is a component of a resolved value, see <a href=\"https://drafts.csswg.org/css-color-4/#resolving-color-values\"><cite>CSS Color 4</cite> §  14. Resolving &lt;color&gt; Values</a>. \n     <p>If &lt;color&gt; is a component of a computed value, see <a href=\"https://drafts.csswg.org/css-color-4/#serializing-color-values\"><cite>CSS Color 4</cite> §  15. Serializing &lt;color&gt; Values</a>.</p>\n     <p>If <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.csswg.org/css-color-5/#typedef-color\" id=\"ref-for-typedef-color①\" title=\"Expands to: <alpha-value> | accentcolor | accentcolortext | activeborder | activecaption | activetext | aliceblue | antiquewhite | appworkspace | aqua | aquamarine | azure | background | beige | bisque | black | blanchedalmond | blue | blueviolet | brown | burlywood | buttonborder | buttonface | buttonhighlight | buttonshadow | buttontext | cadetblue | canvas | canvastext | captiontext | chartreuse | chocolate | coral | cornflowerblue | cornsilk | crimson | currentcolor | cyan | darkblue | darkcyan | darkgoldenrod | darkgray | darkgreen | darkgrey | darkkhaki | darkmagenta | darkolivegreen | darkorange | darkorchid | darkred | darksalmon | darkseagreen | darkslateblue | darkslategray | darkslategrey | darkturquoise | darkviolet | deeppink | deepskyblue | dimgray | dimgrey | dodgerblue | field | fieldtext | firebrick | floralwhite | forestgreen | fuchsia | gainsboro | ghostwhite | gold | goldenrod | gray | graytext | green | greenyellow | grey | highlight | highlighttext | honeydew | hotpink | inactiveborder | inactivecaption | inactivecaptiontext | indianred | indigo | infobackground | infotext | ivory | khaki | lavender | lavenderblush | lawngreen | lemonchiffon | lightblue | lightcoral | lightcyan | lightgoldenrodyellow | lightgray | lightgreen | lightgrey | lightpink | lightsalmon | lightseagreen | lightskyblue | lightslategray | lightslategrey | lightsteelblue | lightyellow | lime | limegreen | linen | linktext | magenta | mark | marktext | maroon | mediumaquamarine | mediumblue | mediumorchid | mediumpurple | mediumseagreen | mediumslateblue | mediumspringgreen | mediumturquoise | mediumvioletred | menu | menutext | midnightblue | mintcream | mistyrose | moccasin | navajowhite | navy | none | oldlace | olive | olivedrab | orange | orangered | orchid | palegoldenrod | palegreen | paleturquoise | palevioletred | papayawhip | peachpuff | peru | pink | plum | powderblue | purple | rebeccapurple | red | rosybrown | royalblue | saddlebrown | salmon | sandybrown | scrollbar | seagreen | seashell | selecteditem | selecteditemtext | sienna | silver | skyblue | slateblue | slategray | slategrey | snow | springgreen | steelblue | tan | teal | thistle | threeddarkshadow | threedface | threedhighlight | threedlightshadow | threedshadow | tomato | transparent | turquoise | violet | visitedtext | wheat | white | whitesmoke | window | windowframe | windowtext | yellow | yellowgreen\">&lt;color&gt;</a> is a component of a declared value, then\nfor sRGB values, see <a href=\"https://drafts.csswg.org/css-color-4/#resolving-sRGB-values\"><cite>CSS Color 4</cite> § 14.1 Resolving sRGB values</a>.\nFor other color functions, see <a href=\"https://drafts.csswg.org/css-color-4/#resolving-color-values\"><cite>CSS Color 4</cite> §  14. Resolving &lt;color&gt; Values</a>.</p>"
             },
             {
               "case": "<alpha-value>",
-              "steps": [
-                {
-                  "html": "See <a href=\"https://drafts.csswg.org/css-color-4/#serializing-alpha-values\"><cite>CSS Color 4</cite> § 15.1 Serializing alpha values</a>."
-                }
-              ]
+              "html": "See <a href=\"https://drafts.csswg.org/css-color-4/#serializing-alpha-values\"><cite>CSS Color 4</cite> § 15.1 Serializing alpha values</a>."
             },
             {
               "case": "<counter>",
+              "html": "The return value of the following algorithm:",
+              "rationale": "let",
               "steps": [
                 {
-                  "html": "The return value of the following algorithm:",
-                  "rationale": "let",
-                  "steps": [
-                    {
-                      "html": "Let <var>s</var> be the empty string."
-                    },
-                    {
-                      "html": "If &lt;counter&gt; has three CSS component values append the string\n   \"<code>counters(</code>\" to <var>s</var>."
-                    },
-                    {
-                      "html": "If &lt;counter&gt; has two CSS component values append the string\n   \"<code>counter(</code>\" to <var>s</var>."
-                    },
-                    {
-                      "html": "Let <var>list</var> be a list of CSS component values belonging to &lt;counter&gt;, omitting the last CSS component value if it is \"decimal\"."
-                    },
-                    {
-                      "html": "Let each item in <var>list</var> be the result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-css-component-value\" id=\"ref-for-serialize-a-css-component-value①\">serialize a CSS component value</a> on that item."
-                    },
-                    {
-                      "html": "Append the result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-comma-separated-list\" id=\"ref-for-serialize-a-comma-separated-list④\">serialize a comma-separated list</a> on <var>list</var> to <var>s</var>."
-                    },
-                    {
-                      "html": "Append \"<code>)</code>\" (U+0029) to <var>s</var>."
-                    },
-                    {
-                      "html": "Return <var>s</var>."
-                    }
-                  ]
+                  "html": "Let <var>s</var> be the empty string."
+                },
+                {
+                  "html": "If &lt;counter&gt; has three CSS component values append the string\n   \"<code>counters(</code>\" to <var>s</var>."
+                },
+                {
+                  "html": "If &lt;counter&gt; has two CSS component values append the string\n   \"<code>counter(</code>\" to <var>s</var>."
+                },
+                {
+                  "html": "Let <var>list</var> be a list of CSS component values belonging to &lt;counter&gt;, omitting the last CSS component value if it is \"decimal\"."
+                },
+                {
+                  "html": "Let each item in <var>list</var> be the result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-css-component-value\" id=\"ref-for-serialize-a-css-component-value①\">serialize a CSS component value</a> on that item."
+                },
+                {
+                  "html": "Append the result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-comma-separated-list\" id=\"ref-for-serialize-a-comma-separated-list④\">serialize a comma-separated list</a> on <var>list</var> to <var>s</var>."
+                },
+                {
+                  "html": "Append \"<code>)</code>\" (U+0029) to <var>s</var>."
+                },
+                {
+                  "html": "Return <var>s</var>."
                 }
               ]
             },
             {
               "case": "<frequency>",
-              "steps": [
-                {
-                  "html": "The &lt;number&gt; component serialized as per &lt;number&gt; followed by the unit in its canonical form as defined in its respective specification. \n     <p class=\"issue\" id=\"issue-87977b18①\"><a class=\"self-link\" href=\"https://drafts.csswg.org/cssom-1/#issue-87977b18%E2%91%A0\"></a> Probably should distinguish between declared and computed / resolved values.</p>"
-                }
-              ]
+              "html": "The &lt;number&gt; component serialized as per &lt;number&gt; followed by the unit in its canonical form as defined in its respective specification."
             },
             {
               "case": "<identifier>",
-              "steps": [
-                {
-                  "html": "The identifier <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-an-identifier\" id=\"ref-for-serialize-an-identifier⑨\">serialized as an identifier</a>."
-                }
-              ]
+              "html": "The identifier <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-an-identifier\" id=\"ref-for-serialize-an-identifier⑨\">serialized as an identifier</a>."
             },
             {
               "case": "<integer>",
-              "steps": [
-                {
-                  "html": "A base-ten integer using digits 0-9 (U+0030 to U+0039) in the\n shortest form possible, preceded by \"<code>-</code>\" (U+002D) if it is\n negative."
-                }
-              ]
+              "html": "A base-ten integer using digits 0-9 (U+0030 to U+0039) in the\n shortest form possible, preceded by \"<code>-</code>\" (U+002D) if it is\n negative."
             },
             {
               "case": "<length>",
-              "steps": [
-                {
-                  "html": "The &lt;number&gt; component serialized as per &lt;number&gt; followed by the unit in its canonical form as defined in its respective specification. \n     <p class=\"issue\" id=\"issue-87977b18②\"><a class=\"self-link\" href=\"https://drafts.csswg.org/cssom-1/#issue-87977b18%E2%91%A1\"></a> Probably should distinguish between declared and computed / resolved values.</p>"
-                }
-              ]
+              "html": "The &lt;number&gt; component serialized as per &lt;number&gt; followed by the unit in its canonical form as defined in its respective specification."
             },
             {
               "case": "<number>",
-              "steps": [
-                {
-                  "html": "A base-ten number using digits 0-9 (U+0030 to U+0039) in the shortest form possible,\n  using \"<code>.</code>\" to separate decimals (if any),\n  rounding the value if necessary to not produce more than 6 decimals,\n  preceded by \"<code>-</code>\" (U+002D) if it is negative."
-                }
-              ]
+              "html": "A base-ten number using digits 0-9 (U+0030 to U+0039) in the shortest form possible,\n  using \"<code>.</code>\" to separate decimals (if any),\n  rounding the value if necessary to not produce more than 6 decimals,\n  preceded by \"<code>-</code>\" (U+002D) if it is negative."
             },
             {
               "case": "<percentage>",
-              "steps": [
-                {
-                  "html": "The &lt;number&gt; component serialized as per &lt;number&gt; followed\n by the literal string \"<code>%</code>\" (U+0025)."
-                }
-              ]
+              "html": "The &lt;number&gt; component serialized as per &lt;number&gt; followed\n by the literal string \"<code>%</code>\" (U+0025)."
             },
             {
               "case": "<resolution>",
-              "steps": [
-                {
-                  "html": "The resolution in dots per <a class=\"css\" data-link-type=\"value\" href=\"https://drafts.csswg.org/css-values-4/#px\" id=\"ref-for-px\">CSS pixel</a> serialized as per\n &lt;number&gt; followed by the literal string \"<code>dppx</code>\"."
-                }
-              ]
+              "html": "The resolution in dots per <a class=\"css\" data-link-type=\"value\" href=\"https://drafts.csswg.org/css-values-4/#px\" id=\"ref-for-px\">CSS pixel</a> serialized as per\n &lt;number&gt; followed by the literal string \"<code>dppx</code>\"."
             },
             {
               "case": "<ratio>",
-              "steps": [
-                {
-                  "html": "The numerator serialized as per &lt;number&gt;\n     followed by the literal string \"<code> / </code>\",\n     followed by the denominator serialized as per &lt;number&gt;."
-                }
-              ]
+              "html": "The numerator serialized as per &lt;number&gt;\n     followed by the literal string \"<code> / </code>\",\n     followed by the denominator serialized as per &lt;number&gt;."
             },
             {
               "case": "<shape>",
+              "html": "The return value of the following algorithm:",
+              "rationale": "let",
               "steps": [
                 {
-                  "html": "The return value of the following algorithm:",
-                  "rationale": "let",
-                  "steps": [
-                    {
-                      "html": "Let <var>s</var> be the string \"<code>rect(</code>\"."
-                    },
-                    {
-                      "html": "Let <var>list</var> be a list of the CSS component values belonging to &lt;shape&gt;."
-                    },
-                    {
-                      "html": "Let each item in <var>list</var> be the result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-css-component-value\" id=\"ref-for-serialize-a-css-component-value②\">serialize a CSS component value</a> of that item."
-                    },
-                    {
-                      "html": "Append the result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-comma-separated-list\" id=\"ref-for-serialize-a-comma-separated-list⑤\">serialize a comma-separated list</a> on <var>list</var> to <var>s</var>."
-                    },
-                    {
-                      "html": "Append \"<code>)</code>\" (U+0029) to <var>s</var>."
-                    },
-                    {
-                      "html": "Return <var>s</var>."
-                    }
-                  ]
+                  "html": "Let <var>s</var> be the string \"<code>rect(</code>\"."
+                },
+                {
+                  "html": "Let <var>list</var> be a list of the CSS component values belonging to &lt;shape&gt;."
+                },
+                {
+                  "html": "Let each item in <var>list</var> be the result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-css-component-value\" id=\"ref-for-serialize-a-css-component-value②\">serialize a CSS component value</a> of that item."
+                },
+                {
+                  "html": "Append the result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-comma-separated-list\" id=\"ref-for-serialize-a-comma-separated-list⑤\">serialize a comma-separated list</a> on <var>list</var> to <var>s</var>."
+                },
+                {
+                  "html": "Append \"<code>)</code>\" (U+0029) to <var>s</var>."
+                },
+                {
+                  "html": "Return <var>s</var>."
                 }
               ]
             },
             {
               "case": "<string>",
-              "steps": [
-                {
-                  "html": "The string <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-string\" id=\"ref-for-serialize-a-string⑥\">serialized as a string</a>."
-                }
-              ]
+              "html": "The string <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-string\" id=\"ref-for-serialize-a-string⑥\">serialized as a string</a>."
             },
             {
               "case": "<family-name>",
-              "steps": [
-                {
-                  "html": "The string <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-string\" id=\"ref-for-serialize-a-string⑥\">serialized as a string</a>."
-                }
-              ]
+              "html": "The string <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-string\" id=\"ref-for-serialize-a-string⑥\">serialized as a string</a>."
             },
             {
               "case": "<specific-voice>",
-              "steps": [
-                {
-                  "html": "The string <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-string\" id=\"ref-for-serialize-a-string⑥\">serialized as a string</a>."
-                }
-              ]
+              "html": "The string <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-string\" id=\"ref-for-serialize-a-string⑥\">serialized as a string</a>."
             },
             {
               "case": "<time>",
-              "steps": [
-                {
-                  "html": "The time in seconds serialized as per &lt;number&gt; followed by\n the literal string \"<code>s</code>\"."
-                }
-              ]
+              "html": "The time in seconds serialized as per &lt;number&gt; followed by\n the literal string \"<code>s</code>\"."
             },
             {
               "case": "<url>",
-              "steps": [
-                {
-                  "html": "The <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#absolute-url-string\" id=\"ref-for-absolute-url-string①\">absolute-URL string</a> <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-url\" id=\"ref-for-serialize-a-url③\">serialized as URL</a>. \n     <p class=\"issue\" id=\"issue-c9f9e4e6\"><a class=\"self-link\" href=\"https://drafts.csswg.org/cssom-1/#issue-c9f9e4e6\"></a> This should differentiate declared and computed <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.csswg.org/css-values-4/#url-value\" id=\"ref-for-url-value①\" title=\"Expands to: local url flag\">&lt;url&gt;</a> values, see <a href=\"https://github.com/w3c/csswg-drafts/issues/3195\">#3195</a>.</p>"
-                }
-              ]
+              "html": "The <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#absolute-url-string\" id=\"ref-for-absolute-url-string①\">absolute-URL string</a> <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-url\" id=\"ref-for-serialize-a-url③\">serialized as URL</a>."
             }
           ]
         }
@@ -2026,7 +1902,7 @@
           "html": "Let <var>decls</var> be an empty list of <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#css-declaration\" id=\"ref-for-css-declaration②⑨\">CSS declarations</a>."
         },
         {
-          "html": "If <var>obj</var> is not null, and <var>elt</var> is <a data-link-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#connected\" id=\"ref-for-connected\">connected</a>,\n  part of the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-scoping-1/#flat-tree\" id=\"ref-for-flat-tree\">flat tree</a>,\n  and its <a data-link-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-shadow-including-root\" id=\"ref-for-concept-shadow-including-root\">shadow-including root</a> has a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsers.html#browsing-context\" id=\"ref-for-browsing-context\">browsing context</a> which either\n  doesn’t have a <a data-link-type=\"dfn\">browsing context container</a>, or whose <span>browsing context container</span> is <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/rendering.html#being-rendered\" id=\"ref-for-being-rendered\">being rendered</a>,\n  set <var>decls</var> to a list of all longhand properties that are <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#supported-css-property\" id=\"ref-for-supported-css-property⑤\">supported CSS properties</a>, in lexicographical order,\n  with the value being the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value\">resolved value</a> computed for <var>obj</var> using the style rules associated with <var>doc</var>. Additionally, append to <var>decls</var> all the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-variables-1/#custom-property\" id=\"ref-for-custom-property⑤\">custom properties</a> whose <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value\">computed value</a> for <var>obj</var> is not the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-variables-2/#guaranteed-invalid-value\" id=\"ref-for-guaranteed-invalid-value\">guaranteed-invalid value</a>. \n     <p class=\"issue\" id=\"issue-28428295\"><a class=\"self-link\" href=\"https://drafts.csswg.org/cssom-1/#issue-28428295\"></a> There are UAs that handle shorthands, and all UAs handle shorthands\n  that used to be longhands like <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-overflow-3/#propdef-overflow\" id=\"ref-for-propdef-overflow\">overflow</a>, see <a href=\"https://github.com/w3c/csswg-drafts/issues/2529\">#2529</a>.</p>\n     <p class=\"issue\" id=\"issue-0b704bc1\"><a class=\"self-link\" href=\"https://drafts.csswg.org/cssom-1/#issue-0b704bc1\"></a> Order of custom properties is currently undefined, see <a href=\"https://github.com/w3c/csswg-drafts/issues/4947\">#4947</a>.</p>"
+          "html": "If <var>obj</var> is not null, and <var>elt</var> is <a data-link-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#connected\" id=\"ref-for-connected\">connected</a>,\n  part of the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-scoping-1/#flat-tree\" id=\"ref-for-flat-tree\">flat tree</a>,\n  and its <a data-link-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-shadow-including-root\" id=\"ref-for-concept-shadow-including-root\">shadow-including root</a> has a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsers.html#browsing-context\" id=\"ref-for-browsing-context\">browsing context</a> which either\n  doesn’t have a <a data-link-type=\"dfn\">browsing context container</a>, or whose <span>browsing context container</span> is <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/rendering.html#being-rendered\" id=\"ref-for-being-rendered\">being rendered</a>,\n  set <var>decls</var> to a list of all longhand properties that are <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#supported-css-property\" id=\"ref-for-supported-css-property⑤\">supported CSS properties</a>, in lexicographical order,\n  with the value being the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value\">resolved value</a> computed for <var>obj</var> using the style rules associated with <var>doc</var>. Additionally, append to <var>decls</var> all the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-variables-1/#custom-property\" id=\"ref-for-custom-property⑤\">custom properties</a> whose <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value\">computed value</a> for <var>obj</var> is not the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-variables-2/#guaranteed-invalid-value\" id=\"ref-for-guaranteed-invalid-value\">guaranteed-invalid value</a>."
         },
         {
           "html": "Return a live <a data-link-type=\"dfn\">CSSStyleProperties</a> object with the following properties: \n     <dl>\n      <dt><a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#cssstyledeclaration-computed-flag\" id=\"ref-for-cssstyledeclaration-computed-flag⑦\">computed flag</a> \n      </dt><dd>Set. \n      </dd><dt><a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#cssstyledeclaration-readonly-flag\" id=\"ref-for-cssstyledeclaration-readonly-flag⑦\">readonly flag</a> \n      </dt><dd>Set. \n      </dd><dt><a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#cssstyledeclaration-declarations\" id=\"ref-for-cssstyledeclaration-declarations②⓪\">declarations</a> \n      </dt><dd><var>decls</var>. \n      </dd><dt><a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#cssstyledeclaration-parent-css-rule\" id=\"ref-for-cssstyledeclaration-parent-css-rule⑤\">parent CSS rule</a> \n      </dt><dd>Null. \n      </dd><dt><a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#cssstyledeclaration-owner-node\" id=\"ref-for-cssstyledeclaration-owner-node⑧\">owner node</a> \n      </dt><dd><var>obj</var>. \n     </dd></dl>"
@@ -2042,379 +1918,191 @@
           "steps": [
             {
               "case": "background-color",
-              "steps": [
-                {
-                  "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value②\">resolved value</a> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value\">used value</a>."
-                }
-              ]
+              "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value②\">resolved value</a> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value\">used value</a>."
             },
             {
               "case": "border-block-end-color",
-              "steps": [
-                {
-                  "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value②\">resolved value</a> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value\">used value</a>."
-                }
-              ]
+              "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value②\">resolved value</a> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value\">used value</a>."
             },
             {
               "case": "border-block-start-color",
-              "steps": [
-                {
-                  "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value②\">resolved value</a> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value\">used value</a>."
-                }
-              ]
+              "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value②\">resolved value</a> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value\">used value</a>."
             },
             {
               "case": "border-bottom-color",
-              "steps": [
-                {
-                  "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value②\">resolved value</a> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value\">used value</a>."
-                }
-              ]
+              "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value②\">resolved value</a> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value\">used value</a>."
             },
             {
               "case": "border-inline-end-color",
-              "steps": [
-                {
-                  "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value②\">resolved value</a> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value\">used value</a>."
-                }
-              ]
+              "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value②\">resolved value</a> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value\">used value</a>."
             },
             {
               "case": "border-inline-start-color",
-              "steps": [
-                {
-                  "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value②\">resolved value</a> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value\">used value</a>."
-                }
-              ]
+              "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value②\">resolved value</a> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value\">used value</a>."
             },
             {
               "case": "border-left-color",
-              "steps": [
-                {
-                  "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value②\">resolved value</a> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value\">used value</a>."
-                }
-              ]
+              "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value②\">resolved value</a> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value\">used value</a>."
             },
             {
               "case": "border-right-color",
-              "steps": [
-                {
-                  "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value②\">resolved value</a> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value\">used value</a>."
-                }
-              ]
+              "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value②\">resolved value</a> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value\">used value</a>."
             },
             {
               "case": "border-top-color",
-              "steps": [
-                {
-                  "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value②\">resolved value</a> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value\">used value</a>."
-                }
-              ]
+              "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value②\">resolved value</a> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value\">used value</a>."
             },
             {
               "case": "box-shadow",
-              "steps": [
-                {
-                  "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value②\">resolved value</a> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value\">used value</a>."
-                }
-              ]
+              "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value②\">resolved value</a> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value\">used value</a>."
             },
             {
               "case": "caret-color",
-              "steps": [
-                {
-                  "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value②\">resolved value</a> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value\">used value</a>."
-                }
-              ]
+              "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value②\">resolved value</a> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value\">used value</a>."
             },
             {
               "case": "color",
-              "steps": [
-                {
-                  "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value②\">resolved value</a> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value\">used value</a>."
-                }
-              ]
+              "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value②\">resolved value</a> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value\">used value</a>."
             },
             {
               "case": "outline-color",
-              "steps": [
-                {
-                  "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value②\">resolved value</a> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value\">used value</a>."
-                }
-              ]
+              "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value②\">resolved value</a> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value\">used value</a>."
             },
             {
               "case": "A resolved value special case property like color defined in another specification",
-              "steps": [
-                {
-                  "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value②\">resolved value</a> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value\">used value</a>."
-                }
-              ]
+              "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value②\">resolved value</a> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value\">used value</a>."
             },
             {
               "case": "line-height",
-              "steps": [
-                {
-                  "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value③\">resolved value</a> is <a class=\"property css\" data-link-type=\"property\">normal</a> if the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value①\">computed value</a> is <span class=\"property\">normal</span>, or the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value①\">used value</a> otherwise."
-                }
-              ]
+              "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value③\">resolved value</a> is <a class=\"property css\" data-link-type=\"property\">normal</a> if the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value①\">computed value</a> is <span class=\"property\">normal</span>, or the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value①\">used value</a> otherwise."
             },
             {
               "case": "block-size",
-              "steps": [
-                {
-                  "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
-                }
-              ]
+              "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
             },
             {
               "case": "height",
-              "steps": [
-                {
-                  "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
-                }
-              ]
+              "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
             },
             {
               "case": "inline-size",
-              "steps": [
-                {
-                  "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
-                }
-              ]
+              "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
             },
             {
               "case": "margin-block-end",
-              "steps": [
-                {
-                  "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
-                }
-              ]
+              "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
             },
             {
               "case": "margin-block-start",
-              "steps": [
-                {
-                  "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
-                }
-              ]
+              "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
             },
             {
               "case": "margin-bottom",
-              "steps": [
-                {
-                  "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
-                }
-              ]
+              "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
             },
             {
               "case": "margin-inline-end",
-              "steps": [
-                {
-                  "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
-                }
-              ]
+              "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
             },
             {
               "case": "margin-inline-start",
-              "steps": [
-                {
-                  "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
-                }
-              ]
+              "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
             },
             {
               "case": "margin-left",
-              "steps": [
-                {
-                  "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
-                }
-              ]
+              "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
             },
             {
               "case": "margin-right",
-              "steps": [
-                {
-                  "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
-                }
-              ]
+              "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
             },
             {
               "case": "margin-top",
-              "steps": [
-                {
-                  "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
-                }
-              ]
+              "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
             },
             {
               "case": "padding-block-end",
-              "steps": [
-                {
-                  "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
-                }
-              ]
+              "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
             },
             {
               "case": "padding-block-start",
-              "steps": [
-                {
-                  "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
-                }
-              ]
+              "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
             },
             {
               "case": "padding-bottom",
-              "steps": [
-                {
-                  "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
-                }
-              ]
+              "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
             },
             {
               "case": "padding-inline-end",
-              "steps": [
-                {
-                  "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
-                }
-              ]
+              "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
             },
             {
               "case": "padding-inline-start",
-              "steps": [
-                {
-                  "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
-                }
-              ]
+              "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
             },
             {
               "case": "padding-left",
-              "steps": [
-                {
-                  "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
-                }
-              ]
+              "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
             },
             {
               "case": "padding-right",
-              "steps": [
-                {
-                  "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
-                }
-              ]
+              "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
             },
             {
               "case": "padding-top",
-              "steps": [
-                {
-                  "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
-                }
-              ]
+              "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
             },
             {
               "case": "width",
-              "steps": [
-                {
-                  "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
-                }
-              ]
+              "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
             },
             {
               "case": "A resolved value special case property like height defined in another specification",
-              "steps": [
-                {
-                  "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
-                }
-              ]
+              "html": "If the property applies to the element or pseudo-element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value④\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents\">contents</a>, then the <span id=\"ref-for-resolved-value⑤\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value②\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑥\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value②\">computed value</a>."
             },
             {
               "case": "bottom",
-              "steps": [
-                {
-                  "html": "If the property applies to a positioned element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value⑦\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display①\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none①\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents①\">contents</a>, and the property is not over-constrained,\n then the <span id=\"ref-for-resolved-value⑧\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value③\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑨\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value③\">computed value</a>."
-                }
-              ]
+              "html": "If the property applies to a positioned element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value⑦\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display①\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none①\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents①\">contents</a>, and the property is not over-constrained,\n then the <span id=\"ref-for-resolved-value⑧\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value③\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑨\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value③\">computed value</a>."
             },
             {
               "case": "left",
-              "steps": [
-                {
-                  "html": "If the property applies to a positioned element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value⑦\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display①\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none①\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents①\">contents</a>, and the property is not over-constrained,\n then the <span id=\"ref-for-resolved-value⑧\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value③\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑨\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value③\">computed value</a>."
-                }
-              ]
+              "html": "If the property applies to a positioned element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value⑦\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display①\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none①\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents①\">contents</a>, and the property is not over-constrained,\n then the <span id=\"ref-for-resolved-value⑧\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value③\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑨\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value③\">computed value</a>."
             },
             {
               "case": "inset-block-end",
-              "steps": [
-                {
-                  "html": "If the property applies to a positioned element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value⑦\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display①\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none①\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents①\">contents</a>, and the property is not over-constrained,\n then the <span id=\"ref-for-resolved-value⑧\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value③\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑨\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value③\">computed value</a>."
-                }
-              ]
+              "html": "If the property applies to a positioned element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value⑦\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display①\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none①\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents①\">contents</a>, and the property is not over-constrained,\n then the <span id=\"ref-for-resolved-value⑧\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value③\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑨\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value③\">computed value</a>."
             },
             {
               "case": "inset-block-start",
-              "steps": [
-                {
-                  "html": "If the property applies to a positioned element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value⑦\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display①\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none①\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents①\">contents</a>, and the property is not over-constrained,\n then the <span id=\"ref-for-resolved-value⑧\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value③\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑨\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value③\">computed value</a>."
-                }
-              ]
+              "html": "If the property applies to a positioned element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value⑦\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display①\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none①\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents①\">contents</a>, and the property is not over-constrained,\n then the <span id=\"ref-for-resolved-value⑧\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value③\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑨\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value③\">computed value</a>."
             },
             {
               "case": "inset-inline-end",
-              "steps": [
-                {
-                  "html": "If the property applies to a positioned element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value⑦\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display①\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none①\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents①\">contents</a>, and the property is not over-constrained,\n then the <span id=\"ref-for-resolved-value⑧\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value③\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑨\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value③\">computed value</a>."
-                }
-              ]
+              "html": "If the property applies to a positioned element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value⑦\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display①\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none①\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents①\">contents</a>, and the property is not over-constrained,\n then the <span id=\"ref-for-resolved-value⑧\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value③\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑨\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value③\">computed value</a>."
             },
             {
               "case": "inset-inline-start",
-              "steps": [
-                {
-                  "html": "If the property applies to a positioned element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value⑦\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display①\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none①\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents①\">contents</a>, and the property is not over-constrained,\n then the <span id=\"ref-for-resolved-value⑧\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value③\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑨\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value③\">computed value</a>."
-                }
-              ]
+              "html": "If the property applies to a positioned element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value⑦\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display①\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none①\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents①\">contents</a>, and the property is not over-constrained,\n then the <span id=\"ref-for-resolved-value⑧\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value③\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑨\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value③\">computed value</a>."
             },
             {
               "case": "right",
-              "steps": [
-                {
-                  "html": "If the property applies to a positioned element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value⑦\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display①\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none①\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents①\">contents</a>, and the property is not over-constrained,\n then the <span id=\"ref-for-resolved-value⑧\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value③\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑨\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value③\">computed value</a>."
-                }
-              ]
+              "html": "If the property applies to a positioned element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value⑦\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display①\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none①\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents①\">contents</a>, and the property is not over-constrained,\n then the <span id=\"ref-for-resolved-value⑧\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value③\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑨\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value③\">computed value</a>."
             },
             {
               "case": "top",
-              "steps": [
-                {
-                  "html": "If the property applies to a positioned element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value⑦\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display①\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none①\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents①\">contents</a>, and the property is not over-constrained,\n then the <span id=\"ref-for-resolved-value⑧\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value③\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑨\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value③\">computed value</a>."
-                }
-              ]
+              "html": "If the property applies to a positioned element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value⑦\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display①\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none①\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents①\">contents</a>, and the property is not over-constrained,\n then the <span id=\"ref-for-resolved-value⑧\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value③\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑨\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value③\">computed value</a>."
             },
             {
               "case": "A resolved value special case property like top defined in another specification",
-              "steps": [
-                {
-                  "html": "If the property applies to a positioned element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value⑦\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display①\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none①\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents①\">contents</a>, and the property is not over-constrained,\n then the <span id=\"ref-for-resolved-value⑧\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value③\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑨\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value③\">computed value</a>."
-                }
-              ]
+              "html": "If the property applies to a positioned element and the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value⑦\">resolved value</a> of the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-display-4/#propdef-display\" id=\"ref-for-propdef-display①\">display</a> property is not <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-none\" id=\"ref-for-valdef-display-none①\">none</a> or <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-display-4/#valdef-display-contents\" id=\"ref-for-valdef-display-contents①\">contents</a>, and the property is not over-constrained,\n then the <span id=\"ref-for-resolved-value⑧\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#used-value\" id=\"ref-for-used-value③\">used value</a>. Otherwise the <span id=\"ref-for-resolved-value⑨\">resolved value</span> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value③\">computed value</a>."
             },
             {
               "case": "A resolved value special case property defined in another specification",
-              "steps": [
-                {
-                  "html": "As defined in the relevant specification."
-                }
-              ]
+              "html": "As defined in the relevant specification."
             },
             {
               "case": "Any other property",
-              "steps": [
-                {
-                  "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value①⓪\">resolved value</a> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value④\">computed value</a>."
-                }
-              ]
+              "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#resolved-value\" id=\"ref-for-resolved-value①⓪\">resolved value</a> is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-cascade-5/#computed-value\" id=\"ref-for-computed-value④\">computed value</a>."
             }
           ]
         }

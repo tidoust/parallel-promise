@@ -31,7 +31,7 @@
           "html": "<p>Let <var>tb</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key-type\" id=\"ref-for-key-type②\" aria-expanded=\"false\" class=\"has-ref-hint\">type</a> of <var>b</var>.</p>"
         },
         {
-          "html": "If <var>ta</var> does not equal <var>tb</var>, then run these steps:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"compare-two-keys\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">compare two keys</dfn> <var>a</var> and <var>b</var>, run these steps:",
           "rationale": "if",
           "steps": [
             {
@@ -70,7 +70,7 @@
           "html": "<p>Let <var>vb</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key-value\" id=\"ref-for-key-value②\" aria-expanded=\"false\" class=\"has-ref-hint\">value</a> of <var>b</var>.</p>"
         },
         {
-          "html": "Switch on <var>ta</var>:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"compare-two-keys\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">compare two keys</dfn> <var>a</var> and <var>b</var>, run these steps:",
           "rationale": ".switch",
           "steps": [
             {
@@ -78,122 +78,102 @@
               "steps": [
                 {
                   "case": "number",
+                  "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"compare-two-keys\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">compare two keys</dfn> <var>a</var> and <var>b</var>, run these steps:",
+                  "rationale": "if",
                   "steps": [
                     {
-                      "html": "<ol>\n         <li data-md=\"\">\n          <p>If <var>va</var> is greater than <var>vb</var>, then return 1.</p>\n         </li><li data-md=\"\">\n          <p>If <var>va</var> is less than <var>vb</var>, then return -1.</p>\n         </li><li data-md=\"\">\n          <p>Return 0.</p>\n        </li></ol>",
-                      "rationale": "if",
-                      "steps": [
-                        {
-                          "html": "<p>If <var>va</var> is greater than <var>vb</var>, then return 1.</p>"
-                        },
-                        {
-                          "html": "<p>If <var>va</var> is less than <var>vb</var>, then return -1.</p>"
-                        },
-                        {
-                          "html": "<p>Return 0.</p>"
-                        }
-                      ]
+                      "html": "<p>If <var>va</var> is greater than <var>vb</var>, then return 1.</p>"
+                    },
+                    {
+                      "html": "<p>If <var>va</var> is less than <var>vb</var>, then return -1.</p>"
+                    },
+                    {
+                      "html": "<p>Return 0.</p>"
                     }
                   ]
                 },
                 {
                   "case": "date",
+                  "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"compare-two-keys\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">compare two keys</dfn> <var>a</var> and <var>b</var>, run these steps:",
+                  "rationale": "if",
                   "steps": [
                     {
-                      "html": "<ol>\n         <li data-md=\"\">\n          <p>If <var>va</var> is greater than <var>vb</var>, then return 1.</p>\n         </li><li data-md=\"\">\n          <p>If <var>va</var> is less than <var>vb</var>, then return -1.</p>\n         </li><li data-md=\"\">\n          <p>Return 0.</p>\n        </li></ol>",
-                      "rationale": "if",
-                      "steps": [
-                        {
-                          "html": "<p>If <var>va</var> is greater than <var>vb</var>, then return 1.</p>"
-                        },
-                        {
-                          "html": "<p>If <var>va</var> is less than <var>vb</var>, then return -1.</p>"
-                        },
-                        {
-                          "html": "<p>Return 0.</p>"
-                        }
-                      ]
+                      "html": "<p>If <var>va</var> is greater than <var>vb</var>, then return 1.</p>"
+                    },
+                    {
+                      "html": "<p>If <var>va</var> is less than <var>vb</var>, then return -1.</p>"
+                    },
+                    {
+                      "html": "<p>Return 0.</p>"
                     }
                   ]
                 },
                 {
                   "case": "string",
+                  "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"compare-two-keys\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">compare two keys</dfn> <var>a</var> and <var>b</var>, run these steps:",
+                  "rationale": "if",
                   "steps": [
                     {
-                      "html": "<ol>\n         <li data-md=\"\">\n          <p>If <var>va</var> is <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#code-unit-less-than\" id=\"ref-for-code-unit-less-than①\" aria-expanded=\"false\" class=\"has-ref-hint\">code unit less than</a> <var>vb</var>, then return -1.</p>\n         </li><li data-md=\"\">\n          <p>If <var>vb</var> is <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#code-unit-less-than\" id=\"ref-for-code-unit-less-than②\" aria-expanded=\"false\" class=\"has-ref-hint\">code unit less than</a> <var>va</var>, then return 1.</p>\n         </li><li data-md=\"\">\n          <p>Return 0.</p>\n        </li></ol>",
-                      "rationale": "if",
-                      "steps": [
-                        {
-                          "html": "<p>If <var>va</var> is <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#code-unit-less-than\" id=\"ref-for-code-unit-less-than①\" aria-expanded=\"false\" class=\"has-ref-hint\">code unit less than</a> <var>vb</var>, then return -1.</p>"
-                        },
-                        {
-                          "html": "<p>If <var>vb</var> is <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#code-unit-less-than\" id=\"ref-for-code-unit-less-than②\" aria-expanded=\"false\" class=\"has-ref-hint\">code unit less than</a> <var>va</var>, then return 1.</p>"
-                        },
-                        {
-                          "html": "<p>Return 0.</p>"
-                        }
-                      ]
+                      "html": "<p>If <var>va</var> is <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#code-unit-less-than\" id=\"ref-for-code-unit-less-than①\" aria-expanded=\"false\" class=\"has-ref-hint\">code unit less than</a> <var>vb</var>, then return -1.</p>"
+                    },
+                    {
+                      "html": "<p>If <var>vb</var> is <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#code-unit-less-than\" id=\"ref-for-code-unit-less-than②\" aria-expanded=\"false\" class=\"has-ref-hint\">code unit less than</a> <var>va</var>, then return 1.</p>"
+                    },
+                    {
+                      "html": "<p>Return 0.</p>"
                     }
                   ]
                 },
                 {
                   "case": "binary",
+                  "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"compare-two-keys\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">compare two keys</dfn> <var>a</var> and <var>b</var>, run these steps:",
+                  "rationale": "if",
                   "steps": [
                     {
-                      "html": "<ol>\n         <li data-md=\"\">\n          <p>If <var>va</var> is <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#byte-less-than\" id=\"ref-for-byte-less-than\" aria-expanded=\"false\" class=\"has-ref-hint\">byte less than</a> <var>vb</var>, then return -1.</p>\n         </li><li data-md=\"\">\n          <p>If <var>vb</var> is <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#byte-less-than\" id=\"ref-for-byte-less-than①\" aria-expanded=\"false\" class=\"has-ref-hint\">byte less than</a> <var>va</var>, then return 1.</p>\n         </li><li data-md=\"\">\n          <p>Return 0.</p>\n        </li></ol>",
-                      "rationale": "if",
-                      "steps": [
-                        {
-                          "html": "<p>If <var>va</var> is <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#byte-less-than\" id=\"ref-for-byte-less-than\" aria-expanded=\"false\" class=\"has-ref-hint\">byte less than</a> <var>vb</var>, then return -1.</p>"
-                        },
-                        {
-                          "html": "<p>If <var>vb</var> is <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#byte-less-than\" id=\"ref-for-byte-less-than①\" aria-expanded=\"false\" class=\"has-ref-hint\">byte less than</a> <var>va</var>, then return 1.</p>"
-                        },
-                        {
-                          "html": "<p>Return 0.</p>"
-                        }
-                      ]
+                      "html": "<p>If <var>va</var> is <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#byte-less-than\" id=\"ref-for-byte-less-than\" aria-expanded=\"false\" class=\"has-ref-hint\">byte less than</a> <var>vb</var>, then return -1.</p>"
+                    },
+                    {
+                      "html": "<p>If <var>vb</var> is <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#byte-less-than\" id=\"ref-for-byte-less-than①\" aria-expanded=\"false\" class=\"has-ref-hint\">byte less than</a> <var>va</var>, then return 1.</p>"
+                    },
+                    {
+                      "html": "<p>Return 0.</p>"
                     }
                   ]
                 },
                 {
                   "case": "array",
+                  "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"compare-two-keys\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">compare two keys</dfn> <var>a</var> and <var>b</var>, run these steps:",
+                  "rationale": "let",
                   "steps": [
                     {
-                      "html": "<ol>\n         <li data-md=\"\">\n          <p>Let <var>length</var> be the lesser of <var>va</var>’s <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-size\" id=\"ref-for-list-size\" aria-expanded=\"false\" class=\"has-ref-hint\">size</a> and <var>vb</var>’s <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-size\" id=\"ref-for-list-size①\" aria-expanded=\"false\" class=\"has-ref-hint\">size</a>.</p>\n         </li><li data-md=\"\">\n          <p>Let <var>i</var> be 0.</p>\n         </li><li data-md=\"\">\n          <p>While <var>i</var> is less than <var>length</var>, then:</p>\n          <ol>\n           <li data-md=\"\">\n            <p>Let <var>c</var> be the result of recursively <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#compare-two-keys\" id=\"ref-for-compare-two-keys\" aria-expanded=\"false\" class=\"has-ref-hint\">comparing two keys</a> with <var>va</var>[<var>i</var>] and <var>vb</var>[<var>i</var>].</p>\n           </li><li data-md=\"\">\n            <p>If <var>c</var> is not 0, return <var>c</var>.</p>\n           </li><li data-md=\"\">\n            <p>Increase <var>i</var> by 1.</p>\n          </li></ol>\n         </li><li data-md=\"\">\n          <p>If <var>va</var>’s <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-size\" id=\"ref-for-list-size②\" aria-expanded=\"false\" class=\"has-ref-hint\">size</a> is greater than <var>vb</var>’s <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-size\" id=\"ref-for-list-size③\" aria-expanded=\"false\" class=\"has-ref-hint\">size</a>, then return 1.</p>\n         </li><li data-md=\"\">\n          <p>If <var>va</var>’s <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-size\" id=\"ref-for-list-size④\" aria-expanded=\"false\" class=\"has-ref-hint\">size</a> is less than <var>vb</var>’s <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-size\" id=\"ref-for-list-size⑤\" aria-expanded=\"false\" class=\"has-ref-hint\">size</a>, then return -1.</p>\n         </li><li data-md=\"\">\n          <p>Return 0.</p>\n        </li></ol>",
+                      "html": "<p>Let <var>length</var> be the lesser of <var>va</var>’s <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-size\" id=\"ref-for-list-size\" aria-expanded=\"false\" class=\"has-ref-hint\">size</a> and <var>vb</var>’s <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-size\" id=\"ref-for-list-size①\" aria-expanded=\"false\" class=\"has-ref-hint\">size</a>.</p>"
+                    },
+                    {
+                      "html": "<p>Let <var>i</var> be 0.</p>"
+                    },
+                    {
+                      "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"compare-two-keys\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">compare two keys</dfn> <var>a</var> and <var>b</var>, run these steps:",
                       "rationale": "let",
                       "steps": [
                         {
-                          "html": "<p>Let <var>length</var> be the lesser of <var>va</var>’s <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-size\" id=\"ref-for-list-size\" aria-expanded=\"false\" class=\"has-ref-hint\">size</a> and <var>vb</var>’s <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-size\" id=\"ref-for-list-size①\" aria-expanded=\"false\" class=\"has-ref-hint\">size</a>.</p>"
+                          "html": "<p>Let <var>c</var> be the result of recursively <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#compare-two-keys\" id=\"ref-for-compare-two-keys\" aria-expanded=\"false\" class=\"has-ref-hint\">comparing two keys</a> with <var>va</var>[<var>i</var>] and <var>vb</var>[<var>i</var>].</p>"
                         },
                         {
-                          "html": "<p>Let <var>i</var> be 0.</p>"
+                          "html": "<p>If <var>c</var> is not 0, return <var>c</var>.</p>"
                         },
                         {
-                          "html": "While <var>i</var> is less than <var>length</var>, then:",
-                          "rationale": "let",
-                          "steps": [
-                            {
-                              "html": "<p>Let <var>c</var> be the result of recursively <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#compare-two-keys\" id=\"ref-for-compare-two-keys\" aria-expanded=\"false\" class=\"has-ref-hint\">comparing two keys</a> with <var>va</var>[<var>i</var>] and <var>vb</var>[<var>i</var>].</p>"
-                            },
-                            {
-                              "html": "<p>If <var>c</var> is not 0, return <var>c</var>.</p>"
-                            },
-                            {
-                              "html": "<p>Increase <var>i</var> by 1.</p>"
-                            }
-                          ]
-                        },
-                        {
-                          "html": "<p>If <var>va</var>’s <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-size\" id=\"ref-for-list-size②\" aria-expanded=\"false\" class=\"has-ref-hint\">size</a> is greater than <var>vb</var>’s <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-size\" id=\"ref-for-list-size③\" aria-expanded=\"false\" class=\"has-ref-hint\">size</a>, then return 1.</p>"
-                        },
-                        {
-                          "html": "<p>If <var>va</var>’s <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-size\" id=\"ref-for-list-size④\" aria-expanded=\"false\" class=\"has-ref-hint\">size</a> is less than <var>vb</var>’s <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-size\" id=\"ref-for-list-size⑤\" aria-expanded=\"false\" class=\"has-ref-hint\">size</a>, then return -1.</p>"
-                        },
-                        {
-                          "html": "<p>Return 0.</p>"
+                          "html": "<p>Increase <var>i</var> by 1.</p>"
                         }
                       ]
+                    },
+                    {
+                      "html": "<p>If <var>va</var>’s <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-size\" id=\"ref-for-list-size②\" aria-expanded=\"false\" class=\"has-ref-hint\">size</a> is greater than <var>vb</var>’s <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-size\" id=\"ref-for-list-size③\" aria-expanded=\"false\" class=\"has-ref-hint\">size</a>, then return 1.</p>"
+                    },
+                    {
+                      "html": "<p>If <var>va</var>’s <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-size\" id=\"ref-for-list-size④\" aria-expanded=\"false\" class=\"has-ref-hint\">size</a> is less than <var>vb</var>’s <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-size\" id=\"ref-for-list-size⑤\" aria-expanded=\"false\" class=\"has-ref-hint\">size</a>, then return -1.</p>"
+                    },
+                    {
+                      "html": "<p>Return 0.</p>"
                     }
                   ]
                 }
@@ -239,7 +219,7 @@
           "html": "<p>If there are no <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#transaction-concept\" id=\"ref-for-transaction-concept③①\" aria-expanded=\"false\" class=\"has-ref-hint\">transactions</a> with <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#transaction-cleanup-event-loop\" id=\"ref-for-transaction-cleanup-event-loop\" aria-expanded=\"false\" class=\"has-ref-hint\">cleanup\nevent loop</a> matching the current <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#event-loop\" id=\"ref-for-event-loop①\" aria-expanded=\"false\" class=\"has-ref-hint\">event loop</a>, return false.</p>"
         },
         {
-          "html": "For each <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#transaction-concept\" id=\"ref-for-transaction-concept③②\" aria-expanded=\"false\" class=\"has-ref-hint\">transaction</a> <var>transaction</var> with <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#transaction-cleanup-event-loop\" id=\"ref-for-transaction-cleanup-event-loop①\" aria-expanded=\"false\" class=\"has-ref-hint\">cleanup event loop</a> matching the current <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#event-loop\" id=\"ref-for-event-loop②\" aria-expanded=\"false\" class=\"has-ref-hint\">event loop</a>:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-for=\"transaction\" data-dfn-type=\"dfn\" data-export=\"\" id=\"cleanup-indexed-database-transactions\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">cleanup Indexed Database transactions</dfn>, run the following steps.\nThey will return true if any transactions were cleaned up, or false otherwise.",
           "rationale": "set",
           "steps": [
             {
@@ -328,7 +308,7 @@
       ]
     },
     {
-      "name": "result",
+      "name": "IDBRequest/result",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbrequest-result",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBRequest\" data-dfn-type=\"attribute\" data-export=\"\" id=\"dom-idbrequest-result\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>result</code></dfn> getter steps are:",
       "rationale": ".algorithm",
@@ -342,7 +322,7 @@
       ]
     },
     {
-      "name": "error",
+      "name": "IDBRequest/error",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbrequest-error",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBRequest\" data-dfn-type=\"attribute\" data-export=\"\" id=\"dom-idbrequest-error\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>error</code></dfn> getter steps are:",
       "rationale": ".algorithm",
@@ -388,7 +368,7 @@
       ]
     },
     {
-      "name": "open(name, version)",
+      "name": "IDBFactory/open(name, version)",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbfactory-open",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBFactory\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"open(name, version)|open(name)\" id=\"dom-idbfactory-open\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>open(<var>name</var>, <var>version</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -406,18 +386,18 @@
           "html": "<p>Let <var>request</var> be a new <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#request-open-request\" id=\"ref-for-request-open-request①①\" aria-expanded=\"false\" class=\"has-ref-hint\">open request</a>.</p>"
         },
         {
-          "html": "Run these steps <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#in-parallel\" id=\"ref-for-in-parallel\" aria-expanded=\"false\" class=\"has-ref-hint\">in parallel</a>:",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBFactory\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"open(name, version)|open(name)\" id=\"dom-idbfactory-open\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>open(<var>name</var>, <var>version</var>)</code></dfn> method steps are:",
           "rationale": "let",
           "steps": [
             {
               "html": "<p>Let <var>result</var> be the result of <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#open-a-database-connection\" id=\"ref-for-open-a-database-connection①\" aria-expanded=\"false\" class=\"has-ref-hint\">opening a database connection</a>, with <var>storageKey</var>, <var>name</var>, <var>version</var> if given and undefined\notherwise, and <var>request</var>.</p>"
             },
             {
-              "html": "<a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task\" id=\"ref-for-queue-a-task①\" aria-expanded=\"false\" class=\"has-ref-hint\">Queue a task</a> to run these steps:",
+              "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBFactory\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"open(name, version)|open(name)\" id=\"dom-idbfactory-open\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>open(<var>name</var>, <var>version</var>)</code></dfn> method steps are:",
               "rationale": "if",
               "steps": [
                 {
-                  "html": "If <var>result</var> is an error, then:",
+                  "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBFactory\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"open(name, version)|open(name)\" id=\"dom-idbfactory-open\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>open(<var>name</var>, <var>version</var>)</code></dfn> method steps are:",
                   "rationale": "set",
                   "steps": [
                     {
@@ -435,7 +415,7 @@
                   ]
                 },
                 {
-                  "html": "Otherwise:",
+                  "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBFactory\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"open(name, version)|open(name)\" id=\"dom-idbfactory-open\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>open(<var>name</var>, <var>version</var>)</code></dfn> method steps are:",
                   "rationale": "set",
                   "steps": [
                     {
@@ -459,7 +439,7 @@
       ]
     },
     {
-      "name": "deleteDatabase(name)",
+      "name": "IDBFactory/deleteDatabase(name)",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbfactory-deletedatabase",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBFactory\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-idbfactory-deletedatabase\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>deleteDatabase(<var>name</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -474,7 +454,7 @@
           "html": "<p>Let <var>request</var> be a new <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#request-open-request\" id=\"ref-for-request-open-request①②\" aria-expanded=\"false\" class=\"has-ref-hint\">open request</a>.</p>"
         },
         {
-          "html": "Run these steps <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#in-parallel\" id=\"ref-for-in-parallel①\" aria-expanded=\"false\" class=\"has-ref-hint\">in parallel</a>:",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBFactory\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-idbfactory-deletedatabase\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>deleteDatabase(<var>name</var>)</code></dfn> method steps are:",
           "rationale": "let",
           "steps": [
             {
@@ -484,7 +464,7 @@
               "html": "<p>Set <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#request-processed-flag\" id=\"ref-for-request-processed-flag①\" aria-expanded=\"false\" class=\"has-ref-hint\">processed flag</a> to true.</p>"
             },
             {
-              "html": "<a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task\" id=\"ref-for-queue-a-task②\" aria-expanded=\"false\" class=\"has-ref-hint\">Queue a task</a> to run these steps:",
+              "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBFactory\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-idbfactory-deletedatabase\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>deleteDatabase(<var>name</var>)</code></dfn> method steps are:",
               "rationale": "if",
               "steps": [
                 {
@@ -503,7 +483,7 @@
       ]
     },
     {
-      "name": "databases()",
+      "name": "IDBFactory/databases()",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbfactory-databases",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBFactory\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-idbfactory-databases\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>databases()</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -518,7 +498,7 @@
           "html": "<p>Let <var>p</var> be <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#a-new-promise\" id=\"ref-for-a-new-promise\" aria-expanded=\"false\" class=\"has-ref-hint\">a new promise</a>.</p>"
         },
         {
-          "html": "Run these steps <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#in-parallel\" id=\"ref-for-in-parallel②\" aria-expanded=\"false\" class=\"has-ref-hint\">in parallel</a>:",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBFactory\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-idbfactory-databases\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>databases()</code></dfn> method steps are:",
           "rationale": "let",
           "steps": [
             {
@@ -528,7 +508,7 @@
               "html": "<p>Let <var>result</var> be a new <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list\" id=\"ref-for-list②\" aria-expanded=\"false\" class=\"has-ref-hint\">list</a>.</p>"
             },
             {
-              "html": "<a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-iterate\" id=\"ref-for-list-iterate\" aria-expanded=\"false\" class=\"has-ref-hint\">For each</a> <var>db</var> of <var>databases</var>:",
+              "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBFactory\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-idbfactory-databases\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>databases()</code></dfn> method steps are:",
               "rationale": "let",
               "steps": [
                 {
@@ -556,7 +536,7 @@
       ]
     },
     {
-      "name": "cmp(first, second)",
+      "name": "IDBFactory/cmp(first, second)",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbfactory-cmp",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBFactory\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-idbfactory-cmp\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>cmp(<var>first</var>, <var>second</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -579,7 +559,7 @@
       ]
     },
     {
-      "name": "objectStoreNames",
+      "name": "IDBDatabase/objectStoreNames",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbdatabase-objectstorenames",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBDatabase\" data-dfn-type=\"attribute\" data-export=\"\" id=\"dom-idbdatabase-objectstorenames\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>objectStoreNames</code></dfn> getter steps are:",
       "rationale": ".algorithm",
@@ -593,7 +573,7 @@
       ]
     },
     {
-      "name": "createObjectStore(name, options)",
+      "name": "IDBDatabase/createObjectStore(name, options)",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbdatabase-createobjectstore",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBDatabase\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"createObjectStore(name, options)|createObjectStore(name)\" id=\"dom-idbdatabase-createobjectstore\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>createObjectStore(<var>name</var>, <var>options</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -631,7 +611,7 @@
       ]
     },
     {
-      "name": "deleteObjectStore(name)",
+      "name": "IDBDatabase/deleteObjectStore(name)",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbdatabase-deleteobjectstore",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBDatabase\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-idbdatabase-deleteobjectstore\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>deleteObjectStore(<var>name</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -660,7 +640,7 @@
       ]
     },
     {
-      "name": "transaction(storeNames, mode, options)",
+      "name": "IDBDatabase/transaction(storeNames, mode, options)",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbdatabase-transaction",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBDatabase\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"transaction(storeNames, mode, options)|transaction(storeNames, mode)|transaction(storeNames)\" id=\"dom-idbdatabase-transaction\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>transaction(<var>storeNames</var>, <var>mode</var>, <var>options</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -695,7 +675,7 @@
       ]
     },
     {
-      "name": "close()",
+      "name": "IDBDatabase/close()",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbdatabase-close",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBDatabase\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-idbdatabase-close\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>close()</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -743,7 +723,7 @@
       ]
     },
     {
-      "name": "indexNames",
+      "name": "IDBObjectStore/indexNames",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbobjectstore-indexnames",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBObjectStore\" data-dfn-type=\"attribute\" data-export=\"\" id=\"dom-idbobjectstore-indexnames\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>indexNames</code></dfn> getter steps are:",
       "rationale": ".algorithm",
@@ -784,7 +764,7 @@
           "html": "<p>If <var>store</var> uses <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#object-store-out-of-line-keys\" id=\"ref-for-object-store-out-of-line-keys①\" aria-expanded=\"false\" class=\"has-ref-hint\">out-of-line keys</a> and has no <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key-generator\" id=\"ref-for-key-generator①⑥\" aria-expanded=\"false\" class=\"has-ref-hint\">key\ngenerator</a> and <var>key</var> was not given, <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#dfn-throw\" id=\"ref-for-dfn-throw③⓪\" aria-expanded=\"false\" class=\"has-ref-hint\">throw</a> a\n\"<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#dataerror\" id=\"ref-for-dataerror⑧\" aria-expanded=\"false\" class=\"has-ref-hint\">DataError</a></code>\" <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#idl-DOMException\" id=\"ref-for-idl-DOMException④⑥\" aria-expanded=\"false\" class=\"has-ref-hint\">DOMException</a></code>.</p>"
         },
         {
-          "html": "If <var>key</var> was given, then:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"add-or-put\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">add or put</dfn> with <var>handle</var>, <var>value</var>, <var>key</var>, and <var>no-overwrite flag</var>, run these steps:",
           "rationale": "let",
           "steps": [
             {
@@ -805,7 +785,7 @@
           "html": "<p>Let <var>clone</var> be a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#clone\" id=\"ref-for-clone\" aria-expanded=\"false\" class=\"has-ref-hint\">clone</a> of <var>value</var> in <var>targetRealm</var> during <var>transaction</var>.\nRethrow any exceptions.</p>"
         },
         {
-          "html": "If <var>store</var> uses <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#object-store-in-line-keys\" id=\"ref-for-object-store-in-line-keys③\" aria-expanded=\"false\" class=\"has-ref-hint\">in-line keys</a>, then:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"add-or-put\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">add or put</dfn> with <var>handle</var>, <var>value</var>, <var>key</var>, and <var>no-overwrite flag</var>, run these steps:",
           "rationale": "let",
           "steps": [
             {
@@ -818,7 +798,7 @@
               "html": "<p>If <var>kpk</var> is not failure, let <var>key</var> be <var>kpk</var>.</p>"
             },
             {
-              "html": "Otherwise (<var>kpk</var> is failure):",
+              "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"add-or-put\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">add or put</dfn> with <var>handle</var>, <var>value</var>, <var>key</var>, and <var>no-overwrite flag</var>, run these steps:",
               "rationale": "if",
               "steps": [
                 {
@@ -840,7 +820,7 @@
       ]
     },
     {
-      "name": "delete(query)",
+      "name": "IDBObjectStore/delete(query)",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbobjectstore-delete",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBObjectStore\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-idbobjectstore-delete\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>delete(<var>query</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -872,7 +852,7 @@
       ]
     },
     {
-      "name": "clear()",
+      "name": "IDBObjectStore/clear()",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbobjectstore-clear",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBObjectStore\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-idbobjectstore-clear\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>clear()</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -901,7 +881,7 @@
       ]
     },
     {
-      "name": "get(query)",
+      "name": "IDBObjectStore/get(query)",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbobjectstore-get",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBObjectStore\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-idbobjectstore-get\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>get(<var>query</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -930,7 +910,7 @@
       ]
     },
     {
-      "name": "getKey(query)",
+      "name": "IDBObjectStore/getKey(query)",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbobjectstore-getkey",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBObjectStore\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-idbobjectstore-getkey\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>getKey(<var>query</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -959,7 +939,7 @@
       ]
     },
     {
-      "name": "getAll(query, count)",
+      "name": "IDBObjectStore/getAll(query, count)",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbobjectstore-getall",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBObjectStore\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"getAll(query, count)|getAll(query)|getAll()\" id=\"dom-idbobjectstore-getall\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>getAll(<var>query</var>, <var>count</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -988,7 +968,7 @@
       ]
     },
     {
-      "name": "getAllKeys(query, count)",
+      "name": "IDBObjectStore/getAllKeys(query, count)",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbobjectstore-getallkeys",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBObjectStore\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"getAllKeys(query, count)|getAllKeys(query)|getAllKeys()\" id=\"dom-idbobjectstore-getallkeys\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>getAllKeys(<var>query</var>, <var>count</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -1017,7 +997,7 @@
       ]
     },
     {
-      "name": "count(query)",
+      "name": "IDBObjectStore/count(query)",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbobjectstore-count",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBObjectStore\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"count(query)|count()\" id=\"dom-idbobjectstore-count\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>count(<var>query</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -1046,7 +1026,7 @@
       ]
     },
     {
-      "name": "openCursor(query, direction)",
+      "name": "IDBObjectStore/openCursor(query, direction)",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbobjectstore-opencursor",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBObjectStore\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"openCursor(query, direction)|openCursor(query)|openCursor()\" id=\"dom-idbobjectstore-opencursor\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>openCursor(<var>query</var>, <var>direction</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -1084,7 +1064,7 @@
       ]
     },
     {
-      "name": "openKeyCursor(query, direction)",
+      "name": "IDBObjectStore/openKeyCursor(query, direction)",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbobjectstore-openkeycursor",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBObjectStore\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"openKeyCursor(query, direction)|openKeyCursor(query)|openKeyCursor()\" id=\"dom-idbobjectstore-openkeycursor\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>openKeyCursor(<var>query</var>, <var>direction</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -1122,7 +1102,7 @@
       ]
     },
     {
-      "name": "createIndex(name, keyPath, options)",
+      "name": "IDBObjectStore/createIndex(name, keyPath, options)",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbobjectstore-createindex",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBObjectStore\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"createIndex(name, keyPath, options)|createIndex(name, keyPath)\" id=\"dom-idbobjectstore-createindex\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>createIndex(<var>name</var>, <var>keyPath</var>, <var>options</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -1169,7 +1149,7 @@
       ]
     },
     {
-      "name": "index(name)",
+      "name": "IDBObjectStore/index(name)",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbobjectstore-index",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBObjectStore\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-idbobjectstore-index\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>index(<var>name</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -1195,7 +1175,7 @@
       ]
     },
     {
-      "name": "deleteIndex(name)",
+      "name": "IDBObjectStore/deleteIndex(name)",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbobjectstore-deleteindex",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBObjectStore\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-idbobjectstore-deleteindex\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>deleteIndex(<var>name</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -1264,7 +1244,7 @@
       ]
     },
     {
-      "name": "get(query)",
+      "name": "IDBIndex/get(query)",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbindex-get",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBIndex\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-idbindex-get\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>get(<var>query</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -1293,7 +1273,7 @@
       ]
     },
     {
-      "name": "getKey(query)",
+      "name": "IDBIndex/getKey(query)",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbindex-getkey",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBIndex\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-idbindex-getkey\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>getKey(<var>query</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -1322,7 +1302,7 @@
       ]
     },
     {
-      "name": "getAll(query, count)",
+      "name": "IDBIndex/getAll(query, count)",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbindex-getall",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBIndex\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"getAll(query, count)|getAll(query)|getAll()\" id=\"dom-idbindex-getall\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>getAll(<var>query</var>, <var>count</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -1351,7 +1331,7 @@
       ]
     },
     {
-      "name": "getAllKeys(query, count)",
+      "name": "IDBIndex/getAllKeys(query, count)",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbindex-getallkeys",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBIndex\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"getAllKeys(query, count)|getAllKeys(query)|getAllKeys()\" id=\"dom-idbindex-getallkeys\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>getAllKeys(<var>query</var>, <var>count</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -1380,7 +1360,7 @@
       ]
     },
     {
-      "name": "count(query)",
+      "name": "IDBIndex/count(query)",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbindex-count",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBIndex\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"count(query)|count()\" id=\"dom-idbindex-count\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>count(<var>query</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -1409,7 +1389,7 @@
       ]
     },
     {
-      "name": "openCursor(query, direction)",
+      "name": "IDBIndex/openCursor(query, direction)",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbindex-opencursor",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBIndex\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"openCursor(query, direction)|openCursor(query)|openCursor()\" id=\"dom-idbindex-opencursor\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>openCursor(<var>query</var>, <var>direction</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -1447,7 +1427,7 @@
       ]
     },
     {
-      "name": "openKeyCursor(query, direction)",
+      "name": "IDBIndex/openKeyCursor(query, direction)",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbindex-openkeycursor",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBIndex\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"openKeyCursor(query, direction)|openKeyCursor(query)|openKeyCursor()\" id=\"dom-idbindex-openkeycursor\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>openKeyCursor(<var>query</var>, <var>direction</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -1485,7 +1465,7 @@
       ]
     },
     {
-      "name": "only(value)",
+      "name": "IDBKeyRange/only(value)",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbkeyrange-only",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBKeyRange\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-idbkeyrange-only\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>only(<var>value</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -1502,7 +1482,7 @@
       ]
     },
     {
-      "name": "lowerBound(lower, open)",
+      "name": "IDBKeyRange/lowerBound(lower, open)",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbkeyrange-lowerbound",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBKeyRange\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"lowerBound(lower, open)|lowerBound(lower)\" id=\"dom-idbkeyrange-lowerbound\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>lowerBound(<var>lower</var>, <var>open</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -1519,7 +1499,7 @@
       ]
     },
     {
-      "name": "upperBound(upper, open)",
+      "name": "IDBKeyRange/upperBound(upper, open)",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbkeyrange-upperbound",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBKeyRange\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"upperBound(upper, open)|upperBound(upper)\" id=\"dom-idbkeyrange-upperbound\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>upperBound(<var>upper</var>, <var>open</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -1536,7 +1516,7 @@
       ]
     },
     {
-      "name": "bound(lower, upper, lowerOpen, upperOpen)",
+      "name": "IDBKeyRange/bound(lower, upper, lowerOpen, upperOpen)",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbkeyrange-bound",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBKeyRange\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"bound(lower, upper, lowerOpen, upperOpen)|bound(lower, upper, lowerOpen)|bound(lower, upper)\" id=\"dom-idbkeyrange-bound\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>bound(<var>lower</var>, <var>upper</var>, <var>lowerOpen</var>, <var>upperOpen</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -1562,7 +1542,7 @@
       ]
     },
     {
-      "name": "includes(key)",
+      "name": "IDBKeyRange/includes(key)",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbkeyrange-includes",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBKeyRange\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-idbkeyrange-includes\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>includes(<var>key</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -1579,7 +1559,7 @@
       ]
     },
     {
-      "name": "advance(count)",
+      "name": "IDBCursor/advance(count)",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbcursor-advance",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBCursor\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-idbcursor-advance\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>advance(<var>count</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -1620,7 +1600,7 @@
       ]
     },
     {
-      "name": "continue(key)",
+      "name": "IDBCursor/continue(key)",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbcursor-continue",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBCursor\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"continue(key)|continue()\" id=\"dom-idbcursor-continue\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>continue(<var>key</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -1638,7 +1618,7 @@
           "html": "<p>If <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\" id=\"ref-for-this①①①\" aria-expanded=\"false\" class=\"has-ref-hint\">this</a>'s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#cursor-got-value-flag\" id=\"ref-for-cursor-got-value-flag⑦\" aria-expanded=\"false\" class=\"has-ref-hint\">got value flag</a> is false, indicating that\nthe cursor is being iterated or has iterated past its end, <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#dfn-throw\" id=\"ref-for-dfn-throw⑨⑨\" aria-expanded=\"false\" class=\"has-ref-hint\">throw</a> an \"<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#invalidstateerror\" id=\"ref-for-invalidstateerror④⑨\" aria-expanded=\"false\" class=\"has-ref-hint\">InvalidStateError</a></code>\" <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#idl-DOMException\" id=\"ref-for-idl-DOMException①③⓪\" aria-expanded=\"false\" class=\"has-ref-hint\">DOMException</a></code>.</p>"
         },
         {
-          "html": "If <var>key</var> is given, then:",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBCursor\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"continue(key)|continue()\" id=\"dom-idbcursor-continue\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>continue(<var>key</var>)</code></dfn> method steps are:",
           "rationale": "let",
           "steps": [
             {
@@ -1679,7 +1659,7 @@
       ]
     },
     {
-      "name": "continuePrimaryKey(key, primaryKey)",
+      "name": "IDBCursor/continuePrimaryKey(key, primaryKey)",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbcursor-continueprimarykey",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBCursor\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-idbcursor-continueprimarykey\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>continuePrimaryKey(<var>key</var>, <var>primaryKey</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -1753,7 +1733,7 @@
       ]
     },
     {
-      "name": "update(value)",
+      "name": "IDBCursor/update(value)",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbcursor-update",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBCursor\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-idbcursor-update\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>update(<var>value</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -1783,7 +1763,7 @@
           "html": "<p>Let <var>clone</var> be a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#clone\" id=\"ref-for-clone①\" aria-expanded=\"false\" class=\"has-ref-hint\">clone</a> of <var>value</var> in <var>targetRealm</var> during <var>transaction</var>.\nRethrow any exceptions.</p>"
         },
         {
-          "html": "If <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\" id=\"ref-for-this①④③\" aria-expanded=\"false\" class=\"has-ref-hint\">this</a>'s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#cursor-effective-object-store\" id=\"ref-for-cursor-effective-object-store⑥\" aria-expanded=\"false\" class=\"has-ref-hint\">effective object store</a> uses <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#object-store-in-line-keys\" id=\"ref-for-object-store-in-line-keys⑤\" aria-expanded=\"false\" class=\"has-ref-hint\">in-line\nkeys</a>, then:",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBCursor\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-idbcursor-update\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>update(<var>value</var>)</code></dfn> method steps are:",
           "rationale": "let",
           "steps": [
             {
@@ -1803,7 +1783,7 @@
       ]
     },
     {
-      "name": "delete()",
+      "name": "IDBCursor/delete()",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbcursor-delete",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBCursor\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-idbcursor-delete\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>delete()</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -1835,7 +1815,7 @@
       ]
     },
     {
-      "name": "objectStoreNames",
+      "name": "IDBTransaction/objectStoreNames",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbtransaction-objectstorenames",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBTransaction\" data-dfn-type=\"attribute\" data-export=\"\" id=\"dom-idbtransaction-objectstorenames\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>objectStoreNames</code></dfn> getter steps are:",
       "rationale": ".algorithm",
@@ -1849,7 +1829,7 @@
       ]
     },
     {
-      "name": "objectStore(name)",
+      "name": "IDBTransaction/objectStore(name)",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbtransaction-objectstore",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBTransaction\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-idbtransaction-objectstore\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>objectStore(<var>name</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -1866,7 +1846,7 @@
       ]
     },
     {
-      "name": "abort()",
+      "name": "IDBTransaction/abort()",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbtransaction-abort",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBTransaction\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-idbtransaction-abort\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>abort()</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -1880,7 +1860,7 @@
       ]
     },
     {
-      "name": "commit()",
+      "name": "IDBTransaction/commit()",
       "href": "https://w3c.github.io/IndexedDB/#dom-idbtransaction-commit",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"IDBTransaction\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-idbtransaction-commit\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>commit()</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -1927,7 +1907,7 @@
           "html": "<p>Set <var>connection</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#connection-version\" id=\"ref-for-connection-version②\" aria-expanded=\"false\" class=\"has-ref-hint\">version</a> to <var>version</var>.</p>"
         },
         {
-          "html": "If <var>db</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#database-version\" id=\"ref-for-database-version①②\" aria-expanded=\"false\" class=\"has-ref-hint\">version</a> is less than <var>version</var>, then:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"open-a-database-connection\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">open a database connection</dfn> with <var>storageKey</var> which requested the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#database\" id=\"ref-for-database⑤⑤\" aria-expanded=\"false\" class=\"has-ref-hint\">database</a> to be opened, a database <var>name</var>, a database <var>version</var>, and a <var>request</var>, run these steps:",
           "rationale": "let",
           "steps": [
             {
@@ -2035,7 +2015,7 @@
           "html": "<p>Set <var>transaction</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#transaction-state\" id=\"ref-for-transaction-state④⓪\" aria-expanded=\"false\" class=\"has-ref-hint\">state</a> to <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#transaction-committing\" id=\"ref-for-transaction-committing②\" aria-expanded=\"false\" class=\"has-ref-hint\">committing</a>.</p>"
         },
         {
-          "html": "Run the following steps <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#in-parallel\" id=\"ref-for-in-parallel③\" aria-expanded=\"false\" class=\"has-ref-hint\">in parallel</a>:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"commit-a-transaction\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">commit a transaction</dfn> with the <var>transaction</var> to commit, run these steps:",
           "rationale": "wait",
           "steps": [
             {
@@ -2051,7 +2031,7 @@
               "html": "<p>If an error occurs while writing the changes to the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#database\" id=\"ref-for-database⑥②\" aria-expanded=\"false\" class=\"has-ref-hint\">database</a>,\nthen run <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#abort-a-transaction\" id=\"ref-for-abort-a-transaction⑤\" aria-expanded=\"false\" class=\"has-ref-hint\">abort a transaction</a> with <var>transaction</var> and an\nappropriate type for the error, for example \"<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#quotaexceedederror\" id=\"ref-for-quotaexceedederror⑥\" aria-expanded=\"false\" class=\"has-ref-hint\">QuotaExceededError</a></code>\" or\n\"<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#unknownerror\" id=\"ref-for-unknownerror⑤\" aria-expanded=\"false\" class=\"has-ref-hint\">UnknownError</a></code>\" <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#idl-DOMException\" id=\"ref-for-idl-DOMException①⑦⑥\" aria-expanded=\"false\" class=\"has-ref-hint\">DOMException</a></code>, and terminate these steps.</p>"
             },
             {
-              "html": "<a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task\" id=\"ref-for-queue-a-task⑧\" aria-expanded=\"false\" class=\"has-ref-hint\">Queue a task</a> to run these steps:",
+              "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"commit-a-transaction\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">commit a transaction</dfn> with the <var>transaction</var> to commit, run these steps:",
               "rationale": "if",
               "steps": [
                 {
@@ -2091,7 +2071,7 @@
           "html": "<p>If <var>error</var> is not null, set <var>transaction</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#transaction-error\" id=\"ref-for-transaction-error①\" aria-expanded=\"false\" class=\"has-ref-hint\">error</a> to <var>error</var>.</p>"
         },
         {
-          "html": "<a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-iterate\" id=\"ref-for-list-iterate③\" aria-expanded=\"false\" class=\"has-ref-hint\">For each</a> <var>request</var> of <var>transaction</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#transaction-request-list\" id=\"ref-for-transaction-request-list①\" aria-expanded=\"false\" class=\"has-ref-hint\">request list</a>,\nabort the steps to <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#asynchronously-execute-a-request\" id=\"ref-for-asynchronously-execute-a-request②③\" aria-expanded=\"false\" class=\"has-ref-hint\">asynchronously execute a request</a> for <var>request</var>,\nset <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#request-processed-flag\" id=\"ref-for-request-processed-flag⑤\" aria-expanded=\"false\" class=\"has-ref-hint\">processed flag</a> to true,\nand <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task\" id=\"ref-for-queue-a-task⑨\" aria-expanded=\"false\" class=\"has-ref-hint\">queue a task</a> to run these steps:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"abort-a-transaction\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">abort a transaction</dfn> with the <var>transaction</var> to abort, and <var>error</var>, run these steps:",
           "rationale": "set",
           "steps": [
             {
@@ -2109,7 +2089,7 @@
           ]
         },
         {
-          "html": "<a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task\" id=\"ref-for-queue-a-task①⓪\" aria-expanded=\"false\" class=\"has-ref-hint\">Queue a task</a> to run these steps:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"abort-a-transaction\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">abort a transaction</dfn> with the <var>transaction</var> to abort, and <var>error</var>, run these steps:",
           "rationale": "if",
           "steps": [
             {
@@ -2119,7 +2099,7 @@
               "html": "<p><a data-link-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-event-fire\" id=\"ref-for-concept-event-fire⑥\" aria-expanded=\"false\" class=\"has-ref-hint\">Fire an event</a> named <code class=\"idl\"><a class=\"idl-code has-ref-hint\" data-link-type=\"event\" href=\"https://w3c.github.io/IndexedDB/#eventdef-idbtransaction-abort\" id=\"ref-for-eventdef-idbtransaction-abort③\" aria-expanded=\"false\">abort</a></code> at <var>transaction</var> with its <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://dom.spec.whatwg.org/#dom-event-bubbles\" id=\"ref-for-dom-event-bubbles④\" aria-expanded=\"false\" class=\"has-ref-hint\">bubbles</a></code> attribute initialized to true.</p>"
             },
             {
-              "html": "If <var>transaction</var> is an <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#upgrade-transaction\" id=\"ref-for-upgrade-transaction⑤②\" aria-expanded=\"false\" class=\"has-ref-hint\">upgrade transaction</a>, then:",
+              "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"abort-a-transaction\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">abort a transaction</dfn> with the <var>transaction</var> to abort, and <var>error</var>, run these steps:",
               "rationale": "let",
               "steps": [
                 {
@@ -2146,7 +2126,7 @@
     {
       "name": "asynchronously execute a request",
       "href": "https://w3c.github.io/IndexedDB/#asynchronously-execute-a-request",
-      "html": "These steps can be aborted at any point if the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#transaction-concept\" id=\"ref-for-transaction-concept⑦⑥\" aria-expanded=\"false\" class=\"has-ref-hint\">transaction</a> the\ncreated <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#request\" id=\"ref-for-request③⑧\" aria-expanded=\"false\" class=\"has-ref-hint\">request</a> belongs to is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#transaction-abort\" id=\"ref-for-transaction-abort⑧\" aria-expanded=\"false\" class=\"has-ref-hint\">aborted</a> using the steps to <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#abort-a-transaction\" id=\"ref-for-abort-a-transaction⑥\" aria-expanded=\"false\" class=\"has-ref-hint\">abort a transaction</a>.",
+      "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"asynchronously-execute-a-request\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">asynchronously execute a request</dfn> with the <var>source</var> object and an <var>operation</var> to perform on a database, and an optional <var>request</var>, run these steps:",
       "rationale": ".algorithm",
       "steps": [
         {
@@ -2162,7 +2142,7 @@
           "html": "<p>Add <var>request</var> to the end of <var>transaction</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#transaction-request-list\" id=\"ref-for-transaction-request-list②\" aria-expanded=\"false\" class=\"has-ref-hint\">request list</a>.</p>"
         },
         {
-          "html": "Run these steps <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#in-parallel\" id=\"ref-for-in-parallel④\" aria-expanded=\"false\" class=\"has-ref-hint\">in parallel</a>:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"asynchronously-execute-a-request\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">asynchronously execute a request</dfn> with the <var>source</var> object and an <var>operation</var> to perform on a database, and an optional <var>request</var>, run these steps:",
           "rationale": "wait",
           "steps": [
             {
@@ -2181,7 +2161,7 @@
               "html": "<p>Set <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#request-processed-flag\" id=\"ref-for-request-processed-flag⑦\" aria-expanded=\"false\" class=\"has-ref-hint\">processed flag</a> to true.</p>"
             },
             {
-              "html": "<a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task\" id=\"ref-for-queue-a-task①①\" aria-expanded=\"false\" class=\"has-ref-hint\">Queue a task</a> to run these steps:",
+              "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"asynchronously-execute-a-request\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">asynchronously execute a request</dfn> with the <var>source</var> object and an <var>operation</var> to perform on a database, and an optional <var>request</var>, run these steps:",
               "rationale": "remove",
               "steps": [
                 {
@@ -2191,7 +2171,7 @@
                   "html": "<p>Set <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#request-done-flag\" id=\"ref-for-request-done-flag①⑦\" aria-expanded=\"false\" class=\"has-ref-hint\">done flag</a> to true.</p>"
                 },
                 {
-                  "html": "If <var>result</var> is an error, then:",
+                  "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"asynchronously-execute-a-request\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">asynchronously execute a request</dfn> with the <var>source</var> object and an <var>operation</var> to perform on a database, and an optional <var>request</var>, run these steps:",
                   "rationale": "set",
                   "steps": [
                     {
@@ -2206,7 +2186,7 @@
                   ]
                 },
                 {
-                  "html": "Otherwise:",
+                  "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"asynchronously-execute-a-request\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">asynchronously execute a request</dfn> with the <var>source</var> object and an <var>operation</var> to perform on a database, and an optional <var>request</var>, run these steps:",
                   "rationale": "set",
                   "steps": [
                     {
@@ -2263,7 +2243,7 @@
           "html": "<p>Set <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#request-processed-flag\" id=\"ref-for-request-processed-flag⑧\" aria-expanded=\"false\" class=\"has-ref-hint\">processed flag</a> to true.</p>"
         },
         {
-          "html": "<a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task\" id=\"ref-for-queue-a-task①②\" aria-expanded=\"false\" class=\"has-ref-hint\">Queue a task</a> to run these steps:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"upgrade-a-database\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">upgrade a database</dfn> with <var>connection</var> (a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#connection\" id=\"ref-for-connection⑥④\" aria-expanded=\"false\" class=\"has-ref-hint\">connection</a>), a new <var>version</var>, and a <var>request</var>, run these steps:",
           "rationale": "set",
           "steps": [
             {
@@ -2297,7 +2277,7 @@
     {
       "name": "abort an upgrade transaction",
       "href": "https://w3c.github.io/IndexedDB/#abort-an-upgrade-transaction",
-      "html": "<span class=\"marker\">NOTE:</span> These steps are run as needed by the steps to <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#abort-a-transaction\" id=\"ref-for-abort-a-transaction①⓪\" aria-expanded=\"false\" class=\"has-ref-hint\">abort a\n  transaction</a>, which revert changes to the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#database\" id=\"ref-for-database⑥⑧\" aria-expanded=\"false\" class=\"has-ref-hint\">database</a> including\n  the set of associated <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#object-store\" id=\"ref-for-object-store⑨⑦\" aria-expanded=\"false\" class=\"has-ref-hint\">object stores</a> and <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#index-concept\" id=\"ref-for-index-concept④①\" aria-expanded=\"false\" class=\"has-ref-hint\">indexes</a>, as well\n  as the change to the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#database-version\" id=\"ref-for-database-version②①\" aria-expanded=\"false\" class=\"has-ref-hint\">version</a>.",
+      "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"abort-an-upgrade-transaction\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">abort an upgrade transaction</dfn> with <var>transaction</var>, run these steps:",
       "rationale": ".algorithm",
       "steps": [
         {
@@ -2313,7 +2293,7 @@
           "html": "<p>Set <var>connection</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#connection-object-store-set\" id=\"ref-for-connection-object-store-set③\" aria-expanded=\"false\" class=\"has-ref-hint\">object store set</a> to the set of <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#object-store\" id=\"ref-for-object-store⑨⑧\" aria-expanded=\"false\" class=\"has-ref-hint\">object stores</a> in <var>database</var> if <var>database</var> previously\nexisted, or the empty set if <var>database</var> was newly created.</p>"
         },
         {
-          "html": "For each <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#object-store-handle\" id=\"ref-for-object-store-handle①②\" aria-expanded=\"false\" class=\"has-ref-hint\">object store handle</a> <var>handle</var> associated with <var>transaction</var>, including those for <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#object-store\" id=\"ref-for-object-store⑨⑨\" aria-expanded=\"false\" class=\"has-ref-hint\">object stores</a> that\nwere created or deleted during <var>transaction</var>:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"abort-an-upgrade-transaction\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">abort an upgrade transaction</dfn> with <var>transaction</var>, run these steps:",
           "rationale": "if",
           "steps": [
             {
@@ -2325,7 +2305,7 @@
           ]
         },
         {
-          "html": "For each <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#index-handle\" id=\"ref-for-index-handle⑨\" aria-expanded=\"false\" class=\"has-ref-hint\">index handle</a> <var>handle</var> associated with <var>transaction</var>,\nincluding those for <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#index-concept\" id=\"ref-for-index-concept④③\" aria-expanded=\"false\" class=\"has-ref-hint\">indexes</a> that were created or deleted\nduring <var>transaction</var>:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"abort-an-upgrade-transaction\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">abort an upgrade transaction</dfn> with <var>transaction</var>, run these steps:",
           "rationale": "if",
           "steps": [
             {
@@ -2363,7 +2343,7 @@
           "html": "<p><a data-link-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-event-dispatch\" id=\"ref-for-concept-event-dispatch②\" aria-expanded=\"false\" class=\"has-ref-hint\">Dispatch</a> <var>event</var> at <var>request</var> with <var>legacyOutputDidListenersThrowFlag</var>.</p>"
         },
         {
-          "html": "If <var>transaction</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#transaction-state\" id=\"ref-for-transaction-state⑤①\" aria-expanded=\"false\" class=\"has-ref-hint\">state</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#transaction-active\" id=\"ref-for-transaction-active④⑤\" aria-expanded=\"false\" class=\"has-ref-hint\">active</a>,\nthen:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"fire-a-success-event\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">fire a success event</dfn> at a <var>request</var>, run these steps:",
           "rationale": "set",
           "steps": [
             {
@@ -2407,7 +2387,7 @@
           "html": "<p><a data-link-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-event-dispatch\" id=\"ref-for-concept-event-dispatch③\" aria-expanded=\"false\" class=\"has-ref-hint\">Dispatch</a> <var>event</var> at <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#request\" id=\"ref-for-request④⓪\" aria-expanded=\"false\" class=\"has-ref-hint\">request</a> with <var>legacyOutputDidListenersThrowFlag</var>.</p>"
         },
         {
-          "html": "If <var>transaction</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#transaction-state\" id=\"ref-for-transaction-state⑤⑤\" aria-expanded=\"false\" class=\"has-ref-hint\">state</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#transaction-active\" id=\"ref-for-transaction-active④⑦\" aria-expanded=\"false\" class=\"has-ref-hint\">active</a>,\nthen:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"fire-an-error-event\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">fire an error event</dfn> at a <var>request</var>, run these steps:",
           "rationale": "set",
           "steps": [
             {
@@ -2459,11 +2439,11 @@
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "If <var>store</var> uses a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key-generator\" id=\"ref-for-key-generator①⑧\" aria-expanded=\"false\" class=\"has-ref-hint\">key generator</a>, then:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"store-a-record-into-an-object-store\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">store a record into an object store</dfn> with <var>store</var>, <var>value</var>, an optional <var>key</var>, and a <var>no-overwrite flag</var>, run these steps:",
           "rationale": "if",
           "steps": [
             {
-              "html": "If <var>key</var> is undefined, then:",
+              "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"store-a-record-into-an-object-store\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">store a record into an object store</dfn> with <var>store</var>, <var>value</var>, an optional <var>key</var>, and a <var>no-overwrite flag</var>, run these steps:",
               "rationale": "let",
               "steps": [
                 {
@@ -2492,7 +2472,7 @@
           "html": "<p>Store a record in <var>store</var> containing <var>key</var> as its key and <a data-link-type=\"dfn\" href=\"https://tc39.github.io/ecma262/#sec-algorithm-conventions\" id=\"ref-for-sec-algorithm-conventions③\" aria-expanded=\"false\" class=\"has-ref-hint\">!</a> <a data-link-type=\"abstract-op\" href=\"https://html.spec.whatwg.org/multipage/structured-data.html#structuredserializeforstorage\" id=\"ref-for-structuredserializeforstorage④\" aria-expanded=\"false\" class=\"has-ref-hint\">StructuredSerializeForStorage</a>(<var>value</var>)\nas its value. The record is stored in the object store’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#object-store-list-of-records\" id=\"ref-for-object-store-list-of-records\" aria-expanded=\"false\" class=\"has-ref-hint\">list of records</a> such that the list is sorted\naccording to the key of the records in <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#greater-than\" id=\"ref-for-greater-than⑧\" aria-expanded=\"false\" class=\"has-ref-hint\">ascending</a> order.</p>"
         },
         {
-          "html": "For each <var>index</var> which <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#index-referenced\" id=\"ref-for-index-referenced⑧\" aria-expanded=\"false\" class=\"has-ref-hint\">references</a> <var>store</var>:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"store-a-record-into-an-object-store\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">store a record into an object store</dfn> with <var>store</var>, <var>value</var>, an optional <var>key</var>, and a <var>no-overwrite flag</var>, run these steps:",
           "rationale": "let",
           "steps": [
             {
@@ -2556,7 +2536,7 @@
           "html": "<p>Let <var>list</var> be an empty <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list\" id=\"ref-for-list⑦\" aria-expanded=\"false\" class=\"has-ref-hint\">list</a>.</p>"
         },
         {
-          "html": "<a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-iterate\" id=\"ref-for-list-iterate④\" aria-expanded=\"false\" class=\"has-ref-hint\">For each</a> <var>record</var> of <var>records</var>:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-lt=\"retrieve multiple values from an object store\" data-noexport=\"\" id=\"retrieve-multiple-values-from-an-object-store\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">retrieve multiple values from an object\nstore</dfn> with <var>targetRealm</var>, <var>store</var>, <var>range</var> and optional <var>count</var>, run these steps:",
           "rationale": "let",
           "steps": [
             {
@@ -2608,7 +2588,7 @@
           "html": "<p>Let <var>list</var> be an empty <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list\" id=\"ref-for-list⑧\" aria-expanded=\"false\" class=\"has-ref-hint\">list</a>.</p>"
         },
         {
-          "html": "<a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-iterate\" id=\"ref-for-list-iterate⑤\" aria-expanded=\"false\" class=\"has-ref-hint\">For each</a> <var>record</var> of <var>records</var>:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"retrieve-multiple-keys-from-an-object-store\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">retrieve multiple keys from an object store</dfn> with <var>store</var>, <var>range</var> and optional <var>count</var>, run these steps:",
           "rationale": "let",
           "steps": [
             {
@@ -2660,7 +2640,7 @@
           "html": "<p>Let <var>list</var> be an empty <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list\" id=\"ref-for-list⑨\" aria-expanded=\"false\" class=\"has-ref-hint\">list</a>.</p>"
         },
         {
-          "html": "<a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-iterate\" id=\"ref-for-list-iterate⑥\" aria-expanded=\"false\" class=\"has-ref-hint\">For each</a> <var>record</var> of <var>records</var>:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-lt=\"retrieve multiple referenced values from an index\" data-noexport=\"\" id=\"retrieve-multiple-referenced-values-from-an-index\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">retrieve multiple referenced values from an\nindex</dfn> with <var>targetRealm</var>, <var>index</var>, <var>range</var> and optional <var>count</var>, run these steps:",
           "rationale": "let",
           "steps": [
             {
@@ -2712,7 +2692,7 @@
           "html": "<p>Let <var>list</var> be an empty <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list\" id=\"ref-for-list①⓪\" aria-expanded=\"false\" class=\"has-ref-hint\">list</a>.</p>"
         },
         {
-          "html": "<a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-iterate\" id=\"ref-for-list-iterate⑦\" aria-expanded=\"false\" class=\"has-ref-hint\">For each</a> <var>record</var> of <var>records</var>:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"retrieve-multiple-values-from-an-index\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">retrieve multiple values from an index</dfn> with <var>index</var>, <var>range</var> and optional <var>count</var>, run these steps:",
           "rationale": "let",
           "steps": [
             {
@@ -2807,11 +2787,11 @@
           "html": "<p>If <var>count</var> is not given, let <var>count</var> be 1.</p>"
         },
         {
-          "html": "While <var>count</var> is greater than 0:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"iterate-a-cursor\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">iterate a cursor</dfn> with <var>targetRealm</var>, <var>cursor</var>, an optional <var>key</var> and <var>primaryKey</var> to iterate to, and an optional <var>count</var>, run these steps:",
           "rationale": "switch",
           "steps": [
             {
-              "html": "Switch on <var>direction</var>:",
+              "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"iterate-a-cursor\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">iterate a cursor</dfn> with <var>targetRealm</var>, <var>cursor</var>, an optional <var>key</var> and <var>primaryKey</var> to iterate to, and an optional <var>count</var>, run these steps:",
               "rationale": ".switch",
               "steps": [
                 {
@@ -2819,42 +2799,26 @@
                   "steps": [
                     {
                       "case": "\"next\"",
-                      "steps": [
-                        {
-                          "html": "<p>Let <var>found record</var> be the first record in <var>records</var> which\n  satisfy all of the following requirements:</p>\n          <ul>\n           <li data-md=\"\">\n            <p>If <var>key</var> is defined, the record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#greater-than\" id=\"ref-for-greater-than①③\" aria-expanded=\"false\" class=\"has-ref-hint\">greater\n  than</a> or <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#equal-to\" id=\"ref-for-equal-to①④\" aria-expanded=\"false\" class=\"has-ref-hint\">equal to</a> <var>key</var>.</p>\n           </li><li data-md=\"\">\n            <p>If <var>primaryKey</var> is defined, the record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#equal-to\" id=\"ref-for-equal-to①⑤\" aria-expanded=\"false\" class=\"has-ref-hint\">equal\n  to</a> <var>key</var> and the record’s value is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#greater-than\" id=\"ref-for-greater-than①④\" aria-expanded=\"false\" class=\"has-ref-hint\">greater\n  than</a> or <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#equal-to\" id=\"ref-for-equal-to①⑥\" aria-expanded=\"false\" class=\"has-ref-hint\">equal to</a> <var>primaryKey</var>, or the\n  record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#greater-than\" id=\"ref-for-greater-than①⑤\" aria-expanded=\"false\" class=\"has-ref-hint\">greater than</a> <var>key</var>.</p>\n           </li><li data-md=\"\">\n            <p>If <var>position</var> is defined, and <var>source</var> is an <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#object-store\" id=\"ref-for-object-store①⓪③\" aria-expanded=\"false\" class=\"has-ref-hint\">object store</a>, the record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#greater-than\" id=\"ref-for-greater-than①⑥\" aria-expanded=\"false\" class=\"has-ref-hint\">greater than</a> <var>position</var>.</p>\n           </li><li data-md=\"\">\n            <p>If <var>position</var> is defined, and <var>source</var> is an <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#index-concept\" id=\"ref-for-index-concept⑤⓪\" aria-expanded=\"false\" class=\"has-ref-hint\">index</a>, the record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#equal-to\" id=\"ref-for-equal-to①⑦\" aria-expanded=\"false\" class=\"has-ref-hint\">equal to</a> <var>position</var> and the record’s value is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#greater-than\" id=\"ref-for-greater-than①⑦\" aria-expanded=\"false\" class=\"has-ref-hint\">greater\n  than</a> <var>object store position</var> or the record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#greater-than\" id=\"ref-for-greater-than①⑧\" aria-expanded=\"false\" class=\"has-ref-hint\">greater than</a> <var>position</var>.</p>\n           </li><li data-md=\"\">\n            <p>The record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#in\" id=\"ref-for-in①③\" aria-expanded=\"false\" class=\"has-ref-hint\">in</a> <var>range</var>.</p>\n          </li></ul>"
-                        }
-                      ]
+                      "html": "<p>Let <var>found record</var> be the first record in <var>records</var> which\n  satisfy all of the following requirements:</p>\n          <ul>\n           <li data-md=\"\">\n            <p>If <var>key</var> is defined, the record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#greater-than\" id=\"ref-for-greater-than①③\" aria-expanded=\"false\" class=\"has-ref-hint\">greater\n  than</a> or <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#equal-to\" id=\"ref-for-equal-to①④\" aria-expanded=\"false\" class=\"has-ref-hint\">equal to</a> <var>key</var>.</p>\n           </li><li data-md=\"\">\n            <p>If <var>primaryKey</var> is defined, the record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#equal-to\" id=\"ref-for-equal-to①⑤\" aria-expanded=\"false\" class=\"has-ref-hint\">equal\n  to</a> <var>key</var> and the record’s value is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#greater-than\" id=\"ref-for-greater-than①④\" aria-expanded=\"false\" class=\"has-ref-hint\">greater\n  than</a> or <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#equal-to\" id=\"ref-for-equal-to①⑥\" aria-expanded=\"false\" class=\"has-ref-hint\">equal to</a> <var>primaryKey</var>, or the\n  record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#greater-than\" id=\"ref-for-greater-than①⑤\" aria-expanded=\"false\" class=\"has-ref-hint\">greater than</a> <var>key</var>.</p>\n           </li><li data-md=\"\">\n            <p>If <var>position</var> is defined, and <var>source</var> is an <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#object-store\" id=\"ref-for-object-store①⓪③\" aria-expanded=\"false\" class=\"has-ref-hint\">object store</a>, the record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#greater-than\" id=\"ref-for-greater-than①⑥\" aria-expanded=\"false\" class=\"has-ref-hint\">greater than</a> <var>position</var>.</p>\n           </li><li data-md=\"\">\n            <p>If <var>position</var> is defined, and <var>source</var> is an <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#index-concept\" id=\"ref-for-index-concept⑤⓪\" aria-expanded=\"false\" class=\"has-ref-hint\">index</a>, the record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#equal-to\" id=\"ref-for-equal-to①⑦\" aria-expanded=\"false\" class=\"has-ref-hint\">equal to</a> <var>position</var> and the record’s value is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#greater-than\" id=\"ref-for-greater-than①⑦\" aria-expanded=\"false\" class=\"has-ref-hint\">greater\n  than</a> <var>object store position</var> or the record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#greater-than\" id=\"ref-for-greater-than①⑧\" aria-expanded=\"false\" class=\"has-ref-hint\">greater than</a> <var>position</var>.</p>\n           </li><li data-md=\"\">\n            <p>The record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#in\" id=\"ref-for-in①③\" aria-expanded=\"false\" class=\"has-ref-hint\">in</a> <var>range</var>.</p>\n          </li></ul>"
                     },
                     {
                       "case": "\"nextunique\"",
-                      "steps": [
-                        {
-                          "html": "<p>Let <var>found record</var> be the first record in <var>records</var> which\n  satisfy all of the following requirements:</p>\n          <ul>\n           <li data-md=\"\">\n            <p>If <var>key</var> is defined, the record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#greater-than\" id=\"ref-for-greater-than①⑨\" aria-expanded=\"false\" class=\"has-ref-hint\">greater\n  than</a> or <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#equal-to\" id=\"ref-for-equal-to①⑧\" aria-expanded=\"false\" class=\"has-ref-hint\">equal to</a> <var>key</var>.</p>\n           </li><li data-md=\"\">\n            <p>If <var>position</var> is defined, the record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#greater-than\" id=\"ref-for-greater-than②⓪\" aria-expanded=\"false\" class=\"has-ref-hint\">greater\n  than</a> <var>position</var>.</p>\n           </li><li data-md=\"\">\n            <p>The record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#in\" id=\"ref-for-in①④\" aria-expanded=\"false\" class=\"has-ref-hint\">in</a> <var>range</var>.</p>\n          </li></ul>"
-                        }
-                      ]
+                      "html": "<p>Let <var>found record</var> be the first record in <var>records</var> which\n  satisfy all of the following requirements:</p>\n          <ul>\n           <li data-md=\"\">\n            <p>If <var>key</var> is defined, the record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#greater-than\" id=\"ref-for-greater-than①⑨\" aria-expanded=\"false\" class=\"has-ref-hint\">greater\n  than</a> or <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#equal-to\" id=\"ref-for-equal-to①⑧\" aria-expanded=\"false\" class=\"has-ref-hint\">equal to</a> <var>key</var>.</p>\n           </li><li data-md=\"\">\n            <p>If <var>position</var> is defined, the record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#greater-than\" id=\"ref-for-greater-than②⓪\" aria-expanded=\"false\" class=\"has-ref-hint\">greater\n  than</a> <var>position</var>.</p>\n           </li><li data-md=\"\">\n            <p>The record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#in\" id=\"ref-for-in①④\" aria-expanded=\"false\" class=\"has-ref-hint\">in</a> <var>range</var>.</p>\n          </li></ul>"
                     },
                     {
                       "case": "\"prev\"",
-                      "steps": [
-                        {
-                          "html": "<p>Let <var>found record</var> be the last record in <var>records</var> which\n  satisfy all of the following requirements:</p>\n          <ul>\n           <li data-md=\"\">\n            <p>If <var>key</var> is defined, the record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#less-than\" id=\"ref-for-less-than⑤\" aria-expanded=\"false\" class=\"has-ref-hint\">less\n  than</a> or <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#equal-to\" id=\"ref-for-equal-to①⑨\" aria-expanded=\"false\" class=\"has-ref-hint\">equal to</a> <var>key</var>.</p>\n           </li><li data-md=\"\">\n            <p>If <var>primaryKey</var> is defined, the record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#equal-to\" id=\"ref-for-equal-to②⓪\" aria-expanded=\"false\" class=\"has-ref-hint\">equal\n  to</a> <var>key</var> and the record’s value is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#less-than\" id=\"ref-for-less-than⑥\" aria-expanded=\"false\" class=\"has-ref-hint\">less than</a> or <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#equal-to\" id=\"ref-for-equal-to②①\" aria-expanded=\"false\" class=\"has-ref-hint\">equal to</a> <var>primaryKey</var>, or the record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#less-than\" id=\"ref-for-less-than⑦\" aria-expanded=\"false\" class=\"has-ref-hint\">less than</a> <var>key</var>.</p>\n           </li><li data-md=\"\">\n            <p>If <var>position</var> is defined, and <var>source</var> is an <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#object-store\" id=\"ref-for-object-store①⓪④\" aria-expanded=\"false\" class=\"has-ref-hint\">object store</a>, the record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#less-than\" id=\"ref-for-less-than⑧\" aria-expanded=\"false\" class=\"has-ref-hint\">less\n  than</a> <var>position</var>.</p>\n           </li><li data-md=\"\">\n            <p>If <var>position</var> is defined, and <var>source</var> is an <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#index-concept\" id=\"ref-for-index-concept⑤①\" aria-expanded=\"false\" class=\"has-ref-hint\">index</a>, the record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#equal-to\" id=\"ref-for-equal-to②②\" aria-expanded=\"false\" class=\"has-ref-hint\">equal to</a> <var>position</var> and the record’s value is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#less-than\" id=\"ref-for-less-than⑨\" aria-expanded=\"false\" class=\"has-ref-hint\">less than</a> <var>object store position</var> or the record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#less-than\" id=\"ref-for-less-than①⓪\" aria-expanded=\"false\" class=\"has-ref-hint\">less than</a> <var>position</var>.</p>\n           </li><li data-md=\"\">\n            <p>The record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#in\" id=\"ref-for-in①⑤\" aria-expanded=\"false\" class=\"has-ref-hint\">in</a> <var>range</var>.</p>\n          </li></ul>"
-                        }
-                      ]
+                      "html": "<p>Let <var>found record</var> be the last record in <var>records</var> which\n  satisfy all of the following requirements:</p>\n          <ul>\n           <li data-md=\"\">\n            <p>If <var>key</var> is defined, the record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#less-than\" id=\"ref-for-less-than⑤\" aria-expanded=\"false\" class=\"has-ref-hint\">less\n  than</a> or <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#equal-to\" id=\"ref-for-equal-to①⑨\" aria-expanded=\"false\" class=\"has-ref-hint\">equal to</a> <var>key</var>.</p>\n           </li><li data-md=\"\">\n            <p>If <var>primaryKey</var> is defined, the record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#equal-to\" id=\"ref-for-equal-to②⓪\" aria-expanded=\"false\" class=\"has-ref-hint\">equal\n  to</a> <var>key</var> and the record’s value is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#less-than\" id=\"ref-for-less-than⑥\" aria-expanded=\"false\" class=\"has-ref-hint\">less than</a> or <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#equal-to\" id=\"ref-for-equal-to②①\" aria-expanded=\"false\" class=\"has-ref-hint\">equal to</a> <var>primaryKey</var>, or the record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#less-than\" id=\"ref-for-less-than⑦\" aria-expanded=\"false\" class=\"has-ref-hint\">less than</a> <var>key</var>.</p>\n           </li><li data-md=\"\">\n            <p>If <var>position</var> is defined, and <var>source</var> is an <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#object-store\" id=\"ref-for-object-store①⓪④\" aria-expanded=\"false\" class=\"has-ref-hint\">object store</a>, the record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#less-than\" id=\"ref-for-less-than⑧\" aria-expanded=\"false\" class=\"has-ref-hint\">less\n  than</a> <var>position</var>.</p>\n           </li><li data-md=\"\">\n            <p>If <var>position</var> is defined, and <var>source</var> is an <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#index-concept\" id=\"ref-for-index-concept⑤①\" aria-expanded=\"false\" class=\"has-ref-hint\">index</a>, the record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#equal-to\" id=\"ref-for-equal-to②②\" aria-expanded=\"false\" class=\"has-ref-hint\">equal to</a> <var>position</var> and the record’s value is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#less-than\" id=\"ref-for-less-than⑨\" aria-expanded=\"false\" class=\"has-ref-hint\">less than</a> <var>object store position</var> or the record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#less-than\" id=\"ref-for-less-than①⓪\" aria-expanded=\"false\" class=\"has-ref-hint\">less than</a> <var>position</var>.</p>\n           </li><li data-md=\"\">\n            <p>The record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#in\" id=\"ref-for-in①⑤\" aria-expanded=\"false\" class=\"has-ref-hint\">in</a> <var>range</var>.</p>\n          </li></ul>"
                     },
                     {
                       "case": "\"prevunique\"",
-                      "steps": [
-                        {
-                          "html": "<p>Let <var>temp record</var> be the last record in <var>records</var> which satisfy all of the following requirements:</p>\n          <ul>\n           <li data-md=\"\">\n            <p>If <var>key</var> is defined, the record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#less-than\" id=\"ref-for-less-than①①\" aria-expanded=\"false\" class=\"has-ref-hint\">less\n  than</a> or <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#equal-to\" id=\"ref-for-equal-to②③\" aria-expanded=\"false\" class=\"has-ref-hint\">equal to</a> <var>key</var>.</p>\n           </li><li data-md=\"\">\n            <p>If <var>position</var> is defined, the record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#less-than\" id=\"ref-for-less-than①②\" aria-expanded=\"false\" class=\"has-ref-hint\">less\n  than</a> <var>position</var>.</p>\n           </li><li data-md=\"\">\n            <p>The record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#in\" id=\"ref-for-in①⑥\" aria-expanded=\"false\" class=\"has-ref-hint\">in</a> <var>range</var>.</p>\n          </li></ul>\n          <p>If <var>temp record</var> is defined, let <var>found record</var> be the\n  first record in <var>records</var> whose <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key\" id=\"ref-for-key⑨⓪\" aria-expanded=\"false\" class=\"has-ref-hint\">key</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#equal-to\" id=\"ref-for-equal-to②④\" aria-expanded=\"false\" class=\"has-ref-hint\">equal to</a> <var>temp record</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key\" id=\"ref-for-key⑨①\" aria-expanded=\"false\" class=\"has-ref-hint\">key</a>.</p>"
-                        }
-                      ]
+                      "html": "<p>Let <var>temp record</var> be the last record in <var>records</var> which satisfy all of the following requirements:</p>\n          <ul>\n           <li data-md=\"\">\n            <p>If <var>key</var> is defined, the record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#less-than\" id=\"ref-for-less-than①①\" aria-expanded=\"false\" class=\"has-ref-hint\">less\n  than</a> or <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#equal-to\" id=\"ref-for-equal-to②③\" aria-expanded=\"false\" class=\"has-ref-hint\">equal to</a> <var>key</var>.</p>\n           </li><li data-md=\"\">\n            <p>If <var>position</var> is defined, the record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#less-than\" id=\"ref-for-less-than①②\" aria-expanded=\"false\" class=\"has-ref-hint\">less\n  than</a> <var>position</var>.</p>\n           </li><li data-md=\"\">\n            <p>The record’s key is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#in\" id=\"ref-for-in①⑥\" aria-expanded=\"false\" class=\"has-ref-hint\">in</a> <var>range</var>.</p>\n          </li></ul>\n          <p>If <var>temp record</var> is defined, let <var>found record</var> be the\n  first record in <var>records</var> whose <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key\" id=\"ref-for-key⑨⓪\" aria-expanded=\"false\" class=\"has-ref-hint\">key</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#equal-to\" id=\"ref-for-equal-to②④\" aria-expanded=\"false\" class=\"has-ref-hint\">equal to</a> <var>temp record</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key\" id=\"ref-for-key⑨①\" aria-expanded=\"false\" class=\"has-ref-hint\">key</a>.</p>"
                     }
                   ]
                 }
               ]
             },
             {
-              "html": "If <var>found record</var> is not defined, then:",
+              "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"iterate-a-cursor\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">iterate a cursor</dfn> with <var>targetRealm</var>, <var>cursor</var>, an optional <var>key</var> and <var>primaryKey</var> to iterate to, and an optional <var>count</var>, run these steps:",
               "rationale": "set",
               "steps": [
                 {
@@ -2892,7 +2856,7 @@
           "html": "<p>Set <var>cursor</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#cursor-key\" id=\"ref-for-cursor-key⑧\" aria-expanded=\"false\" class=\"has-ref-hint\">key</a> to <var>found record</var>’s key.</p>"
         },
         {
-          "html": "If <var>cursor</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#cursor-key-only-flag\" id=\"ref-for-cursor-key-only-flag①⓪\" aria-expanded=\"false\" class=\"has-ref-hint\">key only flag</a> is false, then:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"iterate-a-cursor\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">iterate a cursor</dfn> with <var>targetRealm</var>, <var>cursor</var>, an optional <var>key</var> and <var>primaryKey</var> to iterate to, and an optional <var>count</var>, run these steps:",
           "rationale": "let",
           "steps": [
             {
@@ -2941,7 +2905,7 @@
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "If <var>keyPath</var> is a <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list\" id=\"ref-for-list①①\" aria-expanded=\"false\" class=\"has-ref-hint\">list</a> of strings, then:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"evaluate-a-key-path-on-a-value\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">evaluate a key path on a value</dfn> with <var>value</var> and <var>keyPath</var>, run the following steps. The result of these steps is an\nECMAScript value or failure, or the steps may throw an exception.",
           "rationale": "let",
           "steps": [
             {
@@ -2951,7 +2915,7 @@
               "html": "<p>Let <var>i</var> be 0.</p>"
             },
             {
-              "html": "<a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-iterate\" id=\"ref-for-list-iterate⑧\" aria-expanded=\"false\" class=\"has-ref-hint\">For each</a> <var>item</var> of <var>keyPath</var>:",
+              "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"evaluate-a-key-path-on-a-value\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">evaluate a key path on a value</dfn> with <var>value</var> and <var>keyPath</var>, run the following steps. The result of these steps is an\nECMAScript value or failure, or the steps may throw an exception.",
               "rationale": "let",
               "steps": [
                 {
@@ -2989,7 +2953,7 @@
           "html": "<p>Let <var>identifiers</var> be the result of <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#strictly-split\" id=\"ref-for-strictly-split\" aria-expanded=\"false\" class=\"has-ref-hint\">strictly splitting</a> <var>keyPath</var> on U+002E FULL STOP characters (.).</p>"
         },
         {
-          "html": "<a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-iterate\" id=\"ref-for-list-iterate⑨\" aria-expanded=\"false\" class=\"has-ref-hint\">For each</a> <var>identifier</var> of <var>identifiers</var>, jump to the appropriate step below:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"evaluate-a-key-path-on-a-value\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">evaluate a key path on a value</dfn> with <var>value</var> and <var>keyPath</var>, run the following steps. The result of these steps is an\nECMAScript value or failure, or the steps may throw an exception.",
           "rationale": ".switch",
           "steps": [
             {
@@ -2997,75 +2961,47 @@
               "steps": [
                 {
                   "case": "If Type(value) is String, and identifier is \"length\"",
-                  "steps": [
-                    {
-                      "html": "<p>Let <var>value</var> be a Number equal to the number of elements in <var>value</var>.</p>"
-                    }
-                  ]
+                  "html": "<p>Let <var>value</var> be a Number equal to the number of elements in <var>value</var>.</p>"
                 },
                 {
                   "case": "If value is an Array and identifier is \"length\"",
-                  "steps": [
-                    {
-                      "html": "<p>Let <var>value</var> be <a data-link-type=\"dfn\" href=\"https://tc39.github.io/ecma262/#sec-algorithm-conventions\" id=\"ref-for-sec-algorithm-conventions①⓪\" aria-expanded=\"false\" class=\"has-ref-hint\">!</a> <a data-link-type=\"abstract-op\" href=\"https://tc39.es/ecma262/multipage/abstract-operations.html#sec-tolength\" id=\"ref-for-sec-tolength\" aria-expanded=\"false\" class=\"has-ref-hint\">ToLength</a>(<a data-link-type=\"dfn\" href=\"https://tc39.github.io/ecma262/#sec-algorithm-conventions\" id=\"ref-for-sec-algorithm-conventions①①\" aria-expanded=\"false\" class=\"has-ref-hint\">!</a> <a data-link-type=\"abstract-op\" href=\"https://tc39.es/ecma262/multipage/abstract-operations.html#sec-get-o-p\" id=\"ref-for-sec-get-o-p\" aria-expanded=\"false\" class=\"has-ref-hint\">Get</a>(<var>value</var>, \"<code>length</code>\")).</p>"
-                    }
-                  ]
+                  "html": "<p>Let <var>value</var> be <a data-link-type=\"dfn\" href=\"https://tc39.github.io/ecma262/#sec-algorithm-conventions\" id=\"ref-for-sec-algorithm-conventions①⓪\" aria-expanded=\"false\" class=\"has-ref-hint\">!</a> <a data-link-type=\"abstract-op\" href=\"https://tc39.es/ecma262/multipage/abstract-operations.html#sec-tolength\" id=\"ref-for-sec-tolength\" aria-expanded=\"false\" class=\"has-ref-hint\">ToLength</a>(<a data-link-type=\"dfn\" href=\"https://tc39.github.io/ecma262/#sec-algorithm-conventions\" id=\"ref-for-sec-algorithm-conventions①①\" aria-expanded=\"false\" class=\"has-ref-hint\">!</a> <a data-link-type=\"abstract-op\" href=\"https://tc39.es/ecma262/multipage/abstract-operations.html#sec-get-o-p\" id=\"ref-for-sec-get-o-p\" aria-expanded=\"false\" class=\"has-ref-hint\">Get</a>(<var>value</var>, \"<code>length</code>\")).</p>"
                 },
                 {
                   "case": "If value is a Blob and identifier is \"size\"",
-                  "steps": [
-                    {
-                      "html": "<p>Let <var>value</var> be a Number equal to <var>value</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/FileAPI/#dfn-size\" id=\"ref-for-dfn-size①\" aria-expanded=\"false\" class=\"has-ref-hint\">size</a></code>.</p>"
-                    }
-                  ]
+                  "html": "<p>Let <var>value</var> be a Number equal to <var>value</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/FileAPI/#dfn-size\" id=\"ref-for-dfn-size①\" aria-expanded=\"false\" class=\"has-ref-hint\">size</a></code>.</p>"
                 },
                 {
                   "case": "If value is a Blob and identifier is \"type\"",
-                  "steps": [
-                    {
-                      "html": "<p>Let <var>value</var> be a String equal to <var>value</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/FileAPI/#dfn-type\" id=\"ref-for-dfn-type①\" aria-expanded=\"false\" class=\"has-ref-hint\">type</a></code>.</p>"
-                    }
-                  ]
+                  "html": "<p>Let <var>value</var> be a String equal to <var>value</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/FileAPI/#dfn-type\" id=\"ref-for-dfn-type①\" aria-expanded=\"false\" class=\"has-ref-hint\">type</a></code>.</p>"
                 },
                 {
                   "case": "If value is a File and identifier is \"name\"",
-                  "steps": [
-                    {
-                      "html": "<p>Let <var>value</var> be a String equal to <var>value</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/FileAPI/#dfn-name\" id=\"ref-for-dfn-name①\" aria-expanded=\"false\" class=\"has-ref-hint\">name</a></code>.</p>"
-                    }
-                  ]
+                  "html": "<p>Let <var>value</var> be a String equal to <var>value</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/FileAPI/#dfn-name\" id=\"ref-for-dfn-name①\" aria-expanded=\"false\" class=\"has-ref-hint\">name</a></code>.</p>"
                 },
                 {
                   "case": "If value is a File and identifier is \"lastModified\"",
-                  "steps": [
-                    {
-                      "html": "<p>Let <var>value</var> be a Number equal to <var>value</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/FileAPI/#dfn-lastModified\" id=\"ref-for-dfn-lastModified①\" aria-expanded=\"false\" class=\"has-ref-hint\">lastModified</a></code>.</p>"
-                    }
-                  ]
+                  "html": "<p>Let <var>value</var> be a Number equal to <var>value</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/FileAPI/#dfn-lastModified\" id=\"ref-for-dfn-lastModified①\" aria-expanded=\"false\" class=\"has-ref-hint\">lastModified</a></code>.</p>"
                 },
                 {
                   "case": "Otherwise",
+                  "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"evaluate-a-key-path-on-a-value\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">evaluate a key path on a value</dfn> with <var>value</var> and <var>keyPath</var>, run the following steps. The result of these steps is an\nECMAScript value or failure, or the steps may throw an exception.",
+                  "rationale": "if",
                   "steps": [
                     {
-                      "html": "<ol>\n         <li data-md=\"\">\n          <p>If <a data-link-type=\"dfn\" href=\"https://tc39.github.io/ecma262/#sec-ecmascript-data-types-and-values\" id=\"ref-for-sec-ecmascript-data-types-and-values①\" aria-expanded=\"false\" class=\"has-ref-hint\">Type</a>(<var>value</var>) is not Object, return failure.</p>\n         </li><li data-md=\"\">\n          <p>Let <var>hop</var> be <a data-link-type=\"dfn\" href=\"https://tc39.github.io/ecma262/#sec-algorithm-conventions\" id=\"ref-for-sec-algorithm-conventions①②\" aria-expanded=\"false\" class=\"has-ref-hint\">!</a> <a data-link-type=\"abstract-op\" href=\"https://tc39.es/ecma262/multipage/abstract-operations.html#sec-hasownproperty\" id=\"ref-for-sec-hasownproperty\" aria-expanded=\"false\" class=\"has-ref-hint\">HasOwnProperty</a>(<var>value</var>, <var>identifier</var>).</p>\n         </li><li data-md=\"\">\n          <p>If <var>hop</var> is false, return failure.</p>\n         </li><li data-md=\"\">\n          <p>Let <var>value</var> be <a data-link-type=\"dfn\" href=\"https://tc39.github.io/ecma262/#sec-algorithm-conventions\" id=\"ref-for-sec-algorithm-conventions①③\" aria-expanded=\"false\" class=\"has-ref-hint\">!</a> <a data-link-type=\"abstract-op\" href=\"https://tc39.es/ecma262/multipage/abstract-operations.html#sec-get-o-p\" id=\"ref-for-sec-get-o-p①\" aria-expanded=\"false\" class=\"has-ref-hint\">Get</a>(<var>value</var>, <var>identifier</var>).</p>\n         </li><li data-md=\"\">\n          <p>If <var>value</var> is undefined, return failure.</p>\n        </li></ol>",
-                      "rationale": "if",
-                      "steps": [
-                        {
-                          "html": "<p>If <a data-link-type=\"dfn\" href=\"https://tc39.github.io/ecma262/#sec-ecmascript-data-types-and-values\" id=\"ref-for-sec-ecmascript-data-types-and-values①\" aria-expanded=\"false\" class=\"has-ref-hint\">Type</a>(<var>value</var>) is not Object, return failure.</p>"
-                        },
-                        {
-                          "html": "<p>Let <var>hop</var> be <a data-link-type=\"dfn\" href=\"https://tc39.github.io/ecma262/#sec-algorithm-conventions\" id=\"ref-for-sec-algorithm-conventions①②\" aria-expanded=\"false\" class=\"has-ref-hint\">!</a> <a data-link-type=\"abstract-op\" href=\"https://tc39.es/ecma262/multipage/abstract-operations.html#sec-hasownproperty\" id=\"ref-for-sec-hasownproperty\" aria-expanded=\"false\" class=\"has-ref-hint\">HasOwnProperty</a>(<var>value</var>, <var>identifier</var>).</p>"
-                        },
-                        {
-                          "html": "<p>If <var>hop</var> is false, return failure.</p>"
-                        },
-                        {
-                          "html": "<p>Let <var>value</var> be <a data-link-type=\"dfn\" href=\"https://tc39.github.io/ecma262/#sec-algorithm-conventions\" id=\"ref-for-sec-algorithm-conventions①③\" aria-expanded=\"false\" class=\"has-ref-hint\">!</a> <a data-link-type=\"abstract-op\" href=\"https://tc39.es/ecma262/multipage/abstract-operations.html#sec-get-o-p\" id=\"ref-for-sec-get-o-p①\" aria-expanded=\"false\" class=\"has-ref-hint\">Get</a>(<var>value</var>, <var>identifier</var>).</p>"
-                        },
-                        {
-                          "html": "<p>If <var>value</var> is undefined, return failure.</p>"
-                        }
-                      ]
+                      "html": "<p>If <a data-link-type=\"dfn\" href=\"https://tc39.github.io/ecma262/#sec-ecmascript-data-types-and-values\" id=\"ref-for-sec-ecmascript-data-types-and-values①\" aria-expanded=\"false\" class=\"has-ref-hint\">Type</a>(<var>value</var>) is not Object, return failure.</p>"
+                    },
+                    {
+                      "html": "<p>Let <var>hop</var> be <a data-link-type=\"dfn\" href=\"https://tc39.github.io/ecma262/#sec-algorithm-conventions\" id=\"ref-for-sec-algorithm-conventions①②\" aria-expanded=\"false\" class=\"has-ref-hint\">!</a> <a data-link-type=\"abstract-op\" href=\"https://tc39.es/ecma262/multipage/abstract-operations.html#sec-hasownproperty\" id=\"ref-for-sec-hasownproperty\" aria-expanded=\"false\" class=\"has-ref-hint\">HasOwnProperty</a>(<var>value</var>, <var>identifier</var>).</p>"
+                    },
+                    {
+                      "html": "<p>If <var>hop</var> is false, return failure.</p>"
+                    },
+                    {
+                      "html": "<p>Let <var>value</var> be <a data-link-type=\"dfn\" href=\"https://tc39.github.io/ecma262/#sec-algorithm-conventions\" id=\"ref-for-sec-algorithm-conventions①③\" aria-expanded=\"false\" class=\"has-ref-hint\">!</a> <a data-link-type=\"abstract-op\" href=\"https://tc39.es/ecma262/multipage/abstract-operations.html#sec-get-o-p\" id=\"ref-for-sec-get-o-p①\" aria-expanded=\"false\" class=\"has-ref-hint\">Get</a>(<var>value</var>, <var>identifier</var>).</p>"
+                    },
+                    {
+                      "html": "<p>If <var>value</var> is undefined, return failure.</p>"
                     }
                   ]
                 }
@@ -3097,7 +3033,7 @@
           "html": "<p>Remove the last <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-item\" id=\"ref-for-list-item①\" aria-expanded=\"false\" class=\"has-ref-hint\">item</a> of <var>identifiers</var>.</p>"
         },
         {
-          "html": "<a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-iterate\" id=\"ref-for-list-iterate①⓪\" aria-expanded=\"false\" class=\"has-ref-hint\">For each</a> remaining <var>identifier</var> of <var>identifiers</var>, if any:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"check-that-a-key-could-be-injected-into-a-value\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">check that a key could be injected into a value</dfn> with <var>value</var> and a <var>keyPath</var>, run the following steps.\nThe result of these steps is either true or false.",
           "rationale": "if",
           "steps": [
             {
@@ -3135,7 +3071,7 @@
           "html": "<p>Let <var>last</var> be the last <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-item\" id=\"ref-for-list-item②\" aria-expanded=\"false\" class=\"has-ref-hint\">item</a> of <var>identifiers</var> and remove it from\nthe list.</p>"
         },
         {
-          "html": "<a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-iterate\" id=\"ref-for-list-iterate①①\" aria-expanded=\"false\" class=\"has-ref-hint\">For each</a> remaining <var>identifier</var> of <var>identifiers</var>:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"inject-a-key-into-a-value-using-a-key-path\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">inject a key into a value using a key path</dfn> with <var>value</var>, a <var>key</var> and a <var>keyPath</var>, run these steps:",
           "rationale": "assert",
           "steps": [
             {
@@ -3145,7 +3081,7 @@
               "html": "<p>Let <var>hop</var> be <a data-link-type=\"dfn\" href=\"https://tc39.github.io/ecma262/#sec-algorithm-conventions\" id=\"ref-for-sec-algorithm-conventions①⑥\" aria-expanded=\"false\" class=\"has-ref-hint\">!</a> <a data-link-type=\"abstract-op\" href=\"https://tc39.es/ecma262/multipage/abstract-operations.html#sec-hasownproperty\" id=\"ref-for-sec-hasownproperty②\" aria-expanded=\"false\" class=\"has-ref-hint\">HasOwnProperty</a>(<var>value</var>, <var>identifier</var>).</p>"
             },
             {
-              "html": "If <var>hop</var> is false, then:",
+              "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"inject-a-key-into-a-value-using-a-key-path\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">inject a key into a value using a key path</dfn> with <var>value</var>, a <var>key</var> and a <var>keyPath</var>, run these steps:",
               "rationale": "let",
               "steps": [
                 {
@@ -3191,7 +3127,7 @@
           "html": "<p>Let <var>value</var> be <var>key</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key-value\" id=\"ref-for-key-value⑤\" aria-expanded=\"false\" class=\"has-ref-hint\">value</a>.</p>"
         },
         {
-          "html": "Switch on <var>type</var>:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"convert-a-key-to-a-value\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">convert a key to a value</dfn> with <var>key</var>, run the following steps.\nThe steps return an ECMAScript value.",
           "rationale": ".switch",
           "steps": [
             {
@@ -3199,107 +3135,87 @@
               "steps": [
                 {
                   "case": "number",
-                  "steps": [
-                    {
-                      "html": "<p>Return an ECMAScript Number value equal to <var>value</var></p>"
-                    }
-                  ]
+                  "html": "<p>Return an ECMAScript Number value equal to <var>value</var></p>"
                 },
                 {
                   "case": "string",
-                  "steps": [
-                    {
-                      "html": "<p>Return an ECMAScript String value equal to <var>value</var></p>"
-                    }
-                  ]
+                  "html": "<p>Return an ECMAScript String value equal to <var>value</var></p>"
                 },
                 {
                   "case": "date",
+                  "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"convert-a-key-to-a-value\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">convert a key to a value</dfn> with <var>key</var>, run the following steps.\nThe steps return an ECMAScript value.",
+                  "rationale": "let",
                   "steps": [
                     {
-                      "html": "<ol>\n         <li data-md=\"\">\n          <p>Let <var>date</var> be the result of executing the ECMAScript Date\n  constructor with the single argument <var>value</var>.</p>\n         </li><li data-md=\"\">\n          <p><a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#assert\" id=\"ref-for-assert①③\" aria-expanded=\"false\" class=\"has-ref-hint\">Assert</a>: <var>date</var> is not an <a data-link-type=\"dfn\" href=\"https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html#sec-completion-record-specification-type\" id=\"ref-for-sec-completion-record-specification-type②\" aria-expanded=\"false\" class=\"has-ref-hint\">abrupt completion</a>.</p>\n         </li><li data-md=\"\">\n          <p>Return <var>date</var>.</p>\n        </li></ol>",
-                      "rationale": "let",
-                      "steps": [
-                        {
-                          "html": "<p>Let <var>date</var> be the result of executing the ECMAScript Date\n  constructor with the single argument <var>value</var>.</p>"
-                        },
-                        {
-                          "html": "<p><a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#assert\" id=\"ref-for-assert①③\" aria-expanded=\"false\" class=\"has-ref-hint\">Assert</a>: <var>date</var> is not an <a data-link-type=\"dfn\" href=\"https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html#sec-completion-record-specification-type\" id=\"ref-for-sec-completion-record-specification-type②\" aria-expanded=\"false\" class=\"has-ref-hint\">abrupt completion</a>.</p>"
-                        },
-                        {
-                          "html": "<p>Return <var>date</var>.</p>"
-                        }
-                      ]
+                      "html": "<p>Let <var>date</var> be the result of executing the ECMAScript Date\n  constructor with the single argument <var>value</var>.</p>"
+                    },
+                    {
+                      "html": "<p><a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#assert\" id=\"ref-for-assert①③\" aria-expanded=\"false\" class=\"has-ref-hint\">Assert</a>: <var>date</var> is not an <a data-link-type=\"dfn\" href=\"https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html#sec-completion-record-specification-type\" id=\"ref-for-sec-completion-record-specification-type②\" aria-expanded=\"false\" class=\"has-ref-hint\">abrupt completion</a>.</p>"
+                    },
+                    {
+                      "html": "<p>Return <var>date</var>.</p>"
                     }
                   ]
                 },
                 {
                   "case": "binary",
+                  "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"convert-a-key-to-a-value\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">convert a key to a value</dfn> with <var>key</var>, run the following steps.\nThe steps return an ECMAScript value.",
+                  "rationale": "let",
                   "steps": [
                     {
-                      "html": "<ol>\n         <li data-md=\"\">\n          <p>Let <var>len</var> be <var>value</var>’s <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#byte-sequence-length\" id=\"ref-for-byte-sequence-length\" aria-expanded=\"false\" class=\"has-ref-hint\">length</a>.</p>\n         </li><li data-md=\"\">\n          <p>Let <var>buffer</var> be the result of executing the ECMAScript\n  ArrayBuffer constructor with <var>len</var>.</p>\n         </li><li data-md=\"\">\n          <p><a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#assert\" id=\"ref-for-assert①④\" aria-expanded=\"false\" class=\"has-ref-hint\">Assert</a>: <var>buffer</var> is not an <a data-link-type=\"dfn\" href=\"https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html#sec-completion-record-specification-type\" id=\"ref-for-sec-completion-record-specification-type③\" aria-expanded=\"false\" class=\"has-ref-hint\">abrupt completion</a>.</p>\n         </li><li data-md=\"\">\n          <p>Set the entries in <var>buffer</var>’s\n  [[ArrayBufferData]] internal slot to the entries\n  in <var>value</var>.</p>\n         </li><li data-md=\"\">\n          <p>Return <var>buffer</var>.</p>\n        </li></ol>",
-                      "rationale": "let",
-                      "steps": [
-                        {
-                          "html": "<p>Let <var>len</var> be <var>value</var>’s <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#byte-sequence-length\" id=\"ref-for-byte-sequence-length\" aria-expanded=\"false\" class=\"has-ref-hint\">length</a>.</p>"
-                        },
-                        {
-                          "html": "<p>Let <var>buffer</var> be the result of executing the ECMAScript\n  ArrayBuffer constructor with <var>len</var>.</p>"
-                        },
-                        {
-                          "html": "<p><a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#assert\" id=\"ref-for-assert①④\" aria-expanded=\"false\" class=\"has-ref-hint\">Assert</a>: <var>buffer</var> is not an <a data-link-type=\"dfn\" href=\"https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html#sec-completion-record-specification-type\" id=\"ref-for-sec-completion-record-specification-type③\" aria-expanded=\"false\" class=\"has-ref-hint\">abrupt completion</a>.</p>"
-                        },
-                        {
-                          "html": "<p>Set the entries in <var>buffer</var>’s\n  [[ArrayBufferData]] internal slot to the entries\n  in <var>value</var>.</p>"
-                        },
-                        {
-                          "html": "<p>Return <var>buffer</var>.</p>"
-                        }
-                      ]
+                      "html": "<p>Let <var>len</var> be <var>value</var>’s <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#byte-sequence-length\" id=\"ref-for-byte-sequence-length\" aria-expanded=\"false\" class=\"has-ref-hint\">length</a>.</p>"
+                    },
+                    {
+                      "html": "<p>Let <var>buffer</var> be the result of executing the ECMAScript\n  ArrayBuffer constructor with <var>len</var>.</p>"
+                    },
+                    {
+                      "html": "<p><a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#assert\" id=\"ref-for-assert①④\" aria-expanded=\"false\" class=\"has-ref-hint\">Assert</a>: <var>buffer</var> is not an <a data-link-type=\"dfn\" href=\"https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html#sec-completion-record-specification-type\" id=\"ref-for-sec-completion-record-specification-type③\" aria-expanded=\"false\" class=\"has-ref-hint\">abrupt completion</a>.</p>"
+                    },
+                    {
+                      "html": "<p>Set the entries in <var>buffer</var>’s\n  [[ArrayBufferData]] internal slot to the entries\n  in <var>value</var>.</p>"
+                    },
+                    {
+                      "html": "<p>Return <var>buffer</var>.</p>"
                     }
                   ]
                 },
                 {
                   "case": "array",
+                  "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"convert-a-key-to-a-value\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">convert a key to a value</dfn> with <var>key</var>, run the following steps.\nThe steps return an ECMAScript value.",
+                  "rationale": "let",
                   "steps": [
                     {
-                      "html": "<ol>\n         <li data-md=\"\">\n          <p>Let <var>array</var> be the result of executing the ECMAScript Array\n  constructor with no arguments.</p>\n         </li><li data-md=\"\">\n          <p><a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#assert\" id=\"ref-for-assert①⑤\" aria-expanded=\"false\" class=\"has-ref-hint\">Assert</a>: <var>array</var> is not an <a data-link-type=\"dfn\" href=\"https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html#sec-completion-record-specification-type\" id=\"ref-for-sec-completion-record-specification-type④\" aria-expanded=\"false\" class=\"has-ref-hint\">abrupt completion</a>.</p>\n         </li><li data-md=\"\">\n          <p>Let <var>len</var> be <var>value</var>’s <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-size\" id=\"ref-for-list-size⑥\" aria-expanded=\"false\" class=\"has-ref-hint\">size</a>.</p>\n         </li><li data-md=\"\">\n          <p>Let <var>index</var> be 0.</p>\n         </li><li data-md=\"\">\n          <p>While <var>index</var> is less than <var>len</var>:</p>\n          <ol>\n           <li data-md=\"\">\n            <p>Let <var>entry</var> be the result of <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#convert-a-key-to-a-value\" id=\"ref-for-convert-a-key-to-a-value⑨\" aria-expanded=\"false\" class=\"has-ref-hint\">converting a key to a value</a> with <var>value</var>[<var>index</var>].</p>\n           </li><li data-md=\"\">\n            <p>Let <var>status</var> be <a data-link-type=\"abstract-op\" href=\"https://tc39.es/ecma262/multipage/abstract-operations.html#sec-createdataproperty\" id=\"ref-for-sec-createdataproperty③\" aria-expanded=\"false\" class=\"has-ref-hint\">CreateDataProperty</a>(<var>array</var>, <var>index</var>, <var>entry</var>).</p>\n           </li><li data-md=\"\">\n            <p><a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#assert\" id=\"ref-for-assert①⑥\" aria-expanded=\"false\" class=\"has-ref-hint\">Assert</a>: <var>status</var> is true.</p>\n           </li><li data-md=\"\">\n            <p>Increase <var>index</var> by 1.</p>\n          </li></ol>\n         </li><li data-md=\"\">\n          <p>Return <var>array</var>.</p>\n        </li></ol>",
+                      "html": "<p>Let <var>array</var> be the result of executing the ECMAScript Array\n  constructor with no arguments.</p>"
+                    },
+                    {
+                      "html": "<p><a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#assert\" id=\"ref-for-assert①⑤\" aria-expanded=\"false\" class=\"has-ref-hint\">Assert</a>: <var>array</var> is not an <a data-link-type=\"dfn\" href=\"https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html#sec-completion-record-specification-type\" id=\"ref-for-sec-completion-record-specification-type④\" aria-expanded=\"false\" class=\"has-ref-hint\">abrupt completion</a>.</p>"
+                    },
+                    {
+                      "html": "<p>Let <var>len</var> be <var>value</var>’s <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-size\" id=\"ref-for-list-size⑥\" aria-expanded=\"false\" class=\"has-ref-hint\">size</a>.</p>"
+                    },
+                    {
+                      "html": "<p>Let <var>index</var> be 0.</p>"
+                    },
+                    {
+                      "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"convert-a-key-to-a-value\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">convert a key to a value</dfn> with <var>key</var>, run the following steps.\nThe steps return an ECMAScript value.",
                       "rationale": "let",
                       "steps": [
                         {
-                          "html": "<p>Let <var>array</var> be the result of executing the ECMAScript Array\n  constructor with no arguments.</p>"
+                          "html": "<p>Let <var>entry</var> be the result of <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#convert-a-key-to-a-value\" id=\"ref-for-convert-a-key-to-a-value⑨\" aria-expanded=\"false\" class=\"has-ref-hint\">converting a key to a value</a> with <var>value</var>[<var>index</var>].</p>"
                         },
                         {
-                          "html": "<p><a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#assert\" id=\"ref-for-assert①⑤\" aria-expanded=\"false\" class=\"has-ref-hint\">Assert</a>: <var>array</var> is not an <a data-link-type=\"dfn\" href=\"https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html#sec-completion-record-specification-type\" id=\"ref-for-sec-completion-record-specification-type④\" aria-expanded=\"false\" class=\"has-ref-hint\">abrupt completion</a>.</p>"
+                          "html": "<p>Let <var>status</var> be <a data-link-type=\"abstract-op\" href=\"https://tc39.es/ecma262/multipage/abstract-operations.html#sec-createdataproperty\" id=\"ref-for-sec-createdataproperty③\" aria-expanded=\"false\" class=\"has-ref-hint\">CreateDataProperty</a>(<var>array</var>, <var>index</var>, <var>entry</var>).</p>"
                         },
                         {
-                          "html": "<p>Let <var>len</var> be <var>value</var>’s <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-size\" id=\"ref-for-list-size⑥\" aria-expanded=\"false\" class=\"has-ref-hint\">size</a>.</p>"
+                          "html": "<p><a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#assert\" id=\"ref-for-assert①⑥\" aria-expanded=\"false\" class=\"has-ref-hint\">Assert</a>: <var>status</var> is true.</p>"
                         },
                         {
-                          "html": "<p>Let <var>index</var> be 0.</p>"
-                        },
-                        {
-                          "html": "While <var>index</var> is less than <var>len</var>:",
-                          "rationale": "let",
-                          "steps": [
-                            {
-                              "html": "<p>Let <var>entry</var> be the result of <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#convert-a-key-to-a-value\" id=\"ref-for-convert-a-key-to-a-value⑨\" aria-expanded=\"false\" class=\"has-ref-hint\">converting a key to a value</a> with <var>value</var>[<var>index</var>].</p>"
-                            },
-                            {
-                              "html": "<p>Let <var>status</var> be <a data-link-type=\"abstract-op\" href=\"https://tc39.es/ecma262/multipage/abstract-operations.html#sec-createdataproperty\" id=\"ref-for-sec-createdataproperty③\" aria-expanded=\"false\" class=\"has-ref-hint\">CreateDataProperty</a>(<var>array</var>, <var>index</var>, <var>entry</var>).</p>"
-                            },
-                            {
-                              "html": "<p><a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#assert\" id=\"ref-for-assert①⑥\" aria-expanded=\"false\" class=\"has-ref-hint\">Assert</a>: <var>status</var> is true.</p>"
-                            },
-                            {
-                              "html": "<p>Increase <var>index</var> by 1.</p>"
-                            }
-                          ]
-                        },
-                        {
-                          "html": "<p>Return <var>array</var>.</p>"
+                          "html": "<p>Increase <var>index</var> by 1.</p>"
                         }
                       ]
+                    },
+                    {
+                      "html": "<p>Return <var>array</var>.</p>"
                     }
                   ]
                 }
@@ -3322,7 +3238,7 @@
           "html": "<p>If <var>seen</var> <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-contain\" id=\"ref-for-list-contain\" aria-expanded=\"false\" class=\"has-ref-hint\">contains</a> <var>input</var>, then return invalid.</p>"
         },
         {
-          "html": "Jump to the appropriate step below:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"convert-a-value-to-a-key\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">convert a value to a key</dfn> with an ECMAScript value <var>input</var>, and an optional <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#ordered-set\" id=\"ref-for-ordered-set④\" aria-expanded=\"false\" class=\"has-ref-hint\">set</a> <var>seen</var>, run the following steps.\nThe result of these steps is a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key\" id=\"ref-for-key⑨④\" aria-expanded=\"false\" class=\"has-ref-hint\">key</a> or invalid, or the\nsteps may throw an exception.",
           "rationale": ".switch",
           "steps": [
             {
@@ -3330,135 +3246,111 @@
               "steps": [
                 {
                   "case": "If Type(input) is Number",
+                  "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"convert-a-value-to-a-key\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">convert a value to a key</dfn> with an ECMAScript value <var>input</var>, and an optional <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#ordered-set\" id=\"ref-for-ordered-set④\" aria-expanded=\"false\" class=\"has-ref-hint\">set</a> <var>seen</var>, run the following steps.\nThe result of these steps is a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key\" id=\"ref-for-key⑨④\" aria-expanded=\"false\" class=\"has-ref-hint\">key</a> or invalid, or the\nsteps may throw an exception.",
+                  "rationale": "if",
                   "steps": [
                     {
-                      "html": "<ol>\n         <li data-md=\"\">\n          <p>If <var>input</var> is NaN then return invalid.</p>\n         </li><li data-md=\"\">\n          <p>Otherwise, return a new <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key\" id=\"ref-for-key⑨⑤\" aria-expanded=\"false\" class=\"has-ref-hint\">key</a> with <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key-type\" id=\"ref-for-key-type⑧\" aria-expanded=\"false\" class=\"has-ref-hint\">type</a> <em>number</em> and <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key-value\" id=\"ref-for-key-value⑥\" aria-expanded=\"false\" class=\"has-ref-hint\">value</a> <var>input</var>.</p>\n        </li></ol>",
-                      "rationale": "if",
-                      "steps": [
-                        {
-                          "html": "<p>If <var>input</var> is NaN then return invalid.</p>"
-                        },
-                        {
-                          "html": "<p>Otherwise, return a new <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key\" id=\"ref-for-key⑨⑤\" aria-expanded=\"false\" class=\"has-ref-hint\">key</a> with <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key-type\" id=\"ref-for-key-type⑧\" aria-expanded=\"false\" class=\"has-ref-hint\">type</a> <em>number</em> and <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key-value\" id=\"ref-for-key-value⑥\" aria-expanded=\"false\" class=\"has-ref-hint\">value</a> <var>input</var>.</p>"
-                        }
-                      ]
+                      "html": "<p>If <var>input</var> is NaN then return invalid.</p>"
+                    },
+                    {
+                      "html": "<p>Otherwise, return a new <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key\" id=\"ref-for-key⑨⑤\" aria-expanded=\"false\" class=\"has-ref-hint\">key</a> with <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key-type\" id=\"ref-for-key-type⑧\" aria-expanded=\"false\" class=\"has-ref-hint\">type</a> <em>number</em> and <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key-value\" id=\"ref-for-key-value⑥\" aria-expanded=\"false\" class=\"has-ref-hint\">value</a> <var>input</var>.</p>"
                     }
                   ]
                 },
                 {
                   "case": "If input is a Date (has a [[DateValue]] internal slot)",
+                  "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"convert-a-value-to-a-key\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">convert a value to a key</dfn> with an ECMAScript value <var>input</var>, and an optional <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#ordered-set\" id=\"ref-for-ordered-set④\" aria-expanded=\"false\" class=\"has-ref-hint\">set</a> <var>seen</var>, run the following steps.\nThe result of these steps is a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key\" id=\"ref-for-key⑨④\" aria-expanded=\"false\" class=\"has-ref-hint\">key</a> or invalid, or the\nsteps may throw an exception.",
+                  "rationale": "let",
                   "steps": [
                     {
-                      "html": "<ol>\n         <li data-md=\"\">\n          <p>Let <var>ms</var> be the value of <var>input</var>’s\n  [[DateValue]] internal slot.</p>\n         </li><li data-md=\"\">\n          <p>If <var>ms</var> is NaN then return invalid.</p>\n         </li><li data-md=\"\">\n          <p>Otherwise, return a new <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key\" id=\"ref-for-key⑨⑥\" aria-expanded=\"false\" class=\"has-ref-hint\">key</a> with <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key-type\" id=\"ref-for-key-type⑨\" aria-expanded=\"false\" class=\"has-ref-hint\">type</a> <em>date</em> and <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key-value\" id=\"ref-for-key-value⑦\" aria-expanded=\"false\" class=\"has-ref-hint\">value</a> <var>ms</var>.</p>\n        </li></ol>",
-                      "rationale": "let",
-                      "steps": [
-                        {
-                          "html": "<p>Let <var>ms</var> be the value of <var>input</var>’s\n  [[DateValue]] internal slot.</p>"
-                        },
-                        {
-                          "html": "<p>If <var>ms</var> is NaN then return invalid.</p>"
-                        },
-                        {
-                          "html": "<p>Otherwise, return a new <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key\" id=\"ref-for-key⑨⑥\" aria-expanded=\"false\" class=\"has-ref-hint\">key</a> with <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key-type\" id=\"ref-for-key-type⑨\" aria-expanded=\"false\" class=\"has-ref-hint\">type</a> <em>date</em> and <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key-value\" id=\"ref-for-key-value⑦\" aria-expanded=\"false\" class=\"has-ref-hint\">value</a> <var>ms</var>.</p>"
-                        }
-                      ]
+                      "html": "<p>Let <var>ms</var> be the value of <var>input</var>’s\n  [[DateValue]] internal slot.</p>"
+                    },
+                    {
+                      "html": "<p>If <var>ms</var> is NaN then return invalid.</p>"
+                    },
+                    {
+                      "html": "<p>Otherwise, return a new <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key\" id=\"ref-for-key⑨⑥\" aria-expanded=\"false\" class=\"has-ref-hint\">key</a> with <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key-type\" id=\"ref-for-key-type⑨\" aria-expanded=\"false\" class=\"has-ref-hint\">type</a> <em>date</em> and <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key-value\" id=\"ref-for-key-value⑦\" aria-expanded=\"false\" class=\"has-ref-hint\">value</a> <var>ms</var>.</p>"
                     }
                   ]
                 },
                 {
                   "case": "If Type(input) is String",
+                  "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"convert-a-value-to-a-key\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">convert a value to a key</dfn> with an ECMAScript value <var>input</var>, and an optional <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#ordered-set\" id=\"ref-for-ordered-set④\" aria-expanded=\"false\" class=\"has-ref-hint\">set</a> <var>seen</var>, run the following steps.\nThe result of these steps is a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key\" id=\"ref-for-key⑨④\" aria-expanded=\"false\" class=\"has-ref-hint\">key</a> or invalid, or the\nsteps may throw an exception.",
+                  "rationale": "return",
                   "steps": [
                     {
-                      "html": "<ol>\n         <li data-md=\"\">\n          <p>Return a new <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key\" id=\"ref-for-key⑨⑦\" aria-expanded=\"false\" class=\"has-ref-hint\">key</a> with <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key-type\" id=\"ref-for-key-type①⓪\" aria-expanded=\"false\" class=\"has-ref-hint\">type</a> <em>string</em> and <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key-value\" id=\"ref-for-key-value⑧\" aria-expanded=\"false\" class=\"has-ref-hint\">value</a> <var>input</var>.</p>\n        </li></ol>",
-                      "rationale": "return",
-                      "steps": [
-                        {
-                          "html": "<p>Return a new <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key\" id=\"ref-for-key⑨⑦\" aria-expanded=\"false\" class=\"has-ref-hint\">key</a> with <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key-type\" id=\"ref-for-key-type①⓪\" aria-expanded=\"false\" class=\"has-ref-hint\">type</a> <em>string</em> and <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key-value\" id=\"ref-for-key-value⑧\" aria-expanded=\"false\" class=\"has-ref-hint\">value</a> <var>input</var>.</p>"
-                        }
-                      ]
+                      "html": "<p>Return a new <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key\" id=\"ref-for-key⑨⑦\" aria-expanded=\"false\" class=\"has-ref-hint\">key</a> with <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key-type\" id=\"ref-for-key-type①⓪\" aria-expanded=\"false\" class=\"has-ref-hint\">type</a> <em>string</em> and <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key-value\" id=\"ref-for-key-value⑧\" aria-expanded=\"false\" class=\"has-ref-hint\">value</a> <var>input</var>.</p>"
                     }
                   ]
                 },
                 {
                   "case": "If input is a buffer source type",
+                  "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"convert-a-value-to-a-key\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">convert a value to a key</dfn> with an ECMAScript value <var>input</var>, and an optional <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#ordered-set\" id=\"ref-for-ordered-set④\" aria-expanded=\"false\" class=\"has-ref-hint\">set</a> <var>seen</var>, run the following steps.\nThe result of these steps is a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key\" id=\"ref-for-key⑨④\" aria-expanded=\"false\" class=\"has-ref-hint\">key</a> or invalid, or the\nsteps may throw an exception.",
+                  "rationale": "let",
                   "steps": [
                     {
-                      "html": "<ol>\n         <li data-md=\"\">\n          <p>Let <var>bytes</var> be the result of <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#dfn-get-buffer-source-copy\" id=\"ref-for-dfn-get-buffer-source-copy\" aria-expanded=\"false\" class=\"has-ref-hint\">getting a copy of the bytes held by the buffer source</a> <var>input</var>. Rethrow any exceptions.</p>\n         </li><li data-md=\"\">\n          <p>Return a new <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key\" id=\"ref-for-key⑨⑧\" aria-expanded=\"false\" class=\"has-ref-hint\">key</a> with <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key-type\" id=\"ref-for-key-type①①\" aria-expanded=\"false\" class=\"has-ref-hint\">type</a> <em>binary</em> and <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key-value\" id=\"ref-for-key-value⑨\" aria-expanded=\"false\" class=\"has-ref-hint\">value</a> <var>bytes</var>.</p>\n        </li></ol>",
-                      "rationale": "let",
-                      "steps": [
-                        {
-                          "html": "<p>Let <var>bytes</var> be the result of <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#dfn-get-buffer-source-copy\" id=\"ref-for-dfn-get-buffer-source-copy\" aria-expanded=\"false\" class=\"has-ref-hint\">getting a copy of the bytes held by the buffer source</a> <var>input</var>. Rethrow any exceptions.</p>"
-                        },
-                        {
-                          "html": "<p>Return a new <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key\" id=\"ref-for-key⑨⑧\" aria-expanded=\"false\" class=\"has-ref-hint\">key</a> with <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key-type\" id=\"ref-for-key-type①①\" aria-expanded=\"false\" class=\"has-ref-hint\">type</a> <em>binary</em> and <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key-value\" id=\"ref-for-key-value⑨\" aria-expanded=\"false\" class=\"has-ref-hint\">value</a> <var>bytes</var>.</p>"
-                        }
-                      ]
+                      "html": "<p>Let <var>bytes</var> be the result of <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#dfn-get-buffer-source-copy\" id=\"ref-for-dfn-get-buffer-source-copy\" aria-expanded=\"false\" class=\"has-ref-hint\">getting a copy of the bytes held by the buffer source</a> <var>input</var>. Rethrow any exceptions.</p>"
+                    },
+                    {
+                      "html": "<p>Return a new <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key\" id=\"ref-for-key⑨⑧\" aria-expanded=\"false\" class=\"has-ref-hint\">key</a> with <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key-type\" id=\"ref-for-key-type①①\" aria-expanded=\"false\" class=\"has-ref-hint\">type</a> <em>binary</em> and <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key-value\" id=\"ref-for-key-value⑨\" aria-expanded=\"false\" class=\"has-ref-hint\">value</a> <var>bytes</var>.</p>"
                     }
                   ]
                 },
                 {
                   "case": "If input is an Array exotic object",
+                  "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"convert-a-value-to-a-key\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">convert a value to a key</dfn> with an ECMAScript value <var>input</var>, and an optional <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#ordered-set\" id=\"ref-for-ordered-set④\" aria-expanded=\"false\" class=\"has-ref-hint\">set</a> <var>seen</var>, run the following steps.\nThe result of these steps is a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key\" id=\"ref-for-key⑨④\" aria-expanded=\"false\" class=\"has-ref-hint\">key</a> or invalid, or the\nsteps may throw an exception.",
+                  "rationale": "let",
                   "steps": [
                     {
-                      "html": "<ol>\n         <li data-md=\"\">\n          <p>Let <var>len</var> be <a data-link-type=\"dfn\" href=\"https://tc39.github.io/ecma262/#sec-algorithm-conventions\" id=\"ref-for-sec-algorithm-conventions①⑧\" aria-expanded=\"false\" class=\"has-ref-hint\">?</a> <a data-link-type=\"abstract-op\" href=\"https://tc39.es/ecma262/multipage/abstract-operations.html#sec-tolength\" id=\"ref-for-sec-tolength①\" aria-expanded=\"false\" class=\"has-ref-hint\">ToLength</a>( <a data-link-type=\"dfn\" href=\"https://tc39.github.io/ecma262/#sec-algorithm-conventions\" id=\"ref-for-sec-algorithm-conventions①⑨\" aria-expanded=\"false\" class=\"has-ref-hint\">?</a> <a data-link-type=\"abstract-op\" href=\"https://tc39.es/ecma262/multipage/abstract-operations.html#sec-get-o-p\" id=\"ref-for-sec-get-o-p④\" aria-expanded=\"false\" class=\"has-ref-hint\">Get</a>(<var>input</var>,\n  \"<code>length</code>\")).</p>\n         </li><li data-md=\"\">\n          <p><a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#set-append\" id=\"ref-for-set-append\" aria-expanded=\"false\" class=\"has-ref-hint\">Append</a> <var>input</var> to <var>seen</var>.</p>\n         </li><li data-md=\"\">\n          <p>Let <var>keys</var> be a new empty list.</p>\n         </li><li data-md=\"\">\n          <p>Let <var>index</var> be 0.</p>\n         </li><li data-md=\"\">\n          <p>While <var>index</var> is less than <var>len</var>:</p>\n          <ol>\n           <li data-md=\"\">\n            <p>Let <var>hop</var> be <a data-link-type=\"dfn\" href=\"https://tc39.github.io/ecma262/#sec-algorithm-conventions\" id=\"ref-for-sec-algorithm-conventions②⓪\" aria-expanded=\"false\" class=\"has-ref-hint\">?</a> <a data-link-type=\"abstract-op\" href=\"https://tc39.es/ecma262/multipage/abstract-operations.html#sec-hasownproperty\" id=\"ref-for-sec-hasownproperty③\" aria-expanded=\"false\" class=\"has-ref-hint\">HasOwnProperty</a>(<var>input</var>, <var>index</var>).</p>\n           </li><li data-md=\"\">\n            <p>If <var>hop</var> is false, return invalid.</p>\n           </li><li data-md=\"\">\n            <p>Let <var>entry</var> be <a data-link-type=\"dfn\" href=\"https://tc39.github.io/ecma262/#sec-algorithm-conventions\" id=\"ref-for-sec-algorithm-conventions②①\" aria-expanded=\"false\" class=\"has-ref-hint\">?</a> <a data-link-type=\"abstract-op\" href=\"https://tc39.es/ecma262/multipage/abstract-operations.html#sec-get-o-p\" id=\"ref-for-sec-get-o-p⑤\" aria-expanded=\"false\" class=\"has-ref-hint\">Get</a>(<var>input</var>, <var>index</var>).</p>\n           </li><li data-md=\"\">\n            <p>Let <var>key</var> be the result of <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#convert-a-value-to-a-key\" id=\"ref-for-convert-a-value-to-a-key①⑤\" aria-expanded=\"false\" class=\"has-ref-hint\">converting a value to a key</a> with arguments <var>entry</var> and <var>seen</var>.</p>\n           </li><li data-md=\"\">\n            <p><a data-link-type=\"dfn\" href=\"https://tc39.github.io/ecma262/#sec-returnifabrupt\" id=\"ref-for-sec-returnifabrupt\" aria-expanded=\"false\" class=\"has-ref-hint\">ReturnIfAbrupt</a>(<var>key</var>).</p>\n           </li><li data-md=\"\">\n            <p>If <var>key</var> is invalid abort these steps and return\n  invalid.</p>\n           </li><li data-md=\"\">\n            <p><a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-append\" id=\"ref-for-list-append①\" aria-expanded=\"false\" class=\"has-ref-hint\">Append</a> <var>key</var> to <var>keys</var>.</p>\n           </li><li data-md=\"\">\n            <p>Increase <var>index</var> by 1.</p>\n          </li></ol>\n         </li><li data-md=\"\">\n          <p>Return a new <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#array-key\" id=\"ref-for-array-key①①\" aria-expanded=\"false\" class=\"has-ref-hint\">array key</a> with <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key-value\" id=\"ref-for-key-value①⓪\" aria-expanded=\"false\" class=\"has-ref-hint\">value</a> <var>keys</var>.</p>\n        </li></ol>",
+                      "html": "<p>Let <var>len</var> be <a data-link-type=\"dfn\" href=\"https://tc39.github.io/ecma262/#sec-algorithm-conventions\" id=\"ref-for-sec-algorithm-conventions①⑧\" aria-expanded=\"false\" class=\"has-ref-hint\">?</a> <a data-link-type=\"abstract-op\" href=\"https://tc39.es/ecma262/multipage/abstract-operations.html#sec-tolength\" id=\"ref-for-sec-tolength①\" aria-expanded=\"false\" class=\"has-ref-hint\">ToLength</a>( <a data-link-type=\"dfn\" href=\"https://tc39.github.io/ecma262/#sec-algorithm-conventions\" id=\"ref-for-sec-algorithm-conventions①⑨\" aria-expanded=\"false\" class=\"has-ref-hint\">?</a> <a data-link-type=\"abstract-op\" href=\"https://tc39.es/ecma262/multipage/abstract-operations.html#sec-get-o-p\" id=\"ref-for-sec-get-o-p④\" aria-expanded=\"false\" class=\"has-ref-hint\">Get</a>(<var>input</var>,\n  \"<code>length</code>\")).</p>"
+                    },
+                    {
+                      "html": "<p><a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#set-append\" id=\"ref-for-set-append\" aria-expanded=\"false\" class=\"has-ref-hint\">Append</a> <var>input</var> to <var>seen</var>.</p>"
+                    },
+                    {
+                      "html": "<p>Let <var>keys</var> be a new empty list.</p>"
+                    },
+                    {
+                      "html": "<p>Let <var>index</var> be 0.</p>"
+                    },
+                    {
+                      "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"convert-a-value-to-a-key\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">convert a value to a key</dfn> with an ECMAScript value <var>input</var>, and an optional <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#ordered-set\" id=\"ref-for-ordered-set④\" aria-expanded=\"false\" class=\"has-ref-hint\">set</a> <var>seen</var>, run the following steps.\nThe result of these steps is a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key\" id=\"ref-for-key⑨④\" aria-expanded=\"false\" class=\"has-ref-hint\">key</a> or invalid, or the\nsteps may throw an exception.",
                       "rationale": "let",
                       "steps": [
                         {
-                          "html": "<p>Let <var>len</var> be <a data-link-type=\"dfn\" href=\"https://tc39.github.io/ecma262/#sec-algorithm-conventions\" id=\"ref-for-sec-algorithm-conventions①⑧\" aria-expanded=\"false\" class=\"has-ref-hint\">?</a> <a data-link-type=\"abstract-op\" href=\"https://tc39.es/ecma262/multipage/abstract-operations.html#sec-tolength\" id=\"ref-for-sec-tolength①\" aria-expanded=\"false\" class=\"has-ref-hint\">ToLength</a>( <a data-link-type=\"dfn\" href=\"https://tc39.github.io/ecma262/#sec-algorithm-conventions\" id=\"ref-for-sec-algorithm-conventions①⑨\" aria-expanded=\"false\" class=\"has-ref-hint\">?</a> <a data-link-type=\"abstract-op\" href=\"https://tc39.es/ecma262/multipage/abstract-operations.html#sec-get-o-p\" id=\"ref-for-sec-get-o-p④\" aria-expanded=\"false\" class=\"has-ref-hint\">Get</a>(<var>input</var>,\n  \"<code>length</code>\")).</p>"
+                          "html": "<p>Let <var>hop</var> be <a data-link-type=\"dfn\" href=\"https://tc39.github.io/ecma262/#sec-algorithm-conventions\" id=\"ref-for-sec-algorithm-conventions②⓪\" aria-expanded=\"false\" class=\"has-ref-hint\">?</a> <a data-link-type=\"abstract-op\" href=\"https://tc39.es/ecma262/multipage/abstract-operations.html#sec-hasownproperty\" id=\"ref-for-sec-hasownproperty③\" aria-expanded=\"false\" class=\"has-ref-hint\">HasOwnProperty</a>(<var>input</var>, <var>index</var>).</p>"
                         },
                         {
-                          "html": "<p><a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#set-append\" id=\"ref-for-set-append\" aria-expanded=\"false\" class=\"has-ref-hint\">Append</a> <var>input</var> to <var>seen</var>.</p>"
+                          "html": "<p>If <var>hop</var> is false, return invalid.</p>"
                         },
                         {
-                          "html": "<p>Let <var>keys</var> be a new empty list.</p>"
+                          "html": "<p>Let <var>entry</var> be <a data-link-type=\"dfn\" href=\"https://tc39.github.io/ecma262/#sec-algorithm-conventions\" id=\"ref-for-sec-algorithm-conventions②①\" aria-expanded=\"false\" class=\"has-ref-hint\">?</a> <a data-link-type=\"abstract-op\" href=\"https://tc39.es/ecma262/multipage/abstract-operations.html#sec-get-o-p\" id=\"ref-for-sec-get-o-p⑤\" aria-expanded=\"false\" class=\"has-ref-hint\">Get</a>(<var>input</var>, <var>index</var>).</p>"
                         },
                         {
-                          "html": "<p>Let <var>index</var> be 0.</p>"
+                          "html": "<p>Let <var>key</var> be the result of <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#convert-a-value-to-a-key\" id=\"ref-for-convert-a-value-to-a-key①⑤\" aria-expanded=\"false\" class=\"has-ref-hint\">converting a value to a key</a> with arguments <var>entry</var> and <var>seen</var>.</p>"
                         },
                         {
-                          "html": "While <var>index</var> is less than <var>len</var>:",
-                          "rationale": "let",
-                          "steps": [
-                            {
-                              "html": "<p>Let <var>hop</var> be <a data-link-type=\"dfn\" href=\"https://tc39.github.io/ecma262/#sec-algorithm-conventions\" id=\"ref-for-sec-algorithm-conventions②⓪\" aria-expanded=\"false\" class=\"has-ref-hint\">?</a> <a data-link-type=\"abstract-op\" href=\"https://tc39.es/ecma262/multipage/abstract-operations.html#sec-hasownproperty\" id=\"ref-for-sec-hasownproperty③\" aria-expanded=\"false\" class=\"has-ref-hint\">HasOwnProperty</a>(<var>input</var>, <var>index</var>).</p>"
-                            },
-                            {
-                              "html": "<p>If <var>hop</var> is false, return invalid.</p>"
-                            },
-                            {
-                              "html": "<p>Let <var>entry</var> be <a data-link-type=\"dfn\" href=\"https://tc39.github.io/ecma262/#sec-algorithm-conventions\" id=\"ref-for-sec-algorithm-conventions②①\" aria-expanded=\"false\" class=\"has-ref-hint\">?</a> <a data-link-type=\"abstract-op\" href=\"https://tc39.es/ecma262/multipage/abstract-operations.html#sec-get-o-p\" id=\"ref-for-sec-get-o-p⑤\" aria-expanded=\"false\" class=\"has-ref-hint\">Get</a>(<var>input</var>, <var>index</var>).</p>"
-                            },
-                            {
-                              "html": "<p>Let <var>key</var> be the result of <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#convert-a-value-to-a-key\" id=\"ref-for-convert-a-value-to-a-key①⑤\" aria-expanded=\"false\" class=\"has-ref-hint\">converting a value to a key</a> with arguments <var>entry</var> and <var>seen</var>.</p>"
-                            },
-                            {
-                              "html": "<p><a data-link-type=\"dfn\" href=\"https://tc39.github.io/ecma262/#sec-returnifabrupt\" id=\"ref-for-sec-returnifabrupt\" aria-expanded=\"false\" class=\"has-ref-hint\">ReturnIfAbrupt</a>(<var>key</var>).</p>"
-                            },
-                            {
-                              "html": "<p>If <var>key</var> is invalid abort these steps and return\n  invalid.</p>"
-                            },
-                            {
-                              "html": "<p><a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-append\" id=\"ref-for-list-append①\" aria-expanded=\"false\" class=\"has-ref-hint\">Append</a> <var>key</var> to <var>keys</var>.</p>"
-                            },
-                            {
-                              "html": "<p>Increase <var>index</var> by 1.</p>"
-                            }
-                          ]
+                          "html": "<p><a data-link-type=\"dfn\" href=\"https://tc39.github.io/ecma262/#sec-returnifabrupt\" id=\"ref-for-sec-returnifabrupt\" aria-expanded=\"false\" class=\"has-ref-hint\">ReturnIfAbrupt</a>(<var>key</var>).</p>"
                         },
                         {
-                          "html": "<p>Return a new <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#array-key\" id=\"ref-for-array-key①①\" aria-expanded=\"false\" class=\"has-ref-hint\">array key</a> with <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key-value\" id=\"ref-for-key-value①⓪\" aria-expanded=\"false\" class=\"has-ref-hint\">value</a> <var>keys</var>.</p>"
+                          "html": "<p>If <var>key</var> is invalid abort these steps and return\n  invalid.</p>"
+                        },
+                        {
+                          "html": "<p><a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-append\" id=\"ref-for-list-append①\" aria-expanded=\"false\" class=\"has-ref-hint\">Append</a> <var>key</var> to <var>keys</var>.</p>"
+                        },
+                        {
+                          "html": "<p>Increase <var>index</var> by 1.</p>"
                         }
                       ]
+                    },
+                    {
+                      "html": "<p>Return a new <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#array-key\" id=\"ref-for-array-key①①\" aria-expanded=\"false\" class=\"has-ref-hint\">array key</a> with <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key-value\" id=\"ref-for-key-value①⓪\" aria-expanded=\"false\" class=\"has-ref-hint\">value</a> <var>keys</var>.</p>"
                     }
                   ]
                 },
                 {
                   "case": "Otherwise",
-                  "steps": [
-                    {
-                      "html": "<p>Return invalid.</p>"
-                    }
-                  ]
+                  "html": "<p>Return invalid.</p>"
                 }
               ]
             }
@@ -3473,7 +3365,7 @@
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "If <var>input</var> is an <a data-link-type=\"dfn\" href=\"https://tc39.es/ecma262/multipage/ordinary-and-exotic-objects-behaviours.html#array-exotic-object\" id=\"ref-for-array-exotic-object①\" aria-expanded=\"false\" class=\"has-ref-hint\">Array exotic object</a>, then:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"convert-a-value-to-a-multientry-key\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">convert a value to a multiEntry key</dfn> with an ECMAScript value <var>input</var>, run the following steps.\nThe result of these steps is a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key\" id=\"ref-for-key⑨⑨\" aria-expanded=\"false\" class=\"has-ref-hint\">key</a> or invalid, or the\nsteps may throw an exception.",
           "rationale": "let",
           "steps": [
             {
@@ -3489,14 +3381,14 @@
               "html": "<p>Let <var>index</var> be 0.</p>"
             },
             {
-              "html": "While <var>index</var> is less than <var>len</var>:",
+              "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"convert-a-value-to-a-multientry-key\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">convert a value to a multiEntry key</dfn> with an ECMAScript value <var>input</var>, run the following steps.\nThe result of these steps is a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key\" id=\"ref-for-key⑨⑨\" aria-expanded=\"false\" class=\"has-ref-hint\">key</a> or invalid, or the\nsteps may throw an exception.",
               "rationale": "let",
               "steps": [
                 {
                   "html": "<p>Let <var>entry</var> be <a data-link-type=\"abstract-op\" href=\"https://tc39.es/ecma262/multipage/abstract-operations.html#sec-get-o-p\" id=\"ref-for-sec-get-o-p⑦\" aria-expanded=\"false\" class=\"has-ref-hint\">Get</a>(<var>input</var>, <var>index</var>).</p>"
                 },
                 {
-                  "html": "If <var>entry</var> is not an <a data-link-type=\"dfn\" href=\"https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html#sec-completion-record-specification-type\" id=\"ref-for-sec-completion-record-specification-type⑤\" aria-expanded=\"false\" class=\"has-ref-hint\">abrupt completion</a>, then:",
+                  "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"convert-a-value-to-a-multientry-key\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">convert a value to a multiEntry key</dfn> with an ECMAScript value <var>input</var>, run the following steps.\nThe result of these steps is a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/IndexedDB/#key\" id=\"ref-for-key⑨⑨\" aria-expanded=\"false\" class=\"has-ref-hint\">key</a> or invalid, or the\nsteps may throw an exception.",
                   "rationale": "let",
                   "steps": [
                     {

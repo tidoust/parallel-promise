@@ -78,7 +78,7 @@
           "html": "<p>The string <code>\"inherits:\"</code>, followed by a single SPACE (U+0020).</p>"
         },
         {
-          "html": "For the rule’s <a class=\"property\" data-link-type=\"propdesc\" href=\"https://drafts.css-houdini.org/css-properties-values-api-1/#descdef-property-inherits\" id=\"ref-for-descdef-property-inherits③\">inherits</a> attribute, one of the following depending on\nthe attribute’s value:",
+          "html": "To <dfn data-dfn-type=\"dfn\" data-export=\"\" id=\"serialize-a-csspropertyrule\">serialize a CSSPropertyRule<a class=\"self-link\" href=\"https://drafts.css-houdini.org/css-properties-values-api-1/#serialize-a-csspropertyrule\"></a></dfn>, return the concatenation of\nthe following:",
           "rationale": ".switch",
           "steps": [
             {
@@ -86,26 +86,18 @@
               "steps": [
                 {
                   "case": "true",
-                  "steps": [
-                    {
-                      "html": "<p>The string <code>\"true\"</code> followed by a single\nSEMICOLON (U+003B), followed by a SPACE (U+0020).</p>"
-                    }
-                  ]
+                  "html": "<p>The string <code>\"true\"</code> followed by a single\nSEMICOLON (U+003B), followed by a SPACE (U+0020).</p>"
                 },
                 {
                   "case": "false",
-                  "steps": [
-                    {
-                      "html": "<p>The string <code>\"false\"</code> followed by a single\nSEMICOLON (U+003B), followed by a SPACE (U+0020).</p>"
-                    }
-                  ]
+                  "html": "<p>The string <code>\"false\"</code> followed by a single\nSEMICOLON (U+003B), followed by a SPACE (U+0020).</p>"
                 }
               ]
             }
           ]
         },
         {
-          "html": "<p>If the rule’s <a class=\"property\" data-link-type=\"propdesc\" href=\"https://drafts.css-houdini.org/css-properties-values-api-1/#descdef-property-initial-value\" id=\"ref-for-descdef-property-initial-value⑥\">initial-value</a> is present, follow these substeps:</p>\n      <ol>\n       <li data-md=\"\">\n        <p>The string <code>\"initial-value:\"</code>.</p>\n       </li><li data-md=\"\">\n        <p>The result of performing <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#serialize-a-css-value\" id=\"ref-for-serialize-a-css-value①\">serialize a CSS value</a> in the rule’s <a class=\"property\" data-link-type=\"propdesc\" href=\"https://drafts.css-houdini.org/css-properties-values-api-1/#descdef-property-initial-value\" id=\"ref-for-descdef-property-initial-value⑦\">initial-value</a> followed by a single SEMICOLON (U+003B), followed by\na SPACE (U+0020).</p>\n      </li></ol>",
+          "html": "<p>If the rule’s <a class=\"property\" data-link-type=\"propdesc\" href=\"https://drafts.css-houdini.org/css-properties-values-api-1/#descdef-property-initial-value\" id=\"ref-for-descdef-property-initial-value⑥\">initial-value</a> is present, follow these substeps:</p>",
           "ignored": [
             "The string \"initial-value:\". The result of performing serialize a CSS value in the rule’s initial-value followed by a single SEMICOLON (U+003B), followed by a SPACE (U+0020)."
           ]
@@ -118,7 +110,7 @@
     {
       "name": "reify a registered custom property value",
       "href": "https://drafts.css-houdini.org/css-properties-values-api-1/#reify-a-registered-custom-property-value",
-      "html": "For computed values:",
+      "html": "To <dfn data-dfn-type=\"dfn\" data-export=\"\" id=\"reify-a-registered-custom-property-value\">reify a registered custom property value<a class=\"self-link\" href=\"https://drafts.css-houdini.org/css-properties-values-api-1/#reify-a-registered-custom-property-value\"></a></dfn> given a property <var>property</var> and <a data-link-type=\"dfn\" href=\"https://drafts.css-houdini.org/css-properties-values-api-1/#syntax-definition\" id=\"ref-for-syntax-definition⑦\">syntax definition</a> <var>syntax</var>, run these steps: \n    <p>For specified values, <a data-link-type=\"dfn\" href=\"https://drafts.css-houdini.org/css-typed-om-1/#reify-a-list-of-component-values\" id=\"ref-for-reify-a-list-of-component-values\">reify a list of component values</a> from the value,\n\tand return the result.</p>\n    <p>For computed values:</p>",
       "rationale": ".algorithm",
       "steps": [
         {

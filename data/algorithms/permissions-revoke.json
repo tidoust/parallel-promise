@@ -27,7 +27,7 @@
               "html": "<p>If any tasks run due to <a href=\"https://w3c.github.io/permissions/#reacting-to-revocation\">Reacting to\nusers revoking permission</a>, wait for them to finish.</p>"
             },
             {
-              "html": "<p><a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task\" id=\"ref-for-queue-a-task\">Queue a task</a> to <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#resolve\" id=\"ref-for-resolve\">resolve</a> <var>promise</var> with the result of <code><a data-link-type=\"idl\" href=\"https://w3c.github.io/permissions/#dom-permissions-query\" id=\"ref-for-dom-permissions-query\">query(<var>permissionDesc</var>)</a></code>.</p>\n       <p class=\"issue\" id=\"issue-0871c93c\"><a class=\"self-link\" href=\"https://wicg.github.io/permissions-revoke/#issue-0871c93c\"></a> This should pass <var>typedDescriptor</var> directly into the\nparallel part of query().</p>"
+              "html": "<p><a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task\" id=\"ref-for-queue-a-task\">Queue a task</a> to <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#resolve\" id=\"ref-for-resolve\">resolve</a> <var>promise</var> with the result of <code><a data-link-type=\"idl\" href=\"https://w3c.github.io/permissions/#dom-permissions-query\" id=\"ref-for-dom-permissions-query\">query(<var>permissionDesc</var>)</a></code>.</p>"
             }
           ]
         }

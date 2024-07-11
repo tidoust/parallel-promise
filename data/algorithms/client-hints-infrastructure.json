@@ -128,7 +128,7 @@
       ]
     },
     {
-      "html": "<span class=\"marker\">Note:</span> This metadata <em>appends</em> <a data-link-type=\"dfn\" href=\"https://wicg.github.io/client-hints-infrastructure/#client-hints-token\" id=\"ref-for-client-hints-token③\">client hints token</a>s to the <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#environment-settings-object\" id=\"ref-for-environment-settings-object\">environment settings object</a>'s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/client-hints-infrastructure/#environment-settings-object-client-hints-set\" id=\"ref-for-environment-settings-object-client-hints-set①\">client hints set</a>. It <em>does not</em> add those hints to the <a data-link-type=\"dfn\" href=\"https://wicg.github.io/client-hints-infrastructure/#accept-ch-cache\" id=\"ref-for-accept-ch-cache⑦\">Accept-CH cache</a>.",
+      "html": "There MAY be multiple <code>Delegate-CH</code> tags per-document and this algorithm is run once for each in the order of the appearance of the tags.",
       "rationale": "let",
       "steps": [
         {
@@ -325,171 +325,87 @@
           "steps": [
             {
               "case": "Save-Data",
-              "steps": [
-                {
-                  "html": "a suitable <a href=\"https://wicg.github.io/savedata/#save-data-request-header-field\">Save-Data value</a>"
-                }
-              ]
+              "html": "a suitable <a href=\"https://wicg.github.io/savedata/#save-data-request-header-field\">Save-Data value</a>"
             },
             {
               "case": "DPR",
-              "steps": [
-                {
-                  "html": "a suitable <a href=\"\" src=\"https://wicg.github.io/client-hints-infrastructure/#null\">DPR value</a>"
-                }
-              ]
+              "html": "a suitable <a href=\"\" src=\"https://wicg.github.io/client-hints-infrastructure/null\">DPR value</a>"
             },
             {
               "case": "Viewport-Width",
-              "steps": [
-                {
-                  "html": "a suitable <a href=\"\" src=\"https://wicg.github.io/client-hints-infrastructure/#null\">Viewport-Width value</a>"
-                }
-              ]
+              "html": "a suitable <a href=\"\" src=\"https://wicg.github.io/client-hints-infrastructure/null\">Viewport-Width value</a>"
             },
             {
               "case": "Viewport-Height",
-              "steps": [
-                {
-                  "html": "a suitable <a href=\"\" src=\"https://wicg.github.io/client-hints-infrastructure/#null\">Viewport-Height value</a>"
-                }
-              ]
+              "html": "a suitable <a href=\"\" src=\"https://wicg.github.io/client-hints-infrastructure/null\">Viewport-Height value</a>"
             },
             {
               "case": "Width",
-              "steps": [
-                {
-                  "html": "a suitable <a href=\"\" src=\"https://wicg.github.io/client-hints-infrastructure/#null\">Width value</a>"
-                }
-              ]
+              "html": "a suitable <a href=\"\" src=\"https://wicg.github.io/client-hints-infrastructure/null\">Width value</a>"
             },
             {
               "case": "Device-Memory",
-              "steps": [
-                {
-                  "html": "a suitable <a href=\"https://w3c.github.io/device-memory/#sec-device-memory-client-hint-header\">Device-Memory value</a>"
-                }
-              ]
+              "html": "a suitable <a href=\"https://w3c.github.io/device-memory/#sec-device-memory-client-hint-header\">Device-Memory value</a>"
             },
             {
               "case": "RTT",
-              "steps": [
-                {
-                  "html": "a suitable <a href=\"https://wicg.github.io/netinfo/#rtt-request-header-field\">RTT value</a>"
-                }
-              ]
+              "html": "a suitable <a href=\"https://wicg.github.io/netinfo/#rtt-request-header-field\">RTT value</a>"
             },
             {
               "case": "Downlink",
-              "steps": [
-                {
-                  "html": "a suitable <a href=\"https://wicg.github.io/netinfo/#downlink-request-header-field\">Downlink value</a>"
-                }
-              ]
+              "html": "a suitable <a href=\"https://wicg.github.io/netinfo/#downlink-request-header-field\">Downlink value</a>"
             },
             {
               "case": "ECT",
-              "steps": [
-                {
-                  "html": "a suitable <a href=\"https://wicg.github.io/netinfo/#ect-request-header-field\">ECT value</a>"
-                }
-              ]
+              "html": "a suitable <a href=\"https://wicg.github.io/netinfo/#ect-request-header-field\">ECT value</a>"
             },
             {
               "case": "Prefers-Color-Scheme",
-              "steps": [
-                {
-                  "html": "a suitable <a href=\"https://wicg.github.io/user-preference-media-features-headers/#sec-ch-prefers-color-scheme\">color theme value</a>"
-                }
-              ]
+              "html": "a suitable <a href=\"https://wicg.github.io/user-preference-media-features-headers/#sec-ch-prefers-color-scheme\">color theme value</a>"
             },
             {
               "case": "Prefers-Reduced-Motion",
-              "steps": [
-                {
-                  "html": "a suitable <a href=\"https://wicg.github.io/user-preference-media-features-headers/#sec-ch-prefers-reduced-motion\">Reduced-Motion value</a>"
-                }
-              ]
+              "html": "a suitable <a href=\"https://wicg.github.io/user-preference-media-features-headers/#sec-ch-prefers-reduced-motion\">Reduced-Motion value</a>"
             },
             {
               "case": "UA",
-              "steps": [
-                {
-                  "html": "a suitable <a href=\"https://wicg.github.io/ua-client-hints/#sec-ch-ua\">UA value</a>"
-                }
-              ]
+              "html": "a suitable <a href=\"https://wicg.github.io/ua-client-hints/#sec-ch-ua\">UA value</a>"
             },
             {
               "case": "UA-Arch",
-              "steps": [
-                {
-                  "html": "a suitable <a href=\"https://wicg.github.io/ua-client-hints/#sec-ch-ua-arch\">Arch value</a>"
-                }
-              ]
+              "html": "a suitable <a href=\"https://wicg.github.io/ua-client-hints/#sec-ch-ua-arch\">Arch value</a>"
             },
             {
               "case": "UA-Bitness",
-              "steps": [
-                {
-                  "html": "a suitable <a href=\"https://wicg.github.io/ua-client-hints/#sec-ch-ua-bitness\">Bitness value</a>"
-                }
-              ]
+              "html": "a suitable <a href=\"https://wicg.github.io/ua-client-hints/#sec-ch-ua-bitness\">Bitness value</a>"
             },
             {
               "case": "UA-Full-Version",
-              "steps": [
-                {
-                  "html": "a suitable <a href=\"https://wicg.github.io/ua-client-hints/#sec-ch-ua-full-version\">Full-Version value</a>"
-                }
-              ]
+              "html": "a suitable <a href=\"https://wicg.github.io/ua-client-hints/#sec-ch-ua-full-version\">Full-Version value</a>"
             },
             {
               "case": "UA-Full-Version-List",
-              "steps": [
-                {
-                  "html": "a suitable <a href=\"https://wicg.github.io/ua-client-hints/#sec-ch-ua-full-version-list\">Full-Version-List value</a>"
-                }
-              ]
+              "html": "a suitable <a href=\"https://wicg.github.io/ua-client-hints/#sec-ch-ua-full-version-list\">Full-Version-List value</a>"
             },
             {
               "case": "UA-Mobile",
-              "steps": [
-                {
-                  "html": "a suitable <a href=\"https://wicg.github.io/ua-client-hints/#sec-ch-ua-mobile\">Mobile value</a>"
-                }
-              ]
+              "html": "a suitable <a href=\"https://wicg.github.io/ua-client-hints/#sec-ch-ua-mobile\">Mobile value</a>"
             },
             {
               "case": "UA-Model",
-              "steps": [
-                {
-                  "html": "a suitable <a href=\"https://wicg.github.io/ua-client-hints/#sec-ch-ua-model\">Model value</a>"
-                }
-              ]
+              "html": "a suitable <a href=\"https://wicg.github.io/ua-client-hints/#sec-ch-ua-model\">Model value</a>"
             },
             {
               "case": "UA-Platform",
-              "steps": [
-                {
-                  "html": "a suitable <a href=\"https://wicg.github.io/ua-client-hints/#sec-ch-ua-platform\">Platform value</a>"
-                }
-              ]
+              "html": "a suitable <a href=\"https://wicg.github.io/ua-client-hints/#sec-ch-ua-platform\">Platform value</a>"
             },
             {
               "case": "UA-Platform-Version",
-              "steps": [
-                {
-                  "html": "a suitable <a href=\"https://wicg.github.io/ua-client-hints/#sec-ch-ua-platform-version\">Platform-Version value</a>"
-                }
-              ]
+              "html": "a suitable <a href=\"https://wicg.github.io/ua-client-hints/#sec-ch-ua-platform-version\">Platform-Version value</a>"
             },
             {
               "case": "UA-WoW64",
-              "steps": [
-                {
-                  "html": "a suitable <a href=\"https://wicg.github.io/ua-client-hints/#sec-ch-ua-wow64\">WoW64 value</a>"
-                }
-              ]
+              "html": "a suitable <a href=\"https://wicg.github.io/ua-client-hints/#sec-ch-ua-wow64\">WoW64 value</a>"
             }
           ]
         }

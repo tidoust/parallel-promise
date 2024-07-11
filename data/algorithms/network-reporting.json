@@ -26,7 +26,7 @@
       ]
     },
     {
-      "html": "<a class=\"self-link\" href=\"https://w3c.github.io/reporting/network-reporting.html#issue-0c90253d\"></a> Origin Policy monkey patching. Talk to Domenic.",
+      "html": "Given a <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#ordered-map\" id=\"ref-for-ordered-map\">map</a> (<var>parsed</var>), and an <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsers.html#origin\" id=\"ref-for-origin⑥\">origin</a> (<var>origin</var>),\n  this algorithm extracts a list of <a data-link-type=\"dfn\" href=\"https://w3c.github.io/reporting/network-reporting.html#network-reporting-endpoint\" id=\"ref-for-network-reporting-endpoint⑧\">network reporting endpoints</a> and <a data-link-type=\"dfn\" href=\"https://w3c.github.io/reporting/network-reporting.html#endpoint-group\" id=\"ref-for-endpoint-group②⓪\">endpoint groups</a> for <var>origin</var>, and updates the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/reporting/network-reporting.html#reporting-cache\" id=\"ref-for-reporting-cache①\">reporting\n  cache</a> accordingly.",
       "rationale": "let",
       "steps": [
         {
@@ -305,7 +305,7 @@
                           "html": "<p>Increment <var>endpoint</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/reporting/#dom-endpoint-failures\" id=\"ref-for-dom-endpoint-failures②\">failures</a></code>.</p>"
                         },
                         {
-                          "html": "<p>Set <var>endpoint</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/reporting/network-reporting.html#dom-network-reporting-endpoint-retry_after\" id=\"ref-for-dom-network-reporting-endpoint-retry_after③\">retry_after</a></code> to\n  a point in the future which the user agent chooses.</p>\n             \n             <p class=\"issue\" id=\"issue-3c7e465b\"><a class=\"self-link\" href=\"https://w3c.github.io/reporting/network-reporting.html#issue-3c7e465b\"></a> Add in a reasonable reference describing a good\n  algorithm.  Wikipedia, if nothing else.</p>"
+                          "html": "<p>Set <var>endpoint</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/reporting/network-reporting.html#dom-network-reporting-endpoint-retry_after\" id=\"ref-for-dom-network-reporting-endpoint-retry_after③\">retry_after</a></code> to\n  a point in the future which the user agent chooses.</p>"
                         }
                       ]
                     }

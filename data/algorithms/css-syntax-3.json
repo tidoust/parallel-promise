@@ -5,7 +5,7 @@
   },
   "algorithms": [
     {
-      "name": "decode bytes",
+      "name": "CSS/decode bytes",
       "href": "https://drafts.csswg.org/css-syntax-3/#css-decode-bytes",
       "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-for=\"CSS\" data-dfn-type=\"dfn\" data-lt=\"decode bytes\" data-noexport=\"\" id=\"css-decode-bytes\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">decode</dfn> a <var>stylesheet</var>’s stream of bytes into a stream of <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#code-point\" id=\"ref-for-code-point①⓪\">code points</a>:",
       "rationale": ".algorithm",
@@ -72,7 +72,9 @@
       ]
     },
     {
-      "html": "<span class=\"marker\">Note:</span> This algorithm assumes that the initial \"url(\" has already been consumed.\n\tThis algorithm also assumes that it’s being called to consume an \"unquoted\" value,\n\tlike <span class=\"css\">url(foo)</span>.\n\tA quoted value, like <span class=\"css\">url(\"foo\")</span>,\n\tis parsed as a <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.csswg.org/css-syntax-3/#typedef-function-token\" id=\"ref-for-typedef-function-token⑥\">&lt;function-token&gt;</a>. <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#consume-an-ident-like-token\" id=\"ref-for-consume-an-ident-like-token④\">Consume an ident-like token</a> automatically handles this distinction;\n\tthis algorithm shouldn’t be called directly otherwise.",
+      "name": "consume a url token",
+      "href": "https://drafts.csswg.org/css-syntax-3/#consume-a-url-token",
+      "html": "This section describes how to <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"consume-a-url-token\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">consume a url token</dfn> from a stream of <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#code-point\" id=\"ref-for-code-point④④\">code points</a>.\n\tIt returns either a <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.csswg.org/css-syntax-3/#typedef-url-token\" id=\"ref-for-typedef-url-token③\">&lt;url-token&gt;</a> or a <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.csswg.org/css-syntax-3/#typedef-bad-url-token\" id=\"ref-for-typedef-bad-url-token①\">&lt;bad-url-token&gt;</a>.",
       "rationale": "consume",
       "steps": [
         {
@@ -141,7 +143,9 @@
       ]
     },
     {
-      "html": "<span class=\"marker\">Note:</span> This token is not produced by the tokenizer under normal circumstances.\n\tThis algorithm is only called\n\tduring <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#consume-the-value-of-a-unicode-range-descriptor\" id=\"ref-for-consume-the-value-of-a-unicode-range-descriptor\">consume the value of a unicode-range descriptor</a>,\n\twhich itself is only called as a special case\n\tfor parsing the <a class=\"property\" data-link-type=\"propdesc\" href=\"https://drafts.csswg.org/css-fonts-4/#descdef-font-face-unicode-range\" id=\"ref-for-descdef-font-face-unicode-range\">unicode-range</a> descriptor;\n\tthis single invocation in the entire language\n\tis due to a bad syntax design in early CSS.",
+      "name": "consume a unicode-range token",
+      "href": "https://drafts.csswg.org/css-syntax-3/#consume-a-unicode-range-token",
+      "html": "This section describes how to <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-export=\"\" id=\"consume-a-unicode-range-token\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">consume a unicode-range token</dfn> from a stream of <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#code-point\" id=\"ref-for-code-point⑦⑨\">code points</a>.\n\tIt returns a <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.csswg.org/css-syntax-3/#typedef-unicode-range-token\" id=\"ref-for-typedef-unicode-range-token②\">&lt;unicode-range-token&gt;</a>.",
       "rationale": "consume",
       "steps": [
         {
@@ -209,7 +213,7 @@
       ]
     },
     {
-      "name": "parse something according to a CSS grammar",
+      "name": "CSS/parse something according to a CSS grammar",
       "href": "https://drafts.csswg.org/css-syntax-3/#css-parse-something-according-to-a-css-grammar",
       "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-for=\"CSS\" data-dfn-type=\"dfn\" data-export=\"\" data-lt=\"parse something according to a CSS grammar|parse\" id=\"css-parse-something-according-to-a-css-grammar\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">parse something according to a CSS grammar</dfn> (aka simply <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#css-parse-something-according-to-a-css-grammar\" id=\"ref-for-css-parse-something-according-to-a-css-grammar\">parse</a>)\n\t\tgiven an <var>input</var> and a CSS <var>grammar</var> production:",
       "rationale": ".algorithm",
@@ -226,7 +230,7 @@
       ]
     },
     {
-      "name": "parse a comma-separated list according to a CSS grammar",
+      "name": "CSS/parse a comma-separated list according to a CSS grammar",
       "href": "https://drafts.csswg.org/css-syntax-3/#css-parse-a-comma-separated-list-according-to-a-css-grammar",
       "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-for=\"CSS\" data-dfn-type=\"dfn\" data-export=\"\" data-lt=\"parse a comma-separated list according to a CSS grammar|parse a list\" id=\"css-parse-a-comma-separated-list-according-to-a-css-grammar\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">parse a comma-separated list according to a CSS grammar</dfn> (aka <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#css-parse-a-comma-separated-list-according-to-a-css-grammar\" id=\"ref-for-css-parse-a-comma-separated-list-according-to-a-css-grammar①\">parse a list</a>)\n\t\tgiven an <var>input</var> and a CSS <var>grammar</var> production:",
       "rationale": ".algorithm",
@@ -392,7 +396,7 @@
           "html": "<p>Let <var>groups</var> be an empty <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list\" id=\"ref-for-list②\">list</a>.</p>"
         },
         {
-          "html": "While <var>input</var> is not <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#token-stream-empty\" id=\"ref-for-token-stream-empty④\">empty</a>:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-export=\"\" id=\"parse-a-comma-separated-list-of-component-values\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">parse a comma-separated list of component values</dfn> from <var>input</var>:",
           "rationale": "consume",
           "steps": [
             {
@@ -417,27 +421,15 @@
           "steps": [
             {
               "case": "If nothing was returned",
-              "steps": [
-                {
-                  "html": "<p>Do nothing</p>"
-                }
-              ]
+              "html": "<p>Do nothing</p>"
             },
             {
               "case": "If an invalid rule error was returned",
-              "steps": [
-                {
-                  "html": "<p>If <var>decls</var> is not empty,\nappend <var>decls</var> to <var>rules</var>,\nand set <var>decls</var> to a fresh empty <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list\" id=\"ref-for-list①⑦\">list</a> of <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#declaration\" id=\"ref-for-declaration①①\">declarations</a>.\n(Otherwise, do nothing.)</p>"
-                }
-              ]
+              "html": "<p>If <var>decls</var> is not empty,\nappend <var>decls</var> to <var>rules</var>,\nand set <var>decls</var> to a fresh empty <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list\" id=\"ref-for-list①⑦\">list</a> of <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#declaration\" id=\"ref-for-declaration①①\">declarations</a>.\n(Otherwise, do nothing.)</p>"
             },
             {
               "case": "If a rule was returned",
-              "steps": [
-                {
-                  "html": "<p>If <var>decls</var> is not empty,\nappend <var>decls</var> to <var>rules</var>,\nand set <var>decls</var> to a fresh empty <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list\" id=\"ref-for-list①⑧\">list</a> of <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#declaration\" id=\"ref-for-declaration①②\">declarations</a>.\nAppend the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#css-rule\" id=\"ref-for-css-rule①⓪\">rule</a> to <var>rules</var>.</p>"
-                }
-              ]
+              "html": "<p>If <var>decls</var> is not empty,\nappend <var>decls</var> to <var>rules</var>,\nand set <var>decls</var> to a fresh empty <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list\" id=\"ref-for-list①⑧\">list</a> of <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#declaration\" id=\"ref-for-declaration①②\">declarations</a>.\nAppend the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#css-rule\" id=\"ref-for-css-rule①⓪\">rule</a> to <var>rules</var>.</p>"
             }
           ]
         }
@@ -491,6 +483,12 @@
       ]
     },
     {
+      "name": "parse a CSS stylesheet",
+      "href": "https://drafts.csswg.org/css-syntax-3/#parse-a-css-stylesheet",
+      "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-export=\"\" id=\"parse-a-css-stylesheet\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">parse a CSS stylesheet</dfn>,\n\tfirst <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#parse-a-stylesheet\" id=\"ref-for-parse-a-stylesheet①\">parse a stylesheet</a>.\n\tInterpret all of the resulting top-level <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#qualified-rule\" id=\"ref-for-qualified-rule①④\">qualified rules</a> as <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-syntax-3/#style-rule\" id=\"ref-for-style-rule③\">style rules</a>, defined below.",
+      "rationale": "To <dfn>"
+    },
+    {
       "name": "serialize an <an+b> value",
       "href": "https://drafts.csswg.org/css-syntax-3/#serialize-an-anb-value",
       "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-export=\"\" id=\"serialize-an-anb-value\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">serialize an <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.csswg.org/css-syntax-3/#anb-production\" id=\"ref-for-anb-production\">&lt;an+b&gt;</a> value</dfn>,\n\t\twith integer values <var>A</var> and <var>B</var>:",
@@ -503,7 +501,7 @@
           "html": "<p>Otherwise, let <var>result</var> initially be an empty <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#string\" id=\"ref-for-string④\">string</a>.</p>"
         },
         {
-          "html": "<dl class=\"switch\">\n       <dt data-md=\"\"><var>A</var> is <code>1</code>\n       </dt><dd data-md=\"\">\n        <p>Append \"n\" to <var>result</var>.</p>\n       </dd><dt data-md=\"\"><var>A</var> is <code>-1</code>\n       </dt><dd data-md=\"\">\n        <p>Append \"-n\" to <var>result</var>.</p>\n       </dd><dt data-md=\"\"><var>A</var> is non-zero\n       </dt><dd data-md=\"\">\n        <p>Serialize <var>A</var> and append it to <var>result</var>,\nthen append \"n\" to <var>result</var>.</p>\n      </dd></dl>",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-export=\"\" id=\"serialize-an-anb-value\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">serialize an <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.csswg.org/css-syntax-3/#anb-production\" id=\"ref-for-anb-production\">&lt;an+b&gt;</a> value</dfn>,\n\t\twith integer values <var>A</var> and <var>B</var>:",
           "rationale": ".switch",
           "steps": [
             {
@@ -511,34 +509,22 @@
               "steps": [
                 {
                   "case": "A is 1",
-                  "steps": [
-                    {
-                      "html": "<p>Append \"n\" to <var>result</var>.</p>"
-                    }
-                  ]
+                  "html": "<p>Append \"n\" to <var>result</var>.</p>"
                 },
                 {
                   "case": "A is -1",
-                  "steps": [
-                    {
-                      "html": "<p>Append \"-n\" to <var>result</var>.</p>"
-                    }
-                  ]
+                  "html": "<p>Append \"-n\" to <var>result</var>.</p>"
                 },
                 {
                   "case": "A is non-zero",
-                  "steps": [
-                    {
-                      "html": "<p>Serialize <var>A</var> and append it to <var>result</var>,\nthen append \"n\" to <var>result</var>.</p>"
-                    }
-                  ]
+                  "html": "<p>Serialize <var>A</var> and append it to <var>result</var>,\nthen append \"n\" to <var>result</var>.</p>"
                 }
               ]
             }
           ]
         },
         {
-          "html": "<dl class=\"switch\">\n       <dt data-md=\"\"><var>B</var> is greater than zero\n       </dt><dd data-md=\"\">\n        <p>Append \"+\" to <var>result</var>,\nthen append the serialization of <var>B</var> to <var>result</var>.</p>\n       </dd><dt data-md=\"\"><var>B</var> is less than zero\n       </dt><dd data-md=\"\">\n        <p>Append the serialization of <var>B</var> to <var>result</var>.</p>\n      </dd></dl>",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-export=\"\" id=\"serialize-an-anb-value\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">serialize an <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.csswg.org/css-syntax-3/#anb-production\" id=\"ref-for-anb-production\">&lt;an+b&gt;</a> value</dfn>,\n\t\twith integer values <var>A</var> and <var>B</var>:",
           "rationale": ".switch",
           "steps": [
             {
@@ -546,19 +532,11 @@
               "steps": [
                 {
                   "case": "B is greater than zero",
-                  "steps": [
-                    {
-                      "html": "<p>Append \"+\" to <var>result</var>,\nthen append the serialization of <var>B</var> to <var>result</var>.</p>"
-                    }
-                  ]
+                  "html": "<p>Append \"+\" to <var>result</var>,\nthen append the serialization of <var>B</var> to <var>result</var>.</p>"
                 },
                 {
                   "case": "B is less than zero",
-                  "steps": [
-                    {
-                      "html": "<p>Append the serialization of <var>B</var> to <var>result</var>.</p>"
-                    }
-                  ]
+                  "html": "<p>Append the serialization of <var>B</var> to <var>result</var>.</p>"
                 }
               ]
             }

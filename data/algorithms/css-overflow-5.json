@@ -116,7 +116,7 @@
           ]
         },
         {
-          "html": "<dl>\n       <dt data-md=\"\">If <var>selected</var> is not null,\n       </dt><dd data-md=\"\">\n        <ol>\n         <li data-md=\"\">\n          <p>Let <var>marker</var> be the first control in <var>markers</var> whose <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/css-overflow-5/#dom-htmlbuttonelement-scrolltargetelement\" id=\"ref-for-dom-htmlbuttonelement-scrolltargetelement⑥\">scrollTargetElement</a></code> is <var>selected</var>.</p>\n         </li><li data-md=\"\">\n          <p>Set the <a class=\"property css\" data-link-type=\"property\">checked</a> state of <var>marker</var> to true.</p>\n        </li></ol>\n       </dd><dt data-md=\"\">Otherwise,\n       </dt><dd data-md=\"\">\n        <p>Set the <a class=\"property css\" data-link-type=\"property\">checked</a> state of all controls in <var>markers</var> to false.</p>\n      </dd></dl>",
+          "html": "<dl>\n       <dt data-md=\"\">If <var>selected</var> is not null,\n       </dt><dd data-md=\"\">\n        \n       </dd><dt data-md=\"\">Otherwise,\n       </dt><dd data-md=\"\">\n        <p>Set the <a class=\"property css\" data-link-type=\"property\">checked</a> state of all controls in <var>markers</var> to false.</p>\n      </dd></dl>",
           "rationale": "let",
           "steps": [
             {

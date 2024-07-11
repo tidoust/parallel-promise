@@ -111,7 +111,7 @@
           ],
           "additional": [
             {
-              "html": "<span class=\"marker\">NOTE:</span> These pre-conditions were previously checked in the <a href=\"https://w3c.github.io/secure-payment-confirmation/#sctn-steps-to-validate-payment-method-data\">steps to validate payment\n   method data</a>.",
+              "html": "If <var>data</var>[\"<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/secure-payment-confirmation/#dom-securepaymentconfirmationrequest-payeeorigin\" id=\"ref-for-dom-securepaymentconfirmationrequest-payeeorigin⑥\">payeeOrigin</a></code>\"] is present:",
               "rationale": "set",
               "steps": [
                 {

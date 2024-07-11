@@ -27,221 +27,185 @@
           "steps": [
             {
               "case": "a graphics element without use or image",
+              "html": "",
+              "rationale": ".algorithm",
               "steps": [
                 {
-                  "html": "<ol class=\"algorithm\">\n      <li data-md=\"\">\n       <p>Let <var>box</var> be a rectangle initialized to the <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/SVG2/coords.html#TermObjectBoundingBox\" id=\"ref-for-TermObjectBoundingBox⑤\">object bounding box</a> of <var>element</var>.</p>\n      </li><li data-md=\"\">\n       <p>If the <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/css-cascade-5/#used-value\" id=\"ref-for-used-value⑥\">used value</a> of <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeWidthProperty\" id=\"ref-for-StrokeWidthProperty③\">stroke-width</a> &lt;= 0 or the used value of <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeProperty\" id=\"ref-for-StrokeProperty③\">stroke</a> is <span class=\"css\">none</span> return <var>box</var>.</p>\n      </li><li data-md=\"\">\n       <p>Let <var>delta</var> be the inflation value initialized to the half of the <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeWidthProperty\" id=\"ref-for-StrokeWidthProperty④\">stroke-width</a>.</p>\n      </li><li data-md=\"\">\n       <p>If <var>element</var> is not <a data-link-type=\"element\" href=\"https://www.w3.org/TR/SVG2/shapes.html#elementdef-rect\" id=\"ref-for-elementdef-rect②\">rect</a>, <a data-link-type=\"element\" href=\"https://www.w3.org/TR/SVG2/shapes.html#elementdef-ellipse\" id=\"ref-for-elementdef-ellipse②\">ellipse</a>, <a data-link-type=\"element\" href=\"https://www.w3.org/TR/SVG2/shapes.html#elementdef-circle\" id=\"ref-for-elementdef-circle④\">circle</a> or <a data-link-type=\"element\" href=\"https://www.w3.org/TR/SVG2/embedded.html#elementdef-image\" id=\"ref-for-elementdef-image②\">image</a> just follow one of the following conditions in the order they apply:</p>\n       <dl class=\"switch\">\n        <dt data-md=\"\">the used value for <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeLinejoinProperty\" id=\"ref-for-StrokeLinejoinProperty②\">stroke-linejoin</a> is <a class=\"css\" data-link-type=\"maybe\" href=\"https://www.w3.org/TR/fill-stroke-3/#valdef-stroke-linejoin-miter\" id=\"ref-for-valdef-stroke-linejoin-miter\">miter</a>\n        </dt><dd data-md=\"\">\n         <ol>\n          <li data-md=\"\">\n           <p>Let <var>miter</var> be the used value of <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeMiterlimitProperty\" id=\"ref-for-StrokeMiterlimitProperty②\">stroke-miterlimit</a>.</p>\n          </li><li data-md=\"\">\n           <p>If <var>miter</var> is smaller than the square root of 2 and if the used value for <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeLinecapProperty\" id=\"ref-for-StrokeLinecapProperty②\">stroke-linecap</a> is <a class=\"css\" data-link-type=\"maybe\" href=\"https://www.w3.org/TR/fill-stroke-3/#valdef-stroke-linecap-square\" id=\"ref-for-valdef-stroke-linecap-square\">square</a>, multiply <var>delta</var> with the square root of 2. Otherwise, multiply <var>delta</var> with <var>miter</var>.</p>\n         </li></ol>\n        </dd><dt data-md=\"\">the used value for <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeLinecapProperty\" id=\"ref-for-StrokeLinecapProperty③\">stroke-linecap</a> is <a class=\"css\" data-link-type=\"maybe\" href=\"https://www.w3.org/TR/fill-stroke-3/#valdef-stroke-linecap-square\" id=\"ref-for-valdef-stroke-linecap-square①\">square</a>\n        </dt><dd data-md=\"\">\n         <ol>\n          <li data-md=\"\">\n           <p>Multiply <var>delta</var> with the square root of 2.</p>\n         </li></ol>\n       </dd></dl>\n      </li><li data-md=\"\">\n       <p>Inflate <var>box</var> with the value of <var>delta</var>.</p>\n      </li><li data-md=\"\">\n       <p>Return <var>box</var>.</p>\n     </li></ol>",
-                  "rationale": ".algorithm",
+                  "html": "<p>Let <var>box</var> be a rectangle initialized to the <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/SVG2/coords.html#TermObjectBoundingBox\" id=\"ref-for-TermObjectBoundingBox⑤\">object bounding box</a> of <var>element</var>.</p>"
+                },
+                {
+                  "html": "<p>If the <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/css-cascade-5/#used-value\" id=\"ref-for-used-value⑥\">used value</a> of <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeWidthProperty\" id=\"ref-for-StrokeWidthProperty③\">stroke-width</a> &lt;= 0 or the used value of <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeProperty\" id=\"ref-for-StrokeProperty③\">stroke</a> is <span class=\"css\">none</span> return <var>box</var>.</p>"
+                },
+                {
+                  "html": "<p>Let <var>delta</var> be the inflation value initialized to the half of the <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeWidthProperty\" id=\"ref-for-StrokeWidthProperty④\">stroke-width</a>.</p>"
+                },
+                {
+                  "html": "If <var>element</var> is not <a data-link-type=\"element\" href=\"https://www.w3.org/TR/SVG2/shapes.html#elementdef-rect\" id=\"ref-for-elementdef-rect②\">rect</a>, <a data-link-type=\"element\" href=\"https://www.w3.org/TR/SVG2/shapes.html#elementdef-ellipse\" id=\"ref-for-elementdef-ellipse②\">ellipse</a>, <a data-link-type=\"element\" href=\"https://www.w3.org/TR/SVG2/shapes.html#elementdef-circle\" id=\"ref-for-elementdef-circle④\">circle</a> or <a data-link-type=\"element\" href=\"https://www.w3.org/TR/SVG2/embedded.html#elementdef-image\" id=\"ref-for-elementdef-image②\">image</a> just follow one of the following conditions in the order they apply:",
+                  "rationale": ".switch",
                   "steps": [
                     {
-                      "html": "<p>Let <var>box</var> be a rectangle initialized to the <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/SVG2/coords.html#TermObjectBoundingBox\" id=\"ref-for-TermObjectBoundingBox⑤\">object bounding box</a> of <var>element</var>.</p>"
-                    },
-                    {
-                      "html": "<p>If the <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/css-cascade-5/#used-value\" id=\"ref-for-used-value⑥\">used value</a> of <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeWidthProperty\" id=\"ref-for-StrokeWidthProperty③\">stroke-width</a> &lt;= 0 or the used value of <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeProperty\" id=\"ref-for-StrokeProperty③\">stroke</a> is <span class=\"css\">none</span> return <var>box</var>.</p>"
-                    },
-                    {
-                      "html": "<p>Let <var>delta</var> be the inflation value initialized to the half of the <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeWidthProperty\" id=\"ref-for-StrokeWidthProperty④\">stroke-width</a>.</p>"
-                    },
-                    {
-                      "html": "If <var>element</var> is not <a data-link-type=\"element\" href=\"https://www.w3.org/TR/SVG2/shapes.html#elementdef-rect\" id=\"ref-for-elementdef-rect②\">rect</a>, <a data-link-type=\"element\" href=\"https://www.w3.org/TR/SVG2/shapes.html#elementdef-ellipse\" id=\"ref-for-elementdef-ellipse②\">ellipse</a>, <a data-link-type=\"element\" href=\"https://www.w3.org/TR/SVG2/shapes.html#elementdef-circle\" id=\"ref-for-elementdef-circle④\">circle</a> or <a data-link-type=\"element\" href=\"https://www.w3.org/TR/SVG2/embedded.html#elementdef-image\" id=\"ref-for-elementdef-image②\">image</a> just follow one of the following conditions in the order they apply:",
-                      "rationale": ".switch",
+                      "operation": "switch",
                       "steps": [
                         {
-                          "operation": "switch",
+                          "case": "the used value for stroke-linejoin is miter",
+                          "html": "",
+                          "rationale": "let",
                           "steps": [
                             {
-                              "case": "the used value for stroke-linejoin is miter",
-                              "steps": [
-                                {
-                                  "html": "<ol>\n          <li data-md=\"\">\n           <p>Let <var>miter</var> be the used value of <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeMiterlimitProperty\" id=\"ref-for-StrokeMiterlimitProperty②\">stroke-miterlimit</a>.</p>\n          </li><li data-md=\"\">\n           <p>If <var>miter</var> is smaller than the square root of 2 and if the used value for <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeLinecapProperty\" id=\"ref-for-StrokeLinecapProperty②\">stroke-linecap</a> is <a class=\"css\" data-link-type=\"maybe\" href=\"https://www.w3.org/TR/fill-stroke-3/#valdef-stroke-linecap-square\" id=\"ref-for-valdef-stroke-linecap-square\">square</a>, multiply <var>delta</var> with the square root of 2. Otherwise, multiply <var>delta</var> with <var>miter</var>.</p>\n         </li></ol>",
-                                  "rationale": "let",
-                                  "steps": [
-                                    {
-                                      "html": "<p>Let <var>miter</var> be the used value of <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeMiterlimitProperty\" id=\"ref-for-StrokeMiterlimitProperty②\">stroke-miterlimit</a>.</p>"
-                                    },
-                                    {
-                                      "html": "<p>If <var>miter</var> is smaller than the square root of 2 and if the used value for <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeLinecapProperty\" id=\"ref-for-StrokeLinecapProperty②\">stroke-linecap</a> is <a class=\"css\" data-link-type=\"maybe\" href=\"https://www.w3.org/TR/fill-stroke-3/#valdef-stroke-linecap-square\" id=\"ref-for-valdef-stroke-linecap-square\">square</a>, multiply <var>delta</var> with the square root of 2. Otherwise, multiply <var>delta</var> with <var>miter</var>.</p>"
-                                    }
-                                  ]
-                                }
-                              ]
+                              "html": "<p>Let <var>miter</var> be the used value of <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeMiterlimitProperty\" id=\"ref-for-StrokeMiterlimitProperty②\">stroke-miterlimit</a>.</p>"
                             },
                             {
-                              "case": "the used value for stroke-linecap is square",
-                              "steps": [
-                                {
-                                  "html": "<ol>\n          <li data-md=\"\">\n           <p>Multiply <var>delta</var> with the square root of 2.</p>\n         </li></ol>",
-                                  "rationale": "multiply",
-                                  "steps": [
-                                    {
-                                      "html": "<p>Multiply <var>delta</var> with the square root of 2.</p>"
-                                    }
-                                  ]
-                                }
-                              ]
+                              "html": "<p>If <var>miter</var> is smaller than the square root of 2 and if the used value for <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeLinecapProperty\" id=\"ref-for-StrokeLinecapProperty②\">stroke-linecap</a> is <a class=\"css\" data-link-type=\"maybe\" href=\"https://www.w3.org/TR/fill-stroke-3/#valdef-stroke-linecap-square\" id=\"ref-for-valdef-stroke-linecap-square\">square</a>, multiply <var>delta</var> with the square root of 2. Otherwise, multiply <var>delta</var> with <var>miter</var>.</p>"
+                            }
+                          ]
+                        },
+                        {
+                          "case": "the used value for stroke-linecap is square",
+                          "html": "",
+                          "rationale": "multiply",
+                          "steps": [
+                            {
+                              "html": "<p>Multiply <var>delta</var> with the square root of 2.</p>"
                             }
                           ]
                         }
                       ]
-                    },
-                    {
-                      "html": "<p>Inflate <var>box</var> with the value of <var>delta</var>.</p>"
-                    },
-                    {
-                      "html": "<p>Return <var>box</var>.</p>"
                     }
                   ]
+                },
+                {
+                  "html": "<p>Inflate <var>box</var> with the value of <var>delta</var>.</p>"
+                },
+                {
+                  "html": "<p>Return <var>box</var>.</p>"
                 }
               ]
             },
             {
               "case": "an a element with a text content element",
+              "html": "",
+              "rationale": ".algorithm",
               "steps": [
                 {
-                  "html": "<ol class=\"algorithm\">\n      <li data-md=\"\">\n       <p>Let <var>box</var> be a rectangle initialized to the <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/SVG2/coords.html#TermObjectBoundingBox\" id=\"ref-for-TermObjectBoundingBox⑤\">object bounding box</a> of <var>element</var>.</p>\n      </li><li data-md=\"\">\n       <p>If the <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/css-cascade-5/#used-value\" id=\"ref-for-used-value⑥\">used value</a> of <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeWidthProperty\" id=\"ref-for-StrokeWidthProperty③\">stroke-width</a> &lt;= 0 or the used value of <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeProperty\" id=\"ref-for-StrokeProperty③\">stroke</a> is <span class=\"css\">none</span> return <var>box</var>.</p>\n      </li><li data-md=\"\">\n       <p>Let <var>delta</var> be the inflation value initialized to the half of the <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeWidthProperty\" id=\"ref-for-StrokeWidthProperty④\">stroke-width</a>.</p>\n      </li><li data-md=\"\">\n       <p>If <var>element</var> is not <a data-link-type=\"element\" href=\"https://www.w3.org/TR/SVG2/shapes.html#elementdef-rect\" id=\"ref-for-elementdef-rect②\">rect</a>, <a data-link-type=\"element\" href=\"https://www.w3.org/TR/SVG2/shapes.html#elementdef-ellipse\" id=\"ref-for-elementdef-ellipse②\">ellipse</a>, <a data-link-type=\"element\" href=\"https://www.w3.org/TR/SVG2/shapes.html#elementdef-circle\" id=\"ref-for-elementdef-circle④\">circle</a> or <a data-link-type=\"element\" href=\"https://www.w3.org/TR/SVG2/embedded.html#elementdef-image\" id=\"ref-for-elementdef-image②\">image</a> just follow one of the following conditions in the order they apply:</p>\n       <dl class=\"switch\">\n        <dt data-md=\"\">the used value for <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeLinejoinProperty\" id=\"ref-for-StrokeLinejoinProperty②\">stroke-linejoin</a> is <a class=\"css\" data-link-type=\"maybe\" href=\"https://www.w3.org/TR/fill-stroke-3/#valdef-stroke-linejoin-miter\" id=\"ref-for-valdef-stroke-linejoin-miter\">miter</a>\n        </dt><dd data-md=\"\">\n         <ol>\n          <li data-md=\"\">\n           <p>Let <var>miter</var> be the used value of <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeMiterlimitProperty\" id=\"ref-for-StrokeMiterlimitProperty②\">stroke-miterlimit</a>.</p>\n          </li><li data-md=\"\">\n           <p>If <var>miter</var> is smaller than the square root of 2 and if the used value for <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeLinecapProperty\" id=\"ref-for-StrokeLinecapProperty②\">stroke-linecap</a> is <a class=\"css\" data-link-type=\"maybe\" href=\"https://www.w3.org/TR/fill-stroke-3/#valdef-stroke-linecap-square\" id=\"ref-for-valdef-stroke-linecap-square\">square</a>, multiply <var>delta</var> with the square root of 2. Otherwise, multiply <var>delta</var> with <var>miter</var>.</p>\n         </li></ol>\n        </dd><dt data-md=\"\">the used value for <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeLinecapProperty\" id=\"ref-for-StrokeLinecapProperty③\">stroke-linecap</a> is <a class=\"css\" data-link-type=\"maybe\" href=\"https://www.w3.org/TR/fill-stroke-3/#valdef-stroke-linecap-square\" id=\"ref-for-valdef-stroke-linecap-square①\">square</a>\n        </dt><dd data-md=\"\">\n         <ol>\n          <li data-md=\"\">\n           <p>Multiply <var>delta</var> with the square root of 2.</p>\n         </li></ol>\n       </dd></dl>\n      </li><li data-md=\"\">\n       <p>Inflate <var>box</var> with the value of <var>delta</var>.</p>\n      </li><li data-md=\"\">\n       <p>Return <var>box</var>.</p>\n     </li></ol>",
-                  "rationale": ".algorithm",
+                  "html": "<p>Let <var>box</var> be a rectangle initialized to the <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/SVG2/coords.html#TermObjectBoundingBox\" id=\"ref-for-TermObjectBoundingBox⑤\">object bounding box</a> of <var>element</var>.</p>"
+                },
+                {
+                  "html": "<p>If the <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/css-cascade-5/#used-value\" id=\"ref-for-used-value⑥\">used value</a> of <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeWidthProperty\" id=\"ref-for-StrokeWidthProperty③\">stroke-width</a> &lt;= 0 or the used value of <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeProperty\" id=\"ref-for-StrokeProperty③\">stroke</a> is <span class=\"css\">none</span> return <var>box</var>.</p>"
+                },
+                {
+                  "html": "<p>Let <var>delta</var> be the inflation value initialized to the half of the <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeWidthProperty\" id=\"ref-for-StrokeWidthProperty④\">stroke-width</a>.</p>"
+                },
+                {
+                  "html": "If <var>element</var> is not <a data-link-type=\"element\" href=\"https://www.w3.org/TR/SVG2/shapes.html#elementdef-rect\" id=\"ref-for-elementdef-rect②\">rect</a>, <a data-link-type=\"element\" href=\"https://www.w3.org/TR/SVG2/shapes.html#elementdef-ellipse\" id=\"ref-for-elementdef-ellipse②\">ellipse</a>, <a data-link-type=\"element\" href=\"https://www.w3.org/TR/SVG2/shapes.html#elementdef-circle\" id=\"ref-for-elementdef-circle④\">circle</a> or <a data-link-type=\"element\" href=\"https://www.w3.org/TR/SVG2/embedded.html#elementdef-image\" id=\"ref-for-elementdef-image②\">image</a> just follow one of the following conditions in the order they apply:",
+                  "rationale": ".switch",
                   "steps": [
                     {
-                      "html": "<p>Let <var>box</var> be a rectangle initialized to the <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/SVG2/coords.html#TermObjectBoundingBox\" id=\"ref-for-TermObjectBoundingBox⑤\">object bounding box</a> of <var>element</var>.</p>"
-                    },
-                    {
-                      "html": "<p>If the <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/css-cascade-5/#used-value\" id=\"ref-for-used-value⑥\">used value</a> of <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeWidthProperty\" id=\"ref-for-StrokeWidthProperty③\">stroke-width</a> &lt;= 0 or the used value of <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeProperty\" id=\"ref-for-StrokeProperty③\">stroke</a> is <span class=\"css\">none</span> return <var>box</var>.</p>"
-                    },
-                    {
-                      "html": "<p>Let <var>delta</var> be the inflation value initialized to the half of the <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeWidthProperty\" id=\"ref-for-StrokeWidthProperty④\">stroke-width</a>.</p>"
-                    },
-                    {
-                      "html": "If <var>element</var> is not <a data-link-type=\"element\" href=\"https://www.w3.org/TR/SVG2/shapes.html#elementdef-rect\" id=\"ref-for-elementdef-rect②\">rect</a>, <a data-link-type=\"element\" href=\"https://www.w3.org/TR/SVG2/shapes.html#elementdef-ellipse\" id=\"ref-for-elementdef-ellipse②\">ellipse</a>, <a data-link-type=\"element\" href=\"https://www.w3.org/TR/SVG2/shapes.html#elementdef-circle\" id=\"ref-for-elementdef-circle④\">circle</a> or <a data-link-type=\"element\" href=\"https://www.w3.org/TR/SVG2/embedded.html#elementdef-image\" id=\"ref-for-elementdef-image②\">image</a> just follow one of the following conditions in the order they apply:",
-                      "rationale": ".switch",
+                      "operation": "switch",
                       "steps": [
                         {
-                          "operation": "switch",
+                          "case": "the used value for stroke-linejoin is miter",
+                          "html": "",
+                          "rationale": "let",
                           "steps": [
                             {
-                              "case": "the used value for stroke-linejoin is miter",
-                              "steps": [
-                                {
-                                  "html": "<ol>\n          <li data-md=\"\">\n           <p>Let <var>miter</var> be the used value of <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeMiterlimitProperty\" id=\"ref-for-StrokeMiterlimitProperty②\">stroke-miterlimit</a>.</p>\n          </li><li data-md=\"\">\n           <p>If <var>miter</var> is smaller than the square root of 2 and if the used value for <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeLinecapProperty\" id=\"ref-for-StrokeLinecapProperty②\">stroke-linecap</a> is <a class=\"css\" data-link-type=\"maybe\" href=\"https://www.w3.org/TR/fill-stroke-3/#valdef-stroke-linecap-square\" id=\"ref-for-valdef-stroke-linecap-square\">square</a>, multiply <var>delta</var> with the square root of 2. Otherwise, multiply <var>delta</var> with <var>miter</var>.</p>\n         </li></ol>",
-                                  "rationale": "let",
-                                  "steps": [
-                                    {
-                                      "html": "<p>Let <var>miter</var> be the used value of <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeMiterlimitProperty\" id=\"ref-for-StrokeMiterlimitProperty②\">stroke-miterlimit</a>.</p>"
-                                    },
-                                    {
-                                      "html": "<p>If <var>miter</var> is smaller than the square root of 2 and if the used value for <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeLinecapProperty\" id=\"ref-for-StrokeLinecapProperty②\">stroke-linecap</a> is <a class=\"css\" data-link-type=\"maybe\" href=\"https://www.w3.org/TR/fill-stroke-3/#valdef-stroke-linecap-square\" id=\"ref-for-valdef-stroke-linecap-square\">square</a>, multiply <var>delta</var> with the square root of 2. Otherwise, multiply <var>delta</var> with <var>miter</var>.</p>"
-                                    }
-                                  ]
-                                }
-                              ]
+                              "html": "<p>Let <var>miter</var> be the used value of <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeMiterlimitProperty\" id=\"ref-for-StrokeMiterlimitProperty②\">stroke-miterlimit</a>.</p>"
                             },
                             {
-                              "case": "the used value for stroke-linecap is square",
-                              "steps": [
-                                {
-                                  "html": "<ol>\n          <li data-md=\"\">\n           <p>Multiply <var>delta</var> with the square root of 2.</p>\n         </li></ol>",
-                                  "rationale": "multiply",
-                                  "steps": [
-                                    {
-                                      "html": "<p>Multiply <var>delta</var> with the square root of 2.</p>"
-                                    }
-                                  ]
-                                }
-                              ]
+                              "html": "<p>If <var>miter</var> is smaller than the square root of 2 and if the used value for <a class=\"property css\" data-link-type=\"property\" href=\"https://www.w3.org/TR/SVG2/painting.html#StrokeLinecapProperty\" id=\"ref-for-StrokeLinecapProperty②\">stroke-linecap</a> is <a class=\"css\" data-link-type=\"maybe\" href=\"https://www.w3.org/TR/fill-stroke-3/#valdef-stroke-linecap-square\" id=\"ref-for-valdef-stroke-linecap-square\">square</a>, multiply <var>delta</var> with the square root of 2. Otherwise, multiply <var>delta</var> with <var>miter</var>.</p>"
+                            }
+                          ]
+                        },
+                        {
+                          "case": "the used value for stroke-linecap is square",
+                          "html": "",
+                          "rationale": "multiply",
+                          "steps": [
+                            {
+                              "html": "<p>Multiply <var>delta</var> with the square root of 2.</p>"
                             }
                           ]
                         }
                       ]
-                    },
-                    {
-                      "html": "<p>Inflate <var>box</var> with the value of <var>delta</var>.</p>"
-                    },
-                    {
-                      "html": "<p>Return <var>box</var>.</p>"
                     }
                   ]
+                },
+                {
+                  "html": "<p>Inflate <var>box</var> with the value of <var>delta</var>.</p>"
+                },
+                {
+                  "html": "<p>Return <var>box</var>.</p>"
                 }
               ]
             },
             {
               "case": "a container element",
+              "html": "",
+              "rationale": ".algorithm",
               "steps": [
                 {
-                  "html": "<ol class=\"algorithm\">\n      <li data-md=\"\">\n       <p>Let <var>parent</var> be the <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/SVG2/struct.html#container-element\" id=\"ref-for-container-element①⑨\">container element</a> if it is one, or the root of the <a data-link-type=\"element\" href=\"https://www.w3.org/TR/SVG2/struct.html#elementdef-use\" id=\"ref-for-elementdef-use②②\">use</a> element’s shadow tree otherwise.</p>\n      </li><li data-md=\"\">\n       <p>For each child <var>child</var> of <var>parent</var></p>\n       <ol>\n        <li data-md=\"\">\n         <p>Invoke the stroke bounding box algorithm with <var>child</var>.</p>\n        </li><li data-md=\"\">\n         <p>Let <var>childBox</var> be the returned box value of the invoked algorithm.</p>\n        </li><li data-md=\"\">\n         <p>Map <var>childBox</var> from the coordinate space of <var>child</var> to the coordinate space of <var>parent</var>.</p>\n       </li></ol>\n      </li><li data-md=\"\">\n       <p>Let <var>box</var> be the union of all <var>childBox</var>es.</p>\n      </li><li data-md=\"\">\n       <p>Return <var>box</var>.</p>\n     </li></ol>",
-                  "rationale": ".algorithm",
+                  "html": "<p>Let <var>parent</var> be the <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/SVG2/struct.html#container-element\" id=\"ref-for-container-element①⑨\">container element</a> if it is one, or the root of the <a data-link-type=\"element\" href=\"https://www.w3.org/TR/SVG2/struct.html#elementdef-use\" id=\"ref-for-elementdef-use②②\">use</a> element’s shadow tree otherwise.</p>"
+                },
+                {
+                  "html": "For each child <var>child</var> of <var>parent</var>",
+                  "rationale": "invoke",
                   "steps": [
                     {
-                      "html": "<p>Let <var>parent</var> be the <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/SVG2/struct.html#container-element\" id=\"ref-for-container-element①⑨\">container element</a> if it is one, or the root of the <a data-link-type=\"element\" href=\"https://www.w3.org/TR/SVG2/struct.html#elementdef-use\" id=\"ref-for-elementdef-use②②\">use</a> element’s shadow tree otherwise.</p>"
+                      "html": "<p>Invoke the stroke bounding box algorithm with <var>child</var>.</p>"
                     },
                     {
-                      "html": "For each child <var>child</var> of <var>parent</var>",
-                      "rationale": "invoke",
-                      "steps": [
-                        {
-                          "html": "<p>Invoke the stroke bounding box algorithm with <var>child</var>.</p>"
-                        },
-                        {
-                          "html": "<p>Let <var>childBox</var> be the returned box value of the invoked algorithm.</p>"
-                        },
-                        {
-                          "html": "<p>Map <var>childBox</var> from the coordinate space of <var>child</var> to the coordinate space of <var>parent</var>.</p>"
-                        }
-                      ]
+                      "html": "<p>Let <var>childBox</var> be the returned box value of the invoked algorithm.</p>"
                     },
                     {
-                      "html": "<p>Let <var>box</var> be the union of all <var>childBox</var>es.</p>"
-                    },
-                    {
-                      "html": "<p>Return <var>box</var>.</p>"
+                      "html": "<p>Map <var>childBox</var> from the coordinate space of <var>child</var> to the coordinate space of <var>parent</var>.</p>"
                     }
                   ]
+                },
+                {
+                  "html": "<p>Let <var>box</var> be the union of all <var>childBox</var>es.</p>"
+                },
+                {
+                  "html": "<p>Return <var>box</var>.</p>"
                 }
               ]
             },
             {
               "case": "use",
+              "html": "",
+              "rationale": ".algorithm",
               "steps": [
                 {
-                  "html": "<ol class=\"algorithm\">\n      <li data-md=\"\">\n       <p>Let <var>parent</var> be the <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/SVG2/struct.html#container-element\" id=\"ref-for-container-element①⑨\">container element</a> if it is one, or the root of the <a data-link-type=\"element\" href=\"https://www.w3.org/TR/SVG2/struct.html#elementdef-use\" id=\"ref-for-elementdef-use②②\">use</a> element’s shadow tree otherwise.</p>\n      </li><li data-md=\"\">\n       <p>For each child <var>child</var> of <var>parent</var></p>\n       <ol>\n        <li data-md=\"\">\n         <p>Invoke the stroke bounding box algorithm with <var>child</var>.</p>\n        </li><li data-md=\"\">\n         <p>Let <var>childBox</var> be the returned box value of the invoked algorithm.</p>\n        </li><li data-md=\"\">\n         <p>Map <var>childBox</var> from the coordinate space of <var>child</var> to the coordinate space of <var>parent</var>.</p>\n       </li></ol>\n      </li><li data-md=\"\">\n       <p>Let <var>box</var> be the union of all <var>childBox</var>es.</p>\n      </li><li data-md=\"\">\n       <p>Return <var>box</var>.</p>\n     </li></ol>",
-                  "rationale": ".algorithm",
+                  "html": "<p>Let <var>parent</var> be the <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/SVG2/struct.html#container-element\" id=\"ref-for-container-element①⑨\">container element</a> if it is one, or the root of the <a data-link-type=\"element\" href=\"https://www.w3.org/TR/SVG2/struct.html#elementdef-use\" id=\"ref-for-elementdef-use②②\">use</a> element’s shadow tree otherwise.</p>"
+                },
+                {
+                  "html": "For each child <var>child</var> of <var>parent</var>",
+                  "rationale": "invoke",
                   "steps": [
                     {
-                      "html": "<p>Let <var>parent</var> be the <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/SVG2/struct.html#container-element\" id=\"ref-for-container-element①⑨\">container element</a> if it is one, or the root of the <a data-link-type=\"element\" href=\"https://www.w3.org/TR/SVG2/struct.html#elementdef-use\" id=\"ref-for-elementdef-use②②\">use</a> element’s shadow tree otherwise.</p>"
+                      "html": "<p>Invoke the stroke bounding box algorithm with <var>child</var>.</p>"
                     },
                     {
-                      "html": "For each child <var>child</var> of <var>parent</var>",
-                      "rationale": "invoke",
-                      "steps": [
-                        {
-                          "html": "<p>Invoke the stroke bounding box algorithm with <var>child</var>.</p>"
-                        },
-                        {
-                          "html": "<p>Let <var>childBox</var> be the returned box value of the invoked algorithm.</p>"
-                        },
-                        {
-                          "html": "<p>Map <var>childBox</var> from the coordinate space of <var>child</var> to the coordinate space of <var>parent</var>.</p>"
-                        }
-                      ]
+                      "html": "<p>Let <var>childBox</var> be the returned box value of the invoked algorithm.</p>"
                     },
                     {
-                      "html": "<p>Let <var>box</var> be the union of all <var>childBox</var>es.</p>"
-                    },
-                    {
-                      "html": "<p>Return <var>box</var>.</p>"
+                      "html": "<p>Map <var>childBox</var> from the coordinate space of <var>child</var> to the coordinate space of <var>parent</var>.</p>"
                     }
                   ]
+                },
+                {
+                  "html": "<p>Let <var>box</var> be the union of all <var>childBox</var>es.</p>"
+                },
+                {
+                  "html": "<p>Return <var>box</var>.</p>"
                 }
               ]
             },
             {
               "case": "image",
+              "html": "",
+              "rationale": ".algorithm",
               "steps": [
                 {
-                  "html": "<ol class=\"algorithm\">\n      <li data-md=\"\">\n       <p>Return the <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/SVG2/coords.html#TermObjectBoundingBox\" id=\"ref-for-TermObjectBoundingBox⑥\">object bounding box</a> of <var>element</var>.</p>\n     </li></ol>",
-                  "rationale": ".algorithm",
-                  "steps": [
-                    {
-                      "html": "<p>Return the <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/SVG2/coords.html#TermObjectBoundingBox\" id=\"ref-for-TermObjectBoundingBox⑥\">object bounding box</a> of <var>element</var>.</p>"
-                    }
-                  ]
+                  "html": "<p>Return the <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/SVG2/coords.html#TermObjectBoundingBox\" id=\"ref-for-TermObjectBoundingBox⑥\">object bounding box</a> of <var>element</var>.</p>"
                 }
               ]
             }

@@ -146,7 +146,7 @@
     },
     {
       "html": "Each function performs the following steps atomically:",
-      "rationale": "store",
+      "rationale": "load",
       "steps": [
         {
           "html": "<p>Load the original value pointed to by <code>atomic_ptr</code>.</p>"
@@ -161,7 +161,7 @@
     },
     {
       "html": "Performs the following steps atomically:",
-      "rationale": "store",
+      "rationale": "load",
       "steps": [
         {
           "html": "<p>Load the original value pointed to by <code>atomic_ptr</code>.</p>"

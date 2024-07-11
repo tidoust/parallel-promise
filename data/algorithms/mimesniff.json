@@ -108,7 +108,7 @@
                   "html": "<p>Set <var>parameterValue</var> to the result of <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#collect-an-http-quoted-string\" id=\"ref-for-collect-an-http-quoted-string\">collecting an HTTP quoted string</a> from <var>input</var>, given <var>position</var> and true. </p>"
                 },
                 {
-                  "html": "<p><a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#collect-a-sequence-of-code-points\" id=\"ref-for-collect-a-sequence-of-code-points④\">Collect a sequence of code points</a> that are not U+003B (;) from <var>input</var>,\n      given <var>position</var>. </p>\n         <p class=\"example\" id=\"example-mime-type-parser-trailing-garbage\"><a class=\"self-link\" href=\"https://mimesniff.spec.whatwg.org/#example-mime-type-parser-trailing-garbage\"></a>Given <code>text/html;charset=\"shift_jis\"iso-2022-jp</code> you end up with <code>text/html;charset=shift_jis</code>. </p>"
+                  "html": "<p><a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#collect-a-sequence-of-code-points\" id=\"ref-for-collect-a-sequence-of-code-points④\">Collect a sequence of code points</a> that are not U+003B (;) from <var>input</var>,\n      given <var>position</var>. </p>"
                 }
               ]
             },

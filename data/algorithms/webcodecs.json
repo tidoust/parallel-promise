@@ -1772,7 +1772,7 @@
               ]
             },
             {
-              "html": "<p>Let <var>chunk</var> be a new <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webcodecs/#encodedvideochunk\" id=\"ref-for-encodedvideochunk⑥\">EncodedVideoChunk</a></code> constructed with <var>chunkInit</var>.</p>"
+              "html": "<p>Let <var>chunk</var> be a new <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webcodecs/#encodedvideochunk\" id=\"ref-for-encodedvideochunk⑤\">EncodedVideoChunk</a></code> constructed with <var>chunkInit</var>.</p>"
             },
             {
               "html": "<p>Let <var>chunkMetadata</var> be a new <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webcodecs/#dictdef-encodedvideochunkmetadata\" id=\"ref-for-dictdef-encodedvideochunkmetadata①\">EncodedVideoChunkMetadata</a></code>.</p>"
@@ -2072,7 +2072,7 @@
       ]
     },
     {
-      "html": "<span class=\"marker\">NOTE:</span> Codec-specific extensions to <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webcodecs/#dictdef-videoencoderencodeoptions\" id=\"ref-for-dictdef-videoencoderencodeoptions①\">VideoEncoderEncodeOptions</a></code> are described in\n    their registrations in the <a data-link-type=\"biblio\" href=\"https://w3c.github.io/webcodecs/#biblio-webcodecs-codec-registry\" title=\"WebCodecs Codec Registry\">[WEBCODECS-CODEC-REGISTRY]</a>.",
+      "html": "Describes how the user agent <em class=\"rfc2119\">SHOULD</em> behave when dealing\nwith alpha channels, for a variety of different operations.",
       "rationale": "if",
       "steps": [
         {
@@ -2088,7 +2088,7 @@
           ]
         },
         {
-          "html": "Let <var>chunk</var> be a new <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webcodecs/#encodedaudiochunk\" id=\"ref-for-encodedaudiochunk⑥\">EncodedAudioChunk</a></code> object, initialized as follows",
+          "html": "Let <var>chunk</var> be a new <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webcodecs/#encodedaudiochunk\" id=\"ref-for-encodedaudiochunk⑦\">EncodedAudioChunk</a></code> object, initialized as follows",
           "rationale": "assign",
           "steps": [
             {
@@ -2144,7 +2144,7 @@
       "rationale": "if",
       "steps": [
         {
-          "html": "<p>If the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webcodecs/#dom-encodedaudiochunk-byte-length-slot\" id=\"ref-for-dom-encodedaudiochunk-byte-length-slot②\">[[byte length]]</a></code> of this <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webcodecs/#encodedaudiochunk\" id=\"ref-for-encodedaudiochunk⑦\">EncodedAudioChunk</a></code> is\ngreater than in <var>destination</var>, throw a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#exceptiondef-typeerror\" id=\"ref-for-exceptiondef-typeerror①⓪\">TypeError</a></code>.</p>"
+          "html": "<p>If the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webcodecs/#dom-encodedaudiochunk-byte-length-slot\" id=\"ref-for-dom-encodedaudiochunk-byte-length-slot②\">[[byte length]]</a></code> of this <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webcodecs/#encodedaudiochunk\" id=\"ref-for-encodedaudiochunk⑧\">EncodedAudioChunk</a></code> is\ngreater than in <var>destination</var>, throw a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#exceptiondef-typeerror\" id=\"ref-for-exceptiondef-typeerror①⓪\">TypeError</a></code>.</p>"
         },
         {
           "html": "<p>Copy the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webcodecs/#dom-encodedaudiochunk-internal-data-slot\" id=\"ref-for-dom-encodedaudiochunk-internal-data-slot③\">[[internal data]]</a></code> into <var>destination</var>.</p>"
@@ -2159,7 +2159,7 @@
           "html": "<p>If <var>forStorage</var> is <code>true</code>, throw a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#datacloneerror\" id=\"ref-for-datacloneerror②\">DataCloneError</a></code>.</p>"
         },
         {
-          "html": "<p>For each <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webcodecs/#encodedaudiochunk\" id=\"ref-for-encodedaudiochunk⑨\">EncodedAudioChunk</a></code> internal slot in <var>value</var>, assign the value\nof each internal slot to a field in <var>serialized</var> with the same name as\nthe internal slot.</p>"
+          "html": "<p>For each <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webcodecs/#encodedaudiochunk\" id=\"ref-for-encodedaudiochunk①⓪\">EncodedAudioChunk</a></code> internal slot in <var>value</var>, assign the value\nof each internal slot to a field in <var>serialized</var> with the same name as\nthe internal slot.</p>"
         }
       ]
     },
@@ -2168,12 +2168,12 @@
       "rationale": "for",
       "steps": [
         {
-          "html": "<p>For all named fields in <var>serialized</var>, assign the value of each named field\nto the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webcodecs/#encodedaudiochunk\" id=\"ref-for-encodedaudiochunk①①\">EncodedAudioChunk</a></code> internal slot in <var>value</var> with the same name\nas the named field.</p>"
+          "html": "<p>For all named fields in <var>serialized</var>, assign the value of each named field\nto the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webcodecs/#encodedaudiochunk\" id=\"ref-for-encodedaudiochunk①②\">EncodedAudioChunk</a></code> internal slot in <var>value</var> with the same name\nas the named field.</p>"
         }
       ]
     },
     {
-      "html": "<span class=\"marker\">NOTE:</span> Since <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webcodecs/#encodedaudiochunk\" id=\"ref-for-encodedaudiochunk①②\">EncodedAudioChunk</a></code>s are immutable, User\n    Agents can choose to implement serialization using a reference counting\n    model similar to <a href=\"https://w3c.github.io/webcodecs/#audiodata-transfer-serialization\">§ 9.2.6 Transfer and Serialization</a>.",
+      "html": "Describes how the user agent <em class=\"rfc2119\">SHOULD</em> behave when dealing\nwith alpha channels, for a variety of different operations.",
       "rationale": "if",
       "steps": [
         {
@@ -2189,7 +2189,7 @@
           ]
         },
         {
-          "html": "Let <var>chunk</var> be a new <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webcodecs/#encodedvideochunk\" id=\"ref-for-encodedvideochunk①⑧\">EncodedVideoChunk</a></code> object, initialized as follows",
+          "html": "Let <var>chunk</var> be a new <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webcodecs/#encodedvideochunk\" id=\"ref-for-encodedvideochunk①⑦\">EncodedVideoChunk</a></code> object, initialized as follows",
           "rationale": "assign",
           "steps": [
             {
@@ -2260,7 +2260,7 @@
           "html": "<p>If <var>forStorage</var> is <code>true</code>, throw a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#datacloneerror\" id=\"ref-for-datacloneerror⑤\">DataCloneError</a></code>.</p>"
         },
         {
-          "html": "<p>For each <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webcodecs/#encodedvideochunk\" id=\"ref-for-encodedvideochunk②⓪\">EncodedVideoChunk</a></code> internal slot in <var>value</var>, assign the value\nof each internal slot to a field in <var>serialized</var> with the same name as\nthe internal slot.</p>"
+          "html": "<p>For each <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webcodecs/#encodedvideochunk\" id=\"ref-for-encodedvideochunk①⑨\">EncodedVideoChunk</a></code> internal slot in <var>value</var>, assign the value\nof each internal slot to a field in <var>serialized</var> with the same name as\nthe internal slot.</p>"
         }
       ]
     },
@@ -2269,7 +2269,7 @@
       "rationale": "for",
       "steps": [
         {
-          "html": "<p>For all named fields in <var>serialized</var>, assign the value of each named field\nto the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webcodecs/#encodedvideochunk\" id=\"ref-for-encodedvideochunk②②\">EncodedVideoChunk</a></code> internal slot in <var>value</var> with the same name\nas the named field.</p>"
+          "html": "<p>For all named fields in <var>serialized</var>, assign the value of each named field\nto the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webcodecs/#encodedvideochunk\" id=\"ref-for-encodedvideochunk②①\">EncodedVideoChunk</a></code> internal slot in <var>value</var> with the same name\nas the named field.</p>"
         }
       ]
     },
@@ -2828,7 +2828,7 @@
           "html": "<p>Let <var>resourceVisibleLeft</var> be the left offset for the visible rectangle of <var>resource</var>.</p>"
         },
         {
-          "html": "<p>Let <var>resourceVisibleTop</var> be the top offset for the visible rectangle of <var>resource</var>.</p>\n     <p class=\"issue\" id=\"issue-4948f268\"><a class=\"self-link\" href=\"https://w3c.github.io/webcodecs/#issue-4948f268\"></a> The spec <em class=\"rfc2119\">SHOULD</em> provide definitions (and\n  possibly diagrams) for coded size, visible rectangle, and display size.\n  See <a href=\"https://github.com/w3c/webcodecs/issues/166\">#166</a>.</p>"
+          "html": "<p>Let <var>resourceVisibleTop</var> be the top offset for the visible rectangle of <var>resource</var>.</p>"
         },
         {
           "html": "Let <var>frame</var> be a new <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webcodecs/#videoframe\" id=\"ref-for-videoframe④⓪\">VideoFrame</a></code> object initialized as follows:",
@@ -3656,7 +3656,7 @@
               ]
             },
             {
-              "html": "<span class=\"marker\">NOTE:</span> If an explicit layout was not provided, the following steps\n    default to tight packing.",
+              "html": "Otherwise:",
               "rationale": "assign",
               "steps": [
                 {
@@ -4162,7 +4162,7 @@
       "rationale": "let",
       "steps": [
         {
-          "html": "<p>Let <var>readRequest</var> be the following <a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#read-request\" id=\"ref-for-read-request\">read request</a>.</p>\n       <dl>\n        <dt data-md=\"\"><a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#read-request-chunk-steps\" id=\"ref-for-read-request-chunk-steps\">chunk steps</a>, given <var>chunk</var>\n        </dt><dd data-md=\"\">\n         <ol>\n          <li data-md=\"\">\n           <p>If <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webcodecs/#dom-imagedecoder-closed-slot\" id=\"ref-for-dom-imagedecoder-closed-slot②\">[[closed]]</a></code> is <code>true</code>, abort these steps.</p>\n          </li><li data-md=\"\">\n           <p>If <var>chunk</var> is not a Uint8Array object, <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task\" id=\"ref-for-queue-a-task③⑨\">queue a task</a> to run\nthe <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webcodecs/#imagedecoder-close-imagedecoder\" id=\"ref-for-imagedecoder-close-imagedecoder②\">Close ImageDecoder</a> algorithm with a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#dataerror\" id=\"ref-for-dataerror④\">DataError</a></code> <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#idl-DOMException\" id=\"ref-for-idl-DOMException⑤⓪\">DOMException</a></code> and abort these steps.</p>\n          </li><li data-md=\"\">\n           <p>Let <var>bytes</var> be the byte sequence represented by the Uint8Array\nobject.</p>\n          </li><li data-md=\"\">\n           <p>Append <var>bytes</var> to the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webcodecs/#dom-imagedecoder-encoded-data-slot\" id=\"ref-for-dom-imagedecoder-encoded-data-slot⑦\">[[encoded data]]</a></code> internal slot.</p>\n          </li><li data-md=\"\">\n           <p>If <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webcodecs/#dom-imagedecoder-tracks-established-slot\" id=\"ref-for-dom-imagedecoder-tracks-established-slot②\">[[tracks established]]</a></code> is <code>false</code>, run the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webcodecs/#imagedecoder-establish-tracks\" id=\"ref-for-imagedecoder-establish-tracks①\">Establish Tracks</a> algorithm.</p>\n          </li><li data-md=\"\">\n           <p>Otherwise, run the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webcodecs/#imagedecoder-update-tracks\" id=\"ref-for-imagedecoder-update-tracks\">Update Tracks</a> algorithm.</p>\n          </li><li data-md=\"\">\n           <p>Run the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webcodecs/#imagedecoder-fetch-stream-data-loop\" id=\"ref-for-imagedecoder-fetch-stream-data-loop①\">Fetch Stream Data Loop</a> algorithm with <var>reader</var>.</p>\n         </li></ol>\n        </dd><dt data-md=\"\"><a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#read-request-close-steps\" id=\"ref-for-read-request-close-steps\">close steps</a>\n        </dt><dd data-md=\"\">\n         <ol>\n          <li data-md=\"\">\n           <p>Assign <code>true</code> to <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webcodecs/#dom-imagedecoder-complete-slot\" id=\"ref-for-dom-imagedecoder-complete-slot④\">[[complete]]</a></code></p>\n          </li><li data-md=\"\">\n           <p>Resolve <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webcodecs/#dom-imagedecoder-completed-promise-slot\" id=\"ref-for-dom-imagedecoder-completed-promise-slot②\">[[completed promise]]</a></code>.</p>\n         </li></ol>\n        </dd><dt data-md=\"\"><a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#read-request-error-steps\" id=\"ref-for-read-request-error-steps\">error steps</a>\n        </dt><dd data-md=\"\">\n         <ol>\n          <li data-md=\"\">\n           <p><a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task\" id=\"ref-for-queue-a-task④⓪\">Queue a task</a> to run the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webcodecs/#imagedecoder-close-imagedecoder\" id=\"ref-for-imagedecoder-close-imagedecoder③\">Close ImageDecoder</a> algorithm with a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#notreadableerror\" id=\"ref-for-notreadableerror\">NotReadableError</a></code> <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#idl-DOMException\" id=\"ref-for-idl-DOMException⑤①\">DOMException</a></code></p>\n         </li></ol>\n       </dd></dl>",
+          "html": "<p>Let <var>readRequest</var> be the following <a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#read-request\" id=\"ref-for-read-request\">read request</a>.</p>\n       <dl>\n        <dt data-md=\"\"><a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#read-request-chunk-steps\" id=\"ref-for-read-request-chunk-steps\">chunk steps</a>, given <var>chunk</var>\n        </dt><dd data-md=\"\">\n         \n        </dd><dt data-md=\"\"><a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#read-request-close-steps\" id=\"ref-for-read-request-close-steps\">close steps</a>\n        </dt><dd data-md=\"\">\n         \n        </dd><dt data-md=\"\"><a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#read-request-error-steps\" id=\"ref-for-read-request-error-steps\">error steps</a>\n        </dt><dd data-md=\"\">\n         \n       </dd></dl>",
           "rationale": "if",
           "steps": [
             {

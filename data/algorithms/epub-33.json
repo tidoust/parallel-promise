@@ -5,6 +5,12 @@
   },
   "algorithms": [
     {
+      "name": "manifest plane",
+      "href": "https://w3c.github.io/epub-specs/epub33/core/#dfn-manifest-plane",
+      "html": "To <dfn class=\"export\" data-lt-no-plural=\"\" data-export=\"\" id=\"dfn-manifest-plane\" tabindex=\"0\" aria-haspopup=\"dialog\" data-dfn-type=\"dfn\">manifest plane</dfn> defines all the resources of an\n\t\t\t\t\t\t<a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/epub-specs/epub33/core/#dfn-epub-publication\" class=\"internalDFN\" id=\"ref-for-dfn-epub-publication-21\">EPUB publication</a>. It is analogous to the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/epub-specs/epub33/core/#dfn-package-document\" class=\"internalDFN\" id=\"ref-for-dfn-package-document-11\">package document</a> <a data-link-type=\"dfn|abstract-op\" data-lt=\"EPUB manifest\" href=\"https://w3c.github.io/epub-specs/epub33/core/#dfn-epub-manifest\" class=\"internalDFN\" id=\"ref-for-dfn-epub-manifest-2\">manifest</a>,\n\t\t\t\t\t\tbut includes resources not present in that list.",
+      "rationale": "To <dfn>"
+    },
+    {
       "html": "To <strong>derive the file path</strong>, given a file or directory <var>file</var> in the <a href=\"https://w3c.github.io/epub-specs/epub33/core/#sec-container-abstract\">OCF abstract container</a>, apply the following steps\n\t\t\t\t\t\t(expressed using the terminology of [<cite><a class=\"bibref\" data-link-type=\"biblio\" href=\"https://w3c.github.io/epub-specs/epub33/core/#bib-infra\" title=\"Infra Standard\">infra</a></cite>]):",
       "rationale": ".algorithm",
       "steps": [
@@ -128,7 +134,7 @@
           ]
         },
         {
-          "html": "<span>if not (<var>source</var> at EOF) then</span>\n\t\t\t\t\t\t\t<ol>\n\t\t\t\t\t\t\t\t<li>read <var>source</var> to EOF</li>\n\t\t\t\t\t\t\t\t<li>write result of read to <var>destination</var></li>\n\t\t\t\t\t\t\t</ol>\n\t\t\t\t\t\t\t<span>end if</span>",
+          "html": "<span>if not (<var>source</var> at EOF) then</span>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<span>end if</span>",
           "ignored": [
             "read source to EOF write result of read to destination"
           ]

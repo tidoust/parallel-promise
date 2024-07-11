@@ -5,7 +5,9 @@
   },
   "algorithms": [
     {
-      "html": "<span>Note:</span> The <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-subresource-integrity/#getprioritizedhashfunction\" id=\"ref-for-getprioritizedhashfunction\">getPrioritizedHashFunction</a> is an internal\n  implementation detail. It is not an API that implementors\n  provide to web applications. It is used in this document\n  only to simplify the algorithm description.",
+      "name": "getPrioritizedHashFunction",
+      "href": "https://w3c.github.io/webappsec-subresource-integrity/#getprioritizedhashfunction",
+      "html": "User agents must provide a mechanism for determining the relative priority of two\n  hash functions and return the empty string if the priority is equal. That is, if\n  a user agent implemented a function like <dfn class=\"dfn-paneled\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"getprioritizedhashfunction\">getPrioritizedHashFunction</dfn>(a,\n  b) it would return the hash function the user agent considers the most\n  collision-resistant.  For example, <code>getPrioritizedHashFunction('sha256', 'sha512')</code> would return <code>'sha512'</code> and <code>getPrioritizedHashFunction('sha256', 'sha256')</code> would return the empty string.",
       "rationale": "let",
       "steps": [
         {

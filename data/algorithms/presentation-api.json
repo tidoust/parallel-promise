@@ -77,7 +77,7 @@
           "html": "Request user permission for the use of a <a href=\"https://w3c.github.io/presentation-api/#dfn-presentation-display\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-presentation-display-10\">presentation\n            display</a> and selection of one presentation display."
         },
         {
-          "html": "If either of the following is true:\n              <ol>\n                <li>The <a href=\"https://w3c.github.io/presentation-api/#dfn-list-of-available-presentation-displays\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-list-of-available-presentation-displays-1\">list of available presentation displays</a> is empty\n                and will remain so before the request for user permission is\n                completed.\n                </li>\n                <li>No member in the <a href=\"https://w3c.github.io/presentation-api/#dfn-list-of-available-presentation-displays\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-list-of-available-presentation-displays-2\">list of available presentation\n                displays</a> is an <a href=\"https://w3c.github.io/presentation-api/#dfn-available-presentation-display\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-available-presentation-display-1\">available presentation display</a> for\n                any member of <var>presentationUrls</var>.\n                </li>\n              </ol>Then run the following steps:",
+          "html": "If either of the following is true:\n              Then run the following steps:",
           "rationale": "reject",
           "steps": [
             {

@@ -400,7 +400,9 @@
       ]
     },
     {
-      "html": "<a class=\"self-link\" href=\"https://wicg.github.io/ua-client-hints/#issue-22962aa8\"></a> We can improve upon when and why a UA decides to refuse a hint once <a href=\"https://github.com/WICG/ua-client-hints/issues/151\">Issue #151</a> is resolved.",
+      "name": "NavigatorUA/getHighEntropyValues(hints)",
+      "href": "https://wicg.github.io/ua-client-hints/#dom-navigatorua-gethighentropyvalues",
+      "html": "The <dfn class=\"idl-code\" data-dfn-for=\"NavigatorUA\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-navigatorua-gethighentropyvalues\"><code>getHighEntropyValues(<var>hints</var>)</code><a class=\"self-link\" href=\"https://wicg.github.io/ua-client-hints/#dom-navigatorua-gethighentropyvalues\"></a></dfn> method MUST run these steps:",
       "rationale": "in parallel",
       "steps": [
         {

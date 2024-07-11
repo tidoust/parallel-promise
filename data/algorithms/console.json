@@ -110,7 +110,7 @@
       ]
     },
     {
-      "html": "The identifier of a function printed in a stack trace is implementation-dependant. It is also not\n  guaranteed to be the same identifier that would be seen in <code>new Error().stack</code>.",
+      "html": "TODO: This will need a good algorithm.",
       "rationale": "perform",
       "steps": [
         {
@@ -119,7 +119,7 @@
       ]
     },
     {
-      "html": "The identifier of a function printed in a stack trace is implementation-dependant. It is also not\n  guaranteed to be the same identifier that would be seen in <code>new Error().stack</code>.",
+      "html": "TODO: This will need a good algorithm.",
       "rationale": "let",
       "steps": [
         {
@@ -131,7 +131,7 @@
       ]
     },
     {
-      "html": "The identifier of a function printed in a stack trace is implementation-dependant. It is also not\n  guaranteed to be the same identifier that would be seen in <code>new Error().stack</code>.",
+      "html": "TODO: This will need a good algorithm.",
       "rationale": "let",
       "steps": [
         {
@@ -293,7 +293,7 @@
           "html": "<p>Let <var>startTime</var> be <var>timerTable</var>[<var>label</var>].</p>"
         },
         {
-          "html": "<p>Let <var>duration</var> be a string representing the difference between the current time and <var>startTime</var>, in an implementation-defined format.</p>\n     <p class=\"example\" id=\"duration-string-example\"><a class=\"self-link\" href=\"https://console.spec.whatwg.org/#duration-string-example\"></a>\"4650\", \"4650.69 ms\", \"5 seconds\", and \"00:05\"\n are all reasonable ways of displaying a 4650.69 ms duration.</p>"
+          "html": "<p>Let <var>duration</var> be a string representing the difference between the current time and <var>startTime</var>, in an implementation-defined format.</p>"
         },
         {
           "html": "<p>Let <var>concat</var> be the concatenation of <var>label</var>, U+003A (:), U+0020 SPACE, and <var>duration</var>.</p>"

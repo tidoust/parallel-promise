@@ -13,19 +13,11 @@
           "steps": [
             {
               "case": "The @container rule has an associated <container-name>",
-              "steps": [
-                {
-                  "html": "The result of getting the <code class=\"highlight\">containerName</code> and <code class=\"highlight\">containerQuery</code> attributes, joined by a single whitespace."
-                }
-              ]
+              "html": "The result of getting the <code class=\"highlight\">containerName</code> and <code class=\"highlight\">containerQuery</code> attributes, joined by a single whitespace."
             },
             {
               "case": "Otherwise",
-              "steps": [
-                {
-                  "html": "The result of getting the <code class=\"highlight\">containerQuery</code> attribute."
-                }
-              ]
+              "html": "The result of getting the <code class=\"highlight\">containerQuery</code> attribute."
             }
           ]
         }
@@ -40,19 +32,11 @@
           "steps": [
             {
               "case": "The @container rule has an associated <container-name>",
-              "steps": [
-                {
-                  "html": "The result of serializing that <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.csswg.org/css-conditional-5/#typedef-container-name\" id=\"ref-for-typedef-container-name⑤\">&lt;container-name&gt;</a>."
-                }
-              ]
+              "html": "The result of serializing that <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.csswg.org/css-conditional-5/#typedef-container-name\" id=\"ref-for-typedef-container-name⑤\">&lt;container-name&gt;</a>."
             },
             {
               "case": "Otherwise",
-              "steps": [
-                {
-                  "html": "An empty string."
-                }
-              ]
+              "html": "An empty string."
             }
           ]
         }

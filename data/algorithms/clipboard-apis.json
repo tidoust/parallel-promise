@@ -88,7 +88,7 @@
           ],
           "additional": [
             {
-              "html": "The step above prevents collision between mime-types well-known by the user agent and those that are intended by the author to be treated as a custom type.  For example, it would be possible for the author’s list of items to contain representations for \"text/html\" as well as \"web text/html\".",
+              "html": "For each (<var>key</var>, <var>value</var>) in <var>items</var>:",
               "rationale": "set",
               "steps": [
                 {
@@ -202,7 +202,7 @@
                       "rationale": "reject",
                       "steps": [
                         {
-                          "html": "<p><a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#reject\" id=\"ref-for-reject\">Reject</a> <var>p</var> with <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#notfounderror\" id=\"ref-for-notfounderror\">\"NotFoundError\"</a></code> <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#idl-DOMException\" id=\"ref-for-idl-DOMException\">DOMException</a></code> in <var>realm</var>.</p>\n             <p class=\"issue\" id=\"issue-2d83c5ad\"><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#issue-2d83c5ad\"></a> Web developers might be interested in the underlying rejection reason.</p>"
+                          "html": "<p><a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#reject\" id=\"ref-for-reject\">Reject</a> <var>p</var> with <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#notfounderror\" id=\"ref-for-notfounderror\">\"NotFoundError\"</a></code> <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#idl-DOMException\" id=\"ref-for-idl-DOMException\">DOMException</a></code> in <var>realm</var>.</p>"
                         }
                       ]
                     }
@@ -329,10 +329,10 @@
                       ]
                     },
                     {
-                      "html": "<p>Resolve <var>representation</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#representation-data\" id=\"ref-for-representation-data②\">data</a> with <var>systemClipboardRepresentation</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#system-clipboard-representation-data\" id=\"ref-for-system-clipboard-representation-data\">data</a>.</p>\n             <p class=\"issue\" id=\"issue-0a41fcd5\"><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#issue-0a41fcd5\"></a> It should be possible to read the data asynchronously from the system clipboard after the author calls getType, however, this set of steps implies that data will be provided at the time of read.</p>"
+                      "html": "<p>Resolve <var>representation</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#representation-data\" id=\"ref-for-representation-data②\">data</a> with <var>systemClipboardRepresentation</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#system-clipboard-representation-data\" id=\"ref-for-system-clipboard-representation-data\">data</a>.</p>"
                     },
                     {
-                      "html": "<p>The user agent, MAY sanitize <var>representation</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#representation-data\" id=\"ref-for-representation-data③\">data</a>, unless <var>representation</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#representation-mime-type\" id=\"ref-for-representation-mime-type①①\">MIME type</a>'s essence is \"image/png\", which should remain unsanitized to preserve meta data, or if it satisfies the below conditions:</p>\n             <ol>\n              <li data-md=\"\">\n               <p><var>representation</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#representation-mime-type\" id=\"ref-for-representation-mime-type①②\">MIME type</a> is in optional <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#unsanitized-data-types\" id=\"ref-for-unsanitized-data-types\">unsanitized data types</a> list.</p>\n              </li><li data-md=\"\">\n               <p><var>isUnsanitized</var> is true.</p>\n             </li></ol>",
+                      "html": "<p>The user agent, MAY sanitize <var>representation</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#representation-data\" id=\"ref-for-representation-data③\">data</a>, unless <var>representation</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#representation-mime-type\" id=\"ref-for-representation-mime-type①①\">MIME type</a>'s essence is \"image/png\", which should remain unsanitized to preserve meta data, or if it satisfies the below conditions:</p>",
                       "ignored": [
                         "representation’s MIME type is in optional unsanitized data types list. isUnsanitized is true."
                       ]
@@ -440,7 +440,7 @@
               ]
             },
             {
-              "html": "<p>Let <var>data</var> be a copy of the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#system-clipboard-data\" id=\"ref-for-system-clipboard-data③\">system clipboard data</a>.</p>\n         <p class=\"issue\" id=\"issue-c148910f\"><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#issue-c148910f\"></a> Some OSs contain multiple clipboard (e.g. Linux, \"primary\", \"secondary\", \"selection\"). Define from which of those data is read.</p>\n         <p class=\"issue\" id=\"issue-1755f975\"><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#issue-1755f975\"></a> Add definition of sanitized copy.</p>"
+              "html": "<p>Let <var>data</var> be a copy of the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#system-clipboard-data\" id=\"ref-for-system-clipboard-data③\">system clipboard data</a>.</p>"
             },
             {
               "html": "<a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-global-task\" id=\"ref-for-queue-a-global-task③\">Queue a global task</a> on the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#clipboard-task-source\" id=\"ref-for-clipboard-task-source①\">clipboard task source</a>, given <var>realm</var>’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#concept-realm-global\" id=\"ref-for-concept-realm-global③\">global object</a>, to perform the below steps:",
@@ -559,7 +559,7 @@
           "rationale": "let",
           "steps": [
             {
-              "html": "<p>Let <var>r</var> be the result of running <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#check-clipboard-write-permission\" id=\"ref-for-check-clipboard-write-permission\">check clipboard write permission</a>.</p>\n         <p class=\"issue\" id=\"issue-1b338371\"><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#issue-1b338371\"></a> clipboard-write was removed in https://github.com/w3c/clipboard-apis/pull/164.</p>"
+              "html": "<p>Let <var>r</var> be the result of running <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#check-clipboard-write-permission\" id=\"ref-for-check-clipboard-write-permission\">check clipboard write permission</a>.</p>"
             },
             {
               "html": "If <var>r</var> is false, then:",
@@ -584,7 +584,7 @@
                   "html": "<p>Let <var>dataList</var> be a <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#idl-sequence\" id=\"ref-for-idl-sequence⑦\">sequence</a>&lt;<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/clipboard-apis/#clipboarditem\" id=\"ref-for-clipboarditem①③\">ClipboardItem</a></code>&gt;.</p>"
                 },
                 {
-                  "html": "<p>If <var>data</var>’s <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-size\" id=\"ref-for-list-size\">size</a> is greater than 1, and the current operating system does not support multiple native clipboard items on the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#system-clipboard\" id=\"ref-for-system-clipboard①⑤\">system clipboard</a>, then add <var>data</var>[0] to <var>dataList</var>, else, set <var>dataList</var> to <var>data</var>.</p>\n           <p class=\"issue\" id=\"issue-f23cf1e2\"><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#issue-f23cf1e2\"></a> when <var>data</var> contains multiple items and the operating system supports multiple native clipboard items, the current algorithm writes the items in sequence to the system clipboard instead of writing them collectively.</p>"
+                  "html": "<p>If <var>data</var>’s <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-size\" id=\"ref-for-list-size\">size</a> is greater than 1, and the current operating system does not support multiple native clipboard items on the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#system-clipboard\" id=\"ref-for-system-clipboard①⑤\">system clipboard</a>, then add <var>data</var>[0] to <var>dataList</var>, else, set <var>dataList</var> to <var>data</var>.</p>"
                 },
                 {
                   "html": "For each <var>clipboardItem</var> in <var>dataList</var>:",
@@ -652,7 +652,7 @@
                           "html": "<p>If <var>type</var> is not in the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#mandatory-data-types\" id=\"ref-for-mandatory-data-types③\">mandatory data types</a> or <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#optional-data-types\" id=\"ref-for-optional-data-types②\">optional data types</a> list, then <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#reject\" id=\"ref-for-reject⑨\">reject</a> <var>p</var> with <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#notallowederror\" id=\"ref-for-notallowederror⑤\">\"NotAllowedError\"</a></code> <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#idl-DOMException\" id=\"ref-for-idl-DOMException⑨\">DOMException</a></code> in <var>realm</var> and abort these steps.</p>"
                         },
                         {
-                          "html": "<p>Let <var>cleanItem</var> be an optionally sanitized copy of <var>blob</var>.</p>\n               <p class=\"issue\" id=\"issue-1755f975①\"><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#issue-1755f975%E2%91%A0\"></a> Add definition of sanitized copy.</p>"
+                          "html": "<p>Let <var>cleanItem</var> be an optionally sanitized copy of <var>blob</var>.</p>"
                         },
                         {
                           "html": "If sanitization was attempted and was not successfully completed, then follow the below steps:",
@@ -708,7 +708,7 @@
           "rationale": "let",
           "steps": [
             {
-              "html": "<p>Let <var>r</var> be the result of running <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#check-clipboard-write-permission\" id=\"ref-for-check-clipboard-write-permission①\">check clipboard write permission</a>.</p>\n         <p class=\"issue\" id=\"issue-1b338371①\"><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#issue-1b338371%E2%91%A0\"></a> clipboard-write was removed in https://github.com/w3c/clipboard-apis/pull/164.</p>"
+              "html": "<p>Let <var>r</var> be the result of running <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#check-clipboard-write-permission\" id=\"ref-for-check-clipboard-write-permission①\">check clipboard write permission</a>.</p>"
             },
             {
               "html": "If <var>r</var> is false, then:",
@@ -760,7 +760,7 @@
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "If action is <em>copy</em> or <em>cut</em> and the script thread\nis <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#allowed-to-modify-the-clipboard\" id=\"ref-for-allowed-to-modify-the-clipboard\">allowed to modify the clipboard</a>, then",
+          "html": "The <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"script-may-access-clipboard\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">script-may-access-clipboard</dfn> flag is set as follows:",
           "rationale": "set",
           "steps": [
             {
@@ -769,7 +769,7 @@
           ]
         },
         {
-          "html": "If action is <em>paste</em> and the script thread is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#allowed-to-read-from-clipboard\" id=\"ref-for-allowed-to-read-from-clipboard\">allowed to\nread from clipboard</a>, then",
+          "html": "The <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"script-may-access-clipboard\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">script-may-access-clipboard</dfn> flag is set as follows:",
           "rationale": "set",
           "steps": [
             {
@@ -975,7 +975,7 @@
           "html": "<p>Let <var>hasGesture</var> be true if the <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#concept-relevant-global\" id=\"ref-for-concept-relevant-global\">relevant global object</a> of <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\" id=\"ref-for-this①④\">this</a> has <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/interaction.html#transient-activation\" id=\"ref-for-transient-activation\">transient activation</a>, false otherwise.</p>"
         },
         {
-          "html": "If <var>hasGesture</var> then,",
+          "html": "<h4 class=\"heading settled\" data-level=\"9.1.1\" id=\"h-clipboard-read-permission\"><span class=\"secno\">9.1.1. </span><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"check-clipboard-read-permission\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">check clipboard read permission</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#h-clipboard-read-permission\"></a></h4>",
           "rationale": "return",
           "steps": [
             {
@@ -1004,7 +1004,7 @@
           "html": "<p>Let <var>hasGesture</var> be true if the <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#concept-relevant-global\" id=\"ref-for-concept-relevant-global①\">relevant global object</a> of <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\" id=\"ref-for-this①⑤\">this</a> has <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/interaction.html#transient-activation\" id=\"ref-for-transient-activation①\">transient activation</a>, false otherwise.</p>"
         },
         {
-          "html": "If <var>hasGesture</var> then,",
+          "html": "<h4 class=\"heading settled\" data-level=\"9.2.1\" id=\"h-clipboard-write-permission\"><span class=\"secno\">9.2.1. </span><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"check-clipboard-write-permission\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">check clipboard write permission</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#h-clipboard-write-permission\"></a></h4>",
           "rationale": "let",
           "steps": [
             {
@@ -1030,18 +1030,18 @@
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "If the <var>items</var> list is not empty, then",
+          "html": "<h3 class=\"heading settled\" id=\"to-write-content-to-clipboard\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"write-content-to-the-clipboard\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">write content to the clipboard</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-write-content-to-clipboard\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>items</var>, a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/dnd.html#datatransferitemlist\" id=\"ref-for-datatransferitemlist④\">DataTransferItemList</a></code> list of items to write</p>\n     </dd><dd data-md=\"\">\n      <p><var>clear-was-called</var>, a boolean</p>\n     </dd><dd data-md=\"\">\n      <p><var>types-to-clear</var>, a list</p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p>None</p>\n    </dd></dl>",
           "rationale": "clear",
           "steps": [
             {
               "html": "<p>Clear the clipboard</p>"
             },
             {
-              "html": "For each part in the list,",
+              "html": "<h3 class=\"heading settled\" id=\"to-write-content-to-clipboard\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"write-content-to-the-clipboard\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">write content to the clipboard</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-write-content-to-clipboard\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>items</var>, a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/dnd.html#datatransferitemlist\" id=\"ref-for-datatransferitemlist④\">DataTransferItemList</a></code> list of items to write</p>\n     </dd><dd data-md=\"\">\n      <p><var>clear-was-called</var>, a boolean</p>\n     </dd><dd data-md=\"\">\n      <p><var>types-to-clear</var>, a list</p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p>None</p>\n    </dd></dl>",
               "rationale": "if",
               "steps": [
                 {
-                  "html": "If data type is <i>text/plain</i>, then",
+                  "html": "<h3 class=\"heading settled\" id=\"to-write-content-to-clipboard\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"write-content-to-the-clipboard\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">write content to the clipboard</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-write-content-to-clipboard\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>items</var>, a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/dnd.html#datatransferitemlist\" id=\"ref-for-datatransferitemlist④\">DataTransferItemList</a></code> list of items to write</p>\n     </dd><dd data-md=\"\">\n      <p><var>clear-was-called</var>, a boolean</p>\n     </dd><dd data-md=\"\">\n      <p><var>types-to-clear</var>, a list</p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p>None</p>\n    </dd></dl>",
                   "rationale": "ensure",
                   "steps": [
                     {
@@ -1056,7 +1056,7 @@
                   ]
                 },
                 {
-                  "html": "Else, if data is of a type listed in the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#mandatory-data-types\" id=\"ref-for-mandatory-data-types④\">mandatory data types</a> list, then",
+                  "html": "<h3 class=\"heading settled\" id=\"to-write-content-to-clipboard\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"write-content-to-the-clipboard\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">write content to the clipboard</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-write-content-to-clipboard\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>items</var>, a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/dnd.html#datatransferitemlist\" id=\"ref-for-datatransferitemlist④\">DataTransferItemList</a></code> list of items to write</p>\n     </dd><dd data-md=\"\">\n      <p><var>clear-was-called</var>, a boolean</p>\n     </dd><dd data-md=\"\">\n      <p><var>types-to-clear</var>, a list</p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p>None</p>\n    </dd></dl>",
                   "rationale": "place",
                   "steps": [
                     {
@@ -1065,9 +1065,9 @@
                   ]
                 },
                 {
-                  "html": "<p>Else</p>\n          <ol>\n           <li data-md=\"\">\n            <p>This is left to the implementation...</p>\n            <p class=\"issue\" id=\"issue-77e1973e\"><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#issue-77e1973e\"></a> It’s not good to leave things up to the\nimplementation. What should happen here?</p>\n            \n          </li></ol>",
+                  "html": "<p>Else</p>",
                   "ignored": [
-                    "This is left to the implementation... It’s not good to leave things up to the implementation. What should happen here?"
+                    "This is left to the implementation..."
                   ]
                 }
               ]
@@ -1075,15 +1075,15 @@
           ]
         },
         {
-          "html": "Else, the <var>items</var> list is empty. Follow these steps to determine\nwhether to clear the clipboard:",
+          "html": "<h3 class=\"heading settled\" id=\"to-write-content-to-clipboard\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"write-content-to-the-clipboard\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">write content to the clipboard</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-write-content-to-clipboard\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>items</var>, a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/dnd.html#datatransferitemlist\" id=\"ref-for-datatransferitemlist④\">DataTransferItemList</a></code> list of items to write</p>\n     </dd><dd data-md=\"\">\n      <p><var>clear-was-called</var>, a boolean</p>\n     </dd><dd data-md=\"\">\n      <p><var>types-to-clear</var>, a list</p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p>None</p>\n    </dd></dl>",
           "rationale": "if",
           "steps": [
             {
-              "html": "If the list of items is empty and the <var>clear-was-called</var> flag is <i>true</i>, then",
+              "html": "<h3 class=\"heading settled\" id=\"to-write-content-to-clipboard\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"write-content-to-the-clipboard\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">write content to the clipboard</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-write-content-to-clipboard\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>items</var>, a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/dnd.html#datatransferitemlist\" id=\"ref-for-datatransferitemlist④\">DataTransferItemList</a></code> list of items to write</p>\n     </dd><dd data-md=\"\">\n      <p><var>clear-was-called</var>, a boolean</p>\n     </dd><dd data-md=\"\">\n      <p><var>types-to-clear</var>, a list</p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p>None</p>\n    </dd></dl>",
               "rationale": "if",
               "steps": [
                 {
-                  "html": "If the <var>types-to-clear</var> list is empty, then",
+                  "html": "<h3 class=\"heading settled\" id=\"to-write-content-to-clipboard\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"write-content-to-the-clipboard\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">write content to the clipboard</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-write-content-to-clipboard\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>items</var>, a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/dnd.html#datatransferitemlist\" id=\"ref-for-datatransferitemlist④\">DataTransferItemList</a></code> list of items to write</p>\n     </dd><dd data-md=\"\">\n      <p><var>clear-was-called</var>, a boolean</p>\n     </dd><dd data-md=\"\">\n      <p><var>types-to-clear</var>, a list</p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p>None</p>\n    </dd></dl>",
                   "rationale": "clear",
                   "steps": [
                     {
@@ -1092,11 +1092,11 @@
                   ]
                 },
                 {
-                  "html": "Else",
+                  "html": "<h3 class=\"heading settled\" id=\"to-write-content-to-clipboard\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"write-content-to-the-clipboard\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">write content to the clipboard</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-write-content-to-clipboard\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>items</var>, a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/dnd.html#datatransferitemlist\" id=\"ref-for-datatransferitemlist④\">DataTransferItemList</a></code> list of items to write</p>\n     </dd><dd data-md=\"\">\n      <p><var>clear-was-called</var>, a boolean</p>\n     </dd><dd data-md=\"\">\n      <p><var>types-to-clear</var>, a list</p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p>None</p>\n    </dd></dl>",
                   "rationale": "remove",
                   "steps": [
                     {
-                      "html": "<p>Remove types in the <var>types-to-clear</var> list from the\nclipboard in an operating system and implementation-specific\nway</p>\n            <p class=\"issue\" id=\"issue-0a3703dc\"><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#issue-0a3703dc\"></a> The \"remove specific types from clipboard\" feature is\nat risk. It doesn’t seem all that important, and it’s\nunclear if it can be implemented easily across relevant\nplatforms.</p>"
+                      "html": "<p>Remove types in the <var>types-to-clear</var> list from the\nclipboard in an operating system and implementation-specific\nway</p>"
                     }
                   ]
                 }
@@ -1116,14 +1116,14 @@
           "html": "<p>Let <var>webCustomFormats</var> be a <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#idl-sequence\" id=\"ref-for-idl-sequence①⓪\">sequence</a>&lt;<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/FileAPI/#dfn-Blob\" id=\"ref-for-dfn-Blob①③\">Blob</a></code>&gt;.</p>"
         },
         {
-          "html": "For each <var>item</var> in <var>items</var>:",
+          "html": "<h3 class=\"heading settled\" id=\"to-write-blobs-to-clipboard\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"write-blobs-and-option-to-the-clipboard\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">write blobs and option to the clipboard</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-write-blobs-to-clipboard\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>items</var>, a <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#idl-sequence\" id=\"ref-for-idl-sequence⑨\">sequence</a>&lt;<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/FileAPI/#dfn-Blob\" id=\"ref-for-dfn-Blob①②\">Blob</a></code>&gt;</p>\n     </dd><dd data-md=\"\">\n      <p><var>presentationStyle</var>, a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#clipboarditem-clipboard-item\" id=\"ref-for-clipboarditem-clipboard-item⑧\">clipboard item</a>'s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#presentation-style\" id=\"ref-for-presentation-style③\">presentation style</a></p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p>None</p>\n    </dd></dl>",
           "rationale": "let",
           "steps": [
             {
               "html": "<p>Let <var>formatString</var> be the result of running <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#os-specific-well-known-format\" id=\"ref-for-os-specific-well-known-format\">os specific well-known format</a> given <var>item</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/FileAPI/#dfn-type\" id=\"ref-for-dfn-type④\">type</a></code>.</p>"
             },
             {
-              "html": "If <var>formatString</var> is empty then follow the below steps:",
+              "html": "<h3 class=\"heading settled\" id=\"to-write-blobs-to-clipboard\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"write-blobs-and-option-to-the-clipboard\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">write blobs and option to the clipboard</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-write-blobs-to-clipboard\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>items</var>, a <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#idl-sequence\" id=\"ref-for-idl-sequence⑨\">sequence</a>&lt;<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/FileAPI/#dfn-Blob\" id=\"ref-for-dfn-Blob①②\">Blob</a></code>&gt;</p>\n     </dd><dd data-md=\"\">\n      <p><var>presentationStyle</var>, a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#clipboarditem-clipboard-item\" id=\"ref-for-clipboarditem-clipboard-item⑧\">clipboard item</a>'s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#presentation-style\" id=\"ref-for-presentation-style③\">presentation style</a></p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p>None</p>\n    </dd></dl>",
               "rationale": "let",
               "steps": [
                 {
@@ -1168,14 +1168,14 @@
     {
       "name": "os-specific-well-known-format",
       "href": "https://w3c.github.io/clipboard-apis/#os-specific-well-known-format",
-      "html": "For Windows see https://docs.microsoft.com/en-us/windows/win32/dataxchg/standard-clipboard-formats and\n\t\thttps://docs.microsoft.com/en-us/windows/win32/dataxchg/about-atom-tables?redirectedfrom=MSDN\n\t\tFor Mac see https://developer.apple.com/documentation/appkit/nspasteboardtype",
+      "html": "<h3 class=\"heading settled\" id=\"to-os-specific-well-known-format\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"os-specific-well-known-format\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">os specific well-known format</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-os-specific-well-known-format\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>mimeType</var>, a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/FileAPI/#dfn-type\" id=\"ref-for-dfn-type⑨\">type</a></code></p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p><var>wellKnownFormat</var>, a platform specific string type. On Mac it’s NSPasteboardType, on Windows it’s LPCWSTR and Linux it’s a const char*.</p>\n    </dd></dl>",
       "rationale": ".algorithm",
       "steps": [
         {
           "html": "<p>Let <var>wellKnownFormat</var> be an empty string.</p>"
         },
         {
-          "html": "On Windows, follow the convention described below:",
+          "html": "<h3 class=\"heading settled\" id=\"to-os-specific-well-known-format\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"os-specific-well-known-format\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">os specific well-known format</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-os-specific-well-known-format\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>mimeType</var>, a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/FileAPI/#dfn-type\" id=\"ref-for-dfn-type⑨\">type</a></code></p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p><var>wellKnownFormat</var>, a platform specific string type. On Mac it’s NSPasteboardType, on Windows it’s LPCWSTR and Linux it’s a const char*.</p>\n    </dd></dl>",
           "rationale": "assign",
           "steps": [
             {
@@ -1184,7 +1184,7 @@
           ],
           "additional": [
             {
-              "html": "On MacOS, follow the convention described below:",
+              "html": "<h3 class=\"heading settled\" id=\"to-os-specific-well-known-format\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"os-specific-well-known-format\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">os specific well-known format</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-os-specific-well-known-format\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>mimeType</var>, a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/FileAPI/#dfn-type\" id=\"ref-for-dfn-type⑨\">type</a></code></p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p><var>wellKnownFormat</var>, a platform specific string type. On Mac it’s NSPasteboardType, on Windows it’s LPCWSTR and Linux it’s a const char*.</p>\n    </dd></dl>",
               "rationale": "assign",
               "steps": [
                 {
@@ -1193,7 +1193,7 @@
               ]
             },
             {
-              "html": "On Linux, ChromeOS, and Android, follow the convention described below:",
+              "html": "<h3 class=\"heading settled\" id=\"to-os-specific-well-known-format\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"os-specific-well-known-format\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">os specific well-known format</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-os-specific-well-known-format\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>mimeType</var>, a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/FileAPI/#dfn-type\" id=\"ref-for-dfn-type⑨\">type</a></code></p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p><var>wellKnownFormat</var>, a platform specific string type. On Mac it’s NSPasteboardType, on Windows it’s LPCWSTR and Linux it’s a const char*.</p>\n    </dd></dl>",
               "rationale": "assign",
               "steps": [
                 {
@@ -1204,7 +1204,7 @@
           ]
         },
         {
-          "html": "On Windows, follow the convention described below:",
+          "html": "<h3 class=\"heading settled\" id=\"to-os-specific-well-known-format\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"os-specific-well-known-format\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">os specific well-known format</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-os-specific-well-known-format\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>mimeType</var>, a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/FileAPI/#dfn-type\" id=\"ref-for-dfn-type⑨\">type</a></code></p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p><var>wellKnownFormat</var>, a platform specific string type. On Mac it’s NSPasteboardType, on Windows it’s LPCWSTR and Linux it’s a const char*.</p>\n    </dd></dl>",
           "rationale": "assign",
           "steps": [
             {
@@ -1213,7 +1213,7 @@
           ],
           "additional": [
             {
-              "html": "On MacOS, follow the convention described below:",
+              "html": "<h3 class=\"heading settled\" id=\"to-os-specific-well-known-format\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"os-specific-well-known-format\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">os specific well-known format</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-os-specific-well-known-format\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>mimeType</var>, a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/FileAPI/#dfn-type\" id=\"ref-for-dfn-type⑨\">type</a></code></p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p><var>wellKnownFormat</var>, a platform specific string type. On Mac it’s NSPasteboardType, on Windows it’s LPCWSTR and Linux it’s a const char*.</p>\n    </dd></dl>",
               "rationale": "assign",
               "steps": [
                 {
@@ -1222,7 +1222,7 @@
               ]
             },
             {
-              "html": "On Linux, ChromeOS, and Android, follow the convention described below:",
+              "html": "<h3 class=\"heading settled\" id=\"to-os-specific-well-known-format\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"os-specific-well-known-format\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">os specific well-known format</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-os-specific-well-known-format\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>mimeType</var>, a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/FileAPI/#dfn-type\" id=\"ref-for-dfn-type⑨\">type</a></code></p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p><var>wellKnownFormat</var>, a platform specific string type. On Mac it’s NSPasteboardType, on Windows it’s LPCWSTR and Linux it’s a const char*.</p>\n    </dd></dl>",
               "rationale": "assign",
               "steps": [
                 {
@@ -1233,7 +1233,7 @@
           ]
         },
         {
-          "html": "On Windows, follow the convention described below:",
+          "html": "<h3 class=\"heading settled\" id=\"to-os-specific-well-known-format\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"os-specific-well-known-format\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">os specific well-known format</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-os-specific-well-known-format\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>mimeType</var>, a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/FileAPI/#dfn-type\" id=\"ref-for-dfn-type⑨\">type</a></code></p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p><var>wellKnownFormat</var>, a platform specific string type. On Mac it’s NSPasteboardType, on Windows it’s LPCWSTR and Linux it’s a const char*.</p>\n    </dd></dl>",
           "rationale": "assign",
           "steps": [
             {
@@ -1242,7 +1242,7 @@
           ],
           "additional": [
             {
-              "html": "On MacOS, follow the convention described below:",
+              "html": "<h3 class=\"heading settled\" id=\"to-os-specific-well-known-format\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"os-specific-well-known-format\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">os specific well-known format</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-os-specific-well-known-format\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>mimeType</var>, a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/FileAPI/#dfn-type\" id=\"ref-for-dfn-type⑨\">type</a></code></p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p><var>wellKnownFormat</var>, a platform specific string type. On Mac it’s NSPasteboardType, on Windows it’s LPCWSTR and Linux it’s a const char*.</p>\n    </dd></dl>",
               "rationale": "assign",
               "steps": [
                 {
@@ -1251,7 +1251,7 @@
               ]
             },
             {
-              "html": "On Linux, ChromeOS, and Android, follow the convention described below:",
+              "html": "<h3 class=\"heading settled\" id=\"to-os-specific-well-known-format\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"os-specific-well-known-format\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">os specific well-known format</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-os-specific-well-known-format\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>mimeType</var>, a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/FileAPI/#dfn-type\" id=\"ref-for-dfn-type⑨\">type</a></code></p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p><var>wellKnownFormat</var>, a platform specific string type. On Mac it’s NSPasteboardType, on Windows it’s LPCWSTR and Linux it’s a const char*.</p>\n    </dd></dl>",
               "rationale": "assign",
               "steps": [
                 {
@@ -1262,7 +1262,7 @@
           ]
         },
         {
-          "html": "On Windows, follow the convention described below:",
+          "html": "<h3 class=\"heading settled\" id=\"to-os-specific-well-known-format\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"os-specific-well-known-format\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">os specific well-known format</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-os-specific-well-known-format\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>mimeType</var>, a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/FileAPI/#dfn-type\" id=\"ref-for-dfn-type⑨\">type</a></code></p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p><var>wellKnownFormat</var>, a platform specific string type. On Mac it’s NSPasteboardType, on Windows it’s LPCWSTR and Linux it’s a const char*.</p>\n    </dd></dl>",
           "rationale": "assign",
           "steps": [
             {
@@ -1271,7 +1271,7 @@
           ],
           "additional": [
             {
-              "html": "On MacOS, follow the convention described below:",
+              "html": "<h3 class=\"heading settled\" id=\"to-os-specific-well-known-format\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"os-specific-well-known-format\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">os specific well-known format</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-os-specific-well-known-format\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>mimeType</var>, a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/FileAPI/#dfn-type\" id=\"ref-for-dfn-type⑨\">type</a></code></p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p><var>wellKnownFormat</var>, a platform specific string type. On Mac it’s NSPasteboardType, on Windows it’s LPCWSTR and Linux it’s a const char*.</p>\n    </dd></dl>",
               "rationale": "assign",
               "steps": [
                 {
@@ -1280,7 +1280,7 @@
               ]
             },
             {
-              "html": "On Linux, ChromeOS, and Android, follow the convention described below:",
+              "html": "<h3 class=\"heading settled\" id=\"to-os-specific-well-known-format\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"os-specific-well-known-format\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">os specific well-known format</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-os-specific-well-known-format\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>mimeType</var>, a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/FileAPI/#dfn-type\" id=\"ref-for-dfn-type⑨\">type</a></code></p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p><var>wellKnownFormat</var>, a platform specific string type. On Mac it’s NSPasteboardType, on Windows it’s LPCWSTR and Linux it’s a const char*.</p>\n    </dd></dl>",
               "rationale": "assign",
               "steps": [
                 {
@@ -1298,7 +1298,7 @@
     {
       "name": "well-known-mime-type-from-os-specific-format",
       "href": "https://w3c.github.io/clipboard-apis/#well-known-mime-type-from-os-specific-format",
-      "html": "On Windows, follow the convention described below:",
+      "html": "<h3 class=\"heading settled\" id=\"to-well-known-mime-type-from-os-specific-format\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"well-known-mime-type-from-os-specific-format\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">well-known mime type from os specific format</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-well-known-mime-type-from-os-specific-format\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>osFormatName</var>, a platform specific string type. On Mac it’s NSPasteboardType, on Windows it’s LPCWSTR and Linux it’s a const char*.</p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p><var>mimeType</var>, a <a data-link-type=\"dfn\" href=\"https://mimesniff.spec.whatwg.org/#mime-type\" id=\"ref-for-mime-type③\">MIME type</a></p>\n    </dd></dl>\n    \n    <p>On Windows, follow the convention described below:</p>\n    \n    <p>On MacOS, follow the convention described below:</p>\n    \n    <p>On Linux, ChromeOS, and Android, follow the convention described below:</p>",
       "rationale": ".algorithm",
       "steps": [
         {
@@ -1318,7 +1318,7 @@
     {
       "name": "well-known-mime-type-from-os-specific-format",
       "href": "https://w3c.github.io/clipboard-apis/#well-known-mime-type-from-os-specific-format",
-      "html": "On MacOS, follow the convention described below:",
+      "html": "<h3 class=\"heading settled\" id=\"to-well-known-mime-type-from-os-specific-format\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"well-known-mime-type-from-os-specific-format\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">well-known mime type from os specific format</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-well-known-mime-type-from-os-specific-format\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>osFormatName</var>, a platform specific string type. On Mac it’s NSPasteboardType, on Windows it’s LPCWSTR and Linux it’s a const char*.</p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p><var>mimeType</var>, a <a data-link-type=\"dfn\" href=\"https://mimesniff.spec.whatwg.org/#mime-type\" id=\"ref-for-mime-type③\">MIME type</a></p>\n    </dd></dl>\n    \n    <p>On Windows, follow the convention described below:</p>\n    \n    <p>On MacOS, follow the convention described below:</p>\n    \n    <p>On Linux, ChromeOS, and Android, follow the convention described below:</p>",
       "rationale": "if",
       "steps": [
         {
@@ -1338,7 +1338,7 @@
     {
       "name": "well-known-mime-type-from-os-specific-format",
       "href": "https://w3c.github.io/clipboard-apis/#well-known-mime-type-from-os-specific-format",
-      "html": "On Linux, ChromeOS, and Android, follow the convention described below:",
+      "html": "<h3 class=\"heading settled\" id=\"to-well-known-mime-type-from-os-specific-format\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"well-known-mime-type-from-os-specific-format\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">well-known mime type from os specific format</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-well-known-mime-type-from-os-specific-format\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>osFormatName</var>, a platform specific string type. On Mac it’s NSPasteboardType, on Windows it’s LPCWSTR and Linux it’s a const char*.</p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p><var>mimeType</var>, a <a data-link-type=\"dfn\" href=\"https://mimesniff.spec.whatwg.org/#mime-type\" id=\"ref-for-mime-type③\">MIME type</a></p>\n    </dd></dl>\n    \n    <p>On Windows, follow the convention described below:</p>\n    \n    <p>On MacOS, follow the convention described below:</p>\n    \n    <p>On Linux, ChromeOS, and Android, follow the convention described below:</p>",
       "rationale": "if",
       "steps": [
         {
@@ -1358,7 +1358,7 @@
     {
       "name": "well-known-mime-type-from-os-specific-format",
       "href": "https://w3c.github.io/clipboard-apis/#well-known-mime-type-from-os-specific-format",
-      "html": "On Linux, ChromeOS, and Android, follow the convention described below:",
+      "html": "<h3 class=\"heading settled\" id=\"to-well-known-mime-type-from-os-specific-format\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"well-known-mime-type-from-os-specific-format\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">well-known mime type from os specific format</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-well-known-mime-type-from-os-specific-format\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>osFormatName</var>, a platform specific string type. On Mac it’s NSPasteboardType, on Windows it’s LPCWSTR and Linux it’s a const char*.</p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p><var>mimeType</var>, a <a data-link-type=\"dfn\" href=\"https://mimesniff.spec.whatwg.org/#mime-type\" id=\"ref-for-mime-type③\">MIME type</a></p>\n    </dd></dl>\n    \n    <p>On Windows, follow the convention described below:</p>\n    \n    <p>On MacOS, follow the convention described below:</p>\n    \n    <p>On Linux, ChromeOS, and Android, follow the convention described below:</p>",
       "rationale": "let",
       "steps": [
         {
@@ -1379,7 +1379,7 @@
           "html": "<p>Let <var>webCustomFormatMap</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#os-specific-custom-map-name\" id=\"ref-for-os-specific-custom-map-name\">os specific custom map name</a>.</p>"
         },
         {
-          "html": "<p>Read <var>webCustomFormatMap</var> from the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#system-clipboard\" id=\"ref-for-system-clipboard①⑦\">system clipboard</a>.</p>\n      <p class=\"issue\" id=\"issue-97db4b5a\"><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#issue-97db4b5a\"></a> specify in more detail the process of reading a <var>webCustomFormatMap</var>.</p>"
+          "html": "<p>Read <var>webCustomFormatMap</var> from the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#system-clipboard\" id=\"ref-for-system-clipboard①⑦\">system clipboard</a>.</p>"
         },
         {
           "html": "<p>If <var>webCustomFormatMap</var> is empty, then return <var>item</var>.</p>"
@@ -1388,7 +1388,7 @@
           "html": "<p>Let <var>webCustomFormatMapString</var> be the JSON string deserialized from <var>webCustomFormatMap</var>.</p>"
         },
         {
-          "html": "For each (<var>key</var>, <var>value</var>) in <var>webCustomFormatMapString</var>:",
+          "html": "<h3 class=\"heading settled\" id=\"to-read-web-custom-format\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"read-web-custom-format\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">read web custom format</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-read-web-custom-format\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>item</var>, a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#clipboard-item\" id=\"ref-for-clipboard-item②⑧\">clipboard item</a></p>\n    </dd></dl>",
           "rationale": "let",
           "steps": [
             {
@@ -1464,7 +1464,7 @@
     {
       "name": "os-specific-custom-map-name",
       "href": "https://w3c.github.io/clipboard-apis/#os-specific-custom-map-name",
-      "html": "On Windows, follow the convention described below:",
+      "html": "<h3 class=\"heading settled\" id=\"to-os-specific-custom-map-name\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"os-specific-custom-map-name\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">os specific custom map name</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-os-specific-custom-map-name\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p><var>webCustomFormatMap</var>, a string</p>\n    </dd></dl>\n    <p>On Windows, follow the convention described below:</p>\n    \n    <p>On MacOS, follow the convention described below:</p>\n    \n    <p>On Linux, ChromeOS, and Android, follow the convention described below:</p>",
       "rationale": ".algorithm",
       "steps": [
         {
@@ -1478,7 +1478,7 @@
     {
       "name": "os-specific-custom-map-name",
       "href": "https://w3c.github.io/clipboard-apis/#os-specific-custom-map-name",
-      "html": "On MacOS, follow the convention described below:",
+      "html": "<h3 class=\"heading settled\" id=\"to-os-specific-custom-map-name\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"os-specific-custom-map-name\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">os specific custom map name</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-os-specific-custom-map-name\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p><var>webCustomFormatMap</var>, a string</p>\n    </dd></dl>\n    <p>On Windows, follow the convention described below:</p>\n    \n    <p>On MacOS, follow the convention described below:</p>\n    \n    <p>On Linux, ChromeOS, and Android, follow the convention described below:</p>",
       "rationale": "assign",
       "steps": [
         {
@@ -1492,7 +1492,7 @@
     {
       "name": "os-specific-custom-map-name",
       "href": "https://w3c.github.io/clipboard-apis/#os-specific-custom-map-name",
-      "html": "On Linux, ChromeOS, and Android, follow the convention described below:",
+      "html": "<h3 class=\"heading settled\" id=\"to-os-specific-custom-map-name\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"os-specific-custom-map-name\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">os specific custom map name</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-os-specific-custom-map-name\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p><var>webCustomFormatMap</var>, a string</p>\n    </dd></dl>\n    <p>On Windows, follow the convention described below:</p>\n    \n    <p>On MacOS, follow the convention described below:</p>\n    \n    <p>On Linux, ChromeOS, and Android, follow the convention described below:</p>",
       "rationale": "assign",
       "steps": [
         {
@@ -1506,7 +1506,7 @@
     {
       "name": "os-specific-custom-name",
       "href": "https://w3c.github.io/clipboard-apis/#os-specific-custom-name",
-      "html": "On Windows, follow the convention described below:",
+      "html": "<h3 class=\"heading settled\" id=\"to-os-specific-custom-name\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"os-specific-custom-name\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">os specific custom name</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-os-specific-custom-name\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p><var>webCustomFormat</var>, a string</p>\n    </dd></dl>\n    <p>On Windows, follow the convention described below:</p>\n    \n    <p>On MacOS, follow the convention described below:</p>\n    \n    <p>On Linux, ChromeOS, and Android, follow the convention described below:</p>",
       "rationale": ".algorithm",
       "steps": [
         {
@@ -1520,7 +1520,7 @@
     {
       "name": "os-specific-custom-name",
       "href": "https://w3c.github.io/clipboard-apis/#os-specific-custom-name",
-      "html": "On MacOS, follow the convention described below:",
+      "html": "<h3 class=\"heading settled\" id=\"to-os-specific-custom-name\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"os-specific-custom-name\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">os specific custom name</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-os-specific-custom-name\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p><var>webCustomFormat</var>, a string</p>\n    </dd></dl>\n    <p>On Windows, follow the convention described below:</p>\n    \n    <p>On MacOS, follow the convention described below:</p>\n    \n    <p>On Linux, ChromeOS, and Android, follow the convention described below:</p>",
       "rationale": "assign",
       "steps": [
         {
@@ -1534,7 +1534,7 @@
     {
       "name": "os-specific-custom-name",
       "href": "https://w3c.github.io/clipboard-apis/#os-specific-custom-name",
-      "html": "On Linux, ChromeOS, and Android, follow the convention described below:",
+      "html": "<h3 class=\"heading settled\" id=\"to-os-specific-custom-name\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"os-specific-custom-name\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">os specific custom name</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-os-specific-custom-name\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p><var>webCustomFormat</var>, a string</p>\n    </dd></dl>\n    <p>On Windows, follow the convention described below:</p>\n    \n    <p>On MacOS, follow the convention described below:</p>\n    \n    <p>On Linux, ChromeOS, and Android, follow the convention described below:</p>",
       "rationale": "assign",
       "steps": [
         {
@@ -1567,11 +1567,11 @@
           "html": "<p>Let <var>trusted</var> be <em>true</em> if the event is generated by the\nuser agent, <em>false</em> otherwise</p>"
         },
         {
-          "html": "Let <var>target</var> be set as follows:",
+          "html": "<h3 class=\"heading settled\" id=\"to-fire-a-clipboard-event\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"fire-a-clipboard-event\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">fire a clipboard event</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-fire-a-clipboard-event\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>e</var>, the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/clipboard-apis/#clipboardevent\" id=\"ref-for-clipboardevent④\">ClipboardEvent</a></code> to fire</p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p>None</p>\n    </dd></dl>",
           "rationale": "if",
           "steps": [
             {
-              "html": "If the context is editable, then",
+              "html": "<h3 class=\"heading settled\" id=\"to-fire-a-clipboard-event\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"fire-a-clipboard-event\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">fire a clipboard event</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-fire-a-clipboard-event\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>e</var>, the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/clipboard-apis/#clipboardevent\" id=\"ref-for-clipboardevent④\">ClipboardEvent</a></code> to fire</p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p>None</p>\n    </dd></dl>",
               "rationale": "set",
               "steps": [
                 {
@@ -1580,7 +1580,7 @@
               ]
             },
             {
-              "html": "Else, if the context is not editable, then",
+              "html": "<h3 class=\"heading settled\" id=\"to-fire-a-clipboard-event\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"fire-a-clipboard-event\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">fire a clipboard event</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-fire-a-clipboard-event\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>e</var>, the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/clipboard-apis/#clipboardevent\" id=\"ref-for-clipboardevent④\">ClipboardEvent</a></code> to fire</p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p>None</p>\n    </dd></dl>",
               "rationale": "set",
               "steps": [
                 {
@@ -1591,26 +1591,26 @@
           ]
         },
         {
-          "html": "Process the event as follows:",
+          "html": "<h3 class=\"heading settled\" id=\"to-fire-a-clipboard-event\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"fire-a-clipboard-event\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">fire a clipboard event</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-fire-a-clipboard-event\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>e</var>, the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/clipboard-apis/#clipboardevent\" id=\"ref-for-clipboardevent④\">ClipboardEvent</a></code> to fire</p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p>None</p>\n    </dd></dl>",
           "rationale": "if",
           "steps": [
             {
-              "html": "If <var>e</var> is \"paste\", then",
+              "html": "<h3 class=\"heading settled\" id=\"to-fire-a-clipboard-event\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"fire-a-clipboard-event\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">fire a clipboard event</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-fire-a-clipboard-event\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>e</var>, the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/clipboard-apis/#clipboardevent\" id=\"ref-for-clipboardevent④\">ClipboardEvent</a></code> to fire</p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p>None</p>\n    </dd></dl>",
               "rationale": "set",
               "steps": [
                 {
                   "html": "<p>Set the <var>clipboard-event-data</var>’s\ninternal <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/interaction.html#drag-data-store-mode\" id=\"ref-for-drag-data-store-mode①\">drag data store mode</a> flag to <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/interaction.html#concept-dnd-ro\" id=\"ref-for-concept-dnd-ro①\">read-only</a>.</p>"
                 },
                 {
-                  "html": "If <var>trusted</var> is <em>true</em>, or the\nimplementation is configured to give script-generated events\nread access to the OS clipboard",
+                  "html": "<h3 class=\"heading settled\" id=\"to-fire-a-clipboard-event\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"fire-a-clipboard-event\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">fire a clipboard event</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-fire-a-clipboard-event\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>e</var>, the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/clipboard-apis/#clipboardevent\" id=\"ref-for-clipboardevent④\">ClipboardEvent</a></code> to fire</p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p>None</p>\n    </dd></dl>",
                   "rationale": "for",
                   "steps": [
                     {
-                      "html": "For each <var>clipboard-part</var> on the OS clipboard, carry out these steps:",
+                      "html": "<h3 class=\"heading settled\" id=\"to-fire-a-clipboard-event\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"fire-a-clipboard-event\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">fire a clipboard event</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-fire-a-clipboard-event\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>e</var>, the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/clipboard-apis/#clipboardevent\" id=\"ref-for-clipboardevent④\">ClipboardEvent</a></code> to fire</p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p>None</p>\n    </dd></dl>",
                       "rationale": "if",
                       "steps": [
                         {
-                          "html": "If <var>clipboard-part</var> contains plain text, then",
+                          "html": "<h3 class=\"heading settled\" id=\"to-fire-a-clipboard-event\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"fire-a-clipboard-event\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">fire a clipboard event</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-fire-a-clipboard-event\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>e</var>, the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/clipboard-apis/#clipboardevent\" id=\"ref-for-clipboardevent④\">ClipboardEvent</a></code> to fire</p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p>None</p>\n    </dd></dl>",
                           "rationale": "ensure",
                           "steps": [
                             {
@@ -1628,7 +1628,7 @@
                           ]
                         },
                         {
-                          "html": "If <var>clipboard-part</var> represents file\nreferences, then for each file reference:",
+                          "html": "<h3 class=\"heading settled\" id=\"to-fire-a-clipboard-event\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"fire-a-clipboard-event\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">fire a clipboard event</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-fire-a-clipboard-event\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>e</var>, the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/clipboard-apis/#clipboardevent\" id=\"ref-for-clipboardevent④\">ClipboardEvent</a></code> to fire</p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p>None</p>\n    </dd></dl>",
                           "rationale": "determine",
                           "steps": [
                             {
@@ -1646,7 +1646,7 @@
                           ]
                         },
                         {
-                          "html": "If <var>clipboard-part</var> contains HTML- or\nXHTML-formatted text, according to the operating\nsystem’s convention for describing such clipboard\nformats, then",
+                          "html": "<h3 class=\"heading settled\" id=\"to-fire-a-clipboard-event\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"fire-a-clipboard-event\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">fire a clipboard event</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-fire-a-clipboard-event\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>e</var>, the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/clipboard-apis/#clipboardevent\" id=\"ref-for-clipboardevent④\">ClipboardEvent</a></code> to fire</p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p>None</p>\n    </dd></dl>",
                           "rationale": "if",
                           "steps": [
                             {
@@ -1655,7 +1655,7 @@
                           ]
                         },
                         {
-                          "html": "If <var>clipboard-part</var> contains data in\nanother supported binary or text-based format (see <a data-link-type=\"dfn\" href=\"https://w3c.github.io/clipboard-apis/#mandatory-data-types\" id=\"ref-for-mandatory-data-types⑥\">mandatory data types</a>), then",
+                          "html": "<h3 class=\"heading settled\" id=\"to-fire-a-clipboard-event\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"fire-a-clipboard-event\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">fire a clipboard event</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-fire-a-clipboard-event\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>e</var>, the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/clipboard-apis/#clipboardevent\" id=\"ref-for-clipboardevent④\">ClipboardEvent</a></code> to fire</p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p>None</p>\n    </dd></dl>",
                           "rationale": "determine",
                           "steps": [
                             {
@@ -1685,7 +1685,7 @@
               ]
             },
             {
-              "html": "If <var>e</var> is \"copy\" or \"cut\", then",
+              "html": "<h3 class=\"heading settled\" id=\"to-fire-a-clipboard-event\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"fire-a-clipboard-event\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">fire a clipboard event</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-fire-a-clipboard-event\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>e</var>, the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/clipboard-apis/#clipboardevent\" id=\"ref-for-clipboardevent④\">ClipboardEvent</a></code> to fire</p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p>None</p>\n    </dd></dl>",
               "rationale": "set",
               "steps": [
                 {
@@ -1705,11 +1705,11 @@
           "html": "<p>Set <var>e</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://dom.spec.whatwg.org/#dom-event-composed\" id=\"ref-for-dom-event-composed\">composed</a></code> to true.</p>"
         },
         {
-          "html": "<a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#issue-7d2ab940\"></a> Why here? Why not in the HTML spec?",
+          "html": "<h3 class=\"heading settled\" id=\"to-fire-a-clipboard-event\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"fire-a-clipboard-event\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">fire a clipboard event</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-fire-a-clipboard-event\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>e</var>, the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/clipboard-apis/#clipboardevent\" id=\"ref-for-clipboardevent④\">ClipboardEvent</a></code> to fire</p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p>None</p>\n    </dd></dl>",
           "rationale": "if",
           "steps": [
             {
-              "html": "If a script calls <a data-link-type=\"functionish\" href=\"https://html.spec.whatwg.org/multipage/dnd.html#dom-datatransfer-cleardata\" id=\"ref-for-dom-datatransfer-cleardata\">clearData()</a> or <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/dnd.html#dom-datatransferitemlist-clear\" id=\"ref-for-dom-datatransferitemlist-clear\">clear()</a></code> and the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/dnd.html#datatransfer\" id=\"ref-for-datatransfer①①\">DataTransfer</a></code> object’s internal <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/interaction.html#drag-data-store-mode\" id=\"ref-for-drag-data-store-mode③\">drag data store mode</a> flag is <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/interaction.html#concept-dnd-rw\" id=\"ref-for-concept-dnd-rw①\">read/write</a>, then",
+              "html": "<h3 class=\"heading settled\" id=\"to-fire-a-clipboard-event\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"fire-a-clipboard-event\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">fire a clipboard event</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-fire-a-clipboard-event\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>e</var>, the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/clipboard-apis/#clipboardevent\" id=\"ref-for-clipboardevent④\">ClipboardEvent</a></code> to fire</p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p>None</p>\n    </dd></dl>",
               "rationale": "set",
               "steps": [
                 {
@@ -1718,11 +1718,11 @@
               ]
             },
             {
-              "html": "If a script calls <a data-link-type=\"functionish\" href=\"https://html.spec.whatwg.org/multipage/dnd.html#dom-datatransfer-setdata\" id=\"ref-for-dom-datatransfer-setdata②\">setData()</a> or modifies items and the <var>clear-was-called</var> flag is true, then",
+              "html": "<h3 class=\"heading settled\" id=\"to-fire-a-clipboard-event\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"fire-a-clipboard-event\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">fire a clipboard event</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-fire-a-clipboard-event\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>e</var>, the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/clipboard-apis/#clipboardevent\" id=\"ref-for-clipboardevent④\">ClipboardEvent</a></code> to fire</p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p>None</p>\n    </dd></dl>",
               "rationale": "if",
               "steps": [
                 {
-                  "html": "If the <var>types-to-clear</var> list is empty, then",
+                  "html": "<h3 class=\"heading settled\" id=\"to-fire-a-clipboard-event\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"fire-a-clipboard-event\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">fire a clipboard event</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-fire-a-clipboard-event\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>e</var>, the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/clipboard-apis/#clipboardevent\" id=\"ref-for-clipboardevent④\">ClipboardEvent</a></code> to fire</p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p>None</p>\n    </dd></dl>",
                   "rationale": "set",
                   "steps": [
                     {
@@ -1731,7 +1731,7 @@
                   ]
                 },
                 {
-                  "html": "Else, if <a data-link-type=\"functionish\" href=\"https://html.spec.whatwg.org/multipage/dnd.html#dom-datatransfer-setdata\" id=\"ref-for-dom-datatransfer-setdata③\">setData()</a>’s <code>type</code> argument or\nthe new item’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/interaction.html#drag-data-item-type-string\" id=\"ref-for-drag-data-item-type-string③\">drag data item type string</a> is\nfound in the <var>types-to-clear</var> list, then",
+                  "html": "<h3 class=\"heading settled\" id=\"to-fire-a-clipboard-event\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"fire-a-clipboard-event\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">fire a clipboard event</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-fire-a-clipboard-event\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>e</var>, the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/clipboard-apis/#clipboardevent\" id=\"ref-for-clipboardevent④\">ClipboardEvent</a></code> to fire</p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p>None</p>\n    </dd></dl>",
                   "rationale": "remove",
                   "steps": [
                     {
@@ -1742,7 +1742,7 @@
               ]
             },
             {
-              "html": "If a script calls <a data-link-type=\"functionish\" href=\"https://html.spec.whatwg.org/multipage/dnd.html#dom-datatransfer-getdata\" id=\"ref-for-dom-datatransfer-getdata\">getData()</a> or accesses items in the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/dnd.html#datatransferitemlist\" id=\"ref-for-datatransferitemlist⑤\">DataTransferItemList</a></code> and <var>clipboard-entry</var> is\nset, then",
+              "html": "<h3 class=\"heading settled\" id=\"to-fire-a-clipboard-event\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"fire-a-clipboard-event\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">fire a clipboard event</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-fire-a-clipboard-event\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>e</var>, the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/clipboard-apis/#clipboardevent\" id=\"ref-for-clipboardevent④\">ClipboardEvent</a></code> to fire</p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p>None</p>\n    </dd></dl>",
               "rationale": "check",
               "steps": [
                 {
@@ -1770,11 +1770,11 @@
           "html": "<p>If the markup’s source URL is known, then resolve all relative URLs in\nHREF and SRC attributes using the source URL as base URL, and set the\nrespective attributes to the resolved absolute URL.</p>"
         },
         {
-          "html": "<a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#issue-6be1122f\"></a> This feature is at risk because it’s unclear whether it is\nrequired, and because it’s hard to test in a cross-platform way.",
+          "html": "<h3 class=\"heading settled\" id=\"to-process-html-paste-event\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"process-an-html-paste-event\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">process an HTML paste event</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-process-html-paste-event\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>clipboard-part</var>, the clipboard part to process</p>\n     </dd><dd data-md=\"\">\n      <p><var>clipboard-event-data</var>, the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/dnd.html#datatransfer\" id=\"ref-for-datatransfer①②\">DataTransfer</a></code> object for this event</p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p>None</p>\n    </dd></dl>",
           "rationale": "if",
           "steps": [
             {
-              "html": "If <var>clipboard-event-data</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/dnd.html#dom-datatransfer-items\" id=\"ref-for-dom-datatransfer-items⑧\">items</a></code> already\ncontains an entry for the referenced file or clipboard part, then",
+              "html": "<h3 class=\"heading settled\" id=\"to-process-html-paste-event\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"process-an-html-paste-event\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">process an HTML paste event</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-process-html-paste-event\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>clipboard-part</var>, the clipboard part to process</p>\n     </dd><dd data-md=\"\">\n      <p><var>clipboard-event-data</var>, the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/dnd.html#datatransfer\" id=\"ref-for-datatransfer①②\">DataTransfer</a></code> object for this event</p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p>None</p>\n    </dd></dl>",
               "rationale": "set",
               "steps": [
                 {
@@ -1783,7 +1783,7 @@
               ]
             },
             {
-              "html": "Else,",
+              "html": "<h3 class=\"heading settled\" id=\"to-process-html-paste-event\"><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"process-an-html-paste-event\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">process an HTML paste event</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/clipboard-apis/#to-process-html-paste-event\"></a></h3>\n    <dl>\n     <dt data-md=\"\">Input\n     </dt><dd data-md=\"\">\n      <p><var>clipboard-part</var>, the clipboard part to process</p>\n     </dd><dd data-md=\"\">\n      <p><var>clipboard-event-data</var>, the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/dnd.html#datatransfer\" id=\"ref-for-datatransfer①②\">DataTransfer</a></code> object for this event</p>\n     </dd><dt data-md=\"\">Output\n     </dt><dd data-md=\"\">\n      <p>None</p>\n    </dd></dl>",
               "rationale": "let",
               "steps": [
                 {

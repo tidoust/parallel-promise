@@ -5,6 +5,12 @@
   },
   "algorithms": [
     {
+      "name": "parse a serialized CSP",
+      "href": "https://w3c.github.io/webappsec-csp/#abstract-opdef-parse-a-serialized-csp",
+      "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"abstract-op\" data-export=\"\" id=\"abstract-opdef-parse-a-serialized-csp\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">parse a serialized CSP</dfn><span style=\"position: relative; height: 0px;\"></span><span style=\"position: relative; height: 0px;\"></span>, given a <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#string\" id=\"ref-for-string\">string</a> <var>serialized</var>, a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-csp/#policy-source\" id=\"ref-for-policy-source①\">source</a> <var>source</var>, and a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-csp/#policy-disposition\" id=\"ref-for-policy-disposition\">disposition</a> <var>disposition</var>, execute the\n  following steps.",
+      "rationale": "To <dfn>"
+    },
+    {
       "html": "This algorithm returns a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-csp/#content-security-policy-object\" id=\"ref-for-content-security-policy-object③\">Content Security Policy object</a>. If <var>serialized</var> could not be\n  parsed, the object’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-csp/#policy-directive-set\" id=\"ref-for-policy-directive-set\">directive set</a> will be empty.",
       "rationale": ".algorithm",
       "steps": [
@@ -45,6 +51,12 @@
           "html": "<p>Return <var>policy</var>.</p>"
         }
       ]
+    },
+    {
+      "name": "parse a serialized CSP list",
+      "href": "https://w3c.github.io/webappsec-csp/#abstract-opdef-parse-a-serialized-csp-list",
+      "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"abstract-op\" data-export=\"\" id=\"abstract-opdef-parse-a-serialized-csp-list\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">parse a serialized CSP list</dfn><span style=\"position: relative; height: 0px;\"></span><span style=\"position: relative; height: 0px;\"></span>, given a <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#byte-sequence\" id=\"ref-for-byte-sequence\">byte sequence</a> or <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#string\" id=\"ref-for-string①\">string</a> <var>list</var>, a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-csp/#policy-source\" id=\"ref-for-policy-source③\">source</a> <var>source</var>, and a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-csp/#policy-disposition\" id=\"ref-for-policy-disposition②\">disposition</a> <var>disposition</var>, execute\n  the following steps.",
+      "rationale": "To <dfn>"
     },
     {
       "html": "This algorithm returns a <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list\" id=\"ref-for-list①\">list</a> of <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-csp/#content-security-policy-object\" id=\"ref-for-content-security-policy-object⑤\">Content Security Policy objects</a>. If <var>list</var> cannot be\n  parsed, the returned list will be empty.",
@@ -110,13 +122,13 @@
           "html": "<p>Let <var>violation</var> be a new <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-csp/#violation\" id=\"ref-for-violation①⑨\">violation</a> whose <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-csp/#violation-global-object\" id=\"ref-for-violation-global-object①\">global\n  object</a> is <var>global</var>, <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-csp/#violation-policy\" id=\"ref-for-violation-policy\">policy</a> is <var>policy</var>, <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-csp/#violation-effective-directive\" id=\"ref-for-violation-effective-directive\">effective directive</a> is <var>directive</var>, and <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-csp/#violation-resource\" id=\"ref-for-violation-resource③\">resource</a> is null.</p>"
         },
         {
-          "html": "<p>If the user agent is currently executing script, and can extract a source\n  file’s URL, line number, and column number from the <var>global</var>, set <var>violation</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-csp/#violation-source-file\" id=\"ref-for-violation-source-file\">source file</a>, <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-csp/#violation-line-number\" id=\"ref-for-violation-line-number\">line\n  number</a>, and <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-csp/#violation-column-number\" id=\"ref-for-violation-column-number\">column number</a> accordingly.</p>\n      <p class=\"issue\" id=\"issue-ee968c9a\"><a class=\"self-link\" href=\"https://w3c.github.io/webappsec-csp/#issue-ee968c9a\"></a> Is this kind of thing specified anywhere? I didn’t see anything\n  that looked useful in <a data-link-type=\"biblio\" href=\"https://w3c.github.io/webappsec-csp/#biblio-ecma262\" title=\"ECMAScript® Language Specification\">[ECMA262]</a>.</p>"
+          "html": "<p>If the user agent is currently executing script, and can extract a source\n  file’s URL, line number, and column number from the <var>global</var>, set <var>violation</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-csp/#violation-source-file\" id=\"ref-for-violation-source-file\">source file</a>, <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-csp/#violation-line-number\" id=\"ref-for-violation-line-number\">line\n  number</a>, and <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-csp/#violation-column-number\" id=\"ref-for-violation-column-number\">column number</a> accordingly.</p>"
         },
         {
           "html": "<p>If <var>global</var> is a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/nav-history-apis.html#window\" id=\"ref-for-window\">Window</a></code> object, set <var>violation</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-csp/#violation-referrer\" id=\"ref-for-violation-referrer\">referrer</a> to <var>global</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/nav-history-apis.html#dom-document-2\" id=\"ref-for-dom-document-2\">document</a></code>'s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/dom.html#dom-document-referrer\" id=\"ref-for-dom-document-referrer\">referrer</a></code>.</p>"
         },
         {
-          "html": "<p>Set <var>violation</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-csp/#violation-status\" id=\"ref-for-violation-status\">status</a> to the HTTP status code\n  for the resource associated with <var>violation</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-csp/#violation-global-object\" id=\"ref-for-violation-global-object②\">global\n  object</a>.</p>\n      <p class=\"issue\" id=\"issue-d43ce829\"><a class=\"self-link\" href=\"https://w3c.github.io/webappsec-csp/#issue-d43ce829\"></a> How, exactly, do we get the status code? We don’t actually store it\n  anywhere.</p>"
+          "html": "<p>Set <var>violation</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-csp/#violation-status\" id=\"ref-for-violation-status\">status</a> to the HTTP status code\n  for the resource associated with <var>violation</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-csp/#violation-global-object\" id=\"ref-for-violation-global-object②\">global\n  object</a>.</p>"
         },
         {
           "html": "<p>Return <var>violation</var>.</p>"
@@ -280,7 +292,7 @@
       ]
     },
     {
-      "html": "<span class=\"marker\">Note:</span> The valid values for <var>type</var> are \"<code>script</code>\", \"<code>script attribute</code>\",\n  \"<code>style</code>\", and \"<code>style attribute</code>\".",
+      "html": "Given an <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://dom.spec.whatwg.org/#element\" id=\"ref-for-element①\">Element</a></code> <var>element</var>, a string <var>type</var>, and a string <var>source</var> this algorithm returns \"<code>Allowed</code>\" if the element is allowed to have inline\n  definition of a particular type of behavior (script execution, style\n  application, event handlers, etc.), and \"<code>Blocked</code>\" otherwise:",
       "rationale": ".algorithm",
       "steps": [
         {
@@ -413,7 +425,7 @@
           "html": "<p>Let <var>result</var> be \"<code>Allowed</code>\".</p>"
         },
         {
-          "html": "<span class=\"marker\">Note:</span> Some directives (like <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-csp/#frame-ancestors\" id=\"ref-for-frame-ancestors\">frame-ancestors</a>) allow a <var>response</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-csp/#content-security-policy\" id=\"ref-for-content-security-policy\">Content Security Policy</a> to act on the navigation.",
+          "html": "<a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-iterate\" id=\"ref-for-list-iterate①⑤\">For each</a> <var>policy</var> of <var>response CSP list</var>:",
           "rationale": "for",
           "steps": [
             {
@@ -440,7 +452,7 @@
           ]
         },
         {
-          "html": "<span class=\"marker\">Note:</span> Some directives in the <var>navigation request</var>’s context (like <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-csp/#frame-ancestors\" id=\"ref-for-frame-ancestors①\">frame-ancestors</a>)\n  need the <var>response</var> before acting on the navigation.",
+          "html": "<a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-iterate\" id=\"ref-for-list-iterate①⑦\">For each</a> <var>policy</var> of <var>navigation request</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-policy-container\" id=\"ref-for-concept-request-policy-container⑦\">policy container</a>’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsers.html#policy-container-csp-list\" id=\"ref-for-policy-container-csp-list①①\">CSP list</a>:",
           "rationale": "for",
           "steps": [
             {
@@ -707,7 +719,7 @@
           "html": "<p>Let <var>target</var> be <var>violation</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-csp/#violation-element\" id=\"ref-for-violation-element②\">element</a>.</p>"
         },
         {
-          "html": "<span class=\"marker\">Note:</span> We \"queue a task\" here to ensure that the event targeting and dispatch\n  happens after JavaScript completes execution of the task responsible for a\n  given violation (which might manipulate the DOM).",
+          "html": "<a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task\" id=\"ref-for-queue-a-task\">Queue a task</a> to run the following steps:",
           "rationale": "if",
           "steps": [
             {
@@ -1229,7 +1241,7 @@
       "rationale": "insert",
       "steps": [
         {
-          "html": "<p>Style <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request\" id=\"ref-for-concept-request④③\">requests</a> MUST pass through <a href=\"https://w3c.github.io/webappsec-csp/#should-block-request\" id=\"ref-for-should-block-request⑤\">§ 4.1.2 Should request be blocked by Content Security Policy?</a>. This\n  includes:</p>\n      <ol>\n       <li data-md=\"\">\n        <p>Stylesheet requests originating from a <code><a data-link-type=\"element\" href=\"https://html.spec.whatwg.org/multipage/semantics.html#the-link-element\" id=\"ref-for-the-link-element①\">link</a></code> element.</p>\n       </li><li data-md=\"\">\n        <p>Stylesheet requests originating from the <a class=\"css\" data-link-type=\"at-rule\" href=\"https://www.w3.org/TR/css-cascade-5/#at-ruledef-import\" id=\"ref-for-at-ruledef-import\"><code>@import</code></a> rule.</p>\n       </li><li data-md=\"\">\n        <p>Stylesheet requests originating from a <code>Link</code> HTTP response header\n  field <a data-link-type=\"biblio\" href=\"https://w3c.github.io/webappsec-csp/#biblio-rfc8288\" title=\"Web Linking\">[RFC8288]</a>.</p>\n      </li></ol>",
+          "html": "<p>Style <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request\" id=\"ref-for-concept-request④③\">requests</a> MUST pass through <a href=\"https://w3c.github.io/webappsec-csp/#should-block-request\" id=\"ref-for-should-block-request⑤\">§ 4.1.2 Should request be blocked by Content Security Policy?</a>. This\n  includes:</p>",
           "ignored": [
             "Stylesheet requests originating from a link element. Stylesheet requests originating from the @import rule. Stylesheet requests originating from a Link HTTP response header field [RFC8288]."
           ]
@@ -1777,11 +1789,11 @@
       ]
     },
     {
-      "html": "<span class=\"marker\">Note:</span> <var>origin</var> is the <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/#concept-origin\" id=\"ref-for-concept-origin③\">origin</a> of the resource relative to which the <var>expression</var> should be resolved. \"<code>'self'</code>\", for instance, will have distinct\n  meaning depending on that bit of context.",
+      "html": "Given a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://url.spec.whatwg.org/#url\" id=\"ref-for-url①⓪\">URL</a></code> <var>url</var>, a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-csp/#source-expression\" id=\"ref-for-source-expression⑧\">source expression</a> <var>expression</var>, an <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/#concept-origin\" id=\"ref-for-concept-origin②\">origin</a> <var>origin</var>, and a number <var>redirect count</var>, this algorithm\n  returns \"<code>Matches</code>\" if <var>url</var> matches <var>expression</var>, and \"<code>Does Not Match</code>\"\n  otherwise.",
       "rationale": "if",
       "steps": [
         {
-          "html": "<p>If <var>expression</var> is the string \"*\", return \"<code>Matches</code>\" if one or more of\n  the following conditions is met:</p>\n      <ol>\n       <li data-md=\"\">\n        <p><var>url</var>’s <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-scheme\" id=\"ref-for-concept-url-scheme③\">scheme</a> is an <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#http-scheme\" id=\"ref-for-http-scheme③\">HTTP(S) scheme</a>.</p>\n       </li><li data-md=\"\">\n        <p><var>url</var>’s <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-scheme\" id=\"ref-for-concept-url-scheme④\">scheme</a> is the same as <var>origin</var>’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsers.html#concept-origin-scheme\" id=\"ref-for-concept-origin-scheme\">scheme</a>.</p>\n      </li></ol>",
+          "html": "<p>If <var>expression</var> is the string \"*\", return \"<code>Matches</code>\" if one or more of\n  the following conditions is met:</p>",
           "ignored": [
             "url’s scheme is an HTTP(S) scheme. url’s scheme is the same as origin’s scheme."
           ]
@@ -1835,7 +1847,7 @@
           ]
         },
         {
-          "html": "<p>If <var>expression</var> is an <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#ascii-case-insensitive\" id=\"ref-for-ascii-case-insensitive⑧\">ASCII case-insensitive</a> match for \"<code>'self'</code>\",\n  return \"<code>Matches</code>\" if one or more of the following conditions is met:</p>\n      <ol>\n       <li data-md=\"\">\n        <p><var>origin</var> is the same as <var>url</var>’s <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-origin\" id=\"ref-for-concept-url-origin①\">origin</a></p>\n       </li><li data-md=\"\">\n        <p><var>origin</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://url.spec.whatwg.org/#dom-url-host\" id=\"ref-for-dom-url-host②\">host</a></code> is the same as <var>url</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://url.spec.whatwg.org/#dom-url-host\" id=\"ref-for-dom-url-host③\">host</a></code>, <var>origin</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://url.spec.whatwg.org/#dom-url-port\" id=\"ref-for-dom-url-port\">port</a></code> and <var>url</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://url.spec.whatwg.org/#dom-url-port\" id=\"ref-for-dom-url-port①\">port</a></code> are either the same\n  or the <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#default-port\" id=\"ref-for-default-port\">default ports</a> for their respective <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-scheme\" id=\"ref-for-concept-url-scheme⑦\">scheme</a>s, and\n  one or more of the following conditions is met:</p>\n        <ol>\n         <li data-md=\"\">\n          <p><var>url</var>’s <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-scheme\" id=\"ref-for-concept-url-scheme⑧\">scheme</a> is \"<code>https</code>\" or \"<code>wss</code>\"</p>\n         </li><li data-md=\"\">\n          <p><var>origin</var>’s <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-scheme\" id=\"ref-for-concept-url-scheme⑨\">scheme</a> is \"<code>http</code>\" and <var>url</var>’s <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-scheme\" id=\"ref-for-concept-url-scheme①⓪\">scheme</a> is \"<code>http</code>\" or \"<code>ws</code>\"</p>\n        </li></ol>\n      </li></ol>",
+          "html": "<p>If <var>expression</var> is an <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#ascii-case-insensitive\" id=\"ref-for-ascii-case-insensitive⑧\">ASCII case-insensitive</a> match for \"<code>'self'</code>\",\n  return \"<code>Matches</code>\" if one or more of the following conditions is met:</p>",
           "ignored": [
             "origin is the same as url’s origin origin’s host is the same as url’s host, origin’s port and url’s port are either the same or the default ports for their respective schemes, and one or more of the following conditions is met: url’s scheme is \"https\" or \"wss\" origin’s scheme is \"http\" and url’s scheme is \"http\" or \"ws\""
           ]
@@ -1850,7 +1862,7 @@
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "<p>If one of the following is true, return \"<code>Matches</code>\":</p>\n      <ol>\n       <li data-md=\"\">\n        <p><var>A</var> is an <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#ascii-case-insensitive\" id=\"ref-for-ascii-case-insensitive⑨\">ASCII case-insensitive</a> match for <var>B</var>.</p>\n       </li><li data-md=\"\">\n        <p><var>A</var> is an <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#ascii-case-insensitive\" id=\"ref-for-ascii-case-insensitive①⓪\">ASCII case-insensitive</a> match for \"<code>http</code>\", and <var>B</var> is an <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#ascii-case-insensitive\" id=\"ref-for-ascii-case-insensitive①①\">ASCII case-insensitive</a> match for \"<code>https</code>\".</p>\n       </li><li data-md=\"\">\n        <p><var>A</var> is an <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#ascii-case-insensitive\" id=\"ref-for-ascii-case-insensitive①②\">ASCII case-insensitive</a> match for \"<code>ws</code>\", and <var>B</var> is an <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#ascii-case-insensitive\" id=\"ref-for-ascii-case-insensitive①③\">ASCII case-insensitive</a> match for \"<code>wss</code>\", \"<code>http</code>\", or\n  \"<code>https</code>\".</p>\n       </li><li data-md=\"\">\n        <p><var>A</var> is an <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#ascii-case-insensitive\" id=\"ref-for-ascii-case-insensitive①④\">ASCII case-insensitive</a> match for \"<code>wss</code>\", and <var>B</var> is an <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#ascii-case-insensitive\" id=\"ref-for-ascii-case-insensitive①⑤\">ASCII case-insensitive</a> match for \"<code>https</code>\".</p>\n      </li></ol>",
+          "html": "<p>If one of the following is true, return \"<code>Matches</code>\":</p>",
           "ignored": [
             "A is an ASCII case-insensitive match for B. A is an ASCII case-insensitive match for \"http\", and B is an ASCII case-insensitive match for \"https\". A is an ASCII case-insensitive match for \"ws\", and B is an ASCII case-insensitive match for \"wss\", \"http\", or \"https\". A is an ASCII case-insensitive match for \"wss\", and B is an ASCII case-insensitive match for \"https\"."
           ]
@@ -1861,7 +1873,7 @@
       ]
     },
     {
-      "html": "<span class=\"marker\">Note:</span> A future version of this specification may allow literal IPv6 and IPv4 addresses,\n  depending on usage and demand. Given the weak security properties of IP addresses in\n  relation to named hosts, however, authors are encouraged to prefer the latter whenever possible.",
+      "html": "More formally, <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#ascii-string\" id=\"ref-for-ascii-string⑨\">ASCII string</a> <var>pattern</var> and <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-host\" id=\"ref-for-concept-host①\">host</a> <var>host</var> are said to <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-csp/#host-part-match\" id=\"ref-for-host-part-match②\"><code>host-part</code> match</a> if the\n  following algorithm returns \"<code>Matches</code>\":",
       "rationale": ".algorithm",
       "steps": [
         {
@@ -1929,7 +1941,9 @@
       ]
     },
     {
-      "html": "<span class=\"marker\">Note:</span> The matching relation is asymmetric. That is, <var>path A</var> matching <var>path B</var> does not mean that <var>path B</var> will match <var>path A</var>.",
+      "name": "path-part match",
+      "href": "https://w3c.github.io/webappsec-csp/#path-part-match",
+      "html": "An <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#ascii-string\" id=\"ref-for-ascii-string①①\">ASCII string</a> <var>path A</var> <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-export=\"\" data-lt=\"path-part match\" id=\"path-part-match\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>path-part</code> matches</dfn><span style=\"position: relative; height: 0px;\"></span><span style=\"position: relative; height: 0px;\"></span> another <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#ascii-string\" id=\"ref-for-ascii-string①②\">ASCII string</a> <var>path B</var> if a CSP source expression that contained the first as a <a data-link-type=\"grammar\" href=\"https://w3c.github.io/webappsec-csp/#grammardef-path-part\" id=\"ref-for-grammardef-path-part③\"><code>path-part</code></a> could potentially match a URL containing the latter as a <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-path\" id=\"ref-for-concept-url-path①\">path</a>.\n  For example, we say that \"/subdirectory/\" <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-csp/#path-part-match\" id=\"ref-for-path-part-match①\"><code>path-part</code> matches</a> \"/subdirectory/file\".",
       "rationale": ".algorithm",
       "steps": [
         {
@@ -2005,7 +2019,7 @@
           ]
         },
         {
-          "html": "<p>If <var>element</var> had a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/parsing.html#parse-error-duplicate-attribute\" id=\"ref-for-parse-error-duplicate-attribute\">duplicate-attribute</a> <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/images.html#concept-microsyntax-parse-error\" id=\"ref-for-concept-microsyntax-parse-error\">parse error</a> during tokenization, return\n  \"<code>Not Nonceable</code>\".</p>\n      <p class=\"issue\" id=\"issue-820579ab\"><a class=\"self-link\" href=\"https://w3c.github.io/webappsec-csp/#issue-820579ab\"></a> We need some sort of hook in HTML to record this error if we’re\n  planning on using it here. <a href=\"https://github.com/whatwg/html/issues/3257\">[Issue #whatwg/html#3257]</a></p>"
+          "html": "<p>If <var>element</var> had a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/parsing.html#parse-error-duplicate-attribute\" id=\"ref-for-parse-error-duplicate-attribute\">duplicate-attribute</a> <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/images.html#concept-microsyntax-parse-error\" id=\"ref-for-concept-microsyntax-parse-error\">parse error</a> during tokenization, return\n  \"<code>Not Nonceable</code>\".</p>"
         },
         {
           "html": "<p>Return \"<code>Nonceable</code>\".</p>"
@@ -2040,7 +2054,7 @@
       ]
     },
     {
-      "html": "<span class=\"marker\">Note:</span> Regardless of the encoding of the document, <var>source</var> will be converted\n  to <code>UTF-8</code> before applying any hashing algorithms.",
+      "html": "Given an <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://dom.spec.whatwg.org/#element\" id=\"ref-for-element①⓪\">Element</a></code> <var>element</var>, a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-csp/#source-lists\" id=\"ref-for-source-lists②②\">source list</a> <var>list</var>, a string <var>type</var>, and a string <var>source</var>, this algorithm returns \"<code>Matches</code>\" or\n  \"<code>Does Not Match</code>\".",
       "rationale": "if",
       "steps": [
         {
@@ -2124,7 +2138,7 @@
       ]
     },
     {
-      "html": "<a class=\"self-link\" href=\"https://w3c.github.io/webappsec-csp/#issue-fde03f65\"></a> This should handle <code>'strict-dynamic'</code> for dynamically inserted inline scripts. <a href=\"https://github.com/w3c/webappsec-csp/issues/426\">[Issue #w3c/webappsec-csp#426]</a>",
+      "html": "Given an <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://dom.spec.whatwg.org/#element\" id=\"ref-for-element①⓪\">Element</a></code> <var>element</var>, a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-csp/#source-lists\" id=\"ref-for-source-lists②②\">source list</a> <var>list</var>, a string <var>type</var>, and a string <var>source</var>, this algorithm returns \"<code>Matches</code>\" or\n  \"<code>Does Not Match</code>\".",
       "rationale": "return",
       "steps": [
         {
@@ -2145,7 +2159,7 @@
           "html": "<p>If <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-initiator\" id=\"ref-for-concept-request-initiator③\">initiator</a> is \"<code>fetch</code>\" or its <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-destination\" id=\"ref-for-concept-request-destination⑥\">destination</a> is \"\", return <code>connect-src</code>.</p>"
         },
         {
-          "html": "<p>Switch on <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-destination\" id=\"ref-for-concept-request-destination⑦\">destination</a>, and execute\n  the associated steps:</p>\n      <dl>\n       <dt data-md=\"\">\"<code>manifest</code>\"\n       </dt><dd data-md=\"\">\n        <ol>\n         <li data-md=\"\">\n          <p>Return <code>manifest-src</code>.</p>\n        </li></ol>\n       </dd><dt data-md=\"\">\"<code>object</code>\"\n       </dt><dt data-md=\"\">\"<code>embed</code>\"\n       </dt><dd data-md=\"\">\n        <ol>\n         <li data-md=\"\">\n          <p>Return <code>object-src</code>.</p>\n        </li></ol>\n       </dd><dt data-md=\"\">\"<code>frame</code>\"\n       </dt><dt data-md=\"\">\"<code>iframe</code>\"\n       </dt><dd data-md=\"\">\n        <ol>\n         <li data-md=\"\">\n          <p>Return <code>frame-src</code>.</p>\n        </li></ol>\n       </dd><dt data-md=\"\">\"<code>audio</code>\"\n       </dt><dt data-md=\"\">\"<code>track</code>\"\n       </dt><dt data-md=\"\">\"<code>video</code>\"\n       </dt><dd data-md=\"\">\n        <ol>\n         <li data-md=\"\">\n          <p>Return <code>media-src</code>.</p>\n        </li></ol>\n       </dd><dt data-md=\"\">\"<code>font</code>\"\n       </dt><dd data-md=\"\">\n        <ol>\n         <li data-md=\"\">\n          <p>Return <code>font-src</code>.</p>\n        </li></ol>\n       </dd><dt data-md=\"\">\"<code>image</code>\"\n       </dt><dd data-md=\"\">\n        <ol>\n         <li data-md=\"\">\n          <p>Return <code>img-src</code>.</p>\n        </li></ol>\n       </dd><dt data-md=\"\">\"<code>style</code>\"\n       </dt><dd data-md=\"\">\n        <ol>\n         <li data-md=\"\">\n          <p>Return <code>style-src-elem</code>.</p>\n        </li></ol>\n       </dd><dt data-md=\"\">\"<code>script</code>\"\n       </dt><dt data-md=\"\">\"<code>xslt</code>\"\n       </dt><dt data-md=\"\">\"<code>audioworklet</code>\"\n       </dt><dt data-md=\"\">\"<code>paintworklet</code>\"\n       </dt><dd data-md=\"\">\n        <ol>\n         <li data-md=\"\">\n          <p>Return <code>script-src-elem</code>.</p>\n        </li></ol>\n       </dd><dt data-md=\"\">\"<code>serviceworker</code>\"\n       </dt><dt data-md=\"\">\"<code>sharedworker</code>\"\n       </dt><dt data-md=\"\">\"<code>worker</code>\"\n       </dt><dd data-md=\"\">\n        <ol>\n         <li data-md=\"\">\n          <p>Return <code>worker-src</code>.</p>\n        </li></ol>\n       </dd><dt data-md=\"\">\"<code>json</code>\"\n       </dt><dt data-md=\"\">\"<code>webidentity</code>\"\n       </dt><dd data-md=\"\">\n        <ol>\n         <li data-md=\"\">\n          <p>Return <code>connect-src</code>.</p>\n        </li></ol>\n       </dd><dt data-md=\"\">\"<code>report</code>\"\n       </dt><dd data-md=\"\">\n        <ol>\n         <li data-md=\"\">\n          <p>Return null.</p>\n        </li></ol>\n      </dd></dl>",
+          "html": "<p>Switch on <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-destination\" id=\"ref-for-concept-request-destination⑦\">destination</a>, and execute\n  the associated steps:</p>\n      <dl>\n       <dt data-md=\"\">\"<code>manifest</code>\"\n       </dt><dd data-md=\"\">\n        \n       </dd><dt data-md=\"\">\"<code>object</code>\"\n       </dt><dt data-md=\"\">\"<code>embed</code>\"\n       </dt><dd data-md=\"\">\n        \n       </dd><dt data-md=\"\">\"<code>frame</code>\"\n       </dt><dt data-md=\"\">\"<code>iframe</code>\"\n       </dt><dd data-md=\"\">\n        \n       </dd><dt data-md=\"\">\"<code>audio</code>\"\n       </dt><dt data-md=\"\">\"<code>track</code>\"\n       </dt><dt data-md=\"\">\"<code>video</code>\"\n       </dt><dd data-md=\"\">\n        \n       </dd><dt data-md=\"\">\"<code>font</code>\"\n       </dt><dd data-md=\"\">\n        \n       </dd><dt data-md=\"\">\"<code>image</code>\"\n       </dt><dd data-md=\"\">\n        \n       </dd><dt data-md=\"\">\"<code>style</code>\"\n       </dt><dd data-md=\"\">\n        \n       </dd><dt data-md=\"\">\"<code>script</code>\"\n       </dt><dt data-md=\"\">\"<code>xslt</code>\"\n       </dt><dt data-md=\"\">\"<code>audioworklet</code>\"\n       </dt><dt data-md=\"\">\"<code>paintworklet</code>\"\n       </dt><dd data-md=\"\">\n        \n       </dd><dt data-md=\"\">\"<code>serviceworker</code>\"\n       </dt><dt data-md=\"\">\"<code>sharedworker</code>\"\n       </dt><dt data-md=\"\">\"<code>worker</code>\"\n       </dt><dd data-md=\"\">\n        \n       </dd><dt data-md=\"\">\"<code>json</code>\"\n       </dt><dt data-md=\"\">\"<code>webidentity</code>\"\n       </dt><dd data-md=\"\">\n        \n       </dd><dt data-md=\"\">\"<code>report</code>\"\n       </dt><dd data-md=\"\">\n        \n      </dd></dl>",
           "rationale": "return",
           "steps": [
             {
@@ -2251,11 +2265,11 @@
       ]
     },
     {
-      "html": "<span class=\"marker\">Note:</span> While the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-csp/#request-effective-directive\" id=\"ref-for-request-effective-directive\">effective directive</a> is only defined for <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request\" id=\"ref-for-concept-request⑥③\">requests</a>, in this algorithm it is used similarly to mean\n  the directive that is most relevant to a particular type of inline check.",
+      "html": "Given a string <var>type</var>, this algorithm returns the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-csp/#directive-name\" id=\"ref-for-directive-name①⑨\">name</a> of the effective directive.",
       "rationale": "switch",
       "steps": [
         {
-          "html": "<p>Switch on <var>type</var>:</p>\n      <dl>\n       <dt data-md=\"\">\"<code>script</code>\"\n       </dt><dt data-md=\"\">\"<code>navigation</code>\"\n       </dt><dd data-md=\"\">\n        <ol>\n         <li data-md=\"\">\n          <p>Return <code>script-src-elem</code>.</p>\n        </li></ol>\n       </dd><dt data-md=\"\">\"<code>script attribute</code>\"\n       </dt><dd data-md=\"\">\n        <ol>\n         <li data-md=\"\">\n          <p>Return <code>script-src-attr</code>.</p>\n        </li></ol>\n       </dd><dt data-md=\"\">\"<code>style</code>\"\n       </dt><dd data-md=\"\">\n        <ol>\n         <li data-md=\"\">\n          <p>Return <code>style-src-elem</code>.</p>\n        </li></ol>\n       </dd><dt data-md=\"\">\"<code>style attribute</code>\"\n       </dt><dd data-md=\"\">\n        <ol>\n         <li data-md=\"\">\n          <p>Return <code>style-src-attr</code>.</p>\n        </li></ol>\n      </dd></dl>",
+          "html": "<p>Switch on <var>type</var>:</p>\n      <dl>\n       <dt data-md=\"\">\"<code>script</code>\"\n       </dt><dt data-md=\"\">\"<code>navigation</code>\"\n       </dt><dd data-md=\"\">\n        \n       </dd><dt data-md=\"\">\"<code>script attribute</code>\"\n       </dt><dd data-md=\"\">\n        \n       </dd><dt data-md=\"\">\"<code>style</code>\"\n       </dt><dd data-md=\"\">\n        \n       </dd><dt data-md=\"\">\"<code>style attribute</code>\"\n       </dt><dd data-md=\"\">\n        \n      </dd></dl>",
           "rationale": "return",
           "steps": [
             {
@@ -2302,7 +2316,7 @@
       "rationale": "switch",
       "steps": [
         {
-          "html": "<p>Switch on <var>directive name</var>:</p>\n      <dl>\n       <dt data-md=\"\">\"<code>script-src-elem</code>\"\n       </dt><dd data-md=\"\">\n        <ol>\n         <li data-md=\"\">\n          <p>Return <code>&lt;&lt; \"script-src-elem\", \"script-src\", \"default-src\" &gt;&gt;</code>.</p>\n        </li></ol>\n       </dd><dt data-md=\"\">\"<code>script-src-attr</code>\"\n       </dt><dd data-md=\"\">\n        <ol>\n         <li data-md=\"\">\n          <p>Return <code>&lt;&lt; \"script-src-attr\", \"script-src\", \"default-src\" &gt;&gt;</code>.</p>\n        </li></ol>\n       </dd><dt data-md=\"\">\"<code>style-src-elem</code>\"\n       </dt><dd data-md=\"\">\n        <ol>\n         <li data-md=\"\">\n          <p>Return <code>&lt;&lt; \"style-src-elem\", \"style-src\", \"default-src\" &gt;&gt;</code>.</p>\n        </li></ol>\n       </dd><dt data-md=\"\">\"<code>style-src-attr</code>\"\n       </dt><dd data-md=\"\">\n        <ol>\n         <li data-md=\"\">\n          <p>Return <code>&lt;&lt; \"style-src-attr\", \"style-src\", \"default-src\" &gt;&gt;</code>.</p>\n        </li></ol>\n       </dd><dt data-md=\"\">\"<code>worker-src</code>\"\n       </dt><dd data-md=\"\">\n        <ol>\n         <li data-md=\"\">\n          <p>Return <code>&lt;&lt; \"worker-src\", \"child-src\", \"script-src\", \"default-src\" &gt;&gt;</code>.</p>\n        </li></ol>\n       </dd><dt data-md=\"\">\"<code>connect-src</code>\"\n       </dt><dd data-md=\"\">\n        <ol>\n         <li data-md=\"\">\n          <p>Return <code>&lt;&lt; \"connect-src\", \"default-src\" &gt;&gt;</code>.</p>\n        </li></ol>\n       </dd><dt data-md=\"\">\"<code>manifest-src</code>\"\n       </dt><dd data-md=\"\">\n        <ol>\n         <li data-md=\"\">\n          <p>Return <code>&lt;&lt; \"manifest-src\", \"default-src\" &gt;&gt;</code>.</p>\n        </li></ol>\n       </dd><dt data-md=\"\">\"<code>object-src</code>\"\n       </dt><dd data-md=\"\">\n        <ol>\n         <li data-md=\"\">\n          <p>Return <code>&lt;&lt; \"object-src\", \"default-src\" &gt;&gt;</code>.</p>\n        </li></ol>\n       </dd><dt data-md=\"\">\"<code>frame-src</code>\"\n       </dt><dd data-md=\"\">\n        <ol>\n         <li data-md=\"\">\n          <p>Return <code>&lt;&lt; \"frame-src\", \"child-src\", \"default-src\" &gt;&gt;</code>.</p>\n        </li></ol>\n       </dd><dt data-md=\"\">\"<code>media-src</code>\"\n       </dt><dd data-md=\"\">\n        <ol>\n         <li data-md=\"\">\n          <p>Return <code>&lt;&lt; \"media-src\", \"default-src\" &gt;&gt;</code>.</p>\n        </li></ol>\n       </dd><dt data-md=\"\">\"<code>font-src</code>\"\n       </dt><dd data-md=\"\">\n        <ol>\n         <li data-md=\"\">\n          <p>Return <code>&lt;&lt; \"font-src\", \"default-src\" &gt;&gt;</code>.</p>\n        </li></ol>\n       </dd><dt data-md=\"\">\"<code>img-src</code>\"\n       </dt><dd data-md=\"\">\n        <ol>\n         <li data-md=\"\">\n          <p>Return <code>&lt;&lt; \"img-src\", \"default-src\" &gt;&gt;</code>.</p>\n        </li></ol>\n      </dd></dl>",
+          "html": "<p>Switch on <var>directive name</var>:</p>\n      <dl>\n       <dt data-md=\"\">\"<code>script-src-elem</code>\"\n       </dt><dd data-md=\"\">\n        \n       </dd><dt data-md=\"\">\"<code>script-src-attr</code>\"\n       </dt><dd data-md=\"\">\n        \n       </dd><dt data-md=\"\">\"<code>style-src-elem</code>\"\n       </dt><dd data-md=\"\">\n        \n       </dd><dt data-md=\"\">\"<code>style-src-attr</code>\"\n       </dt><dd data-md=\"\">\n        \n       </dd><dt data-md=\"\">\"<code>worker-src</code>\"\n       </dt><dd data-md=\"\">\n        \n       </dd><dt data-md=\"\">\"<code>connect-src</code>\"\n       </dt><dd data-md=\"\">\n        \n       </dd><dt data-md=\"\">\"<code>manifest-src</code>\"\n       </dt><dd data-md=\"\">\n        \n       </dd><dt data-md=\"\">\"<code>object-src</code>\"\n       </dt><dd data-md=\"\">\n        \n       </dd><dt data-md=\"\">\"<code>frame-src</code>\"\n       </dt><dd data-md=\"\">\n        \n       </dd><dt data-md=\"\">\"<code>media-src</code>\"\n       </dt><dd data-md=\"\">\n        \n       </dd><dt data-md=\"\">\"<code>font-src</code>\"\n       </dt><dd data-md=\"\">\n        \n       </dd><dt data-md=\"\">\"<code>img-src</code>\"\n       </dt><dd data-md=\"\">\n        \n      </dd></dl>",
           "rationale": "return",
           "steps": [
             {

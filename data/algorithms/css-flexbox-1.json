@@ -36,7 +36,7 @@
       ]
     },
     {
-      "html": "<span class=\"marker\">Note:</span> Flex layout works with the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-flexbox-1/#flex-item\" id=\"ref-for-flex-item⑨⓪\">flex items</a> in <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-display-4/#order-modified-document-order\" id=\"ref-for-order-modified-document-order①\">order-modified document order</a>,\n\tnot their original document order.",
+      "html": "The following sections define the algorithm for laying out a flex container and its contents.",
       "rationale": "generate",
       "steps": [
         {
@@ -45,11 +45,11 @@
       ]
     },
     {
-      "html": "<span class=\"marker\">Note:</span> Flex layout works with the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-flexbox-1/#flex-item\" id=\"ref-for-flex-item⑨⓪\">flex items</a> in <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-display-4/#order-modified-document-order\" id=\"ref-for-order-modified-document-order①\">order-modified document order</a>,\n\tnot their original document order.",
+      "html": "The following sections define the algorithm for laying out a flex container and its contents.",
       "rationale": "determine",
       "steps": [
         {
-          "html": "<a class=\"self-link\" href=\"https://drafts.csswg.org/css-flexbox-1/#algo-available\"></a> <strong>Determine the available main and cross space for the flex items.</strong> For each dimension,\n\t\t\tif that dimension of the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-flexbox-1/#flex-container\" id=\"ref-for-flex-container④⓪\">flex container</a>’s content box is a <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-flexbox-1/#definite\" id=\"ref-for-definite⑦\">definite size</a>, use that;\n\t\t\tif that dimension of the <span id=\"ref-for-flex-container④①\">flex container</span> is being sized under a <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-sizing-3/#min-content-constraint\" id=\"ref-for-min-content-constraint\">min</a> or <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-sizing-3/#max-content-constraint\" id=\"ref-for-max-content-constraint\">max-content constraint</a>,\n\t\t\tthe available space in that dimension is that constraint;\n\t\t\totherwise, subtract the <span id=\"ref-for-flex-container④②\">flex container</span>’s margin, border, and padding\n\t\t\tfrom the space available to the flex container in that dimension\n\t\t\tand use that value.  \n     <div class=\"example\" id=\"example-34f93ad9\">\n      <a class=\"self-link\" href=\"https://drafts.csswg.org/css-flexbox-1/#example-34f93ad9\"></a> \n      <p>For example, the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-sizing-3/#available\" id=\"ref-for-available\">available space</a> to a flex item in a <a href=\"https://www.w3.org/TR/CSS2/visuren.html#floats\">floated</a> <a class=\"css\" data-link-type=\"value\" href=\"https://drafts.csswg.org/css-sizing-3/#valdef-width-auto\" id=\"ref-for-valdef-width-auto⑤\">auto</a>-sized <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-flexbox-1/#flex-container\" id=\"ref-for-flex-container④③\">flex container</a> is: </p>\n      <ul>\n       <li>the width of the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-flexbox-1/#flex-container\" id=\"ref-for-flex-container④④\">flex container</a>’s containing block minus the <span id=\"ref-for-flex-container④⑤\">flex container</span>’s margin, border, and padding in the horizontal dimension \n       </li><li>infinite in the vertical dimension \n      </li></ul>\n     </div>"
+          "html": "<a class=\"self-link\" href=\"https://drafts.csswg.org/css-flexbox-1/#algo-available\"></a> <strong>Determine the available main and cross space for the flex items.</strong> For each dimension,\n\t\t\tif that dimension of the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-flexbox-1/#flex-container\" id=\"ref-for-flex-container④⓪\">flex container</a>’s content box is a <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-flexbox-1/#definite\" id=\"ref-for-definite⑦\">definite size</a>, use that;\n\t\t\tif that dimension of the <span id=\"ref-for-flex-container④①\">flex container</span> is being sized under a <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-sizing-3/#min-content-constraint\" id=\"ref-for-min-content-constraint\">min</a> or <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-sizing-3/#max-content-constraint\" id=\"ref-for-max-content-constraint\">max-content constraint</a>,\n\t\t\tthe available space in that dimension is that constraint;\n\t\t\totherwise, subtract the <span id=\"ref-for-flex-container④②\">flex container</span>’s margin, border, and padding\n\t\t\tfrom the space available to the flex container in that dimension\n\t\t\tand use that value."
         },
         {
           "html": "<a class=\"self-link\" href=\"https://drafts.csswg.org/css-flexbox-1/#algo-main-item\"></a> <strong>Determine the <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"flex-base-size\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">flex base size</dfn> and <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"hypothetical-main-size\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">hypothetical main size</dfn> of each item:</strong>",
@@ -78,7 +78,7 @@
       ]
     },
     {
-      "html": "<span class=\"marker\">Note:</span> Flex layout works with the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-flexbox-1/#flex-item\" id=\"ref-for-flex-item⑨⓪\">flex items</a> in <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-display-4/#order-modified-document-order\" id=\"ref-for-order-modified-document-order①\">order-modified document order</a>,\n\tnot their original document order.",
+      "html": "The following sections define the algorithm for laying out a flex container and its contents.",
       "rationale": "collect",
       "steps": [
         {
@@ -90,7 +90,7 @@
       ]
     },
     {
-      "html": "<span class=\"marker\">Note:</span> Flex layout works with the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-flexbox-1/#flex-item\" id=\"ref-for-flex-item⑨⓪\">flex items</a> in <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-display-4/#order-modified-document-order\" id=\"ref-for-order-modified-document-order①\">order-modified document order</a>,\n\tnot their original document order.",
+      "html": "The following sections define the algorithm for laying out a flex container and its contents.",
       "rationale": "determine",
       "steps": [
         {
@@ -123,7 +123,7 @@
       ]
     },
     {
-      "html": "<span class=\"marker\">Note:</span> Flex layout works with the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-flexbox-1/#flex-item\" id=\"ref-for-flex-item⑨⓪\">flex items</a> in <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-display-4/#order-modified-document-order\" id=\"ref-for-order-modified-document-order①\">order-modified document order</a>,\n\tnot their original document order.",
+      "html": "The following sections define the algorithm for laying out a flex container and its contents.",
       "rationale": "if",
       "steps": [
         {
@@ -141,7 +141,7 @@
       ]
     },
     {
-      "html": "<span class=\"marker\">Note:</span> Flex layout works with the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-flexbox-1/#flex-item\" id=\"ref-for-flex-item⑨⓪\">flex items</a> in <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-display-4/#order-modified-document-order\" id=\"ref-for-order-modified-document-order①\">order-modified document order</a>,\n\tnot their original document order.",
+      "html": "The following sections define the algorithm for laying out a flex container and its contents.",
       "rationale": "resolve",
       "steps": [
         {

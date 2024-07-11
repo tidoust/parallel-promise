@@ -5,7 +5,7 @@
   },
   "algorithms": [
     {
-      "name": "documentPictureInPicture",
+      "name": "Window/documentPictureInPicture",
       "href": "https://wicg.github.io/document-picture-in-picture/#dom-window-documentpictureinpicture",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"Window\" data-dfn-type=\"attribute\" data-export=\"\" id=\"dom-window-documentpictureinpicture\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>documentPictureInPicture</code></dfn> getter steps are:",
       "rationale": ".algorithm",
@@ -16,7 +16,7 @@
       ]
     },
     {
-      "name": "window",
+      "name": "DocumentPictureInPicture/window",
       "href": "https://wicg.github.io/document-picture-in-picture/#dom-documentpictureinpicture-window",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"DocumentPictureInPicture\" data-dfn-type=\"attribute\" data-export=\"\" id=\"dom-documentpictureinpicture-window\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>window</code></dfn> getter steps are:",
       "rationale": ".algorithm",
@@ -33,7 +33,7 @@
       ]
     },
     {
-      "name": "requestWindow(options)",
+      "name": "DocumentPictureInPicture/requestWindow(options)",
       "href": "https://wicg.github.io/document-picture-in-picture/#dom-documentpictureinpicture-requestwindow",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"DocumentPictureInPicture\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"requestWindow(options)|requestWindow()\" id=\"dom-documentpictureinpicture-requestwindow\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>requestWindow(options)</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -71,22 +71,22 @@
       ]
     },
     {
-      "name": "requestWindow(options)",
+      "name": "DocumentPictureInPicture/requestWindow(options)",
       "href": "https://wicg.github.io/document-picture-in-picture/#dom-documentpictureinpicture-requestwindow",
-      "html": "The resulting <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://dom.spec.whatwg.org/#document\" id=\"ref-for-document①\">Document</a></code>'s <a data-link-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-document-url\" id=\"ref-for-concept-document-url\">URL</a> will be `about:blank`, but its <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/urls-and-fetching.html#document-base-url\" id=\"ref-for-document-base-url\">document base URL</a> will fall back to be that of the initiator that called <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://wicg.github.io/document-picture-in-picture/#dom-documentpictureinpicture-requestwindow\" id=\"ref-for-dom-documentpictureinpicture-requestwindow②\">requestWindow()</a></code>. Some browsers do not implement\nthis fallback behavior for normal `about:blank` popups; see <a href=\"https://github.com/whatwg/html/issues/421\">whatwg/html#421</a> for\ndiscussion. Implementers are advised to make sure this inheritance happens as\nspecified for document picture-in-picture windows, to avoid further interop\nproblems.",
+      "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"DocumentPictureInPicture\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"requestWindow(options)|requestWindow()\" id=\"dom-documentpictureinpicture-requestwindow\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>requestWindow(options)</code></dfn> method steps are:",
       "rationale": "set",
       "steps": [
         {
           "html": "<p>Set <var>pip traversable</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/document-picture-in-picture/#is-document-picture-in-picture\" id=\"ref-for-is-document-picture-in-picture①\">Is Document Picture-in-Picture</a> boolean to <code>true</code>.</p>"
         },
         {
-          "html": "<p>If <var>options</var>[\"<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://wicg.github.io/document-picture-in-picture/#dom-documentpictureinpictureoptions-width\" id=\"ref-for-dom-documentpictureinpictureoptions-width②\">width</a></code>\"] exists and is\ngreater than zero:</p>\n      <ol>\n       <li data-md=\"\">\n        <p>Optionally, clamp or ignore <var>options</var>[\"<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://wicg.github.io/document-picture-in-picture/#dom-documentpictureinpictureoptions-width\" id=\"ref-for-dom-documentpictureinpictureoptions-width③\">width</a></code>\"] if it is too large or too\nsmall in order to fit a user-friendly window size.</p>\n       </li><li data-md=\"\">\n        <p>Optionally, size <var>pip traversable</var>’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/document-sequences.html#nav-bc\" id=\"ref-for-nav-bc①\">active browsing context</a>’s\nwindow such that the distance between the left and right edges of the\nviewport are <var>options</var>[\"<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://wicg.github.io/document-picture-in-picture/#dom-documentpictureinpictureoptions-width\" id=\"ref-for-dom-documentpictureinpictureoptions-width④\">width</a></code>\"]\npixels.</p>\n      </li></ol>",
+          "html": "<p>If <var>options</var>[\"<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://wicg.github.io/document-picture-in-picture/#dom-documentpictureinpictureoptions-width\" id=\"ref-for-dom-documentpictureinpictureoptions-width②\">width</a></code>\"] exists and is\ngreater than zero:</p>",
           "ignored": [
             "Optionally, clamp or ignore options[\"width\"] if it is too large or too small in order to fit a user-friendly window size. Optionally, size pip traversable’s active browsing context’s window such that the distance between the left and right edges of the viewport are options[\"width\"] pixels."
           ]
         },
         {
-          "html": "<p>If <var>options</var>[\"<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://wicg.github.io/document-picture-in-picture/#dom-documentpictureinpictureoptions-height\" id=\"ref-for-dom-documentpictureinpictureoptions-height②\">height</a></code>\"] exists and is\ngreater than zero:</p>\n      <ol>\n       <li data-md=\"\">\n        <p>Optionally, clamp or ignore <var>options</var>[\"<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://wicg.github.io/document-picture-in-picture/#dom-documentpictureinpictureoptions-height\" id=\"ref-for-dom-documentpictureinpictureoptions-height③\">height</a></code>\"] if it is too large or too\nsmall in order to fit a user-friendly window size.</p>\n       </li><li data-md=\"\">\n        <p>Optionally, size <var>pip traversable</var>’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/document-sequences.html#nav-bc\" id=\"ref-for-nav-bc②\">active browsing context</a>’s\nwindow such that the distance between the top and bottom edges of the\nviewport are <var>options</var>[\"<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://wicg.github.io/document-picture-in-picture/#dom-documentpictureinpictureoptions-height\" id=\"ref-for-dom-documentpictureinpictureoptions-height④\">height</a></code>\"]\npixels.</p>\n      </li></ol>",
+          "html": "<p>If <var>options</var>[\"<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://wicg.github.io/document-picture-in-picture/#dom-documentpictureinpictureoptions-height\" id=\"ref-for-dom-documentpictureinpictureoptions-height②\">height</a></code>\"] exists and is\ngreater than zero:</p>",
           "ignored": [
             "Optionally, clamp or ignore options[\"height\"] if it is too large or too small in order to fit a user-friendly window size. Optionally, size pip traversable’s active browsing context’s window such that the distance between the top and bottom edges of the viewport are options[\"height\"] pixels."
           ]
@@ -97,9 +97,9 @@
       ]
     },
     {
-      "name": "requestWindow(options)",
+      "name": "DocumentPictureInPicture/requestWindow(options)",
       "href": "https://wicg.github.io/document-picture-in-picture/#dom-documentpictureinpicture-requestwindow",
-      "html": "For both video and document picture-in-picture, user agents often display a\nbutton for the user to return to the original page and close the\npicture-in-picture window. While this action makes sense in most cases\n(especially for a video picture-in-picture window that returns the video to the\nmain document), it does not always make sense for document picture-in-picture\nwindows. <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://wicg.github.io/document-picture-in-picture/#dom-documentpictureinpictureoptions-disallowreturntoopener\" id=\"ref-for-dom-documentpictureinpictureoptions-disallowreturntoopener①\">disallowReturnToOpener</a></code> is a hint to\nthe user agent from the website as to whether that action makes sense for their\nparticular document picture-in-picture experience.",
+      "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"DocumentPictureInPicture\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"requestWindow(options)|requestWindow()\" id=\"dom-documentpictureinpicture-requestwindow\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>requestWindow(options)</code></dfn> method steps are:",
       "rationale": "set",
       "steps": [
         {

@@ -51,7 +51,7 @@
       ]
     },
     {
-      "name": "createContext(options)",
+      "name": "ML/createContext(options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-ml-createcontext",
       "rationale": ".algorithm",
       "steps": [
@@ -85,7 +85,7 @@
       ]
     },
     {
-      "name": "createContext(gpuDevice)",
+      "name": "ML/createContext(gpuDevice)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-ml-createcontext-gpudevice",
       "rationale": ".algorithm",
       "steps": [
@@ -202,7 +202,7 @@
       ]
     },
     {
-      "name": "transfer",
+      "name": "MLNamedArrayBufferViews/transfer",
       "href": "https://webmachinelearning.github.io/webnn/#mlnamedarraybufferviews-transfer",
       "rationale": ".algorithm",
       "steps": [
@@ -236,7 +236,7 @@
       ]
     },
     {
-      "name": "compute(graph, inputs, outputs)",
+      "name": "MLContext/compute(graph, inputs, outputs)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlcontext-compute",
       "rationale": ".algorithm",
       "steps": [
@@ -312,7 +312,7 @@
       ]
     },
     {
-      "name": "byte length",
+      "name": "MLOperandDescriptor/byte length",
       "href": "https://webmachinelearning.github.io/webnn/#mloperanddescriptor-byte-length",
       "rationale": ".algorithm",
       "steps": [
@@ -337,7 +337,7 @@
       ]
     },
     {
-      "name": "check dimensions",
+      "name": "MLOperandDescriptor/check dimensions",
       "href": "https://webmachinelearning.github.io/webnn/#mloperanddescriptor-check-dimensions",
       "rationale": ".algorithm",
       "steps": [
@@ -345,7 +345,7 @@
           "html": "<p>If any element of <var>descriptor</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddescriptor-dimensions\" id=\"ref-for-dom-mloperanddescriptor-dimensions③\">dimensions</a></code> is not a <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#valid-dimension\" id=\"ref-for-valid-dimension\">valid dimension</a>, return false.</p>"
         },
         {
-          "html": "<p>If <var>descriptor</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddescriptor-dimensions\" id=\"ref-for-dom-mloperanddescriptor-dimensions④\">dimensions</a></code>'s <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-size\" id=\"ref-for-list-size\">size</a> is too large to be supported by the implementation, return false.</p>\n      <p class=\"issue\" id=\"issue-8054fa8e\"><a class=\"self-link\" href=\"https://webmachinelearning.github.io/webnn/#issue-8054fa8e\"></a> The maximum number of operand dimensions is not defined, but native ML APIs usually have a maximum supported size. <a href=\"https://github.com/webmachinelearning/webnn/issues/456\">[Issue #456]</a></p>"
+          "html": "<p>If <var>descriptor</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddescriptor-dimensions\" id=\"ref-for-dom-mloperanddescriptor-dimensions④\">dimensions</a></code>'s <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-size\" id=\"ref-for-list-size\">size</a> is too large to be supported by the implementation, return false.</p>"
         },
         {
           "html": "<p>If <var>descriptor</var>’s <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mloperanddescriptor-byte-length\" id=\"ref-for-mloperanddescriptor-byte-length②\">byte length</a> is not supported by the implementation, then return false.</p>"
@@ -397,7 +397,7 @@
       ]
     },
     {
-      "name": "dataType()",
+      "name": "MLOperand/dataType()",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mloperand-datatype",
       "rationale": ".algorithm",
       "steps": [
@@ -407,7 +407,7 @@
       ]
     },
     {
-      "name": "shape()",
+      "name": "MLOperand/shape()",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mloperand-shape",
       "rationale": ".algorithm",
       "steps": [
@@ -445,7 +445,7 @@
       ]
     },
     {
-      "name": "MLGraphBuilder(context)",
+      "name": "MLGraphBuilder/MLGraphBuilder(context)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-mlgraphbuilder",
       "rationale": ".algorithm",
       "steps": [
@@ -458,7 +458,7 @@
       ]
     },
     {
-      "name": "input(name, descriptor)",
+      "name": "MLGraphBuilder/input(name, descriptor)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-input",
       "rationale": ".algorithm",
       "steps": [
@@ -489,7 +489,7 @@
       ]
     },
     {
-      "name": "constant(descriptor, bufferView)",
+      "name": "MLGraphBuilder/constant(descriptor, bufferView)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-constant",
       "rationale": ".algorithm",
       "steps": [
@@ -520,7 +520,7 @@
       ]
     },
     {
-      "name": "constant(type, value)",
+      "name": "MLGraphBuilder/constant(type, value)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-constant-type-value",
       "rationale": ".algorithm",
       "steps": [
@@ -557,7 +557,7 @@
       ]
     },
     {
-      "name": "build(outputs)",
+      "name": "MLGraphBuilder/build(outputs)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-build",
       "rationale": ".algorithm",
       "steps": [
@@ -619,7 +619,7 @@
           ]
         },
         {
-          "html": "<p>If any <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#mloperand\" id=\"ref-for-mloperand④⑨\">MLOperand</a></code>s in <var>inputs</var> have the same <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperand-name-slot\" id=\"ref-for-dom-mloperand-name-slot④\">[[name]]</a></code>, then return <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#a-new-promise\" id=\"ref-for-a-new-promise①⑦\">a new promise</a> <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#reject\" id=\"ref-for-reject①⑦\">rejected</a> with a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#exceptiondef-typeerror\" id=\"ref-for-exceptiondef-typeerror①⑤\">TypeError</a></code>.</p>\n      <p class=\"issue\" id=\"issue-91f4b8a3\"><a class=\"self-link\" href=\"https://webmachinelearning.github.io/webnn/#issue-91f4b8a3\"></a> If <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder\" id=\"ref-for-mlgraphbuilder②①\">MLGraphBuilder</a></code> can’t be re-used, then this can be simplified: enforce uniqueness in <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-input\" id=\"ref-for-dom-mlgraphbuilder-input①\">input()</a></code> instead, and iteration can be done over all of the graph’s inputs instead of needing this traversal. <a href=\"https://github.com/webmachinelearning/webnn/issues/567\">[Issue #567]</a></p>"
+          "html": "<p>If any <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#mloperand\" id=\"ref-for-mloperand④⑨\">MLOperand</a></code>s in <var>inputs</var> have the same <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperand-name-slot\" id=\"ref-for-dom-mloperand-name-slot④\">[[name]]</a></code>, then return <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#a-new-promise\" id=\"ref-for-a-new-promise①⑦\">a new promise</a> <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#reject\" id=\"ref-for-reject①⑦\">rejected</a> with a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#exceptiondef-typeerror\" id=\"ref-for-exceptiondef-typeerror①⑤\">TypeError</a></code>.</p>"
         },
         {
           "html": "<p>Let <var>global</var> be <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\" id=\"ref-for-this②⓪\">this</a>'s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#concept-relevant-global\" id=\"ref-for-concept-relevant-global④\">relevant global object</a>.</p>"
@@ -638,7 +638,7 @@
           "rationale": "set",
           "steps": [
             {
-              "html": "<p>Set <var>graph</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mlgraph-inputdescriptors-slot\" id=\"ref-for-dom-mlgraph-inputdescriptors-slot②\">[[inputDescriptors]]</a></code>[<var>operand</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperand-name-slot\" id=\"ref-for-dom-mloperand-name-slot⑤\">[[name]]</a></code>] to <var>operand</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperand-descriptor-slot\" id=\"ref-for-dom-mloperand-descriptor-slot⑤\">[[descriptor]]</a></code>.</p>\n        <p class=\"issue\" id=\"issue-6f962d4f\"><a class=\"self-link\" href=\"https://webmachinelearning.github.io/webnn/#issue-6f962d4f\"></a> If <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-constant\" id=\"ref-for-dom-mlgraphbuilder-constant③\">constants'</a></code> <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#idl-ArrayBuffer\" id=\"ref-for-idl-ArrayBuffer\">ArrayBuffer</a></code>s are not <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#arraybuffer-transfer\" id=\"ref-for-arraybuffer-transfer①\">transferred</a>, make copies for <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-graph\" id=\"ref-for-mlgraphbuilder-graph⑤\">graph</a>'s <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#computational-graph-constants\" id=\"ref-for-computational-graph-constants③\">constants</a> here. <a href=\"https://github.com/webmachinelearning/webnn/issues/566\">[Issue #566]</a></p>"
+              "html": "<p>Set <var>graph</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mlgraph-inputdescriptors-slot\" id=\"ref-for-dom-mlgraph-inputdescriptors-slot②\">[[inputDescriptors]]</a></code>[<var>operand</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperand-name-slot\" id=\"ref-for-dom-mloperand-name-slot⑤\">[[name]]</a></code>] to <var>operand</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperand-descriptor-slot\" id=\"ref-for-dom-mloperand-descriptor-slot⑤\">[[descriptor]]</a></code>.</p>"
             }
           ]
         },
@@ -681,7 +681,7 @@
       ]
     },
     {
-      "name": "argminmax-op",
+      "name": "MLGraphBuilder/argminmax-op",
       "href": "https://webmachinelearning.github.io/webnn/#mlgraphbuilder-argminmax-op",
       "rationale": ".algorithm",
       "steps": [
@@ -730,13 +730,13 @@
       ]
     },
     {
-      "name": "argMin(input, options)",
+      "name": "MLGraphBuilder/argMin(input, options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-argmin",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"argMin(input, options)|argMin(input)\" id=\"dom-mlgraphbuilder-argmin\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>argMin(<var>input</var>, <var>options</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-argminmax-op\" id=\"ref-for-mlgraphbuilder-argminmax-op\"> create argMin/argMax operation</a> given \"argMin\", <var>input</var> and <var>options</var>.",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"argMin(input, options)|argMin(input)\" id=\"dom-mlgraphbuilder-argmin\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>argMin(<var>input</var>, <var>options</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -750,13 +750,13 @@
       ]
     },
     {
-      "name": "argMax(input, options)",
+      "name": "MLGraphBuilder/argMax(input, options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-argmax",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"argMax(input, options)|argMax(input)\" id=\"dom-mlgraphbuilder-argmax\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>argMax(<var>input</var>, <var>options</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-argminmax-op\" id=\"ref-for-mlgraphbuilder-argminmax-op①\"> create argMin/argMax operation</a> given \"argMax\", <var>input</var> and <var>options</var>.",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"argMax(input, options)|argMax(input)\" id=\"dom-mlgraphbuilder-argmax\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>argMax(<var>input</var>, <var>options</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -770,7 +770,7 @@
       ]
     },
     {
-      "name": "batchNormalization(input, mean, variance, options)",
+      "name": "MLGraphBuilder/batchNormalization(input, mean, variance, options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-batchnormalization",
       "rationale": ".algorithm",
       "steps": [
@@ -855,7 +855,7 @@
       ]
     },
     {
-      "name": "cast(input, type)",
+      "name": "MLGraphBuilder/cast(input, type)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-cast",
       "rationale": ".algorithm",
       "steps": [
@@ -889,7 +889,7 @@
       ]
     },
     {
-      "name": "clamp(input, options)",
+      "name": "MLGraphBuilder/clamp(input, options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-clamp",
       "rationale": ".algorithm",
       "steps": [
@@ -938,7 +938,7 @@
       ]
     },
     {
-      "name": "concat(inputs, axis)",
+      "name": "MLGraphBuilder/concat(inputs, axis)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-concat",
       "rationale": ".algorithm",
       "steps": [
@@ -1032,7 +1032,7 @@
       ]
     },
     {
-      "name": "calculate conv output size",
+      "name": "MLGraphBuilder/calculate conv output size",
       "href": "https://webmachinelearning.github.io/webnn/#mlgraphbuilder-calculate-conv-output-size",
       "rationale": ".algorithm",
       "steps": [
@@ -1048,7 +1048,7 @@
       ]
     },
     {
-      "name": "calculate conv2d output sizes",
+      "name": "MLGraphBuilder/calculate conv2d output sizes",
       "href": "https://webmachinelearning.github.io/webnn/#mlgraphbuilder-calculate-conv2d-output-sizes",
       "rationale": ".algorithm",
       "steps": [
@@ -1064,7 +1064,7 @@
       ]
     },
     {
-      "name": "conv2d(input, filter, options)",
+      "name": "MLGraphBuilder/conv2d(input, filter, options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-conv2d",
       "rationale": ".algorithm",
       "steps": [
@@ -1126,47 +1126,39 @@
                   "steps": [
                     {
                       "case": "\"nchw\"",
+                      "html": "",
+                      "rationale": "let",
                       "steps": [
                         {
-                          "html": "<ol>\n           <li data-md=\"\">\n            <p>Let <var>batches</var> be <var>inputShape</var>[0].</p>\n           </li><li data-md=\"\">\n            <p>Let <var>inputChannels</var> be <var>inputShape</var>[1].</p>\n           </li><li data-md=\"\">\n            <p>Let <var>inputHeight</var> be <var>inputShape</var>[2].</p>\n           </li><li data-md=\"\">\n            <p>Let <var>inputWidth</var> be <var>inputShape</var>[3].</p>\n          </li></ol>",
-                          "rationale": "let",
-                          "steps": [
-                            {
-                              "html": "<p>Let <var>batches</var> be <var>inputShape</var>[0].</p>"
-                            },
-                            {
-                              "html": "<p>Let <var>inputChannels</var> be <var>inputShape</var>[1].</p>"
-                            },
-                            {
-                              "html": "<p>Let <var>inputHeight</var> be <var>inputShape</var>[2].</p>"
-                            },
-                            {
-                              "html": "<p>Let <var>inputWidth</var> be <var>inputShape</var>[3].</p>"
-                            }
-                          ]
+                          "html": "<p>Let <var>batches</var> be <var>inputShape</var>[0].</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>inputChannels</var> be <var>inputShape</var>[1].</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>inputHeight</var> be <var>inputShape</var>[2].</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>inputWidth</var> be <var>inputShape</var>[3].</p>"
                         }
                       ]
                     },
                     {
                       "case": "\"nhwc\"",
+                      "html": "",
+                      "rationale": "let",
                       "steps": [
                         {
-                          "html": "<ol>\n           <li data-md=\"\">\n            <p>Let <var>batches</var> be <var>inputShape</var>[0].</p>\n           </li><li data-md=\"\">\n            <p>Let <var>inputHeight</var> be <var>inputShape</var>[1].</p>\n           </li><li data-md=\"\">\n            <p>Let <var>inputWidth</var> be <var>inputShape</var>[2].</p>\n           </li><li data-md=\"\">\n            <p>Let <var>inputChannels</var> be <var>inputShape</var>[3].</p>\n          </li></ol>",
-                          "rationale": "let",
-                          "steps": [
-                            {
-                              "html": "<p>Let <var>batches</var> be <var>inputShape</var>[0].</p>"
-                            },
-                            {
-                              "html": "<p>Let <var>inputHeight</var> be <var>inputShape</var>[1].</p>"
-                            },
-                            {
-                              "html": "<p>Let <var>inputWidth</var> be <var>inputShape</var>[2].</p>"
-                            },
-                            {
-                              "html": "<p>Let <var>inputChannels</var> be <var>inputShape</var>[3].</p>"
-                            }
-                          ]
+                          "html": "<p>Let <var>batches</var> be <var>inputShape</var>[0].</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>inputHeight</var> be <var>inputShape</var>[1].</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>inputWidth</var> be <var>inputShape</var>[2].</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>inputChannels</var> be <var>inputShape</var>[3].</p>"
                         }
                       ]
                     }
@@ -1186,93 +1178,77 @@
                   "steps": [
                     {
                       "case": "\"hwio\"",
+                      "html": "",
+                      "rationale": "let",
                       "steps": [
                         {
-                          "html": "<ol>\n           <li data-md=\"\">\n            <p>Let <var>filterHeight</var> be <var>filterShape</var>[0].</p>\n           </li><li data-md=\"\">\n            <p>Let <var>filterWidth</var> be <var>filterShape</var>[1].</p>\n           </li><li data-md=\"\">\n            <p>Let <var>filterInputChannels</var> be <var>filterShape</var>[2].</p>\n           </li><li data-md=\"\">\n            <p>Let <var>outputChannels</var> be <var>filterShape</var>[3].</p>\n          </li></ol>",
-                          "rationale": "let",
-                          "steps": [
-                            {
-                              "html": "<p>Let <var>filterHeight</var> be <var>filterShape</var>[0].</p>"
-                            },
-                            {
-                              "html": "<p>Let <var>filterWidth</var> be <var>filterShape</var>[1].</p>"
-                            },
-                            {
-                              "html": "<p>Let <var>filterInputChannels</var> be <var>filterShape</var>[2].</p>"
-                            },
-                            {
-                              "html": "<p>Let <var>outputChannels</var> be <var>filterShape</var>[3].</p>"
-                            }
-                          ]
+                          "html": "<p>Let <var>filterHeight</var> be <var>filterShape</var>[0].</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>filterWidth</var> be <var>filterShape</var>[1].</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>filterInputChannels</var> be <var>filterShape</var>[2].</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>outputChannels</var> be <var>filterShape</var>[3].</p>"
                         }
                       ]
                     },
                     {
                       "case": "\"ohwi\"",
+                      "html": "",
+                      "rationale": "let",
                       "steps": [
                         {
-                          "html": "<ol>\n           <li data-md=\"\">\n            <p>Let <var>outputChannels</var> be <var>filterShape</var>[0].</p>\n           </li><li data-md=\"\">\n            <p>Let <var>filterHeight</var> be <var>filterShape</var>[1].</p>\n           </li><li data-md=\"\">\n            <p>Let <var>filterWidth</var> be <var>filterShape</var>[2].</p>\n           </li><li data-md=\"\">\n            <p>Let <var>filterInputChannels</var> be <var>filterShape</var>[3].</p>\n          </li></ol>",
-                          "rationale": "let",
-                          "steps": [
-                            {
-                              "html": "<p>Let <var>outputChannels</var> be <var>filterShape</var>[0].</p>"
-                            },
-                            {
-                              "html": "<p>Let <var>filterHeight</var> be <var>filterShape</var>[1].</p>"
-                            },
-                            {
-                              "html": "<p>Let <var>filterWidth</var> be <var>filterShape</var>[2].</p>"
-                            },
-                            {
-                              "html": "<p>Let <var>filterInputChannels</var> be <var>filterShape</var>[3].</p>"
-                            }
-                          ]
+                          "html": "<p>Let <var>outputChannels</var> be <var>filterShape</var>[0].</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>filterHeight</var> be <var>filterShape</var>[1].</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>filterWidth</var> be <var>filterShape</var>[2].</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>filterInputChannels</var> be <var>filterShape</var>[3].</p>"
                         }
                       ]
                     },
                     {
                       "case": "\"ihwo\"",
+                      "html": "",
+                      "rationale": "let",
                       "steps": [
                         {
-                          "html": "<ol>\n           <li data-md=\"\">\n            <p>Let <var>filterInputChannels</var> be <var>filterShape</var>[0].</p>\n           </li><li data-md=\"\">\n            <p>Let <var>filterHeight</var> be <var>filterShape</var>[1].</p>\n           </li><li data-md=\"\">\n            <p>Let <var>filterWidth</var> be <var>filterShape</var>[2].</p>\n           </li><li data-md=\"\">\n            <p>Let <var>outputChannels</var> be <var>filterShape</var>[3].</p>\n          </li></ol>",
-                          "rationale": "let",
-                          "steps": [
-                            {
-                              "html": "<p>Let <var>filterInputChannels</var> be <var>filterShape</var>[0].</p>"
-                            },
-                            {
-                              "html": "<p>Let <var>filterHeight</var> be <var>filterShape</var>[1].</p>"
-                            },
-                            {
-                              "html": "<p>Let <var>filterWidth</var> be <var>filterShape</var>[2].</p>"
-                            },
-                            {
-                              "html": "<p>Let <var>outputChannels</var> be <var>filterShape</var>[3].</p>"
-                            }
-                          ]
+                          "html": "<p>Let <var>filterInputChannels</var> be <var>filterShape</var>[0].</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>filterHeight</var> be <var>filterShape</var>[1].</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>filterWidth</var> be <var>filterShape</var>[2].</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>outputChannels</var> be <var>filterShape</var>[3].</p>"
                         }
                       ]
                     },
                     {
                       "case": "\"oihw\"",
+                      "html": "",
+                      "rationale": "let",
                       "steps": [
                         {
-                          "html": "<ol>\n           <li data-md=\"\">\n            <p>Let <var>outputChannels</var> be <var>filterShape</var>[0].</p>\n           </li><li data-md=\"\">\n            <p>Let <var>filterInputChannels</var> be <var>filterShape</var>[1].</p>\n           </li><li data-md=\"\">\n            <p>Let <var>filterHeight</var> be <var>filterShape</var>[2].</p>\n           </li><li data-md=\"\">\n            <p>Let <var>filterWidth</var> be <var>filterShape</var>[3].</p>\n          </li></ol>",
-                          "rationale": "let",
-                          "steps": [
-                            {
-                              "html": "<p>Let <var>outputChannels</var> be <var>filterShape</var>[0].</p>"
-                            },
-                            {
-                              "html": "<p>Let <var>filterInputChannels</var> be <var>filterShape</var>[1].</p>"
-                            },
-                            {
-                              "html": "<p>Let <var>filterHeight</var> be <var>filterShape</var>[2].</p>"
-                            },
-                            {
-                              "html": "<p>Let <var>filterWidth</var> be <var>filterShape</var>[3].</p>"
-                            }
-                          ]
+                          "html": "<p>Let <var>outputChannels</var> be <var>filterShape</var>[0].</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>filterInputChannels</var> be <var>filterShape</var>[1].</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>filterHeight</var> be <var>filterShape</var>[2].</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>filterWidth</var> be <var>filterShape</var>[3].</p>"
                         }
                       ]
                     }
@@ -1310,19 +1286,11 @@
                   "steps": [
                     {
                       "case": "\"nchw\"",
-                      "steps": [
-                        {
-                          "html": "<p>Let <var>outputShape</var> be « <var>batches</var>, <var>outputChannels</var>, floor( <var>outputSizes</var>[0] ), floor( <var>outputSizes</var>[1] ) ».</p>"
-                        }
-                      ]
+                      "html": "<p>Let <var>outputShape</var> be « <var>batches</var>, <var>outputChannels</var>, floor( <var>outputSizes</var>[0] ), floor( <var>outputSizes</var>[1] ) ».</p>"
                     },
                     {
                       "case": "\"nhwc\"",
-                      "steps": [
-                        {
-                          "html": "<p>Let <var>outputShape</var> be « <var>batches</var>, floor( <var>outputSizes</var>[0] ), floor( <var>outputSizes</var>[1] ), <var>outputChannels</var> ».</p>"
-                        }
-                      ]
+                      "html": "<p>Let <var>outputShape</var> be « <var>batches</var>, floor( <var>outputSizes</var>[0] ), floor( <var>outputSizes</var>[1] ), <var>outputChannels</var> ».</p>"
                     }
                   ]
                 }
@@ -1372,7 +1340,7 @@
       ]
     },
     {
-      "name": "calculate convtranspose output size",
+      "name": "MLGraphBuilder/calculate convtranspose output size",
       "href": "https://webmachinelearning.github.io/webnn/#mlgraphbuilder-calculate-convtranspose-output-size",
       "rationale": ".algorithm",
       "steps": [
@@ -1388,7 +1356,7 @@
       ]
     },
     {
-      "name": "calculate convtranspose2d output sizes",
+      "name": "MLGraphBuilder/calculate convtranspose2d output sizes",
       "href": "https://webmachinelearning.github.io/webnn/#mlgraphbuilder-calculate-convtranspose2d-output-sizes",
       "rationale": ".algorithm",
       "steps": [
@@ -1404,7 +1372,7 @@
       ]
     },
     {
-      "name": "convTranspose2d(input, filter, options)",
+      "name": "MLGraphBuilder/convTranspose2d(input, filter, options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-convtranspose2d",
       "rationale": ".algorithm",
       "steps": [
@@ -1490,47 +1458,39 @@
                   "steps": [
                     {
                       "case": "\"nchw\"",
+                      "html": "",
+                      "rationale": "let",
                       "steps": [
                         {
-                          "html": "<ol>\n           <li data-md=\"\">\n            <p>Let <var>batches</var> be <var>inputShape</var>[0].</p>\n           </li><li data-md=\"\">\n            <p>Let <var>inputChannels</var> be <var>inputShape</var>[1].</p>\n           </li><li data-md=\"\">\n            <p>Let <var>inputHeight</var> be <var>inputShape</var>[2].</p>\n           </li><li data-md=\"\">\n            <p>Let <var>inputWidth</var> be <var>inputShape</var>[3].</p>\n          </li></ol>",
-                          "rationale": "let",
-                          "steps": [
-                            {
-                              "html": "<p>Let <var>batches</var> be <var>inputShape</var>[0].</p>"
-                            },
-                            {
-                              "html": "<p>Let <var>inputChannels</var> be <var>inputShape</var>[1].</p>"
-                            },
-                            {
-                              "html": "<p>Let <var>inputHeight</var> be <var>inputShape</var>[2].</p>"
-                            },
-                            {
-                              "html": "<p>Let <var>inputWidth</var> be <var>inputShape</var>[3].</p>"
-                            }
-                          ]
+                          "html": "<p>Let <var>batches</var> be <var>inputShape</var>[0].</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>inputChannels</var> be <var>inputShape</var>[1].</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>inputHeight</var> be <var>inputShape</var>[2].</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>inputWidth</var> be <var>inputShape</var>[3].</p>"
                         }
                       ]
                     },
                     {
                       "case": "\"nhwc\"",
+                      "html": "",
+                      "rationale": "let",
                       "steps": [
                         {
-                          "html": "<ol>\n           <li data-md=\"\">\n            <p>Let <var>batches</var> be <var>inputShape</var>[0].</p>\n           </li><li data-md=\"\">\n            <p>Let <var>inputHeight</var> be <var>inputShape</var>[1].</p>\n           </li><li data-md=\"\">\n            <p>Let <var>inputWidth</var> be <var>inputShape</var>[2].</p>\n           </li><li data-md=\"\">\n            <p>Let <var>inputChannels</var> be <var>inputShape</var>[3].</p>\n          </li></ol>",
-                          "rationale": "let",
-                          "steps": [
-                            {
-                              "html": "<p>Let <var>batches</var> be <var>inputShape</var>[0].</p>"
-                            },
-                            {
-                              "html": "<p>Let <var>inputHeight</var> be <var>inputShape</var>[1].</p>"
-                            },
-                            {
-                              "html": "<p>Let <var>inputWidth</var> be <var>inputShape</var>[2].</p>"
-                            },
-                            {
-                              "html": "<p>Let <var>inputChannels</var> be <var>inputShape</var>[3].</p>"
-                            }
-                          ]
+                          "html": "<p>Let <var>batches</var> be <var>inputShape</var>[0].</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>inputHeight</var> be <var>inputShape</var>[1].</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>inputWidth</var> be <var>inputShape</var>[2].</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>inputChannels</var> be <var>inputShape</var>[3].</p>"
                         }
                       ]
                     }
@@ -1550,70 +1510,58 @@
                   "steps": [
                     {
                       "case": "\"iohw\"",
+                      "html": "",
+                      "rationale": "let",
                       "steps": [
                         {
-                          "html": "<ol>\n           <li data-md=\"\">\n            <p>Let <var>filterInputChannels</var> be <var>filterShape</var>[0].</p>\n           </li><li data-md=\"\">\n            <p>Let <var>filterOutputChannels</var> be |filterShape[1].</p>\n           </li><li data-md=\"\">\n            <p>Let <var>filterHeight</var> be <var>filterShape</var>[2].</p>\n           </li><li data-md=\"\">\n            <p>Let <var>filterWidth</var> be <var>filterShape</var>[3].</p>\n          </li></ol>",
-                          "rationale": "let",
-                          "steps": [
-                            {
-                              "html": "<p>Let <var>filterInputChannels</var> be <var>filterShape</var>[0].</p>"
-                            },
-                            {
-                              "html": "<p>Let <var>filterOutputChannels</var> be |filterShape[1].</p>"
-                            },
-                            {
-                              "html": "<p>Let <var>filterHeight</var> be <var>filterShape</var>[2].</p>"
-                            },
-                            {
-                              "html": "<p>Let <var>filterWidth</var> be <var>filterShape</var>[3].</p>"
-                            }
-                          ]
+                          "html": "<p>Let <var>filterInputChannels</var> be <var>filterShape</var>[0].</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>filterOutputChannels</var> be |filterShape[1].</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>filterHeight</var> be <var>filterShape</var>[2].</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>filterWidth</var> be <var>filterShape</var>[3].</p>"
                         }
                       ]
                     },
                     {
                       "case": "\"hwoi\"",
+                      "html": "",
+                      "rationale": "let",
                       "steps": [
                         {
-                          "html": "<ol>\n           <li data-md=\"\">\n            <p>Let <var>filterHeight</var> be <var>filterShape</var>[0].</p>\n           </li><li data-md=\"\">\n            <p>Let <var>filterWidth</var> be <var>filterShape</var>[1].</p>\n           </li><li data-md=\"\">\n            <p>Let <var>filterOutputChannels</var> be |filterShape[2].</p>\n           </li><li data-md=\"\">\n            <p>Let <var>filterInputChannels</var> be <var>filterShape</var>[3].</p>\n          </li></ol>",
-                          "rationale": "let",
-                          "steps": [
-                            {
-                              "html": "<p>Let <var>filterHeight</var> be <var>filterShape</var>[0].</p>"
-                            },
-                            {
-                              "html": "<p>Let <var>filterWidth</var> be <var>filterShape</var>[1].</p>"
-                            },
-                            {
-                              "html": "<p>Let <var>filterOutputChannels</var> be |filterShape[2].</p>"
-                            },
-                            {
-                              "html": "<p>Let <var>filterInputChannels</var> be <var>filterShape</var>[3].</p>"
-                            }
-                          ]
+                          "html": "<p>Let <var>filterHeight</var> be <var>filterShape</var>[0].</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>filterWidth</var> be <var>filterShape</var>[1].</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>filterOutputChannels</var> be |filterShape[2].</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>filterInputChannels</var> be <var>filterShape</var>[3].</p>"
                         }
                       ]
                     },
                     {
                       "case": "\"ohwi\"",
+                      "html": "",
+                      "rationale": "let",
                       "steps": [
                         {
-                          "html": "<ol>\n           <li data-md=\"\">\n            <p>Let <var>filterOutputChannels</var> be |filterShape[0].</p>\n           </li><li data-md=\"\">\n            <p>Let <var>filterHeight</var> be <var>filterShape</var>[1].</p>\n           </li><li data-md=\"\">\n            <p>Let <var>filterWidth</var> be <var>filterShape</var>[2].</p>\n           </li><li data-md=\"\">\n            <p>Let <var>filterInputChannels</var> be <var>filterShape</var>[3].</p>\n          </li></ol>",
-                          "rationale": "let",
-                          "steps": [
-                            {
-                              "html": "<p>Let <var>filterOutputChannels</var> be |filterShape[0].</p>"
-                            },
-                            {
-                              "html": "<p>Let <var>filterHeight</var> be <var>filterShape</var>[1].</p>"
-                            },
-                            {
-                              "html": "<p>Let <var>filterWidth</var> be <var>filterShape</var>[2].</p>"
-                            },
-                            {
-                              "html": "<p>Let <var>filterInputChannels</var> be <var>filterShape</var>[3].</p>"
-                            }
-                          ]
+                          "html": "<p>Let <var>filterOutputChannels</var> be |filterShape[0].</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>filterHeight</var> be <var>filterShape</var>[1].</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>filterWidth</var> be <var>filterShape</var>[2].</p>"
+                        },
+                        {
+                          "html": "<p>Let <var>filterInputChannels</var> be <var>filterShape</var>[3].</p>"
                         }
                       ]
                     }
@@ -1654,19 +1602,11 @@
                   "steps": [
                     {
                       "case": "\"nchw\"",
-                      "steps": [
-                        {
-                          "html": "<p>Let <var>outputShape</var> be « <var>batches</var>, <var>outputChannels</var>, floor( <var>outputSizes</var>[0] ), floor( <var>outputSizes</var>[1] ) ».</p>"
-                        }
-                      ]
+                      "html": "<p>Let <var>outputShape</var> be « <var>batches</var>, <var>outputChannels</var>, floor( <var>outputSizes</var>[0] ), floor( <var>outputSizes</var>[1] ) ».</p>"
                     },
                     {
                       "case": "\"nhwc\"",
-                      "steps": [
-                        {
-                          "html": "<p>Let <var>outputShape</var> be « <var>batches</var>, floor( <var>outputSizes</var>[0] ), floor( <var>outputSizes</var>[1] ), <var>outputChannels</var> ».</p>"
-                        }
-                      ]
+                      "html": "<p>Let <var>outputShape</var> be « <var>batches</var>, floor( <var>outputSizes</var>[0] ), floor( <var>outputSizes</var>[1] ), <var>outputChannels</var> ».</p>"
                     }
                   ]
                 }
@@ -1716,7 +1656,7 @@
       ]
     },
     {
-      "name": "element-wise-binary-op",
+      "name": "MLGraphBuilder/element-wise-binary-op",
       "href": "https://webmachinelearning.github.io/webnn/#mlgraphbuilder-element-wise-binary-op",
       "rationale": ".algorithm",
       "steps": [
@@ -1771,13 +1711,13 @@
       ]
     },
     {
-      "name": "add(a, b)",
+      "name": "MLGraphBuilder/add(a, b)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-add",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-add\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>add(<var>a</var>, <var>b</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-element-wise-binary-op\" id=\"ref-for-mlgraphbuilder-element-wise-binary-op①\"> create element-wise binary operation</a> given \"add\", <var>a</var> and <var>b</var>.",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-add\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>add(<var>a</var>, <var>b</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -1791,13 +1731,13 @@
       ]
     },
     {
-      "name": "sub(a, b)",
+      "name": "MLGraphBuilder/sub(a, b)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-sub",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-sub\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>sub(<var>a</var>, <var>b</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-element-wise-binary-op\" id=\"ref-for-mlgraphbuilder-element-wise-binary-op②\"> create element-wise binary operation</a> given \"sub\", <var>a</var> and <var>b</var>.",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-sub\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>sub(<var>a</var>, <var>b</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -1811,13 +1751,13 @@
       ]
     },
     {
-      "name": "mul(a, b)",
+      "name": "MLGraphBuilder/mul(a, b)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-mul",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-mul\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>mul(<var>a</var>, <var>b</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-element-wise-binary-op\" id=\"ref-for-mlgraphbuilder-element-wise-binary-op③\"> create element-wise binary operation</a> given \"mul\", <var>a</var> and <var>b</var>.",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-mul\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>mul(<var>a</var>, <var>b</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -1831,13 +1771,13 @@
       ]
     },
     {
-      "name": "div(a, b)",
+      "name": "MLGraphBuilder/div(a, b)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-div",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-div\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>div(<var>a</var>, <var>b</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-element-wise-binary-op\" id=\"ref-for-mlgraphbuilder-element-wise-binary-op④\"> create element-wise binary operation</a> given \"div\", <var>a</var> and <var>b</var>.",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-div\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>div(<var>a</var>, <var>b</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -1851,13 +1791,13 @@
       ]
     },
     {
-      "name": "max(a, b)",
+      "name": "MLGraphBuilder/max(a, b)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-max",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-max\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>max(<var>a</var>, <var>b</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-element-wise-binary-op\" id=\"ref-for-mlgraphbuilder-element-wise-binary-op⑤\"> create element-wise binary operation</a> given \"max\", <var>a</var> and <var>b</var>.",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-max\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>max(<var>a</var>, <var>b</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -1871,13 +1811,13 @@
       ]
     },
     {
-      "name": "min(a, b)",
+      "name": "MLGraphBuilder/min(a, b)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-min",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-min\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>min(<var>a</var>, <var>b</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-element-wise-binary-op\" id=\"ref-for-mlgraphbuilder-element-wise-binary-op⑥\"> create element-wise binary operation</a> given \"min\", <var>a</var> and <var>b</var>.",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-min\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>min(<var>a</var>, <var>b</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -1891,13 +1831,13 @@
       ]
     },
     {
-      "name": "pow(a, b)",
+      "name": "MLGraphBuilder/pow(a, b)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-pow",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-pow\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>pow(<var>a</var>, <var>b</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-element-wise-binary-op\" id=\"ref-for-mlgraphbuilder-element-wise-binary-op⑦\"> create element-wise binary operation</a> given \"pow\", <var>a</var> and <var>b</var>.",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-pow\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>pow(<var>a</var>, <var>b</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -1911,7 +1851,7 @@
       ]
     },
     {
-      "name": "element-wise-logical-op",
+      "name": "MLGraphBuilder/element-wise-logical-op",
       "href": "https://webmachinelearning.github.io/webnn/#mlgraphbuilder-element-wise-logical-op",
       "rationale": ".algorithm",
       "steps": [
@@ -1984,13 +1924,13 @@
       ]
     },
     {
-      "name": "equal(a, b)",
+      "name": "MLGraphBuilder/equal(a, b)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-equal",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-equal\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>equal(<var>a</var>, <var>b</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-element-wise-logical-op\" id=\"ref-for-mlgraphbuilder-element-wise-logical-op①\"> create element-wise logical operation</a> given \"equal\", <var>a</var> and <var>b</var>.",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-equal\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>equal(<var>a</var>, <var>b</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -2004,13 +1944,13 @@
       ]
     },
     {
-      "name": "greater(a, b)",
+      "name": "MLGraphBuilder/greater(a, b)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-greater",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-greater\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>greater(<var>a</var>, <var>b</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-element-wise-logical-op\" id=\"ref-for-mlgraphbuilder-element-wise-logical-op②\"> create element-wise logical operation</a> given \"greater\", <var>a</var> and <var>b</var>.",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-greater\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>greater(<var>a</var>, <var>b</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -2024,13 +1964,13 @@
       ]
     },
     {
-      "name": "greaterOrEqual(a, b)",
+      "name": "MLGraphBuilder/greaterOrEqual(a, b)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-greaterorequal",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-greaterorequal\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>greaterOrEqual(<var>a</var>, <var>b</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-element-wise-logical-op\" id=\"ref-for-mlgraphbuilder-element-wise-logical-op③\"> create element-wise logical operation</a> given \"greaterOrEqual\", <var>a</var> and <var>b</var>.",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-greaterorequal\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>greaterOrEqual(<var>a</var>, <var>b</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -2044,13 +1984,13 @@
       ]
     },
     {
-      "name": "lesser(a, b)",
+      "name": "MLGraphBuilder/lesser(a, b)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-lesser",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-lesser\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>lesser(<var>a</var>, <var>b</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-element-wise-logical-op\" id=\"ref-for-mlgraphbuilder-element-wise-logical-op④\"> create element-wise logical operation</a> given \"lesser\", <var>a</var> and <var>b</var>.",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-lesser\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>lesser(<var>a</var>, <var>b</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -2064,13 +2004,13 @@
       ]
     },
     {
-      "name": "lesserOrEqual(a, b)",
+      "name": "MLGraphBuilder/lesserOrEqual(a, b)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-lesserorequal",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-lesserorequal\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>lesserOrEqual(<var>a</var>, <var>b</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-element-wise-logical-op\" id=\"ref-for-mlgraphbuilder-element-wise-logical-op⑤\"> create element-wise logical operation</a> given \"lesserOrEqual\", <var>a</var> and <var>b</var>.",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-lesserorequal\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>lesserOrEqual(<var>a</var>, <var>b</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -2084,13 +2024,13 @@
       ]
     },
     {
-      "name": "logicalNot(a)",
+      "name": "MLGraphBuilder/logicalNot(a)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-logicalnot",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-logicalnot\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>logicalNot(<var>a</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-element-wise-logical-op\" id=\"ref-for-mlgraphbuilder-element-wise-logical-op⑥\"> create element-wise logical operation</a> given \"logicalNot\" and <var>a</var>.",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-logicalnot\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>logicalNot(<var>a</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -2104,7 +2044,7 @@
       ]
     },
     {
-      "name": "element-wise-unary-op",
+      "name": "MLGraphBuilder/element-wise-unary-op",
       "href": "https://webmachinelearning.github.io/webnn/#mlgraphbuilder-element-wise-unary-op",
       "rationale": ".algorithm",
       "steps": [
@@ -2144,13 +2084,13 @@
       ]
     },
     {
-      "name": "abs(input)",
+      "name": "MLGraphBuilder/abs(input)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-abs",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-abs\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>abs(<var>input</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-element-wise-unary-op\" id=\"ref-for-mlgraphbuilder-element-wise-unary-op①\"> create element-wise unary operation</a> given \"abs\", <var>input</var>, and « <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float32\" id=\"ref-for-dom-mloperanddatatype-float32④\">\"float32\"</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float16\" id=\"ref-for-dom-mloperanddatatype-float16③\">\"float16\"</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-int32\" id=\"ref-for-dom-mloperanddatatype-int32\">\"int32\"</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-int8\" id=\"ref-for-dom-mloperanddatatype-int8①\">\"int8\"</a></code> ».",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-abs\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>abs(<var>input</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -2164,13 +2104,13 @@
       ]
     },
     {
-      "name": "ceil(input)",
+      "name": "MLGraphBuilder/ceil(input)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-ceil",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-ceil\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>ceil(<var>input</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-element-wise-unary-op\" id=\"ref-for-mlgraphbuilder-element-wise-unary-op②\"> create element-wise unary operation</a> given \"ceil\", <var>input</var>, and « <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float32\" id=\"ref-for-dom-mloperanddatatype-float32⑤\">\"float32\"</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float16\" id=\"ref-for-dom-mloperanddatatype-float16④\">\"float16\"</a></code> ».",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-ceil\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>ceil(<var>input</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -2184,13 +2124,13 @@
       ]
     },
     {
-      "name": "cos(input)",
+      "name": "MLGraphBuilder/cos(input)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-cos",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-cos\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>cos(<var>input</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-element-wise-unary-op\" id=\"ref-for-mlgraphbuilder-element-wise-unary-op③\"> create element-wise unary operation</a> given \"cos\", <var>input</var>, and « <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float32\" id=\"ref-for-dom-mloperanddatatype-float32⑥\">\"float32\"</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float16\" id=\"ref-for-dom-mloperanddatatype-float16⑤\">\"float16\"</a></code> ».",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-cos\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>cos(<var>input</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -2204,13 +2144,13 @@
       ]
     },
     {
-      "name": "erf(input)",
+      "name": "MLGraphBuilder/erf(input)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-erf",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-erf\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>erf(<var>input</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-element-wise-unary-op\" id=\"ref-for-mlgraphbuilder-element-wise-unary-op④\"> create element-wise unary operation</a> given \"erf\", <var>input</var>, and « <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float32\" id=\"ref-for-dom-mloperanddatatype-float32⑦\">\"float32\"</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float16\" id=\"ref-for-dom-mloperanddatatype-float16⑥\">\"float16\"</a></code> ».",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-erf\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>erf(<var>input</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -2224,13 +2164,13 @@
       ]
     },
     {
-      "name": "exp(input)",
+      "name": "MLGraphBuilder/exp(input)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-exp",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-exp\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>exp(<var>input</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-element-wise-unary-op\" id=\"ref-for-mlgraphbuilder-element-wise-unary-op⑤\"> create element-wise unary operation</a> given \"exp\", <var>input</var>, and « <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float32\" id=\"ref-for-dom-mloperanddatatype-float32⑧\">\"float32\"</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float16\" id=\"ref-for-dom-mloperanddatatype-float16⑦\">\"float16\"</a></code> ».",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-exp\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>exp(<var>input</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -2244,13 +2184,13 @@
       ]
     },
     {
-      "name": "floor(input)",
+      "name": "MLGraphBuilder/floor(input)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-floor",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-floor\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>floor(<var>input</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-element-wise-unary-op\" id=\"ref-for-mlgraphbuilder-element-wise-unary-op⑥\"> create element-wise unary operation</a> given \"floor\", <var>input</var>, and « <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float32\" id=\"ref-for-dom-mloperanddatatype-float32⑨\">\"float32\"</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float16\" id=\"ref-for-dom-mloperanddatatype-float16⑧\">\"float16\"</a></code> ».",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-floor\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>floor(<var>input</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -2264,13 +2204,13 @@
       ]
     },
     {
-      "name": "identity(input)",
+      "name": "MLGraphBuilder/identity(input)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-identity",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-identity\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>identity(<var>input</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-element-wise-unary-op\" id=\"ref-for-mlgraphbuilder-element-wise-unary-op⑦\"> create element-wise unary operation</a> given \"identity\" and <var>input</var>.",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-identity\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>identity(<var>input</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -2284,13 +2224,13 @@
       ]
     },
     {
-      "name": "log(input)",
+      "name": "MLGraphBuilder/log(input)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-log",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-log\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>log(<var>input</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-element-wise-unary-op\" id=\"ref-for-mlgraphbuilder-element-wise-unary-op⑧\"> create element-wise unary operation</a> given \"log\", <var>input</var>, and « <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float32\" id=\"ref-for-dom-mloperanddatatype-float32①⓪\">\"float32\"</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float16\" id=\"ref-for-dom-mloperanddatatype-float16⑨\">\"float16\"</a></code> ».",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-log\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>log(<var>input</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -2304,13 +2244,13 @@
       ]
     },
     {
-      "name": "neg(input)",
+      "name": "MLGraphBuilder/neg(input)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-neg",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-neg\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>neg(<var>input</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-element-wise-unary-op\" id=\"ref-for-mlgraphbuilder-element-wise-unary-op⑨\"> create element-wise unary operation</a> given \"neg\", <var>input</var>, and « <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float32\" id=\"ref-for-dom-mloperanddatatype-float32①①\">\"float32\"</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float16\" id=\"ref-for-dom-mloperanddatatype-float16①⓪\">\"float16\"</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-int32\" id=\"ref-for-dom-mloperanddatatype-int32①\">\"int32\"</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-int8\" id=\"ref-for-dom-mloperanddatatype-int8②\">\"int8\"</a></code> ».",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-neg\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>neg(<var>input</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -2324,13 +2264,13 @@
       ]
     },
     {
-      "name": "reciprocal(input)",
+      "name": "MLGraphBuilder/reciprocal(input)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-reciprocal",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-reciprocal\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>reciprocal(<var>input</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-element-wise-unary-op\" id=\"ref-for-mlgraphbuilder-element-wise-unary-op①⓪\"> create element-wise unary operation</a> given \"reciprocal\", <var>input</var>, and « <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float32\" id=\"ref-for-dom-mloperanddatatype-float32①②\">\"float32\"</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float16\" id=\"ref-for-dom-mloperanddatatype-float16①①\">\"float16\"</a></code> ».",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-reciprocal\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>reciprocal(<var>input</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -2344,13 +2284,13 @@
       ]
     },
     {
-      "name": "sin(input)",
+      "name": "MLGraphBuilder/sin(input)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-sin",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-sin\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>sin(<var>input</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-element-wise-unary-op\" id=\"ref-for-mlgraphbuilder-element-wise-unary-op①①\"> create element-wise unary operation</a> given \"sin\", <var>input</var>, and « <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float32\" id=\"ref-for-dom-mloperanddatatype-float32①③\">\"float32\"</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float16\" id=\"ref-for-dom-mloperanddatatype-float16①②\">\"float16\"</a></code> ».",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-sin\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>sin(<var>input</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -2364,13 +2304,13 @@
       ]
     },
     {
-      "name": "sqrt(input)",
+      "name": "MLGraphBuilder/sqrt(input)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-sqrt",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-sqrt\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>sqrt(<var>input</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-element-wise-unary-op\" id=\"ref-for-mlgraphbuilder-element-wise-unary-op①②\"> create element-wise unary operation</a> given \"sqrt\", <var>input</var>, and « <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float32\" id=\"ref-for-dom-mloperanddatatype-float32①④\">\"float32\"</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float16\" id=\"ref-for-dom-mloperanddatatype-float16①③\">\"float16\"</a></code> ».",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-sqrt\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>sqrt(<var>input</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -2384,13 +2324,13 @@
       ]
     },
     {
-      "name": "tan(input)",
+      "name": "MLGraphBuilder/tan(input)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-tan",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-tan\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>tan(<var>input</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-element-wise-unary-op\" id=\"ref-for-mlgraphbuilder-element-wise-unary-op①③\"> create element-wise unary operation</a> given \"tan\", <var>input</var>, and « <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float32\" id=\"ref-for-dom-mloperanddatatype-float32①⑤\">\"float32\"</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float16\" id=\"ref-for-dom-mloperanddatatype-float16①④\">\"float16\"</a></code> ».",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-mlgraphbuilder-tan\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>tan(<var>input</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -2404,7 +2344,7 @@
       ]
     },
     {
-      "name": "elu(input, options)",
+      "name": "MLGraphBuilder/elu(input, options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-elu",
       "rationale": ".algorithm",
       "steps": [
@@ -2444,7 +2384,7 @@
       ]
     },
     {
-      "name": "elu(options)",
+      "name": "MLGraphBuilder/elu(options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-elu-options",
       "rationale": ".algorithm",
       "steps": [
@@ -2469,7 +2409,7 @@
       ]
     },
     {
-      "name": "expand(input, newShape)",
+      "name": "MLGraphBuilder/expand(input, newShape)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-expand",
       "rationale": ".algorithm",
       "steps": [
@@ -2518,7 +2458,7 @@
       ]
     },
     {
-      "name": "gather(input, indices, options)",
+      "name": "MLGraphBuilder/gather(input, indices, options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-gather",
       "rationale": ".algorithm",
       "steps": [
@@ -2639,7 +2579,7 @@
       ]
     },
     {
-      "name": "gelu(input)",
+      "name": "MLGraphBuilder/gelu(input)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-gelu",
       "rationale": ".algorithm",
       "steps": [
@@ -2676,7 +2616,7 @@
       ]
     },
     {
-      "name": "gelu()",
+      "name": "MLGraphBuilder/gelu()",
       "href": "https://webmachinelearning.github.io/webnn/#gelu-noargs",
       "rationale": ".algorithm",
       "steps": [
@@ -2689,7 +2629,7 @@
       ]
     },
     {
-      "name": "gemm(a, b, options)",
+      "name": "MLGraphBuilder/gemm(a, b, options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-gemm",
       "rationale": ".algorithm",
       "steps": [
@@ -2777,7 +2717,7 @@
       ]
     },
     {
-      "name": "gru(input, weight, recurrentWeight, steps, hiddenSize, options)",
+      "name": "MLGraphBuilder/gru(input, weight, recurrentWeight, steps, hiddenSize, options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-gru",
       "rationale": ".algorithm",
       "steps": [
@@ -2967,7 +2907,7 @@
       ]
     },
     {
-      "name": "gruCell(input, weight, recurrentWeight, hiddenState, hiddenSize, options)",
+      "name": "MLGraphBuilder/gruCell(input, weight, recurrentWeight, hiddenState, hiddenSize, options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-grucell",
       "rationale": ".algorithm",
       "steps": [
@@ -3079,7 +3019,7 @@
       ]
     },
     {
-      "name": "hardSigmoid(input, options)",
+      "name": "MLGraphBuilder/hardSigmoid(input, options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-hardsigmoid",
       "rationale": ".algorithm",
       "steps": [
@@ -3122,7 +3062,7 @@
       ]
     },
     {
-      "name": "hardSigmoid(options)",
+      "name": "MLGraphBuilder/hardSigmoid(options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-hardsigmoid-options",
       "rationale": ".algorithm",
       "steps": [
@@ -3150,7 +3090,7 @@
       ]
     },
     {
-      "name": "hardSwish(input)",
+      "name": "MLGraphBuilder/hardSwish(input)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-hardswish",
       "rationale": ".algorithm",
       "steps": [
@@ -3187,7 +3127,7 @@
       ]
     },
     {
-      "name": "hardSwish()",
+      "name": "MLGraphBuilder/hardSwish()",
       "href": "https://webmachinelearning.github.io/webnn/#hardswish-noargs",
       "rationale": ".algorithm",
       "steps": [
@@ -3200,7 +3140,7 @@
       ]
     },
     {
-      "name": "instanceNormalization(input, options)",
+      "name": "MLGraphBuilder/instanceNormalization(input, options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-instancenormalization",
       "rationale": ".algorithm",
       "steps": [
@@ -3276,7 +3216,7 @@
       ]
     },
     {
-      "name": "layerNormalization(input, options)",
+      "name": "MLGraphBuilder/layerNormalization(input, options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-layernormalization",
       "rationale": ".algorithm",
       "steps": [
@@ -3385,7 +3325,7 @@
       ]
     },
     {
-      "name": "leakyRelu(input, options)",
+      "name": "MLGraphBuilder/leakyRelu(input, options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-leakyrelu",
       "rationale": ".algorithm",
       "steps": [
@@ -3425,7 +3365,7 @@
       ]
     },
     {
-      "name": "leakyRelu(options)",
+      "name": "MLGraphBuilder/leakyRelu(options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-leakyrelu-options",
       "rationale": ".algorithm",
       "steps": [
@@ -3450,7 +3390,7 @@
       ]
     },
     {
-      "name": "linear(input, options)",
+      "name": "MLGraphBuilder/linear(input, options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-linear",
       "rationale": ".algorithm",
       "steps": [
@@ -3493,7 +3433,7 @@
       ]
     },
     {
-      "name": "linear(options)",
+      "name": "MLGraphBuilder/linear(options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-linear-options",
       "rationale": ".algorithm",
       "steps": [
@@ -3521,7 +3461,7 @@
       ]
     },
     {
-      "name": "lstm(input, weight, recurrentWeight, steps, hiddenSize, options)",
+      "name": "MLGraphBuilder/lstm(input, weight, recurrentWeight, steps, hiddenSize, options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-lstm",
       "rationale": ".algorithm",
       "steps": [
@@ -3747,7 +3687,7 @@
       ]
     },
     {
-      "name": "lstmCell(input, weight, recurrentWeight, hiddenState, cellState, hiddenSize, options)",
+      "name": "MLGraphBuilder/lstmCell(input, weight, recurrentWeight, hiddenState, cellState, hiddenSize, options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-lstmcell",
       "rationale": ".algorithm",
       "steps": [
@@ -3889,7 +3829,7 @@
       ]
     },
     {
-      "name": "calculate matmul output sizes",
+      "name": "MLGraphBuilder/calculate matmul output sizes",
       "href": "https://webmachinelearning.github.io/webnn/#mlgraphbuilder-calculate-matmul-output-sizes",
       "rationale": ".algorithm",
       "steps": [
@@ -3941,7 +3881,7 @@
       ]
     },
     {
-      "name": "matmul(a, b)",
+      "name": "MLGraphBuilder/matmul(a, b)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-matmul",
       "rationale": ".algorithm",
       "steps": [
@@ -3993,7 +3933,7 @@
       ]
     },
     {
-      "name": "calculate padding output sizes",
+      "name": "MLGraphBuilder/calculate padding output sizes",
       "href": "https://webmachinelearning.github.io/webnn/#mlgraphbuilder-calculate-padding-output-sizes",
       "rationale": ".algorithm",
       "steps": [
@@ -4018,7 +3958,7 @@
       ]
     },
     {
-      "name": "pad(input, beginningPadding, endingPadding, options)",
+      "name": "MLGraphBuilder/pad(input, beginningPadding, endingPadding, options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-pad",
       "rationale": ".algorithm",
       "steps": [
@@ -4073,7 +4013,7 @@
       ]
     },
     {
-      "name": "calculate pool2d output sizes",
+      "name": "MLGraphBuilder/calculate pool2d output sizes",
       "href": "https://webmachinelearning.github.io/webnn/#mlgraphbuilder-calculate-pool2d-output-sizes",
       "rationale": ".algorithm",
       "steps": [
@@ -4086,47 +4026,39 @@
               "steps": [
                 {
                   "case": "\"nchw\"",
+                  "html": "",
+                  "rationale": "let",
                   "steps": [
                     {
-                      "html": "<ol>\n         <li data-md=\"\">\n          <p>Let <var>batches</var> be <var>inputShape</var>[0].</p>\n         </li><li data-md=\"\">\n          <p>Let <var>channels</var> be <var>inputShape</var>[1].</p>\n         </li><li data-md=\"\">\n          <p>Let <var>inputHeight</var> be <var>inputShape</var>[2].</p>\n         </li><li data-md=\"\">\n          <p>Let <var>inputWidth</var> be <var>inputShape</var>[3].</p>\n        </li></ol>",
-                      "rationale": "let",
-                      "steps": [
-                        {
-                          "html": "<p>Let <var>batches</var> be <var>inputShape</var>[0].</p>"
-                        },
-                        {
-                          "html": "<p>Let <var>channels</var> be <var>inputShape</var>[1].</p>"
-                        },
-                        {
-                          "html": "<p>Let <var>inputHeight</var> be <var>inputShape</var>[2].</p>"
-                        },
-                        {
-                          "html": "<p>Let <var>inputWidth</var> be <var>inputShape</var>[3].</p>"
-                        }
-                      ]
+                      "html": "<p>Let <var>batches</var> be <var>inputShape</var>[0].</p>"
+                    },
+                    {
+                      "html": "<p>Let <var>channels</var> be <var>inputShape</var>[1].</p>"
+                    },
+                    {
+                      "html": "<p>Let <var>inputHeight</var> be <var>inputShape</var>[2].</p>"
+                    },
+                    {
+                      "html": "<p>Let <var>inputWidth</var> be <var>inputShape</var>[3].</p>"
                     }
                   ]
                 },
                 {
                   "case": "\"nhwc\"",
+                  "html": "",
+                  "rationale": "let",
                   "steps": [
                     {
-                      "html": "<ol>\n         <li data-md=\"\">\n          <p>Let <var>batches</var> be <var>inputShape</var>[0].</p>\n         </li><li data-md=\"\">\n          <p>Let <var>inputHeight</var> be <var>inputShape</var>[1].</p>\n         </li><li data-md=\"\">\n          <p>Let <var>inputWidth</var> be <var>inputShape</var>[2].</p>\n         </li><li data-md=\"\">\n          <p>Let <var>channels</var> be <var>inputShape</var>[3].</p>\n        </li></ol>",
-                      "rationale": "let",
-                      "steps": [
-                        {
-                          "html": "<p>Let <var>batches</var> be <var>inputShape</var>[0].</p>"
-                        },
-                        {
-                          "html": "<p>Let <var>inputHeight</var> be <var>inputShape</var>[1].</p>"
-                        },
-                        {
-                          "html": "<p>Let <var>inputWidth</var> be <var>inputShape</var>[2].</p>"
-                        },
-                        {
-                          "html": "<p>Let <var>channels</var> be <var>inputShape</var>[3].</p>"
-                        }
-                      ]
+                      "html": "<p>Let <var>batches</var> be <var>inputShape</var>[0].</p>"
+                    },
+                    {
+                      "html": "<p>Let <var>inputHeight</var> be <var>inputShape</var>[1].</p>"
+                    },
+                    {
+                      "html": "<p>Let <var>inputWidth</var> be <var>inputShape</var>[2].</p>"
+                    },
+                    {
+                      "html": "<p>Let <var>channels</var> be <var>inputShape</var>[3].</p>"
                     }
                   ]
                 }
@@ -4168,35 +4100,27 @@
                   "steps": [
                     {
                       "case": "\"floor\"",
+                      "html": "",
+                      "rationale": "set",
                       "steps": [
                         {
-                          "html": "<ol>\n           <li data-md=\"\">\n            <p>Set <var>outputWidth</var> to floor(<var>outputWidth</var>).</p>\n           </li><li data-md=\"\">\n            <p>Set <var>outputHeight</var> to floor(<var>outputHeight</var>).</p>\n          </li></ol>",
-                          "rationale": "set",
-                          "steps": [
-                            {
-                              "html": "<p>Set <var>outputWidth</var> to floor(<var>outputWidth</var>).</p>"
-                            },
-                            {
-                              "html": "<p>Set <var>outputHeight</var> to floor(<var>outputHeight</var>).</p>"
-                            }
-                          ]
+                          "html": "<p>Set <var>outputWidth</var> to floor(<var>outputWidth</var>).</p>"
+                        },
+                        {
+                          "html": "<p>Set <var>outputHeight</var> to floor(<var>outputHeight</var>).</p>"
                         }
                       ]
                     },
                     {
                       "case": "\"ceil\"",
+                      "html": "",
+                      "rationale": "set",
                       "steps": [
                         {
-                          "html": "<ol>\n           <li data-md=\"\">\n            <p>Set <var>outputWidth</var> to ceiling(<var>outputWidth</var>).</p>\n           </li><li data-md=\"\">\n            <p>Set <var>outputHeight</var> to ceiling(<var>outputHeight</var>).</p>\n          </li></ol>",
-                          "rationale": "set",
-                          "steps": [
-                            {
-                              "html": "<p>Set <var>outputWidth</var> to ceiling(<var>outputWidth</var>).</p>"
-                            },
-                            {
-                              "html": "<p>Set <var>outputHeight</var> to ceiling(<var>outputHeight</var>).</p>"
-                            }
-                          ]
+                          "html": "<p>Set <var>outputWidth</var> to ceiling(<var>outputWidth</var>).</p>"
+                        },
+                        {
+                          "html": "<p>Set <var>outputHeight</var> to ceiling(<var>outputHeight</var>).</p>"
                         }
                       ]
                     }
@@ -4215,19 +4139,11 @@
               "steps": [
                 {
                   "case": "\"nchw\"",
-                  "steps": [
-                    {
-                      "html": "<p>Return « <var>batches</var>, <var>channels</var>, <var>outputHeight</var>, <var>outputWidth</var> ».</p>"
-                    }
-                  ]
+                  "html": "<p>Return « <var>batches</var>, <var>channels</var>, <var>outputHeight</var>, <var>outputWidth</var> ».</p>"
                 },
                 {
                   "case": "\"nhwc\"",
-                  "steps": [
-                    {
-                      "html": "<p>Return « <var>batches</var>, <var>outputHeight</var>, <var>outputWidth</var>, <var>channels</var> ».</p>"
-                    }
-                  ]
+                  "html": "<p>Return « <var>batches</var>, <var>outputHeight</var>, <var>outputWidth</var>, <var>channels</var> ».</p>"
                 }
               ]
             }
@@ -4236,7 +4152,7 @@
       ]
     },
     {
-      "name": "pooling-op",
+      "name": "MLGraphBuilder/pooling-op",
       "href": "https://webmachinelearning.github.io/webnn/#mlgraphbuilder-pooling-op",
       "rationale": ".algorithm",
       "steps": [
@@ -4333,13 +4249,13 @@
       ]
     },
     {
-      "name": "averagePool2d(input, options)",
+      "name": "MLGraphBuilder/averagePool2d(input, options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-averagepool2d",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"averagePool2d(input, options)|averagePool2d(input)\" id=\"dom-mlgraphbuilder-averagepool2d\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>averagePool2d(<var>input</var>, <var>options</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-pooling-op\" id=\"ref-for-mlgraphbuilder-pooling-op\"> create pooling operation</a> given \"averagePool2d\", <var>input</var>, <var>options</var>, and « <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float32\" id=\"ref-for-dom-mloperanddatatype-float32③⓪\">\"float32\"</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float16\" id=\"ref-for-dom-mloperanddatatype-float16②⑨\">\"float16\"</a></code> ».",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"averagePool2d(input, options)|averagePool2d(input)\" id=\"dom-mlgraphbuilder-averagepool2d\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>averagePool2d(<var>input</var>, <var>options</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -4353,13 +4269,13 @@
       ]
     },
     {
-      "name": "l2Pool2d(input, options)",
+      "name": "MLGraphBuilder/l2Pool2d(input, options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-l2pool2d",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"l2Pool2d(input, options)|l2Pool2d(input)\" id=\"dom-mlgraphbuilder-l2pool2d\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>l2Pool2d(<var>input</var>, <var>options</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-pooling-op\" id=\"ref-for-mlgraphbuilder-pooling-op①\"> create pooling operation</a> given \"l2Pool2d\", <var>input</var>, <var>options</var>, and « <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float32\" id=\"ref-for-dom-mloperanddatatype-float32③①\">\"float32\"</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float16\" id=\"ref-for-dom-mloperanddatatype-float16③⓪\">\"float16\"</a></code> ».",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"l2Pool2d(input, options)|l2Pool2d(input)\" id=\"dom-mlgraphbuilder-l2pool2d\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>l2Pool2d(<var>input</var>, <var>options</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -4373,13 +4289,13 @@
       ]
     },
     {
-      "name": "maxPool2d(input, options)",
+      "name": "MLGraphBuilder/maxPool2d(input, options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-maxpool2d",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"maxPool2d(input, options)|maxPool2d(input)\" id=\"dom-mlgraphbuilder-maxpool2d\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>maxPool2d(<var>input</var>, <var>options</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-pooling-op\" id=\"ref-for-mlgraphbuilder-pooling-op②\"> create pooling operation</a> given \"maxPool2d\", <var>input</var> and <var>options</var>.",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"maxPool2d(input, options)|maxPool2d(input)\" id=\"dom-mlgraphbuilder-maxpool2d\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>maxPool2d(<var>input</var>, <var>options</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -4393,7 +4309,7 @@
       ]
     },
     {
-      "name": "prelu(input, slope)",
+      "name": "MLGraphBuilder/prelu(input, slope)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-prelu",
       "rationale": ".algorithm",
       "steps": [
@@ -4448,7 +4364,7 @@
       ]
     },
     {
-      "name": "calculate reduction output sizes",
+      "name": "MLGraphBuilder/calculate reduction output sizes",
       "href": "https://webmachinelearning.github.io/webnn/#mlgraphbuilder-calculate-reduction-output-sizes",
       "rationale": ".algorithm",
       "steps": [
@@ -4503,7 +4419,7 @@
       ]
     },
     {
-      "name": "reduce-op",
+      "name": "MLGraphBuilder/reduce-op",
       "href": "https://webmachinelearning.github.io/webnn/#mlgraphbuilder-reduce-op",
       "rationale": ".algorithm",
       "steps": [
@@ -4555,13 +4471,13 @@
       ]
     },
     {
-      "name": "reduceL1(input, options)",
+      "name": "MLGraphBuilder/reduceL1(input, options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-reducel1",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"reduceL1(input, options)|reduceL1(input)\" id=\"dom-mlgraphbuilder-reducel1\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>reduceL1(<var>input</var>, <var>options</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-reduce-op\" id=\"ref-for-mlgraphbuilder-reduce-op\"> create reduce operation</a> given \"reduceL1\", <var>input</var>, <var>options</var>, and « <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float32\" id=\"ref-for-dom-mloperanddatatype-float32③③\">\"float32\"</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float16\" id=\"ref-for-dom-mloperanddatatype-float16③②\">\"float16\"</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-int32\" id=\"ref-for-dom-mloperanddatatype-int32⑤\">\"int32\"</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-uint32\" id=\"ref-for-dom-mloperanddatatype-uint32③\">\"uint32\"</a></code> ».",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"reduceL1(input, options)|reduceL1(input)\" id=\"dom-mlgraphbuilder-reducel1\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>reduceL1(<var>input</var>, <var>options</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -4575,13 +4491,13 @@
       ]
     },
     {
-      "name": "reduceL2(input, options)",
+      "name": "MLGraphBuilder/reduceL2(input, options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-reducel2",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"reduceL2(input, options)|reduceL2(input)\" id=\"dom-mlgraphbuilder-reducel2\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>reduceL2(<var>input</var>, <var>options</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-reduce-op\" id=\"ref-for-mlgraphbuilder-reduce-op①\"> create reduce operation</a> given \"reduceL2\", <var>input</var>, <var>options</var>, and « <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float32\" id=\"ref-for-dom-mloperanddatatype-float32③④\">\"float32\"</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float16\" id=\"ref-for-dom-mloperanddatatype-float16③③\">\"float16\"</a></code> ».",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"reduceL2(input, options)|reduceL2(input)\" id=\"dom-mlgraphbuilder-reducel2\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>reduceL2(<var>input</var>, <var>options</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -4595,13 +4511,13 @@
       ]
     },
     {
-      "name": "reduceLogSum(input, options)",
+      "name": "MLGraphBuilder/reduceLogSum(input, options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-reducelogsum",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"reduceLogSum(input, options)|reduceLogSum(input)\" id=\"dom-mlgraphbuilder-reducelogsum\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>reduceLogSum(<var>input</var>, <var>options</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-reduce-op\" id=\"ref-for-mlgraphbuilder-reduce-op②\"> create reduce operation</a> given \"reduceLogSum\", <var>input</var>, <var>options</var>, and « <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float32\" id=\"ref-for-dom-mloperanddatatype-float32③⑤\">\"float32\"</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float16\" id=\"ref-for-dom-mloperanddatatype-float16③④\">\"float16\"</a></code> ».",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"reduceLogSum(input, options)|reduceLogSum(input)\" id=\"dom-mlgraphbuilder-reducelogsum\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>reduceLogSum(<var>input</var>, <var>options</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -4615,13 +4531,13 @@
       ]
     },
     {
-      "name": "reduceLogSumExp(input, options)",
+      "name": "MLGraphBuilder/reduceLogSumExp(input, options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-reducelogsumexp",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"reduceLogSumExp(input, options)|reduceLogSumExp(input)\" id=\"dom-mlgraphbuilder-reducelogsumexp\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>reduceLogSumExp(<var>input</var>, <var>options</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-reduce-op\" id=\"ref-for-mlgraphbuilder-reduce-op③\"> create reduce operation</a> given \"reduceLogSumExp\", <var>input</var>, <var>options</var>, and « <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float32\" id=\"ref-for-dom-mloperanddatatype-float32③⑥\">\"float32\"</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float16\" id=\"ref-for-dom-mloperanddatatype-float16③⑤\">\"float16\"</a></code> ».",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"reduceLogSumExp(input, options)|reduceLogSumExp(input)\" id=\"dom-mlgraphbuilder-reducelogsumexp\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>reduceLogSumExp(<var>input</var>, <var>options</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -4635,13 +4551,13 @@
       ]
     },
     {
-      "name": "reduceMax(input, options)",
+      "name": "MLGraphBuilder/reduceMax(input, options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-reducemax",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"reduceMax(input, options)|reduceMax(input)\" id=\"dom-mlgraphbuilder-reducemax\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>reduceMax(<var>input</var>, <var>options</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-reduce-op\" id=\"ref-for-mlgraphbuilder-reduce-op④\"> create reduce operation</a> given \"reduceMax\", <var>input</var> and <var>options</var>.",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"reduceMax(input, options)|reduceMax(input)\" id=\"dom-mlgraphbuilder-reducemax\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>reduceMax(<var>input</var>, <var>options</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -4655,13 +4571,13 @@
       ]
     },
     {
-      "name": "reduceMean(input, options)",
+      "name": "MLGraphBuilder/reduceMean(input, options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-reducemean",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"reduceMean(input, options)|reduceMean(input)\" id=\"dom-mlgraphbuilder-reducemean\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>reduceMean(<var>input</var>, <var>options</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-reduce-op\" id=\"ref-for-mlgraphbuilder-reduce-op⑤\"> create reduce operation</a> given \"reduceMean\", <var>input</var>, <var>options</var>, and « <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float32\" id=\"ref-for-dom-mloperanddatatype-float32③⑦\">\"float32\"</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float16\" id=\"ref-for-dom-mloperanddatatype-float16③⑥\">\"float16\"</a></code> ».",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"reduceMean(input, options)|reduceMean(input)\" id=\"dom-mlgraphbuilder-reducemean\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>reduceMean(<var>input</var>, <var>options</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -4675,13 +4591,13 @@
       ]
     },
     {
-      "name": "reduceMin(input, options)",
+      "name": "MLGraphBuilder/reduceMin(input, options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-reducemin",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"reduceMin(input, options)|reduceMin(input)\" id=\"dom-mlgraphbuilder-reducemin\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>reduceMin(<var>input</var>, <var>options</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-reduce-op\" id=\"ref-for-mlgraphbuilder-reduce-op⑥\"> create reduce operation</a> given \"reduceMin\", <var>input</var> and <var>options</var>.",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"reduceMin(input, options)|reduceMin(input)\" id=\"dom-mlgraphbuilder-reducemin\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>reduceMin(<var>input</var>, <var>options</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -4695,13 +4611,13 @@
       ]
     },
     {
-      "name": "reduceProduct(input, options)",
+      "name": "MLGraphBuilder/reduceProduct(input, options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-reduceproduct",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"reduceProduct(input, options)|reduceProduct(input)\" id=\"dom-mlgraphbuilder-reduceproduct\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>reduceProduct(<var>input</var>, <var>options</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-reduce-op\" id=\"ref-for-mlgraphbuilder-reduce-op⑦\"> create reduce operation</a> given \"reduceProduct\", <var>input</var>, <var>options</var>, and « <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float32\" id=\"ref-for-dom-mloperanddatatype-float32③⑧\">\"float32\"</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float16\" id=\"ref-for-dom-mloperanddatatype-float16③⑦\">\"float16\"</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-int32\" id=\"ref-for-dom-mloperanddatatype-int32⑥\">\"int32\"</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-uint32\" id=\"ref-for-dom-mloperanddatatype-uint32④\">\"uint32\"</a></code> ».",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"reduceProduct(input, options)|reduceProduct(input)\" id=\"dom-mlgraphbuilder-reduceproduct\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>reduceProduct(<var>input</var>, <var>options</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -4715,13 +4631,13 @@
       ]
     },
     {
-      "name": "reduceSum(input, options)",
+      "name": "MLGraphBuilder/reduceSum(input, options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-reducesum",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"reduceSum(input, options)|reduceSum(input)\" id=\"dom-mlgraphbuilder-reducesum\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>reduceSum(<var>input</var>, <var>options</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-reduce-op\" id=\"ref-for-mlgraphbuilder-reduce-op⑧\"> create reduce operation</a> given \"reduceSum\", <var>input</var>, <var>options</var>, and « <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float32\" id=\"ref-for-dom-mloperanddatatype-float32③⑨\">\"float32\"</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float16\" id=\"ref-for-dom-mloperanddatatype-float16③⑧\">\"float16\"</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-int32\" id=\"ref-for-dom-mloperanddatatype-int32⑦\">\"int32\"</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-uint32\" id=\"ref-for-dom-mloperanddatatype-uint32⑤\">\"uint32\"</a></code> ».",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"reduceSum(input, options)|reduceSum(input)\" id=\"dom-mlgraphbuilder-reducesum\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>reduceSum(<var>input</var>, <var>options</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -4735,13 +4651,13 @@
       ]
     },
     {
-      "name": "reduceSumSquare(input, options)",
+      "name": "MLGraphBuilder/reduceSumSquare(input, options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-reducesumsquare",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"reduceSumSquare(input, options)|reduceSumSquare(input)\" id=\"dom-mlgraphbuilder-reducesumsquare\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>reduceSumSquare(<var>input</var>, <var>options</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Let <var>output</var> be the result of running the <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mlgraphbuilder-reduce-op\" id=\"ref-for-mlgraphbuilder-reduce-op⑨\"> create reduce operation</a> given \"reduceSumSquare\", <var>input</var>, <var>options</var>, and « <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float32\" id=\"ref-for-dom-mloperanddatatype-float32④⓪\">\"float32\"</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-float16\" id=\"ref-for-dom-mloperanddatatype-float16③⑨\">\"float16\"</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-int32\" id=\"ref-for-dom-mloperanddatatype-int32⑧\">\"int32\"</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-uint32\" id=\"ref-for-dom-mloperanddatatype-uint32⑥\">\"uint32\"</a></code> ».",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"MLGraphBuilder\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"reduceSumSquare(input, options)|reduceSumSquare(input)\" id=\"dom-mlgraphbuilder-reducesumsquare\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>reduceSumSquare(<var>input</var>, <var>options</var>)</code></dfn> method steps are:",
           "rationale": "if",
           "steps": [
             {
@@ -4755,7 +4671,7 @@
       ]
     },
     {
-      "name": "relu(input)",
+      "name": "MLGraphBuilder/relu(input)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-relu",
       "rationale": ".algorithm",
       "steps": [
@@ -4792,7 +4708,7 @@
       ]
     },
     {
-      "name": "relu()",
+      "name": "MLGraphBuilder/relu()",
       "href": "https://webmachinelearning.github.io/webnn/#relu-noargs",
       "rationale": ".algorithm",
       "steps": [
@@ -4805,7 +4721,7 @@
       ]
     },
     {
-      "name": "check resample options",
+      "name": "MLGraphBuilder/check resample options",
       "href": "https://webmachinelearning.github.io/webnn/#mlgraphbuilder-check-resample-options",
       "rationale": ".algorithm",
       "steps": [
@@ -4830,7 +4746,7 @@
       ]
     },
     {
-      "name": "calculate resample output sizes",
+      "name": "MLGraphBuilder/calculate resample output sizes",
       "href": "https://webmachinelearning.github.io/webnn/#mlgraphbuilder-calculate-resample-output-sizes",
       "rationale": ".algorithm",
       "steps": [
@@ -4861,7 +4777,7 @@
       ]
     },
     {
-      "name": "resample2d(input, options)",
+      "name": "MLGraphBuilder/resample2d(input, options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-resample2d",
       "rationale": ".algorithm",
       "steps": [
@@ -4907,7 +4823,7 @@
       ]
     },
     {
-      "name": "reshape(input, newShape)",
+      "name": "MLGraphBuilder/reshape(input, newShape)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-reshape",
       "rationale": ".algorithm",
       "steps": [
@@ -4962,7 +4878,7 @@
       ]
     },
     {
-      "name": "sigmoid(input)",
+      "name": "MLGraphBuilder/sigmoid(input)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-sigmoid",
       "rationale": ".algorithm",
       "steps": [
@@ -4999,7 +4915,7 @@
       ]
     },
     {
-      "name": "sigmoid()",
+      "name": "MLGraphBuilder/sigmoid()",
       "href": "https://webmachinelearning.github.io/webnn/#sigmoid-noargs",
       "rationale": ".algorithm",
       "steps": [
@@ -5012,7 +4928,7 @@
       ]
     },
     {
-      "name": "slice(input, starts, sizes)",
+      "name": "MLGraphBuilder/slice(input, starts, sizes)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-slice",
       "rationale": ".algorithm",
       "steps": [
@@ -5030,7 +4946,7 @@
           "rationale": "if",
           "steps": [
             {
-              "html": "<p>If <var>sizes</var>[<var>index</var>] is 0, then <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#dfn-throw\" id=\"ref-for-dfn-throw③①②\">throw</a> a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#exceptiondef-typeerror\" id=\"ref-for-exceptiondef-typeerror②③⑨\">TypeError</a></code>.</p>\n        <p class=\"issue\" id=\"issue-b8ab142b\"><a class=\"self-link\" href=\"https://webmachinelearning.github.io/webnn/#issue-b8ab142b\"></a> If 0-size dimensions are allowed, revise these steps. <a href=\"https://github.com/webmachinelearning/webnn/issues/391\">[Issue #391]</a></p>"
+              "html": "<p>If <var>sizes</var>[<var>index</var>] is 0, then <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#dfn-throw\" id=\"ref-for-dfn-throw③①②\">throw</a> a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#exceptiondef-typeerror\" id=\"ref-for-exceptiondef-typeerror②③⑨\">TypeError</a></code>.</p>"
             },
             {
               "html": "<p>If <var>starts</var>[<var>index</var>] is greater than or equal to <var>input</var>’s <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mloperand-shape\" id=\"ref-for-mloperand-shape⑧④\">shape</a>[<var>index</var>], then <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#dfn-throw\" id=\"ref-for-dfn-throw③①③\">throw</a> a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#exceptiondef-typeerror\" id=\"ref-for-exceptiondef-typeerror②④⓪\">TypeError</a></code>.</p>"
@@ -5067,7 +4983,7 @@
       ]
     },
     {
-      "name": "softmax(input, axis)",
+      "name": "MLGraphBuilder/softmax(input, axis)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-softmax",
       "rationale": ".algorithm",
       "steps": [
@@ -5107,7 +5023,7 @@
       ]
     },
     {
-      "name": "softplus(input)",
+      "name": "MLGraphBuilder/softplus(input)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-softplus",
       "rationale": ".algorithm",
       "steps": [
@@ -5144,7 +5060,7 @@
       ]
     },
     {
-      "name": "softplus()",
+      "name": "MLGraphBuilde/softplus()",
       "href": "https://webmachinelearning.github.io/webnn/#softplus-noargs",
       "rationale": ".algorithm",
       "steps": [
@@ -5157,7 +5073,7 @@
       ]
     },
     {
-      "name": "softsign(input)",
+      "name": "MLGraphBuilder/softsign(input)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-softsign",
       "rationale": ".algorithm",
       "steps": [
@@ -5194,7 +5110,7 @@
       ]
     },
     {
-      "name": "softsign()",
+      "name": "MLGraphBuilder/softsign()",
       "href": "https://webmachinelearning.github.io/webnn/#softsign-noargs",
       "rationale": ".algorithm",
       "steps": [
@@ -5207,7 +5123,7 @@
       ]
     },
     {
-      "name": "split(input, splits, options)",
+      "name": "MLGraphBuilder/split(input, splits, options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-split",
       "rationale": ".algorithm",
       "steps": [
@@ -5237,7 +5153,7 @@
           "rationale": "if",
           "steps": [
             {
-              "html": "<p>If any of its elements is equal to 0, then <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#dfn-throw\" id=\"ref-for-dfn-throw③②⑤\">throw</a> a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#exceptiondef-typeerror\" id=\"ref-for-exceptiondef-typeerror②⑤②\">TypeError</a></code>.</p>\n        <p class=\"issue\" id=\"issue-578f9ca8\"><a class=\"self-link\" href=\"https://webmachinelearning.github.io/webnn/#issue-578f9ca8\"></a> If 0-size dimensions are allowed, revise the above step. <a href=\"https://github.com/webmachinelearning/webnn/issues/391\">[Issue #391]</a></p>"
+              "html": "<p>If any of its elements is equal to 0, then <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#dfn-throw\" id=\"ref-for-dfn-throw③②⑤\">throw</a> a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#exceptiondef-typeerror\" id=\"ref-for-exceptiondef-typeerror②⑤②\">TypeError</a></code>.</p>"
             },
             {
               "html": "<p>If the sum of its elements is not equal to <var>input</var>’s <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mloperand-shape\" id=\"ref-for-mloperand-shape⑧⑦\">shape</a>[<var>axis</var>], then <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#dfn-throw\" id=\"ref-for-dfn-throw③②⑥\">throw</a> a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#exceptiondef-typeerror\" id=\"ref-for-exceptiondef-typeerror②⑤③\">TypeError</a></code>.</p>"
@@ -5295,7 +5211,7 @@
       ]
     },
     {
-      "name": "tanh(input)",
+      "name": "MLGraphBuilder/tanh(input)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-tanh",
       "rationale": ".algorithm",
       "steps": [
@@ -5332,7 +5248,7 @@
       ]
     },
     {
-      "name": "tanh()",
+      "name": "MLGraphBuilder/tanh()",
       "href": "https://webmachinelearning.github.io/webnn/#tanh-noargs",
       "rationale": ".algorithm",
       "steps": [
@@ -5345,7 +5261,7 @@
       ]
     },
     {
-      "name": "transpose(input, options)",
+      "name": "MLGraphBuilder/transpose(input, options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-transpose",
       "rationale": ".algorithm",
       "steps": [
@@ -5394,7 +5310,7 @@
       ]
     },
     {
-      "name": "triangular(input, options)",
+      "name": "MLGraphBuilder/triangular(input, options)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-triangular",
       "rationale": ".algorithm",
       "steps": [
@@ -5428,7 +5344,7 @@
       ]
     },
     {
-      "name": "where(condition, input, other)",
+      "name": "MLGraphBuilder/where(condition, trueValue, falseValue)",
       "href": "https://webmachinelearning.github.io/webnn/#dom-mlgraphbuilder-where",
       "rationale": ".algorithm",
       "steps": [
@@ -5436,16 +5352,16 @@
           "html": "<p>If <var>condition</var>’s <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mloperand-datatype\" id=\"ref-for-mloperand-datatype①③⑧\">dataType</a> is not equal to <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddatatype-uint8\" id=\"ref-for-dom-mloperanddatatype-uint8②\">\"uint8\"</a></code>, then <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#dfn-throw\" id=\"ref-for-dfn-throw③③③\">throw</a> a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#exceptiondef-typeerror\" id=\"ref-for-exceptiondef-typeerror②⑥⓪\">TypeError</a></code>.</p>"
         },
         {
-          "html": "<p>If <var>input</var>’s <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mloperand-datatype\" id=\"ref-for-mloperand-datatype①③⑨\">dataType</a> is not equal to <var>other</var>’s <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mloperand-datatype\" id=\"ref-for-mloperand-datatype①④⓪\">dataType</a>, then <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#dfn-throw\" id=\"ref-for-dfn-throw③③④\">throw</a> a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#exceptiondef-typeerror\" id=\"ref-for-exceptiondef-typeerror②⑥①\">TypeError</a></code>.</p>"
+          "html": "<p>If <var>trueValue</var>’s <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mloperand-datatype\" id=\"ref-for-mloperand-datatype①③⑨\">dataType</a> is not equal to <var>falseValue</var>’s <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mloperand-datatype\" id=\"ref-for-mloperand-datatype①④⓪\">dataType</a>, then <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#dfn-throw\" id=\"ref-for-dfn-throw③③④\">throw</a> a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#exceptiondef-typeerror\" id=\"ref-for-exceptiondef-typeerror②⑥①\">TypeError</a></code>.</p>"
         },
         {
           "html": "<p>Let <var>descriptor</var> be a new <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dictdef-mloperanddescriptor\" id=\"ref-for-dictdef-mloperanddescriptor④③\">MLOperandDescriptor</a></code>.</p>"
         },
         {
-          "html": "<p>Set <var>descriptor</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddescriptor-datatype\" id=\"ref-for-dom-mloperanddescriptor-datatype③①\">dataType</a></code> to <var>input</var>’s <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mloperand-datatype\" id=\"ref-for-mloperand-datatype①④①\">dataType</a>.</p>"
+          "html": "<p>Set <var>descriptor</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddescriptor-datatype\" id=\"ref-for-dom-mloperanddescriptor-datatype③①\">dataType</a></code> to <var>trueValue</var>’s <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mloperand-datatype\" id=\"ref-for-mloperand-datatype①④①\">dataType</a>.</p>"
         },
         {
-          "html": "Set <var>descriptor</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddescriptor-dimensions\" id=\"ref-for-dom-mloperanddescriptor-dimensions③④\">dimensions</a></code> to the result of <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#bidirectionally-broadcasting-the-shapes\" id=\"ref-for-bidirectionally-broadcasting-the-shapes③\">bidirectionally broadcasting the shapes</a> <var>input</var>’s <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mloperand-shape\" id=\"ref-for-mloperand-shape⑨①\">shape</a> and <var>other</var>’s <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mloperand-shape\" id=\"ref-for-mloperand-shape⑨②\">shape</a>.",
+          "html": "Set <var>descriptor</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperanddescriptor-dimensions\" id=\"ref-for-dom-mloperanddescriptor-dimensions③④\">dimensions</a></code> to the result of <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#bidirectionally-broadcasting-the-shapes\" id=\"ref-for-bidirectionally-broadcasting-the-shapes③\">bidirectionally broadcasting the shapes</a> <var>trueValue</var>’s <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mloperand-shape\" id=\"ref-for-mloperand-shape⑨①\">shape</a> and <var>falseValue</var>’s <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#mloperand-shape\" id=\"ref-for-mloperand-shape⑨②\">shape</a>.",
           "rationale": "if",
           "steps": [
             {
@@ -5464,13 +5380,13 @@
               "html": "<p>Let <var>output</var> be the result of <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#create-an-mloperand\" id=\"ref-for-create-an-mloperand②⑧\">creating an MLOperand</a> given <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\" id=\"ref-for-this①⓪④\">this</a> and <var>descriptor</var>.</p>"
             },
             {
-              "html": "<p>Let <var>operator</var> be an <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#operators\" id=\"ref-for-operators⑤②\">operator</a> for the \"where\" operation, given <var>condition</var>, <var>input</var> and <var>other</var>.</p>"
+              "html": "<p>Let <var>operator</var> be an <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#operators\" id=\"ref-for-operators⑤②\">operator</a> for the \"where\" operation, given <var>condition</var>, <var>trueValue</var> and <var>falseValue</var>.</p>"
             },
             {
               "html": "<p>Set <var>output</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webmachinelearning.github.io/webnn/#dom-mloperand-operator-slot\" id=\"ref-for-dom-mloperand-operator-slot⑤①\">[[operator]]</a></code> to <var>operator</var>.</p>"
             },
             {
-              "html": "<p>Set <var>operator</var>’s <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#operator-input\" id=\"ref-for-operator-input⑥⑥\">inputs</a> to <var>condition</var>, <var>input</var> and <var>other</var>.</p>"
+              "html": "<p>Set <var>operator</var>’s <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#operator-input\" id=\"ref-for-operator-input⑥⑥\">inputs</a> to <var>condition</var>, <var>trueValue</var> and <var>falseValue</var>.</p>"
             },
             {
               "html": "<p>Set <var>operator</var>’s <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#operator-output\" id=\"ref-for-operator-output④②\">output</a> to <var>output</var>.</p>"
@@ -5594,67 +5510,35 @@
               "steps": [
                 {
                   "case": "\"float32\"",
-                  "steps": [
-                    {
-                      "html": "<p>Return <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#converttofloat\" id=\"ref-for-converttofloat\">ConvertToFloat</a>(<var>x</var>, 32).</p>"
-                    }
-                  ]
+                  "html": "<p>Return <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#converttofloat\" id=\"ref-for-converttofloat\">ConvertToFloat</a>(<var>x</var>, 32).</p>"
                 },
                 {
                   "case": "\"float16\"",
-                  "steps": [
-                    {
-                      "html": "<p>Return <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#converttofloat\" id=\"ref-for-converttofloat①\">ConvertToFloat</a>(<var>x</var>, 16).</p>"
-                    }
-                  ]
+                  "html": "<p>Return <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#converttofloat\" id=\"ref-for-converttofloat①\">ConvertToFloat</a>(<var>x</var>, 16).</p>"
                 },
                 {
                   "case": "\"int64\"",
-                  "steps": [
-                    {
-                      "html": "<p>Return <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#converttoint\" id=\"ref-for-converttoint\">ConvertToInt</a>(<var>x</var>, 64, \"signed\").</p>"
-                    }
-                  ]
+                  "html": "<p>Return <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#converttoint\" id=\"ref-for-converttoint\">ConvertToInt</a>(<var>x</var>, 64, \"signed\").</p>"
                 },
                 {
                   "case": "\"uint64\"",
-                  "steps": [
-                    {
-                      "html": "<p>Return <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#converttoint\" id=\"ref-for-converttoint①\">ConvertToInt</a>(<var>x</var>, 64, \"unsigned\").</p>"
-                    }
-                  ]
+                  "html": "<p>Return <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#converttoint\" id=\"ref-for-converttoint①\">ConvertToInt</a>(<var>x</var>, 64, \"unsigned\").</p>"
                 },
                 {
                   "case": "\"int32\"",
-                  "steps": [
-                    {
-                      "html": "<p>Return <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#converttoint\" id=\"ref-for-converttoint②\">ConvertToInt</a>(<var>x</var>, 32, \"signed\").</p>"
-                    }
-                  ]
+                  "html": "<p>Return <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#converttoint\" id=\"ref-for-converttoint②\">ConvertToInt</a>(<var>x</var>, 32, \"signed\").</p>"
                 },
                 {
                   "case": "\"uint32\"",
-                  "steps": [
-                    {
-                      "html": "<p>Return <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#converttoint\" id=\"ref-for-converttoint③\">ConvertToInt</a>(<var>x</var>, 32, \"signed\").</p>"
-                    }
-                  ]
+                  "html": "<p>Return <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#converttoint\" id=\"ref-for-converttoint③\">ConvertToInt</a>(<var>x</var>, 32, \"signed\").</p>"
                 },
                 {
                   "case": "\"int8\"",
-                  "steps": [
-                    {
-                      "html": "<p>Return <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#converttoint\" id=\"ref-for-converttoint④\">ConvertToInt</a>(<var>x</var>, 8, \"signed\").</p>"
-                    }
-                  ]
+                  "html": "<p>Return <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#converttoint\" id=\"ref-for-converttoint④\">ConvertToInt</a>(<var>x</var>, 8, \"signed\").</p>"
                 },
                 {
                   "case": "\"uint8\"",
-                  "steps": [
-                    {
-                      "html": "<p>Return <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#converttoint\" id=\"ref-for-converttoint⑤\">ConvertToInt</a>(<var>x</var>, 8, \"unsigned\").</p>"
-                    }
-                  ]
+                  "html": "<p>Return <a data-link-type=\"dfn\" href=\"https://webmachinelearning.github.io/webnn/#converttoint\" id=\"ref-for-converttoint⑤\">ConvertToInt</a>(<var>x</var>, 8, \"unsigned\").</p>"
                 }
               ]
             }
@@ -5672,7 +5556,7 @@
           "html": "<p>If <var>x</var> is NaN, then return NaN.</p>"
         },
         {
-          "html": "Switch on <var>bitLength</var>:",
+          "html": "The <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"converttofloat\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">ConvertToFloat</dfn>(<var>x</var>, <var>bitLength</var>) steps are:",
           "rationale": ".switch",
           "steps": [
             {
@@ -5680,41 +5564,33 @@
               "steps": [
                 {
                   "case": "32",
+                  "html": "The <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"converttofloat\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">ConvertToFloat</dfn>(<var>x</var>, <var>bitLength</var>) steps are:",
+                  "rationale": "let",
                   "steps": [
                     {
-                      "html": "<ol>\n          <li data-md=\"\">\n           <p>Let <var>upperBound</var> be 2<sup>128</sup>.</p>\n          </li><li data-md=\"\">\n           <p>Let <var>lowerBound</var> be -2<sup>128</sup>.</p>\n          </li><li data-md=\"\">\n           <p>Let <var>S</var> be the set of <a data-link-type=\"biblio\" href=\"https://webmachinelearning.github.io/webnn/#biblio-ieee-754-2019\" title=\"IEEE Standard for Floating-Point Arithmetic\">[IEEE-754-2019]</a> binary32 floating point values except -0, but with the special values <var>upperBound</var> and <var>lowerBound</var> added.</p>\n         </li></ol>",
-                      "rationale": "let",
-                      "steps": [
-                        {
-                          "html": "<p>Let <var>upperBound</var> be 2<sup>128</sup>.</p>"
-                        },
-                        {
-                          "html": "<p>Let <var>lowerBound</var> be -2<sup>128</sup>.</p>"
-                        },
-                        {
-                          "html": "<p>Let <var>S</var> be the set of <a data-link-type=\"biblio\" href=\"https://webmachinelearning.github.io/webnn/#biblio-ieee-754-2019\" title=\"IEEE Standard for Floating-Point Arithmetic\">[IEEE-754-2019]</a> binary32 floating point values except -0, but with the special values <var>upperBound</var> and <var>lowerBound</var> added.</p>"
-                        }
-                      ]
+                      "html": "<p>Let <var>upperBound</var> be 2<sup>128</sup>.</p>"
+                    },
+                    {
+                      "html": "<p>Let <var>lowerBound</var> be -2<sup>128</sup>.</p>"
+                    },
+                    {
+                      "html": "<p>Let <var>S</var> be the set of <a data-link-type=\"biblio\" href=\"https://webmachinelearning.github.io/webnn/#biblio-ieee-754-2019\" title=\"IEEE Standard for Floating-Point Arithmetic\">[IEEE-754-2019]</a> binary32 floating point values except -0, but with the special values <var>upperBound</var> and <var>lowerBound</var> added.</p>"
                     }
                   ]
                 },
                 {
                   "case": "16",
+                  "html": "The <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"converttofloat\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">ConvertToFloat</dfn>(<var>x</var>, <var>bitLength</var>) steps are:",
+                  "rationale": "let",
                   "steps": [
                     {
-                      "html": "<ol>\n          <li data-md=\"\">\n           <p>Let <var>upperBound</var> be 2<sup>16</sup>.</p>\n          </li><li data-md=\"\">\n           <p>Let <var>lowerBound</var> be -2<sup>16</sup>.</p>\n          </li><li data-md=\"\">\n           <p>Let <var>S</var> be the set of <a data-link-type=\"biblio\" href=\"https://webmachinelearning.github.io/webnn/#biblio-ieee-754-2019\" title=\"IEEE Standard for Floating-Point Arithmetic\">[IEEE-754-2019]</a> binary16 floating point values except -0, but with the special values <var>upperBound</var> and <var>lowerBound</var> added.</p>\n         </li></ol>",
-                      "rationale": "let",
-                      "steps": [
-                        {
-                          "html": "<p>Let <var>upperBound</var> be 2<sup>16</sup>.</p>"
-                        },
-                        {
-                          "html": "<p>Let <var>lowerBound</var> be -2<sup>16</sup>.</p>"
-                        },
-                        {
-                          "html": "<p>Let <var>S</var> be the set of <a data-link-type=\"biblio\" href=\"https://webmachinelearning.github.io/webnn/#biblio-ieee-754-2019\" title=\"IEEE Standard for Floating-Point Arithmetic\">[IEEE-754-2019]</a> binary16 floating point values except -0, but with the special values <var>upperBound</var> and <var>lowerBound</var> added.</p>"
-                        }
-                      ]
+                      "html": "<p>Let <var>upperBound</var> be 2<sup>16</sup>.</p>"
+                    },
+                    {
+                      "html": "<p>Let <var>lowerBound</var> be -2<sup>16</sup>.</p>"
+                    },
+                    {
+                      "html": "<p>Let <var>S</var> be the set of <a data-link-type=\"biblio\" href=\"https://webmachinelearning.github.io/webnn/#biblio-ieee-754-2019\" title=\"IEEE Standard for Floating-Point Arithmetic\">[IEEE-754-2019]</a> binary16 floating point values except -0, but with the special values <var>upperBound</var> and <var>lowerBound</var> added.</p>"
                     }
                   ]
                 }
@@ -5746,7 +5622,7 @@
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "If <var>signedness</var> is \"unsigned\", then:",
+          "html": "The <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"converttoint\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">ConvertToInt</dfn>(<var>x</var>, <var>bitLength</var>, <var>signedness</var>) steps are:",
           "rationale": "let",
           "steps": [
             {
@@ -5758,7 +5634,7 @@
           ]
         },
         {
-          "html": "Otherwise:",
+          "html": "The <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"converttoint\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">ConvertToInt</dfn>(<var>x</var>, <var>bitLength</var>, <var>signedness</var>) steps are:",
           "rationale": "let",
           "steps": [
             {

@@ -22,19 +22,11 @@
               "steps": [
                 {
                   "case": "If the source member of options is present and not null,",
-                  "steps": [
-                    {
-                      "html": "<p>The <code>source</code> member of <var>options</var>.</p>"
-                    }
-                  ]
+                  "html": "<p>The <code>source</code> member of <var>options</var>.</p>"
                 },
                 {
                   "case": "Otherwise,",
-                  "steps": [
-                    {
-                      "html": "<p>The <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/cssom-view-1/#dom-document-scrollingelement\" id=\"ref-for-dom-document-scrollingelement\">scrollingElement</a></code> of the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://dom.spec.whatwg.org/#document\" id=\"ref-for-document\">Document</a></code> <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/window-object.html#concept-document-window\" id=\"ref-for-concept-document-window\">associated</a> with the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/nav-history-apis.html#window\" id=\"ref-for-window\">Window</a></code> that is the <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#current-global-object\" id=\"ref-for-current-global-object\">current global object</a>.</p>"
-                    }
-                  ]
+                  "html": "<p>The <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/cssom-view-1/#dom-document-scrollingelement\" id=\"ref-for-dom-document-scrollingelement\">scrollingElement</a></code> of the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://dom.spec.whatwg.org/#document\" id=\"ref-for-document\">Document</a></code> <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/window-object.html#concept-document-window\" id=\"ref-for-concept-document-window\">associated</a> with the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/nav-history-apis.html#window\" id=\"ref-for-window\">Window</a></code> that is the <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#current-global-object\" id=\"ref-for-current-global-object\">current global object</a>.</p>"
                 }
               ]
             }

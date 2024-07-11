@@ -32,6 +32,12 @@
       ]
     },
     {
+      "name": "generate baselines",
+      "href": "https://drafts.csswg.org/css-align-3/#generate-baselines",
+      "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-export=\"\" data-local-lt=\"generate|generated\" id=\"generate-baselines\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">generate baselines</dfn> for a box from a single baseline,\n\tuse the baseline table from the font settings and <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-fonts-4/#first-available-font\" id=\"ref-for-first-available-font①\">first available font</a> of that box,\n\tand align that baseline set to the given single baseline.",
+      "rationale": "To <dfn>"
+    },
+    {
       "html": "Given a set of <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-align-3/#alignment-subject\" id=\"ref-for-alignment-subject⑦③\">alignment subjects</a> and their baselines\n\tthat all belong to a single <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-align-3/#baseline-sharing-group\" id=\"ref-for-baseline-sharing-group①⓪\">baseline-sharing group</a>,\n\tthe <span id=\"ref-for-alignment-subject⑦④\">alignment subjects</span> are baseline-aligned as follows:",
       "rationale": "generate",
       "steps": [

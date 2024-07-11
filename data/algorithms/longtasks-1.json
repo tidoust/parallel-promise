@@ -43,7 +43,7 @@
     },
     {
       "name": "Report long tasks",
-      "html": "<a class=\"self-link\" href=\"https://w3c.github.io/longtasks/#issue-63aa4f38\"></a> there is some ongoing discussion regarding the scope of which <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://dom.spec.whatwg.org/#document\" id=\"ref-for-document\">Documents</a></code> gain visibility over which long tasks, so this logic could change in the future. <a href=\"https://github.com/w3c/longtasks/issues/75\">[Issue #75]</a>",
+      "html": "Given <var>start time</var>, <var>end time</var>, <var>top-level browsing contexts</var>, and <var>task</var>, perform the following algorithm:",
       "rationale": "for",
       "steps": [
         {

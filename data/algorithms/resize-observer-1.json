@@ -268,7 +268,7 @@
                   "html": "<p>Add <var>entry</var> to <var>entries</var>.</p>"
                 },
                 {
-                  "html": "<p>Set <var>observation</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobservation-lastreportedsizes\" id=\"ref-for-dom-resizeobservation-lastreportedsizes③\">lastReportedSizes</a></code> to matching <var>entry</var> sizes.</p>\n         <ol>\n          <li data-md=\"\">\n           <p>Matching sizes are <var>entry</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserverentry-borderboxsize\" id=\"ref-for-dom-resizeobserverentry-borderboxsize②\">borderBoxSize</a></code> if <var>observation</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobservation-observedbox\" id=\"ref-for-dom-resizeobservation-observedbox②\">observedBox</a></code> is \"border-box\"</p>\n          </li><li data-md=\"\">\n           <p>Matching sizes are <var>entry</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserverentry-contentboxsize\" id=\"ref-for-dom-resizeobserverentry-contentboxsize③\">contentBoxSize</a></code> if <var>observation</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobservation-observedbox\" id=\"ref-for-dom-resizeobservation-observedbox③\">observedBox</a></code> is \"content-box\"</p>\n          </li><li data-md=\"\">\n           <p>Matching sizes are <var>entry</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserverentry-devicepixelcontentboxsize\" id=\"ref-for-dom-resizeobserverentry-devicepixelcontentboxsize②\">devicePixelContentBoxSize</a></code> if <var>observation</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobservation-observedbox\" id=\"ref-for-dom-resizeobservation-observedbox④\">observedBox</a></code> is \"device-pixel-content-box\"</p>\n         </li></ol>",
+                  "html": "<p>Set <var>observation</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobservation-lastreportedsizes\" id=\"ref-for-dom-resizeobservation-lastreportedsizes③\">lastReportedSizes</a></code> to matching <var>entry</var> sizes.</p>",
                   "ignored": [
                     "Matching sizes are entry.borderBoxSize if observation.observedBox is \"border-box\" Matching sizes are entry.contentBoxSize if observation.observedBox is \"content-box\" Matching sizes are entry.devicePixelContentBoxSize if observation.observedBox is \"device-pixel-content-box\""
                   ]
@@ -343,52 +343,40 @@
               "steps": [
                 {
                   "case": "If observedBox is \"border-box\"",
+                  "html": "",
+                  "rationale": "set",
                   "steps": [
                     {
-                      "html": "<ol>\n        <li data-md=\"\">\n         <p>Set <var>computedSize</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserversize-inlinesize\" id=\"ref-for-dom-resizeobserversize-inlinesize\">inlineSize</a></code> attribute to <var>target</var>’s <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/SVG2/coords.html#BoundingBoxes\" id=\"ref-for-BoundingBoxes③\">bounding box</a> inline length.</p>\n        </li><li data-md=\"\">\n         <p>Set <var>computedSize</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserversize-blocksize\" id=\"ref-for-dom-resizeobserversize-blocksize\">blockSize</a></code> attribute to <var>target</var>’s <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/SVG2/coords.html#BoundingBoxes\" id=\"ref-for-BoundingBoxes④\">bounding box</a> block length.</p>\n       </li></ol>",
-                      "rationale": "set",
-                      "steps": [
-                        {
-                          "html": "<p>Set <var>computedSize</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserversize-inlinesize\" id=\"ref-for-dom-resizeobserversize-inlinesize\">inlineSize</a></code> attribute to <var>target</var>’s <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/SVG2/coords.html#BoundingBoxes\" id=\"ref-for-BoundingBoxes③\">bounding box</a> inline length.</p>"
-                        },
-                        {
-                          "html": "<p>Set <var>computedSize</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserversize-blocksize\" id=\"ref-for-dom-resizeobserversize-blocksize\">blockSize</a></code> attribute to <var>target</var>’s <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/SVG2/coords.html#BoundingBoxes\" id=\"ref-for-BoundingBoxes④\">bounding box</a> block length.</p>"
-                        }
-                      ]
+                      "html": "<p>Set <var>computedSize</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserversize-inlinesize\" id=\"ref-for-dom-resizeobserversize-inlinesize\">inlineSize</a></code> attribute to <var>target</var>’s <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/SVG2/coords.html#BoundingBoxes\" id=\"ref-for-BoundingBoxes③\">bounding box</a> inline length.</p>"
+                    },
+                    {
+                      "html": "<p>Set <var>computedSize</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserversize-blocksize\" id=\"ref-for-dom-resizeobserversize-blocksize\">blockSize</a></code> attribute to <var>target</var>’s <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/SVG2/coords.html#BoundingBoxes\" id=\"ref-for-BoundingBoxes④\">bounding box</a> block length.</p>"
                     }
                   ]
                 },
                 {
                   "case": "If observedBox is \"content-box\"",
+                  "html": "",
+                  "rationale": "set",
                   "steps": [
                     {
-                      "html": "<ol>\n        <li data-md=\"\">\n         <p>Set <var>computedSize</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserversize-inlinesize\" id=\"ref-for-dom-resizeobserversize-inlinesize\">inlineSize</a></code> attribute to <var>target</var>’s <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/SVG2/coords.html#BoundingBoxes\" id=\"ref-for-BoundingBoxes③\">bounding box</a> inline length.</p>\n        </li><li data-md=\"\">\n         <p>Set <var>computedSize</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserversize-blocksize\" id=\"ref-for-dom-resizeobserversize-blocksize\">blockSize</a></code> attribute to <var>target</var>’s <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/SVG2/coords.html#BoundingBoxes\" id=\"ref-for-BoundingBoxes④\">bounding box</a> block length.</p>\n       </li></ol>",
-                      "rationale": "set",
-                      "steps": [
-                        {
-                          "html": "<p>Set <var>computedSize</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserversize-inlinesize\" id=\"ref-for-dom-resizeobserversize-inlinesize\">inlineSize</a></code> attribute to <var>target</var>’s <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/SVG2/coords.html#BoundingBoxes\" id=\"ref-for-BoundingBoxes③\">bounding box</a> inline length.</p>"
-                        },
-                        {
-                          "html": "<p>Set <var>computedSize</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserversize-blocksize\" id=\"ref-for-dom-resizeobserversize-blocksize\">blockSize</a></code> attribute to <var>target</var>’s <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/SVG2/coords.html#BoundingBoxes\" id=\"ref-for-BoundingBoxes④\">bounding box</a> block length.</p>"
-                        }
-                      ]
+                      "html": "<p>Set <var>computedSize</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserversize-inlinesize\" id=\"ref-for-dom-resizeobserversize-inlinesize\">inlineSize</a></code> attribute to <var>target</var>’s <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/SVG2/coords.html#BoundingBoxes\" id=\"ref-for-BoundingBoxes③\">bounding box</a> inline length.</p>"
+                    },
+                    {
+                      "html": "<p>Set <var>computedSize</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserversize-blocksize\" id=\"ref-for-dom-resizeobserversize-blocksize\">blockSize</a></code> attribute to <var>target</var>’s <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/SVG2/coords.html#BoundingBoxes\" id=\"ref-for-BoundingBoxes④\">bounding box</a> block length.</p>"
                     }
                   ]
                 },
                 {
                   "case": "If observedBox is \"device-pixel-content-box\"",
+                  "html": "",
+                  "rationale": "set",
                   "steps": [
                     {
-                      "html": "<ol>\n        <li data-md=\"\">\n         <p>Set <var>computedSize</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserversize-inlinesize\" id=\"ref-for-dom-resizeobserversize-inlinesize①\">inlineSize</a></code> attribute to <var>target</var>’s <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/SVG2/coords.html#BoundingBoxes\" id=\"ref-for-BoundingBoxes⑤\">bounding box</a> inline length, in integral device pixels.</p>\n        </li><li data-md=\"\">\n         <p>Set <var>computedSize</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserversize-blocksize\" id=\"ref-for-dom-resizeobserversize-blocksize①\">blockSize</a></code> attribute to <var>target</var>’s <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/SVG2/coords.html#BoundingBoxes\" id=\"ref-for-BoundingBoxes⑥\">bounding box</a> block length, in integral device pixels.</p>\n       </li></ol>",
-                      "rationale": "set",
-                      "steps": [
-                        {
-                          "html": "<p>Set <var>computedSize</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserversize-inlinesize\" id=\"ref-for-dom-resizeobserversize-inlinesize①\">inlineSize</a></code> attribute to <var>target</var>’s <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/SVG2/coords.html#BoundingBoxes\" id=\"ref-for-BoundingBoxes⑤\">bounding box</a> inline length, in integral device pixels.</p>"
-                        },
-                        {
-                          "html": "<p>Set <var>computedSize</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserversize-blocksize\" id=\"ref-for-dom-resizeobserversize-blocksize①\">blockSize</a></code> attribute to <var>target</var>’s <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/SVG2/coords.html#BoundingBoxes\" id=\"ref-for-BoundingBoxes⑥\">bounding box</a> block length, in integral device pixels.</p>"
-                        }
-                      ]
+                      "html": "<p>Set <var>computedSize</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserversize-inlinesize\" id=\"ref-for-dom-resizeobserversize-inlinesize①\">inlineSize</a></code> attribute to <var>target</var>’s <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/SVG2/coords.html#BoundingBoxes\" id=\"ref-for-BoundingBoxes⑤\">bounding box</a> inline length, in integral device pixels.</p>"
+                    },
+                    {
+                      "html": "<p>Set <var>computedSize</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserversize-blocksize\" id=\"ref-for-dom-resizeobserversize-blocksize①\">blockSize</a></code> attribute to <var>target</var>’s <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/SVG2/coords.html#BoundingBoxes\" id=\"ref-for-BoundingBoxes⑥\">bounding box</a> block length, in integral device pixels.</p>"
                     }
                   ]
                 }
@@ -405,52 +393,40 @@
               "steps": [
                 {
                   "case": "If observedBox is \"border-box\"",
+                  "html": "",
+                  "rationale": "set",
                   "steps": [
                     {
-                      "html": "<ol>\n        <li data-md=\"\">\n         <p>Set <var>computedSize</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserversize-inlinesize\" id=\"ref-for-dom-resizeobserversize-inlinesize②\">inlineSize</a></code> attribute to <var>target</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-box-4/#border-area\" id=\"ref-for-border-area\">border area</a> inline length.</p>\n        </li><li data-md=\"\">\n         <p>Set <var>computedSize</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserversize-blocksize\" id=\"ref-for-dom-resizeobserversize-blocksize②\">blockSize</a></code> attribute to <var>target</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-box-4/#border-area\" id=\"ref-for-border-area①\">border area</a> block length.</p>\n       </li></ol>",
-                      "rationale": "set",
-                      "steps": [
-                        {
-                          "html": "<p>Set <var>computedSize</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserversize-inlinesize\" id=\"ref-for-dom-resizeobserversize-inlinesize②\">inlineSize</a></code> attribute to <var>target</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-box-4/#border-area\" id=\"ref-for-border-area\">border area</a> inline length.</p>"
-                        },
-                        {
-                          "html": "<p>Set <var>computedSize</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserversize-blocksize\" id=\"ref-for-dom-resizeobserversize-blocksize②\">blockSize</a></code> attribute to <var>target</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-box-4/#border-area\" id=\"ref-for-border-area①\">border area</a> block length.</p>"
-                        }
-                      ]
+                      "html": "<p>Set <var>computedSize</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserversize-inlinesize\" id=\"ref-for-dom-resizeobserversize-inlinesize②\">inlineSize</a></code> attribute to <var>target</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-box-4/#border-area\" id=\"ref-for-border-area\">border area</a> inline length.</p>"
+                    },
+                    {
+                      "html": "<p>Set <var>computedSize</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserversize-blocksize\" id=\"ref-for-dom-resizeobserversize-blocksize②\">blockSize</a></code> attribute to <var>target</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-box-4/#border-area\" id=\"ref-for-border-area①\">border area</a> block length.</p>"
                     }
                   ]
                 },
                 {
                   "case": "If observedBox is \"content-box\"",
+                  "html": "",
+                  "rationale": "set",
                   "steps": [
                     {
-                      "html": "<ol>\n        <li data-md=\"\">\n         <p>Set <var>computedSize</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserversize-inlinesize\" id=\"ref-for-dom-resizeobserversize-inlinesize③\">inlineSize</a></code> attribute to <var>target</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-box-3/#content-area\" id=\"ref-for-content-area②\">content area</a> inline length.</p>\n        </li><li data-md=\"\">\n         <p>Set <var>computedSize</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserversize-blocksize\" id=\"ref-for-dom-resizeobserversize-blocksize③\">blockSize</a></code> attribute to <var>target</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-box-3/#content-area\" id=\"ref-for-content-area③\">content area</a> block length.</p>\n       </li></ol>",
-                      "rationale": "set",
-                      "steps": [
-                        {
-                          "html": "<p>Set <var>computedSize</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserversize-inlinesize\" id=\"ref-for-dom-resizeobserversize-inlinesize③\">inlineSize</a></code> attribute to <var>target</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-box-3/#content-area\" id=\"ref-for-content-area②\">content area</a> inline length.</p>"
-                        },
-                        {
-                          "html": "<p>Set <var>computedSize</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserversize-blocksize\" id=\"ref-for-dom-resizeobserversize-blocksize③\">blockSize</a></code> attribute to <var>target</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-box-3/#content-area\" id=\"ref-for-content-area③\">content area</a> block length.</p>"
-                        }
-                      ]
+                      "html": "<p>Set <var>computedSize</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserversize-inlinesize\" id=\"ref-for-dom-resizeobserversize-inlinesize③\">inlineSize</a></code> attribute to <var>target</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-box-3/#content-area\" id=\"ref-for-content-area②\">content area</a> inline length.</p>"
+                    },
+                    {
+                      "html": "<p>Set <var>computedSize</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserversize-blocksize\" id=\"ref-for-dom-resizeobserversize-blocksize③\">blockSize</a></code> attribute to <var>target</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-box-3/#content-area\" id=\"ref-for-content-area③\">content area</a> block length.</p>"
                     }
                   ]
                 },
                 {
                   "case": "If observedBox is \"device-pixel-content-box\"",
+                  "html": "",
+                  "rationale": "set",
                   "steps": [
                     {
-                      "html": "<ol>\n        <li data-md=\"\">\n         <p>Set <var>computedSize</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserversize-inlinesize\" id=\"ref-for-dom-resizeobserversize-inlinesize④\">inlineSize</a></code> attribute to <var>target</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-box-3/#content-area\" id=\"ref-for-content-area④\">content area</a> inline length, in integral device pixels.</p>\n        </li><li data-md=\"\">\n         <p>Set <var>computedSize</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserversize-blocksize\" id=\"ref-for-dom-resizeobserversize-blocksize④\">blockSize</a></code> attribute to <var>target</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-box-3/#content-area\" id=\"ref-for-content-area⑤\">content area</a> block length, in integral device pixels.</p>\n       </li></ol>",
-                      "rationale": "set",
-                      "steps": [
-                        {
-                          "html": "<p>Set <var>computedSize</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserversize-inlinesize\" id=\"ref-for-dom-resizeobserversize-inlinesize④\">inlineSize</a></code> attribute to <var>target</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-box-3/#content-area\" id=\"ref-for-content-area④\">content area</a> inline length, in integral device pixels.</p>"
-                        },
-                        {
-                          "html": "<p>Set <var>computedSize</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserversize-blocksize\" id=\"ref-for-dom-resizeobserversize-blocksize④\">blockSize</a></code> attribute to <var>target</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-box-3/#content-area\" id=\"ref-for-content-area⑤\">content area</a> block length, in integral device pixels.</p>"
-                        }
-                      ]
+                      "html": "<p>Set <var>computedSize</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserversize-inlinesize\" id=\"ref-for-dom-resizeobserversize-inlinesize④\">inlineSize</a></code> attribute to <var>target</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-box-3/#content-area\" id=\"ref-for-content-area④\">content area</a> inline length, in integral device pixels.</p>"
+                    },
+                    {
+                      "html": "<p>Set <var>computedSize</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/resize-observer-1/#dom-resizeobserversize-blocksize\" id=\"ref-for-dom-resizeobserversize-blocksize④\">blockSize</a></code> attribute to <var>target</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-box-3/#content-area\" id=\"ref-for-content-area⑤\">content area</a> block length, in integral device pixels.</p>"
                     }
                   ]
                 }

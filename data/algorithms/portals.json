@@ -108,7 +108,7 @@
                   "html": "<p>If <var>promise</var> is given, <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-global-task\" id=\"ref-for-queue-a-global-task②\">queue a global task</a> on the <a data-link-type=\"dfn\" href=\"https://wicg.github.io/portals/#portal-task-source\" id=\"ref-for-portal-task-source②\">portal task source</a> given <var>predecessorBrowsingContext</var>’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsers.html#active-window\" id=\"ref-for-active-window①\">active window</a> to resolve <var>promise</var> with undefined.</p>"
                 },
                 {
-                  "html": "<p><a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/window-object.html#close-a-browsing-context\" id=\"ref-for-close-a-browsing-context②\">Close</a> <var>predecessorBrowsingContext</var>.</p>\n           <p>The user agent <em>should not</em> ask the user for confirmation during the <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsing-the-web.html#prompt-to-unload-a-document\" id=\"ref-for-prompt-to-unload-a-document\">prompt to unload</a> step (and so the browsing context should be <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/window-object.html#a-browsing-context-is-discarded\" id=\"ref-for-a-browsing-context-is-discarded②\">discarded</a>).</p>\n           \n           <div class=\"issue\" id=\"issue-c722a2b5\"><a class=\"self-link\" href=\"https://wicg.github.io/portals/#issue-c722a2b5\"></a> Determine how to treat unload/beforeunload handlers. See <a href=\"https://github.com/WICG/portals/issues/225\">issue #225</a> for discussion. </div>"
+                  "html": "<p><a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/window-object.html#close-a-browsing-context\" id=\"ref-for-close-a-browsing-context②\">Close</a> <var>predecessorBrowsingContext</var>.</p>\n           <p>The user agent <em>should not</em> ask the user for confirmation during the <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsing-the-web.html#prompt-to-unload-a-document\" id=\"ref-for-prompt-to-unload-a-document\">prompt to unload</a> step (and so the browsing context should be <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/window-object.html#a-browsing-context-is-discarded\" id=\"ref-for-a-browsing-context-is-discarded②\">discarded</a>).</p>"
                 }
               ]
             }
@@ -619,15 +619,11 @@
           "steps": [
             {
               "case": "\"portal-src\"",
+              "html": "",
+              "rationale": "return",
               "steps": [
                 {
-                  "html": "<ol>\n       <li data-md=\"\">\n        <p>Return « \"<code>portal-src</code>\", \"<code>prefetch-src</code>\", \"<code>default-src</code>\" ».</p>\n      </li></ol>",
-                  "rationale": "return",
-                  "steps": [
-                    {
-                      "html": "<p>Return « \"<code>portal-src</code>\", \"<code>prefetch-src</code>\", \"<code>default-src</code>\" ».</p>"
-                    }
-                  ]
+                  "html": "<p>Return « \"<code>portal-src</code>\", \"<code>prefetch-src</code>\", \"<code>default-src</code>\" ».</p>"
                 }
               ]
             }

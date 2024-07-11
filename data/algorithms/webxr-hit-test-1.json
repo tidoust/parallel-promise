@@ -167,7 +167,7 @@
           "html": "<p>Let <var>results</var> be an empty array of <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://immersive-web.github.io/hit-test/#xrhittestresult\" id=\"ref-for-xrhittestresult⑦\">XRHitTestResult</a></code>s.</p>"
         },
         {
-          "html": "For each <var>nativeResult</var> in <var>nativeResults</var>:",
+          "html": "In order to <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"create-a-hit-test-result-for-transient-input\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">create a hit test result for transient input</dfn><span style=\"position: relative; height: 0px;\"></span><span style=\"position: relative; height: 0px;\"></span> given <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://immersive-web.github.io/webxr/#xrinputsource\" id=\"ref-for-xrinputsource④\">XRInputSource</a></code> <var>inputSource</var>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://www.w3.org/TR/webxr/#xrframe-interface\" id=\"ref-for-xrframe-interface③\">XRFrame</a></code> <var>frame</var>, array of <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://immersive-web.github.io/hit-test/#enumdef-xrhittesttrackabletype\" id=\"ref-for-enumdef-xrhittesttrackabletype⑧\">XRHitTestTrackableType</a></code> <var>entityTypes</var>, and array of <a data-link-type=\"dfn\" href=\"https://immersive-web.github.io/hit-test/#native-hit-test-result\" id=\"ref-for-native-hit-test-result①\">native hit test results</a> <var>nativeResults</var>, the user agent MUST run the following steps:",
           "rationale": "create",
           "steps": [
             {
@@ -298,7 +298,7 @@
           "html": "<p>Let <var>hitTestResults</var> be an empty <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list\" id=\"ref-for-list\">list</a>.</p>"
         },
         {
-          "html": "For each native hit test result <var>nativeResult</var> in <var>nativeResults</var>, perform the following steps:",
+          "html": "In order to <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"compute-hit-test-results\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">compute hit test results</dfn><span style=\"position: relative; height: 0px;\"></span><span style=\"position: relative; height: 0px;\"></span> for a given <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://www.w3.org/TR/webxr/#xrframe-interface\" id=\"ref-for-xrframe-interface⑤\">XRFrame</a></code> <var>frame</var>, for each hit test source, <var>hitTestSource</var>, that is present in <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://immersive-web.github.io/webxr/#dom-xrframe-session\" id=\"ref-for-dom-xrframe-session①\">session</a></code>'s <a data-link-type=\"dfn\" href=\"https://immersive-web.github.io/hit-test/#xrsession-set-of-active-hit-test-sources\" id=\"ref-for-xrsession-set-of-active-hit-test-sources③\">set of active hit test sources</a>, the user agent MUST perform the following steps:",
           "rationale": "create",
           "steps": [
             {
@@ -342,7 +342,7 @@
           "html": "<p>Let <var>hitTestResults</var> be an empty array of XRTransientInputHitTestResults.</p>"
         },
         {
-          "html": "For each transient input source <var>inputSource</var> in <var>matchingInputSources</var>:",
+          "html": "In order to <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"compute-hit-test-results-for-transient-input\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">compute hit test results for transient input</dfn><span style=\"position: relative; height: 0px;\"></span><span style=\"position: relative; height: 0px;\"></span> for a given <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://www.w3.org/TR/webxr/#xrframe-interface\" id=\"ref-for-xrframe-interface⑥\">XRFrame</a></code> <var>frame</var>, for each hit test source, <var>hitTestSource</var>, that is present in <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://immersive-web.github.io/webxr/#dom-xrframe-session\" id=\"ref-for-dom-xrframe-session③\">session</a></code>'s <a data-link-type=\"dfn\" href=\"https://immersive-web.github.io/hit-test/#xrsession-set-of-active-hit-test-sources-for-transient-input\" id=\"ref-for-xrsession-set-of-active-hit-test-sources-for-transient-input③\">set of active hit test sources for transient input</a>, the user agent MUST perform the following steps:",
           "rationale": "query",
           "steps": [
             {
@@ -484,7 +484,7 @@
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "If <var>ray</var>’s <a data-link-type=\"dfn\" href=\"https://immersive-web.github.io/hit-test/#xrray-matrix\" id=\"ref-for-xrray-matrix②\">matrix</a> is not <code>null</code>, perform the following steps:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-for=\"XRRay\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"xrray-obtain-the-matrix\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">obtain the matrix</dfn><span style=\"position: relative; height: 0px;\"></span><span style=\"position: relative; height: 0px;\"></span> for a given <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://immersive-web.github.io/hit-test/#xrray\" id=\"ref-for-xrray①⑥\">XRRay</a></code> <var>ray</var>",
           "rationale": "if",
           "steps": [
             {
@@ -502,7 +502,7 @@
           "html": "<p>Let <var>cos_angle</var> be the scalar dot product of <var>z</var> and <var>ray</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://immersive-web.github.io/hit-test/#dom-xrray-direction\" id=\"ref-for-dom-xrray-direction①②\">direction</a></code>, <code>z · direction</code>.</p>"
         },
         {
-          "html": "Set <var>rotation</var> based on the following:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-for=\"XRRay\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"xrray-obtain-the-matrix\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">obtain the matrix</dfn><span style=\"position: relative; height: 0px;\"></span><span style=\"position: relative; height: 0px;\"></span> for a given <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://immersive-web.github.io/hit-test/#xrray\" id=\"ref-for-xrray①⑥\">XRRay</a></code> <var>ray</var>",
           "rationale": ".switch",
           "steps": [
             {
@@ -510,27 +510,15 @@
               "steps": [
                 {
                   "case": "If cos_angle is greater than -1 and less than 1",
-                  "steps": [
-                    {
-                      "html": "Set <var>rotation</var> to the rotation matrix representing a right handed planar rotation around <var>axis</var> by <code>arccos(cos_angle)</code>."
-                    }
-                  ]
+                  "html": "Set <var>rotation</var> to the rotation matrix representing a right handed planar rotation around <var>axis</var> by <code>arccos(cos_angle)</code>."
                 },
                 {
                   "case": "Else, if cos_angle is -1",
-                  "steps": [
-                    {
-                      "html": "Set <var>rotation</var> to the rotation matrix representing a right handed planar rotation around vector <code>[1, 0, 0]</code> by <code>arccos(cos_angle)</code>."
-                    }
-                  ]
+                  "html": "Set <var>rotation</var> to the rotation matrix representing a right handed planar rotation around vector <code>[1, 0, 0]</code> by <code>arccos(cos_angle)</code>."
                 },
                 {
                   "case": "Else",
-                  "steps": [
-                    {
-                      "html": "Set <var>rotation</var> to an identity matrix."
-                    }
-                  ]
+                  "html": "Set <var>rotation</var> to an identity matrix."
                 }
               ]
             }
@@ -563,7 +551,7 @@
           "html": "<p>Let <var>entityType</var> be a new <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://immersive-web.github.io/hit-test/#enumdef-xrhittesttrackabletype\" id=\"ref-for-enumdef-xrhittesttrackabletype①⓪\">XRHitTestTrackableType</a></code>.</p>"
         },
         {
-          "html": "Initialize <var>entityType</var> as follows:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"convert-from-native-entity-type\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">convert from native entity type</dfn><span style=\"position: relative; height: 0px;\"></span><span style=\"position: relative; height: 0px;\"></span> into <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://immersive-web.github.io/hit-test/#enumdef-xrhittesttrackabletype\" id=\"ref-for-enumdef-xrhittesttrackabletype⑨\">XRHitTestTrackableType</a></code>, the user agent MUST run the following steps:",
           "rationale": ".switch",
           "steps": [
             {
@@ -571,35 +559,19 @@
               "steps": [
                 {
                   "case": "If nativeEntityType contains type that corresponds to \"point\"",
-                  "steps": [
-                    {
-                      "html": "Set <var>entityType</var> to <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://immersive-web.github.io/hit-test/#dom-xrhittesttrackabletype-point\" id=\"ref-for-dom-xrhittesttrackabletype-point②\">\"point\"</a></code>."
-                    }
-                  ]
+                  "html": "Set <var>entityType</var> to <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://immersive-web.github.io/hit-test/#dom-xrhittesttrackabletype-point\" id=\"ref-for-dom-xrhittesttrackabletype-point②\">\"point\"</a></code>."
                 },
                 {
                   "case": "Else, if nativeEntityType contains type that corresponds to \"plane\"",
-                  "steps": [
-                    {
-                      "html": "Set <var>entityType</var> to <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://immersive-web.github.io/hit-test/#dom-xrhittesttrackabletype-plane\" id=\"ref-for-dom-xrhittesttrackabletype-plane④\">\"plane\"</a></code>."
-                    }
-                  ]
+                  "html": "Set <var>entityType</var> to <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://immersive-web.github.io/hit-test/#dom-xrhittesttrackabletype-plane\" id=\"ref-for-dom-xrhittesttrackabletype-plane④\">\"plane\"</a></code>."
                 },
                 {
                   "case": "Else, if nativeEntityType contains type that corresponds to \"mesh\"",
-                  "steps": [
-                    {
-                      "html": "Set <var>entityType</var> to <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://immersive-web.github.io/hit-test/#dom-xrhittesttrackabletype-mesh\" id=\"ref-for-dom-xrhittesttrackabletype-mesh②\">\"mesh\"</a></code>."
-                    }
-                  ]
+                  "html": "Set <var>entityType</var> to <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://immersive-web.github.io/hit-test/#dom-xrhittesttrackabletype-mesh\" id=\"ref-for-dom-xrhittesttrackabletype-mesh②\">\"mesh\"</a></code>."
                 },
                 {
                   "case": "Else",
-                  "steps": [
-                    {
-                      "html": "Set <var>entityType</var> to <code>null</code>"
-                    }
-                  ]
+                  "html": "Set <var>entityType</var> to <code>null</code>"
                 }
               ]
             }

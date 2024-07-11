@@ -101,6 +101,12 @@
           "html": "add <var>navigationTimingEntry</var> to <var>global</var>'s\n        <a data-cite=\"performance-timeline-2#dfn-performance-entry-buffer\" href=\"https://www.w3.org/TR/performance-timeline/#dfn-performance-entry-buffer\">performance entry buffer</a>."
         }
       ]
+    },
+    {
+      "name": "queue the navigation timing entry",
+      "href": "https://w3c.github.io/navigation-timing/#dfn-queue-the-navigation-timing-entry",
+      "html": "To <dfn data-export=\"\" id=\"dfn-queue-the-navigation-timing-entry\" tabindex=\"0\" aria-haspopup=\"dialog\" data-dfn-type=\"dfn\">queue the navigation timing entry</dfn> for <a data-xref-type=\"_IDL_\" data-link-type=\"idl\" data-lt=\"Document\"><code>Document</code></a> <var>document</var>,\n      <a data-lt=\"queue a navigation performanceentry\">queue</a> <var>document</var>'s\n      <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/navigation-timing/#dfn-navigation-timing-entry\" class=\"internalDFN\" id=\"ref-for-dfn-navigation-timing-entry-1\">navigation timing entry</a>.",
+      "rationale": "To <dfn>"
     }
   ]
 }

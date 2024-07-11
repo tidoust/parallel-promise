@@ -57,6 +57,12 @@
       ]
     },
     {
+      "name": "initialize a global’s endpoint list",
+      "href": "https://w3c.github.io/reporting/#initialize-a-globals-endpoint-list",
+      "html": "To <dfn data-dfn-type=\"dfn\" data-export=\"\" id=\"initialize-a-globals-endpoint-list\">initialize a global’s endpoint list<a class=\"self-link\" href=\"https://w3c.github.io/reporting/#initialize-a-globals-endpoint-list\"></a></dfn>, given a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#windoworworkerglobalscope\" id=\"ref-for-windoworworkerglobalscope②\">WindowOrWorkerGlobalScope</a></code> (<var>scope</var>) and a <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-response\" id=\"ref-for-concept-response\">response</a> (<var>response</var>),\n  set <var>scope</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/reporting/#windoworworkerglobalscope-endpoints\" id=\"ref-for-windoworworkerglobalscope-endpoints\">endpoints</a> to the result\n  of executing <a href=\"https://w3c.github.io/reporting/#process-header\">§ 3.3 Process reporting endpoints for response</a> given <var>response</var>.",
+      "rationale": "To <dfn>"
+    },
+    {
       "html": "Given a <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-response\" id=\"ref-for-concept-response①\">response</a> (<var>response</var>), this algorithm extracts and returns a\n  list of <a data-link-type=\"dfn\" href=\"https://w3c.github.io/reporting/#endpoint\" id=\"ref-for-endpoint⑨\">endpoints</a>.",
       "rationale": "abort",
       "steps": [
@@ -343,7 +349,7 @@
       ]
     },
     {
-      "html": "<a class=\"self-link\" href=\"https://w3c.github.io/reporting/#issue-6311d126\"></a> how to polymorphically initialize body?",
+      "html": "Given a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/reporting/#report\" id=\"ref-for-report①⑧\">report</a> <var>report</var> and a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/reporting/#reportingobserver\" id=\"ref-for-reportingobserver⑥\">ReportingObserver</a></code> <var>observer</var>, this\n  algorithm adds <var>report</var> to <var>observer</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/reporting/#reportingobserver-report-queue\" id=\"ref-for-reportingobserver-report-queue②\">report queue</a>, so long as <var>report</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/reporting/#report-reporttype\" id=\"ref-for-report-reporttype⑦\">type</a> is observable by <var>observer</var>.",
       "rationale": "append",
       "steps": [
         {

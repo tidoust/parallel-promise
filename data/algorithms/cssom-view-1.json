@@ -15,35 +15,19 @@
           "steps": [
             {
               "case": "If the overflow directions are rightward and downward",
-              "steps": [
-                {
-                  "html": "The top and left edges."
-                }
-              ]
+              "html": "The top and left edges."
             },
             {
               "case": "If the overflow directions are leftward and downward",
-              "steps": [
-                {
-                  "html": "The top and right edges."
-                }
-              ]
+              "html": "The top and right edges."
             },
             {
               "case": "If the overflow directions are leftward and upward",
-              "steps": [
-                {
-                  "html": "The bottom and right edges."
-                }
-              ]
+              "html": "The bottom and right edges."
             },
             {
               "case": "If the overflow directions are rightward and upward",
-              "steps": [
-                {
-                  "html": "The bottom and left edges."
-                }
-              ]
+              "html": "The bottom and left edges."
             }
           ]
         }
@@ -60,35 +44,19 @@
           "steps": [
             {
               "case": "If the overflow directions are rightward and downward",
-              "steps": [
-                {
-                  "html": "The bottom and right edges."
-                }
-              ]
+              "html": "The bottom and right edges."
             },
             {
               "case": "If the overflow directions are leftward and downward",
-              "steps": [
-                {
-                  "html": "The bottom and left edges."
-                }
-              ]
+              "html": "The bottom and left edges."
             },
             {
               "case": "If the overflow directions are leftward and upward",
-              "steps": [
-                {
-                  "html": "The top and left edges."
-                }
-              ]
+              "html": "The top and left edges."
             },
             {
               "case": "If the overflow directions are rightward and upward",
-              "steps": [
-                {
-                  "html": "The top and right edges."
-                }
-              ]
+              "html": "The top and right edges."
             }
           ]
         }
@@ -347,19 +315,11 @@
               "steps": [
                 {
                   "case": "If the viewport has rightward overflow direction",
-                  "steps": [
-                    {
-                      "html": "Let <var>x</var> be max(0, min(<var>x</var>, <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/CSS21/visuren.html#x1\" id=\"ref-for-x1③⑧\">viewport</a> <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#scrolling-area\" id=\"ref-for-scrolling-area④\">scrolling area</a> width - <var>viewport width</var>))."
-                    }
-                  ]
+                  "html": "Let <var>x</var> be max(0, min(<var>x</var>, <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/CSS21/visuren.html#x1\" id=\"ref-for-x1③⑧\">viewport</a> <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#scrolling-area\" id=\"ref-for-scrolling-area④\">scrolling area</a> width - <var>viewport width</var>))."
                 },
                 {
                   "case": "If the viewport has leftward overflow direction",
-                  "steps": [
-                    {
-                      "html": "Let <var>x</var> be min(0, max(<var>x</var>, <var>viewport width</var> - <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/CSS21/visuren.html#x1\" id=\"ref-for-x1④⓪\">viewport</a> <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#scrolling-area\" id=\"ref-for-scrolling-area⑤\">scrolling area</a> width))."
-                    }
-                  ]
+                  "html": "Let <var>x</var> be min(0, max(<var>x</var>, <var>viewport width</var> - <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/CSS21/visuren.html#x1\" id=\"ref-for-x1④⓪\">viewport</a> <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#scrolling-area\" id=\"ref-for-scrolling-area⑤\">scrolling area</a> width))."
                 }
               ]
             }
@@ -374,19 +334,11 @@
               "steps": [
                 {
                   "case": "If the viewport has downward overflow direction",
-                  "steps": [
-                    {
-                      "html": "Let <var>y</var> be max(0, min(<var>y</var>, <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/CSS21/visuren.html#x1\" id=\"ref-for-x1④②\">viewport</a> <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#scrolling-area\" id=\"ref-for-scrolling-area⑥\">scrolling area</a> height - <var>viewport height</var>))."
-                    }
-                  ]
+                  "html": "Let <var>y</var> be max(0, min(<var>y</var>, <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/CSS21/visuren.html#x1\" id=\"ref-for-x1④②\">viewport</a> <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#scrolling-area\" id=\"ref-for-scrolling-area⑥\">scrolling area</a> height - <var>viewport height</var>))."
                 },
                 {
                   "case": "If the viewport has upward overflow direction",
-                  "steps": [
-                    {
-                      "html": "Let <var>y</var> be min(0, max(<var>y</var>, <var>viewport height</var> - <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/CSS21/visuren.html#x1\" id=\"ref-for-x1④④\">viewport</a> <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#scrolling-area\" id=\"ref-for-scrolling-area⑦\">scrolling area</a> height))."
-                    }
-                  ]
+                  "html": "Let <var>y</var> be min(0, max(<var>y</var>, <var>viewport height</var> - <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/CSS21/visuren.html#x1\" id=\"ref-for-x1④④\">viewport</a> <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#scrolling-area\" id=\"ref-for-scrolling-area⑦\">scrolling area</a> height))."
                 }
               ]
             }
@@ -402,7 +354,7 @@
           "html": "<p>Let <var>document</var> be the <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/CSS21/visuren.html#x1\" id=\"ref-for-x1⑤②\">viewport’s</a> associated <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://dom.spec.whatwg.org/#document\" id=\"ref-for-document③\">Document</a></code>.</p>"
         },
         {
-          "html": "<p><a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#viewport-perform-a-scroll\" id=\"ref-for-viewport-perform-a-scroll②\">Perform a scroll</a> of the <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/CSS21/visuren.html#x1\" id=\"ref-for-x1⑤③\">viewport</a> to <var>position</var>, <var>document</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-display-4/#root-element\" id=\"ref-for-root-element①\">root element</a> as the associated element, if there is one, or null otherwise,\nand the scroll behavior being the value of the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/cssom-view-1/#dom-scrolloptions-behavior\" id=\"ref-for-dom-scrolloptions-behavior\">behavior</a></code> dictionary member of <var>options</var>.</p>\n     <p class=\"issue\" id=\"issue-1e98b401\"><a class=\"self-link\" href=\"https://drafts.csswg.org/cssom-view-1/#issue-1e98b401\"></a> User agents do not agree whether this uses the (coordinated) <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/CSS21/visuren.html#x1\" id=\"ref-for-x1⑤④\">viewport</a> <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#viewport-perform-a-scroll\" id=\"ref-for-viewport-perform-a-scroll③\">perform a scroll</a> or the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#scrolling-box\" id=\"ref-for-scrolling-box⑨\">scrolling box</a> <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#perform-a-scroll\" id=\"ref-for-perform-a-scroll②\">perform a scroll</a> on the layout viewport’s scrolling box.</p>"
+          "html": "<p><a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#viewport-perform-a-scroll\" id=\"ref-for-viewport-perform-a-scroll②\">Perform a scroll</a> of the <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/CSS21/visuren.html#x1\" id=\"ref-for-x1⑤③\">viewport</a> to <var>position</var>, <var>document</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-display-4/#root-element\" id=\"ref-for-root-element①\">root element</a> as the associated element, if there is one, or null otherwise,\nand the scroll behavior being the value of the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/cssom-view-1/#dom-scrolloptions-behavior\" id=\"ref-for-dom-scrolloptions-behavior\">behavior</a></code> dictionary member of <var>options</var>.</p>"
         }
       ]
     },
@@ -529,7 +481,7 @@
               "html": "<p>If <var>width</var> is an error, set <var>width</var> to 0.</p>"
             },
             {
-              "html": "<p>If <var>width</var> is not 0:</p>\n       <ol>\n        <li data-md=\"\">\n         <p>Optionally, clamp <var>width</var> in a user-agent-defined manner so that the window does\nnot get too small or bigger than the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#web-exposed-available-screen-area\" id=\"ref-for-web-exposed-available-screen-area②\">Web-exposed available screen area</a>.</p>\n        </li><li data-md=\"\">\n         <p>Optionally, size <var>target</var>’s window by moving its right edge such that the\ndistance between the left and right edges of the viewport are <var>width</var> <a class=\"css\" data-link-type=\"value\" href=\"https://drafts.csswg.org/css-values-4/#px\" id=\"ref-for-px①⑧\">CSS pixels</a> of <var>target</var>.</p>\n        </li><li data-md=\"\">\n         <p>Optionally, move <var>target</var>’s window in a user-agent-defined manner so that it\ndoes not grow outside the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#web-exposed-available-screen-area\" id=\"ref-for-web-exposed-available-screen-area③\">Web-exposed available screen area</a>.</p>\n       </li></ol>",
+              "html": "<p>If <var>width</var> is not 0:</p>",
               "ignored": [
                 "Optionally, clamp width in a user-agent-defined manner so that the window does not get too small or bigger than the Web-exposed available screen area. Optionally, size target’s window by moving its right edge such that the distance between the left and right edges of the viewport are width CSS pixels of target. Optionally, move target’s window in a user-agent-defined manner so that it does not grow outside the Web-exposed available screen area."
               ]
@@ -547,7 +499,7 @@
               "html": "<p>If <var>height</var> is an error, set <var>height</var> to 0.</p>"
             },
             {
-              "html": "<p>If <var>height</var> is not 0:</p>\n       <ol>\n        <li data-md=\"\">\n         <p>Optionally, clamp <var>height</var> in a user-agent-defined manner so that the window\ndoes not get too small or bigger than the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#web-exposed-available-screen-area\" id=\"ref-for-web-exposed-available-screen-area④\">Web-exposed available screen area</a>.</p>\n        </li><li data-md=\"\">\n         <p>Optionally, size <var>target</var>’s window by moving its bottom edge such that the\ndistance between the top and bottom edges of the viewport are <var>height</var> <a class=\"css\" data-link-type=\"value\" href=\"https://drafts.csswg.org/css-values-4/#px\" id=\"ref-for-px①⑨\">CSS pixels</a> of <var>target</var>.</p>\n        </li><li data-md=\"\">\n         <p>Optionally, move <var>target</var>’s window in a user-agent-defined manner so that it\ndoes not grow outside the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#web-exposed-available-screen-area\" id=\"ref-for-web-exposed-available-screen-area⑤\">Web-exposed available screen area</a>.</p>\n       </li></ol>",
+              "html": "<p>If <var>height</var> is not 0:</p>",
               "ignored": [
                 "Optionally, clamp height in a user-agent-defined manner so that the window does not get too small or bigger than the Web-exposed available screen area. Optionally, size target’s window by moving its bottom edge such that the distance between the top and bottom edges of the viewport are height CSS pixels of target. Optionally, move target’s window in a user-agent-defined manner so that it does not grow outside the Web-exposed available screen area."
               ]
@@ -679,7 +631,7 @@
               ]
             },
             {
-              "html": "<p>Return a <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#caret-position\" id=\"ref-for-caret-position①\">caret position</a> with its properties set as follows:</p>\n       <ol>\n        <li data-md=\"\">\n         <p><a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#caret-node\" id=\"ref-for-caret-node①\">caret node</a> is set to <var>startNode</var>.</p>\n        </li><li data-md=\"\">\n         <p><a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#caret-offset\" id=\"ref-for-caret-offset①\">caret offset</a> is set to <var>startOffset</var>.</p>\n       </li></ol>",
+              "html": "<p>Return a <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#caret-position\" id=\"ref-for-caret-position①\">caret position</a> with its properties set as follows:</p>",
               "ignored": [
                 "caret node is set to startNode. caret offset is set to startOffset."
               ]
@@ -755,7 +707,7 @@
       ]
     },
     {
-      "name": "get the bounding box",
+      "name": "Element/get the bounding box",
       "href": "https://drafts.csswg.org/cssom-view-1/#element-get-the-bounding-box",
       "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-for=\"Element\" data-dfn-type=\"dfn\" data-export=\"\" id=\"element-get-the-bounding-box\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">get the bounding box</dfn> for <var>element</var>,\nrun the following steps:",
       "rationale": ".algorithm",
@@ -775,7 +727,7 @@
       ]
     },
     {
-      "name": "checkVisibility(options)",
+      "name": "Element/checkVisibility(options)",
       "href": "https://drafts.csswg.org/cssom-view-1/#dom-element-checkvisibility",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"Element\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"checkVisibility(options)|checkVisibility()\" id=\"dom-element-checkvisibility\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>checkVisibility(<var>options</var>)</code></dfn> method\n    must run these steps,\n    when called on an element <var>this</var>:",
       "rationale": ".algorithm",
@@ -1291,43 +1243,23 @@
                   "steps": [
                     {
                       "case": "If element edge A and element edge B are both outside scrolling box edge A and scrolling box edge B",
-                      "steps": [
-                        {
-                          "html": "Do nothing."
-                        }
-                      ]
+                      "html": "Do nothing."
                     },
                     {
                       "case": "If element edge A is outside scrolling box edge A and element height is less than scrolling box height",
-                      "steps": [
-                        {
-                          "html": "Align <var>element edge A</var> with <var>scrolling box edge A</var>."
-                        }
-                      ]
+                      "html": "Align <var>element edge A</var> with <var>scrolling box edge A</var>."
                     },
                     {
                       "case": "If element edge B is outside scrolling box edge B and element height is greater than scrolling box height",
-                      "steps": [
-                        {
-                          "html": "Align <var>element edge A</var> with <var>scrolling box edge A</var>."
-                        }
-                      ]
+                      "html": "Align <var>element edge A</var> with <var>scrolling box edge A</var>."
                     },
                     {
                       "case": "If element edge A is outside scrolling box edge A and element height is greater than scrolling box height",
-                      "steps": [
-                        {
-                          "html": "Align <var>element edge B</var> with <var>scrolling box edge B</var>."
-                        }
-                      ]
+                      "html": "Align <var>element edge B</var> with <var>scrolling box edge B</var>."
                     },
                     {
                       "case": "If element edge B is outside scrolling box edge B and element height is less than scrolling box height",
-                      "steps": [
-                        {
-                          "html": "Align <var>element edge B</var> with <var>scrolling box edge B</var>."
-                        }
-                      ]
+                      "html": "Align <var>element edge B</var> with <var>scrolling box edge B</var>."
                     }
                   ]
                 }
@@ -1351,43 +1283,23 @@
                   "steps": [
                     {
                       "case": "If element edge C and element edge D are both outside scrolling box edge C and scrolling box edge D",
-                      "steps": [
-                        {
-                          "html": "Do nothing."
-                        }
-                      ]
+                      "html": "Do nothing."
                     },
                     {
                       "case": "If element edge C is outside scrolling box edge C and element width is less than scrolling box width",
-                      "steps": [
-                        {
-                          "html": "Align <var>element edge C</var> with <var>scrolling box edge C</var>."
-                        }
-                      ]
+                      "html": "Align <var>element edge C</var> with <var>scrolling box edge C</var>."
                     },
                     {
                       "case": "If element edge D is outside scrolling box edge D and element width is greater than scrolling box width",
-                      "steps": [
-                        {
-                          "html": "Align <var>element edge C</var> with <var>scrolling box edge C</var>."
-                        }
-                      ]
+                      "html": "Align <var>element edge C</var> with <var>scrolling box edge C</var>."
                     },
                     {
                       "case": "If element edge C is outside scrolling box edge C and element width is greater than scrolling box width",
-                      "steps": [
-                        {
-                          "html": "Align <var>element edge D</var> with <var>scrolling box edge D</var>."
-                        }
-                      ]
+                      "html": "Align <var>element edge D</var> with <var>scrolling box edge D</var>."
                     },
                     {
                       "case": "If element edge D is outside scrolling box edge D and element width is less than scrolling box width",
-                      "steps": [
-                        {
-                          "html": "Align <var>element edge D</var> with <var>scrolling box edge D</var>."
-                        }
-                      ]
+                      "html": "Align <var>element edge D</var> with <var>scrolling box edge D</var>."
                     }
                   ]
                 }
@@ -1416,7 +1328,7 @@
           "html": "<p>If <var>position</var> is the same as <var>scrolling box</var>’s current scroll position, and <var>scrolling box</var> does not have an ongoing <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#concept-smooth-scroll\" id=\"ref-for-concept-smooth-scroll④\">smooth scroll</a>, then return.</p>"
         },
         {
-          "html": "<dl class=\"switch\">\n      <dt>If <var>scrolling box</var> is associated with an element \n      </dt><dd> <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#perform-a-scroll\" id=\"ref-for-perform-a-scroll③\">Perform a scroll</a> of the element’s <var>scrolling box</var> to <var>position</var>, with the element as the associated element and <var>behavior</var> as the scroll behavior. \n      </dd><dt>If <var>scrolling box</var> is associated with a <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/CSS21/visuren.html#x1\" id=\"ref-for-x1⑧⑤\">viewport</a> \n      </dt><dd>\n       <ol>\n        <li data-md=\"\">\n         <p>Let <var>document</var> be the <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/CSS21/visuren.html#x1\" id=\"ref-for-x1⑧⑥\">viewport’s</a> associated <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://dom.spec.whatwg.org/#document\" id=\"ref-for-document①⓪\">Document</a></code>.</p>\n        </li><li data-md=\"\">\n         <p>Let <var>root element</var> be <var>document</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-display-4/#root-element\" id=\"ref-for-root-element②③\">root element</a>, if there is one, or null otherwise.</p>\n        </li><li data-md=\"\">\n         <p><a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#viewport-perform-a-scroll\" id=\"ref-for-viewport-perform-a-scroll④\">Perform a scroll</a> of the <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/CSS21/visuren.html#x1\" id=\"ref-for-x1⑧⑦\">viewport</a> to <var>position</var>, with <var>root element</var> as the associated element and <var>behavior</var> as the scroll behavior.</p>\n       </li></ol>\n     </dd></dl>",
+          "html": "<dl class=\"switch\">\n      <dt>If <var>scrolling box</var> is associated with an element \n      </dt><dd> <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#perform-a-scroll\" id=\"ref-for-perform-a-scroll③\">Perform a scroll</a> of the element’s <var>scrolling box</var> to <var>position</var>, with the element as the associated element and <var>behavior</var> as the scroll behavior. \n      </dd><dt>If <var>scrolling box</var> is associated with a <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/CSS21/visuren.html#x1\" id=\"ref-for-x1⑧⑤\">viewport</a> \n      </dt><dd>\n       \n     </dd></dl>",
           "rationale": ".switch",
           "steps": [
             {
@@ -1424,29 +1336,21 @@
               "steps": [
                 {
                   "case": "If scrolling box is associated with an element",
-                  "steps": [
-                    {
-                      "html": "<a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#perform-a-scroll\" id=\"ref-for-perform-a-scroll③\">Perform a scroll</a> of the element’s <var>scrolling box</var> to <var>position</var>, with the element as the associated element and <var>behavior</var> as the scroll behavior."
-                    }
-                  ]
+                  "html": "<a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#perform-a-scroll\" id=\"ref-for-perform-a-scroll③\">Perform a scroll</a> of the element’s <var>scrolling box</var> to <var>position</var>, with the element as the associated element and <var>behavior</var> as the scroll behavior."
                 },
                 {
                   "case": "If scrolling box is associated with a viewport",
+                  "html": "",
+                  "rationale": "let",
                   "steps": [
                     {
-                      "html": "<ol>\n        <li data-md=\"\">\n         <p>Let <var>document</var> be the <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/CSS21/visuren.html#x1\" id=\"ref-for-x1⑧⑥\">viewport’s</a> associated <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://dom.spec.whatwg.org/#document\" id=\"ref-for-document①⓪\">Document</a></code>.</p>\n        </li><li data-md=\"\">\n         <p>Let <var>root element</var> be <var>document</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-display-4/#root-element\" id=\"ref-for-root-element②③\">root element</a>, if there is one, or null otherwise.</p>\n        </li><li data-md=\"\">\n         <p><a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#viewport-perform-a-scroll\" id=\"ref-for-viewport-perform-a-scroll④\">Perform a scroll</a> of the <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/CSS21/visuren.html#x1\" id=\"ref-for-x1⑧⑦\">viewport</a> to <var>position</var>, with <var>root element</var> as the associated element and <var>behavior</var> as the scroll behavior.</p>\n       </li></ol>",
-                      "rationale": "let",
-                      "steps": [
-                        {
-                          "html": "<p>Let <var>document</var> be the <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/CSS21/visuren.html#x1\" id=\"ref-for-x1⑧⑥\">viewport’s</a> associated <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://dom.spec.whatwg.org/#document\" id=\"ref-for-document①⓪\">Document</a></code>.</p>"
-                        },
-                        {
-                          "html": "<p>Let <var>root element</var> be <var>document</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-display-4/#root-element\" id=\"ref-for-root-element②③\">root element</a>, if there is one, or null otherwise.</p>"
-                        },
-                        {
-                          "html": "<p><a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#viewport-perform-a-scroll\" id=\"ref-for-viewport-perform-a-scroll④\">Perform a scroll</a> of the <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/CSS21/visuren.html#x1\" id=\"ref-for-x1⑧⑦\">viewport</a> to <var>position</var>, with <var>root element</var> as the associated element and <var>behavior</var> as the scroll behavior.</p>"
-                        }
-                      ]
+                      "html": "<p>Let <var>document</var> be the <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/CSS21/visuren.html#x1\" id=\"ref-for-x1⑧⑥\">viewport’s</a> associated <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://dom.spec.whatwg.org/#document\" id=\"ref-for-document①⓪\">Document</a></code>.</p>"
+                    },
+                    {
+                      "html": "<p>Let <var>root element</var> be <var>document</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-display-4/#root-element\" id=\"ref-for-root-element②③\">root element</a>, if there is one, or null otherwise.</p>"
+                    },
+                    {
+                      "html": "<p><a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#viewport-perform-a-scroll\" id=\"ref-for-viewport-perform-a-scroll④\">Perform a scroll</a> of the <a data-link-type=\"dfn\" href=\"https://www.w3.org/TR/CSS21/visuren.html#x1\" id=\"ref-for-x1⑧⑦\">viewport</a> to <var>position</var>, with <var>root element</var> as the associated element and <var>behavior</var> as the scroll behavior.</p>"
                     }
                   ]
                 }
@@ -1474,19 +1378,11 @@
               "steps": [
                 {
                   "case": "If box has rightward overflow direction",
-                  "steps": [
-                    {
-                      "html": "Let <var>x</var> be max(0, min(<var>x</var>, <var>element</var> <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#scrolling-area\" id=\"ref-for-scrolling-area①⑧\">scrolling area</a> width - <var>element</var> <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-box-4/#padding-edge\" id=\"ref-for-padding-edge②④\">padding edge</a> width))."
-                    }
-                  ]
+                  "html": "Let <var>x</var> be max(0, min(<var>x</var>, <var>element</var> <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#scrolling-area\" id=\"ref-for-scrolling-area①⑧\">scrolling area</a> width - <var>element</var> <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-box-4/#padding-edge\" id=\"ref-for-padding-edge②④\">padding edge</a> width))."
                 },
                 {
                   "case": "If box has leftward overflow direction",
-                  "steps": [
-                    {
-                      "html": "Let <var>x</var> be min(0, max(<var>x</var>, <var>element</var> <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-box-4/#padding-edge\" id=\"ref-for-padding-edge②⑤\">padding edge</a> width - <var>element</var> <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#scrolling-area\" id=\"ref-for-scrolling-area①⑨\">scrolling area</a> width))."
-                    }
-                  ]
+                  "html": "Let <var>x</var> be min(0, max(<var>x</var>, <var>element</var> <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-box-4/#padding-edge\" id=\"ref-for-padding-edge②⑤\">padding edge</a> width - <var>element</var> <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#scrolling-area\" id=\"ref-for-scrolling-area①⑨\">scrolling area</a> width))."
                 }
               ]
             }
@@ -1501,19 +1397,11 @@
               "steps": [
                 {
                   "case": "If box has downward overflow direction",
-                  "steps": [
-                    {
-                      "html": "Let <var>y</var> be max(0, min(<var>y</var>, <var>element</var> <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#scrolling-area\" id=\"ref-for-scrolling-area②⓪\">scrolling area</a> height - <var>element</var> <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-box-4/#padding-edge\" id=\"ref-for-padding-edge②⑥\">padding edge</a> height))."
-                    }
-                  ]
+                  "html": "Let <var>y</var> be max(0, min(<var>y</var>, <var>element</var> <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#scrolling-area\" id=\"ref-for-scrolling-area②⓪\">scrolling area</a> height - <var>element</var> <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-box-4/#padding-edge\" id=\"ref-for-padding-edge②⑥\">padding edge</a> height))."
                 },
                 {
                   "case": "If box has upward overflow direction",
-                  "steps": [
-                    {
-                      "html": "Let <var>y</var> be min(0, max(<var>y</var>, <var>element</var> <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-box-4/#padding-edge\" id=\"ref-for-padding-edge②⑦\">padding edge</a> height - <var>element</var> <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#scrolling-area\" id=\"ref-for-scrolling-area②①\">scrolling area</a> height))."
-                    }
-                  ]
+                  "html": "Let <var>y</var> be min(0, max(<var>y</var>, <var>element</var> <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-box-4/#padding-edge\" id=\"ref-for-padding-edge②⑦\">padding edge</a> height - <var>element</var> <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#scrolling-area\" id=\"ref-for-scrolling-area②①\">scrolling area</a> height))."
                 }
               ]
             }
@@ -1902,7 +1790,7 @@
       ]
     },
     {
-      "html": "<a class=\"self-link\" href=\"https://drafts.csswg.org/cssom-view-1/#issue-5cebf624\"></a> In what order are scrollend events dispatched? Ordered based on scroll start or scroll completion?",
+      "html": "Whenever scrolling is <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view-1/#scroll-completed\" id=\"ref-for-scroll-completed\">completed</a>, the user agent must run these steps:",
       "rationale": "for",
       "steps": [
         {

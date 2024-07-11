@@ -5,7 +5,7 @@
   },
   "algorithms": [
     {
-      "name": "registerPaint(name, paintCtor)",
+      "name": "PaintWorkletGlobalScope/registerPaint(name, paintCtor)",
       "href": "https://drafts.css-houdini.org/css-paint-api-1/#dom-paintworkletglobalscope-registerpaint",
       "html": "When the <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"PaintWorkletGlobalScope\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-paintworkletglobalscope-registerpaint\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>registerPaint(<var>name</var>, <var>paintCtor</var>)</code></dfn><span style=\"position: relative; height: 0px;\"></span><span style=\"position: relative; height: 0px;\"></span> method is\ncalled, the user agent <em>must</em> run the following steps:",
       "rationale": ".algorithm",
@@ -34,9 +34,9 @@
       ]
     },
     {
-      "name": "registerPaint(name, paintCtor)",
+      "name": "PaintWorkletGlobalScope/registerPaint(name, paintCtor)",
       "href": "https://drafts.css-houdini.org/css-paint-api-1/#dom-paintworkletglobalscope-registerpaint",
-      "html": "<span class=\"marker\">Note:</span> In order for a paint image class to be forwards compatible, the list of CSS properties can\n        also contains currently invalid properties for the user agent. For example <code>margin-bikeshed-property</code>.",
+      "html": "When the <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"PaintWorkletGlobalScope\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-paintworkletglobalscope-registerpaint\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>registerPaint(<var>name</var>, <var>paintCtor</var>)</code></dfn><span style=\"position: relative; height: 0px;\"></span><span style=\"position: relative; height: 0px;\"></span> method is\ncalled, the user agent <em>must</em> run the following steps:",
       "rationale": "let",
       "steps": [
         {
@@ -52,7 +52,7 @@
           "html": "<p>Let <var>inputArgumentSyntaxes</var> be an <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-empty\" id=\"ref-for-list-empty\">empty</a> <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list\" id=\"ref-for-list③\">list</a>.</p>"
         },
         {
-          "html": "<a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-iterate\" id=\"ref-for-list-iterate\">For each</a> <var>item</var> in <var>inputArguments</var> perform the following substeps:",
+          "html": "When the <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"PaintWorkletGlobalScope\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-paintworkletglobalscope-registerpaint\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>registerPaint(<var>name</var>, <var>paintCtor</var>)</code></dfn><span style=\"position: relative; height: 0px;\"></span><span style=\"position: relative; height: 0px;\"></span> method is\ncalled, the user agent <em>must</em> run the following steps:",
           "rationale": "attempt",
           "steps": [
             {
@@ -91,7 +91,7 @@
           "html": "<p><a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#map-set\" id=\"ref-for-map-set\">Set</a> <var>paintDefinitionMap</var>[<var>name</var>] to <var>definition</var>.</p>"
         },
         {
-          "html": "<a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task\" id=\"ref-for-queue-a-task\">Queue a task</a> to run the following steps:",
+          "html": "When the <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"PaintWorkletGlobalScope\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-paintworkletglobalscope-registerpaint\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>registerPaint(<var>name</var>, <var>paintCtor</var>)</code></dfn><span style=\"position: relative; height: 0px;\"></span><span style=\"position: relative; height: 0px;\"></span> method is\ncalled, the user agent <em>must</em> run the following steps:",
           "rationale": "let",
           "steps": [
             {
@@ -101,7 +101,7 @@
               "html": "<p>Let <var>documentDefinition</var> be a new <a data-link-type=\"dfn\" href=\"https://drafts.css-houdini.org/css-paint-api-1/#document-paint-definition\" id=\"ref-for-document-paint-definition\">document paint definition</a> with:</p>\n        <ul>\n         <li data-md=\"\">\n          <p><a data-link-type=\"dfn\" href=\"https://drafts.css-houdini.org/css-paint-api-1/#document-paint-definition-input-properties\" id=\"ref-for-document-paint-definition-input-properties\">input properties</a> being <var>inputProperties</var>.</p>\n         </li><li data-md=\"\">\n          <p><a data-link-type=\"dfn\" href=\"https://drafts.css-houdini.org/css-paint-api-1/#document-paint-definition-input-argument-syntaxes\" id=\"ref-for-document-paint-definition-input-argument-syntaxes\">input argument syntaxes</a> being <var>inputArgumentSyntaxes</var>.</p>\n         </li><li data-md=\"\">\n          <p><a data-link-type=\"dfn\" href=\"https://drafts.css-houdini.org/css-paint-api-1/#document-paint-definition-paintrenderingcontext2dsettings-object\" id=\"ref-for-document-paint-definition-paintrenderingcontext2dsettings-object\">PaintRenderingContext2DSettings object</a> being <var>paintRenderingContext2DSettings</var>.</p>\n        </li></ul>"
             },
             {
-              "html": "If <var>documentPaintDefinitionMap</var>[<var>name</var>] <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#map-exists\" id=\"ref-for-map-exists①\">exists</a>, run the following steps:",
+              "html": "When the <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"PaintWorkletGlobalScope\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-paintworkletglobalscope-registerpaint\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>registerPaint(<var>name</var>, <var>paintCtor</var>)</code></dfn><span style=\"position: relative; height: 0px;\"></span><span style=\"position: relative; height: 0px;\"></span> method is\ncalled, the user agent <em>must</em> run the following steps:",
               "rationale": "let",
               "steps": [
                 {
@@ -173,7 +173,7 @@
           "html": "<p>Let <var>inputArguments</var> be the <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list\" id=\"ref-for-list④\">list</a> of all the <var>paintFunction</var> arguments <em>after</em> the \"paint name\" argument.</p>"
         },
         {
-          "html": "<p>If <var>inputArguments</var> do not match the registered grammar given by <var>inputArgumentSyntaxes</var>, let\nthe image output be an <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-images-4/#invalid-image\" id=\"ref-for-invalid-image④\">invalid image</a> and abort all these steps.</p>\n      <div class=\"example\" id=\"example-a43f39b7\">\n       <a class=\"self-link\" href=\"https://drafts.css-houdini.org/css-paint-api-1/#example-a43f39b7\"></a> This step may fail in the following cases: \n<pre class=\"lang-javascript highlight\"><c- c1=\"\">// paint.js</c->\nregisterPaint<c- p=\"\">(</c-><c- t=\"\">'failing-argument-syntax'</c-><c- p=\"\">,</c-> <c- a=\"\">class</c-> <c- p=\"\">{</c->\n    <c- k=\"\">static</c-> get inputArguments<c- p=\"\">()</c-> <c- p=\"\">{</c-> <c- k=\"\">return</c-> <c- p=\"\">[</c-><c- t=\"\">'&lt;length&gt;'</c-><c- p=\"\">];</c-> <c- p=\"\">}</c->\n    paint<c- p=\"\">(</c->ctx<c- p=\"\">,</c-> size<c- p=\"\">,</c-> styleMap<c- p=\"\">,</c-> args<c- p=\"\">)</c-> <c- p=\"\">{</c-> <c- d=\"\">/* paint code here. */</c-> <c- p=\"\">}</c->\n<c- p=\"\">});</c->\n</pre>\n<pre class=\"lang-markup highlight\"><c- p=\"\">&lt;</c-><c- f=\"\">style</c-><c- p=\"\">&gt;</c->\n    <c- p=\"\">.</c-><c- nc=\"\">example-1</c-> <c- p=\"\">{</c->\n        <c- k=\"\">background-image</c-><c- p=\"\">:</c-> <c- nf=\"\">paint</c-><c- p=\"\">(</c-><c- n=\"\">failing</c-><c- g=\"\">-argument-syntax</c-><c- p=\"\">,</c-> <c- kc=\"\">red</c-><c- p=\"\">);</c->\n    <c- p=\"\">}</c->\n    <c- p=\"\">.</c-><c- nc=\"\">example-2</c-> <c- p=\"\">{</c->\n        <c- k=\"\">background-image</c-><c- p=\"\">:</c-> <c- nf=\"\">paint</c-><c- p=\"\">(</c-><c- n=\"\">failing</c-><c- g=\"\">-argument-syntax</c-><c- p=\"\">,</c-> <c- mi=\"\">1</c-><c- b=\"\">px</c-><c- p=\"\">,</c-> <c- mi=\"\">2</c-><c- b=\"\">px</c-><c- p=\"\">);</c->\n    <c- p=\"\">}</c->\n<c- p=\"\">&lt;/</c-><c- f=\"\">style</c-><c- p=\"\">&gt;</c->\n<c- p=\"\">&lt;</c-><c- f=\"\">div</c-> <c- e=\"\">class</c-><c- o=\"\">=</c-><c- s=\"\">example-1</c-><c- p=\"\">&gt;&lt;/</c-><c- f=\"\">div</c-><c- p=\"\">&gt;</c->\n<c- p=\"\">&lt;</c-><c- f=\"\">div</c-> <c- e=\"\">class</c-><c- o=\"\">=</c-><c- s=\"\">example-2</c-><c- p=\"\">&gt;&lt;/</c-><c- f=\"\">div</c-><c- p=\"\">&gt;</c->\n<c- p=\"\">&lt;</c-><c- f=\"\">script</c-><c- p=\"\">&gt;</c->\n    CSS<c- p=\"\">.</c->paintWorklet<c- p=\"\">.</c->addModule<c- p=\"\">(</c-><c- t=\"\">'paint.js'</c-><c- p=\"\">);</c->\n<c- p=\"\">&lt;/</c-><c- f=\"\">script</c-><c- p=\"\">&gt;</c->\n</pre>\n       <p><code>example-1</code> produces an <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-images-4/#invalid-image\" id=\"ref-for-invalid-image⑤\">invalid image</a> as <code>\"red\"</code> does not\n    match the registered grammar.</p>\n       <p><code>example-2</code> produces an <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-images-4/#invalid-image\" id=\"ref-for-invalid-image⑥\">invalid image</a> as there are too many function\n    arguments.</p>\n      </div>"
+          "html": "<p>If <var>inputArguments</var> do not match the registered grammar given by <var>inputArgumentSyntaxes</var>, let\nthe image output be an <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-images-4/#invalid-image\" id=\"ref-for-invalid-image④\">invalid image</a> and abort all these steps.</p>"
         },
         {
           "html": "<p>Let <var>workletGlobalScope</var> be a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.css-houdini.org/css-paint-api-1/#paintworkletglobalscope\" id=\"ref-for-paintworkletglobalscope⑦\">PaintWorkletGlobalScope</a></code> from the the paint <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/worklets.html#worklet\" id=\"ref-for-worklet③\">Worklet</a></code>'s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/worklets.html#concept-worklet-global-scopes\" id=\"ref-for-concept-worklet-global-scopes\">global scopes</a>, following the rules defined in <a href=\"https://drafts.css-houdini.org/css-paint-api-1/#global-scope-selection\">§ 7.1 Global Scope Selection</a>.</p>\n      <p>The user agent <em>may</em> also <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/worklets.html#create-a-worklet-global-scope\" id=\"ref-for-create-a-worklet-global-scope\">create a worklet global scope</a> at this time, given the\npaint <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/worklets.html#worklet\" id=\"ref-for-worklet④\">Worklet</a></code>.</p>"
@@ -193,11 +193,11 @@
           "html": "<p>Let <var>paintDefinitionMap</var> be <var>workletGlobalScope</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.css-houdini.org/css-paint-api-1/#paint-definitions\" id=\"ref-for-paint-definitions①\">paint definitions</a> map.</p>"
         },
         {
-          "html": "If <var>paintDefinitionMap</var>[<var>name</var>] does not <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#map-exists\" id=\"ref-for-map-exists③\">exist</a>, run the following steps:",
+          "html": "When the user agent wants to <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"invoke-a-paint-callback\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">invoke a paint callback</dfn><span style=\"position: relative; height: 0px;\"></span><span style=\"position: relative; height: 0px;\"></span> given <var>name</var>, <var>inputArguments</var>, <var>snappedConcreteObjectSize</var>, and <var>workletGlobalScope</var>, it <em>must</em> run the following steps:",
           "rationale": "queue",
           "steps": [
             {
-              "html": "<a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task\" id=\"ref-for-queue-a-task①\">Queue a task</a> to run the following steps:",
+              "html": "When the user agent wants to <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"invoke-a-paint-callback\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">invoke a paint callback</dfn><span style=\"position: relative; height: 0px;\"></span><span style=\"position: relative; height: 0px;\"></span> given <var>name</var>, <var>inputArguments</var>, <var>snappedConcreteObjectSize</var>, and <var>workletGlobalScope</var>, it <em>must</em> run the following steps:",
               "rationale": "let",
               "steps": [
                 {
@@ -223,7 +223,7 @@
           "html": "<p>Let <var>paintClassInstanceMap</var> be <var>workletGlobalScope</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.css-houdini.org/css-paint-api-1/#paint-class-instances\" id=\"ref-for-paint-class-instances①\">paint class instances</a> map.</p>"
         },
         {
-          "html": "Let <var>paintInstance</var> be the result of <a data-link-type=\"dfn\" href=\"https://tc39.github.io/ecma262/#sec-get-o-p\" id=\"ref-for-sec-get-o-p⑥\">get</a> <var>paintClassInstanceMap</var>[|name]|. If <var>paintInstance</var> is null, run the following steps:",
+          "html": "When the user agent wants to <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"invoke-a-paint-callback\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">invoke a paint callback</dfn><span style=\"position: relative; height: 0px;\"></span><span style=\"position: relative; height: 0px;\"></span> given <var>name</var>, <var>inputArguments</var>, <var>snappedConcreteObjectSize</var>, and <var>workletGlobalScope</var>, it <em>must</em> run the following steps:",
           "rationale": "if",
           "steps": [
             {

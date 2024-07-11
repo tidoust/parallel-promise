@@ -333,6 +333,18 @@
           "html": "<p>Alternatively, at lower depths the encoder could begin combining multiple segments into single patches to reduce the fan out at each\nlevel.</p>"
         }
       ]
+    },
+    {
+      "html": "One security concern is that IFT fonts could potentially generate a large number of network requests for patches. This could cause\nproblems on the client or the service hosting the patches. The IFT specification contains a couple of mitigations to limit excessive\nnumber of requests:",
+      "rationale": "load",
+      "steps": [
+        {
+          "html": "<p><a href=\"https://w3c.github.io/IFT/Overview.html#extending-font-subset\">§ 4 Extending a Font Subset</a>: disallows re-requesting the same URI multiple times and has limits on the total number of requests\n that can be issued during the extension process.</p>"
+        },
+        {
+          "html": "<p><a data-link-type=\"abstract-op\" href=\"https://w3c.github.io/IFT/Overview.html#abstract-opdef-load-patch-file\" id=\"ref-for-abstract-opdef-load-patch-file②\">Load patch file</a>: specifies the use of <a data-link-type=\"biblio\" href=\"https://w3c.github.io/IFT/Overview.html#biblio-fetch\" title=\"Fetch Standard\">[fetch]</a> in implementing web browsers and matches the CORS settings for the initial\n font load. As a result cross-origin requests for patch files are disallowed unless the hosting service opts in via the appropriate\n access control headers.</p>"
+        }
+      ]
     }
   ]
 }

@@ -48,7 +48,7 @@
           "html": "If the year-value is greater than or equal to 70 and less than or equal to 99, increment the year-value by 1900."
         },
         {
-          "html": "If the year-value is greater than or equal to 0 and less than or equal to 69, increment the year-value by 2000. <ol><li>NOTE: Some existing user agents interpret two-digit years differently.</li></ol>",
+          "html": "If the year-value is greater than or equal to 0 and less than or equal to 69, increment the year-value by 2000.",
           "ignored": [
             "NOTE: Some existing user agents interpret two-digit years differently."
           ]

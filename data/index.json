@@ -1,7 +1,7 @@
 {
   "type": "crawl",
   "title": "Reffy crawl",
-  "date": "2024-07-09T08:09:07.815Z",
+  "date": "2024-07-11T13:15:37.315Z",
   "options": {
     "output": "reports/test",
     "modules": [
@@ -626,9 +626,9 @@
   },
   "stats": {
     "crawled": 614,
-    "errors": 5
+    "errors": 1
   },
-  "crawler": "reffy-16.0.5",
+  "crawler": "reffy-16.1.0",
   "results": [
     {
       "url": "https://aomediacodec.github.io/afgs1-spec/",
@@ -1192,7 +1192,7 @@
       ],
       "crawled": "https://httpwg.org/http-extensions/draft-ietf-httpbis-rfc6265bis.html",
       "crawlCacheInfo": {
-        "lastModified": "Tue, 09 Jul 2024 00:46:39 GMT"
+        "lastModified": "Thu, 11 Jul 2024 02:56:19 GMT"
       },
       "algorithms": "algorithms/rfc6265bis.json"
     },
@@ -1336,7 +1336,10 @@
       "versions": [
         "https://drafts.css-houdini.org/css-typed-om-2/"
       ],
-      "error": "Error: Loading https://drafts.css-houdini.org/css-typed-om-2/ triggered HTTP status 504\n    at processSpecification (C:\\data\\github.com\\w3c\\reffy\\src\\lib\\util.js:489:19)\n    at async crawlSpec (C:\\data\\github.com\\w3c\\reffy\\src\\lib\\specs-crawler.js:107:22)\n    at async processSpec (C:\\data\\github.com\\w3c\\reffy\\src\\lib\\specs-crawler.js:349:22)\n    at async ThrottledQueue.runThrottled (C:\\data\\github.com\\w3c\\reffy\\src\\lib\\throttled-queue.js:78:22)"
+      "crawled": "https://drafts.css-houdini.org/css-typed-om-2/",
+      "crawlCacheInfo": {
+        "lastModified": "Thu, 4 Apr 2024 18:28:24 GMT"
+      }
     },
     {
       "url": "https://drafts.css-houdini.org/font-metrics-api-1/",
@@ -1375,7 +1378,10 @@
       "versions": [
         "https://drafts.css-houdini.org/font-metrics-api-1/"
       ],
-      "error": "Error: Loading https://drafts.css-houdini.org/font-metrics-api-1/ triggered HTTP status 504\n    at processSpecification (C:\\data\\github.com\\w3c\\reffy\\src\\lib\\util.js:489:19)\n    at async crawlSpec (C:\\data\\github.com\\w3c\\reffy\\src\\lib\\specs-crawler.js:107:22)\n    at async processSpec (C:\\data\\github.com\\w3c\\reffy\\src\\lib\\specs-crawler.js:349:22)\n    at async ThrottledQueue.runThrottled (C:\\data\\github.com\\w3c\\reffy\\src\\lib\\throttled-queue.js:78:22)"
+      "crawled": "https://drafts.css-houdini.org/font-metrics-api-1/",
+      "crawlCacheInfo": {
+        "lastModified": "Thu, 4 Apr 2024 18:28:24 GMT"
+      }
     },
     {
       "url": "https://drafts.csswg.org/css-backgrounds-4/",
@@ -1426,7 +1432,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-backgrounds-4/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -1477,7 +1483,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-borders-4/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -1529,7 +1535,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-color-6/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:26 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -1572,7 +1578,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-color-hdr/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -1617,7 +1623,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-conditional-values-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -1669,7 +1675,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-display-4/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -1721,7 +1727,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-easing-2/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:20 GMT"
       },
       "algorithms": "algorithms/css-easing-2.json"
     },
@@ -1773,7 +1779,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-env-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:26 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-env-1.json"
     },
@@ -1819,7 +1825,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-extensions-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -1864,7 +1870,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-forms-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:26 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -1916,7 +1922,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-gcpm-4/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -1968,7 +1974,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-grid-3/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-grid-3.json"
     },
@@ -2021,7 +2027,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-images-5/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -2066,7 +2072,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-link-params-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:26 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -2118,7 +2124,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-multicol-2/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -2170,7 +2176,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-overflow-5/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-overflow-5.json"
     },
@@ -2223,7 +2229,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-page-4/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:26 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -2275,7 +2281,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-position-4/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:20 GMT"
       },
       "algorithms": "algorithms/css-position-4.json"
     },
@@ -2328,7 +2334,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-scroll-snap-2/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-scroll-snap-2.json"
     },
@@ -2381,7 +2387,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-shapes-2/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:20 GMT"
       }
     },
     {
@@ -2432,7 +2438,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-size-adjust-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:20 GMT"
       }
     },
     {
@@ -2484,7 +2490,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-values-5/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-values-5.json"
     },
@@ -2537,7 +2543,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-variables-2/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-variables-2.json"
     },
@@ -2586,7 +2592,11 @@
       "versions": [
         "https://drafts.fxtf.org/compositing-2/"
       ],
-      "error": "Error: Loading https://drafts.fxtf.org/compositing-2/ triggered HTTP status 504\n    at processSpecification (C:\\data\\github.com\\w3c\\reffy\\src\\lib\\util.js:489:19)\n    at async crawlSpec (C:\\data\\github.com\\w3c\\reffy\\src\\lib\\specs-crawler.js:107:22)\n    at async processSpec (C:\\data\\github.com\\w3c\\reffy\\src\\lib\\specs-crawler.js:349:22)\n    at async ThrottledQueue.runThrottled (C:\\data\\github.com\\w3c\\reffy\\src\\lib\\throttled-queue.js:78:22)\n    at async Promise.all (index 40)\n    at async crawlList (C:\\data\\github.com\\w3c\\reffy\\src\\lib\\specs-crawler.js:370:21)"
+      "crawled": "https://drafts.fxtf.org/compositing-2/",
+      "crawlCacheInfo": {
+        "lastModified": "Thu, 06 Jan 2022 15:59:35 GMT"
+      },
+      "algorithms": "algorithms/compositing-2.json"
     },
     {
       "url": "https://drafts.fxtf.org/filter-effects-2/",
@@ -2633,7 +2643,11 @@
       "versions": [
         "https://drafts.fxtf.org/filter-effects-2/"
       ],
-      "error": "Error: Loading https://drafts.fxtf.org/filter-effects-2/ triggered HTTP status 504\n    at processSpecification (C:\\data\\github.com\\w3c\\reffy\\src\\lib\\util.js:489:19)\n    at async crawlSpec (C:\\data\\github.com\\w3c\\reffy\\src\\lib\\specs-crawler.js:107:22)\n    at async processSpec (C:\\data\\github.com\\w3c\\reffy\\src\\lib\\specs-crawler.js:349:22)\n    at async ThrottledQueue.runThrottled (C:\\data\\github.com\\w3c\\reffy\\src\\lib\\throttled-queue.js:78:22)\n    at async Promise.all (index 41)\n    at async crawlList (C:\\data\\github.com\\w3c\\reffy\\src\\lib\\specs-crawler.js:370:21)"
+      "crawled": "https://drafts.fxtf.org/filter-effects-2/",
+      "crawlCacheInfo": {
+        "lastModified": "Wed, 24 Apr 2024 19:37:00 GMT"
+      },
+      "algorithms": "algorithms/filter-effects-2.json"
     },
     {
       "url": "https://encoding.spec.whatwg.org/",
@@ -2814,7 +2828,7 @@
       "versions": [
         "https://fidoalliance.org/specs/fido-v2.1-ps-20210615/fido-client-to-authenticator-protocol-v2.1-ps-errata-20220621.html"
       ],
-      "error": "Error: Switch option without <dd> found: authorized, the authenticator sets the minPinLength return value to the current minimum PIN length value.\n        \nhttps://fidoalliance.org/specs/fido-v2.1-ps-20210615/reffy/scripts/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/extract-algorithms.mjs:489:19\nArray.map (<anonymous>)\nserializeSteps (https://fidoalliance.org/specs/fido-v2.1-ps-20210615/reffy/scripts/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/extract-algorithms.mjs:483:53)\n    at evaluate (evaluate at processSpecification (C:\\data\\github.com\\w3c\\reffy\\src\\lib\\util.js:664:36), <anonymous>:6:28)\n    at #evaluate (C:\\data\\github.com\\w3c\\reffy\\node_modules\\puppeteer-core\\lib\\cjs\\puppeteer\\cdp\\ExecutionContext.js:376:56)\n    at async ExecutionContext.evaluate (C:\\data\\github.com\\w3c\\reffy\\node_modules\\puppeteer-core\\lib\\cjs\\puppeteer\\cdp\\ExecutionContext.js:271:16)\n    at async IsolatedWorld.evaluate (C:\\data\\github.com\\w3c\\reffy\\node_modules\\puppeteer-core\\lib\\cjs\\puppeteer\\cdp\\IsolatedWorld.js:99:16)\n    at async CdpFrame.evaluate (C:\\data\\github.com\\w3c\\reffy\\node_modules\\puppeteer-core\\lib\\cjs\\puppeteer\\api\\Frame.js:338:20)\n    at async CdpPage.evaluate (C:\\data\\github.com\\w3c\\reffy\\node_modules\\puppeteer-core\\lib\\cjs\\puppeteer\\api\\Page.js:826:20)\n    at async processSpecification (C:\\data\\github.com\\w3c\\reffy\\src\\lib\\util.js:664:25)\n    at async crawlSpec (C:\\data\\github.com\\w3c\\reffy\\src\\lib\\specs-crawler.js:107:22)\n    at async processSpec (C:\\data\\github.com\\w3c\\reffy\\src\\lib\\specs-crawler.js:349:22)\n    at async ThrottledQueue.runThrottled (C:\\data\\github.com\\w3c\\reffy\\src\\lib\\throttled-queue.js:78:22)"
+      "error": "Error: Switch option without <dd> found: authorized, the authenticator sets the minPinLength return value to the current minimum PIN length value.\n        \nhttps://fidoalliance.org/specs/fido-v2.1-ps-20210615/reffy/scripts/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/extract-algorithms.mjs:530:19\nArray.map (<anonymous>)\nserializeSteps (https://fidoalliance.org/specs/fido-v2.1-ps-20210615/reffy/scripts/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/extract-algorithms.mjs:524:53)\n    at evaluate (evaluate at processSpecification (C:\\data\\github.com\\w3c\\reffy\\src\\lib\\util.js:664:36), <anonymous>:6:28)\n    at #evaluate (C:\\data\\github.com\\w3c\\reffy\\node_modules\\puppeteer-core\\lib\\cjs\\puppeteer\\cdp\\ExecutionContext.js:376:56)\n    at async ExecutionContext.evaluate (C:\\data\\github.com\\w3c\\reffy\\node_modules\\puppeteer-core\\lib\\cjs\\puppeteer\\cdp\\ExecutionContext.js:271:16)\n    at async IsolatedWorld.evaluate (C:\\data\\github.com\\w3c\\reffy\\node_modules\\puppeteer-core\\lib\\cjs\\puppeteer\\cdp\\IsolatedWorld.js:99:16)\n    at async CdpFrame.evaluate (C:\\data\\github.com\\w3c\\reffy\\node_modules\\puppeteer-core\\lib\\cjs\\puppeteer\\api\\Frame.js:338:20)\n    at async CdpPage.evaluate (C:\\data\\github.com\\w3c\\reffy\\node_modules\\puppeteer-core\\lib\\cjs\\puppeteer\\api\\Page.js:826:20)\n    at async processSpecification (C:\\data\\github.com\\w3c\\reffy\\src\\lib\\util.js:664:25)\n    at async crawlSpec (C:\\data\\github.com\\w3c\\reffy\\src\\lib\\specs-crawler.js:107:22)\n    at async processSpec (C:\\data\\github.com\\w3c\\reffy\\src\\lib\\specs-crawler.js:349:22)\n    at async ThrottledQueue.runThrottled (C:\\data\\github.com\\w3c\\reffy\\src\\lib\\throttled-queue.js:78:22)"
     },
     {
       "url": "https://fs.spec.whatwg.org/",
@@ -3438,7 +3452,7 @@
       ],
       "crawled": "https://notifications.spec.whatwg.org/",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 04 Apr 2024 14:59:09 GMT"
+        "lastModified": "Wed, 10 Jul 2024 12:28:55 GMT"
       },
       "algorithms": "algorithms/notifications.json"
     },
@@ -3912,7 +3926,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/ANGLE_instanced_arrays/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -3959,7 +3973,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/EXT_blend_minmax/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -4006,7 +4020,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/EXT_color_buffer_float/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -4053,7 +4067,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/EXT_color_buffer_half_float/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -4100,7 +4114,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/EXT_disjoint_timer_query_webgl2/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -4147,7 +4161,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/EXT_disjoint_timer_query/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -4194,7 +4208,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/EXT_float_blend/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -4241,7 +4255,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/EXT_frag_depth/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -4288,7 +4302,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/EXT_shader_texture_lod/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -4335,7 +4349,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/EXT_sRGB/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -4382,7 +4396,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/EXT_texture_compression_bptc/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -4429,7 +4443,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/EXT_texture_compression_rgtc/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -4476,7 +4490,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/EXT_texture_filter_anisotropic/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -4523,7 +4537,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/EXT_texture_norm16/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -4570,7 +4584,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/KHR_parallel_shader_compile/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -4617,7 +4631,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/OES_draw_buffers_indexed/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -4664,7 +4678,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/OES_element_index_uint/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -4711,7 +4725,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/OES_fbo_render_mipmap/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -4758,7 +4772,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/OES_standard_derivatives/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -4805,7 +4819,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/OES_texture_float_linear/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -4852,7 +4866,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/OES_texture_float/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -4899,7 +4913,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/OES_texture_half_float_linear/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -4946,7 +4960,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/OES_texture_half_float/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -4993,7 +5007,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/OES_vertex_array_object/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -5040,7 +5054,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/OVR_multiview2/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -5087,7 +5101,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/WEBGL_blend_equation_advanced_coherent/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -5134,7 +5148,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/WEBGL_clip_cull_distance/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -5181,7 +5195,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/WEBGL_color_buffer_float/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -5228,7 +5242,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/WEBGL_compressed_texture_astc/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -5275,7 +5289,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/WEBGL_compressed_texture_etc/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -5322,7 +5336,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/WEBGL_compressed_texture_etc1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -5369,7 +5383,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/WEBGL_compressed_texture_pvrtc/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -5416,7 +5430,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/WEBGL_compressed_texture_s3tc_srgb/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -5463,7 +5477,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/WEBGL_compressed_texture_s3tc/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -5510,7 +5524,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/WEBGL_debug_renderer_info/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -5557,7 +5571,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/WEBGL_debug_shaders/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -5604,7 +5618,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/WEBGL_depth_texture/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -5651,7 +5665,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/WEBGL_draw_buffers/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -5698,7 +5712,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/WEBGL_draw_instanced_base_vertex_base_instance/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -5745,7 +5759,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/WEBGL_lose_context/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -5792,7 +5806,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/WEBGL_multi_draw_instanced_base_vertex_base_instance/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -5839,7 +5853,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/WEBGL_multi_draw/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -5886,7 +5900,7 @@
       ],
       "crawled": "https://registry.khronos.org/webgl/extensions/WEBGL_provoking_vertex/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 31 May 2024 07:51:12 GMT"
+        "lastModified": "Wed, 10 Jul 2024 01:12:20 GMT"
       }
     },
     {
@@ -6304,7 +6318,7 @@
       ],
       "crawled": "https://tc39.es/ecma262/multipage/",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 04 Jul 2024 15:04:41 GMT"
+        "lastModified": "Thu, 11 Jul 2024 05:41:08 GMT"
       }
     },
     {
@@ -6351,7 +6365,7 @@
       ],
       "crawled": "https://tc39.es/ecma402/",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 27 Jun 2024 14:57:58 GMT"
+        "lastModified": "Thu, 27 Jun 2024 14:57:57 GMT"
       }
     },
     {
@@ -6842,7 +6856,7 @@
       ],
       "crawled": "https://tc39.es/proposal-intl-locale-info/",
       "crawlCacheInfo": {
-        "lastModified": "Tue, 02 Jan 2024 21:42:19 GMT"
+        "lastModified": "Tue, 09 Jul 2024 18:21:41 GMT"
       }
     },
     {
@@ -7293,7 +7307,7 @@
       ],
       "crawled": "https://tc39.es/source-map",
       "crawlCacheInfo": {
-        "lastModified": "Wed, 26 Jun 2024 11:24:56 GMT"
+        "lastModified": "Thu, 11 Jul 2024 10:08:39 GMT"
       }
     },
     {
@@ -8882,7 +8896,7 @@
       ],
       "crawled": "https://webidl.spec.whatwg.org/",
       "crawlCacheInfo": {
-        "lastModified": "Tue, 02 Jul 2024 03:12:26 GMT"
+        "lastModified": "Wed, 10 Jul 2024 07:00:13 GMT"
       },
       "algorithms": "algorithms/webidl.json"
     },
@@ -9014,7 +9028,7 @@
       ],
       "crawled": "https://wicg.github.io/attribution-reporting-api/",
       "crawlCacheInfo": {
-        "lastModified": "Tue, 02 Jul 2024 20:59:34 GMT"
+        "lastModified": "Wed, 10 Jul 2024 14:22:21 GMT"
       },
       "algorithms": "algorithms/attribution-reporting-api.json"
     },
@@ -9915,7 +9929,7 @@
       ],
       "crawled": "https://wicg.github.io/fenced-frame/",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 06 Jun 2024 16:41:44 GMT"
+        "lastModified": "Wed, 10 Jul 2024 19:25:38 GMT"
       },
       "algorithms": "algorithms/fenced-frame.json"
     },
@@ -11685,7 +11699,7 @@
       ],
       "crawled": "https://wicg.github.io/shared-storage/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 21 Jun 2024 18:12:27 GMT"
+        "lastModified": "Thu, 11 Jul 2024 01:20:40 GMT"
       },
       "algorithms": "algorithms/shared-storage.json"
     },
@@ -12957,7 +12971,7 @@
       ],
       "crawled": "https://www.rfc-editor.org/rfc/rfc6797",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 28 Jun 2024 20:36:46 GMT"
+        "lastModified": "Fri, 05 Jul 2024 22:51:41 GMT"
       }
     },
     {
@@ -13041,7 +13055,7 @@
       ],
       "crawled": "https://www.rfc-editor.org/rfc/rfc7239",
       "crawlCacheInfo": {
-        "lastModified": "Tue, 02 Jul 2024 10:20:32 GMT"
+        "lastModified": "Wed, 10 Jul 2024 23:11:34 GMT"
       }
     },
     {
@@ -13083,7 +13097,7 @@
       ],
       "crawled": "https://www.rfc-editor.org/rfc/rfc7469",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 28 Jun 2024 22:50:51 GMT"
+        "lastModified": "Sat, 06 Jul 2024 01:35:13 GMT"
       }
     },
     {
@@ -13613,7 +13627,7 @@
       ],
       "crawled": "https://www.rfc-editor.org/rfc/rfc8942",
       "crawlCacheInfo": {
-        "lastModified": "Sat, 29 Jun 2024 00:46:02 GMT"
+        "lastModified": "Sat, 06 Jul 2024 01:39:05 GMT"
       }
     },
     {
@@ -14250,7 +14264,7 @@
       ],
       "crawled": "https://w3c.github.io/accname/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 21 Jun 2024 16:52:16 GMT"
+        "lastModified": "Wed, 10 Jul 2024 08:15:28 GMT"
       },
       "algorithms": "algorithms/accname-1.2.json"
     },
@@ -15322,7 +15336,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-2022/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:26 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -15374,7 +15388,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-2023/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -15432,7 +15446,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-align-3/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-align-3.json"
     },
@@ -15485,7 +15499,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-anchor-position-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-anchor-position-1.json"
     },
@@ -15601,7 +15615,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-animations-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -15659,7 +15673,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-animations-2/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-animations-2.json"
     },
@@ -15719,7 +15733,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-backgrounds-3/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:26 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-backgrounds-3.json"
     },
@@ -15779,7 +15793,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-box-3/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -15837,7 +15851,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-box-4/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -15896,7 +15910,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-break-3/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:26 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -15954,7 +15968,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-break-4/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -16012,7 +16026,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-cascade-3/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -16072,7 +16086,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-cascade-4/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:26 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-cascade-4.json"
     },
@@ -16132,7 +16146,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-cascade-5/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -16190,7 +16204,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-cascade-6/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -16248,7 +16262,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-color-3/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:26 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -16308,7 +16322,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-color-4/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-color-4.json"
     },
@@ -16368,7 +16382,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-color-5/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:26 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:20 GMT"
       },
       "algorithms": "algorithms/css-color-5.json"
     },
@@ -16427,7 +16441,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-color-adjust-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-color-adjust-1.json"
     },
@@ -16487,7 +16501,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-conditional-3/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-conditional-3.json"
     },
@@ -16547,7 +16561,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-conditional-4/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -16605,7 +16619,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-conditional-5/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-conditional-5.json"
     },
@@ -16664,7 +16678,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-contain-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:26 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:20 GMT"
       },
       "algorithms": "algorithms/css-contain-1.json"
     },
@@ -16725,7 +16739,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-contain-2/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:26 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-contain-2.json"
     },
@@ -16784,7 +16798,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-contain-3/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -16842,7 +16856,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-content-3/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-content-3.json"
     },
@@ -16901,7 +16915,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-counter-styles-3/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-counter-styles-3.json"
     },
@@ -16961,7 +16975,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-display-3/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -17020,7 +17034,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-easing-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-easing-1.json"
     },
@@ -17079,7 +17093,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-flexbox-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-flexbox-1.json"
     },
@@ -17138,7 +17152,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-font-loading-3/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-font-loading-3.json"
     },
@@ -17200,7 +17214,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-fonts-4/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:26 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-fonts-4.json"
     },
@@ -17259,7 +17273,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-fonts-5/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -17318,7 +17332,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-gcpm-3/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -17376,7 +17390,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-grid-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-grid-1.json"
     },
@@ -17437,7 +17451,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-grid-2/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-grid-2.json"
     },
@@ -17490,7 +17504,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-highlight-api-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-highlight-api-1.json"
     },
@@ -17550,7 +17564,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-images-3/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:20 GMT"
       },
       "algorithms": "algorithms/css-images-3.json"
     },
@@ -17610,7 +17624,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-images-4/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-images-4.json"
     },
@@ -17669,7 +17683,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-inline-3/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-inline-3.json"
     },
@@ -17778,7 +17792,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-line-grid-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:26 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -17836,7 +17850,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-lists-3/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:26 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-lists-3.json"
     },
@@ -17895,7 +17909,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-logical-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:26 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -18010,7 +18024,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-multicol-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -18068,7 +18082,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-namespaces-3/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -18120,7 +18134,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-nav-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-nav-1.json"
     },
@@ -18173,7 +18187,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-nesting-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -18232,7 +18246,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-overflow-3/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -18291,7 +18305,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-overflow-4/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -18349,7 +18363,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-overscroll-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:20 GMT"
       }
     },
     {
@@ -18408,7 +18422,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-page-3/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:26 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-page-3.json"
     },
@@ -18461,7 +18475,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-page-floats-3/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-page-floats-3.json"
     },
@@ -18577,7 +18591,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-position-3/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-position-3.json"
     },
@@ -18692,7 +18706,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-pseudo-4/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-pseudo-4.json"
     },
@@ -18745,7 +18759,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-regions-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:26 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -18797,7 +18811,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-rhythm-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -18855,7 +18869,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-round-display-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -18913,7 +18927,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-ruby-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-ruby-1.json"
     },
@@ -18972,7 +18986,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-scoping-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:26 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-scoping-1.json"
     },
@@ -19031,7 +19045,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-scroll-anchoring-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-scroll-anchoring-1.json"
     },
@@ -19091,7 +19105,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-scroll-snap-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-scroll-snap-1.json"
     },
@@ -19150,7 +19164,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-scrollbars-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -19208,7 +19222,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-shadow-parts-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-shadow-parts-1.json"
     },
@@ -19268,7 +19282,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-shapes-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:20 GMT"
       }
     },
     {
@@ -19327,7 +19341,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-sizing-3/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-sizing-3.json"
     },
@@ -19386,7 +19400,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-sizing-4/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:26 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -19444,7 +19458,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-speech-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -19500,7 +19514,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-style-attr/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -19559,7 +19573,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-syntax-3/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-syntax-3.json"
     },
@@ -19618,7 +19632,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-tables-3/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-tables-3.json"
     },
@@ -19678,7 +19692,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-text-3/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-text-3.json"
     },
@@ -19737,7 +19751,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-text-4/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:26 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-text-4.json"
     },
@@ -19797,7 +19811,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-text-decor-3/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -19855,7 +19869,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-text-decor-4/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -19914,7 +19928,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-transforms-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-transforms-1.json"
     },
@@ -19973,7 +19987,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-transforms-2/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-transforms-2.json"
     },
@@ -20033,7 +20047,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-transitions-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-transitions-1.json"
     },
@@ -20092,7 +20106,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-transitions-2/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-transitions-2.json"
     },
@@ -20208,7 +20222,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-ui-3/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-ui-3.json"
     },
@@ -20268,7 +20282,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-ui-4/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:20 GMT"
       }
     },
     {
@@ -20328,7 +20342,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-values-3/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -20388,7 +20402,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-values-4/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:26 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-values-4.json"
     },
@@ -20448,7 +20462,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-variables-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-variables-1.json"
     },
@@ -20502,7 +20516,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-view-transitions-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:20 GMT"
       },
       "algorithms": "algorithms/css-view-transitions-1.json"
     },
@@ -20555,7 +20569,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-view-transitions-2/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:26 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-view-transitions-2.json"
     },
@@ -20616,7 +20630,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-viewport/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-viewport-1.json"
     },
@@ -20675,7 +20689,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-will-change-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -20734,7 +20748,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-writing-modes-3/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -20793,7 +20807,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-writing-modes-4/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/css-writing-modes-4.json"
     },
@@ -20984,7 +20998,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css2/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/CSS22.json"
     },
@@ -21043,7 +21057,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-exclusions-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:20 GMT"
       },
       "algorithms": "algorithms/css3-exclusions.json"
     },
@@ -21102,7 +21116,7 @@
       ],
       "crawled": "https://drafts.csswg.org/cssom-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:26 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/cssom-1.json"
     },
@@ -21162,7 +21176,7 @@
       ],
       "crawled": "https://drafts.csswg.org/cssom-view-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/cssom-view-1.json"
     },
@@ -22981,7 +22995,7 @@
       ],
       "crawled": "https://w3c.github.io/IntersectionObserver/",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 27 Jun 2024 18:36:18 GMT"
+        "lastModified": "Thu, 27 Jun 2024 18:36:19 GMT"
       },
       "algorithms": "algorithms/intersection-observer.json"
     },
@@ -23123,7 +23137,7 @@
       ],
       "crawled": "https://w3c.github.io/json-ld-syntax/",
       "crawlCacheInfo": {
-        "lastModified": "Wed, 29 May 2024 15:27:55 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:00:05 GMT"
       }
     },
     {
@@ -23391,7 +23405,7 @@
       ],
       "crawled": "https://w3c.github.io/mathml-core/",
       "crawlCacheInfo": {
-        "lastModified": "Wed, 12 Jun 2024 12:36:27 GMT"
+        "lastModified": "Wed, 10 Jul 2024 13:28:15 GMT"
       },
       "algorithms": "algorithms/mathml-core.json"
     },
@@ -23494,7 +23508,7 @@
       ],
       "crawled": "https://w3c.github.io/media-capabilities/",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 04 Jul 2024 09:15:45 GMT"
+        "lastModified": "Thu, 11 Jul 2024 11:38:13 GMT"
       },
       "algorithms": "algorithms/media-capabilities.json"
     },
@@ -23873,7 +23887,7 @@
       ],
       "crawled": "https://drafts.csswg.org/mediaqueries-3/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:20 GMT"
       }
     },
     {
@@ -23933,7 +23947,7 @@
       ],
       "crawled": "https://drafts.csswg.org/mediaqueries-4/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:26 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:20 GMT"
       }
     },
     {
@@ -23991,7 +24005,7 @@
       ],
       "crawled": "https://drafts.csswg.org/mediaqueries-5/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -25782,7 +25796,7 @@
       ],
       "crawled": "https://w3c.github.io/push-api/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 15:29:26 GMT"
+        "lastModified": "Wed, 10 Jul 2024 14:04:33 GMT"
       },
       "algorithms": "algorithms/push-api.json"
     },
@@ -26486,7 +26500,7 @@
       ],
       "crawled": "https://drafts.csswg.org/resize-observer-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:26 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/resize-observer-1.json"
     },
@@ -26769,7 +26783,7 @@
       ],
       "crawled": "https://drafts.csswg.org/scroll-animations-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/scroll-animations-1.json"
     },
@@ -26993,7 +27007,7 @@
       ],
       "crawled": "https://drafts.csswg.org/selectors-3/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       }
     },
     {
@@ -27052,7 +27066,7 @@
       ],
       "crawled": "https://drafts.csswg.org/selectors-4/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:26 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/selectors-4.json"
     },
@@ -28610,7 +28624,7 @@
       ],
       "crawled": "https://w3c.github.io/vc-data-integrity/",
       "crawlCacheInfo": {
-        "lastModified": "Sun, 07 Jul 2024 16:19:47 GMT"
+        "lastModified": "Tue, 09 Jul 2024 13:14:20 GMT"
       },
       "algorithms": "algorithms/vc-data-integrity.json"
     },
@@ -28658,7 +28672,7 @@
       ],
       "crawled": "https://w3c.github.io/vc-data-model/",
       "crawlCacheInfo": {
-        "lastModified": "Sat, 06 Jul 2024 14:31:28 GMT"
+        "lastModified": "Tue, 09 Jul 2024 13:54:45 GMT"
       },
       "algorithms": "algorithms/vc-data-model-2.0.json"
     },
@@ -29122,7 +29136,7 @@
       ],
       "crawled": "https://drafts.csswg.org/web-animations-1/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/web-animations-1.json"
     },
@@ -29181,7 +29195,7 @@
       ],
       "crawled": "https://drafts.csswg.org/web-animations-2/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 20:19:25 GMT"
+        "lastModified": "Wed, 10 Jul 2024 21:34:19 GMT"
       },
       "algorithms": "algorithms/web-animations-2.json"
     },
@@ -29346,7 +29360,7 @@
       ],
       "crawled": "https://webaudio.github.io/web-audio-api/",
       "crawlCacheInfo": {
-        "lastModified": "Tue, 14 May 2024 20:52:47 GMT"
+        "lastModified": "Wed, 10 Jul 2024 15:50:27 GMT"
       },
       "algorithms": "algorithms/webaudio.json"
     },
@@ -29402,7 +29416,7 @@
       ],
       "crawled": "https://w3c.github.io/webauthn/",
       "crawlCacheInfo": {
-        "lastModified": "Wed, 26 Jun 2024 19:59:33 GMT"
+        "lastModified": "Thu, 11 Jul 2024 13:05:17 GMT"
       },
       "algorithms": "algorithms/webauthn-3.json"
     },
@@ -29451,7 +29465,7 @@
       ],
       "crawled": "https://w3c.github.io/webcodecs/aac_codec_registration.html",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 04 Jul 2024 09:39:01 GMT"
+        "lastModified": "Thu, 11 Jul 2024 09:54:20 GMT"
       }
     },
     {
@@ -29499,7 +29513,7 @@
       ],
       "crawled": "https://w3c.github.io/webcodecs/alaw_codec_registration.html",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 04 Jul 2024 09:39:01 GMT"
+        "lastModified": "Thu, 11 Jul 2024 09:54:20 GMT"
       }
     },
     {
@@ -29547,7 +29561,7 @@
       ],
       "crawled": "https://w3c.github.io/webcodecs/av1_codec_registration.html",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 04 Jul 2024 09:39:01 GMT"
+        "lastModified": "Thu, 11 Jul 2024 09:54:20 GMT"
       }
     },
     {
@@ -29595,7 +29609,7 @@
       ],
       "crawled": "https://w3c.github.io/webcodecs/avc_codec_registration.html",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 04 Jul 2024 09:39:01 GMT"
+        "lastModified": "Thu, 11 Jul 2024 09:54:20 GMT"
       }
     },
     {
@@ -29643,7 +29657,7 @@
       ],
       "crawled": "https://w3c.github.io/webcodecs/codec_registry.html",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 04 Jul 2024 09:39:01 GMT"
+        "lastModified": "Thu, 11 Jul 2024 09:54:20 GMT"
       },
       "algorithms": "algorithms/webcodecs-codec-registry.json"
     },
@@ -29692,7 +29706,7 @@
       ],
       "crawled": "https://w3c.github.io/webcodecs/flac_codec_registration.html",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 04 Jul 2024 09:39:01 GMT"
+        "lastModified": "Thu, 11 Jul 2024 09:54:20 GMT"
       },
       "algorithms": "algorithms/webcodecs-flac-codec-registration.json"
     },
@@ -29741,7 +29755,7 @@
       ],
       "crawled": "https://w3c.github.io/webcodecs/hevc_codec_registration.html",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 04 Jul 2024 09:39:01 GMT"
+        "lastModified": "Thu, 11 Jul 2024 09:54:20 GMT"
       }
     },
     {
@@ -29789,7 +29803,7 @@
       ],
       "crawled": "https://w3c.github.io/webcodecs/mp3_codec_registration.html",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 04 Jul 2024 09:39:01 GMT"
+        "lastModified": "Thu, 11 Jul 2024 09:54:20 GMT"
       }
     },
     {
@@ -29837,7 +29851,7 @@
       ],
       "crawled": "https://w3c.github.io/webcodecs/opus_codec_registration.html",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 04 Jul 2024 09:39:01 GMT"
+        "lastModified": "Thu, 11 Jul 2024 09:54:20 GMT"
       },
       "algorithms": "algorithms/webcodecs-opus-codec-registration.json"
     },
@@ -29886,7 +29900,7 @@
       ],
       "crawled": "https://w3c.github.io/webcodecs/pcm_codec_registration.html",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 04 Jul 2024 09:39:01 GMT"
+        "lastModified": "Thu, 11 Jul 2024 09:54:20 GMT"
       }
     },
     {
@@ -29934,7 +29948,7 @@
       ],
       "crawled": "https://w3c.github.io/webcodecs/ulaw_codec_registration.html",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 04 Jul 2024 09:39:01 GMT"
+        "lastModified": "Thu, 11 Jul 2024 09:54:20 GMT"
       }
     },
     {
@@ -29982,7 +29996,7 @@
       ],
       "crawled": "https://w3c.github.io/webcodecs/vorbis_codec_registration.html",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 04 Jul 2024 09:39:01 GMT"
+        "lastModified": "Thu, 11 Jul 2024 09:54:20 GMT"
       }
     },
     {
@@ -30030,7 +30044,7 @@
       ],
       "crawled": "https://w3c.github.io/webcodecs/vp8_codec_registration.html",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 04 Jul 2024 09:39:01 GMT"
+        "lastModified": "Thu, 11 Jul 2024 09:54:20 GMT"
       }
     },
     {
@@ -30078,7 +30092,7 @@
       ],
       "crawled": "https://w3c.github.io/webcodecs/vp9_codec_registration.html",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 04 Jul 2024 09:39:01 GMT"
+        "lastModified": "Thu, 11 Jul 2024 09:54:20 GMT"
       }
     },
     {
@@ -30132,7 +30146,7 @@
       ],
       "crawled": "https://w3c.github.io/webcodecs/",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 04 Jul 2024 09:39:01 GMT"
+        "lastModified": "Thu, 11 Jul 2024 09:54:20 GMT"
       },
       "algorithms": "algorithms/webcodecs.json"
     },
@@ -30298,7 +30312,7 @@
       ],
       "crawled": "https://gpuweb.github.io/gpuweb/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 21:56:05 GMT"
+        "lastModified": "Wed, 10 Jul 2024 16:51:30 GMT"
       },
       "algorithms": "algorithms/webgpu.json"
     },
@@ -30353,7 +30367,7 @@
       ],
       "crawled": "https://webaudio.github.io/web-midi-api/",
       "crawlCacheInfo": {
-        "lastModified": "Sat, 06 Jul 2024 06:37:24 GMT"
+        "lastModified": "Wed, 10 Jul 2024 17:04:59 GMT"
       },
       "algorithms": "algorithms/webmidi.json"
     },
@@ -30408,7 +30422,7 @@
       ],
       "crawled": "https://webmachinelearning.github.io/webnn/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 05 Jul 2024 04:01:37 GMT"
+        "lastModified": "Thu, 11 Jul 2024 05:13:39 GMT"
       },
       "algorithms": "algorithms/webnn.json"
     },
@@ -31397,7 +31411,7 @@
       ],
       "crawled": "https://gpuweb.github.io/gpuweb/wgsl/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 08 Jul 2024 21:56:05 GMT"
+        "lastModified": "Wed, 10 Jul 2024 16:51:30 GMT"
       },
       "algorithms": "algorithms/WGSL.json"
     },

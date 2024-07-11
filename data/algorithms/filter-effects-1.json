@@ -13,83 +13,43 @@
           "steps": [
             {
               "case": "<blur()>",
-              "steps": [
-                {
-                  "html": "<p>Interpolate values as <a href=\"https://drafts.csswg.org/css-transitions/#animtype-length\">length</a>.</p>"
-                }
-              ]
+              "html": "<p>Interpolate values as <a href=\"https://drafts.csswg.org/css-transitions/#animtype-length\">length</a>.</p>"
             },
             {
               "case": "<brightness()>",
-              "steps": [
-                {
-                  "html": "<p>Convert percentage values to numbers with 0% being relative to 0 and 100% relative to 1. Interpolate values <a href=\"https://drafts.csswg.org/css-transitions/#animtype-number\">number</a>.</p>"
-                }
-              ]
+              "html": "<p>Convert percentage values to numbers with 0% being relative to 0 and 100% relative to 1. Interpolate values <a href=\"https://drafts.csswg.org/css-transitions/#animtype-number\">number</a>.</p>"
             },
             {
               "case": "<contrast()>",
-              "steps": [
-                {
-                  "html": "<p>Convert percentage values to numbers with 0% being relative to 0 and 100% relative to 1. Interpolate values <a href=\"https://drafts.csswg.org/css-transitions/#animtype-number\">number</a>.</p>"
-                }
-              ]
+              "html": "<p>Convert percentage values to numbers with 0% being relative to 0 and 100% relative to 1. Interpolate values <a href=\"https://drafts.csswg.org/css-transitions/#animtype-number\">number</a>.</p>"
             },
             {
               "case": "<grayscale()>",
-              "steps": [
-                {
-                  "html": "<p>Convert percentage values to numbers with 0% being relative to 0 and 100% relative to 1. Interpolate values <a href=\"https://drafts.csswg.org/css-transitions/#animtype-number\">number</a>.</p>"
-                }
-              ]
+              "html": "<p>Convert percentage values to numbers with 0% being relative to 0 and 100% relative to 1. Interpolate values <a href=\"https://drafts.csswg.org/css-transitions/#animtype-number\">number</a>.</p>"
             },
             {
               "case": "<invert()>",
-              "steps": [
-                {
-                  "html": "<p>Convert percentage values to numbers with 0% being relative to 0 and 100% relative to 1. Interpolate values <a href=\"https://drafts.csswg.org/css-transitions/#animtype-number\">number</a>.</p>"
-                }
-              ]
+              "html": "<p>Convert percentage values to numbers with 0% being relative to 0 and 100% relative to 1. Interpolate values <a href=\"https://drafts.csswg.org/css-transitions/#animtype-number\">number</a>.</p>"
             },
             {
               "case": "<opacity()>",
-              "steps": [
-                {
-                  "html": "<p>Convert percentage values to numbers with 0% being relative to 0 and 100% relative to 1. Interpolate values <a href=\"https://drafts.csswg.org/css-transitions/#animtype-number\">number</a>.</p>"
-                }
-              ]
+              "html": "<p>Convert percentage values to numbers with 0% being relative to 0 and 100% relative to 1. Interpolate values <a href=\"https://drafts.csswg.org/css-transitions/#animtype-number\">number</a>.</p>"
             },
             {
               "case": "<saturate()>",
-              "steps": [
-                {
-                  "html": "<p>Convert percentage values to numbers with 0% being relative to 0 and 100% relative to 1. Interpolate values <a href=\"https://drafts.csswg.org/css-transitions/#animtype-number\">number</a>.</p>"
-                }
-              ]
+              "html": "<p>Convert percentage values to numbers with 0% being relative to 0 and 100% relative to 1. Interpolate values <a href=\"https://drafts.csswg.org/css-transitions/#animtype-number\">number</a>.</p>"
             },
             {
               "case": "<sepia()>",
-              "steps": [
-                {
-                  "html": "<p>Convert percentage values to numbers with 0% being relative to 0 and 100% relative to 1. Interpolate values <a href=\"https://drafts.csswg.org/css-transitions/#animtype-number\">number</a>.</p>"
-                }
-              ]
+              "html": "<p>Convert percentage values to numbers with 0% being relative to 0 and 100% relative to 1. Interpolate values <a href=\"https://drafts.csswg.org/css-transitions/#animtype-number\">number</a>.</p>"
             },
             {
               "case": "<hue-rotate()>",
-              "steps": [
-                {
-                  "html": "<p>Interpolate values as <a href=\"https://drafts.csswg.org/css-transitions/#animtype-number\">number</a>.</p>"
-                }
-              ]
+              "html": "<p>Interpolate values as <a href=\"https://drafts.csswg.org/css-transitions/#animtype-number\">number</a>.</p>"
             },
             {
               "case": "<drop-shadow()>",
-              "steps": [
-                {
-                  "html": "<p>Interpolate values as <a href=\"https://drafts.csswg.org/css-transitions/#animtype-shadow-list\">shadow list</a>.</p>"
-                }
-              ]
+              "html": "<p>Interpolate values as <a href=\"https://drafts.csswg.org/css-transitions/#animtype-shadow-list\">shadow list</a>.</p>"
             }
           ]
         }
@@ -106,27 +66,15 @@
           "steps": [
             {
               "case": "if type=\"matrix\"",
-              "steps": [
-                {
-                  "html": "<p>defaults to the identity matrix</p>"
-                }
-              ]
+              "html": "<p>defaults to the identity matrix</p>"
             },
             {
               "case": "if type=\"saturate\"",
-              "steps": [
-                {
-                  "html": "<p>defaults to the value <span class=\"css\">1</span></p>"
-                }
-              ]
+              "html": "<p>defaults to the value <span class=\"css\">1</span></p>"
             },
             {
               "case": "if type=\"hueRotate\"",
-              "steps": [
-                {
-                  "html": "<p>defaults to the value <span class=\"css\">0</span> which results in the identity matrix.</p>"
-                }
-              ]
+              "html": "<p>defaults to the value <span class=\"css\">0</span> which results in the identity matrix.</p>"
             }
           ]
         }
@@ -162,53 +110,37 @@
           "steps": [
             {
               "case": "If both filters have a <filter-value-list> of same length without <url> and for each <filter-function> for which there is a corresponding item in each list",
-              "steps": [
-                {
-                  "html": "Interpolate each <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.fxtf.org/filter-effects-1/#typedef-filter-function\" id=\"ref-for-typedef-filter-function⑦\">&lt;filter-function&gt;</a> pair following the rules in section <a href=\"https://drafts.fxtf.org/filter-effects-1/#interpolation-of-filter-functions\">Interpolation of Filter Functions</a>."
-                }
-              ]
+              "html": "Interpolate each <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.fxtf.org/filter-effects-1/#typedef-filter-function\" id=\"ref-for-typedef-filter-function⑦\">&lt;filter-function&gt;</a> pair following the rules in section <a href=\"https://drafts.fxtf.org/filter-effects-1/#interpolation-of-filter-functions\">Interpolation of Filter Functions</a>."
             },
             {
               "case": "If both filters have a <filter-value-list> of different length without <url> and for each <filter-function> for which there is a corresponding item in each list",
+              "html": "",
+              "rationale": ".algorithm",
               "steps": [
                 {
-                  "html": "<ol class=\"algorithm\">\n      <li>Append the missing equivalent <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.fxtf.org/filter-effects-1/#typedef-filter-function\" id=\"ref-for-typedef-filter-function⑨\">&lt;filter-function&gt;</a>s from the longer list to the end of the shorter list. The new added <span class=\"production\" id=\"ref-for-typedef-filter-function①⓪\">&lt;filter-function&gt;</span>s must be initialized to their initial values for interpolation.\n      </li><li>Interpolate each <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.fxtf.org/filter-effects-1/#typedef-filter-function\" id=\"ref-for-typedef-filter-function①①\">&lt;filter-function&gt;</a> pair following the rules in section <a href=\"https://drafts.fxtf.org/filter-effects-1/#interpolation-of-filter-functions\">Interpolation of Filter Functions</a>.\n     </li></ol>",
-                  "rationale": ".algorithm",
-                  "steps": [
-                    {
-                      "html": "Append the missing equivalent <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.fxtf.org/filter-effects-1/#typedef-filter-function\" id=\"ref-for-typedef-filter-function⑨\">&lt;filter-function&gt;</a>s from the longer list to the end of the shorter list. The new added <span class=\"production\" id=\"ref-for-typedef-filter-function①⓪\">&lt;filter-function&gt;</span>s must be initialized to their initial values for interpolation."
-                    },
-                    {
-                      "html": "Interpolate each <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.fxtf.org/filter-effects-1/#typedef-filter-function\" id=\"ref-for-typedef-filter-function①①\">&lt;filter-function&gt;</a> pair following the rules in section <a href=\"https://drafts.fxtf.org/filter-effects-1/#interpolation-of-filter-functions\">Interpolation of Filter Functions</a>."
-                    }
-                  ]
+                  "html": "Append the missing equivalent <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.fxtf.org/filter-effects-1/#typedef-filter-function\" id=\"ref-for-typedef-filter-function⑨\">&lt;filter-function&gt;</a>s from the longer list to the end of the shorter list. The new added <span class=\"production\" id=\"ref-for-typedef-filter-function①⓪\">&lt;filter-function&gt;</span>s must be initialized to their initial values for interpolation."
+                },
+                {
+                  "html": "Interpolate each <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.fxtf.org/filter-effects-1/#typedef-filter-function\" id=\"ref-for-typedef-filter-function①①\">&lt;filter-function&gt;</a> pair following the rules in section <a href=\"https://drafts.fxtf.org/filter-effects-1/#interpolation-of-filter-functions\">Interpolation of Filter Functions</a>."
                 }
               ]
             },
             {
               "case": "If one filter is none and the other is a <filter-value-list> without <url>",
+              "html": "",
+              "rationale": ".algorithm",
               "steps": [
                 {
-                  "html": "<ol class=\"algorithm\">\n      <li>Replace <span class=\"css\">none</span> with the corresponding <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.fxtf.org/filter-effects-1/#typedef-filter-value-list\" id=\"ref-for-typedef-filter-value-list⑥\">&lt;filter-value-list&gt;</a> of the other filter. The new <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.fxtf.org/filter-effects-1/#typedef-filter-function\" id=\"ref-for-typedef-filter-function①②\">&lt;filter-function&gt;</a>s must be initialized to their initial values for interpolation.\n      </li><li>Interpolate each <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.fxtf.org/filter-effects-1/#typedef-filter-function\" id=\"ref-for-typedef-filter-function①③\">&lt;filter-function&gt;</a> pair following the rules in section <a href=\"https://drafts.fxtf.org/filter-effects-1/#interpolation-of-filter-functions\">Interpolation of Filter Functions</a>.\n     </li></ol>",
-                  "rationale": ".algorithm",
-                  "steps": [
-                    {
-                      "html": "Replace <span class=\"css\">none</span> with the corresponding <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.fxtf.org/filter-effects-1/#typedef-filter-value-list\" id=\"ref-for-typedef-filter-value-list⑥\">&lt;filter-value-list&gt;</a> of the other filter. The new <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.fxtf.org/filter-effects-1/#typedef-filter-function\" id=\"ref-for-typedef-filter-function①②\">&lt;filter-function&gt;</a>s must be initialized to their initial values for interpolation."
-                    },
-                    {
-                      "html": "Interpolate each <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.fxtf.org/filter-effects-1/#typedef-filter-function\" id=\"ref-for-typedef-filter-function①③\">&lt;filter-function&gt;</a> pair following the rules in section <a href=\"https://drafts.fxtf.org/filter-effects-1/#interpolation-of-filter-functions\">Interpolation of Filter Functions</a>."
-                    }
-                  ]
+                  "html": "Replace <span class=\"css\">none</span> with the corresponding <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.fxtf.org/filter-effects-1/#typedef-filter-value-list\" id=\"ref-for-typedef-filter-value-list⑥\">&lt;filter-value-list&gt;</a> of the other filter. The new <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.fxtf.org/filter-effects-1/#typedef-filter-function\" id=\"ref-for-typedef-filter-function①②\">&lt;filter-function&gt;</a>s must be initialized to their initial values for interpolation."
+                },
+                {
+                  "html": "Interpolate each <a class=\"production css\" data-link-type=\"type\" href=\"https://drafts.fxtf.org/filter-effects-1/#typedef-filter-function\" id=\"ref-for-typedef-filter-function①③\">&lt;filter-function&gt;</a> pair following the rules in section <a href=\"https://drafts.fxtf.org/filter-effects-1/#interpolation-of-filter-functions\">Interpolation of Filter Functions</a>."
                 }
               ]
             },
             {
               "case": "Otherwise",
-              "steps": [
-                {
-                  "html": "Use discrete interpolation."
-                }
-              ]
+              "html": "Use discrete interpolation."
             }
           ]
         }

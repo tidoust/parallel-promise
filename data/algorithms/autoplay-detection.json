@@ -25,27 +25,15 @@
           "steps": [
             {
               "case": "If the return value is allowed",
-              "steps": [
-                {
-                  "html": "All media, corresponding with the given type, are allowed to autoplay."
-                }
-              ]
+              "html": "All media, corresponding with the given type, are allowed to autoplay."
             },
             {
               "case": "If the return value is allowed-muted",
-              "steps": [
-                {
-                  "html": "All inaudible media, corresponding with the given type, are allowed to\n        autoplay."
-                }
-              ]
+              "html": "All inaudible media, corresponding with the given type, are allowed to\n        autoplay."
             },
             {
               "case": "If the return value is disallowed",
-              "steps": [
-                {
-                  "html": "<strong>None</strong> of media, corresponding with the given type, are allowed to\n        autoplay."
-                }
-              ]
+              "html": "<strong>None</strong> of media, corresponding with the given type, are allowed to\n        autoplay."
             }
           ]
         }
@@ -60,27 +48,15 @@
           "steps": [
             {
               "case": "If the return value is allowed",
-              "steps": [
-                {
-                  "html": "This element is allowed to autoplay within the current execution\n        context."
-                }
-              ]
+              "html": "This element is allowed to autoplay within the current execution\n        context."
             },
             {
               "case": "If the return value is allowed-muted",
-              "steps": [
-                {
-                  "html": "This element will only be allowed to autoplay if it’s inaudible."
-                }
-              ]
+              "html": "This element will only be allowed to autoplay if it’s inaudible."
             },
             {
               "case": "If the return value is disallowed",
-              "steps": [
-                {
-                  "html": "This element is not allowed to autoplay."
-                }
-              ]
+              "html": "This element is not allowed to autoplay."
             }
           ]
         }

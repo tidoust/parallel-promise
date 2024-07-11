@@ -36,39 +36,23 @@
           "steps": [
             {
               "case": "If the transition has no associated effect,",
+              "html": "The transition phase is set according to the first matching condition\n     from below:",
+              "rationale": ".switch",
               "steps": [
                 {
-                  "html": "The transition phase is set according to the first matching condition\n     from below:",
-                  "rationale": ".switch",
+                  "operation": "switch",
                   "steps": [
                     {
-                      "operation": "switch",
-                      "steps": [
-                        {
-                          "case": "If the transition has an unresolved current time,",
-                          "steps": [
-                            {
-                              "html": "The transition phase is ‘idle’."
-                            }
-                          ]
-                        },
-                        {
-                          "case": "If the transition has a current time < 0,",
-                          "steps": [
-                            {
-                              "html": "The transition phase is ‘before’."
-                            }
-                          ]
-                        },
-                        {
-                          "case": "Otherwise,",
-                          "steps": [
-                            {
-                              "html": "The transition phase is ‘after’."
-                            }
-                          ]
-                        }
-                      ]
+                      "case": "If the transition has an unresolved current time,",
+                      "html": "The transition phase is ‘idle’."
+                    },
+                    {
+                      "case": "If the transition has a current time < 0,",
+                      "html": "The transition phase is ‘before’."
+                    },
+                    {
+                      "case": "Otherwise,",
+                      "html": "The transition phase is ‘after’."
                     }
                   ]
                 }
@@ -76,19 +60,11 @@
             },
             {
               "case": "If the transition has a pending play task or a pending pause task and its phase was previously ‘idle’ or ‘pending’,",
-              "steps": [
-                {
-                  "html": "The transition phase is ‘pending’."
-                }
-              ]
+              "html": "The transition phase is ‘pending’."
             },
             {
               "case": "Otherwise,",
-              "steps": [
-                {
-                  "html": "The transition phase is the <a href=\"https://drafts.csswg.org/web-animations-1/#animation-effect-phases-and-states\">phase</a> of its <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/web-animations-1/#animation-associated-effect\" id=\"ref-for-animation-associated-effect①\">associated effect</a>."
-                }
-              ]
+              "html": "The transition phase is the <a href=\"https://drafts.csswg.org/web-animations-1/#animation-effect-phases-and-states\">phase</a> of its <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/web-animations-1/#animation-associated-effect\" id=\"ref-for-animation-associated-effect①\">associated effect</a>."
             }
           ]
         }

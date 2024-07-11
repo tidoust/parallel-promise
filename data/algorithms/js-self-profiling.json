@@ -82,7 +82,7 @@
               "html": "If <var>scriptOrModule</var> is non-null, return <var>scriptOrModule</var>."
             },
             {
-              "html": "If <var>instance</var> is a built-in function object, return the <code>ScriptOrModule</code> containing the function that invoked <var>instance</var>.\n              \n              <div class=\"issue\" id=\"issue-container-generatedID-2\"><div role=\"heading\" class=\"issue-title marker\" id=\"h-issue\" aria-level=\"3\"><span>Issue</span></div><p class=\"\">\n              \"[...] the <code>ScriptOrModule</code> containing the function that invoked <var>instance</var>\" should be defined more rigorously. We could leverage the top-most execution context on the stack that defines a <code>ScriptOrModule</code> to provide this, but it's not ideal -- there may (theoretically) be other mechanisms for a builtin to be enqueued on the execution context stack, in which case the attribution would be invalid.\n              </p></div>"
+              "html": "If <var>instance</var> is a built-in function object, return the <code>ScriptOrModule</code> containing the function that invoked <var>instance</var>."
             },
             {
               "html": "Otherwise, return null."

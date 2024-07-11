@@ -71,7 +71,7 @@
           "html": "<p>Otherwise, if <var>callbackOptions</var> is a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/css-view-transitions-2/#dictdef-startviewtransitionoptions\" id=\"ref-for-dictdef-startviewtransitionoptions①\">StartViewTransitionOptions</a></code>, then set <var>updateCallback</var> to <var>callbackOptions</var>’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.csswg.org/css-view-transitions-2/#dom-startviewtransitionoptions-update\" id=\"ref-for-dom-startviewtransitionoptions-update\">update</a></code>.</p>"
         },
         {
-          "html": "If <var>this</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-view-transitions-1/#document-active-view-transition\" id=\"ref-for-document-active-view-transition⑦\">active view transition</a> is not null and its <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-view-transitions-2/#viewtransition-outbound-post-capture-steps\" id=\"ref-for-viewtransition-outbound-post-capture-steps\">outbound post-capture steps</a> is not null,\nthen:",
+          "html": "The <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#method-steps\" id=\"ref-for-method-steps\">method steps</a> for <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"Document\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"startViewTransition(callbackOptions)|startViewTransition()\" id=\"dom-document-startviewtransition\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>startViewTransition(<var>callbackOptions</var>)</code></dfn> are as follows:",
           "rationale": "let",
           "steps": [
             {
@@ -99,7 +99,7 @@
     {
       "name": "resolve @view-transition rule",
       "href": "https://drafts.csswg.org/css-view-transitions-2/#resolve-view-transition-rule",
-      "html": "<span class=\"marker\">Note:</span> this is called in both the old and new document.",
+      "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"resolve-view-transition-rule\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">resolve @view-transition rule</dfn> for a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://dom.spec.whatwg.org/#document\" id=\"ref-for-document①④\">Document</a></code> <var>document</var>:",
       "rationale": ".algorithm",
       "steps": [
         {
@@ -131,7 +131,7 @@
     {
       "name": "navigation can trigger a cross-document view-transition?",
       "href": "https://drafts.csswg.org/css-view-transitions-2/#navigation-can-trigger-a-cross-document-view-transition",
-      "html": "<span class=\"marker\">Note:</span> this is called during navigation, potentially <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#in-parallel\" id=\"ref-for-in-parallel②\">in parallel</a>.",
+      "html": "To check if a <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-export=\"\" id=\"navigation-can-trigger-a-cross-document-view-transition\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">navigation can trigger a cross-document view-transition?</dfn> given\n\ta <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://dom.spec.whatwg.org/#document\" id=\"ref-for-document①⑥\">Document</a></code> <var>oldDocument</var>, a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://dom.spec.whatwg.org/#document\" id=\"ref-for-document①⑦\">Document</a></code> <var>newDocument</var>, a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/nav-history-apis.html#navigationtype\" id=\"ref-for-navigationtype①\">NavigationType</a></code> <var>navigationType</var>, and a boolean <var>isBrowserUINavigation</var>:",
       "rationale": ".algorithm",
       "steps": [
         {
@@ -163,7 +163,7 @@
     {
       "name": "setup cross-document view-transition",
       "href": "https://drafts.csswg.org/css-view-transitions-2/#setup-cross-document-view-transition",
-      "html": "<span class=\"marker\">Note:</span> This is called from the HTML spec.",
+      "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-export=\"\" id=\"setup-cross-document-view-transition\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">setup cross-document view-transition</dfn> given a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://dom.spec.whatwg.org/#document\" id=\"ref-for-document①⑧\">Document</a></code> <var>oldDocument</var>,\n\ta <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://dom.spec.whatwg.org/#document\" id=\"ref-for-document①⑨\">Document</a></code> <var>newDocument</var>, and <var>proceedWithNavigation</var>, which is an algorithm accepting nothing:",
       "rationale": ".algorithm",
       "steps": [
         {
@@ -188,7 +188,7 @@
           "html": "<p>Set <var>outboundTransition</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-view-transitions-2/#viewtransition-active-types\" id=\"ref-for-viewtransition-active-types⑦\">active types</a> to <var>transitionTypesFromRule</var>.</p>"
         },
         {
-          "html": "Set <var>outboundTransition</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-view-transitions-2/#viewtransition-outbound-post-capture-steps\" id=\"ref-for-viewtransition-outbound-post-capture-steps①\">outbound post-capture steps</a> to the following steps given a <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-view-transitions-2/#view-transition-params\" id=\"ref-for-view-transition-params②\">view transition params</a>-or-null <var>params</var>:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-export=\"\" id=\"setup-cross-document-view-transition\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">setup cross-document view-transition</dfn> given a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://dom.spec.whatwg.org/#document\" id=\"ref-for-document①⑧\">Document</a></code> <var>oldDocument</var>,\n\ta <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://dom.spec.whatwg.org/#document\" id=\"ref-for-document①⑨\">Document</a></code> <var>newDocument</var>, and <var>proceedWithNavigation</var>, which is an algorithm accepting nothing:",
           "rationale": "set",
           "steps": [
             {
@@ -250,7 +250,7 @@
               "html": "<p>Let <var>viewTransitionParams</var> be null;</p>"
             },
             {
-              "html": "<p>Set <var>document</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-view-transitions-1/#document-rendering-suppression-for-view-transitions\" id=\"ref-for-document-rendering-suppression-for-view-transitions\">rendering suppression for view transitions</a> to true.</p>\n        <p class=\"issue\" id=\"issue-ca114a78\"><a class=\"self-link\" href=\"https://drafts.csswg.org/css-view-transitions-2/#issue-ca114a78\"></a> Though <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-view-transitions-1/#capture-the-old-state\" id=\"ref-for-capture-the-old-state①\">capture the old state</a> appears here as a synchronous step, it is in fact an asynchronous step\nas rendering an element into an image cannot be done synchronously. This should be more explicit in the L1 spec.</p>"
+              "html": "<p>Set <var>document</var>’s <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-view-transitions-1/#document-rendering-suppression-for-view-transitions\" id=\"ref-for-document-rendering-suppression-for-view-transitions\">rendering suppression for view transitions</a> to true.</p>"
             },
             {
               "html": "<p><a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-view-transitions-1/#capture-the-old-state\" id=\"ref-for-capture-the-old-state②\">Capture the old state</a> for <var>transition</var>.</p>"

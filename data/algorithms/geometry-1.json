@@ -304,19 +304,11 @@
               "steps": [
                 {
                   "case": "If parsedValue consists of any three-dimensional transform functions",
-                  "steps": [
-                    {
-                      "html": "<p>Set <var>2dTransform</var> to <code>false</code>.</p>"
-                    }
-                  ]
+                  "html": "<p>Set <var>2dTransform</var> to <code>false</code>.</p>"
                 },
                 {
                   "case": "Otherwise",
-                  "steps": [
-                    {
-                      "html": "<p>Set <var>2dTransform</var> to <code>true</code>.</p>"
-                    }
-                  ]
+                  "html": "<p>Set <var>2dTransform</var> to <code>true</code>.</p>"
                 }
               ]
             }
@@ -390,49 +382,33 @@
           "steps": [
             {
               "case": "If init is omitted",
-              "steps": [
-                {
-                  "html": "<p>Return the result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#create-a-2d-matrix\" id=\"ref-for-create-a-2d-matrix\">create a 2d matrix</a> of type <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrixreadonly\" id=\"ref-for-dommatrixreadonly①①\">DOMMatrixReadOnly</a></code> or <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrix\" id=\"ref-for-dommatrix③④\">DOMMatrix</a></code> as appropriate, with the sequence [<span class=\"css\">1</span>, <span class=\"css\">0</span>, <span class=\"css\">0</span>, <span class=\"css\">1</span>, <span class=\"css\">0</span>, <span class=\"css\">0</span>].</p>"
-                }
-              ]
+              "html": "<p>Return the result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#create-a-2d-matrix\" id=\"ref-for-create-a-2d-matrix\">create a 2d matrix</a> of type <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrixreadonly\" id=\"ref-for-dommatrixreadonly①①\">DOMMatrixReadOnly</a></code> or <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrix\" id=\"ref-for-dommatrix③④\">DOMMatrix</a></code> as appropriate, with the sequence [<span class=\"css\">1</span>, <span class=\"css\">0</span>, <span class=\"css\">0</span>, <span class=\"css\">1</span>, <span class=\"css\">0</span>, <span class=\"css\">0</span>].</p>"
             },
             {
               "case": "If init is a DOMString",
+              "html": "",
+              "rationale": "if",
               "steps": [
                 {
-                  "html": "<ol>\n      <li data-md=\"\">\n       <p>If <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#current-global-object\" id=\"ref-for-current-global-object\">current global object</a> is not a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/nav-history-apis.html#window\" id=\"ref-for-window\">Window</a></code> object, then throw a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#exceptiondef-typeerror\" id=\"ref-for-exceptiondef-typeerror②\">TypeError</a></code> exception.</p>\n      </li><li data-md=\"\">\n       <p><a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#parse-a-string-into-an-abstract-matrix\" id=\"ref-for-parse-a-string-into-an-abstract-matrix\">Parse <var>init</var> into an abstract\nmatrix</a>, and let <var>matrix</var> and <var>2dTransform</var> be the result. If the result is\nfailure, then throw a \"<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#syntaxerror\" id=\"ref-for-syntaxerror\">SyntaxError</a></code>\" <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#idl-DOMException\" id=\"ref-for-idl-DOMException\">DOMException</a></code>.</p>\n      </li><li data-md=\"\">\n       <dl class=\"switch\">\n        <dt data-md=\"\">If <var>2dTransform</var> is <code>true</code>\n        </dt><dd data-md=\"\">\n         <p>Return the result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#create-a-2d-matrix\" id=\"ref-for-create-a-2d-matrix①\">create a 2d matrix</a> of type <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrixreadonly\" id=\"ref-for-dommatrixreadonly①②\">DOMMatrixReadOnly</a></code> or <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrix\" id=\"ref-for-dommatrix③⑤\">DOMMatrix</a></code> as appropriate, with a sequence of numbers, the values being the elements <var>m11</var>, <var>m12</var>, <var>m21</var>, <var>m22</var>, <var>m41</var> and <var>m42</var> of <var>matrix</var>.</p>\n        </dd><dt data-md=\"\">Otherwise\n        </dt><dd data-md=\"\">\n         <p>Return the result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#create-a-3d-matrix\" id=\"ref-for-create-a-3d-matrix\">create a 3d matrix</a> of type <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrixreadonly\" id=\"ref-for-dommatrixreadonly①③\">DOMMatrixReadOnly</a></code> or <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrix\" id=\"ref-for-dommatrix③⑥\">DOMMatrix</a></code> as appropriate, with a sequence of numbers, the values being the 16 elements of <var>matrix</var>.</p>\n       </dd></dl>\n     </li></ol>",
-                  "rationale": "if",
+                  "html": "<p>If <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#current-global-object\" id=\"ref-for-current-global-object\">current global object</a> is not a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/nav-history-apis.html#window\" id=\"ref-for-window\">Window</a></code> object, then throw a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#exceptiondef-typeerror\" id=\"ref-for-exceptiondef-typeerror②\">TypeError</a></code> exception.</p>"
+                },
+                {
+                  "html": "<p><a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#parse-a-string-into-an-abstract-matrix\" id=\"ref-for-parse-a-string-into-an-abstract-matrix\">Parse <var>init</var> into an abstract\nmatrix</a>, and let <var>matrix</var> and <var>2dTransform</var> be the result. If the result is\nfailure, then throw a \"<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#syntaxerror\" id=\"ref-for-syntaxerror\">SyntaxError</a></code>\" <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#idl-DOMException\" id=\"ref-for-idl-DOMException\">DOMException</a></code>.</p>"
+                },
+                {
+                  "html": "<dl class=\"switch\">\n        <dt data-md=\"\">If <var>2dTransform</var> is <code>true</code>\n        </dt><dd data-md=\"\">\n         <p>Return the result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#create-a-2d-matrix\" id=\"ref-for-create-a-2d-matrix①\">create a 2d matrix</a> of type <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrixreadonly\" id=\"ref-for-dommatrixreadonly①②\">DOMMatrixReadOnly</a></code> or <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrix\" id=\"ref-for-dommatrix③⑤\">DOMMatrix</a></code> as appropriate, with a sequence of numbers, the values being the elements <var>m11</var>, <var>m12</var>, <var>m21</var>, <var>m22</var>, <var>m41</var> and <var>m42</var> of <var>matrix</var>.</p>\n        </dd><dt data-md=\"\">Otherwise\n        </dt><dd data-md=\"\">\n         <p>Return the result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#create-a-3d-matrix\" id=\"ref-for-create-a-3d-matrix\">create a 3d matrix</a> of type <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrixreadonly\" id=\"ref-for-dommatrixreadonly①③\">DOMMatrixReadOnly</a></code> or <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrix\" id=\"ref-for-dommatrix③⑥\">DOMMatrix</a></code> as appropriate, with a sequence of numbers, the values being the 16 elements of <var>matrix</var>.</p>\n       </dd></dl>",
+                  "rationale": ".switch",
                   "steps": [
                     {
-                      "html": "<p>If <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#current-global-object\" id=\"ref-for-current-global-object\">current global object</a> is not a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/nav-history-apis.html#window\" id=\"ref-for-window\">Window</a></code> object, then throw a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#exceptiondef-typeerror\" id=\"ref-for-exceptiondef-typeerror②\">TypeError</a></code> exception.</p>"
-                    },
-                    {
-                      "html": "<p><a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#parse-a-string-into-an-abstract-matrix\" id=\"ref-for-parse-a-string-into-an-abstract-matrix\">Parse <var>init</var> into an abstract\nmatrix</a>, and let <var>matrix</var> and <var>2dTransform</var> be the result. If the result is\nfailure, then throw a \"<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#syntaxerror\" id=\"ref-for-syntaxerror\">SyntaxError</a></code>\" <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#idl-DOMException\" id=\"ref-for-idl-DOMException\">DOMException</a></code>.</p>"
-                    },
-                    {
-                      "html": "<dl class=\"switch\">\n        <dt data-md=\"\">If <var>2dTransform</var> is <code>true</code>\n        </dt><dd data-md=\"\">\n         <p>Return the result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#create-a-2d-matrix\" id=\"ref-for-create-a-2d-matrix①\">create a 2d matrix</a> of type <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrixreadonly\" id=\"ref-for-dommatrixreadonly①②\">DOMMatrixReadOnly</a></code> or <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrix\" id=\"ref-for-dommatrix③⑤\">DOMMatrix</a></code> as appropriate, with a sequence of numbers, the values being the elements <var>m11</var>, <var>m12</var>, <var>m21</var>, <var>m22</var>, <var>m41</var> and <var>m42</var> of <var>matrix</var>.</p>\n        </dd><dt data-md=\"\">Otherwise\n        </dt><dd data-md=\"\">\n         <p>Return the result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#create-a-3d-matrix\" id=\"ref-for-create-a-3d-matrix\">create a 3d matrix</a> of type <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrixreadonly\" id=\"ref-for-dommatrixreadonly①③\">DOMMatrixReadOnly</a></code> or <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrix\" id=\"ref-for-dommatrix③⑥\">DOMMatrix</a></code> as appropriate, with a sequence of numbers, the values being the 16 elements of <var>matrix</var>.</p>\n       </dd></dl>",
-                      "rationale": ".switch",
+                      "operation": "switch",
                       "steps": [
                         {
-                          "operation": "switch",
-                          "steps": [
-                            {
-                              "case": "If 2dTransform is true",
-                              "steps": [
-                                {
-                                  "html": "<p>Return the result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#create-a-2d-matrix\" id=\"ref-for-create-a-2d-matrix①\">create a 2d matrix</a> of type <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrixreadonly\" id=\"ref-for-dommatrixreadonly①②\">DOMMatrixReadOnly</a></code> or <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrix\" id=\"ref-for-dommatrix③⑤\">DOMMatrix</a></code> as appropriate, with a sequence of numbers, the values being the elements <var>m11</var>, <var>m12</var>, <var>m21</var>, <var>m22</var>, <var>m41</var> and <var>m42</var> of <var>matrix</var>.</p>"
-                                }
-                              ]
-                            },
-                            {
-                              "case": "Otherwise",
-                              "steps": [
-                                {
-                                  "html": "<p>Return the result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#create-a-3d-matrix\" id=\"ref-for-create-a-3d-matrix\">create a 3d matrix</a> of type <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrixreadonly\" id=\"ref-for-dommatrixreadonly①③\">DOMMatrixReadOnly</a></code> or <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrix\" id=\"ref-for-dommatrix③⑥\">DOMMatrix</a></code> as appropriate, with a sequence of numbers, the values being the 16 elements of <var>matrix</var>.</p>"
-                                }
-                              ]
-                            }
-                          ]
+                          "case": "If 2dTransform is true",
+                          "html": "<p>Return the result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#create-a-2d-matrix\" id=\"ref-for-create-a-2d-matrix①\">create a 2d matrix</a> of type <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrixreadonly\" id=\"ref-for-dommatrixreadonly①②\">DOMMatrixReadOnly</a></code> or <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrix\" id=\"ref-for-dommatrix③⑤\">DOMMatrix</a></code> as appropriate, with a sequence of numbers, the values being the elements <var>m11</var>, <var>m12</var>, <var>m21</var>, <var>m22</var>, <var>m41</var> and <var>m42</var> of <var>matrix</var>.</p>"
+                        },
+                        {
+                          "case": "Otherwise",
+                          "html": "<p>Return the result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#create-a-3d-matrix\" id=\"ref-for-create-a-3d-matrix\">create a 3d matrix</a> of type <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrixreadonly\" id=\"ref-for-dommatrixreadonly①③\">DOMMatrixReadOnly</a></code> or <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrix\" id=\"ref-for-dommatrix③⑥\">DOMMatrix</a></code> as appropriate, with a sequence of numbers, the values being the 16 elements of <var>matrix</var>.</p>"
                         }
                       ]
                     }
@@ -442,27 +418,15 @@
             },
             {
               "case": "If init is a sequence with 6 elements",
-              "steps": [
-                {
-                  "html": "<p>Return the result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#create-a-2d-matrix\" id=\"ref-for-create-a-2d-matrix②\">create a 2d matrix</a> of type <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrixreadonly\" id=\"ref-for-dommatrixreadonly①④\">DOMMatrixReadOnly</a></code> or <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrix\" id=\"ref-for-dommatrix③⑦\">DOMMatrix</a></code> as appropriate, with the sequence <var>init</var>.</p>"
-                }
-              ]
+              "html": "<p>Return the result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#create-a-2d-matrix\" id=\"ref-for-create-a-2d-matrix②\">create a 2d matrix</a> of type <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrixreadonly\" id=\"ref-for-dommatrixreadonly①④\">DOMMatrixReadOnly</a></code> or <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrix\" id=\"ref-for-dommatrix③⑦\">DOMMatrix</a></code> as appropriate, with the sequence <var>init</var>.</p>"
             },
             {
               "case": "If init is a sequence with 16 elements",
-              "steps": [
-                {
-                  "html": "<p>Return the result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#create-a-3d-matrix\" id=\"ref-for-create-a-3d-matrix①\">create a 3d matrix</a> of type <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrixreadonly\" id=\"ref-for-dommatrixreadonly①⑤\">DOMMatrixReadOnly</a></code> or <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrix\" id=\"ref-for-dommatrix③⑧\">DOMMatrix</a></code> as appropriate, with the sequence <var>init</var>.</p>"
-                }
-              ]
+              "html": "<p>Return the result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#create-a-3d-matrix\" id=\"ref-for-create-a-3d-matrix①\">create a 3d matrix</a> of type <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrixreadonly\" id=\"ref-for-dommatrixreadonly①⑤\">DOMMatrixReadOnly</a></code> or <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrix\" id=\"ref-for-dommatrix③⑧\">DOMMatrix</a></code> as appropriate, with the sequence <var>init</var>.</p>"
             },
             {
               "case": "Otherwise",
-              "steps": [
-                {
-                  "html": "<p>Throw a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#exceptiondef-typeerror\" id=\"ref-for-exceptiondef-typeerror③\">TypeError</a></code> exception.</p>"
-                }
-              ]
+              "html": "<p>Throw a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#exceptiondef-typeerror\" id=\"ref-for-exceptiondef-typeerror③\">TypeError</a></code> exception.</p>"
             }
           ]
         }
@@ -500,19 +464,11 @@
               "steps": [
                 {
                   "case": "If the is2D dictionary member of other is true",
-                  "steps": [
-                    {
-                      "html": "<p>Return the result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#create-a-2d-matrix\" id=\"ref-for-create-a-2d-matrix④\">create a 2d matrix</a> of type <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrixreadonly\" id=\"ref-for-dommatrixreadonly①⑧\">DOMMatrixReadOnly</a></code> or <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrix\" id=\"ref-for-dommatrix④①\">DOMMatrix</a></code> as appropriate, with a sequence of numbers, the values being the 6 elements <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dom-dommatrix2dinit-m11\" id=\"ref-for-dom-dommatrix2dinit-m11④\">m11</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dom-dommatrix2dinit-m12\" id=\"ref-for-dom-dommatrix2dinit-m12④\">m12</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dom-dommatrix2dinit-m21\" id=\"ref-for-dom-dommatrix2dinit-m21④\">m21</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dom-dommatrix2dinit-m22\" id=\"ref-for-dom-dommatrix2dinit-m22④\">m22</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dom-dommatrix2dinit-m41\" id=\"ref-for-dom-dommatrix2dinit-m41④\">m41</a></code> and <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dom-dommatrix2dinit-m42\" id=\"ref-for-dom-dommatrix2dinit-m42④\">m42</a></code> of <var>other</var> in the given order.</p>"
-                    }
-                  ]
+                  "html": "<p>Return the result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#create-a-2d-matrix\" id=\"ref-for-create-a-2d-matrix④\">create a 2d matrix</a> of type <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrixreadonly\" id=\"ref-for-dommatrixreadonly①⑧\">DOMMatrixReadOnly</a></code> or <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrix\" id=\"ref-for-dommatrix④①\">DOMMatrix</a></code> as appropriate, with a sequence of numbers, the values being the 6 elements <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dom-dommatrix2dinit-m11\" id=\"ref-for-dom-dommatrix2dinit-m11④\">m11</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dom-dommatrix2dinit-m12\" id=\"ref-for-dom-dommatrix2dinit-m12④\">m12</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dom-dommatrix2dinit-m21\" id=\"ref-for-dom-dommatrix2dinit-m21④\">m21</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dom-dommatrix2dinit-m22\" id=\"ref-for-dom-dommatrix2dinit-m22④\">m22</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dom-dommatrix2dinit-m41\" id=\"ref-for-dom-dommatrix2dinit-m41④\">m41</a></code> and <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dom-dommatrix2dinit-m42\" id=\"ref-for-dom-dommatrix2dinit-m42④\">m42</a></code> of <var>other</var> in the given order.</p>"
                 },
                 {
                   "case": "Otherwise",
-                  "steps": [
-                    {
-                      "html": "<p>Return the result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#create-a-3d-matrix\" id=\"ref-for-create-a-3d-matrix②\">create a 3d matrix</a> of type <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrixreadonly\" id=\"ref-for-dommatrixreadonly①⑨\">DOMMatrixReadOnly</a></code> or <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrix\" id=\"ref-for-dommatrix④②\">DOMMatrix</a></code> as appropriate, with a sequence of numbers, the values being the 16 elements <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dom-dommatrix2dinit-m11\" id=\"ref-for-dom-dommatrix2dinit-m11⑤\">m11</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dom-dommatrix2dinit-m12\" id=\"ref-for-dom-dommatrix2dinit-m12⑤\">m12</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dom-dommatrixinit-m13\" id=\"ref-for-dom-dommatrixinit-m13②\">m13</a></code>, ..., <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dom-dommatrixinit-m44\" id=\"ref-for-dom-dommatrixinit-m44②\">m44</a></code> of <var>other</var> in the given order.</p>"
-                    }
-                  ]
+                  "html": "<p>Return the result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#create-a-3d-matrix\" id=\"ref-for-create-a-3d-matrix②\">create a 3d matrix</a> of type <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrixreadonly\" id=\"ref-for-dommatrixreadonly①⑨\">DOMMatrixReadOnly</a></code> or <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrix\" id=\"ref-for-dommatrix④②\">DOMMatrix</a></code> as appropriate, with a sequence of numbers, the values being the 16 elements <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dom-dommatrix2dinit-m11\" id=\"ref-for-dom-dommatrix2dinit-m11⑤\">m11</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dom-dommatrix2dinit-m12\" id=\"ref-for-dom-dommatrix2dinit-m12⑤\">m12</a></code>, <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dom-dommatrixinit-m13\" id=\"ref-for-dom-dommatrixinit-m13②\">m13</a></code>, ..., <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dom-dommatrixinit-m44\" id=\"ref-for-dom-dommatrixinit-m44②\">m44</a></code> of <var>other</var> in the given order.</p>"
                 }
               ]
             }
@@ -531,27 +487,15 @@
           "steps": [
             {
               "case": "If array32 has 6 elements",
-              "steps": [
-                {
-                  "html": "<p>Return the result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#create-a-2d-matrix\" id=\"ref-for-create-a-2d-matrix⑤\">create a 2d matrix</a> of type <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrixreadonly\" id=\"ref-for-dommatrixreadonly②①\">DOMMatrixReadOnly</a></code> or <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrix\" id=\"ref-for-dommatrix④④\">DOMMatrix</a></code> as appropriate, with a sequence of numbers taking the values from <var>array32</var> in the provided order.</p>"
-                }
-              ]
+              "html": "<p>Return the result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#create-a-2d-matrix\" id=\"ref-for-create-a-2d-matrix⑤\">create a 2d matrix</a> of type <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrixreadonly\" id=\"ref-for-dommatrixreadonly②①\">DOMMatrixReadOnly</a></code> or <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrix\" id=\"ref-for-dommatrix④④\">DOMMatrix</a></code> as appropriate, with a sequence of numbers taking the values from <var>array32</var> in the provided order.</p>"
             },
             {
               "case": "If array32 has 16 elements",
-              "steps": [
-                {
-                  "html": "<p>Return the result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#create-a-3d-matrix\" id=\"ref-for-create-a-3d-matrix③\">create a 3d matrix</a> of type <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrixreadonly\" id=\"ref-for-dommatrixreadonly②②\">DOMMatrixReadOnly</a></code> or <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrix\" id=\"ref-for-dommatrix④⑤\">DOMMatrix</a></code> as appropriate, with a sequence of numbers taking the values from <var>array32</var> in the provided order.</p>"
-                }
-              ]
+              "html": "<p>Return the result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#create-a-3d-matrix\" id=\"ref-for-create-a-3d-matrix③\">create a 3d matrix</a> of type <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrixreadonly\" id=\"ref-for-dommatrixreadonly②②\">DOMMatrixReadOnly</a></code> or <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrix\" id=\"ref-for-dommatrix④⑤\">DOMMatrix</a></code> as appropriate, with a sequence of numbers taking the values from <var>array32</var> in the provided order.</p>"
             },
             {
               "case": "Otherwise",
-              "steps": [
-                {
-                  "html": "<p>Throw a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#exceptiondef-typeerror\" id=\"ref-for-exceptiondef-typeerror④\">TypeError</a></code> exception.</p>"
-                }
-              ]
+              "html": "<p>Throw a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#exceptiondef-typeerror\" id=\"ref-for-exceptiondef-typeerror④\">TypeError</a></code> exception.</p>"
             }
           ]
         }
@@ -568,27 +512,15 @@
           "steps": [
             {
               "case": "If array64 has 6 elements",
-              "steps": [
-                {
-                  "html": "<p>Return the result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#create-a-2d-matrix\" id=\"ref-for-create-a-2d-matrix⑥\">create a 2d matrix</a> of type <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrixreadonly\" id=\"ref-for-dommatrixreadonly②④\">DOMMatrixReadOnly</a></code> or <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrix\" id=\"ref-for-dommatrix④⑦\">DOMMatrix</a></code> as appropriate, with a sequence of numbers taking the values from <var>array64</var> in the provided order.</p>"
-                }
-              ]
+              "html": "<p>Return the result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#create-a-2d-matrix\" id=\"ref-for-create-a-2d-matrix⑥\">create a 2d matrix</a> of type <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrixreadonly\" id=\"ref-for-dommatrixreadonly②④\">DOMMatrixReadOnly</a></code> or <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrix\" id=\"ref-for-dommatrix④⑦\">DOMMatrix</a></code> as appropriate, with a sequence of numbers taking the values from <var>array64</var> in the provided order.</p>"
             },
             {
               "case": "If array32 has 16 elements",
-              "steps": [
-                {
-                  "html": "<p>Return the result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#create-a-3d-matrix\" id=\"ref-for-create-a-3d-matrix④\">create a 3d matrix</a> of type <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrixreadonly\" id=\"ref-for-dommatrixreadonly②⑤\">DOMMatrixReadOnly</a></code> or <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrix\" id=\"ref-for-dommatrix④⑧\">DOMMatrix</a></code> as appropriate, with a sequence of numbers taking the values from <var>array64</var> in the provided order.</p>"
-                }
-              ]
+              "html": "<p>Return the result of invoking <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/geometry-1/#create-a-3d-matrix\" id=\"ref-for-create-a-3d-matrix④\">create a 3d matrix</a> of type <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrixreadonly\" id=\"ref-for-dommatrixreadonly②⑤\">DOMMatrixReadOnly</a></code> or <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dommatrix\" id=\"ref-for-dommatrix④⑧\">DOMMatrix</a></code> as appropriate, with a sequence of numbers taking the values from <var>array64</var> in the provided order.</p>"
             },
             {
               "case": "Otherwise",
-              "steps": [
-                {
-                  "html": "<p>Throw a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#exceptiondef-typeerror\" id=\"ref-for-exceptiondef-typeerror⑤\">TypeError</a></code> exception.</p>"
-                }
-              ]
+              "html": "<p>Throw a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#exceptiondef-typeerror\" id=\"ref-for-exceptiondef-typeerror⑤\">TypeError</a></code> exception.</p>"
             }
           ]
         }
@@ -634,7 +566,7 @@
     {
       "name": "DOMMatrixReadOnly/scaleNonUniform(scaleX, scaleY)",
       "href": "https://drafts.fxtf.org/geometry-1/#dom-dommatrixreadonly-scalenonuniform",
-      "html": "<span class=\"marker\">Note:</span> Supported for legacy reasons to be compatible with <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#svgmatrix\" id=\"ref-for-svgmatrix①\">SVGMatrix</a></code> as defined in SVG 1.1 <a data-link-type=\"biblio\" href=\"https://drafts.fxtf.org/geometry-1/#biblio-svg11\" title=\"Scalable Vector Graphics (SVG) 1.1 (Second Edition)\">[SVG11]</a>. Authors are encouraged to use <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://drafts.fxtf.org/geometry-1/#dom-dommatrixreadonly-scale\" id=\"ref-for-dom-dommatrixreadonly-scale①\">scale()</a></code> instead.",
+      "html": "",
       "rationale": "let",
       "steps": [
         {

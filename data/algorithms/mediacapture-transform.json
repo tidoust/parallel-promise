@@ -5,7 +5,7 @@
   },
   "algorithms": [
     {
-      "html": "<span class=\"marker\">Note:</span> There is consensus in the WG that creating a MediaStreamTrackProcessor from a MediaStreamTrack of kind \"video\" should exist.\nThere is no WG consensus on whether or not creating a MediaStreamTrackProcessor from a MediaStreamTrack of kind \"audio\" should be supported.",
+      "html": "A <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/mediacapture-transform/#mediastreamtrackprocessor\" id=\"ref-for-mediastreamtrackprocessor⑦\">MediaStreamTrackProcessor</a></code> makes frames available to its\nassociated <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://streams.spec.whatwg.org/#readablestream\" id=\"ref-for-readablestream③\">ReadableStream</a></code> only when a read request has been issued on\nthe stream. The idea is to avoid the stream’s internal buffering, which\ndoes not give the UA enough flexibility to choose the buffering policy.",
       "rationale": "if",
       "steps": [
         {
@@ -170,7 +170,7 @@
       ]
     },
     {
-      "html": "<span class=\"marker\">Note:</span> There is WG consensus that this interface should be exposed on DedicatedWorker.\nThere is no WG consensus on whether or not it should be exposed on Window.",
+      "html": "The <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://streams.spec.whatwg.org/#writablestream\" id=\"ref-for-writablestream①\">WritableStream</a></code> accepts <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webcodecs/#videoframe\" id=\"ref-for-videoframe②\">VideoFrame</a></code> objects.\nWhen a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/webcodecs/#videoframe\" id=\"ref-for-videoframe③\">VideoFrame</a></code> is written to <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/mediacapture-transform/#dom-videotrackgenerator-writable\" id=\"ref-for-dom-videotrackgenerator-writable②\">writable</a></code>,\nthe frame’s <code>close()</code> method is automatically invoked, so that its internal\nresources are no longer accessible from JavaScript.",
       "rationale": "let",
       "steps": [
         {

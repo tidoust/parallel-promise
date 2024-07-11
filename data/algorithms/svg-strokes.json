@@ -17,7 +17,9 @@
       ]
     },
     {
-      "html": "<a class=\"self-link\" href=\"https://svgwg.org/specs/strokes/#issue18\"></a>This should include text elements too, but should we\nkeep stroke dashing on text?",
+      "name": "stroke shape",
+      "href": "https://svgwg.org/specs/strokes/#TermStrokeShape",
+      "html": "The <dfn id=\"TermStrokeShape\">stroke shape</dfn> of an element is the\nshape that is filled by the <a class=\"property\" href=\"https://svgwg.org/specs/strokes/#StrokeProperty\">stroke</a> property.  The following algorithm\ndescribes what the stroke shape of a <span class=\"element-name\">‘<a href=\"https://svgwg.org/svg2-draft/paths.html#PathElement\"><span>path</span></a>’</span> or <a href=\"https://svgwg.org/svg2-draft/shapes.html#TermBasicShapeElement\">basic shape</a> is,\ntaking into account the stroking properties above:",
       "rationale": ".algorithm",
       "steps": [
         {

@@ -13,35 +13,19 @@
           "steps": [
             {
               "case": "content on the ::marker itself is not normal",
-              "steps": [
-                {
-                  "html": "The contents of the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-lists-3/#marker\" id=\"ref-for-marker⑨\">marker box</a> are determined as defined by the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-content-3/#propdef-content\" id=\"ref-for-propdef-content③\">content</a> property,\n\t\t\texactly as for <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-pseudo-4/#selectordef-before\" id=\"ref-for-selectordef-before②\">::before</a>."
-                }
-              ]
+              "html": "The contents of the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-lists-3/#marker\" id=\"ref-for-marker⑨\">marker box</a> are determined as defined by the <a class=\"property css\" data-link-type=\"property\" href=\"https://drafts.csswg.org/css-content-3/#propdef-content\" id=\"ref-for-propdef-content③\">content</a> property,\n\t\t\texactly as for <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-pseudo-4/#selectordef-before\" id=\"ref-for-selectordef-before②\">::before</a>."
             },
             {
               "case": "list-style-image on the originating element defines a marker image",
-              "steps": [
-                {
-                  "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-lists-3/#marker\" id=\"ref-for-marker①⓪\">marker box</a> contains\n\t\t\tan <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-display-4/#anonymous\" id=\"ref-for-anonymous\">anonymous</a> <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-display-4/#inline\" id=\"ref-for-inline\">inline</a> <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-display-4/#replaced-element\" id=\"ref-for-replaced-element\">replaced element</a> representing the specified <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-lists-3/#marker-image\" id=\"ref-for-marker-image①\">marker image</a>,\n\t\t\tfollowed by a <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-display-4/#css-text-sequence\" id=\"ref-for-css-text-sequence\">text sequence</a> consisting of a single space (U+0020 SPACE)."
-                }
-              ]
+              "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-lists-3/#marker\" id=\"ref-for-marker①⓪\">marker box</a> contains\n\t\t\tan <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-display-4/#anonymous\" id=\"ref-for-anonymous\">anonymous</a> <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-display-4/#inline\" id=\"ref-for-inline\">inline</a> <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-display-4/#replaced-element\" id=\"ref-for-replaced-element\">replaced element</a> representing the specified <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-lists-3/#marker-image\" id=\"ref-for-marker-image①\">marker image</a>,\n\t\t\tfollowed by a <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-display-4/#css-text-sequence\" id=\"ref-for-css-text-sequence\">text sequence</a> consisting of a single space (U+0020 SPACE)."
             },
             {
               "case": "list-style-type on the originating element defines a marker string",
-              "steps": [
-                {
-                  "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-lists-3/#marker\" id=\"ref-for-marker①①\">marker box</a> contains\n\t\t\ta <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-display-4/#css-text-sequence\" id=\"ref-for-css-text-sequence①\">text sequence</a> consisting of the specified <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-lists-3/#marker-string\" id=\"ref-for-marker-string①\">marker string</a>."
-                }
-              ]
+              "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-lists-3/#marker\" id=\"ref-for-marker①①\">marker box</a> contains\n\t\t\ta <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-display-4/#css-text-sequence\" id=\"ref-for-css-text-sequence①\">text sequence</a> consisting of the specified <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-lists-3/#marker-string\" id=\"ref-for-marker-string①\">marker string</a>."
             },
             {
               "case": "otherwise",
-              "steps": [
-                {
-                  "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-lists-3/#marker\" id=\"ref-for-marker①②\">marker box</a> has no contents\n\t\t\tand <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-pseudo-4/#selectordef-marker\" id=\"ref-for-selectordef-marker①④\">::marker</a> does not generate a box."
-                }
-              ]
+              "html": "The <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-lists-3/#marker\" id=\"ref-for-marker①②\">marker box</a> has no contents\n\t\t\tand <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-pseudo-4/#selectordef-marker\" id=\"ref-for-selectordef-marker①④\">::marker</a> does not generate a box."
             }
           ]
         }

@@ -5,7 +5,7 @@
   },
   "algorithms": [
     {
-      "name": "getDigitalGoodsService(serviceProvider)",
+      "name": "Window/getDigitalGoodsService(serviceProvider)",
       "href": "https://wicg.github.io/digital-goods/#dom-window-getdigitalgoodsservice",
       "html": "When the <dfn class=\"dfn-paneled idl-code\" data-dfn-for=\"Window\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-window-getdigitalgoodsservice\"><code>getDigitalGoodsService(<var>serviceProvider</var>)</code></dfn> method is called, run the following steps:",
       "rationale": ".algorithm",
@@ -48,7 +48,7 @@
       ]
     },
     {
-      "name": "getDetails(itemIds)",
+      "name": "DigitalGoodsService/getDetails(itemIds)",
       "href": "https://wicg.github.io/digital-goods/#dom-digitalgoodsservice-getdetails",
       "html": "When the <dfn class=\"dfn-paneled idl-code\" data-dfn-for=\"DigitalGoodsService\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-digitalgoodsservice-getdetails\"><code>getDetails(<var>itemIds</var>)</code></dfn> method is called, run the following steps:",
       "rationale": ".algorithm",
@@ -62,16 +62,16 @@
       ]
     },
     {
-      "name": "getDetails(itemIds)",
+      "name": "DigitalGoodsService/getDetails(itemIds)",
       "href": "https://wicg.github.io/digital-goods/#dom-digitalgoodsservice-getdetails",
-      "html": "<span>Note:</span> This allows for different digital goods service providers to be\n    supported by provider-specific behavior in the user agent.",
+      "html": "When the <dfn class=\"dfn-paneled idl-code\" data-dfn-for=\"DigitalGoodsService\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-digitalgoodsservice-getdetails\"><code>getDetails(<var>itemIds</var>)</code></dfn> method is called, run the following steps:",
       "rationale": "if",
       "steps": [
         {
           "html": "<p>If <var>result</var> is an error, then return <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#a-promise-rejected-with\" id=\"ref-for-a-promise-rejected-with⑥\">a promise rejected with</a> an <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#operationerror\" id=\"ref-for-operationerror①\">OperationError</a></code>.</p>"
         },
         {
-          "html": "For each <var>itemDetails</var> in <var>result</var>:",
+          "html": "When the <dfn class=\"dfn-paneled idl-code\" data-dfn-for=\"DigitalGoodsService\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-digitalgoodsservice-getdetails\"><code>getDetails(<var>itemIds</var>)</code></dfn> method is called, run the following steps:",
           "rationale": "if",
           "steps": [
             {
@@ -106,7 +106,7 @@
       ]
     },
     {
-      "name": "listPurchases()",
+      "name": "DigitalGoodsService/listPurchases()",
       "href": "https://wicg.github.io/digital-goods/#dom-digitalgoodsservice-listpurchases",
       "html": "When the <dfn class=\"dfn-paneled idl-code\" data-dfn-for=\"DigitalGoodsService\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-digitalgoodsservice-listpurchases\"><code>listPurchases()</code></dfn> method is\n  called, run the following steps:",
       "rationale": ".algorithm",
@@ -117,16 +117,16 @@
       ]
     },
     {
-      "name": "listPurchases()",
+      "name": "DigitalGoodsService/listPurchases()",
       "href": "https://wicg.github.io/digital-goods/#dom-digitalgoodsservice-listpurchases",
-      "html": "<span>Note:</span> This allows for different digital goods service providers to be supported by provider-specific behavior in the user agent.",
+      "html": "When the <dfn class=\"dfn-paneled idl-code\" data-dfn-for=\"DigitalGoodsService\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-digitalgoodsservice-listpurchases\"><code>listPurchases()</code></dfn> method is\n  called, run the following steps:",
       "rationale": "if",
       "steps": [
         {
           "html": "<p>If <var>result</var> is an error, then return <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#a-promise-rejected-with\" id=\"ref-for-a-promise-rejected-with⑦\">a promise rejected with</a> an <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#operationerror\" id=\"ref-for-operationerror②\">OperationError</a></code>.</p>"
         },
         {
-          "html": "<p>For each <var>itemDetails</var> in <var>result</var>:</p>\n      <ol>\n       <li data-md=\"\">\n        <p><var>itemDetails</var>.itemId SHOULD NOT be the empty string.</p>\n       </li><li data-md=\"\">\n        <p><var>itemDetails</var>.purchaseToken SHOULD NOT be the empty string.</p>\n      </li></ol>",
+          "html": "<p>For each <var>itemDetails</var> in <var>result</var>:</p>",
           "ignored": [
             "itemDetails.itemId SHOULD NOT be the empty string. itemDetails.purchaseToken SHOULD NOT be the empty string."
           ]
@@ -137,7 +137,7 @@
       ]
     },
     {
-      "name": "listPurchaseHistory()",
+      "name": "DigitalGoodsService/listPurchaseHistory()",
       "href": "https://wicg.github.io/digital-goods/#dom-digitalgoodsservice-listpurchasehistory",
       "html": "When the <dfn class=\"dfn-paneled idl-code\" data-dfn-for=\"DigitalGoodsService\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-digitalgoodsservice-listpurchasehistory\"><code>listPurchaseHistory()</code></dfn> method is\n  called, run the following steps:",
       "rationale": ".algorithm",
@@ -149,7 +149,7 @@
           "html": "<p>If <var>result</var> is an error, then return <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#a-promise-rejected-with\" id=\"ref-for-a-promise-rejected-with⑧\">a promise rejected with</a> an <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#operationerror\" id=\"ref-for-operationerror③\">OperationError</a></code>.</p>"
         },
         {
-          "html": "<p>For each <var>itemDetails</var> in <var>result</var>:</p>\n      <ol>\n       <li data-md=\"\">\n        <p><var>itemDetails</var>.itemId SHOULD NOT be the empty string.</p>\n       </li><li data-md=\"\">\n        <p><var>itemDetails</var>.purchaseToken SHOULD NOT be the empty string.</p>\n      </li></ol>",
+          "html": "<p>For each <var>itemDetails</var> in <var>result</var>:</p>",
           "ignored": [
             "itemDetails.itemId SHOULD NOT be the empty string. itemDetails.purchaseToken SHOULD NOT be the empty string."
           ]
@@ -160,7 +160,7 @@
       ]
     },
     {
-      "name": "consume(purchaseToken)",
+      "name": "DigitalGoodsService/consume(purchaseToken)",
       "href": "https://wicg.github.io/digital-goods/#dom-digitalgoodsservice-consume",
       "html": "When the <dfn class=\"dfn-paneled idl-code\" data-dfn-for=\"DigitalGoodsService\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-digitalgoodsservice-consume\"><code>consume(<var>purchaseToken</var>)</code></dfn> method is called, run the following steps:",
       "rationale": ".algorithm",
@@ -174,9 +174,9 @@
       ]
     },
     {
-      "name": "consume(purchaseToken)",
+      "name": "DigitalGoodsService/consume(purchaseToken)",
       "href": "https://wicg.github.io/digital-goods/#dom-digitalgoodsservice-consume",
-      "html": "<span>Note:</span> This allows for different digital goods service providers to be supported by provider-specific behavior in the user agent.",
+      "html": "When the <dfn class=\"dfn-paneled idl-code\" data-dfn-for=\"DigitalGoodsService\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-digitalgoodsservice-consume\"><code>consume(<var>purchaseToken</var>)</code></dfn> method is called, run the following steps:",
       "rationale": "if",
       "steps": [
         {

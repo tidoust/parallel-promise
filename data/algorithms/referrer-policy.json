@@ -9,7 +9,7 @@
       "rationale": "if",
       "steps": [
         {
-          "html": "If a <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#css-style-sheet\" id=\"ref-for-css-style-sheet\">CSS style sheet</a> is responsible for the request,\n       and its <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#concept-css-style-sheet-location\" id=\"ref-for-concept-css-style-sheet-location\">location</a> is non-null,\n       set the <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-referrer\" id=\"ref-for-concept-request-referrer\">referrer</a> to its <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#concept-css-style-sheet-location\" id=\"ref-for-concept-css-style-sheet-location①\">location</a>, and the <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-referrer-policy\" id=\"ref-for-concept-request-referrer-policy①\">referrer\n       policy</a> to its <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-referrer-policy/#cssstylesheet-referrer-policy\" id=\"ref-for-cssstylesheet-referrer-policy\">referrer policy</a>. \n      <p class=\"issue\" id=\"issue-a01fbbf2\"><a class=\"self-link\" href=\"https://w3c.github.io/webappsec-referrer-policy/#issue-a01fbbf2\"></a> This requires that CSS style sheets process `Referrer-Policy`\n       headers, and store a <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-for=\"CSSStyleSheet\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"cssstylesheet-referrer-policy\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">referrer policy</dfn><span style=\"position: relative; height: 0px;\"></span><span style=\"position: relative; height: 0px;\"></span> in the same way that <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsers.html#policy-container-referrer-policy\" id=\"ref-for-policy-container-referrer-policy②\">Documents\n       do</a>.</p>"
+          "html": "If a <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#css-style-sheet\" id=\"ref-for-css-style-sheet\">CSS style sheet</a> is responsible for the request,\n       and its <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#concept-css-style-sheet-location\" id=\"ref-for-concept-css-style-sheet-location\">location</a> is non-null,\n       set the <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-referrer\" id=\"ref-for-concept-request-referrer\">referrer</a> to its <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#concept-css-style-sheet-location\" id=\"ref-for-concept-css-style-sheet-location①\">location</a>, and the <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-referrer-policy\" id=\"ref-for-concept-request-referrer-policy①\">referrer\n       policy</a> to its <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-referrer-policy/#cssstylesheet-referrer-policy\" id=\"ref-for-cssstylesheet-referrer-policy\">referrer policy</a>."
         },
         {
           "html": "If a <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#css-style-sheet\" id=\"ref-for-css-style-sheet①\">CSS style sheet</a> with a null <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#concept-css-style-sheet-location\" id=\"ref-for-concept-css-style-sheet-location②\">location</a> is responsible\n      for the request, set the <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-referrer\" id=\"ref-for-concept-request-referrer①\">referrer</a> to its <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#concept-css-style-sheet-owner-node\" id=\"ref-for-concept-css-style-sheet-owner-node\">owner node</a>’s <a data-link-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-node-document\" id=\"ref-for-concept-node-document①\">node document</a>’s <a data-link-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-document-url\" id=\"ref-for-concept-document-url\">URL</a>, and the <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-referrer-policy\" id=\"ref-for-concept-request-referrer-policy②\">referrer policy</a> to its <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-1/#concept-css-style-sheet-owner-node\" id=\"ref-for-concept-css-style-sheet-owner-node①\">owner node</a>’s <a data-link-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-node-document\" id=\"ref-for-concept-node-document②\">node document</a>’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/dom.html#concept-document-policy-container\" id=\"ref-for-concept-document-policy-container②\">policy container</a>’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsers.html#policy-container-referrer-policy\" id=\"ref-for-policy-container-referrer-policy③\">referrer policy</a>."
@@ -68,43 +68,35 @@
               "steps": [
                 {
                   "case": "\"client\"",
+                  "html": "",
+                  "rationale": "if",
                   "steps": [
                     {
-                      "html": "<ol>\n         <li>\n           If <var>environment</var>’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#concept-settings-object-global\" id=\"ref-for-concept-settings-object-global\">global\n              object</a> is a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/nav-history-apis.html#window\" id=\"ref-for-window\">Window</a></code> object, then \n          <ol>\n           <li>Let <var>document</var> be\n                the <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window\" id=\"ref-for-concept-document-window\">associated <code>Document</code></a> of <var>environment</var>’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#concept-settings-object-global\" id=\"ref-for-concept-settings-object-global①\">global object</a>.\n           </li><li>If <var>document</var>’s <a data-link-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-document-origin\" id=\"ref-for-concept-document-origin\">origin</a> is an <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsers.html#concept-origin-opaque\" id=\"ref-for-concept-origin-opaque\">opaque origin</a>,\n                return <code>no referrer</code>.\n           </li><li>While <var>document</var> is <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/embedded-content.html#an-iframe-srcdoc-document\" id=\"ref-for-an-iframe-srcdoc-document\">an <code>iframe srcdoc</code> document</a>, let <var>document</var> be <var>document</var>’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/document-sequences.html#concept-document-bc\" id=\"ref-for-concept-document-bc\">browsing context</a>’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsers.html#browsing-context-container\" id=\"ref-for-browsing-context-container\">browsing context\n                container</a>’s <a data-link-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-node-document\" id=\"ref-for-concept-node-document⑤\">node document</a>.\n           </li><li>Let <var>referrerSource</var> be <var>document</var>’s <a data-link-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-document-url\" id=\"ref-for-concept-document-url②\">URL</a>.\n          </li></ol>\n         </li><li>Otherwise, let <var>referrerSource</var> be <var>environment</var>’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#concept-environment-creation-url\" id=\"ref-for-concept-environment-creation-url\">creation\n            URL</a>.\n        </li></ol>",
-                      "rationale": "if",
+                      "html": "If <var>environment</var>’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#concept-settings-object-global\" id=\"ref-for-concept-settings-object-global\">global\n              object</a> is a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/nav-history-apis.html#window\" id=\"ref-for-window\">Window</a></code> object, then",
+                      "rationale": "let",
                       "steps": [
                         {
-                          "html": "If <var>environment</var>’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#concept-settings-object-global\" id=\"ref-for-concept-settings-object-global\">global\n              object</a> is a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/nav-history-apis.html#window\" id=\"ref-for-window\">Window</a></code> object, then",
-                          "rationale": "let",
-                          "steps": [
-                            {
-                              "html": "Let <var>document</var> be\n                the <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window\" id=\"ref-for-concept-document-window\">associated <code>Document</code></a> of <var>environment</var>’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#concept-settings-object-global\" id=\"ref-for-concept-settings-object-global①\">global object</a>."
-                            },
-                            {
-                              "html": "If <var>document</var>’s <a data-link-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-document-origin\" id=\"ref-for-concept-document-origin\">origin</a> is an <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsers.html#concept-origin-opaque\" id=\"ref-for-concept-origin-opaque\">opaque origin</a>,\n                return <code>no referrer</code>."
-                            },
-                            {
-                              "html": "While <var>document</var> is <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/embedded-content.html#an-iframe-srcdoc-document\" id=\"ref-for-an-iframe-srcdoc-document\">an <code>iframe srcdoc</code> document</a>, let <var>document</var> be <var>document</var>’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/document-sequences.html#concept-document-bc\" id=\"ref-for-concept-document-bc\">browsing context</a>’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsers.html#browsing-context-container\" id=\"ref-for-browsing-context-container\">browsing context\n                container</a>’s <a data-link-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-node-document\" id=\"ref-for-concept-node-document⑤\">node document</a>."
-                            },
-                            {
-                              "html": "Let <var>referrerSource</var> be <var>document</var>’s <a data-link-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-document-url\" id=\"ref-for-concept-document-url②\">URL</a>."
-                            }
-                          ]
+                          "html": "Let <var>document</var> be\n                the <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window\" id=\"ref-for-concept-document-window\">associated <code>Document</code></a> of <var>environment</var>’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#concept-settings-object-global\" id=\"ref-for-concept-settings-object-global①\">global object</a>."
                         },
                         {
-                          "html": "Otherwise, let <var>referrerSource</var> be <var>environment</var>’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#concept-environment-creation-url\" id=\"ref-for-concept-environment-creation-url\">creation\n            URL</a>."
+                          "html": "If <var>document</var>’s <a data-link-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-document-origin\" id=\"ref-for-concept-document-origin\">origin</a> is an <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsers.html#concept-origin-opaque\" id=\"ref-for-concept-origin-opaque\">opaque origin</a>,\n                return <code>no referrer</code>."
+                        },
+                        {
+                          "html": "While <var>document</var> is <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/embedded-content.html#an-iframe-srcdoc-document\" id=\"ref-for-an-iframe-srcdoc-document\">an <code>iframe srcdoc</code> document</a>, let <var>document</var> be <var>document</var>’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/document-sequences.html#concept-document-bc\" id=\"ref-for-concept-document-bc\">browsing context</a>’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsers.html#browsing-context-container\" id=\"ref-for-browsing-context-container\">browsing context\n                container</a>’s <a data-link-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-node-document\" id=\"ref-for-concept-node-document⑤\">node document</a>."
+                        },
+                        {
+                          "html": "Let <var>referrerSource</var> be <var>document</var>’s <a data-link-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-document-url\" id=\"ref-for-concept-document-url②\">URL</a>."
                         }
                       ]
+                    },
+                    {
+                      "html": "Otherwise, let <var>referrerSource</var> be <var>environment</var>’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#concept-environment-creation-url\" id=\"ref-for-concept-environment-creation-url\">creation\n            URL</a>."
                     }
                   ]
                 },
                 {
                   "case": "a URL",
-                  "steps": [
-                    {
-                      "html": "Let <var>referrerSource</var> be <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-referrer\" id=\"ref-for-concept-request-referrer⑤\">referrer</a>."
-                    }
-                  ]
+                  "html": "Let <var>referrerSource</var> be <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-referrer\" id=\"ref-for-concept-request-referrer⑤\">referrer</a>."
                 }
               ]
             }
@@ -131,113 +123,81 @@
               "steps": [
                 {
                   "case": "\"no-referrer\"",
-                  "steps": [
-                    {
-                      "html": "Return <code>no referrer</code>"
-                    }
-                  ]
+                  "html": "Return <code>no referrer</code>"
                 },
                 {
                   "case": "\"origin\"",
-                  "steps": [
-                    {
-                      "html": "Return <var>referrerOrigin</var>"
-                    }
-                  ]
+                  "html": "Return <var>referrerOrigin</var>"
                 },
                 {
                   "case": "\"unsafe-url\"",
-                  "steps": [
-                    {
-                      "html": "Return <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-referrer-policy/#referrerurl\" id=\"ref-for-referrerurl②②\">referrerURL</a>."
-                    }
-                  ]
+                  "html": "Return <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-referrer-policy/#referrerurl\" id=\"ref-for-referrerurl②②\">referrerURL</a>."
                 },
                 {
                   "case": "\"strict-origin\"",
+                  "html": "",
+                  "rationale": "if",
                   "steps": [
                     {
-                      "html": "<ol>\n         <li> If <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-referrer-policy/#referrerurl\" id=\"ref-for-referrerurl②③\">referrerURL</a> is a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-secure-contexts/#potentially-trustworthy-url\" id=\"ref-for-potentially-trustworthy-url①⑤\">potentially trustworthy URL</a> and <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-current-url\" id=\"ref-for-concept-request-current-url⑧\">current URL</a> is not a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-secure-contexts/#potentially-trustworthy-url\" id=\"ref-for-potentially-trustworthy-url①⑥\">potentially trustworthy URL</a>, then\n              return <code>no referrer</code>. \n         </li><li>Return <var>referrerOrigin</var>. \n        </li></ol>",
-                      "rationale": "if",
-                      "steps": [
-                        {
-                          "html": "If <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-referrer-policy/#referrerurl\" id=\"ref-for-referrerurl②③\">referrerURL</a> is a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-secure-contexts/#potentially-trustworthy-url\" id=\"ref-for-potentially-trustworthy-url①⑤\">potentially trustworthy URL</a> and <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-current-url\" id=\"ref-for-concept-request-current-url⑧\">current URL</a> is not a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-secure-contexts/#potentially-trustworthy-url\" id=\"ref-for-potentially-trustworthy-url①⑥\">potentially trustworthy URL</a>, then\n              return <code>no referrer</code>."
-                        },
-                        {
-                          "html": "Return <var>referrerOrigin</var>."
-                        }
-                      ]
+                      "html": "If <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-referrer-policy/#referrerurl\" id=\"ref-for-referrerurl②③\">referrerURL</a> is a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-secure-contexts/#potentially-trustworthy-url\" id=\"ref-for-potentially-trustworthy-url①⑤\">potentially trustworthy URL</a> and <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-current-url\" id=\"ref-for-concept-request-current-url⑧\">current URL</a> is not a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-secure-contexts/#potentially-trustworthy-url\" id=\"ref-for-potentially-trustworthy-url①⑥\">potentially trustworthy URL</a>, then\n              return <code>no referrer</code>."
+                    },
+                    {
+                      "html": "Return <var>referrerOrigin</var>."
                     }
                   ]
                 },
                 {
                   "case": "\"strict-origin-when-cross-origin\"",
+                  "html": "",
+                  "rationale": "if",
                   "steps": [
                     {
-                      "html": "<ol>\n         <li> If the <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-origin\" id=\"ref-for-concept-url-origin②\">origin</a> of <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-referrer-policy/#referrerurl\" id=\"ref-for-referrerurl②④\">referrerURL</a> and the <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-origin\" id=\"ref-for-concept-url-origin③\">origin</a> of <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-current-url\" id=\"ref-for-concept-request-current-url⑨\">current URL</a> are <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsers.html#same-origin\" id=\"ref-for-same-origin①\">the\n              same</a>, then return <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-referrer-policy/#referrerurl\" id=\"ref-for-referrerurl②⑤\">referrerURL</a>. \n         </li><li> If <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-referrer-policy/#referrerurl\" id=\"ref-for-referrerurl②⑥\">referrerURL</a> is a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-secure-contexts/#potentially-trustworthy-url\" id=\"ref-for-potentially-trustworthy-url①⑦\">potentially trustworthy URL</a> and <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-current-url\" id=\"ref-for-concept-request-current-url①⓪\">current URL</a> is not a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-secure-contexts/#potentially-trustworthy-url\" id=\"ref-for-potentially-trustworthy-url①⑧\">potentially trustworthy URL</a>, then\n              return <code>no referrer</code>. \n         </li><li>Return <var>referrerOrigin</var>. \n        </li></ol>",
-                      "rationale": "if",
-                      "steps": [
-                        {
-                          "html": "If the <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-origin\" id=\"ref-for-concept-url-origin②\">origin</a> of <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-referrer-policy/#referrerurl\" id=\"ref-for-referrerurl②④\">referrerURL</a> and the <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-origin\" id=\"ref-for-concept-url-origin③\">origin</a> of <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-current-url\" id=\"ref-for-concept-request-current-url⑨\">current URL</a> are <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsers.html#same-origin\" id=\"ref-for-same-origin①\">the\n              same</a>, then return <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-referrer-policy/#referrerurl\" id=\"ref-for-referrerurl②⑤\">referrerURL</a>."
-                        },
-                        {
-                          "html": "If <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-referrer-policy/#referrerurl\" id=\"ref-for-referrerurl②⑥\">referrerURL</a> is a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-secure-contexts/#potentially-trustworthy-url\" id=\"ref-for-potentially-trustworthy-url①⑦\">potentially trustworthy URL</a> and <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-current-url\" id=\"ref-for-concept-request-current-url①⓪\">current URL</a> is not a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-secure-contexts/#potentially-trustworthy-url\" id=\"ref-for-potentially-trustworthy-url①⑧\">potentially trustworthy URL</a>, then\n              return <code>no referrer</code>."
-                        },
-                        {
-                          "html": "Return <var>referrerOrigin</var>."
-                        }
-                      ]
+                      "html": "If the <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-origin\" id=\"ref-for-concept-url-origin②\">origin</a> of <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-referrer-policy/#referrerurl\" id=\"ref-for-referrerurl②④\">referrerURL</a> and the <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-origin\" id=\"ref-for-concept-url-origin③\">origin</a> of <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-current-url\" id=\"ref-for-concept-request-current-url⑨\">current URL</a> are <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsers.html#same-origin\" id=\"ref-for-same-origin①\">the\n              same</a>, then return <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-referrer-policy/#referrerurl\" id=\"ref-for-referrerurl②⑤\">referrerURL</a>."
+                    },
+                    {
+                      "html": "If <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-referrer-policy/#referrerurl\" id=\"ref-for-referrerurl②⑥\">referrerURL</a> is a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-secure-contexts/#potentially-trustworthy-url\" id=\"ref-for-potentially-trustworthy-url①⑦\">potentially trustworthy URL</a> and <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-current-url\" id=\"ref-for-concept-request-current-url①⓪\">current URL</a> is not a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-secure-contexts/#potentially-trustworthy-url\" id=\"ref-for-potentially-trustworthy-url①⑧\">potentially trustworthy URL</a>, then\n              return <code>no referrer</code>."
+                    },
+                    {
+                      "html": "Return <var>referrerOrigin</var>."
                     }
                   ]
                 },
                 {
                   "case": "\"same-origin\"",
+                  "html": "",
+                  "rationale": "if",
                   "steps": [
                     {
-                      "html": "<ol>\n         <li>\n           If the <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-origin\" id=\"ref-for-concept-url-origin④\">origin</a> of <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-referrer-policy/#referrerurl\" id=\"ref-for-referrerurl②⑦\">referrerURL</a> and the <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-origin\" id=\"ref-for-concept-url-origin⑤\">origin</a> of <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-current-url\" id=\"ref-for-concept-request-current-url①①\">current URL</a> are <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsers.html#same-origin\" id=\"ref-for-same-origin②\">the\n              same</a>, then return <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-referrer-policy/#referrerurl\" id=\"ref-for-referrerurl②⑧\">referrerURL</a>. \n          \n         </li><li>Return <code>no referrer</code>. \n        </li></ol>",
-                      "rationale": "if",
-                      "steps": [
-                        {
-                          "html": "If the <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-origin\" id=\"ref-for-concept-url-origin④\">origin</a> of <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-referrer-policy/#referrerurl\" id=\"ref-for-referrerurl②⑦\">referrerURL</a> and the <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-origin\" id=\"ref-for-concept-url-origin⑤\">origin</a> of <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-current-url\" id=\"ref-for-concept-request-current-url①①\">current URL</a> are <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsers.html#same-origin\" id=\"ref-for-same-origin②\">the\n              same</a>, then return <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-referrer-policy/#referrerurl\" id=\"ref-for-referrerurl②⑧\">referrerURL</a>."
-                        },
-                        {
-                          "html": "Return <code>no referrer</code>."
-                        }
-                      ]
+                      "html": "If the <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-origin\" id=\"ref-for-concept-url-origin④\">origin</a> of <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-referrer-policy/#referrerurl\" id=\"ref-for-referrerurl②⑦\">referrerURL</a> and the <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-origin\" id=\"ref-for-concept-url-origin⑤\">origin</a> of <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-current-url\" id=\"ref-for-concept-request-current-url①①\">current URL</a> are <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsers.html#same-origin\" id=\"ref-for-same-origin②\">the\n              same</a>, then return <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-referrer-policy/#referrerurl\" id=\"ref-for-referrerurl②⑧\">referrerURL</a>."
+                    },
+                    {
+                      "html": "Return <code>no referrer</code>."
                     }
                   ]
                 },
                 {
                   "case": "\"origin-when-cross-origin\"",
+                  "html": "",
+                  "rationale": "if",
                   "steps": [
                     {
-                      "html": "<ol>\n         <li> If the <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-origin\" id=\"ref-for-concept-url-origin⑥\">origin</a> of <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-referrer-policy/#referrerurl\" id=\"ref-for-referrerurl②⑨\">referrerURL</a> and the <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-origin\" id=\"ref-for-concept-url-origin⑦\">origin</a> of <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-current-url\" id=\"ref-for-concept-request-current-url①②\">current URL</a> are <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsers.html#same-origin\" id=\"ref-for-same-origin③\">the\n              same</a>, then return <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-referrer-policy/#referrerurl\" id=\"ref-for-referrerurl③⓪\">referrerURL</a>. \n         </li><li> Return <var>referrerOrigin</var>. \n        </li></ol>",
-                      "rationale": "if",
-                      "steps": [
-                        {
-                          "html": "If the <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-origin\" id=\"ref-for-concept-url-origin⑥\">origin</a> of <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-referrer-policy/#referrerurl\" id=\"ref-for-referrerurl②⑨\">referrerURL</a> and the <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-origin\" id=\"ref-for-concept-url-origin⑦\">origin</a> of <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-current-url\" id=\"ref-for-concept-request-current-url①②\">current URL</a> are <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsers.html#same-origin\" id=\"ref-for-same-origin③\">the\n              same</a>, then return <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-referrer-policy/#referrerurl\" id=\"ref-for-referrerurl③⓪\">referrerURL</a>."
-                        },
-                        {
-                          "html": "Return <var>referrerOrigin</var>."
-                        }
-                      ]
+                      "html": "If the <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-origin\" id=\"ref-for-concept-url-origin⑥\">origin</a> of <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-referrer-policy/#referrerurl\" id=\"ref-for-referrerurl②⑨\">referrerURL</a> and the <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-origin\" id=\"ref-for-concept-url-origin⑦\">origin</a> of <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-current-url\" id=\"ref-for-concept-request-current-url①②\">current URL</a> are <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsers.html#same-origin\" id=\"ref-for-same-origin③\">the\n              same</a>, then return <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-referrer-policy/#referrerurl\" id=\"ref-for-referrerurl③⓪\">referrerURL</a>."
+                    },
+                    {
+                      "html": "Return <var>referrerOrigin</var>."
                     }
                   ]
                 },
                 {
                   "case": "\"no-referrer-when-downgrade\"",
+                  "html": "",
+                  "rationale": "if",
                   "steps": [
                     {
-                      "html": "<ol>\n         <li> If <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-referrer-policy/#referrerurl\" id=\"ref-for-referrerurl③①\">referrerURL</a> is a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-secure-contexts/#potentially-trustworthy-url\" id=\"ref-for-potentially-trustworthy-url①⑨\">potentially trustworthy URL</a> and <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-current-url\" id=\"ref-for-concept-request-current-url①③\">current URL</a> is not a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-secure-contexts/#potentially-trustworthy-url\" id=\"ref-for-potentially-trustworthy-url②⓪\">potentially trustworthy URL</a>, then\n              return <code>no referrer</code>. \n         </li><li>Return <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-referrer-policy/#referrerurl\" id=\"ref-for-referrerurl③②\">referrerURL</a>. \n        </li></ol>",
-                      "rationale": "if",
-                      "steps": [
-                        {
-                          "html": "If <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-referrer-policy/#referrerurl\" id=\"ref-for-referrerurl③①\">referrerURL</a> is a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-secure-contexts/#potentially-trustworthy-url\" id=\"ref-for-potentially-trustworthy-url①⑨\">potentially trustworthy URL</a> and <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-current-url\" id=\"ref-for-concept-request-current-url①③\">current URL</a> is not a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-secure-contexts/#potentially-trustworthy-url\" id=\"ref-for-potentially-trustworthy-url②⓪\">potentially trustworthy URL</a>, then\n              return <code>no referrer</code>."
-                        },
-                        {
-                          "html": "Return <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-referrer-policy/#referrerurl\" id=\"ref-for-referrerurl③②\">referrerURL</a>."
-                        }
-                      ]
+                      "html": "If <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-referrer-policy/#referrerurl\" id=\"ref-for-referrerurl③①\">referrerURL</a> is a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-secure-contexts/#potentially-trustworthy-url\" id=\"ref-for-potentially-trustworthy-url①⑨\">potentially trustworthy URL</a> and <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-current-url\" id=\"ref-for-concept-request-current-url①③\">current URL</a> is not a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-secure-contexts/#potentially-trustworthy-url\" id=\"ref-for-potentially-trustworthy-url②⓪\">potentially trustworthy URL</a>, then\n              return <code>no referrer</code>."
+                    },
+                    {
+                      "html": "Return <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webappsec-referrer-policy/#referrerurl\" id=\"ref-for-referrerurl③②\">referrerURL</a>."
                     }
                   ]
                 }

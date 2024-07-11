@@ -11,7 +11,7 @@
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "Initialize the base <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://dom.spec.whatwg.org/#event\" id=\"ref-for-event⑧\">Event</a></code> attributes:",
+          "html": "<h5 class=\"heading settled\" data-level=\"3.2.2.1\" id=\"initialize-a-uievent-id\"><span class=\"secno\">3.2.2.1. </span><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"initialize-a-uievent\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">initialize a UIEvent</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/uievents/#initialize-a-uievent-id\"></a></h5>\n     <dl>\n      <dt data-md=\"\">Input\n      </dt><dd data-md=\"\">\n       <p><var>event</var>, the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/uievents/#uievent\" id=\"ref-for-uievent③\">UIEvent</a></code> to initialize</p>\n      </dd><dd data-md=\"\">\n       <p><var>eventType</var>, a DOMString containing the event type</p>\n      </dd><dd data-md=\"\">\n       <p><var>eventTarget</var>, the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://dom.spec.whatwg.org/#eventtarget\" id=\"ref-for-eventtarget③\">EventTarget</a></code> of the event</p>\n      </dd><dd data-md=\"\">\n       <p><var>bubbles</var>, true if this event bubbles</p>\n      </dd><dd data-md=\"\">\n       <p><var>cancelable</var>, true if this event is cancelable</p>\n      </dd><dt data-md=\"\">Output\n      </dt><dd data-md=\"\">\n       <p>None</p>\n     </dd></dl>",
           "rationale": "initialize",
           "steps": [
             {
@@ -23,7 +23,7 @@
           ]
         },
         {
-          "html": "Initialize the following public attributes:",
+          "html": "<h5 class=\"heading settled\" data-level=\"3.2.2.1\" id=\"initialize-a-uievent-id\"><span class=\"secno\">3.2.2.1. </span><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"initialize-a-uievent\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">initialize a UIEvent</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/uievents/#initialize-a-uievent-id\"></a></h5>\n     <dl>\n      <dt data-md=\"\">Input\n      </dt><dd data-md=\"\">\n       <p><var>event</var>, the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/uievents/#uievent\" id=\"ref-for-uievent③\">UIEvent</a></code> to initialize</p>\n      </dd><dd data-md=\"\">\n       <p><var>eventType</var>, a DOMString containing the event type</p>\n      </dd><dd data-md=\"\">\n       <p><var>eventTarget</var>, the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://dom.spec.whatwg.org/#eventtarget\" id=\"ref-for-eventtarget③\">EventTarget</a></code> of the event</p>\n      </dd><dd data-md=\"\">\n       <p><var>bubbles</var>, true if this event bubbles</p>\n      </dd><dd data-md=\"\">\n       <p><var>cancelable</var>, true if this event is cancelable</p>\n      </dd><dt data-md=\"\">Output\n      </dt><dd data-md=\"\">\n       <p>None</p>\n     </dd></dl>",
           "rationale": "set",
           "steps": [
             {
@@ -35,7 +35,7 @@
           ]
         },
         {
-          "html": "Initialize the following historical attributes:",
+          "html": "<h5 class=\"heading settled\" data-level=\"3.2.2.1\" id=\"initialize-a-uievent-id\"><span class=\"secno\">3.2.2.1. </span><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"initialize-a-uievent\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">initialize a UIEvent</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/uievents/#initialize-a-uievent-id\"></a></h5>\n     <dl>\n      <dt data-md=\"\">Input\n      </dt><dd data-md=\"\">\n       <p><var>event</var>, the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/uievents/#uievent\" id=\"ref-for-uievent③\">UIEvent</a></code> to initialize</p>\n      </dd><dd data-md=\"\">\n       <p><var>eventType</var>, a DOMString containing the event type</p>\n      </dd><dd data-md=\"\">\n       <p><var>eventTarget</var>, the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://dom.spec.whatwg.org/#eventtarget\" id=\"ref-for-eventtarget③\">EventTarget</a></code> of the event</p>\n      </dd><dd data-md=\"\">\n       <p><var>bubbles</var>, true if this event bubbles</p>\n      </dd><dd data-md=\"\">\n       <p><var>cancelable</var>, true if this event is cancelable</p>\n      </dd><dt data-md=\"\">Output\n      </dt><dd data-md=\"\">\n       <p>None</p>\n     </dd></dl>",
           "rationale": "set",
           "steps": [
             {
@@ -55,7 +55,7 @@
           "html": "<p><a data-link-type=\"dfn\" href=\"https://w3c.github.io/uievents/#initialize-a-uievent\" id=\"ref-for-initialize-a-uievent\">Initialize a UIEvent</a> with <var>event</var>, <var>eventType</var>, <var>eventTarget</var>, <var>bubbles</var> and <var>cancelable</var>.</p>"
         },
         {
-          "html": "Initialize the following public attributes:",
+          "html": "<h5 class=\"heading settled\" data-level=\"3.4.3.4\" id=\"initialize-a-mouseevent-id\"><span class=\"secno\">3.4.3.4. </span><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-export=\"\" id=\"initialize-a-mouseevent\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">initialize a MouseEvent</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/uievents/#initialize-a-mouseevent-id\"></a></h5>\n     <dl>\n      <dt data-md=\"\">Input\n      </dt><dd data-md=\"\">\n       <p><var>event</var>, the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/uievents/#mouseevent\" id=\"ref-for-mouseevent③②\">MouseEvent</a></code> to initialize</p>\n      </dd><dd data-md=\"\">\n       <p><var>eventType</var>, a DOMString containing the event type</p>\n      </dd><dd data-md=\"\">\n       <p><var>eventTarget</var>, the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://dom.spec.whatwg.org/#eventtarget\" id=\"ref-for-eventtarget①③\">EventTarget</a></code> of the event</p>\n      </dd><dd data-md=\"\">\n       <p><var>bubbles</var>, true if this event bubbles</p>\n      </dd><dd data-md=\"\">\n       <p><var>cancelable</var>, true if this event is cancelable</p>\n      </dd><dt data-md=\"\">Output\n      </dt><dd data-md=\"\">\n       <p>None</p>\n     </dd></dl>",
           "rationale": "set",
           "steps": [
             {
@@ -193,11 +193,11 @@
     {
       "name": "set-mouseevent-attributes-from-native",
       "href": "https://w3c.github.io/uievents/#set-mouseevent-attributes-from-native",
-      "html": "TODO",
+      "html": "<h5 class=\"heading settled\" data-level=\"3.4.3.9\" id=\"set-mouseevent-attributes-from-native-id\"><span class=\"secno\">3.4.3.9. </span><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"set-mouseevent-attributes-from-native\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">set MouseEvent attributes from native</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/uievents/#set-mouseevent-attributes-from-native-id\"></a></h5>\n     <dl>\n      <dt data-md=\"\">Input\n      </dt><dd data-md=\"\">\n       <p><var>event</var>, the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/uievents/#mouseevent\" id=\"ref-for-mouseevent③⑨\">MouseEvent</a></code> to initialize</p>\n      </dd><dd data-md=\"\">\n       <p><var>native</var>, the native mouse event</p>\n      </dd><dt data-md=\"\">Output\n      </dt><dd data-md=\"\">\n       <p>None</p>\n     </dd></dl>",
       "rationale": ".algorithm",
       "steps": [
         {
-          "html": "If <var>event</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://dom.spec.whatwg.org/#dom-event-type\" id=\"ref-for-dom-event-type②\">type</a></code> is one of [ mousedown, mouseup ], then",
+          "html": "<h5 class=\"heading settled\" data-level=\"3.4.3.9\" id=\"set-mouseevent-attributes-from-native-id\"><span class=\"secno\">3.4.3.9. </span><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"set-mouseevent-attributes-from-native\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">set MouseEvent attributes from native</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/uievents/#set-mouseevent-attributes-from-native-id\"></a></h5>\n     <dl>\n      <dt data-md=\"\">Input\n      </dt><dd data-md=\"\">\n       <p><var>event</var>, the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/uievents/#mouseevent\" id=\"ref-for-mouseevent③⑨\">MouseEvent</a></code> to initialize</p>\n      </dd><dd data-md=\"\">\n       <p><var>native</var>, the native mouse event</p>\n      </dd><dt data-md=\"\">Output\n      </dt><dd data-md=\"\">\n       <p>None</p>\n     </dd></dl>",
           "rationale": "let",
           "steps": [
             {
@@ -220,7 +220,7 @@
           "html": "<p>Let <var>mbutton</var> be an ID from <var>native</var> that identifies which mouse button was pressed</p>"
         },
         {
-          "html": "Update the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/uievents/#mouse-button-bitmask\" id=\"ref-for-mouse-button-bitmask①\">mouse button bitmask</a> as follows:",
+          "html": "<h5 class=\"heading settled\" data-level=\"3.4.3.10\" id=\"handle-native-mouse-down-id\"><span class=\"secno\">3.4.3.10. </span><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"handle-native-mouse-down\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">handle native mouse down</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/uievents/#handle-native-mouse-down-id\"></a></h5>\n     <dl>\n      <dt data-md=\"\">Input\n      </dt><dd data-md=\"\">\n       <p><var>native</var>, the native mousedown</p>\n      </dd><dt data-md=\"\">Output\n      </dt><dd data-md=\"\">\n       <p>None</p>\n     </dd></dl>",
           "rationale": "if",
           "steps": [
             {
@@ -250,7 +250,7 @@
           "html": "<p>Let <var>result</var> = <a data-link-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-event-dispatch\" id=\"ref-for-concept-event-dispatch①\">dispatch</a> <var>event</var> at <var>target</var></p>"
         },
         {
-          "html": "If <var>result</var> is true and <var>target</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/#focusable-area\" id=\"ref-for-focusable-area\">focusable area</a> that is <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/#click-focusable\" id=\"ref-for-click-focusable\">click focusable</a>, then",
+          "html": "<h5 class=\"heading settled\" data-level=\"3.4.3.10\" id=\"handle-native-mouse-down-id\"><span class=\"secno\">3.4.3.10. </span><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"handle-native-mouse-down\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">handle native mouse down</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/uievents/#handle-native-mouse-down-id\"></a></h5>\n     <dl>\n      <dt data-md=\"\">Input\n      </dt><dd data-md=\"\">\n       <p><var>native</var>, the native mousedown</p>\n      </dd><dt data-md=\"\">Output\n      </dt><dd data-md=\"\">\n       <p>None</p>\n     </dd></dl>",
           "rationale": "run",
           "steps": [
             {
@@ -259,7 +259,7 @@
           ]
         },
         {
-          "html": "<p>if <var>mbutton</var> is the secondary mouse button, then</p>\n       <ol>\n        <li data-md=\"\">\n         <p><a data-link-type=\"dfn\" href=\"https://w3c.github.io/uievents/#maybe-show-context-menu\" id=\"ref-for-maybe-show-context-menu\">Maybe show context menu</a> with <var>native</var>, <var>target</var></p>\n       </li></ol>",
+          "html": "<p>if <var>mbutton</var> is the secondary mouse button, then</p>",
           "ignored": [
             "Maybe show context menu with native, target"
           ]
@@ -269,14 +269,14 @@
     {
       "name": "handle-native-mouse-up",
       "href": "https://w3c.github.io/uievents/#handle-native-mouse-up",
-      "html": "Other mouse events can occur between the mousedown and mouseup.",
+      "html": "<h5 class=\"heading settled\" data-level=\"3.4.3.11\" id=\"handle-native-mouse-up-id\"><span class=\"secno\">3.4.3.11. </span><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"handle-native-mouse-up\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">handle native mouse up</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/uievents/#handle-native-mouse-up-id\"></a></h5>\n     <dl>\n      <dt data-md=\"\">Input\n      </dt><dd data-md=\"\">\n       <p><var>native</var>, the native mouseup</p>\n      </dd><dt data-md=\"\">Output\n      </dt><dd data-md=\"\">\n       <p>None</p>\n     </dd></dl>",
       "rationale": ".algorithm",
       "steps": [
         {
           "html": "<p>Let <var>mbutton</var> be an ID from <var>native</var> that identifies which mouse button was pressed</p>"
         },
         {
-          "html": "Update the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/uievents/#mouse-button-bitmask\" id=\"ref-for-mouse-button-bitmask②\">mouse button bitmask</a> as follows:",
+          "html": "<h5 class=\"heading settled\" data-level=\"3.4.3.11\" id=\"handle-native-mouse-up-id\"><span class=\"secno\">3.4.3.11. </span><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"handle-native-mouse-up\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">handle native mouse up</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/uievents/#handle-native-mouse-up-id\"></a></h5>\n     <dl>\n      <dt data-md=\"\">Input\n      </dt><dd data-md=\"\">\n       <p><var>native</var>, the native mouseup</p>\n      </dd><dt data-md=\"\">Output\n      </dt><dd data-md=\"\">\n       <p>None</p>\n     </dd></dl>",
           "rationale": "if",
           "steps": [
             {
@@ -310,7 +310,7 @@
     {
       "name": "handle-native-mouse-click",
       "href": "https://w3c.github.io/uievents/#handle-native-mouse-click",
-      "html": "The platform should call this immediately after <a data-link-type=\"dfn\" href=\"https://w3c.github.io/uievents/#handle-native-mouse-up\" id=\"ref-for-handle-native-mouse-up①\">handle native mouse up</a> for\n\t\t\tmouseups that generate clicks.",
+      "html": "<h5 class=\"heading settled\" data-level=\"3.4.3.12\" id=\"handle-native-mouse-click-id\"><span class=\"secno\">3.4.3.12. </span><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"handle-native-mouse-click\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">handle native mouse click</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/uievents/#handle-native-mouse-click-id\"></a></h5>\n     <dl>\n      <dt data-md=\"\">Input\n      </dt><dd data-md=\"\">\n       <p><var>native</var>, the native mouse click</p>\n      </dd><dt data-md=\"\">Output\n      </dt><dd data-md=\"\">\n       <p>None</p>\n     </dd></dl>",
       "rationale": ".algorithm",
       "steps": [
         {
@@ -331,7 +331,7 @@
           "html": "<p>Let <var>mbutton</var> = 1  (primary mouse button by default)</p>"
         },
         {
-          "html": "If <var>native</var> is valid, then",
+          "html": "<h5 class=\"heading settled\" data-level=\"3.4.3.13\" id=\"send-click-event-id\"><span class=\"secno\">3.4.3.13. </span><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"send-click-event\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">send click event</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/uievents/#send-click-event-id\"></a></h5>\n     <dl>\n      <dt data-md=\"\">Input\n      </dt><dd data-md=\"\">\n       <p><var>native</var>, the native mousedown</p>\n      </dd><dd data-md=\"\">\n       <p><var>target</var>, the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://dom.spec.whatwg.org/#eventtarget\" id=\"ref-for-eventtarget①⑥\">EventTarget</a></code> of the event</p>\n      </dd><dt data-md=\"\">Output\n      </dt><dd data-md=\"\">\n       <p>None</p>\n     </dd></dl>",
           "rationale": "let",
           "steps": [
             {
@@ -346,7 +346,7 @@
           "html": "<p>Let <var>event</var> = <a data-link-type=\"dfn\" href=\"https://w3c.github.io/uievents/#create-a-pointerevent\" id=\"ref-for-create-a-pointerevent\">create a PointerEvent</a> with <var>eventType</var> and <var>target</var></p>"
         },
         {
-          "html": "If <var>native</var> is valid, then",
+          "html": "<h5 class=\"heading settled\" data-level=\"3.4.3.13\" id=\"send-click-event-id\"><span class=\"secno\">3.4.3.13. </span><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"send-click-event\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">send click event</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/uievents/#send-click-event-id\"></a></h5>\n     <dl>\n      <dt data-md=\"\">Input\n      </dt><dd data-md=\"\">\n       <p><var>native</var>, the native mousedown</p>\n      </dd><dd data-md=\"\">\n       <p><var>target</var>, the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://dom.spec.whatwg.org/#eventtarget\" id=\"ref-for-eventtarget①⑥\">EventTarget</a></code> of the event</p>\n      </dd><dt data-md=\"\">Output\n      </dt><dd data-md=\"\">\n       <p>None</p>\n     </dd></dl>",
           "rationale": "set",
           "steps": [
             {
@@ -368,7 +368,7 @@
     {
       "name": "handle-native-mouse-double-click",
       "href": "https://w3c.github.io/uievents/#handle-native-mouse-double-click",
-      "html": "This should be called immediately after handle native mouse click for\n\t\t\tmouse clicks that generate double clicks.",
+      "html": "<h5 class=\"heading settled\" data-level=\"3.4.3.14\" id=\"handle-native-mouse-double-click-id\"><span class=\"secno\">3.4.3.14. </span><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"handle-native-mouse-double-click\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">handle native mouse double click</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/uievents/#handle-native-mouse-double-click-id\"></a></h5>\n     <dl>\n      <dt data-md=\"\">Input\n      </dt><dd data-md=\"\">\n       <p><var>native</var>, the native mouse double click</p>\n      </dd><dt data-md=\"\">Output\n      </dt><dd data-md=\"\">\n       <p>None</p>\n     </dd></dl>",
       "rationale": ".algorithm",
       "steps": [
         {
@@ -400,7 +400,7 @@
     {
       "name": "handle-native-mouse-move",
       "href": "https://w3c.github.io/uievents/#handle-native-mouse-move",
-      "html": "This algorithm makes assumptions about the dispatch of PointerEvents because they\n\t\t\tare not currently specified explicitly. Once <a href=\"https://github.com/w3c/pointerevents/issues/285\">pointerevents/285</a> is resolved\n\t\t\tthis may need to be updated.",
+      "html": "<h5 class=\"heading settled\" data-level=\"3.4.3.15\" id=\"handle-native-mouse-move-id\"><span class=\"secno\">3.4.3.15. </span><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"handle-native-mouse-move\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">handle native mouse move</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/uievents/#handle-native-mouse-move-id\"></a></h5>\n     <dl>\n      <dt data-md=\"\">Input\n      </dt><dd data-md=\"\">\n       <p><var>native</var>, the native mouse move</p>\n      </dd><dt data-md=\"\">Output\n      </dt><dd data-md=\"\">\n       <p>None</p>\n     </dd></dl>",
       "rationale": ".algorithm",
       "steps": [
         {
@@ -410,11 +410,11 @@
           "html": "<p>Let <var>targetDomPath</var> = <a data-link-type=\"dfn\" href=\"https://w3c.github.io/uievents/#calculate-dom-path\" id=\"ref-for-calculate-dom-path\">calculate DOM path</a></p>"
         },
         {
-          "html": "Generate events for leaving the current element:",
+          "html": "<h5 class=\"heading settled\" data-level=\"3.4.3.15\" id=\"handle-native-mouse-move-id\"><span class=\"secno\">3.4.3.15. </span><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"handle-native-mouse-move\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">handle native mouse move</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/uievents/#handle-native-mouse-move-id\"></a></h5>\n     <dl>\n      <dt data-md=\"\">Input\n      </dt><dd data-md=\"\">\n       <p><var>native</var>, the native mouse move</p>\n      </dd><dt data-md=\"\">Output\n      </dt><dd data-md=\"\">\n       <p>None</p>\n     </dd></dl>",
           "rationale": "if",
           "steps": [
             {
-              "html": "If <a data-link-type=\"dfn\" href=\"https://w3c.github.io/uievents/#last-mouse-element\" id=\"ref-for-last-mouse-element①\">last mouse element</a> is defined and not equal to <var>target</var>, then",
+              "html": "<h5 class=\"heading settled\" data-level=\"3.4.3.15\" id=\"handle-native-mouse-move-id\"><span class=\"secno\">3.4.3.15. </span><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"handle-native-mouse-move\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">handle native mouse move</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/uievents/#handle-native-mouse-move-id\"></a></h5>\n     <dl>\n      <dt data-md=\"\">Input\n      </dt><dd data-md=\"\">\n       <p><var>native</var>, the native mouse move</p>\n      </dd><dt data-md=\"\">Output\n      </dt><dd data-md=\"\">\n       <p>None</p>\n     </dd></dl>",
               "rationale": "let",
               "steps": [
                 {
@@ -423,7 +423,7 @@
               ],
               "additional": [
                 {
-                  "html": "TODO: Set <var>mouseout</var> attributes from <var>native</var>. +CSSOM attributes",
+                  "html": "<h5 class=\"heading settled\" data-level=\"3.4.3.15\" id=\"handle-native-mouse-move-id\"><span class=\"secno\">3.4.3.15. </span><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"handle-native-mouse-move\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">handle native mouse move</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/uievents/#handle-native-mouse-move-id\"></a></h5>\n     <dl>\n      <dt data-md=\"\">Input\n      </dt><dd data-md=\"\">\n       <p><var>native</var>, the native mouse move</p>\n      </dd><dt data-md=\"\">Output\n      </dt><dd data-md=\"\">\n       <p>None</p>\n     </dd></dl>",
                   "rationale": "dispatch",
                   "steps": [
                     {
@@ -436,7 +436,7 @@
                       "html": "<p>Let <var>leaveElements</var> be a copy of <a data-link-type=\"dfn\" href=\"https://w3c.github.io/uievents/#last-mouse-dom-path\" id=\"ref-for-last-mouse-dom-path\">last mouse DOM path</a> with all\nelements common to <var>targetDomPath</var> removed.</p>"
                     },
                     {
-                      "html": "Handle case where <var>element</var> has been deleted.\nAlso case where it has been moved: Should the DOM mutation have triggered\na mouseleave event? Should we sent it now? Should it be dropped?\nNeed to verify what current browsers do.",
+                      "html": "<h5 class=\"heading settled\" data-level=\"3.4.3.15\" id=\"handle-native-mouse-move-id\"><span class=\"secno\">3.4.3.15. </span><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"handle-native-mouse-move\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">handle native mouse move</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/uievents/#handle-native-mouse-move-id\"></a></h5>\n     <dl>\n      <dt data-md=\"\">Input\n      </dt><dd data-md=\"\">\n       <p><var>native</var>, the native mouse move</p>\n      </dd><dt data-md=\"\">Output\n      </dt><dd data-md=\"\">\n       <p>None</p>\n     </dd></dl>",
                       "rationale": "let",
                       "steps": [
                         {
@@ -460,11 +460,11 @@
           ]
         },
         {
-          "html": "Generate events for entering the new element:",
+          "html": "<h5 class=\"heading settled\" data-level=\"3.4.3.15\" id=\"handle-native-mouse-move-id\"><span class=\"secno\">3.4.3.15. </span><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"handle-native-mouse-move\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">handle native mouse move</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/uievents/#handle-native-mouse-move-id\"></a></h5>\n     <dl>\n      <dt data-md=\"\">Input\n      </dt><dd data-md=\"\">\n       <p><var>native</var>, the native mouse move</p>\n      </dd><dt data-md=\"\">Output\n      </dt><dd data-md=\"\">\n       <p>None</p>\n     </dd></dl>",
           "rationale": "if",
           "steps": [
             {
-              "html": "If <var>target</var> is not <a data-link-type=\"dfn\" href=\"https://w3c.github.io/uievents/#last-mouse-element\" id=\"ref-for-last-mouse-element③\">last mouse element</a>, then",
+              "html": "<h5 class=\"heading settled\" data-level=\"3.4.3.15\" id=\"handle-native-mouse-move-id\"><span class=\"secno\">3.4.3.15. </span><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"handle-native-mouse-move\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">handle native mouse move</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/uievents/#handle-native-mouse-move-id\"></a></h5>\n     <dl>\n      <dt data-md=\"\">Input\n      </dt><dd data-md=\"\">\n       <p><var>native</var>, the native mouse move</p>\n      </dd><dt data-md=\"\">Output\n      </dt><dd data-md=\"\">\n       <p>None</p>\n     </dd></dl>",
               "rationale": "let",
               "steps": [
                 {
@@ -473,7 +473,7 @@
               ],
               "additional": [
                 {
-                  "html": "TODO: Set <var>mouseout</var> attributes from <var>native</var>. +CSSOM attributes",
+                  "html": "<h5 class=\"heading settled\" data-level=\"3.4.3.15\" id=\"handle-native-mouse-move-id\"><span class=\"secno\">3.4.3.15. </span><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"handle-native-mouse-move\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">handle native mouse move</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/uievents/#handle-native-mouse-move-id\"></a></h5>\n     <dl>\n      <dt data-md=\"\">Input\n      </dt><dd data-md=\"\">\n       <p><var>native</var>, the native mouse move</p>\n      </dd><dt data-md=\"\">Output\n      </dt><dd data-md=\"\">\n       <p>None</p>\n     </dd></dl>",
                   "rationale": "dispatch",
                   "steps": [
                     {
@@ -486,7 +486,7 @@
                       "html": "<p>Let <var>enterElements</var> be a copy of <var>targetDomPath</var> with all\nelements common to <a data-link-type=\"dfn\" href=\"https://w3c.github.io/uievents/#last-mouse-dom-path\" id=\"ref-for-last-mouse-dom-path①\">last mouse DOM path</a> removed.</p>"
                     },
                     {
-                      "html": "Handle case where <var>element</var> has been deleted or moved.",
+                      "html": "<h5 class=\"heading settled\" data-level=\"3.4.3.15\" id=\"handle-native-mouse-move-id\"><span class=\"secno\">3.4.3.15. </span><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"handle-native-mouse-move\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">handle native mouse move</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/uievents/#handle-native-mouse-move-id\"></a></h5>\n     <dl>\n      <dt data-md=\"\">Input\n      </dt><dd data-md=\"\">\n       <p><var>native</var>, the native mouse move</p>\n      </dd><dt data-md=\"\">Output\n      </dt><dd data-md=\"\">\n       <p>None</p>\n     </dd></dl>",
                       "rationale": "let",
                       "steps": [
                         {
@@ -501,7 +501,7 @@
                       ],
                       "additional": [
                         {
-                          "html": "Check compat for shadow DOM elements.\nChrome/Linux fires this event at the element and the shadow root.",
+                          "html": "<h5 class=\"heading settled\" data-level=\"3.4.3.15\" id=\"handle-native-mouse-move-id\"><span class=\"secno\">3.4.3.15. </span><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"handle-native-mouse-move\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">handle native mouse move</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/uievents/#handle-native-mouse-move-id\"></a></h5>\n     <dl>\n      <dt data-md=\"\">Input\n      </dt><dd data-md=\"\">\n       <p><var>native</var>, the native mouse move</p>\n      </dd><dt data-md=\"\">Output\n      </dt><dd data-md=\"\">\n       <p>None</p>\n     </dd></dl>",
                           "rationale": "let",
                           "steps": [
                             {
@@ -540,14 +540,14 @@
     {
       "name": "maybe-show-context-menu",
       "href": "https://w3c.github.io/uievents/#maybe-show-context-menu",
-      "html": "None",
+      "html": "<h5 class=\"heading settled\" data-level=\"3.4.3.16\" id=\"maybe-show-context-menu-id\"><span class=\"secno\">3.4.3.16. </span><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"maybe-show-context-menu\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">maybe show context menu</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/uievents/#maybe-show-context-menu-id\"></a></h5>\n     <dl>\n      <dt data-md=\"\">Input\n      </dt><dd data-md=\"\">\n       <p><var>native</var>, the native mousedown or pointer event</p>\n      </dd><dd data-md=\"\">\n       <p><var>target</var>, the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://dom.spec.whatwg.org/#eventtarget\" id=\"ref-for-eventtarget①⑦\">EventTarget</a></code> of the event</p>\n      </dd><dt data-md=\"\">Output\n      </dt><dd data-md=\"\">\n       <p>None</p>\n       \n     </dd></dl>",
       "rationale": ".algorithm",
       "steps": [
         {
           "html": "<p>Let <var>menuevent</var> = <a data-link-type=\"dfn\" href=\"https://w3c.github.io/uievents/#create-a-pointerevent\" id=\"ref-for-create-a-pointerevent②\">create a PointerEvent</a> with \"contextmenu\", <var>target</var></p>"
         },
         {
-          "html": "If <var>native</var> is valid, then",
+          "html": "<h5 class=\"heading settled\" data-level=\"3.4.3.16\" id=\"maybe-show-context-menu-id\"><span class=\"secno\">3.4.3.16. </span><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"maybe-show-context-menu\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">maybe show context menu</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/uievents/#maybe-show-context-menu-id\"></a></h5>\n     <dl>\n      <dt data-md=\"\">Input\n      </dt><dd data-md=\"\">\n       <p><var>native</var>, the native mousedown or pointer event</p>\n      </dd><dd data-md=\"\">\n       <p><var>target</var>, the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://dom.spec.whatwg.org/#eventtarget\" id=\"ref-for-eventtarget①⑦\">EventTarget</a></code> of the event</p>\n      </dd><dt data-md=\"\">Output\n      </dt><dd data-md=\"\">\n       <p>None</p>\n       \n     </dd></dl>",
           "rationale": "set",
           "steps": [
             {
@@ -566,7 +566,7 @@
     {
       "name": "hit-test",
       "href": "https://w3c.github.io/uievents/#hit-test",
-      "html": "To account for <a href=\"https://html.spec.whatwg.org/#inert\">inert</a> or <a href=\"https://html.spec.whatwg.org/#concept-fe-disabled\">disabled</a> elements. this should call <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/cssom-view/#dom-document-elementsfrompoint\" id=\"ref-for-dom-document-elementsfrompoint\">elementsFromPoint</a> and reject\n\t\t\tinvalid elements",
+      "html": "<h4 class=\"heading settled\" data-level=\"5.1.1\" id=\"hit-test-id\"><span class=\"secno\">5.1.1. </span><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"hit-test\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">hit test</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/uievents/#hit-test-id\"></a></h4>\n     <dl>\n      <dt data-md=\"\">Input\n      </dt><dd data-md=\"\">\n       <p><var>pos</var>, the x,y coordinates relative to the viewport</p>\n      </dd><dt data-md=\"\">Output\n      </dt><dd data-md=\"\">\n       <p>The frontmost DOM element at <var>pos</var></p>\n     </dd></dl>",
       "rationale": ".algorithm",
       "steps": [
         {
@@ -612,7 +612,7 @@
           "html": "<p>If <var>event</var>.<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://dom.spec.whatwg.org/#dom-event-type\" id=\"ref-for-dom-event-type③\">type</a></code> is not \"mousemove\", then exit</p>"
         },
         {
-          "html": "If <a data-link-type=\"dfn\" href=\"https://w3c.github.io/uievents/#last-mouse-move\" id=\"ref-for-last-mouse-move\">last mouse move</a> is not defined, then",
+          "html": "<h4 class=\"heading settled\" data-level=\"5.2.3\" id=\"set-pointerlock-attributes-for-mousemove-id\"><span class=\"secno\">5.2.3. </span><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"set-pointerlock-attributes-for-mousemove\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">set PointerLock attributes for mousemove</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/uievents/#set-pointerlock-attributes-for-mousemove-id\"></a></h4>\n     <dl>\n      <dt data-md=\"\">Input\n      </dt><dd data-md=\"\">\n       <p><var>event</var>, a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/uievents/#mouseevent\" id=\"ref-for-mouseevent②⓪④\">MouseEvent</a></code></p>\n      </dd><dt data-md=\"\">Output\n      </dt><dd data-md=\"\">\n       <p>None</p>\n     </dd></dl>",
           "rationale": "set",
           "steps": [
             {
@@ -624,7 +624,7 @@
           ]
         },
         {
-          "html": "Otherwise,",
+          "html": "<h4 class=\"heading settled\" data-level=\"5.2.3\" id=\"set-pointerlock-attributes-for-mousemove-id\"><span class=\"secno\">5.2.3. </span><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"set-pointerlock-attributes-for-mousemove\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">set PointerLock attributes for mousemove</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/uievents/#set-pointerlock-attributes-for-mousemove-id\"></a></h4>\n     <dl>\n      <dt data-md=\"\">Input\n      </dt><dd data-md=\"\">\n       <p><var>event</var>, a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/uievents/#mouseevent\" id=\"ref-for-mouseevent②⓪④\">MouseEvent</a></code></p>\n      </dd><dt data-md=\"\">Output\n      </dt><dd data-md=\"\">\n       <p>None</p>\n     </dd></dl>",
           "rationale": "set",
           "steps": [
             {
@@ -774,7 +774,7 @@
     {
       "name": "maybe-send-pointermove-event",
       "href": "https://w3c.github.io/uievents/#maybe-send-pointermove-event",
-      "html": "What is needed to properly define how pointermove events are coalesced?",
+      "html": "<h4 class=\"heading settled\" data-level=\"5.3.8\" id=\"maybe-send-pointermove-event-id\"><span class=\"secno\">5.3.8. </span><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"maybe-send-pointermove-event\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">maybe send pointermove event</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/uievents/#maybe-send-pointermove-event-id\"></a></h4>\n     <dl>\n      <dt data-md=\"\">Input\n      </dt><dd data-md=\"\">\n       <p><var>mouseout</var>, the corresponding mouseout <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/uievents/#mouseevent\" id=\"ref-for-mouseevent②①⓪\">MouseEvent</a></code></p>\n      </dd><dt data-md=\"\">Output\n      </dt><dd data-md=\"\">\n       <p>None</p>\n     </dd></dl>",
       "rationale": ".algorithm",
       "steps": [
         {
@@ -794,7 +794,7 @@
     {
       "name": "maybe-send-pointerdown-event",
       "href": "https://w3c.github.io/uievents/#maybe-send-pointerdown-event",
-      "html": "Unlike mousedown events, <a href=\"https://w3c.github.io/pointerevents/#the-pointerdown-event\">pointerdown</a> events are not nested when multiple buttons are pressed.\n\t\t\tThe MouseEvent is passed so that the fields can be copied into the PointerEvent.",
+      "html": "<h4 class=\"heading settled\" data-level=\"5.3.9\" id=\"maybe-send-pointerdown-event-id\"><span class=\"secno\">5.3.9. </span><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"maybe-send-pointerdown-event\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">maybe send pointerdown event</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/uievents/#maybe-send-pointerdown-event-id\"></a></h4>\n     <dl>\n      <dt data-md=\"\">Input\n      </dt><dd data-md=\"\">\n       <p><var>mouseout</var>, the corresponding mouseout <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/uievents/#mouseevent\" id=\"ref-for-mouseevent②①①\">MouseEvent</a></code></p>\n      </dd><dt data-md=\"\">Output\n      </dt><dd data-md=\"\">\n       <p>None</p>\n     </dd></dl>",
       "rationale": ".algorithm",
       "steps": [
         {
@@ -814,7 +814,7 @@
     {
       "name": "maybe-send-pointerup-event",
       "href": "https://w3c.github.io/uievents/#maybe-send-pointerup-event",
-      "html": "Unlike mouseup events, <a href=\"https://w3c.github.io/pointerevents/#the-pointerup-event\">pointerup</a> events are not nested when multiple buttons are pressed.\n\t\t\tThe MouseEvent is passed so that the fields can be copied into the PointerEvent.",
+      "html": "<h4 class=\"heading settled\" data-level=\"5.3.10\" id=\"maybe-send-pointerup-event-id\"><span class=\"secno\">5.3.10. </span><span class=\"content\"><dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"maybe-send-pointerup-event\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">maybe send pointerup event</dfn></span><a class=\"self-link\" href=\"https://w3c.github.io/uievents/#maybe-send-pointerup-event-id\"></a></h4>\n     <dl>\n      <dt data-md=\"\">Input\n      </dt><dd data-md=\"\">\n       <p><var>mouseout</var>, the corresponding mouseout <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/uievents/#mouseevent\" id=\"ref-for-mouseevent②①②\">MouseEvent</a></code></p>\n      </dd><dt data-md=\"\">Output\n      </dt><dd data-md=\"\">\n       <p>None</p>\n     </dd></dl>",
       "rationale": ".algorithm",
       "steps": [
         {

@@ -126,7 +126,7 @@
           "html": "A <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-span-start-tag\" id=\"ref-for-webvtt-cue-span-start-tag④\">WebVTT cue span start tag</a> \"<code>ruby</code>\" that disallows an annotation."
         },
         {
-          "html": "One or more occurrences of the following group of components, in the order given: \n     <ol>\n      <li><a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-internal-text\" id=\"ref-for-webvtt-cue-internal-text④\">WebVTT cue internal text</a>, representing the ruby base.\n      </li><li>A <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-span-start-tag\" id=\"ref-for-webvtt-cue-span-start-tag⑤\">WebVTT cue span start tag</a> \"<code>rt</code>\" that disallows an annotation.\n      </li><li>A <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"webvtt-cue-ruby-text-span\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">WebVTT cue ruby text span</dfn><span style=\"position: relative; height: 0px;\"></span>: <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-internal-text\" id=\"ref-for-webvtt-cue-internal-text⑤\">WebVTT cue internal text</a>, representing the\n   ruby text component of the ruby annotation.\n      </li><li>A <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-span-end-tag\" id=\"ref-for-webvtt-cue-span-end-tag④\">WebVTT cue span end tag</a> \"<code>rt</code>\". If this is the last occurrence of this\n   group of components in the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-ruby-span\" id=\"ref-for-webvtt-cue-ruby-span①\">WebVTT cue ruby span</a>, then this last end tag string may be\n   omitted.\n     </li></ol>",
+          "html": "One or more occurrences of the following group of components, in the order given:",
           "ignored": [
             "WebVTT cue internal text, representing the ruby base. A WebVTT cue span start tag \"rt\" that disallows an annotation. A WebVTT cue ruby text span: WebVTT cue internal text, representing the ruby text component of the ruby annotation. A WebVTT cue span end tag \"rt\". If this is the last occurrence of this group of components in the WebVTT cue ruby span, then this last end tag string may be omitted."
           ]
@@ -155,7 +155,7 @@
           "html": "The <var>tag name</var>."
         },
         {
-          "html": "Zero or more occurrences of the following sequence: \n     <ol>\n      <li>U+002E FULL STOP character (.)\n      </li><li>One or more characters other than U+0009 CHARACTER TABULATION (tab) characters, U+000A LINE\n   FEED (LF) characters, U+000D CARRIAGE RETURN (CR) characters, U+0020 SPACE characters, U+0026\n   AMPERSAND characters (&amp;), U+003C LESS-THAN SIGN characters (&lt;), U+003E GREATER-THAN SIGN\n   characters (&gt;), and U+002E FULL STOP characters (.), representing a class that describes the cue\n   span’s significance.\n     </li></ol>",
+          "html": "Zero or more occurrences of the following sequence:",
           "ignored": [
             "U+002E FULL STOP character (.) One or more characters other than U+0009 CHARACTER TABULATION (tab) characters, U+000A LINE FEED (LF) characters, U+000D CARRIAGE RETURN (CR) characters, U+0020 SPACE characters, U+0026 AMPERSAND characters (&), U+003C LESS-THAN SIGN characters (<), U+003E GREATER-THAN SIGN characters (>), and U+002E FULL STOP characters (.), representing a class that describes the cue span’s significance."
           ]
@@ -456,7 +456,7 @@
               "html": "<p>Let <var>value</var> be the trailing substring of <var>setting</var> starting from the character immediately\n   after the first U+003A COLON character (:) in that string.</p>"
             },
             {
-              "html": "<p>Run the appropriate substeps that apply for the value of <var>name</var>, as follows:</p>\n       <dl>\n        <dt>\n         <p>If <var>name</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive\">case-sensitive</a> match for \"<code>id</code>\"</p>\n        </dt><dd>\n         <p>Let <var>region</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region-identifier\" id=\"ref-for-webvtt-region-identifier②\">identifier</a> be <var>value</var>.</p>\n        </dd><dt>\n         <p>Otherwise if <var>name</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive①\">case-sensitive</a> match for \"<code>width</code>\"</p>\n        </dt><dd>\n         <p>If <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#parse-a-percentage-string\" id=\"ref-for-parse-a-percentage-string\">parse a percentage string</a> from <var>value</var> returns a <var>percentage</var>, let <var>region</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region-width\" id=\"ref-for-webvtt-region-width①\">WebVTT region width</a> be <var>percentage</var>.</p>\n        </dd><dt>Otherwise if <var>name</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive②\">case-sensitive</a> match for \"<code>lines</code>\"\n        </dt><dd>\n         <ol>\n          <li>\n           <p>If <var>value</var> contains any characters other than <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#ascii-digits\" id=\"ref-for-ascii-digits⑧\">ASCII digits</a>, then jump to the\n       step labeled <i>next setting</i>.</p>\n          </li><li>\n           <p>Interpret <var>value</var> as an integer, and let <var>number</var> be that number.</p>\n          </li><li>\n           <p>Let <var>region</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region-lines\" id=\"ref-for-webvtt-region-lines①\">WebVTT region lines</a> be <var>number</var>.</p>\n         </li></ol>\n        </dd><dt>Otherwise if <var>name</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive③\">case-sensitive</a> match for \"<code>regionanchor</code>\"\n        </dt><dd>\n         <ol>\n          <li>\n           <p>If <var>value</var> does not contain a U+002C COMMA character (,), then jump to the step\n       labeled <i>next setting</i>.</p>\n          </li><li>\n           <p>Let <var>anchorX</var> be the leading substring of <var>value</var> up to and excluding the first U+002C\n       COMMA character (,) in that string.</p>\n          </li><li>\n           <p>Let <var>anchorY</var> be the trailing substring of <var>value</var> starting from the character\n       immediately after the first U+002C COMMA character (,) in that string.</p>\n          </li><li>\n           <p>If <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#parse-a-percentage-string\" id=\"ref-for-parse-a-percentage-string①\">parse a percentage string</a> from <var>anchorX</var> or <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#parse-a-percentage-string\" id=\"ref-for-parse-a-percentage-string②\">parse a percentage string</a> from <var>anchorY</var> don’t return a <var>percentage</var>, then jump to the step labeled <i>next\n       setting</i>.</p>\n          </li><li>\n           <p>Let <var>region</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region-anchor\" id=\"ref-for-webvtt-region-anchor①\">WebVTT region anchor point</a> be the\n       tuple of the <var>percentage</var> values calculated from <var>anchorX</var> and <var>anchorY</var>.</p>\n         </li></ol>\n        </dd><dt>Otherwise if <var>name</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive④\">case-sensitive</a> match for \"<code>viewportanchor</code>\"\n        </dt><dd>\n         <ol>\n          <li>\n           <p>If <var>value</var> does not contain a U+002C COMMA character (,), then jump to the step\n       labeled <i>next setting</i>.</p>\n          </li><li>\n           <p>Let <var>viewportanchorX</var> be the leading substring of <var>value</var> up to and excluding the\n       first U+002C COMMA character (,) in that string.</p>\n          </li><li>\n           <p>Let <var>viewportanchorY</var> be the trailing substring of <var>value</var> starting from the character\n       immediately after the first U+002C COMMA character (,) in that string.</p>\n          </li><li>\n           <p>If <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#parse-a-percentage-string\" id=\"ref-for-parse-a-percentage-string③\">parse a percentage string</a> from <var>viewportanchorX</var> or <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#parse-a-percentage-string\" id=\"ref-for-parse-a-percentage-string④\">parse a percentage\n       string</a> from <var>viewportanchorY</var> don’t return a <var>percentage</var>, then jump to the step labeled <i>next setting</i>.</p>\n          </li><li>\n           <p>Let <var>region</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region-viewport-anchor\" id=\"ref-for-webvtt-region-viewport-anchor①\">WebVTT region viewport anchor\n       point</a> be the tuple of the <var>percentage</var> values calculated from <var>viewportanchorX</var> and <var>viewportanchorY</var>.</p>\n         </li></ol>\n        </dd><dt>Otherwise if <var>name</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive⑤\">case-sensitive</a> match for \"<code>scroll</code>\"\n        </dt><dd>\n         <ol>\n          <li>\n           <p>If <var>value</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive⑥\">case-sensitive</a> match for the string \"<code>up</code>\", then let <var>region</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region-scroll\" id=\"ref-for-webvtt-region-scroll①\">scroll value</a> be <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region-scroll-up\" id=\"ref-for-webvtt-region-scroll-up\">up</a>.</p>\n         </li></ol>\n       </dd></dl>",
+              "html": "<p>Run the appropriate substeps that apply for the value of <var>name</var>, as follows:</p>\n       <dl>\n        <dt>\n         <p>If <var>name</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive\">case-sensitive</a> match for \"<code>id</code>\"</p>\n        </dt><dd>\n         <p>Let <var>region</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region-identifier\" id=\"ref-for-webvtt-region-identifier②\">identifier</a> be <var>value</var>.</p>\n        </dd><dt>\n         <p>Otherwise if <var>name</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive①\">case-sensitive</a> match for \"<code>width</code>\"</p>\n        </dt><dd>\n         <p>If <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#parse-a-percentage-string\" id=\"ref-for-parse-a-percentage-string\">parse a percentage string</a> from <var>value</var> returns a <var>percentage</var>, let <var>region</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region-width\" id=\"ref-for-webvtt-region-width①\">WebVTT region width</a> be <var>percentage</var>.</p>\n        </dd><dt>Otherwise if <var>name</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive②\">case-sensitive</a> match for \"<code>lines</code>\"\n        </dt><dd>\n         \n        </dd><dt>Otherwise if <var>name</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive③\">case-sensitive</a> match for \"<code>regionanchor</code>\"\n        </dt><dd>\n         \n        </dd><dt>Otherwise if <var>name</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive④\">case-sensitive</a> match for \"<code>viewportanchor</code>\"\n        </dt><dd>\n         \n        </dd><dt>Otherwise if <var>name</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive⑤\">case-sensitive</a> match for \"<code>scroll</code>\"\n        </dt><dd>\n         \n       </dd></dl>",
               "rationale": "if",
               "steps": [
                 {
@@ -620,7 +620,7 @@
               "html": "<p>Let <var>value</var> be the trailing substring of <var>setting</var> starting from the character immediately\n   after the first U+003A COLON character (:) in that string.</p>"
             },
             {
-              "html": "<p>Run the appropriate substeps that apply for the value of <var>name</var>, as follows:</p>\n       <dl>\n        <dt>If <var>name</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive⑦\">case-sensitive</a> match for \"<code>region</code>\"\n        </dt><dd>\n         <ol>\n          <li>\n           <p>Let <var>cue</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-region\" id=\"ref-for-webvtt-cue-region②\">WebVTT cue region</a> be the last <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region\" id=\"ref-for-webvtt-region①⓪\">WebVTT region</a> in <var>regions</var> whose <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region-identifier\" id=\"ref-for-webvtt-region-identifier③\">WebVTT region identifier</a> is <var>value</var>, if any, or null otherwise.</p>\n         </li></ol>\n        </dd><dt>If <var>name</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive⑧\">case-sensitive</a> match for \"<code>vertical</code>\"\n        </dt><dd>\n         <ol>\n          <li>\n           <p>If <var>value</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive⑨\">case-sensitive</a> match for the string \"<code>rl</code>\", then let <var>cue</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-writing-direction\" id=\"ref-for-webvtt-cue-writing-direction①③\">WebVTT cue writing direction</a> be <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-vertical-growing-left-writing-direction\" id=\"ref-for-webvtt-cue-vertical-growing-left-writing-direction③\">vertical growing left</a>.</p>\n          </li><li>\n           <p>Otherwise, if <var>value</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive①⓪\">case-sensitive</a> match for the string\n       \"<code>lr</code>\", then let <var>cue</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-writing-direction\" id=\"ref-for-webvtt-cue-writing-direction①④\">WebVTT cue writing direction</a> be <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-vertical-growing-right-writing-direction\" id=\"ref-for-webvtt-cue-vertical-growing-right-writing-direction③\">vertical growing right</a>.</p>\n          </li><li>\n           <p>If <var>cue</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-writing-direction\" id=\"ref-for-webvtt-cue-writing-direction①⑤\">WebVTT cue writing direction</a> is not <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-horizontal-writing-direction\" id=\"ref-for-webvtt-cue-horizontal-writing-direction①③\">horizontal</a>, let <var>cue</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-region\" id=\"ref-for-webvtt-cue-region③\">WebVTT cue region</a> be null (there are no\n       vertical regions).</p>\n         </li></ol>\n        </dd><dt>If <var>name</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive①①\">case-sensitive</a> match for \"<code>line</code>\"\n        </dt><dd>\n         <ol>\n          <li>\n           <p>If <var>value</var> contains a U+002C COMMA character (,), then let <var>linepos</var> be the leading\n       substring of <var>value</var> up to and excluding the first U+002C COMMA character (,) in that string\n       and let <var>linealign</var> be the trailing substring of <var>value</var> starting from the character\n       immediately after the first U+002C COMMA character (,) in that string.</p>\n          </li><li>\n           <p>Otherwise let <var>linepos</var> be the full <var>value</var> string and <var>linealign</var> be null.</p>\n          </li><li>\n           <p>If <var>linepos</var> does not contain at least one <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#ascii-digits\" id=\"ref-for-ascii-digits⑨\">ASCII digit</a>, then jump to the step\n       labeled <i>next setting</i>.</p>\n          </li><li>\n           <dl>\n            <dt>\n             <p>If the last character in <var>linepos</var> is a U+0025 PERCENT SIGN character (%)</p>\n            </dt><dd>\n             <p>If <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#parse-a-percentage-string\" id=\"ref-for-parse-a-percentage-string⑤\">parse a percentage string</a> from <var>linepos</var> doesn’t fail, let <var>number</var> be the\n         returned <var>percentage</var>, otherwise jump to the step labeled <i>next setting</i>.</p>\n            </dd><dt>\n             <p>Otherwise</p>\n            </dt><dd>\n             <ol>\n              <li>\n               <p>If <var>linepos</var> contains any characters other than U+002D HYPHEN-MINUS characters\n           (-), <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#ascii-digits\" id=\"ref-for-ascii-digits①⓪\">ASCII digits</a>, and U+002E DOT character (.), then jump to the step labeled <i>next setting</i>.</p>\n              </li><li>\n               <p>If any character in <var>linepos</var> other than the first character is a U+002D\n           HYPHEN-MINUS character (-), then jump to the step labeled <i>next setting</i>.</p>\n              </li><li>\n               <p>If there are more than one U+002E DOT characters (.), then jump to the step\n           labeled <i>next setting</i>.</p>\n              </li><li>\n               <p>If there is a U+002E DOT character (.) and the character before or the character\n           after is not an <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#ascii-digits\" id=\"ref-for-ascii-digits①①\">ASCII digit</a>, or if the U+002E DOT character (.) is the first or\n           the last character, then jump to the step labeled <i>next setting</i>.</p>\n              </li><li>\n               <p>Let <var>number</var> be the result of parsing <var>linepos</var> using the <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#rules-for-parsing-floating-point-number-values\" id=\"ref-for-rules-for-parsing-floating-point-number-values①\">rules for parsing\n           floating-point number values</a>. <a data-link-type=\"biblio\" href=\"https://w3c.github.io/webvtt/#biblio-html\" title=\"HTML Standard\">[HTML]</a></p>\n              </li><li>\n               <p>If <var>number</var> is an error, then jump to the step labeled <i>next\n           setting</i>.</p>\n             </li></ol>\n           </dd></dl>\n          </li><li>\n           <p>If <var>linealign</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive①②\">case-sensitive</a> match for the string \"<code>start</code>\",\n       then let <var>cue</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-line-alignment\" id=\"ref-for-webvtt-cue-line-alignment⑥\">WebVTT cue line alignment</a> be <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-line-start-alignment\" id=\"ref-for-webvtt-cue-line-start-alignment④\">start alignment</a>.</p>\n          </li><li>\n           <p>Otherwise, if <var>linealign</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive①③\">case-sensitive</a> match for the string\n       \"<code>center</code>\", then let <var>cue</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-line-alignment\" id=\"ref-for-webvtt-cue-line-alignment⑦\">WebVTT cue line alignment</a> be <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-line-center-alignment\" id=\"ref-for-webvtt-cue-line-center-alignment①\">center alignment</a>.</p>\n          </li><li>\n           <p>Otherwise, if <var>linealign</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive①④\">case-sensitive</a> match for the string\n       \"<code>end</code>\", then let <var>cue</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-line-alignment\" id=\"ref-for-webvtt-cue-line-alignment⑧\">WebVTT cue line alignment</a> be <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-line-end-alignment\" id=\"ref-for-webvtt-cue-line-end-alignment①\">end alignment</a>.</p>\n          </li><li>\n           <p>Otherwise, if <var>linealign</var> is not null, then jump to the step labeled <i>next\n       setting</i>.</p>\n          </li><li>\n           <p>Let <var>cue</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-line\" id=\"ref-for-webvtt-cue-line②①\">WebVTT cue line</a> be <var>number</var>.</p>\n          </li><li>\n           <p>If the last character in <var>linepos</var> is a U+0025 PERCENT SIGN character (%), then let <var>cue</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-snap-to-lines-flag\" id=\"ref-for-webvtt-cue-snap-to-lines-flag⑧\">WebVTT cue snap-to-lines flag</a> be false. Otherwise, let it be true.</p>\n          </li><li>\n           <p>If <var>cue</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-line\" id=\"ref-for-webvtt-cue-line②②\">WebVTT cue line</a> is not <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-line-automatic\" id=\"ref-for-webvtt-cue-line-automatic④\">auto</a>,\n       let <var>cue</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-region\" id=\"ref-for-webvtt-cue-region④\">WebVTT cue region</a> be null (the cue has been explicitly positioned with a\n       line offset and thus drops out of the region).</p>\n         </li></ol>\n        </dd><dt>If <var>name</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive①⑤\">case-sensitive</a> match for \"<code>position</code>\"\n        </dt><dd>\n         <ol>\n          <li>\n           <p>If <var>value</var> contains a U+002C COMMA character (,), then let <var>colpos</var> be the leading\n       substring of <var>value</var> up to and excluding the first U+002C COMMA character (,) in that string\n       and let <var>colalign</var> be the trailing substring of <var>value</var> starting from the character\n       immediately after the first U+002C COMMA character (,) in that string.</p>\n          </li><li>\n           <p>Otherwise let <var>colpos</var> be the full <var>value</var> string and <var>colalign</var> be null.</p>\n          </li><li>\n           <p>If <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#parse-a-percentage-string\" id=\"ref-for-parse-a-percentage-string⑥\">parse a percentage string</a> from <var>colpos</var> doesn’t fail, let <var>number</var> be the\n       returned <var>percentage</var>, otherwise jump to the step labeled <i>next setting</i> (<a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-position\" id=\"ref-for-webvtt-cue-position②⓪\">position</a>’s value remains the special value <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-automatic-position\" id=\"ref-for-webvtt-cue-automatic-position⑥\">auto</a>).</p>\n          </li><li>\n           <p>If <var>colalign</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive①⑥\">case-sensitive</a> match for the string\n       \"<code>line-left</code>\", then let <var>cue</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-position-alignment\" id=\"ref-for-webvtt-cue-position-alignment⑦\">WebVTT cue position alignment</a> be <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-position-line-left-alignment\" id=\"ref-for-webvtt-cue-position-line-left-alignment⑤\">line-left alignment</a>.</p>\n          </li><li>\n           <p>Otherwise, if <var>colalign</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive①⑦\">case-sensitive</a> match for the string\n       \"<code>center</code>\", then let <var>cue</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-position-alignment\" id=\"ref-for-webvtt-cue-position-alignment⑧\">WebVTT cue position alignment</a> be <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-position-center-alignment\" id=\"ref-for-webvtt-cue-position-center-alignment①\">center alignment</a>.</p>\n          </li><li>\n           <p>Otherwise, if <var>colalign</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive①⑧\">case-sensitive</a> match for the string\n       \"<code>line-right</code>\", then let <var>cue</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-position-alignment\" id=\"ref-for-webvtt-cue-position-alignment⑨\">WebVTT cue position alignment</a> be <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-position-line-right-alignment\" id=\"ref-for-webvtt-cue-position-line-right-alignment④\">line-right alignment</a>.</p>\n          </li><li>\n           <p>Otherwise, if <var>colalign</var> is not null, then jump to the step labeled <i>next\n       setting</i>.</p>\n          </li><li>\n           <p>Let <var>cue</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-position\" id=\"ref-for-webvtt-cue-position②①\">position</a> be <var>number</var>.</p>\n         </li></ol>\n        </dd><dt>If <var>name</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive①⑨\">case-sensitive</a> match for \"<code>size</code>\"\n        </dt><dd>\n         <ol>\n          <li>\n           <p>If <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#parse-a-percentage-string\" id=\"ref-for-parse-a-percentage-string⑦\">parse a percentage string</a> from <var>value</var> doesn’t fail, let <var>number</var> be the\n       returned <var>percentage</var>, otherwise jump to the step labeled <i>next setting</i>.</p>\n          </li><li>\n           <p>Let <var>cue</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-size\" id=\"ref-for-webvtt-cue-size⑦\">WebVTT cue size</a> be <var>number</var>.</p>\n          </li><li>\n           <p>If <var>cue</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-size\" id=\"ref-for-webvtt-cue-size⑧\">WebVTT cue size</a> is not 100, let <var>cue</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-region\" id=\"ref-for-webvtt-cue-region⑤\">WebVTT cue region</a> be\n       null (the cue has been explicitly sized and thus drops out of the region).</p>\n         </li></ol>\n        </dd><dt>If <var>name</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive②⓪\">case-sensitive</a> match for \"<code>align</code>\"\n        </dt><dd>\n         <ol>\n          <li>\n           <p>If <var>value</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive②①\">case-sensitive</a> match for the string \"<code>start</code>\", then\n       let <var>cue</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-text-alignment\" id=\"ref-for-webvtt-cue-text-alignment①⑤\">WebVTT cue text alignment</a> be <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-start-alignment\" id=\"ref-for-webvtt-cue-start-alignment⑥\">start\n       alignment</a>.</p>\n          </li><li>\n           <p>If <var>value</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive②②\">case-sensitive</a> match for the string \"<code>center</code>\", then\n       let <var>cue</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-text-alignment\" id=\"ref-for-webvtt-cue-text-alignment①⑥\">WebVTT cue text alignment</a> be <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-center-alignment\" id=\"ref-for-webvtt-cue-center-alignment⑤\">center\n       alignment</a>.</p>\n          </li><li>\n           <p>If <var>value</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive②③\">case-sensitive</a> match for the string \"<code>end</code>\", then\n       let <var>cue</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-text-alignment\" id=\"ref-for-webvtt-cue-text-alignment①⑦\">WebVTT cue text alignment</a> be <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-end-alignment\" id=\"ref-for-webvtt-cue-end-alignment⑤\">end\n       alignment</a>.</p>\n          </li><li>\n           <p>If <var>value</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive②④\">case-sensitive</a> match for the string \"<code>left</code>\", then\n       let <var>cue</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-text-alignment\" id=\"ref-for-webvtt-cue-text-alignment①⑧\">WebVTT cue text alignment</a> be <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-left-alignment\" id=\"ref-for-webvtt-cue-left-alignment④\">left\n       alignment</a>.</p>\n          </li><li>\n           <p>If <var>value</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive②⑤\">case-sensitive</a> match for the string \"<code>right</code>\", then\n       let <var>cue</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-text-alignment\" id=\"ref-for-webvtt-cue-text-alignment①⑨\">WebVTT cue text alignment</a> be <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-right-alignment\" id=\"ref-for-webvtt-cue-right-alignment④\">right\n       alignment</a>.</p>\n         </li></ol>\n       </dd></dl>",
+              "html": "<p>Run the appropriate substeps that apply for the value of <var>name</var>, as follows:</p>\n       <dl>\n        <dt>If <var>name</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive⑦\">case-sensitive</a> match for \"<code>region</code>\"\n        </dt><dd>\n         \n        </dd><dt>If <var>name</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive⑧\">case-sensitive</a> match for \"<code>vertical</code>\"\n        </dt><dd>\n         \n        </dd><dt>If <var>name</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive①①\">case-sensitive</a> match for \"<code>line</code>\"\n        </dt><dd>\n         \n        </dd><dt>If <var>name</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive①⑤\">case-sensitive</a> match for \"<code>position</code>\"\n        </dt><dd>\n         \n        </dd><dt>If <var>name</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive①⑨\">case-sensitive</a> match for \"<code>size</code>\"\n        </dt><dd>\n         \n        </dd><dt>If <var>name</var> is a <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#case-sensitive\" id=\"ref-for-case-sensitive②⓪\">case-sensitive</a> match for \"<code>align</code>\"\n        </dt><dd>\n         \n       </dd></dl>",
               "rationale": "let",
               "steps": [
                 {
@@ -657,7 +657,7 @@
                       "html": "<p>If <var>linepos</var> does not contain at least one <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#ascii-digits\" id=\"ref-for-ascii-digits⑨\">ASCII digit</a>, then jump to the step\n       labeled <i>next setting</i>.</p>"
                     },
                     {
-                      "html": "<dl>\n            <dt>\n             <p>If the last character in <var>linepos</var> is a U+0025 PERCENT SIGN character (%)</p>\n            </dt><dd>\n             <p>If <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#parse-a-percentage-string\" id=\"ref-for-parse-a-percentage-string⑤\">parse a percentage string</a> from <var>linepos</var> doesn’t fail, let <var>number</var> be the\n         returned <var>percentage</var>, otherwise jump to the step labeled <i>next setting</i>.</p>\n            </dd><dt>\n             <p>Otherwise</p>\n            </dt><dd>\n             <ol>\n              <li>\n               <p>If <var>linepos</var> contains any characters other than U+002D HYPHEN-MINUS characters\n           (-), <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#ascii-digits\" id=\"ref-for-ascii-digits①⓪\">ASCII digits</a>, and U+002E DOT character (.), then jump to the step labeled <i>next setting</i>.</p>\n              </li><li>\n               <p>If any character in <var>linepos</var> other than the first character is a U+002D\n           HYPHEN-MINUS character (-), then jump to the step labeled <i>next setting</i>.</p>\n              </li><li>\n               <p>If there are more than one U+002E DOT characters (.), then jump to the step\n           labeled <i>next setting</i>.</p>\n              </li><li>\n               <p>If there is a U+002E DOT character (.) and the character before or the character\n           after is not an <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#ascii-digits\" id=\"ref-for-ascii-digits①①\">ASCII digit</a>, or if the U+002E DOT character (.) is the first or\n           the last character, then jump to the step labeled <i>next setting</i>.</p>\n              </li><li>\n               <p>Let <var>number</var> be the result of parsing <var>linepos</var> using the <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#rules-for-parsing-floating-point-number-values\" id=\"ref-for-rules-for-parsing-floating-point-number-values①\">rules for parsing\n           floating-point number values</a>. <a data-link-type=\"biblio\" href=\"https://w3c.github.io/webvtt/#biblio-html\" title=\"HTML Standard\">[HTML]</a></p>\n              </li><li>\n               <p>If <var>number</var> is an error, then jump to the step labeled <i>next\n           setting</i>.</p>\n             </li></ol>\n           </dd></dl>",
+                      "html": "<dl>\n            <dt>\n             <p>If the last character in <var>linepos</var> is a U+0025 PERCENT SIGN character (%)</p>\n            </dt><dd>\n             <p>If <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#parse-a-percentage-string\" id=\"ref-for-parse-a-percentage-string⑤\">parse a percentage string</a> from <var>linepos</var> doesn’t fail, let <var>number</var> be the\n         returned <var>percentage</var>, otherwise jump to the step labeled <i>next setting</i>.</p>\n            </dd><dt>\n             <p>Otherwise</p>\n            </dt><dd>\n             \n           </dd></dl>",
                       "rationale": "if",
                       "steps": [
                         {
@@ -860,7 +860,7 @@
     {
       "name": "WebVTT cue text parsing",
       "href": "https://w3c.github.io/webvtt/#attach-a-webvtt-internal-node-object",
-      "html": "The <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"webvtt-cue-text-parsing-rules\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">WebVTT cue text parsing rules</dfn><span style=\"position: relative; height: 0px;\"></span> consist of the following algorithm. The input is a\nstring <var>input</var> supposedly containing <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-caption-or-subtitle-cue-text\" id=\"ref-for-webvtt-caption-or-subtitle-cue-text①①\">WebVTT caption or subtitle cue text</a>, and optionally a\nfallback language <var>language</var>. This algorithm returns a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#list-of-webvtt-node-objects\" id=\"ref-for-list-of-webvtt-node-objects①\">list of WebVTT Node Objects</a>.",
+      "html": "When the steps above say to <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"attach-a-webvtt-internal-node-object\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">attach a WebVTT Internal Node Object</dfn><span style=\"position: relative; height: 0px;\"></span> of a particular\n    concrete class, the user agent must run the following steps:",
       "rationale": ".algorithm",
       "steps": [
         {
@@ -888,7 +888,7 @@
           "html": "<p>Let <var>token</var> be the result of invoking the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-text-tokenizer\" id=\"ref-for-webvtt-cue-text-tokenizer\">WebVTT cue text tokenizer</a>.</p>"
         },
         {
-          "html": "<p>Run the appropriate steps given the type of <var>token</var>:</p>\n     <dl>\n      <dt>If <var>token</var> is a string\n      </dt><dd>\n       <ol>\n        <li>\n         <p>Create a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-text-object\" id=\"ref-for-webvtt-text-object①\">WebVTT Text Object</a> whose value is the value of the string token <var>token</var>.</p>\n        </li><li>\n         <p>Append the newly created <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-text-object\" id=\"ref-for-webvtt-text-object②\">WebVTT Text Object</a> to <var>current</var>.</p>\n       </li></ol>\n      </dd><dt>If <var>token</var> is a start tag\n      </dt><dd>\n       <p>How the start tag token <var>token</var> is processed depends on its tag name, as follows:</p>\n       <dl>\n        <dt>If the tag name is \"<code>c</code>\"\n        </dt><dd>\n         <p><a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#attach-a-webvtt-internal-node-object\" id=\"ref-for-attach-a-webvtt-internal-node-object\">Attach</a> a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-class-object\" id=\"ref-for-webvtt-class-object\">WebVTT Class Object</a>.</p>\n        </dd><dt>If the tag name is \"<code>i</code>\"\n        </dt><dd>\n         <p><a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#attach-a-webvtt-internal-node-object\" id=\"ref-for-attach-a-webvtt-internal-node-object①\">Attach</a> a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-italic-object\" id=\"ref-for-webvtt-italic-object\">WebVTT Italic Object</a>.</p>\n        </dd><dt>If the tag name is \"<code>b</code>\"\n        </dt><dd>\n         <p><a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#attach-a-webvtt-internal-node-object\" id=\"ref-for-attach-a-webvtt-internal-node-object②\">Attach</a> a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-bold-object\" id=\"ref-for-webvtt-bold-object①\">WebVTT Bold Object</a>.</p>\n        </dd><dt>If the tag name is \"<code>u</code>\"\n        </dt><dd>\n         <p><a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#attach-a-webvtt-internal-node-object\" id=\"ref-for-attach-a-webvtt-internal-node-object③\">Attach</a> a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-underline-object\" id=\"ref-for-webvtt-underline-object\">WebVTT Underline\n      Object</a>.</p>\n        </dd><dt>If the tag name is \"<code>ruby</code>\"\n        </dt><dd>\n         <p><a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#attach-a-webvtt-internal-node-object\" id=\"ref-for-attach-a-webvtt-internal-node-object④\">Attach</a> a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-ruby-object\" id=\"ref-for-webvtt-ruby-object\">WebVTT Ruby Object</a>.</p>\n        </dd><dt>If the tag name is \"<code>rt</code>\"\n        </dt><dd>\n         <p>If <var>current</var> is a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-ruby-object\" id=\"ref-for-webvtt-ruby-object①\">WebVTT Ruby Object</a>, then <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#attach-a-webvtt-internal-node-object\" id=\"ref-for-attach-a-webvtt-internal-node-object⑤\">attach</a> a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-ruby-text-object\" id=\"ref-for-webvtt-ruby-text-object\">WebVTT Ruby Text Object</a>.</p>\n        </dd><dt>If the tag name is \"<code>v</code>\"\n        </dt><dd>\n         <p><a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#attach-a-webvtt-internal-node-object\" id=\"ref-for-attach-a-webvtt-internal-node-object⑥\">Attach</a> a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-voice-object\" id=\"ref-for-webvtt-voice-object①\">WebVTT Voice Object</a>, and\n      set its value to the token’s annotation string, or the empty string if there is no annotation\n      string.</p>\n        </dd><dt>If the tag name is \"<code>lang</code>\"\n        </dt><dd>\n         <p>Push the value of the token’s annotation string, or the empty string if there is no\n      annotation string, onto the <var>language stack</var>; then <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#attach-a-webvtt-internal-node-object\" id=\"ref-for-attach-a-webvtt-internal-node-object⑦\">attach</a> a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-language-object\" id=\"ref-for-webvtt-language-object\">WebVTT Language Object</a>.</p>\n        </dd><dt>Otherwise\n        </dt><dd>\n         <p>Ignore the token.</p>\n       </dd></dl>\n       <p>When the steps above say to <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"attach-a-webvtt-internal-node-object\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">attach a WebVTT Internal Node Object</dfn><span style=\"position: relative; height: 0px;\"></span> of a particular\n    concrete class, the user agent must run the following steps:</p>\n       <ol>\n        <li>\n         <p>Create a new <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-internal-node-object\" id=\"ref-for-webvtt-internal-node-object⑥\">WebVTT Internal Node Object</a> of the specified concrete\n     class.</p>\n        </li><li>\n         <p>Set the new object’s list of <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-node-objects-applicable-classes\" id=\"ref-for-webvtt-node-objects-applicable-classes①\">applicable\n     classes</a> to the list of classes in the token, excluding any classes that are the empty\n     string.</p>\n        </li><li>\n         <p>Set the new object’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-node-objects-applicable-language\" id=\"ref-for-webvtt-node-objects-applicable-language③\">applicable\n     language</a> to the top entry on the <var>language stack</var>, if the stack is not empty.</p>\n        </li><li>\n         <p>Append the newly created node object to <var>current</var>.</p>\n        </li><li>\n         <p>Let <var>current</var> be the newly created node object.</p>\n       </li></ol>\n      </dd><dt>If <var>token</var> is an end tag\n      </dt><dd>\n       <p>If any of the following conditions is true, then let <var>current</var> be the parent node of <var>current</var>.</p>\n       <ul class=\"brief\">\n        <li>The tag name of the end tag token <var>token</var> is \"<code>c</code>\" and <var>current</var> is a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-class-object\" id=\"ref-for-webvtt-class-object①\">WebVTT\n     Class Object</a>.\n        </li><li>The tag name of the end tag token <var>token</var> is \"<code>i</code>\" and <var>current</var> is a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-italic-object\" id=\"ref-for-webvtt-italic-object①\">WebVTT\n     Italic Object</a>.\n        </li><li>The tag name of the end tag token <var>token</var> is \"<code>b</code>\" and <var>current</var> is a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-bold-object\" id=\"ref-for-webvtt-bold-object②\">WebVTT\n     Bold Object</a>.\n        </li><li>The tag name of the end tag token <var>token</var> is \"<code>u</code>\" and <var>current</var> is a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-underline-object\" id=\"ref-for-webvtt-underline-object①\">WebVTT\n     Underline Object</a>.\n        </li><li>The tag name of the end tag token <var>token</var> is \"<code>ruby</code>\" and <var>current</var> is a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-ruby-object\" id=\"ref-for-webvtt-ruby-object②\">WebVTT Ruby Object</a>.\n        </li><li>The tag name of the end tag token <var>token</var> is \"<code>rt</code>\" and <var>current</var> is a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-ruby-text-object\" id=\"ref-for-webvtt-ruby-text-object①\">WebVTT\n     Ruby Text Object</a>.\n        </li><li>The tag name of the end tag token <var>token</var> is \"<code>v</code>\" and <var>current</var> is a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-voice-object\" id=\"ref-for-webvtt-voice-object②\">WebVTT\n     Voice Object</a>.\n       </li></ul>\n       <p>Otherwise, if the tag name of the end tag token <var>token</var> is \"<code>lang</code>\" and <var>current</var> is a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-language-object\" id=\"ref-for-webvtt-language-object①\">WebVTT Language Object</a>, then let <var>current</var> be the parent node of <var>current</var>, and pop\n    the top value from the <var>language stack</var>.</p>\n       <p>Otherwise, if the tag name of the end tag token <var>token</var> is \"<code>ruby</code>\" and <var>current</var> is a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-ruby-text-object\" id=\"ref-for-webvtt-ruby-text-object②\">WebVTT Ruby Text Object</a>, then let <var>current</var> be the parent node of the parent node of <var>current</var>.</p>\n       <p>Otherwise, ignore the token.</p>\n      </dd><dt>If <var>token</var> is a timestamp tag\n      </dt><dd>\n       <ol>\n        <li>\n         <p>Let <var>input</var> be the tag value.</p>\n        </li><li>\n         <p>Let <var>position</var> be a pointer into <var>input</var>, initially pointing at the start of the\n     string.</p>\n        </li><li>\n         <p><a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#collect-a-webvtt-timestamp\" id=\"ref-for-collect-a-webvtt-timestamp②\">Collect a WebVTT timestamp</a>.</p>\n        </li><li>\n         <p>If that algorithm does not fail, and if <var>position</var> now points at the end of <var>input</var> (i.e.\n      there are no trailing characters after the timestamp), then create a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-timestamp-object\" id=\"ref-for-webvtt-timestamp-object①\">WebVTT Timestamp\n      Object</a> whose value is the collected time, then append it to <var>current</var>.</p>\n         <p>Otherwise, ignore the token.</p>\n       </li></ol>\n     </dd></dl>",
+          "html": "When the steps above say to <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"attach-a-webvtt-internal-node-object\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">attach a WebVTT Internal Node Object</dfn><span style=\"position: relative; height: 0px;\"></span> of a particular\n    concrete class, the user agent must run the following steps:",
           "rationale": "create",
           "steps": [
             {
@@ -921,7 +921,7 @@
               ]
             },
             {
-              "html": "",
+              "html": "When the steps above say to <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"attach-a-webvtt-internal-node-object\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">attach a WebVTT Internal Node Object</dfn><span style=\"position: relative; height: 0px;\"></span> of a particular\n    concrete class, the user agent must run the following steps:",
               "rationale": "let",
               "steps": [
                 {
@@ -1036,7 +1036,7 @@
               "html": "<p>Prepare some variables for the application of CSS properties to <var>regionNode</var> as follows:</p>\n       <ul>\n        <li>\n         <p>Let <var>regionWidth</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region-width\" id=\"ref-for-webvtt-region-width②\">WebVTT region width</a>. Let <var>width</var> be <span class=\"css\"><var>regionWidth</var> vw</span> (<a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-values-4/#vw\" id=\"ref-for-vw\">vw</a> is a CSS unit). <a data-link-type=\"biblio\" href=\"https://w3c.github.io/webvtt/#biblio-css-values\" title=\"CSS Values and Units Module Level 3\">[CSS-VALUES]</a></p>\n        </li><li>\n         <p>Let <var>lineHeight</var> be <span class=\"css\">6vh</span> (<a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-values-4/#vh\" id=\"ref-for-vh\">vh</a> is a CSS unit) <a data-link-type=\"biblio\" href=\"https://w3c.github.io/webvtt/#biblio-css-values\" title=\"CSS Values and Units Module Level 3\">[CSS-VALUES]</a> and <var>regionHeight</var> be\n     the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region-lines\" id=\"ref-for-webvtt-region-lines②\">WebVTT region lines</a>. Let <var>lines</var> be <var>lineHeight</var> multiplied by <var>regionHeight</var>.</p>\n        </li><li>\n         <p>Let <var>viewportAnchorX</var> be the x dimension of the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region-anchor\" id=\"ref-for-webvtt-region-anchor②\">WebVTT region anchor</a> and <var>regionAnchorX</var> be the x dimension of the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region-anchor\" id=\"ref-for-webvtt-region-anchor③\">WebVTT region anchor</a>. Let <var>leftOffset</var> be <var>regionAnchorX</var> multiplied by <var>width</var> divided by 100.0. Let <var>left</var> be <var>leftOffset</var> subtracted\n     from <span class=\"css\"><var>viewportAnchorX</var> vw</span>.</p>\n        </li><li>\n         <p>Let <var>viewportAnchorY</var> be the y dimension of the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region-anchor\" id=\"ref-for-webvtt-region-anchor④\">WebVTT region anchor</a> and <var>regionAnchorY</var> be the y dimension of the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region-anchor\" id=\"ref-for-webvtt-region-anchor⑤\">WebVTT region anchor</a>. Let <var>topOffset</var> be <var>regionAnchorY</var> multiplied by <var>lines</var> divided by 100.0. Let <var>top</var> be <var>topOffset</var> subtracted\n     from <span class=\"css\"><var>viewportAnchorY</var> vh</span>.</p>\n       </li></ul>"
             },
             {
-              "html": "<p>Apply the terms of the CSS specifications to <var>regionNode</var> within the following constraints,\n    thus obtaining a CSS box <var>box</var> positioned relative to an initial containing block:</p>\n       <ol>\n        <li>\n         <p>No style sheets are associated with <var>regionNode</var>. (The regionNodes are subsequently\n     restyled using style sheets after their boxes are generated, as described below.)</p>\n        </li><li>\n         <p>Properties on <var>regionNode</var> have their values set as defined in the next section. (That\n     section uses some of the variables whose values were calculated earlier in this\n     algorithm.)</p>\n        </li><li>\n         <p>The video viewport (and initial containing block) is video’s rendering area.</p>\n       </li></ol>",
+              "html": "<p>Apply the terms of the CSS specifications to <var>regionNode</var> within the following constraints,\n    thus obtaining a CSS box <var>box</var> positioned relative to an initial containing block:</p>",
               "ignored": [
                 "No style sheets are associated with regionNode. (The regionNodes are subsequently restyled using style sheets after their boxes are generated, as described below.) Properties on regionNode have their values set as defined in the next section. (That section uses some of the variables whose values were calculated earlier in this algorithm.) The video viewport (and initial containing block) is video’s rendering area."
               ]
@@ -1093,19 +1093,11 @@
                       "steps": [
                         {
                           "case": "If the computed position alignment is center alignment",
-                          "steps": [
-                            {
-                              "html": "<p>Subtract half of <var>region</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region-width\" id=\"ref-for-webvtt-region-width④\">WebVTT region width</a> from <var>offset</var>.</p>"
-                            }
-                          ]
+                          "html": "<p>Subtract half of <var>region</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region-width\" id=\"ref-for-webvtt-region-width④\">WebVTT region width</a> from <var>offset</var>.</p>"
                         },
                         {
                           "case": "If the computed position alignment is line-right alignment",
-                          "steps": [
-                            {
-                              "html": "<p>Subtract <var>region</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region-width\" id=\"ref-for-webvtt-region-width⑤\">WebVTT region width</a> from <var>offset</var>.</p>"
-                            }
-                          ]
+                          "html": "<p>Subtract <var>region</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-region-width\" id=\"ref-for-webvtt-region-width⑤\">WebVTT region width</a> from <var>offset</var>.</p>"
                         }
                       ]
                     }
@@ -1155,35 +1147,19 @@
               "steps": [
                 {
                   "case": "If the computed position alignment is line-left",
-                  "steps": [
-                    {
-                      "html": "<p>Let <var>maximum size</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position\" id=\"ref-for-cue-computed-position①\">computed position</a> subtracted from\n    100.</p>"
-                    }
-                  ]
+                  "html": "<p>Let <var>maximum size</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position\" id=\"ref-for-cue-computed-position①\">computed position</a> subtracted from\n    100.</p>"
                 },
                 {
                   "case": "If the computed position alignment is line-right",
-                  "steps": [
-                    {
-                      "html": "<p>Let <var>maximum size</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position\" id=\"ref-for-cue-computed-position②\">computed position</a>.</p>"
-                    }
-                  ]
+                  "html": "<p>Let <var>maximum size</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position\" id=\"ref-for-cue-computed-position②\">computed position</a>.</p>"
                 },
                 {
                   "case": "If the computed position alignment is center, and the computed position is less than or equal to 50",
-                  "steps": [
-                    {
-                      "html": "<p>Let <var>maximum size</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position\" id=\"ref-for-cue-computed-position④\">computed position</a> multiplied by\n    two.</p>"
-                    }
-                  ]
+                  "html": "<p>Let <var>maximum size</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position\" id=\"ref-for-cue-computed-position④\">computed position</a> multiplied by\n    two.</p>"
                 },
                 {
                   "case": "If the computed position alignment is center, and the computed position is greater than 50",
-                  "steps": [
-                    {
-                      "html": "<p>Let <var>maximum size</var> be the result of subtracting <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position\" id=\"ref-for-cue-computed-position⑥\">computed\n    position</a> from 100 and then multiplying the result by two.</p>"
-                    }
-                  ]
+                  "html": "<p>Let <var>maximum size</var> be the result of subtracting <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position\" id=\"ref-for-cue-computed-position⑥\">computed\n    position</a> from 100 and then multiplying the result by two.</p>"
                 }
               ]
             }
@@ -1204,39 +1180,23 @@
               "steps": [
                 {
                   "case": "If the WebVTT cue writing direction is horizontal",
+                  "html": "<dl class=\"switch\">\n        <dt>If the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position-alignment\" id=\"ref-for-cue-computed-position-alignment⑧\">computed position alignment</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-position-line-left-alignment\" id=\"ref-for-webvtt-cue-position-line-left-alignment⑦\">line-left alignment</a>\n        </dt><dd>\n         <p>Let <var>x-position</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position\" id=\"ref-for-cue-computed-position⑦\">computed position</a>.</p>\n        </dd><dt>If the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position-alignment\" id=\"ref-for-cue-computed-position-alignment⑨\">computed position alignment</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-position-center-alignment\" id=\"ref-for-webvtt-cue-position-center-alignment⑤\">center alignment</a>\n        </dt><dd>\n         <p>Let <var>x-position</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position\" id=\"ref-for-cue-computed-position⑧\">computed position</a> minus half\n     of <var>size</var>.</p>\n        </dd><dt>If the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position-alignment\" id=\"ref-for-cue-computed-position-alignment①⓪\">computed position alignment</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-position-line-right-alignment\" id=\"ref-for-webvtt-cue-position-line-right-alignment⑦\">line-right alignment</a>\n        </dt><dd>\n         <p>Let <var>x-position</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position\" id=\"ref-for-cue-computed-position⑨\">computed position</a> minus <var>size</var>.</p>\n       </dd></dl>",
+                  "rationale": ".switch",
                   "steps": [
                     {
-                      "html": "<dl class=\"switch\">\n        <dt>If the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position-alignment\" id=\"ref-for-cue-computed-position-alignment⑧\">computed position alignment</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-position-line-left-alignment\" id=\"ref-for-webvtt-cue-position-line-left-alignment⑦\">line-left alignment</a>\n        </dt><dd>\n         <p>Let <var>x-position</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position\" id=\"ref-for-cue-computed-position⑦\">computed position</a>.</p>\n        </dd><dt>If the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position-alignment\" id=\"ref-for-cue-computed-position-alignment⑨\">computed position alignment</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-position-center-alignment\" id=\"ref-for-webvtt-cue-position-center-alignment⑤\">center alignment</a>\n        </dt><dd>\n         <p>Let <var>x-position</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position\" id=\"ref-for-cue-computed-position⑧\">computed position</a> minus half\n     of <var>size</var>.</p>\n        </dd><dt>If the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position-alignment\" id=\"ref-for-cue-computed-position-alignment①⓪\">computed position alignment</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-position-line-right-alignment\" id=\"ref-for-webvtt-cue-position-line-right-alignment⑦\">line-right alignment</a>\n        </dt><dd>\n         <p>Let <var>x-position</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position\" id=\"ref-for-cue-computed-position⑨\">computed position</a> minus <var>size</var>.</p>\n       </dd></dl>",
-                      "rationale": ".switch",
+                      "operation": "switch",
                       "steps": [
                         {
-                          "operation": "switch",
-                          "steps": [
-                            {
-                              "case": "If the computed position alignment is line-left alignment",
-                              "steps": [
-                                {
-                                  "html": "<p>Let <var>x-position</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position\" id=\"ref-for-cue-computed-position⑦\">computed position</a>.</p>"
-                                }
-                              ]
-                            },
-                            {
-                              "case": "If the computed position alignment is center alignment",
-                              "steps": [
-                                {
-                                  "html": "<p>Let <var>x-position</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position\" id=\"ref-for-cue-computed-position⑧\">computed position</a> minus half\n     of <var>size</var>.</p>"
-                                }
-                              ]
-                            },
-                            {
-                              "case": "If the computed position alignment is line-right alignment",
-                              "steps": [
-                                {
-                                  "html": "<p>Let <var>x-position</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position\" id=\"ref-for-cue-computed-position⑨\">computed position</a> minus <var>size</var>.</p>"
-                                }
-                              ]
-                            }
-                          ]
+                          "case": "If the computed position alignment is line-left alignment",
+                          "html": "<p>Let <var>x-position</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position\" id=\"ref-for-cue-computed-position⑦\">computed position</a>.</p>"
+                        },
+                        {
+                          "case": "If the computed position alignment is center alignment",
+                          "html": "<p>Let <var>x-position</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position\" id=\"ref-for-cue-computed-position⑧\">computed position</a> minus half\n     of <var>size</var>.</p>"
+                        },
+                        {
+                          "case": "If the computed position alignment is line-right alignment",
+                          "html": "<p>Let <var>x-position</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position\" id=\"ref-for-cue-computed-position⑨\">computed position</a> minus <var>size</var>.</p>"
                         }
                       ]
                     }
@@ -1244,39 +1204,23 @@
                 },
                 {
                   "case": "If the WebVTT cue writing direction is vertical growing left or vertical growing right",
+                  "html": "<dl class=\"switch\">\n        <dt>If the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position-alignment\" id=\"ref-for-cue-computed-position-alignment①①\">computed position alignment</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-position-line-left-alignment\" id=\"ref-for-webvtt-cue-position-line-left-alignment⑧\">line-left alignment</a>\n        </dt><dd>\n         <p>Let <var>y-position</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position\" id=\"ref-for-cue-computed-position①⓪\">computed position</a>.</p>\n        </dd><dt>If the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position-alignment\" id=\"ref-for-cue-computed-position-alignment①②\">computed position alignment</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-position-center-alignment\" id=\"ref-for-webvtt-cue-position-center-alignment⑥\">center alignment</a>\n        </dt><dd>\n         <p>Let <var>y-position</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position\" id=\"ref-for-cue-computed-position①①\">computed position</a> minus half\n     of <var>size</var>.</p>\n        </dd><dt>If the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position-alignment\" id=\"ref-for-cue-computed-position-alignment①③\">computed position alignment</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-position-line-right-alignment\" id=\"ref-for-webvtt-cue-position-line-right-alignment⑧\">line-right alignment</a>\n        </dt><dd>\n         <p>Let <var>y-position</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position\" id=\"ref-for-cue-computed-position①②\">computed position</a> minus <var>size</var>.</p>\n       </dd></dl>",
+                  "rationale": ".switch",
                   "steps": [
                     {
-                      "html": "<dl class=\"switch\">\n        <dt>If the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position-alignment\" id=\"ref-for-cue-computed-position-alignment①①\">computed position alignment</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-position-line-left-alignment\" id=\"ref-for-webvtt-cue-position-line-left-alignment⑧\">line-left alignment</a>\n        </dt><dd>\n         <p>Let <var>y-position</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position\" id=\"ref-for-cue-computed-position①⓪\">computed position</a>.</p>\n        </dd><dt>If the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position-alignment\" id=\"ref-for-cue-computed-position-alignment①②\">computed position alignment</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-position-center-alignment\" id=\"ref-for-webvtt-cue-position-center-alignment⑥\">center alignment</a>\n        </dt><dd>\n         <p>Let <var>y-position</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position\" id=\"ref-for-cue-computed-position①①\">computed position</a> minus half\n     of <var>size</var>.</p>\n        </dd><dt>If the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position-alignment\" id=\"ref-for-cue-computed-position-alignment①③\">computed position alignment</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-position-line-right-alignment\" id=\"ref-for-webvtt-cue-position-line-right-alignment⑧\">line-right alignment</a>\n        </dt><dd>\n         <p>Let <var>y-position</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position\" id=\"ref-for-cue-computed-position①②\">computed position</a> minus <var>size</var>.</p>\n       </dd></dl>",
-                      "rationale": ".switch",
+                      "operation": "switch",
                       "steps": [
                         {
-                          "operation": "switch",
-                          "steps": [
-                            {
-                              "case": "If the computed position alignment is line-left alignment",
-                              "steps": [
-                                {
-                                  "html": "<p>Let <var>y-position</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position\" id=\"ref-for-cue-computed-position①⓪\">computed position</a>.</p>"
-                                }
-                              ]
-                            },
-                            {
-                              "case": "If the computed position alignment is center alignment",
-                              "steps": [
-                                {
-                                  "html": "<p>Let <var>y-position</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position\" id=\"ref-for-cue-computed-position①①\">computed position</a> minus half\n     of <var>size</var>.</p>"
-                                }
-                              ]
-                            },
-                            {
-                              "case": "If the computed position alignment is line-right alignment",
-                              "steps": [
-                                {
-                                  "html": "<p>Let <var>y-position</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position\" id=\"ref-for-cue-computed-position①②\">computed position</a> minus <var>size</var>.</p>"
-                                }
-                              ]
-                            }
-                          ]
+                          "case": "If the computed position alignment is line-left alignment",
+                          "html": "<p>Let <var>y-position</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position\" id=\"ref-for-cue-computed-position①⓪\">computed position</a>.</p>"
+                        },
+                        {
+                          "case": "If the computed position alignment is center alignment",
+                          "html": "<p>Let <var>y-position</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position\" id=\"ref-for-cue-computed-position①①\">computed position</a> minus half\n     of <var>size</var>.</p>"
+                        },
+                        {
+                          "case": "If the computed position alignment is line-right alignment",
+                          "html": "<p>Let <var>y-position</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-position\" id=\"ref-for-cue-computed-position①②\">computed position</a> minus <var>size</var>.</p>"
                         }
                       ]
                     }
@@ -1295,31 +1239,19 @@
               "steps": [
                 {
                   "case": "If the WebVTT cue snap-to-lines flag is false",
+                  "html": "<dl class=\"switch\">\n        <dt>If the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-writing-direction\" id=\"ref-for-webvtt-cue-writing-direction②②\">WebVTT cue writing direction</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-horizontal-writing-direction\" id=\"ref-for-webvtt-cue-horizontal-writing-direction①⑦\">horizontal</a>\n        </dt><dd>\n         <p>Let <var>y-position</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-line\" id=\"ref-for-cue-computed-line①\">computed line</a>.</p>\n        </dd><dt>If the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-writing-direction\" id=\"ref-for-webvtt-cue-writing-direction②③\">WebVTT cue writing direction</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-vertical-growing-left-writing-direction\" id=\"ref-for-webvtt-cue-vertical-growing-left-writing-direction⑥\">vertical growing left</a> or <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-vertical-growing-right-writing-direction\" id=\"ref-for-webvtt-cue-vertical-growing-right-writing-direction⑥\">vertical growing right</a>\n        </dt><dd>\n         <p>Let <var>x-position</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-line\" id=\"ref-for-cue-computed-line②\">computed line</a>.</p>\n       </dd></dl>",
+                  "rationale": ".switch",
                   "steps": [
                     {
-                      "html": "<dl class=\"switch\">\n        <dt>If the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-writing-direction\" id=\"ref-for-webvtt-cue-writing-direction②②\">WebVTT cue writing direction</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-horizontal-writing-direction\" id=\"ref-for-webvtt-cue-horizontal-writing-direction①⑦\">horizontal</a>\n        </dt><dd>\n         <p>Let <var>y-position</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-line\" id=\"ref-for-cue-computed-line①\">computed line</a>.</p>\n        </dd><dt>If the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-writing-direction\" id=\"ref-for-webvtt-cue-writing-direction②③\">WebVTT cue writing direction</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-vertical-growing-left-writing-direction\" id=\"ref-for-webvtt-cue-vertical-growing-left-writing-direction⑥\">vertical growing left</a> or <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-vertical-growing-right-writing-direction\" id=\"ref-for-webvtt-cue-vertical-growing-right-writing-direction⑥\">vertical growing right</a>\n        </dt><dd>\n         <p>Let <var>x-position</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-line\" id=\"ref-for-cue-computed-line②\">computed line</a>.</p>\n       </dd></dl>",
-                      "rationale": ".switch",
+                      "operation": "switch",
                       "steps": [
                         {
-                          "operation": "switch",
-                          "steps": [
-                            {
-                              "case": "If the WebVTT cue writing direction is horizontal",
-                              "steps": [
-                                {
-                                  "html": "<p>Let <var>y-position</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-line\" id=\"ref-for-cue-computed-line①\">computed line</a>.</p>"
-                                }
-                              ]
-                            },
-                            {
-                              "case": "If the WebVTT cue writing direction is vertical growing left or vertical growing right",
-                              "steps": [
-                                {
-                                  "html": "<p>Let <var>x-position</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-line\" id=\"ref-for-cue-computed-line②\">computed line</a>.</p>"
-                                }
-                              ]
-                            }
-                          ]
+                          "case": "If the WebVTT cue writing direction is horizontal",
+                          "html": "<p>Let <var>y-position</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-line\" id=\"ref-for-cue-computed-line①\">computed line</a>.</p>"
+                        },
+                        {
+                          "case": "If the WebVTT cue writing direction is vertical growing left or vertical growing right",
+                          "html": "<p>Let <var>x-position</var> be the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-line\" id=\"ref-for-cue-computed-line②\">computed line</a>.</p>"
                         }
                       ]
                     }
@@ -1327,31 +1259,19 @@
                 },
                 {
                   "case": "If the WebVTT cue snap-to-lines flag is true",
+                  "html": "<dl class=\"switch\">\n        <dt>If the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-writing-direction\" id=\"ref-for-webvtt-cue-writing-direction②④\">WebVTT cue writing direction</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-horizontal-writing-direction\" id=\"ref-for-webvtt-cue-horizontal-writing-direction①⑧\">horizontal</a>\n        </dt><dd>\n         <p>Let <var>y-position</var> be 0.</p>\n        </dd><dt>If the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-writing-direction\" id=\"ref-for-webvtt-cue-writing-direction②⑤\">WebVTT cue writing direction</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-vertical-growing-left-writing-direction\" id=\"ref-for-webvtt-cue-vertical-growing-left-writing-direction⑦\">vertical growing left</a> or <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-vertical-growing-right-writing-direction\" id=\"ref-for-webvtt-cue-vertical-growing-right-writing-direction⑦\">vertical growing right</a>\n        </dt><dd>\n         <p>Let <var>x-position</var> be 0.</p>\n       </dd></dl>",
+                  "rationale": ".switch",
                   "steps": [
                     {
-                      "html": "<dl class=\"switch\">\n        <dt>If the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-writing-direction\" id=\"ref-for-webvtt-cue-writing-direction②④\">WebVTT cue writing direction</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-horizontal-writing-direction\" id=\"ref-for-webvtt-cue-horizontal-writing-direction①⑧\">horizontal</a>\n        </dt><dd>\n         <p>Let <var>y-position</var> be 0.</p>\n        </dd><dt>If the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-writing-direction\" id=\"ref-for-webvtt-cue-writing-direction②⑤\">WebVTT cue writing direction</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-vertical-growing-left-writing-direction\" id=\"ref-for-webvtt-cue-vertical-growing-left-writing-direction⑦\">vertical growing left</a> or <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-vertical-growing-right-writing-direction\" id=\"ref-for-webvtt-cue-vertical-growing-right-writing-direction⑦\">vertical growing right</a>\n        </dt><dd>\n         <p>Let <var>x-position</var> be 0.</p>\n       </dd></dl>",
-                      "rationale": ".switch",
+                      "operation": "switch",
                       "steps": [
                         {
-                          "operation": "switch",
-                          "steps": [
-                            {
-                              "case": "If the WebVTT cue writing direction is horizontal",
-                              "steps": [
-                                {
-                                  "html": "<p>Let <var>y-position</var> be 0.</p>"
-                                }
-                              ]
-                            },
-                            {
-                              "case": "If the WebVTT cue writing direction is vertical growing left or vertical growing right",
-                              "steps": [
-                                {
-                                  "html": "<p>Let <var>x-position</var> be 0.</p>"
-                                }
-                              ]
-                            }
-                          ]
+                          "case": "If the WebVTT cue writing direction is horizontal",
+                          "html": "<p>Let <var>y-position</var> be 0.</p>"
+                        },
+                        {
+                          "case": "If the WebVTT cue writing direction is vertical growing left or vertical growing right",
+                          "html": "<p>Let <var>x-position</var> be 0.</p>"
                         }
                       ]
                     }
@@ -1379,173 +1299,141 @@
               "steps": [
                 {
                   "case": "If cue’s WebVTT cue snap-to-lines flag is true",
+                  "html": "Many of the steps in this algorithm vary according to the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-writing-direction\" id=\"ref-for-webvtt-cue-writing-direction②⑥\">WebVTT cue writing\n    direction</a>. Steps labeled \"<strong>Horizontal</strong>\" must be followed only when the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-writing-direction\" id=\"ref-for-webvtt-cue-writing-direction②⑦\">WebVTT cue writing direction</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-horizontal-writing-direction\" id=\"ref-for-webvtt-cue-horizontal-writing-direction①⑨\">horizontal</a>, steps labeled \"<strong>Vertical</strong>\" must be followed when the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-writing-direction\" id=\"ref-for-webvtt-cue-writing-direction②⑧\">WebVTT cue writing direction</a> is either <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-vertical-growing-left-writing-direction\" id=\"ref-for-webvtt-cue-vertical-growing-left-writing-direction⑧\">vertical growing left</a> or <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-vertical-growing-right-writing-direction\" id=\"ref-for-webvtt-cue-vertical-growing-right-writing-direction⑧\">vertical growing right</a>, steps labeled \"<strong>Vertical Growing Left</strong>\"\n    must be followed only when the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-writing-direction\" id=\"ref-for-webvtt-cue-writing-direction②⑨\">WebVTT cue writing direction</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-vertical-growing-left-writing-direction\" id=\"ref-for-webvtt-cue-vertical-growing-left-writing-direction⑨\">vertical growing left</a>, and steps labeled \"<strong>Vertical\n    Growing Right</strong>\" must be followed only when the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-writing-direction\" id=\"ref-for-webvtt-cue-writing-direction③⓪\">WebVTT cue writing direction</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-vertical-growing-right-writing-direction\" id=\"ref-for-webvtt-cue-vertical-growing-right-writing-direction⑨\">vertical growing right</a>.",
+                  "rationale": "if",
                   "steps": [
                     {
-                      "html": "Many of the steps in this algorithm vary according to the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-writing-direction\" id=\"ref-for-webvtt-cue-writing-direction②⑥\">WebVTT cue writing\n    direction</a>. Steps labeled \"<strong>Horizontal</strong>\" must be followed only when the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-writing-direction\" id=\"ref-for-webvtt-cue-writing-direction②⑦\">WebVTT cue writing direction</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-horizontal-writing-direction\" id=\"ref-for-webvtt-cue-horizontal-writing-direction①⑨\">horizontal</a>, steps labeled \"<strong>Vertical</strong>\" must be followed when the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-writing-direction\" id=\"ref-for-webvtt-cue-writing-direction②⑧\">WebVTT cue writing direction</a> is either <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-vertical-growing-left-writing-direction\" id=\"ref-for-webvtt-cue-vertical-growing-left-writing-direction⑧\">vertical growing left</a> or <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-vertical-growing-right-writing-direction\" id=\"ref-for-webvtt-cue-vertical-growing-right-writing-direction⑧\">vertical growing right</a>, steps labeled \"<strong>Vertical Growing Left</strong>\"\n    must be followed only when the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-writing-direction\" id=\"ref-for-webvtt-cue-writing-direction②⑨\">WebVTT cue writing direction</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-vertical-growing-left-writing-direction\" id=\"ref-for-webvtt-cue-vertical-growing-left-writing-direction⑨\">vertical growing left</a>, and steps labeled \"<strong>Vertical\n    Growing Right</strong>\" must be followed only when the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-writing-direction\" id=\"ref-for-webvtt-cue-writing-direction③⓪\">WebVTT cue writing direction</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-vertical-growing-right-writing-direction\" id=\"ref-for-webvtt-cue-vertical-growing-right-writing-direction⑨\">vertical growing right</a>.",
-                      "rationale": "if",
-                      "steps": [
-                        {
-                          "html": "<p><strong>Horizontal</strong>: Let <var>full dimension</var> be the height of <var>video</var>’s rendering\n      area.</p>\n         <p><strong>Vertical</strong>: Let <var>full dimension</var> be the width of <var>video</var>’s rendering\n      area.</p>"
-                        },
-                        {
-                          "html": "<p><strong>Horizontal</strong>: Let <var>step</var> be the height of the first line box in <var>boxes</var>.</p>\n         <p><strong>Vertical</strong>: Let <var>step</var> be the width of the first line box in <var>boxes</var>.</p>"
-                        },
-                        {
-                          "html": "<p>If <var>step</var> is zero, then jump to the step labeled <i>done positioning</i> below.</p>"
-                        },
-                        {
-                          "html": "<p>Let <var>line</var> be <var>cue</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-line\" id=\"ref-for-cue-computed-line③\">computed line</a>.</p>"
-                        },
-                        {
-                          "html": "<p>Round <var>line</var> to an integer by adding 0.5 and then flooring it.</p>"
-                        },
-                        {
-                          "html": "<p><strong>Vertical Growing Left</strong>: Add one to <var>line</var> then negate it.</p>"
-                        },
-                        {
-                          "html": "<p>Let <var>position</var> be the result of multiplying <var>step</var> and <var>line</var>.</p>"
-                        },
-                        {
-                          "html": "<p><strong>Vertical Growing Left</strong>: Decrease <var>position</var> by the width of the bounding\n     box of the boxes in <var>boxes</var>, then increase <var>position</var> by <var>step</var>.</p>"
-                        },
-                        {
-                          "html": "<p>If <var>line</var> is less than zero then increase <var>position</var> by <var>max dimension</var>, and negate <var>step</var>.</p>"
-                        },
-                        {
-                          "html": "<p><strong>Horizontal</strong>: Move all the boxes in <var>boxes</var> down by the distance given by <var>position</var>.</p>\n         <p><strong>Vertical</strong>: Move all the boxes in <var>boxes</var> right by the distance given by <var>position</var>.</p>"
-                        },
-                        {
-                          "html": "<p>Remember the position of all the boxes in <var>boxes</var> as their <var>specified\n     position</var>.</p>"
-                        },
-                        {
-                          "html": "<p>Let <var>title area</var> be a box that covers all of the <var>video</var>’s rendering area.</p>"
-                        },
-                        {
-                          "html": "<p><i>Step loop</i>: If none of the boxes in <var>boxes</var> would overlap any of the boxes in <var>output</var>, and all of the boxes in <var>boxes</var> are entirely within the <var>title area</var> box, then jump\n     to the step labeled <i>done positioning</i> below.</p>"
-                        },
-                        {
-                          "html": "<p><strong>Horizontal</strong>: If <var>step</var> is negative and the top of the first line box in <var>boxes</var> is now above the top of the <var>title area</var>, or if <var>step</var> is positive and the bottom of\n      the first line box in <var>boxes</var> is now below the bottom of the <var>title area</var>, jump to the step\n      labeled <i>switch direction</i>.</p>\n         <p><strong>Vertical</strong>: If <var>step</var> is negative and the left edge of the first line box in <var>boxes</var> is now to the left of the left edge of the <var>title area</var>, or if <var>step</var> is positive and\n      the right edge of the first line box in <var>boxes</var> is now to the right of the right edge of the <var>title area</var>, jump to the step labeled <i>switch direction</i>.</p>"
-                        },
-                        {
-                          "html": "<p><strong>Horizontal</strong>: Move all the boxes in <var>boxes</var> down by the distance given by <var>step</var>. (If <var>step</var> is negative, then this will actually result in an upwards movement of the\n      boxes in absolute terms.)</p>\n         <p><strong>Vertical</strong>: Move all the boxes in <var>boxes</var> right by the distance given by <var>step</var>. (If <var>step</var> is negative, then this will actually result in a leftwards movement of the\n      boxes in absolute terms.)</p>"
-                        },
-                        {
-                          "html": "<p>Jump back to the step labeled <i>step loop</i>.</p>"
-                        },
-                        {
-                          "html": "<p><i>Switch direction</i>: If <var>switched</var> is true, then remove all the boxes in <var>boxes</var>,\n     and jump to the step labeled <i>done positioning</i> below.</p>"
-                        },
-                        {
-                          "html": "<p>Otherwise, move all the boxes in <var>boxes</var> back to their <var>specified position</var> as\n     determined in the earlier step.</p>"
-                        },
-                        {
-                          "html": "<p>Negate <var>step</var>.</p>"
-                        },
-                        {
-                          "html": "<p>Set <var>switched</var> to true.</p>"
-                        },
-                        {
-                          "html": "<p>Jump back to the step labeled <i>step loop</i>.</p>"
-                        }
-                      ]
+                      "html": "<p><strong>Horizontal</strong>: Let <var>full dimension</var> be the height of <var>video</var>’s rendering\n      area.</p>\n         <p><strong>Vertical</strong>: Let <var>full dimension</var> be the width of <var>video</var>’s rendering\n      area.</p>"
+                    },
+                    {
+                      "html": "<p><strong>Horizontal</strong>: Let <var>step</var> be the height of the first line box in <var>boxes</var>.</p>\n         <p><strong>Vertical</strong>: Let <var>step</var> be the width of the first line box in <var>boxes</var>.</p>"
+                    },
+                    {
+                      "html": "<p>If <var>step</var> is zero, then jump to the step labeled <i>done positioning</i> below.</p>"
+                    },
+                    {
+                      "html": "<p>Let <var>line</var> be <var>cue</var>’s <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#cue-computed-line\" id=\"ref-for-cue-computed-line③\">computed line</a>.</p>"
+                    },
+                    {
+                      "html": "<p>Round <var>line</var> to an integer by adding 0.5 and then flooring it.</p>"
+                    },
+                    {
+                      "html": "<p><strong>Vertical Growing Left</strong>: Add one to <var>line</var> then negate it.</p>"
+                    },
+                    {
+                      "html": "<p>Let <var>position</var> be the result of multiplying <var>step</var> and <var>line</var>.</p>"
+                    },
+                    {
+                      "html": "<p><strong>Vertical Growing Left</strong>: Decrease <var>position</var> by the width of the bounding\n     box of the boxes in <var>boxes</var>, then increase <var>position</var> by <var>step</var>.</p>"
+                    },
+                    {
+                      "html": "<p>If <var>line</var> is less than zero then increase <var>position</var> by <var>max dimension</var>, and negate <var>step</var>.</p>"
+                    },
+                    {
+                      "html": "<p><strong>Horizontal</strong>: Move all the boxes in <var>boxes</var> down by the distance given by <var>position</var>.</p>\n         <p><strong>Vertical</strong>: Move all the boxes in <var>boxes</var> right by the distance given by <var>position</var>.</p>"
+                    },
+                    {
+                      "html": "<p>Remember the position of all the boxes in <var>boxes</var> as their <var>specified\n     position</var>.</p>"
+                    },
+                    {
+                      "html": "<p>Let <var>title area</var> be a box that covers all of the <var>video</var>’s rendering area.</p>"
+                    },
+                    {
+                      "html": "<p><i>Step loop</i>: If none of the boxes in <var>boxes</var> would overlap any of the boxes in <var>output</var>, and all of the boxes in <var>boxes</var> are entirely within the <var>title area</var> box, then jump\n     to the step labeled <i>done positioning</i> below.</p>"
+                    },
+                    {
+                      "html": "<p><strong>Horizontal</strong>: If <var>step</var> is negative and the top of the first line box in <var>boxes</var> is now above the top of the <var>title area</var>, or if <var>step</var> is positive and the bottom of\n      the first line box in <var>boxes</var> is now below the bottom of the <var>title area</var>, jump to the step\n      labeled <i>switch direction</i>.</p>\n         <p><strong>Vertical</strong>: If <var>step</var> is negative and the left edge of the first line box in <var>boxes</var> is now to the left of the left edge of the <var>title area</var>, or if <var>step</var> is positive and\n      the right edge of the first line box in <var>boxes</var> is now to the right of the right edge of the <var>title area</var>, jump to the step labeled <i>switch direction</i>.</p>"
+                    },
+                    {
+                      "html": "<p><strong>Horizontal</strong>: Move all the boxes in <var>boxes</var> down by the distance given by <var>step</var>. (If <var>step</var> is negative, then this will actually result in an upwards movement of the\n      boxes in absolute terms.)</p>\n         <p><strong>Vertical</strong>: Move all the boxes in <var>boxes</var> right by the distance given by <var>step</var>. (If <var>step</var> is negative, then this will actually result in a leftwards movement of the\n      boxes in absolute terms.)</p>"
+                    },
+                    {
+                      "html": "<p>Jump back to the step labeled <i>step loop</i>.</p>"
+                    },
+                    {
+                      "html": "<p><i>Switch direction</i>: If <var>switched</var> is true, then remove all the boxes in <var>boxes</var>,\n     and jump to the step labeled <i>done positioning</i> below.</p>"
+                    },
+                    {
+                      "html": "<p>Otherwise, move all the boxes in <var>boxes</var> back to their <var>specified position</var> as\n     determined in the earlier step.</p>"
+                    },
+                    {
+                      "html": "<p>Negate <var>step</var>.</p>"
+                    },
+                    {
+                      "html": "<p>Set <var>switched</var> to true.</p>"
+                    },
+                    {
+                      "html": "<p>Jump back to the step labeled <i>step loop</i>.</p>"
                     }
                   ]
                 },
                 {
                   "case": "If cue’s WebVTT cue snap-to-lines flag is false",
+                  "html": "",
+                  "rationale": "let",
                   "steps": [
                     {
-                      "html": "<ol>\n        <li>\n         <p>Let <var>bounding box</var> be the bounding box of the boxes in <var>boxes</var>.</p>\n        </li><li>\n         <p>Run the appropriate steps from the following list:</p>\n         <dl class=\"switch\">\n          <dt>If the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-writing-direction\" id=\"ref-for-webvtt-cue-writing-direction③①\">WebVTT cue writing direction</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-horizontal-writing-direction\" id=\"ref-for-webvtt-cue-horizontal-writing-direction②⓪\">horizontal</a>\n          </dt><dd>\n           <dl class=\"switch\">\n            <dt>If the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-line-alignment\" id=\"ref-for-webvtt-cue-line-alignment⑨\">WebVTT cue line alignment</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-line-center-alignment\" id=\"ref-for-webvtt-cue-line-center-alignment②\">center alignment</a>\n            </dt><dd>\n             <p>Move all the boxes in <var>boxes</var> up by half of the height of <var>bounding box</var>.</p>\n            </dd><dt>If the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-line-alignment\" id=\"ref-for-webvtt-cue-line-alignment①⓪\">WebVTT cue line alignment</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-line-end-alignment\" id=\"ref-for-webvtt-cue-line-end-alignment②\">end\n         alignment</a>\n            </dt><dd>\n             <p>Move all the boxes in <var>boxes</var> up by the height of <var>bounding box</var>.</p>\n           </dd></dl>\n          </dd><dt>If the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-writing-direction\" id=\"ref-for-webvtt-cue-writing-direction③②\">WebVTT cue writing direction</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-vertical-growing-left-writing-direction\" id=\"ref-for-webvtt-cue-vertical-growing-left-writing-direction①⓪\">vertical growing left</a> or <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-vertical-growing-right-writing-direction\" id=\"ref-for-webvtt-cue-vertical-growing-right-writing-direction①⓪\">vertical growing right</a>\n          </dt><dd>\n           <dl class=\"switch\">\n            <dt>If the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-line-alignment\" id=\"ref-for-webvtt-cue-line-alignment①①\">WebVTT cue line alignment</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-line-center-alignment\" id=\"ref-for-webvtt-cue-line-center-alignment③\">center alignment</a>\n            </dt><dd>\n             <p>Move all the boxes in <var>boxes</var> left by half of the width of <var>bounding box</var>.</p>\n            </dd><dt>If the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-line-alignment\" id=\"ref-for-webvtt-cue-line-alignment①②\">WebVTT cue line alignment</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-line-end-alignment\" id=\"ref-for-webvtt-cue-line-end-alignment③\">end\n         alignment</a>\n            </dt><dd>\n             <p>Move all the boxes in <var>boxes</var> left by the width of <var>bounding box</var>.</p>\n           </dd></dl>\n         </dd></dl>\n        </li><li>\n         <p>If none of the boxes in <var>boxes</var> would overlap any of the boxes in <var>output</var>, and all the\n     boxes in <var>boxes</var> are within the <var>video</var>’s rendering area, then jump to the step labeled <i>done\n     positioning</i> below.</p>\n        </li><li>\n         <p>If there is a position to which the boxes in <var>boxes</var> can be moved while maintaining the\n     relative positions of the boxes in <var>boxes</var> to each other such that none of the boxes in <var>boxes</var> would overlap any of the boxes in <var>output</var>, and all the boxes in <var>boxes</var> would be within the <var>video</var>’s rendering area, then move the boxes in <var>boxes</var> to the closest such position to their\n     current position, and then jump to the step labeled <i>done positioning</i> below. If there are\n     multiple such positions that are equidistant from their current position, use the highest one\n     amongst them; if there are several at that height, then use the leftmost one amongst\n     them.</p>\n        </li><li>\n         <p>Otherwise, jump to the step labeled <i>done positioning</i> below. (The boxes will\n     unfortunately overlap.)</p>\n       </li></ol>",
-                      "rationale": "let",
+                      "html": "<p>Let <var>bounding box</var> be the bounding box of the boxes in <var>boxes</var>.</p>"
+                    },
+                    {
+                      "html": "Run the appropriate steps from the following list:",
+                      "rationale": ".switch",
                       "steps": [
                         {
-                          "html": "<p>Let <var>bounding box</var> be the bounding box of the boxes in <var>boxes</var>.</p>"
-                        },
-                        {
-                          "html": "Run the appropriate steps from the following list:",
-                          "rationale": ".switch",
+                          "operation": "switch",
                           "steps": [
                             {
-                              "operation": "switch",
+                              "case": "If the WebVTT cue writing direction is horizontal",
+                              "html": "<dl class=\"switch\">\n            <dt>If the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-line-alignment\" id=\"ref-for-webvtt-cue-line-alignment⑨\">WebVTT cue line alignment</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-line-center-alignment\" id=\"ref-for-webvtt-cue-line-center-alignment②\">center alignment</a>\n            </dt><dd>\n             <p>Move all the boxes in <var>boxes</var> up by half of the height of <var>bounding box</var>.</p>\n            </dd><dt>If the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-line-alignment\" id=\"ref-for-webvtt-cue-line-alignment①⓪\">WebVTT cue line alignment</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-line-end-alignment\" id=\"ref-for-webvtt-cue-line-end-alignment②\">end\n         alignment</a>\n            </dt><dd>\n             <p>Move all the boxes in <var>boxes</var> up by the height of <var>bounding box</var>.</p>\n           </dd></dl>",
+                              "rationale": ".switch",
                               "steps": [
                                 {
-                                  "case": "If the WebVTT cue writing direction is horizontal",
+                                  "operation": "switch",
                                   "steps": [
                                     {
-                                      "html": "<dl class=\"switch\">\n            <dt>If the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-line-alignment\" id=\"ref-for-webvtt-cue-line-alignment⑨\">WebVTT cue line alignment</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-line-center-alignment\" id=\"ref-for-webvtt-cue-line-center-alignment②\">center alignment</a>\n            </dt><dd>\n             <p>Move all the boxes in <var>boxes</var> up by half of the height of <var>bounding box</var>.</p>\n            </dd><dt>If the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-line-alignment\" id=\"ref-for-webvtt-cue-line-alignment①⓪\">WebVTT cue line alignment</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-line-end-alignment\" id=\"ref-for-webvtt-cue-line-end-alignment②\">end\n         alignment</a>\n            </dt><dd>\n             <p>Move all the boxes in <var>boxes</var> up by the height of <var>bounding box</var>.</p>\n           </dd></dl>",
-                                      "rationale": ".switch",
-                                      "steps": [
-                                        {
-                                          "operation": "switch",
-                                          "steps": [
-                                            {
-                                              "case": "If the WebVTT cue line alignment is center alignment",
-                                              "steps": [
-                                                {
-                                                  "html": "<p>Move all the boxes in <var>boxes</var> up by half of the height of <var>bounding box</var>.</p>"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "case": "If the WebVTT cue line alignment is end alignment",
-                                              "steps": [
-                                                {
-                                                  "html": "<p>Move all the boxes in <var>boxes</var> up by the height of <var>bounding box</var>.</p>"
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        }
-                                      ]
+                                      "case": "If the WebVTT cue line alignment is center alignment",
+                                      "html": "<p>Move all the boxes in <var>boxes</var> up by half of the height of <var>bounding box</var>.</p>"
+                                    },
+                                    {
+                                      "case": "If the WebVTT cue line alignment is end alignment",
+                                      "html": "<p>Move all the boxes in <var>boxes</var> up by the height of <var>bounding box</var>.</p>"
                                     }
                                   ]
-                                },
+                                }
+                              ]
+                            },
+                            {
+                              "case": "If the WebVTT cue writing direction is vertical growing left or vertical growing right",
+                              "html": "<dl class=\"switch\">\n            <dt>If the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-line-alignment\" id=\"ref-for-webvtt-cue-line-alignment①①\">WebVTT cue line alignment</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-line-center-alignment\" id=\"ref-for-webvtt-cue-line-center-alignment③\">center alignment</a>\n            </dt><dd>\n             <p>Move all the boxes in <var>boxes</var> left by half of the width of <var>bounding box</var>.</p>\n            </dd><dt>If the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-line-alignment\" id=\"ref-for-webvtt-cue-line-alignment①②\">WebVTT cue line alignment</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-line-end-alignment\" id=\"ref-for-webvtt-cue-line-end-alignment③\">end\n         alignment</a>\n            </dt><dd>\n             <p>Move all the boxes in <var>boxes</var> left by the width of <var>bounding box</var>.</p>\n           </dd></dl>",
+                              "rationale": ".switch",
+                              "steps": [
                                 {
-                                  "case": "If the WebVTT cue writing direction is vertical growing left or vertical growing right",
+                                  "operation": "switch",
                                   "steps": [
                                     {
-                                      "html": "<dl class=\"switch\">\n            <dt>If the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-line-alignment\" id=\"ref-for-webvtt-cue-line-alignment①①\">WebVTT cue line alignment</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-line-center-alignment\" id=\"ref-for-webvtt-cue-line-center-alignment③\">center alignment</a>\n            </dt><dd>\n             <p>Move all the boxes in <var>boxes</var> left by half of the width of <var>bounding box</var>.</p>\n            </dd><dt>If the <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-line-alignment\" id=\"ref-for-webvtt-cue-line-alignment①②\">WebVTT cue line alignment</a> is <a data-link-type=\"dfn\" href=\"https://w3c.github.io/webvtt/#webvtt-cue-line-end-alignment\" id=\"ref-for-webvtt-cue-line-end-alignment③\">end\n         alignment</a>\n            </dt><dd>\n             <p>Move all the boxes in <var>boxes</var> left by the width of <var>bounding box</var>.</p>\n           </dd></dl>",
-                                      "rationale": ".switch",
-                                      "steps": [
-                                        {
-                                          "operation": "switch",
-                                          "steps": [
-                                            {
-                                              "case": "If the WebVTT cue line alignment is center alignment",
-                                              "steps": [
-                                                {
-                                                  "html": "<p>Move all the boxes in <var>boxes</var> left by half of the width of <var>bounding box</var>.</p>"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "case": "If the WebVTT cue line alignment is end alignment",
-                                              "steps": [
-                                                {
-                                                  "html": "<p>Move all the boxes in <var>boxes</var> left by the width of <var>bounding box</var>.</p>"
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        }
-                                      ]
+                                      "case": "If the WebVTT cue line alignment is center alignment",
+                                      "html": "<p>Move all the boxes in <var>boxes</var> left by half of the width of <var>bounding box</var>.</p>"
+                                    },
+                                    {
+                                      "case": "If the WebVTT cue line alignment is end alignment",
+                                      "html": "<p>Move all the boxes in <var>boxes</var> left by the width of <var>bounding box</var>.</p>"
                                     }
                                   ]
                                 }
                               ]
                             }
                           ]
-                        },
-                        {
-                          "html": "<p>If none of the boxes in <var>boxes</var> would overlap any of the boxes in <var>output</var>, and all the\n     boxes in <var>boxes</var> are within the <var>video</var>’s rendering area, then jump to the step labeled <i>done\n     positioning</i> below.</p>"
-                        },
-                        {
-                          "html": "<p>If there is a position to which the boxes in <var>boxes</var> can be moved while maintaining the\n     relative positions of the boxes in <var>boxes</var> to each other such that none of the boxes in <var>boxes</var> would overlap any of the boxes in <var>output</var>, and all the boxes in <var>boxes</var> would be within the <var>video</var>’s rendering area, then move the boxes in <var>boxes</var> to the closest such position to their\n     current position, and then jump to the step labeled <i>done positioning</i> below. If there are\n     multiple such positions that are equidistant from their current position, use the highest one\n     amongst them; if there are several at that height, then use the leftmost one amongst\n     them.</p>"
-                        },
-                        {
-                          "html": "<p>Otherwise, jump to the step labeled <i>done positioning</i> below. (The boxes will\n     unfortunately overlap.)</p>"
                         }
                       ]
+                    },
+                    {
+                      "html": "<p>If none of the boxes in <var>boxes</var> would overlap any of the boxes in <var>output</var>, and all the\n     boxes in <var>boxes</var> are within the <var>video</var>’s rendering area, then jump to the step labeled <i>done\n     positioning</i> below.</p>"
+                    },
+                    {
+                      "html": "<p>If there is a position to which the boxes in <var>boxes</var> can be moved while maintaining the\n     relative positions of the boxes in <var>boxes</var> to each other such that none of the boxes in <var>boxes</var> would overlap any of the boxes in <var>output</var>, and all the boxes in <var>boxes</var> would be within the <var>video</var>’s rendering area, then move the boxes in <var>boxes</var> to the closest such position to their\n     current position, and then jump to the step labeled <i>done positioning</i> below. If there are\n     multiple such positions that are equidistant from their current position, use the highest one\n     amongst them; if there are several at that height, then use the leftmost one amongst\n     them.</p>"
+                    },
+                    {
+                      "html": "<p>Otherwise, jump to the step labeled <i>done positioning</i> below. (The boxes will\n     unfortunately overlap.)</p>"
                     }
                   ]
                 }

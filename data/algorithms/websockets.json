@@ -52,7 +52,7 @@
           "html": "<p><a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-header-list-append\" id=\"ref-for-concept-header-list-append①\">Append</a> (`<code>Connection</code>`, `<code>Upgrade</code>`) to <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-header-list\" id=\"ref-for-concept-request-header-list①\">header list</a>.</p>"
         },
         {
-          "html": "<p>Let <var>keyValue</var> be a nonce consisting of a randomly selected 16-byte value that has been <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#forgiving-base64-encode\" id=\"ref-for-forgiving-base64-encode\">forgiving-base64-encoded</a> and <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#isomorphic-encode\" id=\"ref-for-isomorphic-encode\">isomorphic encoded</a>.</p>\n      <p class=\"example\" id=\"example-random-value\"><a class=\"self-link\" href=\"https://websockets.spec.whatwg.org/#example-random-value\"></a>If the randomly selected value was the byte sequence 0x01\n 0x02 0x03 0x04 0x05 0x06 0x07 0x08 0x09 0x0a 0x0b 0x0c 0x0d 0x0e 0x0f 0x10, <var>keyValue</var> would be\n forgiving-base64-encoded to \"<code>AQIDBAUGBwgJCgsMDQ4PEC==</code>\" and isomorphic encoded to\n `<code>AQIDBAUGBwgJCgsMDQ4PEC==</code>`. </p>"
+          "html": "<p>Let <var>keyValue</var> be a nonce consisting of a randomly selected 16-byte value that has been <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#forgiving-base64-encode\" id=\"ref-for-forgiving-base64-encode\">forgiving-base64-encoded</a> and <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#isomorphic-encode\" id=\"ref-for-isomorphic-encode\">isomorphic encoded</a>.</p>"
         },
         {
           "html": "<p><a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-header-list-append\" id=\"ref-for-concept-header-list-append②\">Append</a> (`<code>Sec-WebSocket-Key</code>`, <var>keyValue</var>) to <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-header-list\" id=\"ref-for-concept-request-header-list②\">header list</a>.</p>"
@@ -64,13 +64,13 @@
           "html": "<p>For each <var>protocol</var> in <var>protocols</var>, <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-header-list-combine\" id=\"ref-for-concept-header-list-combine\">combine</a> (`<code>Sec-WebSocket-Protocol</code>`, <var>protocol</var>) in <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-header-list\" id=\"ref-for-concept-request-header-list④\">header list</a>.</p>"
         },
         {
-          "html": "<p>Let <var>permessageDeflate</var> be a user-agent defined \"<code>permessage-deflate</code>\" extension <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#header-value\" id=\"ref-for-header-value\">header value</a>. <a data-link-type=\"biblio\" href=\"https://websockets.spec.whatwg.org/#biblio-wsp\" title=\"The WebSocket Protocol\">[WSP]</a></p>\n      <p class=\"example\" id=\"example-permessage-deflate\"><a class=\"self-link\" href=\"https://websockets.spec.whatwg.org/#example-permessage-deflate\"></a>`<code>permessage-deflate; client_max_window_bits</code>` </p>"
+          "html": "<p>Let <var>permessageDeflate</var> be a user-agent defined \"<code>permessage-deflate</code>\" extension <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#header-value\" id=\"ref-for-header-value\">header value</a>. <a data-link-type=\"biblio\" href=\"https://websockets.spec.whatwg.org/#biblio-wsp\" title=\"The WebSocket Protocol\">[WSP]</a></p>"
         },
         {
           "html": "<p><a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-header-list-append\" id=\"ref-for-concept-header-list-append④\">Append</a> (`<code>Sec-WebSocket-Extensions</code>`, <var>permessageDeflate</var>) to <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-header-list\" id=\"ref-for-concept-request-header-list⑤\">header list</a>.</p>"
         },
         {
-          "html": "<a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-fetch\" id=\"ref-for-concept-fetch①\">Fetch</a> <var>request</var> with <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#fetch-useparallelqueue\" id=\"ref-for-fetch-useparallelqueue\"><i>useParallelQueue</i></a> set to true,\nand <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#process-response\" id=\"ref-for-process-response\"><i>processResponse</i></a> given <var>response</var> being these steps:",
+          "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"concept-websocket-establish\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">establish a WebSocket connection</dfn>, given a <var>url</var>, <var>protocols</var>, and <var>client</var>, run these steps:",
           "rationale": "if",
           "steps": [
             {
@@ -87,7 +87,7 @@
       ]
     },
     {
-      "name": "WebSocket(url, protocols)",
+      "name": "WebSocket/WebSocket(url, protocols)",
       "href": "https://websockets.spec.whatwg.org/#dom-websocket-websocket",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"WebSocket\" data-dfn-type=\"constructor\" data-export=\"\" data-lt=\"WebSocket(url, protocols)|constructor(url, protocols)|WebSocket(url)|constructor(url)\" id=\"dom-websocket-websocket\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>new\n WebSocket(<var>url</var>, <var>protocols</var>)</code></dfn> constructor steps are:",
       "rationale": ".algorithm",
@@ -126,7 +126,7 @@
           "html": "<p>Let <var>client</var> be <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\" id=\"ref-for-this②\">this</a>'s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#relevant-settings-object\" id=\"ref-for-relevant-settings-object①\">relevant settings object</a>.</p>"
         },
         {
-          "html": "Run this step <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#in-parallel\" id=\"ref-for-in-parallel\">in parallel</a>:",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"WebSocket\" data-dfn-type=\"constructor\" data-export=\"\" data-lt=\"WebSocket(url, protocols)|constructor(url, protocols)|WebSocket(url)|constructor(url)\" id=\"dom-websocket-websocket\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>new\n WebSocket(<var>url</var>, <var>protocols</var>)</code></dfn> constructor steps are:",
           "rationale": "establish",
           "steps": [
             {
@@ -137,7 +137,7 @@
       ]
     },
     {
-      "name": "close(code, reason)",
+      "name": "WebSocket/close(code, reason)",
       "href": "https://websockets.spec.whatwg.org/#dom-websocket-close",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"WebSocket\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"close(code, reason)|close(code)|close()\" id=\"dom-websocket-close\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>close(<var>code</var>, <var>reason</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -146,7 +146,7 @@
           "html": "<p>If <var>code</var> is present, but is neither an integer equal to 1000 nor an integer in the range 3000\n  to 4999, inclusive, throw an \"<code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#invalidaccesserror\" id=\"ref-for-invalidaccesserror\">InvalidAccessError</a></code>\" <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#idl-DOMException\" id=\"ref-for-idl-DOMException⑤\">DOMException</a></code>.</p>"
         },
         {
-          "html": "If <var>reason</var> is present, then run these substeps:",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"WebSocket\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"close(code, reason)|close(code)|close()\" id=\"dom-websocket-close\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>close(<var>code</var>, <var>reason</var>)</code></dfn> method steps are:",
           "rationale": "let",
           "steps": [
             {
@@ -158,7 +158,7 @@
           ]
         },
         {
-          "html": "Run the first matching steps from the following list:",
+          "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"WebSocket\" data-dfn-type=\"method\" data-export=\"\" data-lt=\"close(code, reason)|close(code)|close()\" id=\"dom-websocket-close\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>close(<var>code</var>, <var>reason</var>)</code></dfn> method steps are:",
           "rationale": ".switch",
           "steps": [
             {
@@ -166,35 +166,19 @@
               "steps": [
                 {
                   "case": "If this's ready state is CLOSING (2) or CLOSED (3)",
-                  "steps": [
-                    {
-                      "html": "<p>Do nothing.</p>"
-                    }
-                  ]
+                  "html": "<p>Do nothing.</p>"
                 },
                 {
                   "case": "If the WebSocket connection is not yet established [WSP]",
-                  "steps": [
-                    {
-                      "html": "<p><a data-link-type=\"dfn\" href=\"https://datatracker.ietf.org/doc/html/rfc6455#section-7.1.7\" id=\"ref-for-section-7.1.7⑤\">Fail the WebSocket connection</a> and set <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\" id=\"ref-for-this⑥\">this</a>'s <a data-link-type=\"dfn\" href=\"https://websockets.spec.whatwg.org/#websocket-ready-state\" id=\"ref-for-websocket-ready-state②\">ready state</a> to <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://websockets.spec.whatwg.org/#dom-websocket-closing\" id=\"ref-for-dom-websocket-closing②\">CLOSING</a></code> (2). <a data-link-type=\"biblio\" href=\"https://websockets.spec.whatwg.org/#biblio-wsp\" title=\"The WebSocket Protocol\">[WSP]</a></p>"
-                    }
-                  ]
+                  "html": "<p><a data-link-type=\"dfn\" href=\"https://datatracker.ietf.org/doc/html/rfc6455#section-7.1.7\" id=\"ref-for-section-7.1.7⑤\">Fail the WebSocket connection</a> and set <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\" id=\"ref-for-this⑥\">this</a>'s <a data-link-type=\"dfn\" href=\"https://websockets.spec.whatwg.org/#websocket-ready-state\" id=\"ref-for-websocket-ready-state②\">ready state</a> to <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://websockets.spec.whatwg.org/#dom-websocket-closing\" id=\"ref-for-dom-websocket-closing②\">CLOSING</a></code> (2). <a data-link-type=\"biblio\" href=\"https://websockets.spec.whatwg.org/#biblio-wsp\" title=\"The WebSocket Protocol\">[WSP]</a></p>"
                 },
                 {
                   "case": "If the WebSocket closing handshake has not yet been started [WSP]",
-                  "steps": [
-                    {
-                      "html": "<p><a data-link-type=\"dfn\" href=\"https://datatracker.ietf.org/doc/html/rfc6455#section-7.1.2\" id=\"ref-for-section-7.1.2\">Start the WebSocket closing handshake</a> and set <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\" id=\"ref-for-this⑦\">this</a>'s <a data-link-type=\"dfn\" href=\"https://websockets.spec.whatwg.org/#websocket-ready-state\" id=\"ref-for-websocket-ready-state③\">ready state</a> to <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://websockets.spec.whatwg.org/#dom-websocket-closing\" id=\"ref-for-dom-websocket-closing③\">CLOSING</a></code> (2). <a data-link-type=\"biblio\" href=\"https://websockets.spec.whatwg.org/#biblio-wsp\" title=\"The WebSocket Protocol\">[WSP]</a></p>\n        <p>If neither <var>code</var> nor <var>reason</var> is present, the WebSocket Close message must not have a body.</p>\n        \n        <p>If <var>code</var> is present, then the status code to use in the WebSocket Close\n  message must be the integer given by <var>code</var>. <a data-link-type=\"biblio\" href=\"https://websockets.spec.whatwg.org/#biblio-wsp\" title=\"The WebSocket Protocol\">[WSP]</a></p>\n        <p>If <var>reason</var> is also present, then <var>reasonBytes</var> must be provided in the Close message after the\n  status code. <a data-link-type=\"biblio\" href=\"https://websockets.spec.whatwg.org/#biblio-wsp\" title=\"The WebSocket Protocol\">[WSP]</a></p>"
-                    }
-                  ]
+                  "html": "<p><a data-link-type=\"dfn\" href=\"https://datatracker.ietf.org/doc/html/rfc6455#section-7.1.2\" id=\"ref-for-section-7.1.2\">Start the WebSocket closing handshake</a> and set <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\" id=\"ref-for-this⑦\">this</a>'s <a data-link-type=\"dfn\" href=\"https://websockets.spec.whatwg.org/#websocket-ready-state\" id=\"ref-for-websocket-ready-state③\">ready state</a> to <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://websockets.spec.whatwg.org/#dom-websocket-closing\" id=\"ref-for-dom-websocket-closing③\">CLOSING</a></code> (2). <a data-link-type=\"biblio\" href=\"https://websockets.spec.whatwg.org/#biblio-wsp\" title=\"The WebSocket Protocol\">[WSP]</a></p>\n        <p>If neither <var>code</var> nor <var>reason</var> is present, the WebSocket Close message must not have a body.</p>\n        \n        <p>If <var>code</var> is present, then the status code to use in the WebSocket Close\n  message must be the integer given by <var>code</var>. <a data-link-type=\"biblio\" href=\"https://websockets.spec.whatwg.org/#biblio-wsp\" title=\"The WebSocket Protocol\">[WSP]</a></p>\n        <p>If <var>reason</var> is also present, then <var>reasonBytes</var> must be provided in the Close message after the\n  status code. <a data-link-type=\"biblio\" href=\"https://websockets.spec.whatwg.org/#biblio-wsp\" title=\"The WebSocket Protocol\">[WSP]</a></p>"
                 },
                 {
                   "case": "Otherwise",
-                  "steps": [
-                    {
-                      "html": "<p>Set <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\" id=\"ref-for-this⑧\">this</a>'s <a data-link-type=\"dfn\" href=\"https://websockets.spec.whatwg.org/#websocket-ready-state\" id=\"ref-for-websocket-ready-state④\">ready state</a> to <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://websockets.spec.whatwg.org/#dom-websocket-closing\" id=\"ref-for-dom-websocket-closing④\">CLOSING</a></code> (2).</p>"
-                    }
-                  ]
+                  "html": "<p>Set <a data-link-type=\"dfn\" href=\"https://webidl.spec.whatwg.org/#this\" id=\"ref-for-this⑧\">this</a>'s <a data-link-type=\"dfn\" href=\"https://websockets.spec.whatwg.org/#websocket-ready-state\" id=\"ref-for-websocket-ready-state④\">ready state</a> to <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://websockets.spec.whatwg.org/#dom-websocket-closing\" id=\"ref-for-dom-websocket-closing④\">CLOSING</a></code> (2).</p>"
                 }
               ]
             }
@@ -203,7 +187,7 @@
       ]
     },
     {
-      "name": "send(data)",
+      "name": "WebSocket/send(data)",
       "href": "https://websockets.spec.whatwg.org/#dom-websocket-send",
       "html": "The <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"WebSocket\" data-dfn-type=\"method\" data-export=\"\" id=\"dom-websocket-send\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>send(<var>data</var>)</code></dfn> method steps are:",
       "rationale": ".algorithm",
@@ -219,7 +203,7 @@
     {
       "name": "handle connection establishment",
       "href": "https://websockets.spec.whatwg.org/#eventdef-websocket-open",
-      "html": "",
+      "html": "<a data-link-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-event-fire\" id=\"ref-for-concept-event-fire\">Fire an event</a> named <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"WebSocket\" data-dfn-type=\"event\" data-export=\"\" id=\"eventdef-websocket-open\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>open</code></dfn> at the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://websockets.spec.whatwg.org/#websocket\" id=\"ref-for-websocket⑨\">WebSocket</a></code> object.",
       "rationale": ".algorithm",
       "steps": [
         {
@@ -239,14 +223,14 @@
     {
       "name": "handle a WebSocket message",
       "href": "https://websockets.spec.whatwg.org/#dom-binarytype-blob",
-      "html": "When <a data-link-type=\"dfn\" href=\"https://datatracker.ietf.org/doc/html/rfc6455#page-66:~:text=_A%20WebSocket%20Message%20Has%20Been%20Received_\" id=\"ref-for-page-66:~:text=_A%20WebSocket%20Message%20Has%20Been%20Received_\">a WebSocket message has been received</a> with type <var>type</var> and data <var>data</var>, the user agent must <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task\" id=\"ref-for-queue-a-task②\">queue a task</a> to follow these steps: <a data-link-type=\"biblio\" href=\"https://websockets.spec.whatwg.org/#biblio-wsp\" title=\"The WebSocket Protocol\">[WSP]</a>",
+      "html": "<p>When <a data-link-type=\"dfn\" href=\"https://datatracker.ietf.org/doc/html/rfc6455#page-66:~:text=_A%20WebSocket%20Message%20Has%20Been%20Received_\" id=\"ref-for-page-66:~:text=_A%20WebSocket%20Message%20Has%20Been%20Received_\">a WebSocket message has been received</a> with type <var>type</var> and data <var>data</var>, the user agent must <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task\" id=\"ref-for-queue-a-task②\">queue a task</a> to follow these steps: <a data-link-type=\"biblio\" href=\"https://websockets.spec.whatwg.org/#biblio-wsp\" title=\"The WebSocket Protocol\">[WSP]</a></p>",
       "rationale": ".algorithm",
       "steps": [
         {
           "html": "<p>If <a data-link-type=\"dfn\" href=\"https://websockets.spec.whatwg.org/#websocket-ready-state\" id=\"ref-for-websocket-ready-state⑦\">ready state</a> is not <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://websockets.spec.whatwg.org/#dom-websocket-open\" id=\"ref-for-dom-websocket-open②\">OPEN</a></code> (1), then return.</p>"
         },
         {
-          "html": "Let <var>dataForEvent</var> be determined by switching on <var>type</var> and <a data-link-type=\"dfn\" href=\"https://websockets.spec.whatwg.org/#websocket-binary-type\" id=\"ref-for-websocket-binary-type③\">binary type</a>:",
+          "html": "<p>When <a data-link-type=\"dfn\" href=\"https://datatracker.ietf.org/doc/html/rfc6455#page-66:~:text=_A%20WebSocket%20Message%20Has%20Been%20Received_\" id=\"ref-for-page-66:~:text=_A%20WebSocket%20Message%20Has%20Been%20Received_\">a WebSocket message has been received</a> with type <var>type</var> and data <var>data</var>, the user agent must <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task\" id=\"ref-for-queue-a-task②\">queue a task</a> to follow these steps: <a data-link-type=\"biblio\" href=\"https://websockets.spec.whatwg.org/#biblio-wsp\" title=\"The WebSocket Protocol\">[WSP]</a></p>",
           "rationale": ".switch",
           "steps": [
             {
@@ -254,27 +238,15 @@
               "steps": [
                 {
                   "case": "type indicates that the data is Text",
-                  "steps": [
-                    {
-                      "html": "<p>a new <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#idl-DOMString\" id=\"ref-for-idl-DOMString④\">DOMString</a></code> containing <var>data</var></p>"
-                    }
-                  ]
+                  "html": "<p>a new <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#idl-DOMString\" id=\"ref-for-idl-DOMString④\">DOMString</a></code> containing <var>data</var></p>"
                 },
                 {
                   "case": "type indicates that the data is Binary and binary type is \"blob\"",
-                  "steps": [
-                    {
-                      "html": "<p>a new <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/FileAPI/#dfn-Blob\" id=\"ref-for-dfn-Blob⑦\">Blob</a></code> object, created in the <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#concept-relevant-realm\" id=\"ref-for-concept-relevant-realm\">relevant Realm</a> of the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://websockets.spec.whatwg.org/#websocket\" id=\"ref-for-websocket①⓪\">WebSocket</a></code> object, that\n  represents <var>data</var> as its raw data <a data-link-type=\"biblio\" href=\"https://websockets.spec.whatwg.org/#biblio-fileapi\" title=\"File API\">[FILEAPI]</a></p>"
-                    }
-                  ]
+                  "html": "<p>a new <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://w3c.github.io/FileAPI/#dfn-Blob\" id=\"ref-for-dfn-Blob⑦\">Blob</a></code> object, created in the <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#concept-relevant-realm\" id=\"ref-for-concept-relevant-realm\">relevant Realm</a> of the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://websockets.spec.whatwg.org/#websocket\" id=\"ref-for-websocket①⓪\">WebSocket</a></code> object, that\n  represents <var>data</var> as its raw data <a data-link-type=\"biblio\" href=\"https://websockets.spec.whatwg.org/#biblio-fileapi\" title=\"File API\">[FILEAPI]</a></p>"
                 },
                 {
                   "case": "type indicates that the data is Binary and binary type is \"arraybuffer\"",
-                  "steps": [
-                    {
-                      "html": "<p>a new <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#idl-ArrayBuffer\" id=\"ref-for-idl-ArrayBuffer⑦\">ArrayBuffer</a></code> object, created in the <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#concept-relevant-realm\" id=\"ref-for-concept-relevant-realm①\">relevant Realm</a> of the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://websockets.spec.whatwg.org/#websocket\" id=\"ref-for-websocket①①\">WebSocket</a></code> object,\n  whose contents are <var>data</var></p>"
-                    }
-                  ]
+                  "html": "<p>a new <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#idl-ArrayBuffer\" id=\"ref-for-idl-ArrayBuffer⑦\">ArrayBuffer</a></code> object, created in the <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#concept-relevant-realm\" id=\"ref-for-concept-relevant-realm①\">relevant Realm</a> of the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://websockets.spec.whatwg.org/#websocket\" id=\"ref-for-websocket①①\">WebSocket</a></code> object,\n  whose contents are <var>data</var></p>"
                 }
               ]
             }
@@ -288,7 +260,7 @@
     {
       "name": "handle connection close",
       "href": "https://websockets.spec.whatwg.org/#flagged-as-full",
-      "html": "",
+      "html": "If the user agent was required to <a data-link-type=\"dfn\" href=\"https://datatracker.ietf.org/doc/html/rfc6455#section-7.1.7\" id=\"ref-for-section-7.1.7⑦\">fail the WebSocket connection</a>, or if <a data-link-type=\"dfn\" href=\"https://datatracker.ietf.org/doc/html/rfc6455#section-7.1.4\" id=\"ref-for-section-7.1.4⑤\">the WebSocket connection was closed</a> after being <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-lt=\"flagged as full\" data-noexport=\"\" id=\"flagged-as-full\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">flagged\n  as full</dfn>, <a data-link-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-event-fire\" id=\"ref-for-concept-event-fire②\">fire an event</a> named <dfn class=\"dfn-paneled idl-code has-dfn-panel\" data-dfn-for=\"WebSocket\" data-dfn-type=\"event\" data-export=\"\" id=\"eventdef-websocket-error\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\"><code>error</code></dfn> at the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://websockets.spec.whatwg.org/#websocket\" id=\"ref-for-websocket①④\">WebSocket</a></code> object. <a data-link-type=\"biblio\" href=\"https://websockets.spec.whatwg.org/#biblio-wsp\" title=\"The WebSocket Protocol\">[WSP]</a>",
       "rationale": ".algorithm",
       "steps": [
         {
@@ -312,27 +284,15 @@
           "steps": [
             {
               "case": "If the WebSocket connection is not yet established [WSP]",
-              "steps": [
-                {
-                  "html": "<p><a data-link-type=\"dfn\" href=\"https://datatracker.ietf.org/doc/html/rfc6455#section-7.1.7\" id=\"ref-for-section-7.1.7⑧\">Fail the WebSocket connection</a>. <a data-link-type=\"biblio\" href=\"https://websockets.spec.whatwg.org/#biblio-wsp\" title=\"The WebSocket Protocol\">[WSP]</a></p>"
-                }
-              ]
+              "html": "<p><a data-link-type=\"dfn\" href=\"https://datatracker.ietf.org/doc/html/rfc6455#section-7.1.7\" id=\"ref-for-section-7.1.7⑧\">Fail the WebSocket connection</a>. <a data-link-type=\"biblio\" href=\"https://websockets.spec.whatwg.org/#biblio-wsp\" title=\"The WebSocket Protocol\">[WSP]</a></p>"
             },
             {
               "case": "If the WebSocket closing handshake has not yet been started [WSP]",
-              "steps": [
-                {
-                  "html": "<p><a data-link-type=\"dfn\" href=\"https://datatracker.ietf.org/doc/html/rfc6455#section-7.1.2\" id=\"ref-for-section-7.1.2④\">Start the WebSocket closing handshake</a>, with the status code to use in the\n  WebSocket Close message being 1001. <a data-link-type=\"biblio\" href=\"https://websockets.spec.whatwg.org/#biblio-wsp\" title=\"The WebSocket Protocol\">[WSP]</a></p>"
-                }
-              ]
+              "html": "<p><a data-link-type=\"dfn\" href=\"https://datatracker.ietf.org/doc/html/rfc6455#section-7.1.2\" id=\"ref-for-section-7.1.2④\">Start the WebSocket closing handshake</a>, with the status code to use in the\n  WebSocket Close message being 1001. <a data-link-type=\"biblio\" href=\"https://websockets.spec.whatwg.org/#biblio-wsp\" title=\"The WebSocket Protocol\">[WSP]</a></p>"
             },
             {
               "case": "Otherwise",
-              "steps": [
-                {
-                  "html": "<p>Do nothing.</p>"
-                }
-              ]
+              "html": "<p>Do nothing.</p>"
             }
           ]
         }

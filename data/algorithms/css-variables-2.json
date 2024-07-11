@@ -35,27 +35,15 @@
           "steps": [
             {
               "case": "The property is a non-registered custom property",
-              "steps": [
-                {
-                  "html": "<p>The computed value is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-variables-2/#guaranteed-invalid-value\" id=\"ref-for-guaranteed-invalid-value⑨\">guaranteed-invalid value</a>.</p>"
-                }
-              ]
+              "html": "<p>The computed value is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-variables-2/#guaranteed-invalid-value\" id=\"ref-for-guaranteed-invalid-value⑨\">guaranteed-invalid value</a>.</p>"
             },
             {
               "case": "The property is a registered custom property with universal syntax",
-              "steps": [
-                {
-                  "html": "<p>The computed value is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-variables-2/#guaranteed-invalid-value\" id=\"ref-for-guaranteed-invalid-value⑨\">guaranteed-invalid value</a>.</p>"
-                }
-              ]
+              "html": "<p>The computed value is the <a data-link-type=\"dfn\" href=\"https://drafts.csswg.org/css-variables-2/#guaranteed-invalid-value\" id=\"ref-for-guaranteed-invalid-value⑨\">guaranteed-invalid value</a>.</p>"
             },
             {
               "case": "Otherwise",
-              "steps": [
-                {
-                  "html": "<p>Either the property’s inherited value\nor its initial value\ndepending on whether the property is inherited or not, respectively,\nas if the property’s value had been specified as the <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-cascade-5/#valdef-all-unset\" id=\"ref-for-valdef-all-unset\">unset</a> keyword.</p>"
-                }
-              ]
+              "html": "<p>Either the property’s inherited value\nor its initial value\ndepending on whether the property is inherited or not, respectively,\nas if the property’s value had been specified as the <a class=\"css\" data-link-type=\"maybe\" href=\"https://drafts.csswg.org/css-cascade-5/#valdef-all-unset\" id=\"ref-for-valdef-all-unset\">unset</a> keyword.</p>"
             }
           ]
         }

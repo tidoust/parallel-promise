@@ -5,6 +5,12 @@
   },
   "algorithms": [
     {
+      "name": "convert",
+      "href": "https://wicg.github.io/handwriting-recognition/#convert-data-format",
+      "html": "To <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-export=\"\" id=\"convert-data-format\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">convert</dfn> data into and from a suitable format for handwriting recognizer, the user agent should match what’s defined in this spec to equivalent concepts used in <a data-link-type=\"dfn\" href=\"https://wicg.github.io/handwriting-recognition/#handwriting-recognizer\" id=\"ref-for-handwriting-recognizer\">handwriting recognizer</a>.",
+      "rationale": "To <dfn>"
+    },
+    {
       "name": "navigator-query-handwriting-recognizer",
       "html": "When <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://wicg.github.io/handwriting-recognition/#dom-navigator-queryhandwritingrecognizer\" id=\"ref-for-dom-navigator-queryhandwritingrecognizer①\">queryHandwritingRecognizer(constraint)</a></code> method is invoked, do the following:",
       "rationale": ".algorithm",

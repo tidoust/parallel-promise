@@ -20,7 +20,7 @@
           "html": "<p>Let <var>trackedMeshs</var> be a result of calling into <var>device</var>’s <a data-link-type=\"dfn\" href=\"https://immersive-web.github.io/real-world-meshing/#native-mesh-detection\" id=\"ref-for-native-mesh-detection①\">native mesh detection</a> capability to obtain tracked meshes at <var>frame</var>’s <a data-link-type=\"dfn\" href=\"https://immersive-web.github.io/webxr/#xrframe-time\" id=\"ref-for-xrframe-time\">time</a>.</p>"
         },
         {
-          "html": "For each <var>native mesh</var> in <var>trackedMeshs</var>, run:",
+          "html": "In order to <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"update-meshes\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">update meshes</dfn><span style=\"position: relative; height: 0px;\"></span><span style=\"position: relative; height: 0px;\"></span> for <var>frame</var>, the user agent MUST run the following steps:",
           "rationale": "if",
           "steps": [
             {
@@ -48,7 +48,7 @@
     {
       "name": "create-mesh-object",
       "href": "https://immersive-web.github.io/real-world-meshing/#create-mesh-object",
-      "html": "In order to <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"create-mesh-object\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">create mesh object</dfn><span style=\"position: relative; height: 0px;\"></span><span style=\"position: relative; height: 0px;\"></span> from a <a data-link-type=\"dfn\" href=\"https://immersive-web.github.io/real-world-meshing/#native-mesh-objects\" id=\"ref-for-native-mesh-objects\">native mesh object</a> <var>native mesh</var> and <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://immersive-web.github.io/webxr/#xrframe\" id=\"ref-for-xrframe③\">XRFrame</a></code> <var>frame</var>, the user agent MUST run the following steps:",
+      "html": "In order to <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"create-mesh-object\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">create mesh object</dfn><span style=\"position: relative; height: 0px;\"></span><span style=\"position: relative; height: 0px;\"></span> from a <a data-link-type=\"dfn\" href=\"https://immersive-web.github.io/real-world-meshing/#native-mesh-objects\" id=\"ref-for-native-mesh-objects\">native mesh object</a> <var>native mesh</var> and <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://immersive-web.github.io/webxr/#xrframe\" id=\"ref-for-xrframe③\">XRFrame</a></code> <var>frame</var>, the user agent MUST run the following steps: \n    \n    <p>A mesh object, <var>result</var>, created in such way is said to <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"dfn\" data-noexport=\"\" id=\"correspond-to\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">correspond to</dfn><span style=\"position: relative; height: 0px;\"></span><span style=\"position: relative; height: 0px;\"></span> the passed in native mesh object <var>native mesh</var>.</p>",
       "rationale": ".algorithm",
       "steps": [
         {

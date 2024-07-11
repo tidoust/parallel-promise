@@ -160,27 +160,15 @@
               "steps": [
                 {
                   "case": "\"required\"",
-                  "steps": [
-                    {
-                      "html": "<p>\n                      If the <var>implementation</var> does not support <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-use-distinctive-identifier-s\" class=\"internalDFN\" id=\"ref-for-dfn-use-distinctive-identifier-s-2\">use of Distinctive Identifier(s)</a> in combination with <var>accumulated configuration</var> and\n                      <var>restrictions</var>, return <code>NotSupported</code>.\n                    </p>"
-                    }
-                  ]
+                  "html": "<p>\n                      If the <var>implementation</var> does not support <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-use-distinctive-identifier-s\" class=\"internalDFN\" id=\"ref-for-dfn-use-distinctive-identifier-s-2\">use of Distinctive Identifier(s)</a> in combination with <var>accumulated configuration</var> and\n                      <var>restrictions</var>, return <code>NotSupported</code>.\n                    </p>"
                 },
                 {
                   "case": "\"optional\"",
-                  "steps": [
-                    {
-                      "html": "<p>\n                      Continue with the following steps.\n                    </p>"
-                    }
-                  ]
+                  "html": "<p>\n                      Continue with the following steps.\n                    </p>"
                 },
                 {
                   "case": "\"not-allowed\"",
-                  "steps": [
-                    {
-                      "html": "<p>\n                      If the <var>implementation</var> requires <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-use-distinctive-identifier-s-or-distinctive-permanent-identifier-s\" class=\"internalDFN\" id=\"ref-for-dfn-use-distinctive-identifier-s-or-distinctive-permanent-identifier-s-1\">use of Distinctive Identifier(s) or Distinctive Permanent Identifier(s)</a> in combination with <var>accumulated\n                      configuration</var> and <var>restrictions</var>, return\n                      <code>NotSupported</code>.\n                    </p>"
-                    }
-                  ]
+                  "html": "<p>\n                      If the <var>implementation</var> requires <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-use-distinctive-identifier-s-or-distinctive-permanent-identifier-s\" class=\"internalDFN\" id=\"ref-for-dfn-use-distinctive-identifier-s-or-distinctive-permanent-identifier-s-1\">use of Distinctive Identifier(s) or Distinctive Permanent Identifier(s)</a> in combination with <var>accumulated\n                      configuration</var> and <var>restrictions</var>, return\n                      <code>NotSupported</code>.\n                    </p>"
                 }
               ]
             }
@@ -204,27 +192,15 @@
               "steps": [
                 {
                   "case": "\"required\"",
-                  "steps": [
-                    {
-                      "html": "<p>\n                      If the <var>implementation</var> does not support persisting state in\n                      combination with <var>accumulated configuration</var> and\n                      <var>restrictions</var>, return <code>NotSupported</code>.\n                    </p>"
-                    }
-                  ]
+                  "html": "<p>\n                      If the <var>implementation</var> does not support persisting state in\n                      combination with <var>accumulated configuration</var> and\n                      <var>restrictions</var>, return <code>NotSupported</code>.\n                    </p>"
                 },
                 {
                   "case": "\"optional\"",
-                  "steps": [
-                    {
-                      "html": "<p>\n                      Continue with the following steps.\n                    </p>"
-                    }
-                  ]
+                  "html": "<p>\n                      Continue with the following steps.\n                    </p>"
                 },
                 {
                   "case": "\"not-allowed\"",
-                  "steps": [
-                    {
-                      "html": "<p>\n                      If the <var>implementation</var> requires persisting state in combination\n                      with <var>accumulated configuration</var> and <var>restrictions</var>, return\n                      <code>NotSupported</code>.\n                    </p>"
-                    }
-                  ]
+                  "html": "<p>\n                      If the <var>implementation</var> requires persisting state in combination\n                      with <var>accumulated configuration</var> and <var>restrictions</var>, return\n                      <code>NotSupported</code>.\n                    </p>"
                 }
               ]
             }
@@ -242,19 +218,11 @@
               "steps": [
                 {
                   "case": "If the sessionTypes member is present [Infra] in candidate configuration",
-                  "steps": [
-                    {
-                      "html": "<p>\n                      Let <var>session types</var> be <var>candidate configuration</var>'s\n                      <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-sessiontypes\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-sessiontypes-2\"><code>sessionTypes</code></a> member.\n                    </p>"
-                    }
-                  ]
+                  "html": "<p>\n                      Let <var>session types</var> be <var>candidate configuration</var>'s\n                      <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-sessiontypes\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-sessiontypes-2\"><code>sessionTypes</code></a> member.\n                    </p>"
                 },
                 {
                   "case": "Otherwise",
-                  "steps": [
-                    {
-                      "html": "<p>\n                      Let <var>session types</var> be <code>[ \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysessiontype-temporary\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysessiontype-temporary-1\"><code>temporary</code></a>\"\n                      ]</code>.\n                    </p>"
-                    }
-                  ]
+                  "html": "<p>\n                      Let <var>session types</var> be <code>[ \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysessiontype-temporary\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysessiontype-temporary-1\"><code>temporary</code></a>\"\n                      ]</code>.\n                    </p>"
                 }
               ]
             }
@@ -285,7 +253,7 @@
           "html": "<p>\n                  If the <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-videocapabilities\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-videocapabilities-1\"><code>videoCapabilities</code></a> and\n                  <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-audiocapabilities\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-audiocapabilities-1\"><code>audioCapabilities</code></a> members in <var>candidate\n                  configuration</var> are both empty, return <code>NotSupported</code>.\n                </p>"
         },
         {
-          "html": "<dl class=\"switch\">\n                  <dt>\n                    If the <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-videocapabilities\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-videocapabilities-2\"><code>videoCapabilities</code></a> member in\n                    <var>candidate configuration</var> is non-empty:\n                  </dt>\n                  <dd>\n                    <ol>\n                      <li>\n                        <p>\n                          Let <var>video capabilities</var> be the result of executing the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-get-supported-capabilities-for-audio-video-type\" class=\"internalDFN\" id=\"ref-for-dfn-get-supported-capabilities-for-audio-video-type-1\">Get Supported Capabilities for Audio/Video Type</a> algorithm on Video,\n                          <var>candidate configuration</var>'s\n                          <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-videocapabilities\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-videocapabilities-3\"><code>videoCapabilities</code></a> member,\n                          <var>accumulated configuration</var>, and <var>restrictions</var>.\n                        </p>\n                      </li>\n                      <li>\n                        <p>\n                          If <var>video capabilities</var> is <code>null</code>, return\n                          <code>NotSupported</code>.\n                        </p>\n                      </li>\n                      <li>\n                        <p>\n                          Set the <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-videocapabilities\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-videocapabilities-4\"><code>videoCapabilities</code></a> member of\n                          <var>accumulated configuration</var> to <var>video capabilities</var>.\n                        </p>\n                      </li>\n                    </ol>\n                  </dd>\n                  <dt>\n                    Otherwise:\n                  </dt>\n                  <dd>\n                    <p>\n                      Set the <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-videocapabilities\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-videocapabilities-5\"><code>videoCapabilities</code></a> member of\n                      <var>accumulated configuration</var> to an empty sequence.\n                    </p>\n                  </dd>\n                </dl>",
+          "html": "<dl class=\"switch\">\n                  <dt>\n                    If the <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-videocapabilities\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-videocapabilities-2\"><code>videoCapabilities</code></a> member in\n                    <var>candidate configuration</var> is non-empty:\n                  </dt>\n                  <dd>\n                    \n                  </dd>\n                  <dt>\n                    Otherwise:\n                  </dt>\n                  <dd>\n                    <p>\n                      Set the <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-videocapabilities\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-videocapabilities-5\"><code>videoCapabilities</code></a> member of\n                      <var>accumulated configuration</var> to an empty sequence.\n                    </p>\n                  </dd>\n                </dl>",
           "rationale": ".switch",
           "steps": [
             {
@@ -293,38 +261,30 @@
               "steps": [
                 {
                   "case": "If the videoCapabilities member in candidate configuration is non-empty:",
+                  "html": "",
+                  "rationale": "let",
                   "steps": [
                     {
-                      "html": "<ol>\n                      <li>\n                        <p>\n                          Let <var>video capabilities</var> be the result of executing the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-get-supported-capabilities-for-audio-video-type\" class=\"internalDFN\" id=\"ref-for-dfn-get-supported-capabilities-for-audio-video-type-1\">Get Supported Capabilities for Audio/Video Type</a> algorithm on Video,\n                          <var>candidate configuration</var>'s\n                          <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-videocapabilities\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-videocapabilities-3\"><code>videoCapabilities</code></a> member,\n                          <var>accumulated configuration</var>, and <var>restrictions</var>.\n                        </p>\n                      </li>\n                      <li>\n                        <p>\n                          If <var>video capabilities</var> is <code>null</code>, return\n                          <code>NotSupported</code>.\n                        </p>\n                      </li>\n                      <li>\n                        <p>\n                          Set the <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-videocapabilities\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-videocapabilities-4\"><code>videoCapabilities</code></a> member of\n                          <var>accumulated configuration</var> to <var>video capabilities</var>.\n                        </p>\n                      </li>\n                    </ol>",
-                      "rationale": "let",
-                      "steps": [
-                        {
-                          "html": "<p>\n                          Let <var>video capabilities</var> be the result of executing the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-get-supported-capabilities-for-audio-video-type\" class=\"internalDFN\" id=\"ref-for-dfn-get-supported-capabilities-for-audio-video-type-1\">Get Supported Capabilities for Audio/Video Type</a> algorithm on Video,\n                          <var>candidate configuration</var>'s\n                          <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-videocapabilities\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-videocapabilities-3\"><code>videoCapabilities</code></a> member,\n                          <var>accumulated configuration</var>, and <var>restrictions</var>.\n                        </p>"
-                        },
-                        {
-                          "html": "<p>\n                          If <var>video capabilities</var> is <code>null</code>, return\n                          <code>NotSupported</code>.\n                        </p>"
-                        },
-                        {
-                          "html": "<p>\n                          Set the <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-videocapabilities\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-videocapabilities-4\"><code>videoCapabilities</code></a> member of\n                          <var>accumulated configuration</var> to <var>video capabilities</var>.\n                        </p>"
-                        }
-                      ]
+                      "html": "<p>\n                          Let <var>video capabilities</var> be the result of executing the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-get-supported-capabilities-for-audio-video-type\" class=\"internalDFN\" id=\"ref-for-dfn-get-supported-capabilities-for-audio-video-type-1\">Get Supported Capabilities for Audio/Video Type</a> algorithm on Video,\n                          <var>candidate configuration</var>'s\n                          <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-videocapabilities\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-videocapabilities-3\"><code>videoCapabilities</code></a> member,\n                          <var>accumulated configuration</var>, and <var>restrictions</var>.\n                        </p>"
+                    },
+                    {
+                      "html": "<p>\n                          If <var>video capabilities</var> is <code>null</code>, return\n                          <code>NotSupported</code>.\n                        </p>"
+                    },
+                    {
+                      "html": "<p>\n                          Set the <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-videocapabilities\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-videocapabilities-4\"><code>videoCapabilities</code></a> member of\n                          <var>accumulated configuration</var> to <var>video capabilities</var>.\n                        </p>"
                     }
                   ]
                 },
                 {
                   "case": "Otherwise:",
-                  "steps": [
-                    {
-                      "html": "<p>\n                      Set the <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-videocapabilities\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-videocapabilities-5\"><code>videoCapabilities</code></a> member of\n                      <var>accumulated configuration</var> to an empty sequence.\n                    </p>"
-                    }
-                  ]
+                  "html": "<p>\n                      Set the <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-videocapabilities\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-videocapabilities-5\"><code>videoCapabilities</code></a> member of\n                      <var>accumulated configuration</var> to an empty sequence.\n                    </p>"
                 }
               ]
             }
           ]
         },
         {
-          "html": "<dl class=\"switch\">\n                  <dt>\n                    If the <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-audiocapabilities\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-audiocapabilities-2\"><code>audioCapabilities</code></a> member in\n                    <var>candidate configuration</var> is non-empty:\n                  </dt>\n                  <dd>\n                    <ol>\n                      <li>\n                        <p>\n                          Let <var>audio capabilities</var> be the result of executing the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-get-supported-capabilities-for-audio-video-type\" class=\"internalDFN\" id=\"ref-for-dfn-get-supported-capabilities-for-audio-video-type-2\">Get Supported Capabilities for Audio/Video Type</a> algorithm on Audio,\n                          <var>candidate configuration</var>'s\n                          <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-audiocapabilities\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-audiocapabilities-3\"><code>audioCapabilities</code></a> member,\n                          <var>accumulated configuration</var>, and <var>restrictions</var>.\n                        </p>\n                      </li>\n                      <li>\n                        <p>\n                          If <var>audio capabilities</var> is <code>null</code>, return\n                          <code>NotSupported</code>.\n                        </p>\n                      </li>\n                      <li>\n                        <p>\n                          Set the <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-audiocapabilities\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-audiocapabilities-4\"><code>audioCapabilities</code></a> member of\n                          <var>accumulated configuration</var> to <var>audio capabilities</var>.\n                        </p>\n                      </li>\n                    </ol>\n                  </dd>\n                  <dt>\n                    Otherwise:\n                  </dt>\n                  <dd>\n                    <p>\n                      Set the <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-audiocapabilities\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-audiocapabilities-5\"><code>audioCapabilities</code></a> member of\n                      <var>accumulated configuration</var> to an empty sequence.\n                    </p>\n                  </dd>\n                </dl>",
+          "html": "<dl class=\"switch\">\n                  <dt>\n                    If the <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-audiocapabilities\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-audiocapabilities-2\"><code>audioCapabilities</code></a> member in\n                    <var>candidate configuration</var> is non-empty:\n                  </dt>\n                  <dd>\n                    \n                  </dd>\n                  <dt>\n                    Otherwise:\n                  </dt>\n                  <dd>\n                    <p>\n                      Set the <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-audiocapabilities\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-audiocapabilities-5\"><code>audioCapabilities</code></a> member of\n                      <var>accumulated configuration</var> to an empty sequence.\n                    </p>\n                  </dd>\n                </dl>",
           "rationale": ".switch",
           "steps": [
             {
@@ -332,31 +292,23 @@
               "steps": [
                 {
                   "case": "If the audioCapabilities member in candidate configuration is non-empty:",
+                  "html": "",
+                  "rationale": "let",
                   "steps": [
                     {
-                      "html": "<ol>\n                      <li>\n                        <p>\n                          Let <var>audio capabilities</var> be the result of executing the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-get-supported-capabilities-for-audio-video-type\" class=\"internalDFN\" id=\"ref-for-dfn-get-supported-capabilities-for-audio-video-type-2\">Get Supported Capabilities for Audio/Video Type</a> algorithm on Audio,\n                          <var>candidate configuration</var>'s\n                          <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-audiocapabilities\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-audiocapabilities-3\"><code>audioCapabilities</code></a> member,\n                          <var>accumulated configuration</var>, and <var>restrictions</var>.\n                        </p>\n                      </li>\n                      <li>\n                        <p>\n                          If <var>audio capabilities</var> is <code>null</code>, return\n                          <code>NotSupported</code>.\n                        </p>\n                      </li>\n                      <li>\n                        <p>\n                          Set the <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-audiocapabilities\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-audiocapabilities-4\"><code>audioCapabilities</code></a> member of\n                          <var>accumulated configuration</var> to <var>audio capabilities</var>.\n                        </p>\n                      </li>\n                    </ol>",
-                      "rationale": "let",
-                      "steps": [
-                        {
-                          "html": "<p>\n                          Let <var>audio capabilities</var> be the result of executing the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-get-supported-capabilities-for-audio-video-type\" class=\"internalDFN\" id=\"ref-for-dfn-get-supported-capabilities-for-audio-video-type-2\">Get Supported Capabilities for Audio/Video Type</a> algorithm on Audio,\n                          <var>candidate configuration</var>'s\n                          <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-audiocapabilities\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-audiocapabilities-3\"><code>audioCapabilities</code></a> member,\n                          <var>accumulated configuration</var>, and <var>restrictions</var>.\n                        </p>"
-                        },
-                        {
-                          "html": "<p>\n                          If <var>audio capabilities</var> is <code>null</code>, return\n                          <code>NotSupported</code>.\n                        </p>"
-                        },
-                        {
-                          "html": "<p>\n                          Set the <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-audiocapabilities\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-audiocapabilities-4\"><code>audioCapabilities</code></a> member of\n                          <var>accumulated configuration</var> to <var>audio capabilities</var>.\n                        </p>"
-                        }
-                      ]
+                      "html": "<p>\n                          Let <var>audio capabilities</var> be the result of executing the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-get-supported-capabilities-for-audio-video-type\" class=\"internalDFN\" id=\"ref-for-dfn-get-supported-capabilities-for-audio-video-type-2\">Get Supported Capabilities for Audio/Video Type</a> algorithm on Audio,\n                          <var>candidate configuration</var>'s\n                          <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-audiocapabilities\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-audiocapabilities-3\"><code>audioCapabilities</code></a> member,\n                          <var>accumulated configuration</var>, and <var>restrictions</var>.\n                        </p>"
+                    },
+                    {
+                      "html": "<p>\n                          If <var>audio capabilities</var> is <code>null</code>, return\n                          <code>NotSupported</code>.\n                        </p>"
+                    },
+                    {
+                      "html": "<p>\n                          Set the <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-audiocapabilities\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-audiocapabilities-4\"><code>audioCapabilities</code></a> member of\n                          <var>accumulated configuration</var> to <var>audio capabilities</var>.\n                        </p>"
                     }
                   ]
                 },
                 {
                   "case": "Otherwise:",
-                  "steps": [
-                    {
-                      "html": "<p>\n                      Set the <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-audiocapabilities\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-audiocapabilities-5\"><code>audioCapabilities</code></a> member of\n                      <var>accumulated configuration</var> to an empty sequence.\n                    </p>"
-                    }
-                  ]
+                  "html": "<p>\n                      Set the <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-audiocapabilities\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-audiocapabilities-5\"><code>audioCapabilities</code></a> member of\n                      <var>accumulated configuration</var> to an empty sequence.\n                    </p>"
                 }
               ]
             }
@@ -371,19 +323,11 @@
               "steps": [
                 {
                   "case": "If the implementation requires use of Distinctive Identifier(s) or Distinctive Permanent Identifier(s) for any of the combinations in accumulated configuration:",
-                  "steps": [
-                    {
-                      "html": "<p>\n                      Change <var>accumulated configuration</var>'s\n                      <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-distinctiveidentifier\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-distinctiveidentifier-10\"><code>distinctiveIdentifier</code></a> value to\n                      \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysrequirement-required\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysrequirement-required-7\"><code>required</code></a>\".\n                    </p>"
-                    }
-                  ]
+                  "html": "<p>\n                      Change <var>accumulated configuration</var>'s\n                      <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-distinctiveidentifier\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-distinctiveidentifier-10\"><code>distinctiveIdentifier</code></a> value to\n                      \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysrequirement-required\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysrequirement-required-7\"><code>required</code></a>\".\n                    </p>"
                 },
                 {
                   "case": "Otherwise",
-                  "steps": [
-                    {
-                      "html": "<p>\n                      Change <var>accumulated configuration</var>'s\n                      <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-distinctiveidentifier\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-distinctiveidentifier-11\"><code>distinctiveIdentifier</code></a> value to\n                      \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysrequirement-not-allowed\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysrequirement-not-allowed-6\"><code>not-allowed</code></a>\".\n                    </p>"
-                    }
-                  ]
+                  "html": "<p>\n                      Change <var>accumulated configuration</var>'s\n                      <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-distinctiveidentifier\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-distinctiveidentifier-11\"><code>distinctiveIdentifier</code></a> value to\n                      \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysrequirement-not-allowed\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysrequirement-not-allowed-6\"><code>not-allowed</code></a>\".\n                    </p>"
                 }
               ]
             }
@@ -398,19 +342,11 @@
               "steps": [
                 {
                   "case": "If the implementation requires persisting state for any of the combinations in accumulated configuration",
-                  "steps": [
-                    {
-                      "html": "<p>\n                      Change <var>accumulated configuration</var>'s\n                      <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-persistentstate\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-persistentstate-7\"><code>persistentState</code></a> value to\n                      \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysrequirement-required\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysrequirement-required-8\"><code>required</code></a>\".\n                    </p>"
-                    }
-                  ]
+                  "html": "<p>\n                      Change <var>accumulated configuration</var>'s\n                      <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-persistentstate\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-persistentstate-7\"><code>persistentState</code></a> value to\n                      \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysrequirement-required\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysrequirement-required-8\"><code>required</code></a>\".\n                    </p>"
                 },
                 {
                   "case": "Otherwise",
-                  "steps": [
-                    {
-                      "html": "<p>\n                      Change <var>accumulated configuration</var>'s\n                      <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-persistentstate\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-persistentstate-8\"><code>persistentState</code></a> value to\n                      \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysrequirement-not-allowed\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysrequirement-not-allowed-7\"><code>not-allowed</code></a>\".\n                    </p>"
-                    }
-                  ]
+                  "html": "<p>\n                      Change <var>accumulated configuration</var>'s\n                      <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-persistentstate\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-persistentstate-8\"><code>persistentState</code></a> value to\n                      \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysrequirement-not-allowed\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysrequirement-not-allowed-7\"><code>not-allowed</code></a>\".\n                    </p>"
                 }
               ]
             }
@@ -440,27 +376,15 @@
               "steps": [
                 {
                   "case": "ConsentDenied:",
-                  "steps": [
-                    {
-                      "html": "<p>\n                      Return <code>ConsentDenied</code> and <var>updated restrictions</var>.\n                    </p>"
-                    }
-                  ]
+                  "html": "<p>\n                      Return <code>ConsentDenied</code> and <var>updated restrictions</var>.\n                    </p>"
                 },
                 {
                   "case": "InformUser:",
-                  "steps": [
-                    {
-                      "html": "<p>\n                      Inform the user that <var>accumulated configuration</var> is in use in the\n                      <var>origin</var> including, specifically, the information that <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-distinctive-identifier-s\" class=\"internalDFN\" id=\"ref-for-dfn-distinctive-identifier-s-8\">Distinctive Identifier(s)</a> and/or <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-distinctive-permanent-identifier-s\" class=\"internalDFN\" id=\"ref-for-dfn-distinctive-permanent-identifier-s-16\">Distinctive Permanent Identifier(s)</a> as appropriate\n                      will be used if the <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-distinctiveidentifier\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-distinctiveidentifier-13\"><code>distinctiveIdentifier</code></a>\n                      member of <var>accumulated configuration</var> is\n                      \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysrequirement-required\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysrequirement-required-10\"><code>required</code></a>\". Continue to the next step.\n                    </p>"
-                    }
-                  ]
+                  "html": "<p>\n                      Inform the user that <var>accumulated configuration</var> is in use in the\n                      <var>origin</var> including, specifically, the information that <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-distinctive-identifier-s\" class=\"internalDFN\" id=\"ref-for-dfn-distinctive-identifier-s-8\">Distinctive Identifier(s)</a> and/or <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-distinctive-permanent-identifier-s\" class=\"internalDFN\" id=\"ref-for-dfn-distinctive-permanent-identifier-s-16\">Distinctive Permanent Identifier(s)</a> as appropriate\n                      will be used if the <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-distinctiveidentifier\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-distinctiveidentifier-13\"><code>distinctiveIdentifier</code></a>\n                      member of <var>accumulated configuration</var> is\n                      \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysrequirement-required\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysrequirement-required-10\"><code>required</code></a>\". Continue to the next step.\n                    </p>"
                 },
                 {
                   "case": "Allowed:",
-                  "steps": [
-                    {
-                      "html": "<p>\n                      Continue to the next step.\n                    </p>"
-                    }
-                  ]
+                  "html": "<p>\n                      Continue to the next step.\n                    </p>"
                 }
               ]
             }
@@ -524,19 +448,11 @@
                   "steps": [
                     {
                       "case": "If container normatively implies a specific set of codecs and codec constraints:",
-                      "steps": [
-                        {
-                          "html": "<p>\n                          Let <var>parameters</var> be that set.\n                        </p>"
-                        }
-                      ]
+                      "html": "<p>\n                          Let <var>parameters</var> be that set.\n                        </p>"
                     },
                     {
                       "case": "Otherwise:",
-                      "steps": [
-                        {
-                          "html": "<p>\n                          Continue to the next iteration.\n                        </p>"
-                        }
-                      ]
+                      "html": "<p>\n                          Continue to the next iteration.\n                        </p>"
                     }
                   ]
                 }
@@ -567,19 +483,11 @@
                       "steps": [
                         {
                           "case": "If audio/video type is Video:",
-                          "steps": [
-                            {
-                              "html": "<p>\n                              Add <var>requested media capability</var> to the\n                              <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-videocapabilities\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-videocapabilities-6\"><code>videoCapabilities</code></a> member of\n                              <var>local accumulated configuration</var>.\n                            </p>"
-                            }
-                          ]
+                          "html": "<p>\n                              Add <var>requested media capability</var> to the\n                              <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-videocapabilities\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-videocapabilities-6\"><code>videoCapabilities</code></a> member of\n                              <var>local accumulated configuration</var>.\n                            </p>"
                         },
                         {
                           "case": "If audio/video type is Audio:",
-                          "steps": [
-                            {
-                              "html": "<p>\n                              Add <var>requested media capability</var> to the\n                              <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-audiocapabilities\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-audiocapabilities-6\"><code>audioCapabilities</code></a> member of\n                              <var>local accumulated configuration</var>.\n                            </p>"
-                            }
-                          ]
+                          "html": "<p>\n                              Add <var>requested media capability</var> to the\n                              <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-audiocapabilities\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysystemconfiguration-audiocapabilities-6\"><code>audioCapabilities</code></a> member of\n                              <var>local accumulated configuration</var>.\n                            </p>"
                         }
                       ]
                     }
@@ -902,19 +810,11 @@
               "steps": [
                 {
                   "case": "\"temporary\"",
-                  "steps": [
-                    {
-                      "html": "Return <code>false</code>."
-                    }
-                  ]
+                  "html": "Return <code>false</code>."
                 },
                 {
                   "case": "\"persistent-license\"",
-                  "steps": [
-                    {
-                      "html": "Return <code>true</code>."
-                    }
-                  ]
+                  "html": "Return <code>true</code>."
                 }
               ]
             }
@@ -1011,19 +911,11 @@
                       "steps": [
                         {
                           "case": "\"temporary\"",
-                          "steps": [
-                            {
-                              "html": "<p>\n                              Let <var>requested license type</var> be a temporary non-persistable\n                              license.\n                            </p>"
-                            }
-                          ]
+                          "html": "<p>\n                              Let <var>requested license type</var> be a temporary non-persistable\n                              license.\n                            </p>"
                         },
                         {
                           "case": "\"persistent-license\"",
-                          "steps": [
-                            {
-                              "html": "<p>\n                              Let <var>requested license type</var> be a persistable license.\n                            </p>"
-                            }
-                          ]
+                          "html": "<p>\n                              Let <var>requested license type</var> be a persistable license.\n                            </p>"
                         }
                       ]
                     }
@@ -1033,7 +925,7 @@
                   "html": "<p>\n                          Let <var>session id</var> be a unique <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-session-id\" class=\"internalDFN\" id=\"ref-for-dfn-session-id-4\">Session ID</a> string.\n                        </p>\n                        <p>\n                          If the result of running the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-is-persistent-session-type\" class=\"internalDFN\" id=\"ref-for-dfn-is-persistent-session-type-5\">Is persistent session type?</a> algorithm on\n                          <var>session type</var> is <code>true</code>, the ID <em class=\"rfc2119\">MUST</em> be unique\n                          within the <a data-link-type=\"dfn|abstract-op\" data-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsers.html#concept-origin\">origin</a> of this object's <a data-link-type=\"dfn|abstract-op\" data-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-document\">Document</a> over time, including\n                          across Documents and browsing sessions.\n                        </p>"
                 },
                 {
-                  "html": "<dl class=\"switch\">\n                          <dt>\n                            If a license request for the <var>requested license type</var> can be\n                            generated based on the <var>sanitized init data</var>:\n                          </dt>\n                          <dd>\n                            <ol>\n                              <li>\n                                <p>\n                                  Let <var>message</var> be a license request for the\n                                  <var>requested license type</var> generated based on the\n                                  <var>sanitized init data</var> interpreted per\n                                  <var>initDataType</var>.\n                                </p>\n                                <p>\n                                  The <var>cdm</var> <em class=\"rfc2119\">MUST NOT</em> use any stream-specific data,\n                                  including <a data-link-type=\"dfn|abstract-op\" data-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/media.html#media-data\">media data</a>, not provided via the\n                                  <var>sanitized init data</var>.\n                                </p>\n                                <p>\n                                  The <var>cdm</var> <em class=\"rfc2119\">SHOULD NOT</em> store session data, including the\n                                  session ID, at this point. See <a href=\"https://w3c.github.io/encrypted-media/#session-storage\">Session\n                                  Storage and Persistence</a>.\n                                </p>\n                              </li>\n                              <li>\n                                <p>\n                                  Let <var>message type</var> be\n                                  \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeymessagetype-license-request\" class=\"internalDFN\" id=\"ref-for-dom-mediakeymessagetype-license-request-2\"><code>license-request</code></a>\".\n                                </p>\n                              </li>\n                            </ol>\n                          </dd>\n                          <dt>\n                            Otherwise:\n                          </dt>\n                          <dd>\n                            <ol>\n                              <li>\n                                <p>\n                                  Let <var>message</var> be the request that needs to be processed\n                                  before a license request request for the <var>requested license\n                                  type</var> can be generated based on the <var>sanitized init\n                                  data</var>.\n                                </p>\n                                <p>\n                                  In a subsequent call to <a data-link-type=\"idl\" data-lt=\"update()\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysession-update\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysession-update-8\"><code>update</code></a><code>()</code> the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-cdm\" class=\"internalDFN\" id=\"ref-for-dfn-cdm-51\">CDM</a>\n                                  <em class=\"rfc2119\">MUST</em> generate a license request for the <var>requested license\n                                  type</var> based on the <var>sanitized init data</var>, which is\n                                  interpreted per <var>initDataType</var>.\n                                </p>\n                              </li>\n                              <li>\n                                <p>\n                                  Let <var>message type</var> reflect the type of\n                                  <var>message</var>, either\n                                  \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeymessagetype-license-request\" class=\"internalDFN\" id=\"ref-for-dom-mediakeymessagetype-license-request-3\"><code>license-request</code></a>\" or\n                                  \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeymessagetype-individualization-request\" class=\"internalDFN\" id=\"ref-for-dom-mediakeymessagetype-individualization-request-2\"><code>individualization-request</code></a>\".\n                                </p>\n                              </li>\n                            </ol>\n                          </dd>\n                        </dl>",
+                  "html": "<dl class=\"switch\">\n                          <dt>\n                            If a license request for the <var>requested license type</var> can be\n                            generated based on the <var>sanitized init data</var>:\n                          </dt>\n                          <dd>\n                            \n                          </dd>\n                          <dt>\n                            Otherwise:\n                          </dt>\n                          <dd>\n                            \n                          </dd>\n                        </dl>",
                   "rationale": ".switch",
                   "steps": [
                     {
@@ -1041,35 +933,27 @@
                       "steps": [
                         {
                           "case": "If a license request for the requested license type can be generated based on the sanitized init data:",
+                          "html": "",
+                          "rationale": "let",
                           "steps": [
                             {
-                              "html": "<ol>\n                              <li>\n                                <p>\n                                  Let <var>message</var> be a license request for the\n                                  <var>requested license type</var> generated based on the\n                                  <var>sanitized init data</var> interpreted per\n                                  <var>initDataType</var>.\n                                </p>\n                                <p>\n                                  The <var>cdm</var> <em class=\"rfc2119\">MUST NOT</em> use any stream-specific data,\n                                  including <a data-link-type=\"dfn|abstract-op\" data-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/media.html#media-data\">media data</a>, not provided via the\n                                  <var>sanitized init data</var>.\n                                </p>\n                                <p>\n                                  The <var>cdm</var> <em class=\"rfc2119\">SHOULD NOT</em> store session data, including the\n                                  session ID, at this point. See <a href=\"https://w3c.github.io/encrypted-media/#session-storage\">Session\n                                  Storage and Persistence</a>.\n                                </p>\n                              </li>\n                              <li>\n                                <p>\n                                  Let <var>message type</var> be\n                                  \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeymessagetype-license-request\" class=\"internalDFN\" id=\"ref-for-dom-mediakeymessagetype-license-request-2\"><code>license-request</code></a>\".\n                                </p>\n                              </li>\n                            </ol>",
-                              "rationale": "let",
-                              "steps": [
-                                {
-                                  "html": "<p>\n                                  Let <var>message</var> be a license request for the\n                                  <var>requested license type</var> generated based on the\n                                  <var>sanitized init data</var> interpreted per\n                                  <var>initDataType</var>.\n                                </p>\n                                <p>\n                                  The <var>cdm</var> <em class=\"rfc2119\">MUST NOT</em> use any stream-specific data,\n                                  including <a data-link-type=\"dfn|abstract-op\" data-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/media.html#media-data\">media data</a>, not provided via the\n                                  <var>sanitized init data</var>.\n                                </p>\n                                <p>\n                                  The <var>cdm</var> <em class=\"rfc2119\">SHOULD NOT</em> store session data, including the\n                                  session ID, at this point. See <a href=\"https://w3c.github.io/encrypted-media/#session-storage\">Session\n                                  Storage and Persistence</a>.\n                                </p>"
-                                },
-                                {
-                                  "html": "<p>\n                                  Let <var>message type</var> be\n                                  \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeymessagetype-license-request\" class=\"internalDFN\" id=\"ref-for-dom-mediakeymessagetype-license-request-2\"><code>license-request</code></a>\".\n                                </p>"
-                                }
-                              ]
+                              "html": "<p>\n                                  Let <var>message</var> be a license request for the\n                                  <var>requested license type</var> generated based on the\n                                  <var>sanitized init data</var> interpreted per\n                                  <var>initDataType</var>.\n                                </p>\n                                <p>\n                                  The <var>cdm</var> <em class=\"rfc2119\">MUST NOT</em> use any stream-specific data,\n                                  including <a data-link-type=\"dfn|abstract-op\" data-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/media.html#media-data\">media data</a>, not provided via the\n                                  <var>sanitized init data</var>.\n                                </p>\n                                <p>\n                                  The <var>cdm</var> <em class=\"rfc2119\">SHOULD NOT</em> store session data, including the\n                                  session ID, at this point. See <a href=\"https://w3c.github.io/encrypted-media/#session-storage\">Session\n                                  Storage and Persistence</a>.\n                                </p>"
+                            },
+                            {
+                              "html": "<p>\n                                  Let <var>message type</var> be\n                                  \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeymessagetype-license-request\" class=\"internalDFN\" id=\"ref-for-dom-mediakeymessagetype-license-request-2\"><code>license-request</code></a>\".\n                                </p>"
                             }
                           ]
                         },
                         {
                           "case": "Otherwise:",
+                          "html": "",
+                          "rationale": "let",
                           "steps": [
                             {
-                              "html": "<ol>\n                              <li>\n                                <p>\n                                  Let <var>message</var> be the request that needs to be processed\n                                  before a license request request for the <var>requested license\n                                  type</var> can be generated based on the <var>sanitized init\n                                  data</var>.\n                                </p>\n                                <p>\n                                  In a subsequent call to <a data-link-type=\"idl\" data-lt=\"update()\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysession-update\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysession-update-8\"><code>update</code></a><code>()</code> the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-cdm\" class=\"internalDFN\" id=\"ref-for-dfn-cdm-51\">CDM</a>\n                                  <em class=\"rfc2119\">MUST</em> generate a license request for the <var>requested license\n                                  type</var> based on the <var>sanitized init data</var>, which is\n                                  interpreted per <var>initDataType</var>.\n                                </p>\n                              </li>\n                              <li>\n                                <p>\n                                  Let <var>message type</var> reflect the type of\n                                  <var>message</var>, either\n                                  \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeymessagetype-license-request\" class=\"internalDFN\" id=\"ref-for-dom-mediakeymessagetype-license-request-3\"><code>license-request</code></a>\" or\n                                  \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeymessagetype-individualization-request\" class=\"internalDFN\" id=\"ref-for-dom-mediakeymessagetype-individualization-request-2\"><code>individualization-request</code></a>\".\n                                </p>\n                              </li>\n                            </ol>",
-                              "rationale": "let",
-                              "steps": [
-                                {
-                                  "html": "<p>\n                                  Let <var>message</var> be the request that needs to be processed\n                                  before a license request request for the <var>requested license\n                                  type</var> can be generated based on the <var>sanitized init\n                                  data</var>.\n                                </p>\n                                <p>\n                                  In a subsequent call to <a data-link-type=\"idl\" data-lt=\"update()\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysession-update\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysession-update-8\"><code>update</code></a><code>()</code> the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-cdm\" class=\"internalDFN\" id=\"ref-for-dfn-cdm-51\">CDM</a>\n                                  <em class=\"rfc2119\">MUST</em> generate a license request for the <var>requested license\n                                  type</var> based on the <var>sanitized init data</var>, which is\n                                  interpreted per <var>initDataType</var>.\n                                </p>"
-                                },
-                                {
-                                  "html": "<p>\n                                  Let <var>message type</var> reflect the type of\n                                  <var>message</var>, either\n                                  \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeymessagetype-license-request\" class=\"internalDFN\" id=\"ref-for-dom-mediakeymessagetype-license-request-3\"><code>license-request</code></a>\" or\n                                  \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeymessagetype-individualization-request\" class=\"internalDFN\" id=\"ref-for-dom-mediakeymessagetype-individualization-request-2\"><code>individualization-request</code></a>\".\n                                </p>"
-                                }
-                              ]
+                              "html": "<p>\n                                  Let <var>message</var> be the request that needs to be processed\n                                  before a license request request for the <var>requested license\n                                  type</var> can be generated based on the <var>sanitized init\n                                  data</var>.\n                                </p>\n                                <p>\n                                  In a subsequent call to <a data-link-type=\"idl\" data-lt=\"update()\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysession-update\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysession-update-8\"><code>update</code></a><code>()</code> the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-cdm\" class=\"internalDFN\" id=\"ref-for-dfn-cdm-51\">CDM</a>\n                                  <em class=\"rfc2119\">MUST</em> generate a license request for the <var>requested license\n                                  type</var> based on the <var>sanitized init data</var>, which is\n                                  interpreted per <var>initDataType</var>.\n                                </p>"
+                            },
+                            {
+                              "html": "<p>\n                                  Let <var>message type</var> reflect the type of\n                                  <var>message</var>, either\n                                  \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeymessagetype-license-request\" class=\"internalDFN\" id=\"ref-for-dom-mediakeymessagetype-license-request-3\"><code>license-request</code></a>\" or\n                                  \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeymessagetype-individualization-request\" class=\"internalDFN\" id=\"ref-for-dom-mediakeymessagetype-individualization-request-2\"><code>individualization-request</code></a>\".\n                                </p>"
                             }
                           ]
                         }
@@ -1291,39 +1175,23 @@
                       "steps": [
                         {
                           "case": "If sanitized response contains a license or key(s)",
+                          "html": "Process <var>sanitized response</var>, following the stipulation for\n                              the first matching condition from the following list:",
+                          "rationale": ".switch",
                           "steps": [
                             {
-                              "html": "Process <var>sanitized response</var>, following the stipulation for\n                              the first matching condition from the following list:",
-                              "rationale": ".switch",
+                              "operation": "switch",
                               "steps": [
                                 {
-                                  "operation": "switch",
-                                  "steps": [
-                                    {
-                                      "case": "If sessionType is \"temporary\" and sanitized response does not specify that session data, including any license, key(s), or similar session data it contains, should be stored",
-                                      "steps": [
-                                        {
-                                          "html": "Process <var>sanitized response</var>, not storing any session\n                                data."
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "case": "If sessionType is \"persistent-license\" and sanitized response contains a persistable license",
-                                      "steps": [
-                                        {
-                                          "html": "Process <var>sanitized response</var>, storing the license/key(s)\n                                and related session data contained in <var>sanitized\n                                response</var>. Such data <em class=\"rfc2119\">MUST</em> be stored such that only the\n                                <a data-link-type=\"dfn|abstract-op\" data-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsers.html#concept-origin\">origin</a> of this object's <a data-link-type=\"dfn|abstract-op\" data-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-document\">Document</a> can access it."
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "case": "Otherwise",
-                                      "steps": [
-                                        {
-                                          "html": "<p>\n                                  Reject <var>promise</var> with a newly created <a data-link-type=\"idl\" data-lt=\"TypeError\" href=\"https://w3c.github.io/encrypted-media/#dfn-typeerror\" class=\"internalDFN\" id=\"ref-for-dfn-typeerror-17\"><code><code>TypeError</code></code></a>.\n                                </p>"
-                                        }
-                                      ]
-                                    }
-                                  ]
+                                  "case": "If sessionType is \"temporary\" and sanitized response does not specify that session data, including any license, key(s), or similar session data it contains, should be stored",
+                                  "html": "Process <var>sanitized response</var>, not storing any session\n                                data."
+                                },
+                                {
+                                  "case": "If sessionType is \"persistent-license\" and sanitized response contains a persistable license",
+                                  "html": "Process <var>sanitized response</var>, storing the license/key(s)\n                                and related session data contained in <var>sanitized\n                                response</var>. Such data <em class=\"rfc2119\">MUST</em> be stored such that only the\n                                <a data-link-type=\"dfn|abstract-op\" data-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/browsers.html#concept-origin\">origin</a> of this object's <a data-link-type=\"dfn|abstract-op\" data-type=\"dfn\" href=\"https://dom.spec.whatwg.org/#concept-document\">Document</a> can access it."
+                                },
+                                {
+                                  "case": "Otherwise",
+                                  "html": "<p>\n                                  Reject <var>promise</var> with a newly created <a data-link-type=\"idl\" data-lt=\"TypeError\" href=\"https://w3c.github.io/encrypted-media/#dfn-typeerror\" class=\"internalDFN\" id=\"ref-for-dfn-typeerror-17\"><code><code>TypeError</code></code></a>.\n                                </p>"
                                 }
                               ]
                             }
@@ -1331,28 +1199,20 @@
                         },
                         {
                           "case": "If sanitized response contains a record of license destruction acknowledgement and sessionType is \"persistent-license\"",
+                          "html": "Run the following steps:",
+                          "rationale": "close",
                           "steps": [
                             {
-                              "html": "Run the following steps:",
-                              "rationale": "close",
-                              "steps": [
-                                {
-                                  "html": "<p>\n                                  Close the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-key-session\" class=\"internalDFN\" id=\"ref-for-dfn-key-session-5\">key session</a> and clear <em>all</em> stored session\n                                  data associated with this object, including the\n                                  <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysession-sessionid\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysession-sessionid-6\"><code>sessionId</code></a> and <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-record-s-of-license-destruction\" class=\"internalDFN\" id=\"ref-for-dfn-record-s-of-license-destruction-6\">record of license destruction</a>.\n                                </p>"
-                                },
-                                {
-                                  "html": "<p>\n                                  Set <var>session closed</var> to true.\n                                </p>"
-                                }
-                              ]
+                              "html": "<p>\n                                  Close the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-key-session\" class=\"internalDFN\" id=\"ref-for-dfn-key-session-5\">key session</a> and clear <em>all</em> stored session\n                                  data associated with this object, including the\n                                  <a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysession-sessionid\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysession-sessionid-6\"><code>sessionId</code></a> and <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-record-s-of-license-destruction\" class=\"internalDFN\" id=\"ref-for-dfn-record-s-of-license-destruction-6\">record of license destruction</a>.\n                                </p>"
+                            },
+                            {
+                              "html": "<p>\n                                  Set <var>session closed</var> to true.\n                                </p>"
                             }
                           ]
                         },
                         {
                           "case": "Otherwise",
-                          "steps": [
-                            {
-                              "html": "Process <var>sanitized response</var>, not storing any session data."
-                            }
-                          ]
+                          "html": "Process <var>sanitized response</var>, not storing any session data."
                         }
                       ]
                     }
@@ -1377,7 +1237,7 @@
               "rationale": "if",
               "steps": [
                 {
-                  "html": "<dl class=\"switch\">\n                          <dt>\n                            If <var>session closed</var> is true:\n                          </dt>\n                          <dd>\n                            <p>\n                              Run the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-session-closed\" class=\"internalDFN\" id=\"ref-for-dfn-session-closed-3\">Session Closed</a> algorithm on this object with reason\n                              \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysessionclosedreason-release-acknowledged\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysessionclosedreason-release-acknowledged-2\"><code>release-acknowledged</code></a>\".\n                            </p>\n                          </dd>\n                          <dt>\n                            Otherwise:\n                          </dt>\n                          <dd>\n                            <p>\n                              Run the following steps:\n                            </p>\n                            <ol>\n                              <li>\n                                <p>\n                                  If the set of keys <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-known\" class=\"internalDFN\" id=\"ref-for-dfn-known-3\">known</a> to the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-cdm\" class=\"internalDFN\" id=\"ref-for-dfn-cdm-59\">CDM</a> for this object\n                                  changed or the status of any key(s) changed, run the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-update-key-statuses\" class=\"internalDFN\" id=\"ref-for-dfn-update-key-statuses-3\">Update Key Statuses</a> algorithm on the <var>session</var>, providing each\n                                  known key's <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-decryption-key-id\" class=\"internalDFN\" id=\"ref-for-dfn-decryption-key-id-7\">key ID</a> along with the appropriate\n                                  <a data-link-type=\"idl\" data-lt=\"MediaKeyStatus\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeystatus\" class=\"internalDFN\" id=\"ref-for-dom-mediakeystatus-8\"><code>MediaKeyStatus</code></a>.\n                                </p>\n                                <p>\n                                  Should additional processing be necessary to determine with\n                                  certainty the status of a key, use\n                                  \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeystatus-status-pending\" class=\"internalDFN\" id=\"ref-for-dom-mediakeystatus-status-pending-2\"><code>status-pending</code></a>\". Once the additional\n                                  processing for one or more keys has completed, run the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-update-key-statuses\" class=\"internalDFN\" id=\"ref-for-dfn-update-key-statuses-4\">Update Key Statuses</a> algorithm again with the actual status(es).\n                                </p>\n                              </li>\n                              <li>\n                                <p>\n                                  If the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-expiration\" class=\"internalDFN\" id=\"ref-for-dfn-expiration-4\">expiration time</a> for the session changed, run the\n                                  <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-update-expiration\" class=\"internalDFN\" id=\"ref-for-dfn-update-expiration-2\">Update Expiration</a> algorithm on the <var>session</var>,\n                                  providing the new expiration time.\n                                </p>\n                              </li>\n                              <li>\n                                <p>\n                                  If any of the preceding steps failed, reject <var>promise</var>\n                                  with a new <a data-link-type=\"idl\" data-lt=\"DOMException\" data-type=\"interface\" href=\"https://webidl.spec.whatwg.org/#idl-DOMException\"><code>DOMException</code></a> whose name is the appropriate\n                                  <a href=\"https://w3c.github.io/encrypted-media/#error-names\">error name</a>.\n                                </p>\n                              </li>\n                              <li>\n                                <p>\n                                  If <var>message</var> is not null, run the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-queue-a-message-event\" class=\"internalDFN\" id=\"ref-for-dfn-queue-a-message-event-4\">Queue a \"message\" Event</a> algorithm on the <var>session</var>, providing\n                                  <var>message type</var> and <var>message</var>.\n                                </p>\n                              </li>\n                            </ol>\n                          </dd>\n                        </dl>",
+                  "html": "<dl class=\"switch\">\n                          <dt>\n                            If <var>session closed</var> is true:\n                          </dt>\n                          <dd>\n                            <p>\n                              Run the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-session-closed\" class=\"internalDFN\" id=\"ref-for-dfn-session-closed-3\">Session Closed</a> algorithm on this object with reason\n                              \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysessionclosedreason-release-acknowledged\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysessionclosedreason-release-acknowledged-2\"><code>release-acknowledged</code></a>\".\n                            </p>\n                          </dd>\n                          <dt>\n                            Otherwise:\n                          </dt>\n                          <dd>\n                            <p>\n                              Run the following steps:\n                            </p>\n                            \n                          </dd>\n                        </dl>",
                   "rationale": ".switch",
                   "steps": [
                     {
@@ -1385,32 +1245,24 @@
                       "steps": [
                         {
                           "case": "If session closed is true:",
-                          "steps": [
-                            {
-                              "html": "<p>\n                              Run the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-session-closed\" class=\"internalDFN\" id=\"ref-for-dfn-session-closed-3\">Session Closed</a> algorithm on this object with reason\n                              \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysessionclosedreason-release-acknowledged\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysessionclosedreason-release-acknowledged-2\"><code>release-acknowledged</code></a>\".\n                            </p>"
-                            }
-                          ]
+                          "html": "<p>\n                              Run the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-session-closed\" class=\"internalDFN\" id=\"ref-for-dfn-session-closed-3\">Session Closed</a> algorithm on this object with reason\n                              \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysessionclosedreason-release-acknowledged\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysessionclosedreason-release-acknowledged-2\"><code>release-acknowledged</code></a>\".\n                            </p>"
                         },
                         {
                           "case": "Otherwise:",
+                          "html": "Run the following steps:",
+                          "rationale": "if",
                           "steps": [
                             {
-                              "html": "Run the following steps:",
-                              "rationale": "if",
-                              "steps": [
-                                {
-                                  "html": "<p>\n                                  If the set of keys <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-known\" class=\"internalDFN\" id=\"ref-for-dfn-known-3\">known</a> to the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-cdm\" class=\"internalDFN\" id=\"ref-for-dfn-cdm-59\">CDM</a> for this object\n                                  changed or the status of any key(s) changed, run the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-update-key-statuses\" class=\"internalDFN\" id=\"ref-for-dfn-update-key-statuses-3\">Update Key Statuses</a> algorithm on the <var>session</var>, providing each\n                                  known key's <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-decryption-key-id\" class=\"internalDFN\" id=\"ref-for-dfn-decryption-key-id-7\">key ID</a> along with the appropriate\n                                  <a data-link-type=\"idl\" data-lt=\"MediaKeyStatus\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeystatus\" class=\"internalDFN\" id=\"ref-for-dom-mediakeystatus-8\"><code>MediaKeyStatus</code></a>.\n                                </p>\n                                <p>\n                                  Should additional processing be necessary to determine with\n                                  certainty the status of a key, use\n                                  \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeystatus-status-pending\" class=\"internalDFN\" id=\"ref-for-dom-mediakeystatus-status-pending-2\"><code>status-pending</code></a>\". Once the additional\n                                  processing for one or more keys has completed, run the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-update-key-statuses\" class=\"internalDFN\" id=\"ref-for-dfn-update-key-statuses-4\">Update Key Statuses</a> algorithm again with the actual status(es).\n                                </p>"
-                                },
-                                {
-                                  "html": "<p>\n                                  If the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-expiration\" class=\"internalDFN\" id=\"ref-for-dfn-expiration-4\">expiration time</a> for the session changed, run the\n                                  <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-update-expiration\" class=\"internalDFN\" id=\"ref-for-dfn-update-expiration-2\">Update Expiration</a> algorithm on the <var>session</var>,\n                                  providing the new expiration time.\n                                </p>"
-                                },
-                                {
-                                  "html": "<p>\n                                  If any of the preceding steps failed, reject <var>promise</var>\n                                  with a new <a data-link-type=\"idl\" data-lt=\"DOMException\" data-type=\"interface\" href=\"https://webidl.spec.whatwg.org/#idl-DOMException\"><code>DOMException</code></a> whose name is the appropriate\n                                  <a href=\"https://w3c.github.io/encrypted-media/#error-names\">error name</a>.\n                                </p>"
-                                },
-                                {
-                                  "html": "<p>\n                                  If <var>message</var> is not null, run the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-queue-a-message-event\" class=\"internalDFN\" id=\"ref-for-dfn-queue-a-message-event-4\">Queue a \"message\" Event</a> algorithm on the <var>session</var>, providing\n                                  <var>message type</var> and <var>message</var>.\n                                </p>"
-                                }
-                              ]
+                              "html": "<p>\n                                  If the set of keys <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-known\" class=\"internalDFN\" id=\"ref-for-dfn-known-3\">known</a> to the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-cdm\" class=\"internalDFN\" id=\"ref-for-dfn-cdm-59\">CDM</a> for this object\n                                  changed or the status of any key(s) changed, run the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-update-key-statuses\" class=\"internalDFN\" id=\"ref-for-dfn-update-key-statuses-3\">Update Key Statuses</a> algorithm on the <var>session</var>, providing each\n                                  known key's <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-decryption-key-id\" class=\"internalDFN\" id=\"ref-for-dfn-decryption-key-id-7\">key ID</a> along with the appropriate\n                                  <a data-link-type=\"idl\" data-lt=\"MediaKeyStatus\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeystatus\" class=\"internalDFN\" id=\"ref-for-dom-mediakeystatus-8\"><code>MediaKeyStatus</code></a>.\n                                </p>\n                                <p>\n                                  Should additional processing be necessary to determine with\n                                  certainty the status of a key, use\n                                  \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeystatus-status-pending\" class=\"internalDFN\" id=\"ref-for-dom-mediakeystatus-status-pending-2\"><code>status-pending</code></a>\". Once the additional\n                                  processing for one or more keys has completed, run the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-update-key-statuses\" class=\"internalDFN\" id=\"ref-for-dfn-update-key-statuses-4\">Update Key Statuses</a> algorithm again with the actual status(es).\n                                </p>"
+                            },
+                            {
+                              "html": "<p>\n                                  If the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-expiration\" class=\"internalDFN\" id=\"ref-for-dfn-expiration-4\">expiration time</a> for the session changed, run the\n                                  <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-update-expiration\" class=\"internalDFN\" id=\"ref-for-dfn-update-expiration-2\">Update Expiration</a> algorithm on the <var>session</var>,\n                                  providing the new expiration time.\n                                </p>"
+                            },
+                            {
+                              "html": "<p>\n                                  If any of the preceding steps failed, reject <var>promise</var>\n                                  with a new <a data-link-type=\"idl\" data-lt=\"DOMException\" data-type=\"interface\" href=\"https://webidl.spec.whatwg.org/#idl-DOMException\"><code>DOMException</code></a> whose name is the appropriate\n                                  <a href=\"https://w3c.github.io/encrypted-media/#error-names\">error name</a>.\n                                </p>"
+                            },
+                            {
+                              "html": "<p>\n                                  If <var>message</var> is not null, run the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-queue-a-message-event\" class=\"internalDFN\" id=\"ref-for-dfn-queue-a-message-event-4\">Queue a \"message\" Event</a> algorithm on the <var>session</var>, providing\n                                  <var>message type</var> and <var>message</var>.\n                                </p>"
                             }
                           ]
                         }
@@ -1525,29 +1377,21 @@
                           "steps": [
                             {
                               "case": "\"temporary\"",
-                              "steps": [
-                                {
-                                  "html": "<p>\n                                  Continue with the following steps.\n                                </p>"
-                                }
-                              ]
+                              "html": "<p>\n                                  Continue with the following steps.\n                                </p>"
                             },
                             {
                               "case": "\"persistent-license\"",
+                              "html": "",
+                              "rationale": "let",
                               "steps": [
                                 {
-                                  "html": "<ol>\n                                  <li>\n                                    <p>\n                                      Let <var>record of license destruction</var> be a <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-record-s-of-license-destruction\" class=\"internalDFN\" id=\"ref-for-dfn-record-s-of-license-destruction-7\">record of license destruction</a> for the license represented by this\n                                      object.\n                                    </p>\n                                  </li>\n                                  <li>\n                                    <p>\n                                      Store the <var>record of license destruction</var>.\n                                    </p>\n                                  </li>\n                                  <li>\n                                    <p>\n                                      Let <var>message</var> be a message containing or reflecting\n                                      the <var>record of license destruction</var>.\n                                    </p>\n                                  </li>\n                                </ol>",
-                                  "rationale": "let",
-                                  "steps": [
-                                    {
-                                      "html": "<p>\n                                      Let <var>record of license destruction</var> be a <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-record-s-of-license-destruction\" class=\"internalDFN\" id=\"ref-for-dfn-record-s-of-license-destruction-7\">record of license destruction</a> for the license represented by this\n                                      object.\n                                    </p>"
-                                    },
-                                    {
-                                      "html": "<p>\n                                      Store the <var>record of license destruction</var>.\n                                    </p>"
-                                    },
-                                    {
-                                      "html": "<p>\n                                      Let <var>message</var> be a message containing or reflecting\n                                      the <var>record of license destruction</var>.\n                                    </p>"
-                                    }
-                                  ]
+                                  "html": "<p>\n                                      Let <var>record of license destruction</var> be a <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-record-s-of-license-destruction\" class=\"internalDFN\" id=\"ref-for-dfn-record-s-of-license-destruction-7\">record of license destruction</a> for the license represented by this\n                                      object.\n                                    </p>"
+                                },
+                                {
+                                  "html": "<p>\n                                      Store the <var>record of license destruction</var>.\n                                    </p>"
+                                },
+                                {
+                                  "html": "<p>\n                                      Let <var>message</var> be a message containing or reflecting\n                                      the <var>record of license destruction</var>.\n                                    </p>"
                                 }
                               ]
                             }
@@ -1978,41 +1822,33 @@
                               "steps": [
                                 {
                                   "case": "If decryption fails",
+                                  "html": "",
+                                  "rationale": "run",
                                   "steps": [
                                     {
-                                      "html": "<ol>\n                                    <li>\n                                      <p>\n                                        Run the <a href=\"https://html.spec.whatwg.org/multipage/#fatal-decode-error\">media data\n                                        is corrupted</a> steps of the <a data-link-type=\"dfn|abstract-op\" data-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/media.html#concept-media-load-resource\">resource fetch algorithm</a>.\n                                      </p>\n                                    </li>\n                                    <li>\n                                      <p>\n                                        If <var>cdm</var> is no longer usable, run the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-cdm-unavailable\" class=\"internalDFN\" id=\"ref-for-dfn-cdm-unavailable-4\">CDM Unavailable</a> algorithm on <var>media keys</var> with the\n                                        reason\n                                        \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysessionclosedreason-hardware-context-reset\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysessionclosedreason-hardware-context-reset-4\"><code>hardware-context-reset</code></a>\"\n                                        for a hardware context reset, or\n                                        \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysessionclosedreason-internal-error\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysessionclosedreason-internal-error-4\"><code>internal-error</code></a>\" otherwise.\n                                      </p>\n                                    </li>\n                                    <li>\n                                      <p>\n                                        Abort these steps.\n                                      </p>\n                                    </li>\n                                  </ol>",
-                                      "rationale": "run",
-                                      "steps": [
-                                        {
-                                          "html": "<p>\n                                        Run the <a href=\"https://html.spec.whatwg.org/multipage/#fatal-decode-error\">media data\n                                        is corrupted</a> steps of the <a data-link-type=\"dfn|abstract-op\" data-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/media.html#concept-media-load-resource\">resource fetch algorithm</a>.\n                                      </p>"
-                                        },
-                                        {
-                                          "html": "<p>\n                                        If <var>cdm</var> is no longer usable, run the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-cdm-unavailable\" class=\"internalDFN\" id=\"ref-for-dfn-cdm-unavailable-4\">CDM Unavailable</a> algorithm on <var>media keys</var> with the\n                                        reason\n                                        \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysessionclosedreason-hardware-context-reset\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysessionclosedreason-hardware-context-reset-4\"><code>hardware-context-reset</code></a>\"\n                                        for a hardware context reset, or\n                                        \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysessionclosedreason-internal-error\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysessionclosedreason-internal-error-4\"><code>internal-error</code></a>\" otherwise.\n                                      </p>"
-                                        },
-                                        {
-                                          "html": "<p>\n                                        Abort these steps.\n                                      </p>"
-                                        }
-                                      ]
+                                      "html": "<p>\n                                        Run the <a href=\"https://html.spec.whatwg.org/multipage/#fatal-decode-error\">media data\n                                        is corrupted</a> steps of the <a data-link-type=\"dfn|abstract-op\" data-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/media.html#concept-media-load-resource\">resource fetch algorithm</a>.\n                                      </p>"
+                                    },
+                                    {
+                                      "html": "<p>\n                                        If <var>cdm</var> is no longer usable, run the <a data-link-type=\"dfn|abstract-op\" href=\"https://w3c.github.io/encrypted-media/#dfn-cdm-unavailable\" class=\"internalDFN\" id=\"ref-for-dfn-cdm-unavailable-4\">CDM Unavailable</a> algorithm on <var>media keys</var> with the\n                                        reason\n                                        \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysessionclosedreason-hardware-context-reset\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysessionclosedreason-hardware-context-reset-4\"><code>hardware-context-reset</code></a>\"\n                                        for a hardware context reset, or\n                                        \"<a data-link-type=\"idl\" href=\"https://w3c.github.io/encrypted-media/#dom-mediakeysessionclosedreason-internal-error\" class=\"internalDFN\" id=\"ref-for-dom-mediakeysessionclosedreason-internal-error-4\"><code>internal-error</code></a>\" otherwise.\n                                      </p>"
+                                    },
+                                    {
+                                      "html": "<p>\n                                        Abort these steps.\n                                      </p>"
                                     }
                                   ]
                                 },
                                 {
                                   "case": "Otherwise",
+                                  "html": "",
+                                  "rationale": "remove",
                                   "steps": [
                                     {
-                                      "html": "<ol>\n                                    <li>\n                                      <p>\n                                        Remove <var>block</var> from the front of the <var>media\n                                        element</var>'s <var>encrypted block queue</var>.\n                                      </p>\n                                    </li>\n                                    <li>\n                                      <p>\n                                        Process the decrypted block as normal.\n                                      </p>\n                                      \n                                    </li>\n                                    <li>\n                                      <p>\n                                        Return to the beginning of this algorithm.\n                                      </p>\n                                    </li>\n                                  </ol>",
-                                      "rationale": "remove",
-                                      "steps": [
-                                        {
-                                          "html": "<p>\n                                        Remove <var>block</var> from the front of the <var>media\n                                        element</var>'s <var>encrypted block queue</var>.\n                                      </p>"
-                                        },
-                                        {
-                                          "html": "<p>\n                                        Process the decrypted block as normal.\n                                      </p>"
-                                        },
-                                        {
-                                          "html": "<p>\n                                        Return to the beginning of this algorithm.\n                                      </p>"
-                                        }
-                                      ]
+                                      "html": "<p>\n                                        Remove <var>block</var> from the front of the <var>media\n                                        element</var>'s <var>encrypted block queue</var>.\n                                      </p>"
+                                    },
+                                    {
+                                      "html": "<p>\n                                        Process the decrypted block as normal.\n                                      </p>"
+                                    },
+                                    {
+                                      "html": "<p>\n                                        Return to the beginning of this algorithm.\n                                      </p>"
                                     }
                                   ]
                                 }
@@ -2055,19 +1891,11 @@
               "steps": [
                 {
                   "case": "If data for the immediate current playback position is available",
-                  "steps": [
-                    {
-                      "html": "<p>\n                    Set the <a data-link-type=\"idl\" data-type=\"attribute\" href=\"https://html.spec.whatwg.org/multipage/media.html#dom-media-readystate\"><code>readyState</code></a> of <var>media element</var> to\n                    <a data-link-type=\"idl\" data-type=\"const\" href=\"https://html.spec.whatwg.org/multipage/media.html#dom-media-have_current_data\"><code>HAVE_CURRENT_DATA</code></a>.\n                  </p>"
-                    }
-                  ]
+                  "html": "<p>\n                    Set the <a data-link-type=\"idl\" data-type=\"attribute\" href=\"https://html.spec.whatwg.org/multipage/media.html#dom-media-readystate\"><code>readyState</code></a> of <var>media element</var> to\n                    <a data-link-type=\"idl\" data-type=\"const\" href=\"https://html.spec.whatwg.org/multipage/media.html#dom-media-have_current_data\"><code>HAVE_CURRENT_DATA</code></a>.\n                  </p>"
                 },
                 {
                   "case": "Otherwise",
-                  "steps": [
-                    {
-                      "html": "<p>\n                    Set the <a data-link-type=\"idl\" data-type=\"attribute\" href=\"https://html.spec.whatwg.org/multipage/media.html#dom-media-readystate\"><code>readyState</code></a> of <var>media element</var> to\n                    <a data-link-type=\"idl\" data-type=\"const\" href=\"https://html.spec.whatwg.org/multipage/media.html#dom-media-have_metadata\"><code>HAVE_METADATA</code></a>.\n                  </p>"
-                    }
-                  ]
+                  "html": "<p>\n                    Set the <a data-link-type=\"idl\" data-type=\"attribute\" href=\"https://html.spec.whatwg.org/multipage/media.html#dom-media-readystate\"><code>readyState</code></a> of <var>media element</var> to\n                    <a data-link-type=\"idl\" data-type=\"const\" href=\"https://html.spec.whatwg.org/multipage/media.html#dom-media-have_metadata\"><code>HAVE_METADATA</code></a>.\n                  </p>"
                 }
               ]
             }

@@ -253,7 +253,7 @@
           "rationale": "set",
           "steps": [
             {
-              "html": "<p>Set the <a href=\"\" src=\"https://w3c.github.io/mediacapture-automation/#null\">default mock microphone</a> to <var>mockMicrophone</var>.</p>"
+              "html": "<p>Set the <a href=\"\" src=\"https://w3c.github.io/mediacapture-automation/null\">default mock microphone</a> to <var>mockMicrophone</var>.</p>"
             },
             {
               "html": "Run the following step <a data-link-type=\"dfn|abstract-op\" data-cite=\"html\" data-cite-path=\"/infrastructure.html\" data-cite-frag=\"in-parallel\" data-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#in-parallel\">in parallel</a>:",

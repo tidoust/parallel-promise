@@ -25,35 +25,19 @@
               "steps": [
                 {
                   "case": "If offset path is an unbounded ray:",
-                  "steps": [
-                    {
-                      "html": "<p>Let <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/motion-1/#used-offset-distance\" id=\"ref-for-used-offset-distance①\">used offset distance</a> be equal to <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/motion-1/#offset-distance\" id=\"ref-for-offset-distance①\">offset distance</a>.</p>"
-                    }
-                  ]
+                  "html": "<p>Let <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/motion-1/#used-offset-distance\" id=\"ref-for-used-offset-distance①\">used offset distance</a> be equal to <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/motion-1/#offset-distance\" id=\"ref-for-offset-distance①\">offset distance</a>.</p>"
                 },
                 {
                   "case": "Otherwise if offset path is an <angle> path with contain:",
-                  "steps": [
-                    {
-                      "html": "<p>Let <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/motion-1/#used-offset-distance\" id=\"ref-for-used-offset-distance②\">used offset distance</a> be equal to <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/motion-1/#offset-distance\" id=\"ref-for-offset-distance②\">offset distance</a>, clamped so that the box lies entirely within the path.</p>"
-                    }
-                  ]
+                  "html": "<p>Let <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/motion-1/#used-offset-distance\" id=\"ref-for-used-offset-distance②\">used offset distance</a> be equal to <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/motion-1/#offset-distance\" id=\"ref-for-offset-distance②\">offset distance</a>, clamped so that the box lies entirely within the path.</p>"
                 },
                 {
                   "case": "If offset path is any other unclosed interval:",
-                  "steps": [
-                    {
-                      "html": "<p>Let <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/motion-1/#used-offset-distance\" id=\"ref-for-used-offset-distance③\">used offset distance</a> be equal to <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/motion-1/#offset-distance\" id=\"ref-for-offset-distance③\">offset distance</a> clamped by 0 and the total length of the path.</p>"
-                    }
-                  ]
+                  "html": "<p>Let <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/motion-1/#used-offset-distance\" id=\"ref-for-used-offset-distance③\">used offset distance</a> be equal to <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/motion-1/#offset-distance\" id=\"ref-for-offset-distance③\">offset distance</a> clamped by 0 and the total length of the path.</p>"
                 },
                 {
                   "case": "Otherwise offset path is a closed loop:",
-                  "steps": [
-                    {
-                      "html": "<p>Let <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/motion-1/#used-offset-distance\" id=\"ref-for-used-offset-distance④\">used offset distance</a> be equal to <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/motion-1/#offset-distance\" id=\"ref-for-offset-distance④\">offset distance</a> modulo the total length of the path. If the total length of the path is 0, <span id=\"ref-for-used-offset-distance⑤\">used offset distance</span> is also 0.</p>"
-                    }
-                  ]
+                  "html": "<p>Let <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/motion-1/#used-offset-distance\" id=\"ref-for-used-offset-distance④\">used offset distance</a> be equal to <a data-link-type=\"dfn\" href=\"https://drafts.fxtf.org/motion-1/#offset-distance\" id=\"ref-for-offset-distance④\">offset distance</a> modulo the total length of the path. If the total length of the path is 0, <span id=\"ref-for-used-offset-distance⑤\">used offset distance</span> is also 0.</p>"
                 }
               ]
             }

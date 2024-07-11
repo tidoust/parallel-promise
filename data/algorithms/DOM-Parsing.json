@@ -38,75 +38,39 @@
           "steps": [
             {
               "case": "Element",
-              "steps": [
-                {
-                  "html": "Run the algorithm for <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-xml-serializing-an-element-node\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-xml-serializing-an-element-node-1\">XML serializing an Element node</a> <var>node</var>."
-                }
-              ]
+              "html": "Run the algorithm for <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-xml-serializing-an-element-node\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-xml-serializing-an-element-node-1\">XML serializing an Element node</a> <var>node</var>."
             },
             {
               "case": "Document",
-              "steps": [
-                {
-                  "html": "Run the algorithm for <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-xml-serializing-a-document-node\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-xml-serializing-a-document-node-1\">XML serializing a Document node</a> <var>node</var>."
-                }
-              ]
+              "html": "Run the algorithm for <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-xml-serializing-a-document-node\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-xml-serializing-a-document-node-1\">XML serializing a Document node</a> <var>node</var>."
             },
             {
               "case": "Comment",
-              "steps": [
-                {
-                  "html": "Run the algorithm for <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-xml-serializing-a-comment-node\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-xml-serializing-a-comment-node-1\">XML serializing a Comment node</a> <var>node</var>."
-                }
-              ]
+              "html": "Run the algorithm for <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-xml-serializing-a-comment-node\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-xml-serializing-a-comment-node-1\">XML serializing a Comment node</a> <var>node</var>."
             },
             {
               "case": "Text",
-              "steps": [
-                {
-                  "html": "Run the algorithm for <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-xml-serializing-a-text-node\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-xml-serializing-a-text-node-1\">XML serializing a Text node</a> <var>node</var>."
-                }
-              ]
+              "html": "Run the algorithm for <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-xml-serializing-a-text-node\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-xml-serializing-a-text-node-1\">XML serializing a Text node</a> <var>node</var>."
             },
             {
               "case": "DocumentFragment",
-              "steps": [
-                {
-                  "html": "Run the algorithm for <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-xml-serializing-a-documentfragment-node\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-xml-serializing-a-documentfragment-node-1\">XML serializing a DocumentFragment node</a> <var>node</var>."
-                }
-              ]
+              "html": "Run the algorithm for <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-xml-serializing-a-documentfragment-node\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-xml-serializing-a-documentfragment-node-1\">XML serializing a DocumentFragment node</a> <var>node</var>."
             },
             {
               "case": "DocumentType",
-              "steps": [
-                {
-                  "html": "Run the algorithm for <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-xml-serializing-a-documenttype-node\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-xml-serializing-a-documenttype-node-1\">XML serializing a DocumentType node</a> <var>node</var>."
-                }
-              ]
+              "html": "Run the algorithm for <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-xml-serializing-a-documenttype-node\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-xml-serializing-a-documenttype-node-1\">XML serializing a DocumentType node</a> <var>node</var>."
             },
             {
               "case": "ProcessingInstruction",
-              "steps": [
-                {
-                  "html": "Run the algorithm for <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-xml-serializing-a-processinginstruction-node\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-xml-serializing-a-processinginstruction-node-1\">XML serializing a ProcessingInstruction node</a> <var>node</var>."
-                }
-              ]
+              "html": "Run the algorithm for <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-xml-serializing-a-processinginstruction-node\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-xml-serializing-a-processinginstruction-node-1\">XML serializing a ProcessingInstruction node</a> <var>node</var>."
             },
             {
               "case": "An Attr object",
-              "steps": [
-                {
-                  "html": "Return an empty string."
-                }
-              ]
+              "html": "Return an empty string."
             },
             {
               "case": "Anything else",
-              "steps": [
-                {
-                  "html": "Throw a <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-typeerror\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-typeerror-2\">TypeError</a>. Only <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-node\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-node-14\">Node</a>s and <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-attribute\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-attribute-6\">Attr</a> objects can be serialized by\n    this algorithm."
-                }
-              ]
+              "html": "Throw a <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-typeerror\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-typeerror-2\">TypeError</a>. Only <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-node\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-node-14\">Node</a>s and <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-attribute\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-attribute-6\">Attr</a> objects can be serialized by\n    this algorithm."
             }
           ]
         }
@@ -262,7 +226,7 @@
                   "html": "Append the value of <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-qualified-name\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-qualified-name-9\"><var>qualified name</var></a> to <var>markup</var>."
                 },
                 {
-                  "html": "Append the following to <var>markup</var>, in the order listed:\n\n        \n\n        <ol>\n          <li>\"<code> </code>\" (U+0020 SPACE);\n\n          </li><li>The string \"<code>xmlns</code>\";\n\n          </li><li>\"<code>=\"</code>\" (U+003D EQUALS SIGN, U+0022 QUOTATION MARK);\n\n          </li><li>The result of <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-serializing-an-attribute-value\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-serializing-an-attribute-value-2\">serializing an attribute value</a> given <var>ns</var> and the\n          <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-require-well-formed\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-require-well-formed-8\"><var>require well-formed</var></a> flag as input;\n\n          </li><li>\"<code>\"</code>\" (U+0022 QUOTATION MARK).\n        </li></ol>",
+                  "html": "Append the following to <var>markup</var>, in the order listed:",
                   "ignored": [
                     "\" \" (U+0020 SPACE); The string \"xmlns\"; \"=\"\" (U+003D EQUALS SIGN, U+0022 QUOTATION MARK); The result of serializing an attribute value given ns and the require well-formed flag as input; \"\"\" (U+0022 QUOTATION MARK)."
                   ]
@@ -278,7 +242,7 @@
           "html": "Append to <var>markup</var> the result of the\n    <a data-lt=\"XML serialization of the attributes\" href=\"https://w3c.github.io/DOM-Parsing/#dfn-xml-serialization-of-the-attributes\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-xml-serialization-of-the-attributes-2\">XML serialization of <var>node</var>'s attributes</a>\n    given <var>map</var>, <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-prefix-index\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-prefix-index-4\"><var>prefix index</var></a>, <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-local-prefixes-map\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-local-prefixes-map-4\"><var>local prefixes map</var></a>,\n    <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-ignore-namespace-definition-attribute\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-ignore-namespace-definition-attribute-3\"><var>ignore namespace definition attribute</var></a> flag, and\n    <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-require-well-formed\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-require-well-formed-9\"><var>require well-formed</var></a> flag."
         },
         {
-          "html": "If <var>ns</var> is the <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-html-namespace\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-html-namespace-3\">HTML namespace</a>, and the <var>node</var>'s list of\n    <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-child\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-child-4\">children</a> is empty, and the <var>node</var>'s <code><a href=\"https://w3c.github.io/DOM-Parsing/#dfn-localname\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-localname-8\">localName</a></code> matches any\n    one of the following <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-void-elements\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-void-elements-1\">void elements</a>:\n    \"<code>area</code>\",\n    \"<code>base</code>\",\n    \"<code>basefont</code>\",\n    \"<code>bgsound</code>\",\n    \"<code>br</code>\",\n    \"<code>col</code>\",\n    \"<code>embed</code>\",\n    \"<code>frame</code>\",\n    \"<code>hr</code>\",\n    \"<code>img</code>\",\n    \"<code>input</code>\",\n    \"<code>keygen</code>\",\n    \"<code>link</code>\",\n    \"<code>menuitem</code>\",\n    \"<code>meta</code>\",\n    \"<code>param</code>\",\n    \"<code>source</code>\",\n    \"<code>track</code>\",\n    \"<code>wbr</code>\";\n    then append the following to <var>markup</var>, in the order listed:\n    <ol>\n      <li>\"<code> </code>\" (U+0020 SPACE);\n\n      </li><li>\"<code>/</code>\" (U+002F SOLIDUS).\n    </li></ol>\n    and set the <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-skip-end-tag\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-skip-end-tag-1\"><var>skip end tag</var></a> flag to <code>true</code>.",
+          "html": "If <var>ns</var> is the <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-html-namespace\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-html-namespace-3\">HTML namespace</a>, and the <var>node</var>'s list of\n    <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-child\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-child-4\">children</a> is empty, and the <var>node</var>'s <code><a href=\"https://w3c.github.io/DOM-Parsing/#dfn-localname\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-localname-8\">localName</a></code> matches any\n    one of the following <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-void-elements\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-void-elements-1\">void elements</a>:\n    \"<code>area</code>\",\n    \"<code>base</code>\",\n    \"<code>basefont</code>\",\n    \"<code>bgsound</code>\",\n    \"<code>br</code>\",\n    \"<code>col</code>\",\n    \"<code>embed</code>\",\n    \"<code>frame</code>\",\n    \"<code>hr</code>\",\n    \"<code>img</code>\",\n    \"<code>input</code>\",\n    \"<code>keygen</code>\",\n    \"<code>link</code>\",\n    \"<code>menuitem</code>\",\n    \"<code>meta</code>\",\n    \"<code>param</code>\",\n    \"<code>source</code>\",\n    \"<code>track</code>\",\n    \"<code>wbr</code>\";\n    then append the following to <var>markup</var>, in the order listed:\n    \n    and set the <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-skip-end-tag\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-skip-end-tag-1\"><var>skip end tag</var></a> flag to <code>true</code>.",
           "ignored": [
             "\" \" (U+0020 SPACE); \"/\" (U+002F SOLIDUS)."
           ]
@@ -299,7 +263,7 @@
           "html": "Otherwise, append to <var>markup</var> the result of running the\n    <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-xml-serialization-algorithm\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-xml-serialization-algorithm-3\">XML serialization algorithm</a> on each of <var>node</var>'s <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-child\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-child-6\">children</a>, in\n    <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-tree-order\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-tree-order-1\">tree order</a>, providing <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-inherited-ns\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-inherited-ns-9\"><var>inherited ns</var></a>, <var>map</var>,\n    <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-prefix-index\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-prefix-index-6\"><var>prefix index</var></a>, and the <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-require-well-formed\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-require-well-formed-11\"><var>require well-formed</var></a> flag."
         },
         {
-          "html": "Append the following to <var>markup</var>, in the order listed:\n    <ol>\n      <li>\"<code>&lt;/</code>\" (U+003C LESS-THAN SIGN, U+002F SOLIDUS);\n\n      </li><li>The value of <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-qualified-name\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-qualified-name-12\"><var>qualified name</var></a>;\n\n      </li><li>\"<code>&gt;</code>\" (U+003E GREATER-THAN SIGN).\n    </li></ol>",
+          "html": "Append the following to <var>markup</var>, in the order listed:",
           "ignored": [
             "\"</\" (U+003C LESS-THAN SIGN, U+002F SOLIDUS); The value of qualified name; \">\" (U+003E GREATER-THAN SIGN)."
           ]
@@ -486,7 +450,7 @@
                       "html": "Let <var>candidate prefix</var> be the result of <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-generating-a-prefix\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-generating-a-prefix-4\">generating a prefix</a> providing\n          <var>map</var>, <var>attribute namespace</var>, and <var>prefix index</var> as input."
                     },
                     {
-                      "html": "Append the following to <var>result</var>, in the order listed:\n          <ol>\n            <li>\"<code> </code>\" (U+0020 SPACE);\n\n            </li><li>The string \"<code>xmlns:</code>\";\n\n            </li><li>The value of <var>candidate prefix</var>;\n\n            </li><li>\"<code>=\"</code>\" (U+003D EQUALS SIGN, U+0022 QUOTATION MARK);\n\n            </li><li>The result of <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-serializing-an-attribute-value\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-serializing-an-attribute-value-3\">serializing an attribute value</a> given <var>attribute namespace</var>\n            and the <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-require-well-formed\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-require-well-formed-16\"><var>require well-formed</var></a> flag as input;\n\n            </li><li>\"<code>\"</code>\" (U+0022 QUOTATION MARK).\n          </li></ol>",
+                      "html": "Append the following to <var>result</var>, in the order listed:",
                       "ignored": [
                         "\" \" (U+0020 SPACE); The string \"xmlns:\"; The value of candidate prefix; \"=\"\" (U+003D EQUALS SIGN, U+0022 QUOTATION MARK); The result of serializing an attribute value given attribute namespace and the require well-formed flag as input; \"\"\" (U+0022 QUOTATION MARK)."
                       ]
@@ -505,7 +469,7 @@
               "html": "If the <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-require-well-formed\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-require-well-formed-17\"><var>require well-formed</var></a> flag is set (its value is <code>true</code>), and this\n      <var>attr</var>'s <code><a href=\"https://w3c.github.io/DOM-Parsing/#dfn-localname\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-localname-14\">localName</a></code> attribute contains the character\n      \"<code>:</code>\" (U+003A COLON) or does not match the XML <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-name\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-name-2\">Name</a> production or equals\n      \"<code>xmlns</code>\" and <var>attribute namespace</var> is <code>null</code>, then\n      <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-throw-an-exception\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-throw-an-exception-3\">throw an exception</a>; the serialization of this <var>attr</var> would not be a\n      well-formed attribute."
             },
             {
-              "html": "Append the following strings to <var>result</var>, in the order listed:\n      <ol>\n        <li>The value of <var>attr</var>'s <code><a data-lt=\"attr localName\" href=\"https://w3c.github.io/DOM-Parsing/#dfn-attr-localname\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-attr-localname-5\">localName</a></code>;\n\n        </li><li>\"<code>=\"</code>\" (U+003D EQUALS SIGN, U+0022 QUOTATION MARK);\n\n        </li><li>The result of <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-serializing-an-attribute-value\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-serializing-an-attribute-value-4\">serializing an attribute value</a> given <var>attr</var>'s\n        <code><a href=\"https://w3c.github.io/DOM-Parsing/#dfn-value\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-value-8\">value</a></code> attribute and the <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-require-well-formed\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-require-well-formed-18\"><var>require well-formed</var></a> flag as input;\n\n        </li><li>\"<code>\"</code>\" (U+0022 QUOTATION MARK).\n      </li></ol>",
+              "html": "Append the following strings to <var>result</var>, in the order listed:",
               "ignored": [
                 "The value of attr's localName; \"=\"\" (U+003D EQUALS SIGN, U+0022 QUOTATION MARK); The result of serializing an attribute value given attr's value attribute and the require well-formed flag as input; \"\"\" (U+0022 QUOTATION MARK)."
               ]
@@ -530,7 +494,7 @@
           "html": "If <var>attribute value</var> is <code>null</code>, then return the empty string."
         },
         {
-          "html": "Otherwise, <var>attribute value</var> is a string. Return the value of\n    <var>attribute value</var>, first replacing any occurrences of the following:\n    <ol>\n      <li>\"<code>&amp;</code>\" with \"<code>&amp;amp;</code>\"\n\n      </li><li>\"<code>\"</code>\" with \"<code>&amp;quot;</code>\"\n\n      </li><li>\"<code>&lt;</code>\" with \"<code>&amp;lt;</code>\"\n\n      </li><li>\"<code>&gt;</code>\" with \"<code>&amp;gt;</code>\"\n    </li></ol>",
+          "html": "Otherwise, <var>attribute value</var> is a string. Return the value of\n    <var>attribute value</var>, first replacing any occurrences of the following:",
           "ignored": [
             "\"&\" with \"&amp;\" \"\"\" with \"&quot;\" \"<\" with \"&lt;\" \">\" with \"&gt;\""
           ]
@@ -631,19 +595,19 @@
           "html": "Append the value of the <var>node</var>'s <code><a data-lt=\"doctype name\" href=\"https://w3c.github.io/DOM-Parsing/#dfn-doctype-name\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-doctype-name-1\">name</a></code>\n    attribute to <var>markup</var>. For a <var>node</var> belonging to an <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-html-document\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-html-document-1\">HTML document</a>, the\n    value will be all lowercase."
         },
         {
-          "html": "If the <var>node</var>'s <code><a href=\"https://w3c.github.io/DOM-Parsing/#dfn-publicid\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-publicid-2\">publicId</a></code> is not the empty string then append\n    the following, in the order listed, to <var>markup</var>:\n    <ol>\n      <li>\"<code> </code>\" (U+0020 SPACE);\n\n      </li><li>The string \"<code>PUBLIC</code>\";\n\n      </li><li>\"<code> </code>\" (U+0020 SPACE);\n\n      </li><li>\"<code>\"</code>\" (U+0022 QUOTATION MARK);\n\n      </li><li>The value of the <var>node</var>'s <code><a href=\"https://w3c.github.io/DOM-Parsing/#dfn-publicid\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-publicid-3\">publicId</a></code> attribute;\n\n      </li><li>\"<code>\"</code>\" (U+0022 QUOTATION MARK).\n    </li></ol>",
+          "html": "If the <var>node</var>'s <code><a href=\"https://w3c.github.io/DOM-Parsing/#dfn-publicid\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-publicid-2\">publicId</a></code> is not the empty string then append\n    the following, in the order listed, to <var>markup</var>:",
           "ignored": [
             "\" \" (U+0020 SPACE); The string \"PUBLIC\"; \" \" (U+0020 SPACE); \"\"\" (U+0022 QUOTATION MARK); The value of the node's publicId attribute; \"\"\" (U+0022 QUOTATION MARK)."
           ]
         },
         {
-          "html": "If the <var>node</var>'s <code><a href=\"https://w3c.github.io/DOM-Parsing/#dfn-systemid\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-systemid-2\">systemId</a></code> is not the empty string and the\n    <var>node</var>'s <code><a href=\"https://w3c.github.io/DOM-Parsing/#dfn-publicid\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-publicid-4\">publicId</a></code> is set to the empty string, then append the\n    following, in the order listed, to <var>markup</var>:\n    <ol>\n      <li>\"<code> </code>\" (U+0020 SPACE);\n\n      </li><li>The string \"<code>SYSTEM</code>\".\n    </li></ol>",
+          "html": "If the <var>node</var>'s <code><a href=\"https://w3c.github.io/DOM-Parsing/#dfn-systemid\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-systemid-2\">systemId</a></code> is not the empty string and the\n    <var>node</var>'s <code><a href=\"https://w3c.github.io/DOM-Parsing/#dfn-publicid\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-publicid-4\">publicId</a></code> is set to the empty string, then append the\n    following, in the order listed, to <var>markup</var>:",
           "ignored": [
             "\" \" (U+0020 SPACE); The string \"SYSTEM\"."
           ]
         },
         {
-          "html": "If the <var>node</var>'s <code><a href=\"https://w3c.github.io/DOM-Parsing/#dfn-systemid\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-systemid-3\">systemId</a></code> is not the empty string then append\n    the following, in the order listed, to <var>markup</var>:\n    <ol>\n      <li>\"<code> </code>\" (U+0020 SPACE);\n\n      </li><li>\"<code>\"</code>\" (U+0022 QUOTATION MARK);\n\n      </li><li>The value of the <var>node</var>'s <code><a href=\"https://w3c.github.io/DOM-Parsing/#dfn-systemid\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-systemid-4\">systemId</a></code> attribute;\n\n      </li><li>\"<code>\"</code>\" (U+0022 QUOTATION MARK).\n    </li></ol>",
+          "html": "If the <var>node</var>'s <code><a href=\"https://w3c.github.io/DOM-Parsing/#dfn-systemid\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-systemid-3\">systemId</a></code> is not the empty string then append\n    the following, in the order listed, to <var>markup</var>:",
           "ignored": [
             "\" \" (U+0020 SPACE); \"\"\" (U+0022 QUOTATION MARK); The value of the node's systemId attribute; \"\"\" (U+0022 QUOTATION MARK)."
           ]
@@ -666,7 +630,7 @@
           "html": "If the <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-require-well-formed\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-require-well-formed-28\"><var>require well-formed</var></a> flag is set (its value is <code>true</code>), and\n    <var>node</var>'s <code><a href=\"https://w3c.github.io/DOM-Parsing/#dfn-data\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-data-7\">data</a></code> contains characters that are not matched by the XML\n    <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-char\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-char-5\">Char</a> production or contains the string \"<code>?&gt;</code>\" (U+003F QUESTION MARK,\n    U+003E GREATER-THAN SIGN), then <a href=\"https://w3c.github.io/DOM-Parsing/#dfn-throw-an-exception\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-throw-an-exception-11\">throw an exception</a>; the serialization of this\n    <var>node</var>'s <code><a href=\"https://w3c.github.io/DOM-Parsing/#dfn-data\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-data-8\">data</a></code> would not be well-formed."
         },
         {
-          "html": "Let <var>markup</var> be the concatenation of the following, in the order listed:\n    <ol>\n      <li>\"<code>&lt;?</code>\" (U+003C LESS-THAN SIGN, U+003F QUESTION MARK);\n\n      </li><li>The value of <var>node</var>'s <code><a href=\"https://w3c.github.io/DOM-Parsing/#dfn-target\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-target-3\">target</a></code>;\n\n      </li><li>\"<code> </code>\" (U+0020 SPACE);\n\n      </li><li>The value of <var>node</var>'s <code><a href=\"https://w3c.github.io/DOM-Parsing/#dfn-data\" class=\"internalDFN\" data-link-type=\"dfn\" id=\"ref-for-dfn-data-9\">data</a></code>;\n\n      </li><li>\"<code>?&gt;</code>\" (U+003F QUESTION MARK, U+003E GREATER-THAN SIGN).\n    </li></ol>",
+          "html": "Let <var>markup</var> be the concatenation of the following, in the order listed:",
           "ignored": [
             "\"<?\" (U+003C LESS-THAN SIGN, U+003F QUESTION MARK); The value of node's target; \" \" (U+0020 SPACE); The value of node's data; \"?>\" (U+003F QUESTION MARK, U+003E GREATER-THAN SIGN)."
           ]

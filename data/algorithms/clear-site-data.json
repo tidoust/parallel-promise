@@ -114,7 +114,7 @@
           "rationale": "execute",
           "steps": [
             {
-              "html": "<p>Execute <var>context</var>’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/document-sequences.html#nav-document\" id=\"ref-for-nav-document①\">active document</a>'s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#relevant-settings-object\" id=\"ref-for-relevant-settings-object①\">relevant settings object</a>'s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#concept-settings-object-global\" id=\"ref-for-concept-settings-object-global\">global object</a>'s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/nav-history-apis.html#location\" id=\"ref-for-location\">Location</a></code> object’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/nav-history-apis.html#dom-location-reload\" id=\"ref-for-dom-location-reload\">reload()</a></code>.</p>\n          <p class=\"issue\" id=\"issue-fb0b50ca\"><a class=\"self-link\" href=\"https://w3c.github.io/webappsec-clear-site-data/#issue-fb0b50ca\"></a> This is the simplest thing, but it’s probably reaching a little too far into the\n  documents and mucking with their context. I probably just need to break down and\n  copy/paste the relevant bits from HTML.</p>"
+              "html": "<p>Execute <var>context</var>’s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/document-sequences.html#nav-document\" id=\"ref-for-nav-document①\">active document</a>'s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#relevant-settings-object\" id=\"ref-for-relevant-settings-object①\">relevant settings object</a>'s <a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/webappapis.html#concept-settings-object-global\" id=\"ref-for-concept-settings-object-global\">global object</a>'s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/nav-history-apis.html#location\" id=\"ref-for-location\">Location</a></code> object’s <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://html.spec.whatwg.org/multipage/nav-history-apis.html#dom-location-reload\" id=\"ref-for-dom-location-reload\">reload()</a></code>.</p>"
             }
           ]
         }
@@ -142,12 +142,14 @@
           ]
         },
         {
-          "html": "<p>If a user agent implements caches beyond a pure <a data-link-type=\"dfn\" href=\"https://tools.ietf.org/html/rfc7234#section-2\" id=\"ref-for-section-2③\">network cache</a>, it MUST remove all\n  entries from those caches which match <var>origin</var>.</p>\n        <p class=\"issue\" id=\"issue-f5577029\"><a class=\"self-link\" href=\"https://w3c.github.io/webappsec-clear-site-data/#issue-f5577029\"></a> We’re dealing with the network cache here, as defined in <a data-link-type=\"biblio\" href=\"https://w3c.github.io/webappsec-clear-site-data/#biblio-rfc7234\" title=\"HTTP Caching\">[RFC7234]</a>, but that’s not\n  nearly everything a user agent caches. How hand-wavey with the vendor-specific section can\n  we be? For instance, Chrome clears out prerendered pages, script caches, WebGL shader\n  caches, WebRTC bits and pieces, address bar suggestion caches, various networking bits that\n  aren’t representations (HSTS/HPKP, SCDH, etc.). Perhaps <a data-link-type=\"biblio\" href=\"https://w3c.github.io/webappsec-clear-site-data/#biblio-storage\" title=\"Storage Standard\">[STORAGE]</a> will make this clearer?</p>"
+          "html": "<p>If a user agent implements caches beyond a pure <a data-link-type=\"dfn\" href=\"https://tools.ietf.org/html/rfc7234#section-2\" id=\"ref-for-section-2③\">network cache</a>, it MUST remove all\n  entries from those caches which match <var>origin</var>.</p>"
         }
       ]
     },
     {
-      "html": "<span class=\"marker\">Note:</span> This algorithm assumes that the user agent has implemented a <a data-link-type=\"dfn\" href=\"https://tools.ietf.org/html/rfc6265#section-5.3\" id=\"ref-for-section-5.3\">cookie store</a> (as\n  discussed in Section 5.3 of <a data-link-type=\"biblio\" href=\"https://w3c.github.io/webappsec-clear-site-data/#biblio-rfc6265\" title=\"HTTP State Management Mechanism\">[RFC6265]</a>), which offers the ability to retrieve a list of cookies\n  by host, and to remove individual cookies.",
+      "name": "clear cookies for origin",
+      "href": "https://w3c.github.io/webappsec-clear-site-data/#abstract-opdef-clear-cookies-for-origin",
+      "html": "Given an <a data-link-type=\"dfn\" href=\"https://tools.ietf.org/html/rfc6454#section-3.2\" id=\"ref-for-section-3.2⑧\">origin</a> (<var>origin</var>), the user agent can <dfn class=\"dfn-paneled has-dfn-panel\" data-dfn-type=\"abstract-op\" data-export=\"\" data-local-lt=\"clear cookies\" id=\"abstract-opdef-clear-cookies-for-origin\" role=\"button\" aria-expanded=\"false\" tabindex=\"0\">clear cookies for <var>origin</var></dfn><span style=\"position: relative; height: 0px;\"></span><span style=\"position: relative; height: 0px;\"></span> as follows:",
       "rationale": ".algorithm",
       "steps": [
         {
@@ -252,9 +254,9 @@
           ]
         },
         {
-          "html": "<p>For any other script-accessible storage mechanism, the user agent MUST\n  delete any data associated with this origin. This includes (but is not\n  limited to) the following:</p>\n        <ol>\n         <li data-md=\"\">\n          <p>An origin’s WebSQL databases <a data-link-type=\"biblio\" href=\"https://w3c.github.io/webappsec-clear-site-data/#biblio-webdatabase\" title=\"Web SQL Database\">[WEBDATABASE]</a>.</p>\n         </li><li data-md=\"\">\n          <p>An origin’s filesystems <a data-link-type=\"biblio\" href=\"https://w3c.github.io/webappsec-clear-site-data/#biblio-file-system-api\" title=\"File API: Directories and System\">[file-system-api]</a></p>\n         </li><li data-md=\"\">\n          <p>Plugin data (e.g. Flash via <a href=\"https://wiki.mozilla.org/NPAPI:ClearSiteData\">NPP_ClearSiteData</a>),</p>\n         </li><li data-md=\"\">\n          <p class=\"issue\" id=\"issue-b346d876\"><a class=\"self-link\" href=\"https://w3c.github.io/webappsec-clear-site-data/#issue-b346d876\"></a> Moar?</p>\n        </li></ol>",
+          "html": "<p>For any other script-accessible storage mechanism, the user agent MUST\n  delete any data associated with this origin. This includes (but is not\n  limited to) the following:</p>",
           "ignored": [
-            "An origin’s WebSQL databases [WEBDATABASE]. An origin’s filesystems [file-system-api] Plugin data (e.g. Flash via NPP_ClearSiteData), Moar?"
+            "An origin’s WebSQL databases [WEBDATABASE]. An origin’s filesystems [file-system-api] Plugin data (e.g. Flash via NPP_ClearSiteData),"
           ]
         }
       ]

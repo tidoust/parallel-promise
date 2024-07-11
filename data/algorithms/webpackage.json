@@ -60,64 +60,52 @@
               "steps": [
                 {
                   "case": "undefined",
-                  "steps": [
-                    {
-                      "html": "<p>Do nothing.</p>"
-                    }
-                  ]
+                  "html": "<p>Do nothing.</p>"
                 },
                 {
                   "case": "\"b2\" or \"b3\"",
+                  "html": "",
+                  "rationale": "let",
                   "steps": [
                     {
-                      "html": "<ol>\n        <li data-md=\"\">\n         <p>Let <var>report</var> be the result of <a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#create-a-new-signed-exchange-report\" id=\"ref-for-create-a-new-signed-exchange-report\">create a new signed exchange report</a> with <var>request</var> and <var>actualResponse</var>.</p>\n        </li><li data-md=\"\">\n         <p>Let <var>parsedExchange</var> be the result of <a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#parsing-a-signed-exchange\" id=\"ref-for-parsing-a-signed-exchange\">parsing a signed\nexchange</a> of version <code>b2</code> or <code>b3</code>, respectively, from <var>actualResponse</var> in the context of <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-client\" id=\"ref-for-concept-request-client\">client</a>,\nreporting to <var>report</var>.</p>\n        </li><li data-md=\"\">\n         <p>If <var>parsedExchange</var> is not an <a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#exchange\" id=\"ref-for-exchange①\">exchange</a>, run <a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#queue-a-signed-exchange-report\" id=\"ref-for-queue-a-signed-exchange-report\">queue a signed exchange report</a> <var>report</var> with <var>parsedExchange</var> as the result, and return a <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-network-error\" id=\"ref-for-concept-network-error\">network error</a>.</p>\n        </li><li data-md=\"\">\n         <p><a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#in-parallel\" id=\"ref-for-in-parallel\">In parallel</a>, <a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#wait-and-queue-a-report-for\" id=\"ref-for-wait-and-queue-a-report-for\">wait and queue a report for</a> <var>parsedExchange</var> and <var>report</var>.</p>\n        </li><li data-md=\"\">\n         <p>Set <var>actualResponse</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-status\" id=\"ref-for-concept-status\">status</a> to <code>303</code>.</p>\n        </li><li data-md=\"\">\n         <p><a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-header-list-set\" id=\"ref-for-concept-header-list-set\">Set</a> <var>actualResponse</var>’s <code>`Location`</code> header to\nthe <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#ascii-encode\" id=\"ref-for-ascii-encode\">ASCII encoding</a> of the <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-serializer\" id=\"ref-for-concept-url-serializer\">serialization</a> of <var>parsedExchange</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#exchange-request-url\" id=\"ref-for-exchange-request-url②\">request URL</a>.</p>\n        </li><li data-md=\"\">\n         <p>Set <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#request-stashed-exchange\" id=\"ref-for-request-stashed-exchange⑤\">stashed exchange</a> to <var>parsedExchange</var>.</p>\n       </li></ol>",
-                      "rationale": "let",
-                      "steps": [
-                        {
-                          "html": "<p>Let <var>report</var> be the result of <a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#create-a-new-signed-exchange-report\" id=\"ref-for-create-a-new-signed-exchange-report\">create a new signed exchange report</a> with <var>request</var> and <var>actualResponse</var>.</p>"
-                        },
-                        {
-                          "html": "<p>Let <var>parsedExchange</var> be the result of <a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#parsing-a-signed-exchange\" id=\"ref-for-parsing-a-signed-exchange\">parsing a signed\nexchange</a> of version <code>b2</code> or <code>b3</code>, respectively, from <var>actualResponse</var> in the context of <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-client\" id=\"ref-for-concept-request-client\">client</a>,\nreporting to <var>report</var>.</p>"
-                        },
-                        {
-                          "html": "<p>If <var>parsedExchange</var> is not an <a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#exchange\" id=\"ref-for-exchange①\">exchange</a>, run <a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#queue-a-signed-exchange-report\" id=\"ref-for-queue-a-signed-exchange-report\">queue a signed exchange report</a> <var>report</var> with <var>parsedExchange</var> as the result, and return a <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-network-error\" id=\"ref-for-concept-network-error\">network error</a>.</p>"
-                        },
-                        {
-                          "html": "<p><a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#in-parallel\" id=\"ref-for-in-parallel\">In parallel</a>, <a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#wait-and-queue-a-report-for\" id=\"ref-for-wait-and-queue-a-report-for\">wait and queue a report for</a> <var>parsedExchange</var> and <var>report</var>.</p>"
-                        },
-                        {
-                          "html": "<p>Set <var>actualResponse</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-status\" id=\"ref-for-concept-status\">status</a> to <code>303</code>.</p>"
-                        },
-                        {
-                          "html": "<p><a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-header-list-set\" id=\"ref-for-concept-header-list-set\">Set</a> <var>actualResponse</var>’s <code>`Location`</code> header to\nthe <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#ascii-encode\" id=\"ref-for-ascii-encode\">ASCII encoding</a> of the <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-serializer\" id=\"ref-for-concept-url-serializer\">serialization</a> of <var>parsedExchange</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#exchange-request-url\" id=\"ref-for-exchange-request-url②\">request URL</a>.</p>"
-                        },
-                        {
-                          "html": "<p>Set <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#request-stashed-exchange\" id=\"ref-for-request-stashed-exchange⑤\">stashed exchange</a> to <var>parsedExchange</var>.</p>"
-                        }
-                      ]
+                      "html": "<p>Let <var>report</var> be the result of <a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#create-a-new-signed-exchange-report\" id=\"ref-for-create-a-new-signed-exchange-report\">create a new signed exchange report</a> with <var>request</var> and <var>actualResponse</var>.</p>"
+                    },
+                    {
+                      "html": "<p>Let <var>parsedExchange</var> be the result of <a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#parsing-a-signed-exchange\" id=\"ref-for-parsing-a-signed-exchange\">parsing a signed\nexchange</a> of version <code>b2</code> or <code>b3</code>, respectively, from <var>actualResponse</var> in the context of <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-request-client\" id=\"ref-for-concept-request-client\">client</a>,\nreporting to <var>report</var>.</p>"
+                    },
+                    {
+                      "html": "<p>If <var>parsedExchange</var> is not an <a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#exchange\" id=\"ref-for-exchange①\">exchange</a>, run <a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#queue-a-signed-exchange-report\" id=\"ref-for-queue-a-signed-exchange-report\">queue a signed exchange report</a> <var>report</var> with <var>parsedExchange</var> as the result, and return a <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-network-error\" id=\"ref-for-concept-network-error\">network error</a>.</p>"
+                    },
+                    {
+                      "html": "<p><a data-link-type=\"dfn\" href=\"https://html.spec.whatwg.org/multipage/infrastructure.html#in-parallel\" id=\"ref-for-in-parallel\">In parallel</a>, <a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#wait-and-queue-a-report-for\" id=\"ref-for-wait-and-queue-a-report-for\">wait and queue a report for</a> <var>parsedExchange</var> and <var>report</var>.</p>"
+                    },
+                    {
+                      "html": "<p>Set <var>actualResponse</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-status\" id=\"ref-for-concept-status\">status</a> to <code>303</code>.</p>"
+                    },
+                    {
+                      "html": "<p><a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-header-list-set\" id=\"ref-for-concept-header-list-set\">Set</a> <var>actualResponse</var>’s <code>`Location`</code> header to\nthe <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#ascii-encode\" id=\"ref-for-ascii-encode\">ASCII encoding</a> of the <a data-link-type=\"dfn\" href=\"https://url.spec.whatwg.org/#concept-url-serializer\" id=\"ref-for-concept-url-serializer\">serialization</a> of <var>parsedExchange</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#exchange-request-url\" id=\"ref-for-exchange-request-url②\">request URL</a>.</p>"
+                    },
+                    {
+                      "html": "<p>Set <var>request</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#request-stashed-exchange\" id=\"ref-for-request-stashed-exchange⑤\">stashed exchange</a> to <var>parsedExchange</var>.</p>"
                     }
                   ]
                 },
                 {
                   "case": "Anything else",
+                  "html": "",
+                  "rationale": "let",
                   "steps": [
                     {
-                      "html": "<ol>\n        <li data-md=\"\">\n         <p>Let <var>fallbackUrlBytes</var> be the result of <a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#extracting-the-fallback-url\" id=\"ref-for-extracting-the-fallback-url\">extracting the fallback\nURL</a> from <var>actualResponse</var>.</p>\n        </li><li data-md=\"\">\n         <p>If <var>fallbackUrlBytes</var> is a failure, return a <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-network-error\" id=\"ref-for-concept-network-error①\">network error</a>.</p>\n        </li><li data-md=\"\">\n         <p>Set <var>actualResponse</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-status\" id=\"ref-for-concept-status①\">status</a> to <code>303</code>.</p>\n        </li><li data-md=\"\">\n         <p><a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-header-list-set\" id=\"ref-for-concept-header-list-set①\">Set</a> <var>actualResponse</var>’s <code>`Location`</code> header to <var>fallbackUrlBytes</var>.</p>\n       </li></ol>",
-                      "rationale": "let",
-                      "steps": [
-                        {
-                          "html": "<p>Let <var>fallbackUrlBytes</var> be the result of <a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#extracting-the-fallback-url\" id=\"ref-for-extracting-the-fallback-url\">extracting the fallback\nURL</a> from <var>actualResponse</var>.</p>"
-                        },
-                        {
-                          "html": "<p>If <var>fallbackUrlBytes</var> is a failure, return a <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-network-error\" id=\"ref-for-concept-network-error①\">network error</a>.</p>"
-                        },
-                        {
-                          "html": "<p>Set <var>actualResponse</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-status\" id=\"ref-for-concept-status①\">status</a> to <code>303</code>.</p>"
-                        },
-                        {
-                          "html": "<p><a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-header-list-set\" id=\"ref-for-concept-header-list-set①\">Set</a> <var>actualResponse</var>’s <code>`Location`</code> header to <var>fallbackUrlBytes</var>.</p>"
-                        }
-                      ]
+                      "html": "<p>Let <var>fallbackUrlBytes</var> be the result of <a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#extracting-the-fallback-url\" id=\"ref-for-extracting-the-fallback-url\">extracting the fallback\nURL</a> from <var>actualResponse</var>.</p>"
+                    },
+                    {
+                      "html": "<p>If <var>fallbackUrlBytes</var> is a failure, return a <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-network-error\" id=\"ref-for-concept-network-error①\">network error</a>.</p>"
+                    },
+                    {
+                      "html": "<p>Set <var>actualResponse</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-status\" id=\"ref-for-concept-status①\">status</a> to <code>303</code>.</p>"
+                    },
+                    {
+                      "html": "<p><a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-header-list-set\" id=\"ref-for-concept-header-list-set①\">Set</a> <var>actualResponse</var>’s <code>`Location`</code> header to <var>fallbackUrlBytes</var>.</p>"
                     }
                   ]
                 }
@@ -572,19 +560,11 @@
               "steps": [
                 {
                   "case": "b2",
-                  "steps": [
-                    {
-                      "html": "<p><code>\"b2\"</code></p>"
-                    }
-                  ]
+                  "html": "<p><code>\"b2\"</code></p>"
                 },
                 {
                   "case": "b3",
-                  "steps": [
-                    {
-                      "html": "<p><code>\"b3\"</code></p>"
-                    }
-                  ]
+                  "html": "<p><code>\"b3\"</code></p>"
                 }
               ]
             }
@@ -617,19 +597,11 @@
               "steps": [
                 {
                   "case": "b2",
-                  "steps": [
-                    {
-                      "html": "<p><code>`sxg1-b2\\0`</code></p>"
-                    }
-                  ]
+                  "html": "<p><code>`sxg1-b2\\0`</code></p>"
                 },
                 {
                   "case": "b3",
-                  "steps": [
-                    {
-                      "html": "<p><code>`sxg1-b3\\0`</code></p>"
-                    }
-                  ]
+                  "html": "<p><code>`sxg1-b3\\0`</code></p>"
                 }
               ]
             }
@@ -686,19 +658,11 @@
               "steps": [
                 {
                   "case": "b2",
-                  "steps": [
-                    {
-                      "html": "<p>the result of <a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#parsing-b2-cbor-headers\" id=\"ref-for-parsing-b2-cbor-headers\">parsing b2 CBOR headers</a> given <var>headerBytes</var> and <var>requestUrl</var>.</p>"
-                    }
-                  ]
+                  "html": "<p>the result of <a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#parsing-b2-cbor-headers\" id=\"ref-for-parsing-b2-cbor-headers\">parsing b2 CBOR headers</a> given <var>headerBytes</var> and <var>requestUrl</var>.</p>"
                 },
                 {
                   "case": "b3",
-                  "steps": [
-                    {
-                      "html": "<p>the result of <a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#parsing-b3-cbor-headers\" id=\"ref-for-parsing-b3-cbor-headers\">parsing b3 CBOR headers</a> given <var>headerBytes</var> and <var>requestUrl</var>.</p>"
-                    }
-                  ]
+                  "html": "<p>the result of <a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#parsing-b3-cbor-headers\" id=\"ref-for-parsing-b3-cbor-headers\">parsing b3 CBOR headers</a> given <var>headerBytes</var> and <var>requestUrl</var>.</p>"
                 }
               ]
             }
@@ -916,19 +880,11 @@
           "steps": [
             {
               "case": "b2",
-              "steps": [
-                {
-                  "html": "<p><code>`HTTP Exchange 1 b2`</code></p>"
-                }
-              ]
+              "html": "<p><code>`HTTP Exchange 1 b2`</code></p>"
             },
             {
               "case": "b3",
-              "steps": [
-                {
-                  "html": "<p><code>`HTTP Exchange 1 b3`</code></p>"
-                }
-              ]
+              "html": "<p><code>`HTTP Exchange 1 b3`</code></p>"
             }
           ]
         }
@@ -944,7 +900,7 @@
           "html": "<p>Let <var>clockSkew</var> be the uncertainty in the UA’s estimate of the current time\ncaused by clock skew on the client. The UA MAY set this to 0 or use a more\nsophisticated estimate.</p>"
         },
         {
-          "html": "<p>If the UA’s estimate of the current time is more than <var>clockSkew</var> before <var>signature</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#exchange-signature-date\" id=\"ref-for-exchange-signature-date④\">date</a>, return \"untrusted\".</p>\n     \n     <p class=\"issue\" id=\"issue-a7ea6416\"><a class=\"self-link\" href=\"https://wicg.github.io/webpackage/loading.html#issue-a7ea6416\"></a> Our security reviewers aren’t sure we should\nallow UAs to take clock skew into account. <a href=\"https://github.com/WICG/webpackage/issues/141\">[Issue #WICG/webpackage#141]</a></p>"
+          "html": "<p>If the UA’s estimate of the current time is more than <var>clockSkew</var> before <var>signature</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#exchange-signature-date\" id=\"ref-for-exchange-signature-date④\">date</a>, return \"untrusted\".</p>"
         },
         {
           "html": "<p>If the UA’s estimate of the current time is after <var>signature</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#exchange-signature-expiration-time\" id=\"ref-for-exchange-signature-expiration-time⑤\">expiration time</a>, return \"untrusted\".</p>"
@@ -1129,37 +1085,29 @@
               "steps": [
                 {
                   "case": "«\"digest\", \"mi-sha256-03\"»",
+                  "html": "",
+                  "rationale": "let",
                   "steps": [
                     {
-                      "html": "<ol>\n        <li data-md=\"\">\n         <p>Let <var>instance-digests</var> be the result of <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-header-list-get-decode-split\" id=\"ref-for-concept-header-list-get-decode-split\">getting,\ndecoding, and splitting</a> <code>`digest`</code> from <var>response</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-response-header-list\" id=\"ref-for-concept-response-header-list①⑤\">header list</a>.</p>\n         \n        </li><li data-md=\"\">\n         <p>Let <var>mi</var> be the element of <var>instance-digests</var> that starts with <code>\"mi-sha256-03=\"</code>. If there is no such element, return an error\nstring \"<a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#signed-exchange-report-invalid_integrity_header\" id=\"ref-for-signed-exchange-report-invalid_integrity_header\">invalid_integrity_header</a>\".</p>\n        </li><li data-md=\"\">\n         <p>Let <var>codings</var> be the result of <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-header-list-get-decode-split\" id=\"ref-for-concept-header-list-get-decode-split①\">getting, decoding, and\nsplitting</a> <code>`content-encoding`</code> in <var>response</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-response-header-list\" id=\"ref-for-concept-response-header-list①⑥\">header list</a>.</p>\n        </li><li data-md=\"\">\n         <p>If <var>codings</var> doesn’t include <code>\"mi-sha256-03\"</code>, return an error string\n\"<a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#signed-exchange-report-invalid_integrity_header\" id=\"ref-for-signed-exchange-report-invalid_integrity_header①\">invalid_integrity_header</a>\".</p>\n        </li><li data-md=\"\">\n         <p class=\"assertion\">Assert: <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#handle-content-codings\" id=\"ref-for-handle-content-codings\">Handle content codings</a> used the value of <var>mi</var> as the <a data-link-type=\"dfn\" href=\"https://tools.ietf.org/html/draft-thomson-http-mice-03#section-2.2\" id=\"ref-for-section-2.2⑤\">integrity proof for the first record</a> when decoding the <code>mi-sha256-03</code> content encoding to produce the bytes in <var>stream</var>.</p>\n       </li></ol>",
-                      "rationale": "let",
-                      "steps": [
-                        {
-                          "html": "<p>Let <var>instance-digests</var> be the result of <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-header-list-get-decode-split\" id=\"ref-for-concept-header-list-get-decode-split\">getting,\ndecoding, and splitting</a> <code>`digest`</code> from <var>response</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-response-header-list\" id=\"ref-for-concept-response-header-list①⑤\">header list</a>.</p>"
-                        },
-                        {
-                          "html": "<p>Let <var>mi</var> be the element of <var>instance-digests</var> that starts with <code>\"mi-sha256-03=\"</code>. If there is no such element, return an error\nstring \"<a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#signed-exchange-report-invalid_integrity_header\" id=\"ref-for-signed-exchange-report-invalid_integrity_header\">invalid_integrity_header</a>\".</p>"
-                        },
-                        {
-                          "html": "<p>Let <var>codings</var> be the result of <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-header-list-get-decode-split\" id=\"ref-for-concept-header-list-get-decode-split①\">getting, decoding, and\nsplitting</a> <code>`content-encoding`</code> in <var>response</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-response-header-list\" id=\"ref-for-concept-response-header-list①⑥\">header list</a>.</p>"
-                        },
-                        {
-                          "html": "<p>If <var>codings</var> doesn’t include <code>\"mi-sha256-03\"</code>, return an error string\n\"<a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#signed-exchange-report-invalid_integrity_header\" id=\"ref-for-signed-exchange-report-invalid_integrity_header①\">invalid_integrity_header</a>\".</p>"
-                        },
-                        {
-                          "html": "<p class=\"assertion\">Assert: <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#handle-content-codings\" id=\"ref-for-handle-content-codings\">Handle content codings</a> used the value of <var>mi</var> as the <a data-link-type=\"dfn\" href=\"https://tools.ietf.org/html/draft-thomson-http-mice-03#section-2.2\" id=\"ref-for-section-2.2⑤\">integrity proof for the first record</a> when decoding the <code>mi-sha256-03</code> content encoding to produce the bytes in <var>stream</var>.</p>"
-                        }
-                      ]
+                      "html": "<p>Let <var>instance-digests</var> be the result of <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-header-list-get-decode-split\" id=\"ref-for-concept-header-list-get-decode-split\">getting,\ndecoding, and splitting</a> <code>`digest`</code> from <var>response</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-response-header-list\" id=\"ref-for-concept-response-header-list①⑤\">header list</a>.</p>"
+                    },
+                    {
+                      "html": "<p>Let <var>mi</var> be the element of <var>instance-digests</var> that starts with <code>\"mi-sha256-03=\"</code>. If there is no such element, return an error\nstring \"<a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#signed-exchange-report-invalid_integrity_header\" id=\"ref-for-signed-exchange-report-invalid_integrity_header\">invalid_integrity_header</a>\".</p>"
+                    },
+                    {
+                      "html": "<p>Let <var>codings</var> be the result of <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-header-list-get-decode-split\" id=\"ref-for-concept-header-list-get-decode-split①\">getting, decoding, and\nsplitting</a> <code>`content-encoding`</code> in <var>response</var>’s <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#concept-response-header-list\" id=\"ref-for-concept-response-header-list①⑥\">header list</a>.</p>"
+                    },
+                    {
+                      "html": "<p>If <var>codings</var> doesn’t include <code>\"mi-sha256-03\"</code>, return an error string\n\"<a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#signed-exchange-report-invalid_integrity_header\" id=\"ref-for-signed-exchange-report-invalid_integrity_header①\">invalid_integrity_header</a>\".</p>"
+                    },
+                    {
+                      "html": "<p class=\"assertion\">Assert: <a data-link-type=\"dfn\" href=\"https://fetch.spec.whatwg.org/#handle-content-codings\" id=\"ref-for-handle-content-codings\">Handle content codings</a> used the value of <var>mi</var> as the <a data-link-type=\"dfn\" href=\"https://tools.ietf.org/html/draft-thomson-http-mice-03#section-2.2\" id=\"ref-for-section-2.2⑤\">integrity proof for the first record</a> when decoding the <code>mi-sha256-03</code> content encoding to produce the bytes in <var>stream</var>.</p>"
                     }
                   ]
                 },
                 {
                   "case": "Anything else",
-                  "steps": [
-                    {
-                      "html": "<p>Return an error string\n\"<a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#signed-exchange-report-invalid_integrity_header\" id=\"ref-for-signed-exchange-report-invalid_integrity_header②\">invalid_integrity_header</a>\".</p>"
-                    }
-                  ]
+                  "html": "<p>Return an error string\n\"<a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#signed-exchange-report-invalid_integrity_header\" id=\"ref-for-signed-exchange-report-invalid_integrity_header②\">invalid_integrity_header</a>\".</p>"
                 }
               ]
             }
@@ -1239,35 +1187,19 @@
               "steps": [
                 {
                   "case": "Neither a `Variants` nor a `Variant-Key` header",
-                  "steps": [
-                    {
-                      "html": "<p>Return \"match\".</p>"
-                    }
-                  ]
+                  "html": "<p>Return \"match\".</p>"
                 },
                 {
                   "case": "A `Variant-Key` header but no `Variants` header",
-                  "steps": [
-                    {
-                      "html": "<p>Return \"mismatch\".</p>"
-                    }
-                  ]
+                  "html": "<p>Return \"mismatch\".</p>"
                 },
                 {
                   "case": "A `Variants` header but no `Variant-Key` header",
-                  "steps": [
-                    {
-                      "html": "<p>Return \"mismatch\".</p>"
-                    }
-                  ]
+                  "html": "<p>Return \"mismatch\".</p>"
                 },
                 {
                   "case": "Both a `Variants` and a `Variant-Key` header",
-                  "steps": [
-                    {
-                      "html": "<p>Proceed to the following steps.</p>"
-                    }
-                  ]
+                  "html": "<p>Proceed to the following steps.</p>"
                 }
               ]
             }
@@ -1286,7 +1218,7 @@
           "html": "<p>If parsing <var>variantKeys</var> failed, return \"mismatch\".</p>"
         },
         {
-          "html": "<p>If the <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#set-intersection\" id=\"ref-for-set-intersection\">intersection</a> of <var>acceptableVariantKeys</var> and <var>variantKeys</var> is <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-empty\" id=\"ref-for-list-empty\">empty</a>, return \"mismatch\".</p>\n     <p class=\"issue\" id=\"issue-e1733bef\"><a class=\"self-link\" href=\"https://wicg.github.io/webpackage/loading.html#issue-e1733bef\"></a> This depends on the <a data-link-type=\"dfn\" href=\"https://httpwg.org/http-extensions/draft-ietf-httpbis-variants.html#cache\" id=\"ref-for-cache①\">Variants Cache\nBehavior</a> returning a list of lists. <a href=\"https://github.com/httpwg/http-extensions/issues/744\">[Issue #httpwg/http-extensions#744]</a></p>"
+          "html": "<p>If the <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#set-intersection\" id=\"ref-for-set-intersection\">intersection</a> of <var>acceptableVariantKeys</var> and <var>variantKeys</var> is <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#list-empty\" id=\"ref-for-list-empty\">empty</a>, return \"mismatch\".</p>"
         },
         {
           "html": "<p>Return \"match\".</p>"
@@ -1376,7 +1308,7 @@
           ]
         },
         {
-          "html": "<p><a data-link-type=\"dfn\">Deliver a network report</a> with <var>report body</var> and <var>policy</var> and <var>report</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#signed-exchange-report-outer-request\" id=\"ref-for-signed-exchange-report-outer-request④\">outer request</a>.</p>\n     <div class=\"example\" id=\"example-network-error-log\">\n      <a class=\"self-link\" href=\"https://wicg.github.io/webpackage/loading.html#example-network-error-log\"></a> If a <a data-link-type=\"dfn\" href=\"https://w3c.github.io/network-error-logging/#dfn-nel-policies\" id=\"ref-for-dfn-nel-policies\">NEL policy</a> was received from the distributor’s origin, <code>distributor.example</code>, this step  will send the following JSON data to\ndescribe an invalid signature: \n<pre class=\"highlight\"><c- p=\"\">{</c->\n  <c- f=\"\">\"type\"</c-><c- p=\"\">:</c-> <c- u=\"\">\"network-error\"</c-><c- p=\"\">,</c->\n  <c- f=\"\">\"url\"</c-><c- p=\"\">:</c-> <c- u=\"\">\"https://publisher.example/article.html\"</c-><c- p=\"\">,</c->\n  <c- f=\"\">\"age\"</c-><c- p=\"\">:</c-> <c- mi=\"\">234</c-><c- p=\"\">,</c->\n  <c- f=\"\">\"user_agent\"</c-><c- p=\"\">:</c-> <c- u=\"\">\"Mozilla/5.0 (X11; Linux x86_64; rv:60.0) ...\"</c-><c- p=\"\">,</c->\n  <c- f=\"\">\"body\"</c-><c- p=\"\">:</c-> <c- p=\"\">{</c->\n    <c- f=\"\">\"referrer\"</c-><c- p=\"\">:</c-> <c- u=\"\">\"https://aggregator.example/article.html\"</c-><c- p=\"\">,</c->\n    <c- f=\"\">\"sampling_fraction\"</c-><c- p=\"\">:</c-> <c- mi=\"\">1</c-><c- p=\"\">,</c->\n    <c- f=\"\">\"server_ip\"</c-><c- p=\"\">:</c-> <c- u=\"\">\"192.0.2.42\"</c-><c- p=\"\">,</c->  <c- c1=\"\">// The IP address of distributor.example.</c->\n    <c- f=\"\">\"protocol\"</c-><c- p=\"\">:</c-> <c- u=\"\">\"http/1.1\"</c-><c- p=\"\">,</c->\n    <c- f=\"\">\"method\"</c-><c- p=\"\">:</c-> <c- u=\"\">\"GET\"</c-><c- p=\"\">,</c->\n    <c- f=\"\">\"status_code\"</c-><c- p=\"\">:</c-> <c- mi=\"\">200</c-><c- p=\"\">,</c->\n    <c- f=\"\">\"elapsed_time\"</c-><c- p=\"\">:</c-> <c- mi=\"\">1234</c-><c- p=\"\">,</c->\n    <c- f=\"\">\"phase\"</c-><c- p=\"\">:</c-> <c- u=\"\">\"sxg\"</c-><c- p=\"\">,</c->\n    <c- f=\"\">\"type\"</c-><c- p=\"\">:</c-> <c- u=\"\">\"sxg.signature_verification_error\"</c-><c- p=\"\">,</c->\n    <c- f=\"\">\"sxg\"</c-><c- p=\"\">:</c-> <c- p=\"\">{</c->\n      <c- f=\"\">\"outer_url\"</c-><c- p=\"\">:</c-> <c- u=\"\">\"https://distributor.example/publisher.example/article.html.sxg\"</c-><c- p=\"\">,</c->\n      <c- f=\"\">\"inner_url\"</c-><c- p=\"\">:</c-> <c- u=\"\">\"https://publisher.example/article.html\"</c-><c- p=\"\">,</c->\n      <c- f=\"\">\"cert_url\"</c-><c- p=\"\">:</c-> <c- p=\"\">[</c-><c- u=\"\">\"https://distributor.example/publisher.example/cert\"</c-><c- p=\"\">]</c->\n    <c- p=\"\">},</c->\n  <c- p=\"\">}</c->\n<c- p=\"\">}</c->\n</pre>\n     </div>"
+          "html": "<p><a data-link-type=\"dfn\">Deliver a network report</a> with <var>report body</var> and <var>policy</var> and <var>report</var>’s <a data-link-type=\"dfn\" href=\"https://wicg.github.io/webpackage/loading.html#signed-exchange-report-outer-request\" id=\"ref-for-signed-exchange-report-outer-request④\">outer request</a>.</p>"
         }
       ]
     },
@@ -1411,36 +1343,24 @@
                   "steps": [
                     {
                       "case": "Fulfilled with an object whose done property is false and whose value property is a Uint8Array object:",
+                      "html": "",
+                      "rationale": "let",
                       "steps": [
                         {
-                          "html": "<ol>\n          <li data-md=\"\">\n           <p>Let <var>bs</var> be the <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#byte-sequence\" id=\"ref-for-byte-sequence①⑦\">byte sequence</a> represented by the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#idl-Uint8Array\" id=\"ref-for-idl-Uint8Array①\">Uint8Array</a></code> object.</p>\n          </li><li data-md=\"\">\n           <p>Set <var>buffer</var> to the concatenation of <var>buffer</var> and <var>bs</var>.</p>\n         </li></ol>",
-                          "rationale": "let",
-                          "steps": [
-                            {
-                              "html": "<p>Let <var>bs</var> be the <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#byte-sequence\" id=\"ref-for-byte-sequence①⑦\">byte sequence</a> represented by the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#idl-Uint8Array\" id=\"ref-for-idl-Uint8Array①\">Uint8Array</a></code> object.</p>"
-                            },
-                            {
-                              "html": "<p>Set <var>buffer</var> to the concatenation of <var>buffer</var> and <var>bs</var>.</p>"
-                            }
-                          ]
+                          "html": "<p>Let <var>bs</var> be the <a data-link-type=\"dfn\" href=\"https://infra.spec.whatwg.org/#byte-sequence\" id=\"ref-for-byte-sequence①⑦\">byte sequence</a> represented by the <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#idl-Uint8Array\" id=\"ref-for-idl-Uint8Array①\">Uint8Array</a></code> object.</p>"
+                        },
+                        {
+                          "html": "<p>Set <var>buffer</var> to the concatenation of <var>buffer</var> and <var>bs</var>.</p>"
                         }
                       ]
                     },
                     {
                       "case": "Fulfilled with an object whose done property is true:",
-                      "steps": [
-                        {
-                          "html": "<p>Set <var>done</var> to <code>true</code>.</p>"
-                        }
-                      ]
+                      "html": "<p>Set <var>done</var> to <code>true</code>.</p>"
                     },
                     {
                       "case": "Rejected with e:",
-                      "steps": [
-                        {
-                          "html": "<p>Return a failure with reason <var>e</var>.</p>"
-                        }
-                      ]
+                      "html": "<p>Return a failure with reason <var>e</var>.</p>"
                     }
                   ]
                 }
@@ -1537,27 +1457,15 @@
                   "steps": [
                     {
                       "case": "Fulfilled with an object whose done property is false and whose value property is a Uint8Array object bytes:",
-                      "steps": [
-                        {
-                          "html": "<p><a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#readablestream-enqueue\" id=\"ref-for-readablestream-enqueue①\">Enqueue</a> a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#idl-Uint8Array\" id=\"ref-for-idl-Uint8Array④\">Uint8Array</a></code> wrapping an <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#idl-ArrayBuffer\" id=\"ref-for-idl-ArrayBuffer①\">ArrayBuffer</a></code> containing <var>bytes</var> into <var>output</var>.</p>"
-                        }
-                      ]
+                      "html": "<p><a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#readablestream-enqueue\" id=\"ref-for-readablestream-enqueue①\">Enqueue</a> a <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#idl-Uint8Array\" id=\"ref-for-idl-Uint8Array④\">Uint8Array</a></code> wrapping an <code class=\"idl\"><a data-link-type=\"idl\" href=\"https://webidl.spec.whatwg.org/#idl-ArrayBuffer\" id=\"ref-for-idl-ArrayBuffer①\">ArrayBuffer</a></code> containing <var>bytes</var> into <var>output</var>.</p>"
                     },
                     {
                       "case": "Fulfilled with an object whose done property is true:",
-                      "steps": [
-                        {
-                          "html": "<p><a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#readablestream-close\" id=\"ref-for-readablestream-close\">Close</a> <var>output</var>.</p>"
-                        }
-                      ]
+                      "html": "<p><a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#readablestream-close\" id=\"ref-for-readablestream-close\">Close</a> <var>output</var>.</p>"
                     },
                     {
                       "case": "Rejected with e:",
-                      "steps": [
-                        {
-                          "html": "<p><a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#readablestream-error\" id=\"ref-for-readablestream-error\">Error</a> <var>output</var> with reason <var>e</var>.</p>"
-                        }
-                      ]
+                      "html": "<p><a data-link-type=\"dfn\" href=\"https://streams.spec.whatwg.org/#readablestream-error\" id=\"ref-for-readablestream-error\">Error</a> <var>output</var> with reason <var>e</var>.</p>"
                     }
                   ]
                 }
